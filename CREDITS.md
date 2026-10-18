@@ -33,3 +33,13 @@ All from Wikimedia Commons, licenses checked via the Commons API. Resized for th
 | School Then (1937) | Robert W. Kerrigan (HABS) | Public domain | ...Fourth Ward School ... HABS NEV,15-VIRG,8-1.tif |
 
 Still PENDING: Reno 1926 arch and Reno 2016 bridge (no free photo found on Commons). Lead: Commons file "Virginia City, NV rephoto early 1870s + 2007.jpg" (CC BY 2.0, low resolution) for C Street.
+
+## Lake Tahoe (Tahoe City)
+All four photos are by Almonroth, CC BY-SA 3.0, taken 12 August 2012, resized to 800px wide (JPEG). Source pages on Wikimedia Commons:
+| Key | File |
+|---|---|
+| tahoe_gate_now | Outlet Gates Gatekeepers Cabin.jpg |
+| tahoe_watson_now | Watson Cabin-2.jpg |
+| tahoe_dam_now | Lake Tahoe Dam-2.jpg |
+| tahoe_hero | Lake Tahoe Dam-3.jpg |
+No free photos found for Fanny Bridge (old or new) or any "then" views. Those slots show "photo pending". Fanny Bridge has a plain letter badge for the same reason.

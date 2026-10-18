@@ -35,7 +35,7 @@ with sync_playwright() as p:
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
     pg.click('#tab-rewards'); code=pg.input_value('#codeOut')
-    need(code.startswith('TN3-') and code.count('-')==2,f'v2 migrates to a TN3 code, got {code}')
+    need(code.startswith('TN3-') and code.count('-')==3,f'v2 migrates to a TN3 code, got {code}')
     pg.click('.city >> text=Reno'); pg.click('#tab-rewards'); need(pg.input_value('#codeOut')==code,'code is the same from either town')
     # v1 save migrates
     pg=new({'then-now-reno-v1':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]}})

@@ -1,0 +1,370 @@
+{
+ "id": "tahoe",
+ "name": "Lake Tahoe",
+ "explorer": "Tahoe City Explorer",
+ "initials": "TC",
+ "stops": [
+  {
+   "id": "fanny",
+   "name": "Fanny Bridge",
+   "short": "Fanny Bridge",
+   "badge": "Fanny Bridge",
+   "tag": "Stop 1 of 4",
+   "teaser": "Where the Truckee River leaves Lake Tahoe.",
+   "map": "Fanny Bridge, Tahoe City, CA",
+   "clue": "Find the bridge where Highway 89 crosses the water leaving Lake Tahoe. People have lined up along its rail for generations to look down at the fish.",
+   "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
+   "field": "Field notes pending: sidewalks and crossings near the bridge have not been checked on foot yet.",
+   "q": {
+    "prompt": "Look at the river under the new bridge. How many support piers stand in the water?",
+    "options": [
+     "None",
+     "One",
+     "Two",
+     "Four"
+    ],
+    "answer": 0,
+    "hint": "The new bridge was built to cross in one span.",
+    "verify": "From Placer County's reopening notice (single span, no piers in the river). Confirm on site."
+   },
+   "then": {
+    "yr": "Before 2025",
+    "label": "The old Fanny Bridge",
+    "line": "The old bridge was more than a century old. It closed to traffic on August 11, 2025, and was replaced. No free photo of it has been added yet.",
+    "link": {
+     "t": "Look for old Tahoe City photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "2026",
+    "head": "Today",
+    "label": "The new Fanny Bridge",
+    "line": "A single-span bridge that looks like the old one but has no piers in the river. It reopened to traffic on February 10, 2026, with sidewalks and bike lanes on both sides. No free photo yet."
+   },
+   "story": [
+    "Fanny Bridge crosses the Truckee River right where it leaves Lake Tahoe. The county calls it the lake's only outlet, so every drop that flows out passes under it.",
+    "The old bridge was more than a century old. A $10.6 million replacement, a single span with no piers in the river, opened on February 10, 2026, after a full closure that began August 11, 2025.",
+    "A historical marker in Tahoe City tells two stories about the name. Read both and decide which one you believe."
+   ],
+   "fact": "The Truckee River starts here. It carries Lake Tahoe's water over the Sierra and on toward Reno.",
+   "disputed": "One columnist wrote that a road crew foreman named the bridge in 1928 after his maiden aunt, Fanny McGillicuddy Wilkerson. The marker also records a folk story: people leaned over the rail to watch rainbow trout at the outlet. Neither has been proven.",
+   "claims": [
+    {
+     "t": "The new Fanny Bridge has no piers standing in the river.",
+     "a": 0,
+     "why": "Placer County describes it as a single-span bridge with no piers in the river."
+    },
+    {
+     "t": "Fanny Bridge was named after a real woman, Fanny McGillicuddy Wilkerson.",
+     "a": 1,
+     "why": "One columnist told that story, and the marker also records a trout-watching story. It is not proven either way."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Placer County: Fanny Bridge reopens",
+     "u": "https://www.placer.ca.gov/10691/Fanny-Bridge-Reopens"
+    },
+    {
+     "t": "HMDB: Roads and Bridges marker, Tahoe City",
+     "u": "https://www.hmdb.org/m.asp?m=112967"
+    }
+   ],
+   "card": {
+    "a": "2025",
+    "b": "2026",
+    "la": "Old bridge closes",
+    "lb": "New bridge opens"
+   }
+  },
+  {
+   "id": "dam",
+   "name": "Lake Tahoe Dam",
+   "short": "The Dam",
+   "badge": "The Dam",
+   "tag": "Stop 2 of 4",
+   "teaser": "A small dam that controls a giant lake.",
+   "map": "Lake Tahoe Dam, Tahoe City, CA",
+   "clue": "Follow the water to where it leaves the lake. A low concrete dam with a row of gates holds back Lake Tahoe, and a walkway runs along the top.",
+   "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
+   "field": "Field notes pending: the viewing areas have not been checked on foot yet.",
+   "q": {
+    "prompt": "Look along the dam. How many gate bays does it have?",
+    "options": [
+     "17",
+     "9",
+     "12",
+     "25"
+    ],
+    "answer": 0,
+    "hint": "It is an odd number, more than a dozen.",
+    "verify": "Wikipedia lists a gated spillway with 17 bays. Count on site before shipping."
+   },
+   "then": {
+    "yr": "1870 and 1913",
+    "label": "The first outlet dam",
+    "line": "A small dam of timber and rock went up here in 1870. The present concrete dam was finished in 1913. No free photo of either has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "1981",
+    "head": "Today",
+    "label": "The dam today",
+    "line": "A National Register of Historic Places listing since March 25, 1981. Photo taken in 2012.",
+    "ph": {
+     "k": "tahoe_dam_now",
+     "by": "Almonroth",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lake_Tahoe_Dam-2.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "A small dam of lumber and rock was built at the outlet in 1870. Sources disagree on who built it, so we list both names below.",
+    "The present concrete dam was built between 1909 and 1913 to store irrigation water for the Newlands Project, which waters about 55,000 acres of farmland in Nevada.",
+    "It controls the top six feet of the lake and can raise it by up to 10.1 feet. The federal government bought it in 1915 for $139,500."
+   ],
+   "fact": "The dam is only 18.2 feet high and 109 feet long, yet it regulates the top six feet of a lake 22 miles long.",
+   "disputed": "Wikipedia says the Donner Lumber and Boom Company got the right to build the 1870 dam. The state historical marker says Colonel A. W. Von Schmidt built the first outlet works in 1870. The sources do not agree on who.",
+   "claims": [
+    {
+     "t": "The Lake Tahoe Dam was finished in 1913.",
+     "a": 0,
+     "why": "The historical marker and Wikipedia agree on 1913."
+    },
+    {
+     "t": "The dam can raise Lake Tahoe by more than 30 feet.",
+     "a": 2,
+     "why": "It regulates the top six feet and can raise the lake up to 10.1 feet."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Lake Tahoe Dam",
+     "u": "https://en.wikipedia.org/wiki/Lake_Tahoe_Dam"
+    },
+    {
+     "t": "HMDB: Lake Tahoe Outlet Works and Gatekeepers Cabin",
+     "u": "https://www.hmdb.org/m.asp?m=143497"
+    }
+   ],
+   "card": {
+    "a": "1870",
+    "b": "1913",
+    "la": "First outlet dam",
+    "lb": "Present dam"
+   }
+  },
+  {
+   "id": "gate",
+   "name": "Gatekeeper's Museum",
+   "short": "Gatekeeper's",
+   "badge": "Gatekeeper's",
+   "tag": "Stop 3 of 4",
+   "teaser": "A log cabin for the person who kept the lake's gates.",
+   "map": "Gatekeeper's Museum, Tahoe City, CA",
+   "clue": "Beside the dam, in a small park, look for a log cabin built for the person who opened and closed the gates. Today it is a museum.",
+   "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet. The museum is open seasonally. You do not need to go inside.",
+   "field": "Field notes pending: the park paths have not been checked on foot yet.",
+   "q": {
+    "prompt": "Find the state historical marker at the base of the flagpole. What number is it?",
+    "options": [
+     "797",
+     "479",
+     "1913",
+     "64"
+    ],
+    "answer": 0,
+    "hint": "It is a three-digit number, and it is not a year.",
+    "verify": "HMDB lists California Registered Historical Landmark No. 797 at the flagpole. Confirm on site."
+   },
+   "then": {
+    "yr": "1910",
+    "label": "The first gatekeeper's cabin",
+    "line": "A cabin was built in 1910 to house the gatekeeper. The original burned down in 1978. No free photo of it has been added yet.",
+    "link": {
+     "t": "Look for old photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "1981",
+    "head": "Today",
+    "label": "The rebuilt cabin",
+    "line": "The cabin you see today was completed in 1981. Photo taken in 2012.",
+    "ph": {
+     "k": "tahoe_gate_now",
+     "by": "Almonroth",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Outlet_Gates_Gatekeepers_Cabin.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The gatekeeper's job was to open and close the dam gates and keep the lake and river at the right levels. A cabin went up in 1910 so the gatekeeper could live beside the gates.",
+    "In 1910 and 1911 the Tahoe Water War between lakeshore owners and downstream river users was settled. Measuring the snow's water content let people predict river and lake levels.",
+    "The original cabin burned in 1978. The present one was finished in 1981 and is a museum with local history exhibits and a collection of Native baskets."
+   ],
+   "fact": "The site became California Registered Historical Landmark No. 797 on September 16, 1964.",
+   "claims": [
+    {
+     "t": "The cabin you see today is the original from 1910.",
+     "a": 2,
+     "why": "The original burned in 1978. The present cabin was completed in 1981."
+    },
+    {
+     "t": "The museum in the rebuilt cabin holds a collection of Native baskets.",
+     "a": 0,
+     "why": "The historical marker page describes the cabin as housing local history exhibits and a Native basket collection."
+    }
+   ],
+   "sources": [
+    {
+     "t": "HMDB: Lake Tahoe Outlet Works and Gatekeepers Cabin",
+     "u": "https://www.hmdb.org/m.asp?m=143497"
+    },
+    {
+     "t": "Wikipedia: Lake Tahoe Dam",
+     "u": "https://en.wikipedia.org/wiki/Lake_Tahoe_Dam"
+    }
+   ],
+   "card": {
+    "a": "1910",
+    "b": "1981",
+    "la": "Original cabin",
+    "lb": "Rebuilt cabin"
+   }
+  },
+  {
+   "id": "watson",
+   "name": "Watson Cabin",
+   "short": "Watson Cabin",
+   "badge": "Watson Cabin",
+   "tag": "Stop 4 of 4",
+   "teaser": "A log cabin built as a wedding present.",
+   "map": "Watson Cabin, 560 N Lake Blvd, Tahoe City, CA",
+   "clue": "Walk along the Tahoe City sidewalk and look for a small dark log cabin tucked under tall pines, with a flag out front. It was a wedding gift.",
+   "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
+   "field": "Field notes pending: the sidewalk to the cabin has not been checked on foot yet.",
+   "q": {
+    "prompt": "Look for a sign or date at the cabin. In what year was it built?",
+    "options": [
+     "1908",
+     "1870",
+     "1929",
+     "1964"
+    ],
+    "answer": 0,
+    "hint": "It was built in the first decade of the 1900s.",
+    "verify": "Built 1908 per Wikipedia and Tahoe Magazine. Not yet confirmed that a sign shows the year. Replace with something visible if not."
+   },
+   "then": {
+    "yr": "1908",
+    "label": "A wedding present",
+    "line": "Robert Montgomery Watson built the cabin in 1908 as a wedding gift for his son Robert and his bride, Stella Tong. No free photo from that time has been added yet.",
+    "link": {
+     "t": "Look for old photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "1979",
+    "head": "Today",
+    "label": "A museum",
+    "line": "Listed on the National Register of Historic Places on August 24, 1979. Photo taken in 2012.",
+    "ph": {
+     "k": "tahoe_watson_now",
+     "by": "Almonroth",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Watson_Cabin-2.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Robert Montgomery Watson came to Tahoe City in 1875 and became its first constable. In 1908 he built a log cabin for his son and daughter-in-law. They moved in during 1909.",
+    "From 1947 until 1976 the family leased it to E. P. and Fern Hunt, who ran it as a summer gift shop.",
+    "The Tahoe City Public Utility District and the North Lake Tahoe Historical Society bought it in 1979. Today it is a museum and gift shop, restored in 2024 and 2025."
+   ],
+   "fact": "The cabin stands at 560 N. Lake Blvd and is owned by the North Lake Tahoe Historical Society.",
+   "disputed": "Wikipedia calls it the only historic log cabin in the Tahoe City area, and one local magazine says it was submitted as Tahoe's oldest home. Those are claims from the sources, not something we could check.",
+   "claims": [
+    {
+     "t": "Watson Cabin was built in 1908.",
+     "a": 0,
+     "why": "Wikipedia and Tahoe Magazine both give 1908."
+    },
+    {
+     "t": "Watson Cabin is the oldest home in all of Tahoe.",
+     "a": 1,
+     "why": "One magazine says it was submitted as Tahoe's oldest home, but we found no source that proves it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Watson Log Cabin",
+     "u": "https://en.wikipedia.org/wiki/Watson_Log_Cabin"
+    },
+    {
+     "t": "Tahoe Magazine: The history and future of Watson Cabin",
+     "u": "https://www.tahoemagazine.com/the-history-and-future-of-watson-cabin/"
+    }
+   ],
+   "card": {
+    "a": "1908",
+    "b": "1979",
+    "la": "Built",
+    "lb": "National Register"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Day Tripper"
+  ],
+  [
+   100,
+   "Shore Walker"
+  ],
+  [
+   250,
+   "Outlet Scout"
+  ],
+  [
+   450,
+   "Lake Keeper"
+  ],
+  [
+   600,
+   "Tahoe Historian"
+  ]
+ ],
+ "heroKey": "tahoe_hero",
+ "heroAlt": "The Lake Tahoe Dam gates with the Truckee River flowing out",
+ "heroLi": "<li>Header: Almonroth · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Lake_Tahoe_Dam-3.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Almonroth · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Lake_Tahoe_Dam-3.jpg\">Source</a>",
+ "mission": "Find four landmarks where the Truckee River leaves Lake Tahoe. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. You know where the Truckee River begins.",
+ "safetyNote": "<li>All four stops are in Tahoe City, outdoors, close together. Stay behind railings near the water, because the outlet is fast and cold. The area is at about 6,200 feet, so bring water and sun protection.</li>",
+ "badgeMap": {
+  "dam": [
+   "tahoe_dam_now",
+   "50% 50%"
+  ],
+  "gate": [
+   "tahoe_gate_now",
+   "40% 35%"
+  ],
+  "watson": [
+   "tahoe_watson_now",
+   "55% 55%"
+  ]
+ }
+}

@@ -31,9 +31,9 @@ for cid in order:
                 need(ph['k'] in photos,f'{w}/{era}: photo file missing')
                 for f in ('by','lic','lu','page'): need(ph.get(f),f'{w}/{era}: photo credit missing {f}')
                 need(ph['page'].startswith('https://'),f'{w}/{era}: credit page must be https')
-        need(st['id'] in p['badgeMap'],f'{w}: no badgeMap entry')
-        k,pos=p['badgeMap'][st['id']]; need(k in photos,f'{w}: badge photo missing')
-        need(re.match(r'^\d+% \d+%$',pos),f'{w}: bad badge position')
+        if st['id'] in p['badgeMap']:  # no entry = plain letter badge until a free photo exists
+            k,pos=p['badgeMap'][st['id']]; need(k in photos,f'{w}: badge photo missing')
+            need(re.match(r'^\d+% \d+%$',pos),f'{w}: bad badge position')
 bad=[b for b in bad if b]
 print('PACKS: '+('OK' if not bad else 'FAILED')+f' ({len(order)} towns)')
 for b in bad: print(' -',b)
