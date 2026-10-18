@@ -16,15 +16,16 @@
    "safety": "Sidewalks are narrow and steep in places, and cars share the road. Cross only at corners. The town sits at about 6,100 feet, so bring water. Saloons and casinos are for adults, so stay out of them. None of the stops need you to go inside.",
    "field": "Field notes pending: sidewalk surfaces and slopes have not been checked on foot yet.",
    "q": {
-    "prompt": "Read the street sign at the corner. Which letter names the main street?",
+    "prompt": "Find the 'Great Fire of 1875' marker on the old hose house. What does it say started the fire?",
     "options": [
-     "A Street",
-     "B Street",
-     "C Street",
-     "D Street"
+     "A lightning strike",
+     "A knocked-over coal oil lamp",
+     "A mine explosion",
+     "A fireworks accident"
     ],
-    "answer": 2,
-    "hint": "Look at the street-name sign. The main street is named with a single letter."
+    "answer": 1,
+    "hint": "It started in a boarding house, on a morning in October.",
+    "verify": "Nevada SHPO marker No. 228, near where the fire began. The street is not given. Confirm location and wording on site."
    },
    "then": {
     "ph": {
@@ -105,15 +106,16 @@
    "safety": "Stay on the sidewalk. The museum is optional and has its own hours and rules. Look from the street.",
    "field": "Field notes pending: the exact viewing spot has not been checked on foot yet.",
    "q": {
-    "prompt": "Which writer's name is on the museum here?",
+    "prompt": "Find the marker about Mark Twain. In what year does it say he first used that name?",
     "options": [
-     "Mark Twain",
-     "Jack London",
-     "Ernest Hemingway",
-     "Edgar Allan Poe"
+     "1859",
+     "1864",
+     "1875",
+     "1863"
     ],
-    "answer": 0,
-    "hint": "He wrote for the newspaper in the 1860s and signed his work with a pen name."
+    "answer": 3,
+    "hint": "It is the year before he left the paper.",
+    "verify": "Nevada Centennial Marker No. 28 (placed 1960). Its exact location was not found. Confirm on site."
    },
    "then": {
     "ph": {
@@ -198,15 +200,16 @@
    "safety": "Stay on the sidewalk and cross at the corner. Hills here are steep, so watch your footing. Look at the building from outside.",
    "field": "Field notes pending: curb cuts and the viewing spot have not been checked on foot yet.",
    "q": {
-    "prompt": "Read the street signs at the corner. Piper's Opera House stands at B Street and which other street?",
+    "prompt": "Find the Nevada State Historic Marker at the opera house. What number is it?",
     "options": [
-     "Union Street",
-     "Sutton Avenue",
-     "Taylor Street",
-     "Carson Street"
+     "236",
+     "28",
+     "228",
+     "797"
     ],
     "answer": 0,
-    "hint": "Check the sign on the cross street at the corner."
+    "hint": "It is a three-digit number between 200 and 300.",
+    "verify": "Marker 236 at 12 N. B Street per noehill.com. Confirm on site."
    },
    "then": {
     "ph": {
@@ -287,15 +290,16 @@
    "safety": "Stay on public sidewalks. The museum inside is optional and has its own hours. Do not climb fences or go into any old mine sites around town.",
    "field": "Field notes pending: sidewalk slope and the viewing spot have not been checked on foot yet.",
    "q": {
-    "prompt": "Look at the roof. What shape is the school's roof?",
+    "prompt": "The marker in the museum's parking area says the school closed in what year?",
     "options": [
-     "Flat roof",
-     "Steep mansard roof",
-     "Round dome",
-     "Thatched roof"
+     "1876",
+     "1875",
+     "1936",
+     "1986"
     ],
-    "answer": 1,
-    "hint": "Second Empire buildings have a steep roof that slopes on all four sides and holds windows."
+    "answer": 2,
+    "hint": "It closed during the Great Depression, after enrollment dropped below 200.",
+    "verify": "HMDB marker at 537 S. C Street. Confirm on site."
    },
    "then": {
     "ph": {

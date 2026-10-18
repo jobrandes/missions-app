@@ -18,12 +18,12 @@
    "q": {
     "prompt": "Look at the river under the new bridge. How many support piers stand in the water?",
     "options": [
-     "None",
      "One",
      "Two",
-     "Four"
+     "Four",
+     "None"
     ],
-    "answer": 0,
+    "answer": 3,
     "hint": "The new bridge was built to cross in one span.",
     "verify": "From Placer County's reopening notice (single span, no piers in the river). Confirm on site."
    },
@@ -92,12 +92,12 @@
    "q": {
     "prompt": "Look along the dam. How many gate bays does it have?",
     "options": [
-     "17",
      "9",
+     "17",
      "12",
      "25"
     ],
-    "answer": 0,
+    "answer": 1,
     "hint": "It is an odd number, more than a dozen.",
     "verify": "Wikipedia lists a gated spillway with 17 bays. Count on site before shipping."
    },
@@ -174,12 +174,12 @@
    "q": {
     "prompt": "Find the state historical marker at the base of the flagpole. What number is it?",
     "options": [
-     "797",
      "479",
      "1913",
+     "797",
      "64"
     ],
-    "answer": 0,
+    "answer": 2,
     "hint": "It is a three-digit number, and it is not a year.",
     "verify": "HMDB lists California Registered Historical Landmark No. 797 at the flagpole. Confirm on site."
    },

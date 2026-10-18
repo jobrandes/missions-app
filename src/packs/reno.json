@@ -18,12 +18,12 @@
    "q": {
     "prompt": "Find the historical marker on the arch's support column. What year is it dated?",
     "options": [
-     "1987",
      "1926",
      "1949",
+     "1987",
      "2001"
     ],
-    "answer": 0,
+    "answer": 2,
     "hint": "The marker is at eye level on the east side of the east column.",
     "verify": "Listed on HMDB (marker dated Aug 8, 1987). Confirm on site."
    },
@@ -212,12 +212,12 @@
    "q": {
     "prompt": "Which river flows under this bridge?",
     "options": [
-     "Truckee River",
      "Carson River",
      "Humboldt River",
-     "Walker River"
+     "Walker River",
+     "Truckee River"
     ],
-    "answer": 0,
+    "answer": 3,
     "hint": "This river starts at Lake Tahoe.",
     "verify": "Guessable. No sign or plaque found in research. Replace after on-site look."
    },
@@ -301,12 +301,12 @@
    "q": {
     "prompt": "Read the marker on West 1st Street. What was this island before it became a city park?",
     "options": [
-     "An amusement park (Belle Isle)",
      "A lumber mill",
+     "An amusement park (Belle Isle)",
      "A rodeo ground",
      "A fish hatchery"
     ],
-    "answer": 0,
+    "answer": 1,
     "hint": "The island's old name was Belle Isle.",
     "verify": "Listed on HMDB (city acquired Belle Isle in 1920). Confirm on site."
    },

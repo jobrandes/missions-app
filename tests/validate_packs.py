@@ -14,6 +14,7 @@ for cid in order:
     need([r[0] for r in p['ranks']]==[0,100,250,450,600],f'{cid}: rank thresholds must match the XP model (0,100,250,450,600)')
     need(len(p['stops'])==4,f'{cid}: the save code and XP model assume 4 stops')
     need(p.get('heroKey') is None or p['heroKey'] in photos,f'{cid}: heroKey not in photos')
+    need(len({st['q']['answer'] for st in p['stops']})>=3,f'{cid}: correct answers should not sit in the same slot every time (use at least 3 different positions)')
     for st in p['stops']:
         w=f'{cid}/{st["id"]}'
         for f in ('id','name','short','badge','tag','teaser','map','clue','safety','field','fact'): need(st.get(f),f'{w}: missing {f}')

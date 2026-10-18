@@ -34,3 +34,8 @@ Not rewritten yet. Waiting on on-site verification, because the app should not c
 - Wingfield Park: what the island was before (Belle Isle amusement park, HMDB m=308211). Unverified.
 - Bridge: still guessable (river). No sign or plaque found in research. Needs an on-site look.
 Each question carries a `verify` note in `src/packs/reno.json`.
+
+## Update (Oct 18, later): Virginia City rewritten, answer positions varied
+- Cstreet: what the Great Fire marker (No. 228) says started the fire. Enterprise: year on the Mark Twain centennial marker (No. 28). Piper's: number of the state marker (236). School: year the marker says it closed (1936). All unverified on site.
+- Correct answers used to be in the first slot in every town. Fixed in the data, and the validator now fails a pack that uses fewer than 3 different slots.
+- Still guessable: Reno bridge (river), Faneuil Hall (weathervane shape).

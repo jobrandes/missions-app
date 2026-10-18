@@ -18,12 +18,12 @@
    "q": {
     "prompt": "Find the ring set into the pavement just east of the building. What event does it mark?",
     "options": [
-     "The Boston Massacre",
      "The Boston Tea Party",
+     "The Boston Massacre",
      "The Great Fire of 1872",
      "The Battle of Bunker Hill"
     ],
-    "answer": 0,
+    "answer": 1,
     "hint": "It happened in March 1770, and British soldiers were involved.",
     "verify": "HMDB/Wikipedia: marker east of the building, with a brass ring (moved in the 2010s). Not yet confirmed on site."
    },
@@ -108,12 +108,12 @@
    "q": {
     "prompt": "Look at the very top of the cupola. What shape is the weathervane?",
     "options": [
-     "A grasshopper",
      "A rooster",
      "A horse",
+     "A grasshopper",
      "A fish"
     ],
-    "answer": 0,
+    "answer": 2,
     "hint": "It is an insect, and it is gold.",
     "verify": "Guessable. Replace with something only visible on site once someone has been there."
    },
@@ -280,12 +280,12 @@
    "q": {
     "prompt": "Find the plaque on the first-story belt course. What year is on it?",
     "options": [
-     "1723",
      "1775",
      "1804",
-     "1954"
+     "1954",
+     "1723"
     ],
-    "answer": 0,
+    "answer": 3,
     "hint": "It is the year the church was started, not the year of the ride.",
     "verify": "Wikipedia mentions a 'Christ Church 1723' plaque. Not yet confirmed on site."
    },
