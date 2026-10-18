@@ -345,3 +345,14 @@ details.reg[open]>summary.region::after{content:"–"}
 
 .rlabel{flex:none;align-self:center;padding:0 6px 0 12px;margin-left:6px;border-left:1px solid var(--line);font:600 11px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
 .city.home{position:sticky;left:0;z-index:2;background:var(--bg)}
+
+/* two-level rail: regions on top, that region's missions below */
+.cities{display:block;overflow:visible;border-bottom:1px solid var(--line);margin:0 0 4px}
+.rail1,.rail2{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail1::-webkit-scrollbar,.rail2::-webkit-scrollbar{display:none}
+.rail1{gap:6px;padding:4px 0 6px}
+.rtab{flex:none;min-height:44px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:600 13px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.rtab[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.rail1 .city.home{position:static;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);padding:8px 14px}
+.rail1 .city.home[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.rlabel{display:none}

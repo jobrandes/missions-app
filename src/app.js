@@ -56,7 +56,7 @@
   var CITIES = __DATA__.packs;
   var RANKS=RENO_RANKS;
   var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
-  var ORDER=__DATA__.order, SOON=__DATA__.soon||[], atHome=true;
+  var railRegion=null, ORDER=__DATA__.order, SOON=__DATA__.soon||[], atHome=true;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
   var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
   var cityId='reno';
@@ -126,10 +126,12 @@
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
-    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+'<span class="rlabel" aria-hidden="true">'+(c.region||'More places')+'</span>'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===(c.region||'More places'); }).map(function(k){
+    var regsR=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regsR.indexOf(r)<0) regsR.push(r); });
+    var curR=railRegion||c.region||'More places';
+    document.getElementById('cities').innerHTML='<div class="rail1"><button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
-    }).join('');
-    var act=document.querySelector('#cities .city[aria-pressed="true"]'); if(act&&act.scrollIntoView){ try{ var box=document.getElementById('cities'); box.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
+    }).join('')+'</div>';
+    var act=document.querySelector('#cities .rail2 .city[aria-pressed="true"]'); if(act){ try{ var bx=act.parentNode; bx.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
   }
   function setCity(id){
     if(!CITIES[id]||(id===cityId&&!atHome)) return;
@@ -399,7 +401,8 @@
     var b=e.target.closest('[data-a]'); if(!b) return;
     var a=b.getAttribute('data-a');
     if(a==='home'){ goHome(); return; }
-    if(a==='city'){ setCity(b.getAttribute('data-c')); return; }
+    if(a==='rregion'){ railRegion=b.getAttribute('data-r'); applyCity(); return; }
+    if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
     if(a==='exit'){ exitStop(); return; }
