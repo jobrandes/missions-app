@@ -1,0 +1,395 @@
+{
+ "id": "tahoeicons",
+ "name": "Tahoe Icons",
+ "explorer": "Lake Tahoe Explorer",
+ "initials": "LT",
+ "stops": [
+  {
+   "id": "emerald",
+   "name": "Emerald Bay",
+   "short": "Emerald Bay",
+   "badge": "Emerald Bay",
+   "tag": "Stop 1 of 4",
+   "teaser": "The famous blue bay with a tiny island in it.",
+   "map": "Emerald Bay State Park, Highway 89, South Lake Tahoe, CA",
+   "clue": "Drive Highway 89 along the lake's southwest shore to the big overlook above a deep blue bay. A single tiny island sits in the middle, and a stone mansion hides on the shore below.",
+   "safety": "Highway 89 is narrow and winding, and the overlook parking fills up. Park only in marked spots, watch for people crossing the road, and keep behind the barriers at the overlook. The trail down to Vikingsholm is steep, so follow the signs and bring water. The lake is cold all year.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look out over the bay. How many islands can you see in Emerald Bay?",
+    "options": [
+     "1",
+     "2",
+     "3",
+     "5"
+    ],
+    "answer": 0,
+    "hint": "The one you see is the only island in all of Lake Tahoe.",
+    "verify": "Wikipedia: Fannette Island is the only island in Lake Tahoe. Count on site."
+   },
+   "then": {
+    "yr": "1929",
+    "label": "Before the mansion",
+    "line": "Vikingsholm was built in 1929. The bay itself has been a landmark far longer. No free historic photo has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the Lake Tahoe Historical Society",
+     "u": "https://www.laketahoemuseum.org/"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The bay from the overlook",
+    "line": "The view of the bay and Fannette Island. Photo taken on July 26, 2011.",
+    "ph": {
+     "k": "ti_em_now",
+     "by": "DimiTalen",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Emerald_Bay_2011.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Emerald Bay is a glacier-carved inlet, about 1.7 miles long. It is part of a 1,533-acre California state park established in 1953. In 1969 it was named a National Natural Landmark.",
+    "Down at the shore is Vikingsholm, a 38-room Scandinavian-style mansion built in the summer of 1929 by Lora Josephine Knight. She bought 240 acres in the bay for $250,000. The architect was Lennart Palme, a relative by marriage.",
+    "Knight also built a small tea house on Fannette Island. The island has had several names. The first to stick, Coquette, was thought up by vacationers in 1866, and the current name is believed to be a misreading of it."
+   ],
+   "fact": "In 1994 the bay's water was added to the park, making it one of the first underwater parks of its kind in California.",
+   "disputed": "Sources disagree on where the name Fannette comes from. The common theory is that it is a mix-up of the earlier name Coquette, but that is a belief, not a proven fact.",
+   "claims": [
+    {
+     "t": "Emerald Bay has the only island in Lake Tahoe.",
+     "a": 0,
+     "why": "Fannette Island is the only island in Lake Tahoe, according to Wikipedia."
+    },
+    {
+     "t": "Vikingsholm was built in the 1800s.",
+     "a": 2,
+     "why": "It was built in the summer of 1929 by Lora Josephine Knight."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Emerald Bay (Lake Tahoe)",
+     "u": "https://en.wikipedia.org/wiki/Emerald_Bay_(Lake_Tahoe)"
+    },
+    {
+     "t": "Wikipedia: Lora Josephine Knight",
+     "u": "https://en.wikipedia.org/wiki/Lora_Josephine_Knight"
+    },
+    {
+     "t": "Visit Lake Tahoe: Origins of Lake Tahoe's places",
+     "u": "https://visitlaketahoe.com/attractions/the-origins-of-lake-tahoes-most-popular-places/"
+    }
+   ],
+   "card": {
+    "a": "1929",
+    "b": "1953",
+    "la": "Vikingsholm built",
+    "lb": "State park"
+   }
+  },
+  {
+   "id": "sandharbor",
+   "name": "Sand Harbor",
+   "short": "Sand Harbor",
+   "badge": "Sand Harbor",
+   "tag": "Stop 2 of 4",
+   "teaser": "Giant smooth boulders and clear water on the east shore.",
+   "map": "Sand Harbor, Lake Tahoe Nevada State Park, NV",
+   "clue": "Head to the Nevada side of the lake, on the east shore along Highway 28. A state park has sandy coves, huge smooth boulders and very clear water.",
+   "safety": "The water is cold even in summer, and the boulders are slippery. Do not climb or jump from them. The parking lot and Highway 28 are busy, so watch for cars and bikes, and follow the park rules and signs.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Stand on the beach and face the water. Which direction are you looking?",
+    "options": [
+     "North",
+     "South",
+     "East",
+     "West"
+    ],
+    "answer": 3,
+    "hint": "Sand Harbor is on the lake's east shore. Use your phone's compass.",
+    "verify": "Sand Harbor is on the east shore, so facing the lake means facing west. Confirm with a compass on site."
+   },
+   "then": {
+    "yr": "1892",
+    "label": "The Hobart summer resort",
+    "line": "In 1892 Walter Scott Hobart Jr. built a summer resort here. No free historic photo has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "2022",
+    "head": "Today",
+    "label": "The boulders today",
+    "line": "Boulders and clear water at Sand Harbor. Photo taken on May 14, 2022.",
+    "ph": {
+     "k": "ti_sh_now",
+     "by": "Blake Everett Carroll",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Sand_Harbor,_Lake_Tahoe,_Nevada,_20220514,_06.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Washoe people spent summers here fishing, hunting and gathering long before Europeans reached the lake in the 1840s. In the 1870s, logs were towed to the harbor and sent by rail to a sawmill in Incline.",
+    "In 1892 Walter Scott Hobart Jr. inherited the family land and built a summer resort. In the early 1930s George Whittell Jr. bought most of the lake's east side, including Sand Harbor, and planned a casino here that was never built.",
+    "In 1958 Whittell agreed to lease part of the beach to the State of Nevada. About 1968 a court action forced him to sell 5,300 acres, which became Lake Tahoe Nevada State Park. The park had its grand opening in 1971."
+   ],
+   "fact": "The park says it gets more than one million visitors a year.",
+   "disputed": "We could not confirm from our sources how the boulders formed or when the park's famous summer festival began, so this app does not claim either.",
+   "claims": [
+    {
+     "t": "Sand Harbor became part of a Nevada state park in 1971.",
+     "a": 0,
+     "why": "The Nevada State Parks history says the park had its grand opening in 1971."
+    },
+    {
+     "t": "George Whittell Jr. built a casino at Sand Harbor.",
+     "a": 2,
+     "why": "He planned one in the early 1930s. It was never built."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Nevada State Parks: History of Sand Harbor",
+     "u": "https://parks.nv.gov/learn/park-histories/sand-harbor-history"
+    },
+    {
+     "t": "Wikipedia: Lake Tahoe",
+     "u": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+    }
+   ],
+   "card": {
+    "a": "1892",
+    "b": "1971",
+    "la": "Hobart resort",
+    "lb": "Park opens"
+   }
+  },
+  {
+   "id": "kingsbeach",
+   "name": "Kings Beach",
+   "short": "Kings Beach",
+   "badge": "Kings Beach",
+   "tag": "Stop 3 of 4",
+   "teaser": "A long sandy beach on the north shore, named for a postmaster.",
+   "map": "Kings Beach State Recreation Area, Kings Beach, CA",
+   "clue": "Go to the north shore, in California, near the Nevada line. A wide sandy beach with a view straight across the lake is right next to the main road.",
+   "safety": "The beach is next to Highway 28, so cross only at marked crossings and watch for cars and bikes. The water is cold. Keep an eye on younger kids near the water.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Lake Tahoe's surface sits at about how many feet above sea level?",
+    "options": [
+     "About 2,000",
+     "About 4,500",
+     "About 6,225",
+     "About 9,500"
+    ],
+    "answer": 2,
+    "hint": "You are in the high Sierra. Your phone's altitude may show a similar number.",
+    "verify": "Wikipedia gives 6,225 feet for the lake surface. A phone's altitude may be off by a few hundred feet."
+   },
+   "then": {
+    "yr": "1972",
+    "label": "A pier near Kings Beach",
+    "line": "A pier and small hut on the north shore in May 1972. The photo is labeled as near Kings Beach.",
+    "ph": {
+     "k": "ti_kb_then",
+     "by": "Belinda Rain (U.S. National Archives)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lake_Tahoe_Shore_Near_Kings_Beach_-_NARA_-_543514.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the North Lake Tahoe Historical Society",
+     "u": "https://northtahoemuseums.org/"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The beach today",
+    "line": "Kings Beach State Recreation Area on August 13, 2012.",
+    "ph": {
+     "k": "ti_kb_now",
+     "by": "U.S. Department of the Interior",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Kings_Beach_State_Recreation_Area,_Lake_Tahoe_in_2012.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The town is named after its first postmaster, Joe King. It sits on the north shore at about 6,444 feet.",
+    "The post office was built in 1937. The 2020 census counted 3,563 residents.",
+    "Kings Beach is also a place where wildlife and people share space. In 2009 and 2010, beavers were removed from nearby Griff Creek, and local schoolchildren protested."
+   ],
+   "fact": "Lake Tahoe is about 22 miles long, up to 12 miles wide, and 1,645 feet deep at its deepest.",
+   "disputed": "Our sources do not give an exact founding date for Kings Beach, so we do not claim one.",
+   "claims": [
+    {
+     "t": "Kings Beach is named after its first postmaster.",
+     "a": 0,
+     "why": "Wikipedia says it is named after its first postmaster, Joe King."
+    },
+    {
+     "t": "Lake Tahoe is more than 3,000 feet deep.",
+     "a": 2,
+     "why": "The maximum depth is 1,645 feet, still the second deepest lake in the U.S."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Kings Beach, California",
+     "u": "https://en.wikipedia.org/wiki/Kings_Beach,_California"
+    },
+    {
+     "t": "Wikipedia: Lake Tahoe",
+     "u": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+    }
+   ],
+   "card": {
+    "a": "1937",
+    "b": "1972",
+    "la": "Post office",
+    "lb": "Pier photo"
+   }
+  },
+  {
+   "id": "richardson",
+   "name": "Camp Richardson",
+   "short": "Camp Richardson",
+   "badge": "Camp Richardson",
+   "tag": "Stop 4 of 4",
+   "teaser": "A lakeside resort that has been welcoming visitors for a century.",
+   "map": "Camp Richardson Resort, Emerald Bay Rd, South Lake Tahoe, CA",
+   "clue": "On the south shore, a few miles west of the town of South Lake Tahoe, find a long beach with a marina, cabins and a lodge. Snowy peaks rise across the water.",
+   "safety": "Highway 89 runs beside the resort, so cross at marked spots and watch for bikes on the shared path. The water is cold. Stay on paths and out of private cabin areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Stand on the beach and face the water. Which direction are you looking?",
+    "options": [
+     "South",
+     "West",
+     "North",
+     "East"
+    ],
+    "answer": 2,
+    "hint": "Camp Richardson is on the lake's south shore. Use your phone's compass.",
+    "verify": "Camp Richardson is on the south shore, so facing the lake means facing north. Confirm with a compass on site."
+   },
+   "then": {
+    "yr": "1921",
+    "label": "The first stage service",
+    "line": "In 1921 Captain Alonzo Richardson started a stage service from Placerville to South Lake Tahoe. No free historic photo has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the Lake Tahoe Historical Society",
+     "u": "https://www.laketahoemuseum.org/"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "The beach today",
+    "line": "The beach at Camp Richardson with the Sierra across the water. Photo taken on February 17, 2014.",
+    "ph": {
+     "k": "ti_cr_now",
+     "by": "Blake Everett",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Camp_Richardson_Beach,_Lake_Tahoe.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The resort is named after Captain Alonzo L. Richardson, who started a stage service from Placerville to South Lake Tahoe in 1921. He was also the first postmaster in the area.",
+    "An 1891 U.S. Geological Survey map shows the site as Yanks. The Camp Richardson post office ran from 1927 to 1973, with a closure in 1964 and 1965.",
+    "Today the resort has a marina, cabins, hotel rooms and a bar and grill, at about 6,250 feet above sea level."
+   ],
+   "fact": "The Camp Richardson post office operated for almost half a century, from 1927 to 1973.",
+   "disputed": "Accounts differ on who gets credit for the resort's start. Richardson leased the land in 1921, but a later figure, Ray Kinsley, helped keep the area from being over-commercialized.",
+   "claims": [
+    {
+     "t": "Camp Richardson began in 1921.",
+     "a": 0,
+     "why": "Wikipedia says the camp was established in 1921 by Captain Alonzo Richardson."
+    },
+    {
+     "t": "The site was always called Camp Richardson.",
+     "a": 2,
+     "why": "An 1891 USGS map labels it Yanks."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Camp Richardson, California",
+     "u": "https://en.wikipedia.org/wiki/Camp_Richardson,_California"
+    },
+    {
+     "t": "Visit Lake Tahoe: Origins of Lake Tahoe's places",
+     "u": "https://visitlaketahoe.com/attractions/the-origins-of-lake-tahoes-most-popular-places/"
+    }
+   ],
+   "card": {
+    "a": "1921",
+    "b": "1927",
+    "la": "Stage service",
+    "lb": "Post office opens"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Day Tripper"
+  ],
+  [
+   100,
+   "Beach Walker"
+  ],
+  [
+   250,
+   "Shore Scout"
+  ],
+  [
+   450,
+   "Lake Keeper"
+  ],
+  [
+   600,
+   "Tahoe Icon Historian"
+  ]
+ ],
+ "heroKey": "ti_em_now",
+ "heroAlt": "Emerald Bay and Fannette Island under a blue sky",
+ "heroLi": "<li>Header: DimiTalen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Emerald_Bay_2011.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: DimiTalen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Emerald_Bay_2011.jpg\">Source</a>",
+ "mission": "Visit four of Lake Tahoe's best-known spots, one on each shore. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. You have done the big four. Ready for the Deep Cuts?",
+ "safetyNote": "<li>These stops are spread around the lake, so plan the drive. Highway 89 and Highway 28 are busy and winding, so park in marked spots and cross at crosswalks. The lake is cold all year and the area is high, so bring water and sun protection.</li>",
+ "badgeMap": {
+  "emerald": [
+   "ti_em_now",
+   "55% 55%"
+  ],
+  "sandharbor": [
+   "ti_sh_now",
+   "50% 50%"
+  ],
+  "kingsbeach": [
+   "ti_kb_now",
+   "50% 60%"
+  ],
+  "richardson": [
+   "ti_cr_now",
+   "50% 40%"
+  ]
+ }
+}

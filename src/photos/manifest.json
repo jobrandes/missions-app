@@ -32,5 +32,10 @@
 "dc_wm_now",
 "dc_cap_then",
 "dc_cap_now",
-"dc_jm_now"
+"dc_jm_now",
+"ti_em_now",
+"ti_sh_now",
+"ti_kb_then",
+"ti_kb_now",
+"ti_cr_now"
 ]

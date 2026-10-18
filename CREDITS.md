@@ -70,3 +70,15 @@ All Boston check-in questions carry a `verify` note. Nobody has walked these sto
 | dc_jm_now | Carol M. Highsmith, Library of Congress (2006) | Public domain |
 
 Jefferson Memorial "then" slot: photo pending (no free historic photo chosen yet). Check-in questions are flagged `verify` until someone checks on site.
+
+## Tahoe Icons
+
+| Photo | Credit | License |
+|---|---|---|
+| ti_em_now | DimiTalen, "Emerald Bay 2011" (Commons) | CC0 |
+| ti_sh_now | Blake Everett Carroll, Sand Harbor 20220514 06 (Commons) | CC BY-SA 4.0 |
+| ti_kb_then | Belinda Rain, U.S. National Archives, May 1972 (near Kings Beach) | Public domain |
+| ti_kb_now | U.S. Department of the Interior, Aug. 13, 2012 (Commons) | CC BY-SA 2.0 |
+| ti_cr_now | Blake Everett, Camp Richardson Beach (Commons) | CC0 |
+
+Rejected: a 1921 book panorama that matched "Emerald Bay" in search but is not Emerald Bay; a "1899" Fannette Island photo with an unreliable date. "Then" photos for Emerald Bay, Sand Harbor and Camp Richardson show "photo pending". Pack is flagged `verify` for all check-in questions.
