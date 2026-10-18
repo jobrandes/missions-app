@@ -90,3 +90,18 @@ Rejected: a 1921 book panorama that matched "Emerald Bay" in search but is not E
 | bos_fh_then | Detroit Publishing Company (NYPL scan), Faneuil Hall postcard, c. 1900, cropped | Public domain |
 | bos_onc_then | Detroit Photographic Company photochrom, Old North Church steeple, c. 1900, cropped | Public domain |
 | dc_jm_then | Harris & Ewing (Library of Congress), Jefferson Memorial under construction, 1940, cropped | Public domain |
+
+## New York
+
+| Photo | Credit | License |
+|---|---|---|
+| ny_bb_then | Detroit Photographic Company, South Street Seaport, c. 1899-1924, cropped | Public domain |
+| ny_bb_now | Carol M. Highsmith (Library of Congress), 1980-2006, cropped | Public domain |
+| ny_gc_then | Detroit Publishing Co., main concourse, 1903-1920s, cropped | Public domain |
+| ny_gc_now | Carol M. Highsmith (Library of Congress), 2007 | Public domain |
+| ny_fi_then | Detroit Photographic Company, 1902-1905, cropped | Public domain |
+| ny_fi_now | Carol M. Highsmith (Library of Congress), July 19, 2011, cropped | Public domain |
+| ny_sl_then | Detroit Photographic Company, c. 1897-1924, cropped | Public domain |
+| ny_sl_now | Carol M. Highsmith (Library of Congress), Aug. 24, 2017 | CC0 |
+
+Rejected: an 1883 newspaper engraving of the bridge (an illustration, not a photo) and Steichen's 1904 Flatiron photo (too dark to compare). All NY check-in questions are flagged `verify`.

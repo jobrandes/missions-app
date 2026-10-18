@@ -1,0 +1,416 @@
+{
+ "id": "ny",
+ "name": "New York",
+ "level": "Icons",
+ "explorer": "New York Explorer",
+ "initials": "NY",
+ "stops": [
+  {
+   "id": "bridge",
+   "name": "Brooklyn Bridge",
+   "short": "Bridge",
+   "badge": "Bridge",
+   "tag": "Stop 1 of 4",
+   "teaser": "A stone-and-steel bridge that opened in 1883.",
+   "map": "Brooklyn Bridge Promenade, New York, NY",
+   "clue": "Find the walkway that climbs above the traffic and leads to two giant stone towers. Thousands of steel cables fan out from the tops of those towers.",
+   "safety": "The walkway is shared by walkers and bikes. Stay on the walking side and step aside to take photos. It is crowded, so keep young kids close. Never climb on the cables or railings.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look up at one of the stone towers. What shape are the two big arches?",
+    "options": [
+     "Round",
+     "Square",
+     "Pointed",
+     "Flat"
+    ],
+    "answer": 2,
+    "hint": "The style is called Gothic. Think of a church window.",
+    "verify": "Wikipedia: neo-Gothic pointed arches. Confirm on site."
+   },
+   "then": {
+    "yr": "c. 1900",
+    "label": "The bridge from the waterfront",
+    "line": "The bridge in the distance over South Street, with ships at the dock, in a colored print from about 1900.",
+    "ph": {
+     "k": "ny_bb_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:South_Street_Seaport,_Detroit_Photographic_Company_(0616).jpg",
+     "note": "cropped and resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "1980s to 2006",
+    "head": "Today",
+    "label": "On the walkway",
+    "line": "The tower and cables from the pedestrian walkway. Carol Highsmith took this between 1980 and 2006.",
+    "ph": {
+     "k": "ny_bb_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge,_New_York,_New_York_LCCN2011632099.tif",
+     "note": "cropped and resized"
+    }
+   },
+   "story": [
+    "The bridge opened on May 24, 1883. It was first called the New York and Brooklyn Bridge, and got its current name in 1915. At opening it was the longest suspension bridge in the world, with a main span of 1,595.5 feet.",
+    "John A. Roebling designed it but died in 1869, before work began. His son Washington Roebling took over as chief engineer. Washington became too ill to visit the site, and his wife, Emily Warren Roebling, helped supervise the work for about 11 years.",
+    "Six days after opening, a stampede on the walkway killed at least twelve people. On May 17, 1884, P. T. Barnum led 21 elephants across to show the bridge was safe."
+   ],
+   "fact": "Each stone tower is 278 feet tall. Four main cables each hold 5,282 galvanized steel wires.",
+   "disputed": "Emily Roebling is officially listed as the first person to cross the bridge. Some accounts debate that, so this app treats it as a reported fact, not a certain one.",
+   "claims": [
+    {
+     "t": "The Brooklyn Bridge opened in 1883.",
+     "a": 0,
+     "why": "It opened on May 24, 1883, per Wikipedia."
+    },
+    {
+     "t": "The bridge has always been called the Brooklyn Bridge.",
+     "a": 2,
+     "why": "It was first the New York and Brooklyn Bridge. The current name became official in 1915."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Brooklyn Bridge",
+     "u": "https://en.wikipedia.org/wiki/Brooklyn_Bridge"
+    },
+    {
+     "t": "Wikipedia: Emily Warren Roebling",
+     "u": "https://en.wikipedia.org/wiki/Emily_Warren_Roebling"
+    }
+   ],
+   "card": {
+    "a": "1883",
+    "b": "1915",
+    "la": "Opened",
+    "lb": "Renamed"
+   }
+  },
+  {
+   "id": "grandcentral",
+   "name": "Grand Central Terminal",
+   "short": "Grand Central",
+   "badge": "Grand Central",
+   "tag": "Stop 2 of 4",
+   "teaser": "A train station so grand it is a landmark.",
+   "map": "Grand Central Terminal, 89 E 42nd St, New York, NY",
+   "clue": "Walk into the huge main hall of the train station on 42nd Street. Look for a round information booth right in the middle, with something famous on top.",
+   "safety": "The station is packed at rush hour, so step out of the walking lanes to look around. Watch for people carrying bags and rolling luggage. Hold onto your phone and keep your belongings close.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find the information booth in the middle of the main concourse. How many faces does the clock on top of it have?",
+    "options": [
+     "2",
+     "3",
+     "6",
+     "4"
+    ],
+    "answer": 3,
+    "hint": "One faces each direction you could walk.",
+    "verify": "Wikipedia: a four-sided brass clock tops the booth. Count on site."
+   },
+   "then": {
+    "yr": "1903 to the 1920s",
+    "label": "The main concourse, long ago",
+    "line": "A black-and-white view of the main concourse from the early years. Detroit Publishing dated it only between 1903 and the 1920s.",
+    "ph": {
+     "k": "ny_gc_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Main_concourse,_Grand_Central_Terminal.jpg",
+     "note": "cropped and resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The concourse today",
+    "line": "The main concourse and its blue-green ceiling in 2007.",
+    "ph": {
+     "k": "ny_gc_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Interior,_Grand_Central_Station,_New_York,_New_York_LCCN2010630085.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The terminal was built from 1903 to 1913 and opened on February 2, 1913. The Vanderbilt family owned the station. Cornelius Vanderbilt chose the acorn as the family symbol, and you can spot acorns around the building.",
+    "Two firms share the design credit. Reed and Stem designed the overall plan, and Warren and Wetmore, led by Whitney Warren, shaped much of the look.",
+    "In the 1970s, the owner wanted to tear down the main concourse and build a tower. Jacqueline Kennedy Onassis helped lead the fight to save it."
+   ],
+   "fact": "The terminal has 44 platforms, with 67 tracks in all. Forty-one are used for passenger trains.",
+   "disputed": "Who deserves the credit for the design is shared between two firms, so we list both. Stories about the ceiling stars being painted backwards are not covered in our sources, so we make no claim either way.",
+   "claims": [
+    {
+     "t": "Grand Central Terminal opened in 1913.",
+     "a": 0,
+     "why": "It opened on February 2, 1913, according to Wikipedia."
+    },
+    {
+     "t": "The clock above the information booth has three faces.",
+     "a": 2,
+     "why": "It is a four-sided brass clock."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Grand Central Terminal",
+     "u": "https://en.wikipedia.org/wiki/Grand_Central_Terminal"
+    },
+    {
+     "t": "Wikipedia: Penn Central v. New York City",
+     "u": "https://en.wikipedia.org/wiki/Penn_Central_Transportation_Co._v._New_York_City"
+    }
+   ],
+   "card": {
+    "a": "1913",
+    "b": "2007",
+    "la": "Opened",
+    "lb": "Today"
+   }
+  },
+  {
+   "id": "flatiron",
+   "name": "Flatiron Building",
+   "short": "Flatiron",
+   "badge": "Flatiron",
+   "tag": "Stop 3 of 4",
+   "teaser": "A skyscraper shaped like a slice of pie.",
+   "map": "Flatiron Building, 175 5th Ave, New York, NY",
+   "clue": "Find where Fifth Avenue crosses Broadway near a small park. A tall stone building comes to a very narrow point there, like the bow of a ship.",
+   "safety": "Midtown and Lower Manhattan are very busy. Cross only at crosswalks and wait for the signal, even when others do not. Stay out of bike lanes and watch for bikes and scooters. Keep your phone away from the curb while you look at it. The streets around the building meet at odd angles, so look both ways twice.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Stand at the narrow tip of the building. Which numbered street touches that northern point?",
+    "options": [
+     "14th Street",
+     "23rd Street",
+     "34th Street",
+     "42nd Street"
+    ],
+    "answer": 1,
+    "hint": "It is a little more than 22.",
+    "verify": "Wikipedia: East 23rd Street touches the northern peak. Confirm on site."
+   },
+   "then": {
+    "yr": "c. 1903",
+    "label": "A colored photo print",
+    "line": "The building a year or two after it opened, with horse-drawn carts and trolleys below. Dated between 1902 and 1905.",
+    "ph": {
+     "k": "ny_fi_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0645).jpg",
+     "note": "cropped and resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The building today",
+    "line": "Photo taken on July 19, 2011.",
+    "ph": {
+     "k": "ny_fi_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:No_Known_Restrictions_Flatiron_Building,_New_York_City_(Highsmith_LOC)_(6718401639).jpg",
+     "note": "cropped and resized"
+    }
+   },
+   "story": [
+    "The Flatiron Building was finished in 1902 and opened to tenants on October 1, 1902. It was first called the Fuller Building, after George A. Fuller. The architect was Daniel Burnham's firm.",
+    "The triangle shape comes from the site. Broadway cuts across the city grid on a diagonal, so the block is a wedge. It was first 20 stories plus an attic, and grew to 22 stories in 1905.",
+    "Early on it was nicknamed Burnham's Folly, because people doubted a building so thin could stand. It is now a National Historic Landmark."
+   ],
+   "fact": "The narrow end is only about 6 feet wide. The building is 307 feet tall.",
+   "disputed": "Sources give the width of the narrow end as either 6 feet or 6.5 feet, so we say about 6 feet.",
+   "claims": [
+    {
+     "t": "The Flatiron Building was first called the Fuller Building.",
+     "a": 0,
+     "why": "It was named for George A. Fuller, founder of the Fuller Company."
+    },
+    {
+     "t": "The Flatiron Building's narrow tip is about 60 feet wide.",
+     "a": 2,
+     "why": "The narrow end is only about 6 feet wide."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Flatiron Building",
+     "u": "https://en.wikipedia.org/wiki/Flatiron_Building"
+    },
+    {
+     "t": "Wikipedia: Broadway (Manhattan)",
+     "u": "https://en.wikipedia.org/wiki/Broadway_(Manhattan)"
+    }
+   ],
+   "card": {
+    "a": "1902",
+    "b": "1966",
+    "la": "Opened",
+    "lb": "City landmark"
+   }
+  },
+  {
+   "id": "liberty",
+   "name": "Statue of Liberty",
+   "short": "Liberty",
+   "badge": "Liberty",
+   "tag": "Stop 4 of 4",
+   "teaser": "The big green lady in the harbor.",
+   "map": "Statue of Liberty National Monument, Liberty Island, New York, NY",
+   "clue": "Head to the water at the southern tip of Manhattan, or take a ferry to Liberty Island. A giant green statue holds a torch high above the harbor.",
+   "safety": "Only buy ferry tickets from the official ferry company or the National Park Service site, never from street sellers. Expect security screening. Stay behind railings near the water and follow park staff directions.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The tablet in the statue's left hand shows a date in Roman numerals. Which date?",
+    "options": [
+     "July 4, 1776",
+     "October 28, 1886",
+     "September 17, 1787",
+     "January 1, 1863"
+    ],
+    "answer": 0,
+    "hint": "It is the birthday of the United States.",
+    "verify": "Wikipedia says the tablet shows the Roman-numeral date of July 4, 1776. Check on site; you may need to be close to read it."
+   },
+   "then": {
+    "yr": "c. 1900",
+    "label": "A colored photo print",
+    "line": "The statue on its island around 1900, when the copper was still turning from shiny brown to green.",
+    "ph": {
+     "k": "ny_sl_then",
+     "by": "Detroit Photographic Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0707)_-_Statue_of_Liberty.jpg",
+     "note": "cropped and resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2017",
+    "head": "Today",
+    "label": "From the air",
+    "line": "Liberty Island with the Manhattan skyline behind it. Carol Highsmith took this on August 24, 2017.",
+    "ph": {
+     "k": "ny_sl_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:HIghsmith_2017_LOC_Statue_of_Liberty_NY_Harbor.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The statue was a gift from the people of France. The sculptor was Frédéric Auguste Bartholdi, and Gustave Eiffel's company built the iron frame inside. It was dedicated on October 28, 1886, with President Grover Cleveland.",
+    "The French people paid for the statue, and Americans paid for the pedestal. The statue was shiny reddish-brown copper at first. The green color came from oxidation and covered it by 1906.",
+    "The island was called Bedloe's Island until Congress renamed it in 1956. The famous poem, The New Colossus by Emma Lazarus, is on a plaque at the base."
+   ],
+   "fact": "From the ground to the tip of the torch, the statue and pedestal together are about 305 feet tall.",
+   "disputed": "Many people say Bartholdi's mother was the model for the face. The curator of the Bartholdi Museum says there is no factual basis for that, so we do not claim it.",
+   "claims": [
+    {
+     "t": "The Statue of Liberty was dedicated in 1886.",
+     "a": 0,
+     "why": "It was dedicated on October 28, 1886."
+    },
+    {
+     "t": "The Statue of Liberty stands on Ellis Island.",
+     "a": 2,
+     "why": "It stands on Liberty Island. Ellis Island is a separate island."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Statue of Liberty",
+     "u": "https://en.wikipedia.org/wiki/Statue_of_Liberty"
+    },
+    {
+     "t": "National Park Service: Statue of Liberty",
+     "u": "https://www.nps.gov/stli/index.htm"
+    }
+   ],
+   "card": {
+    "a": "1886",
+    "b": "1906",
+    "la": "Dedicated",
+    "lb": "Fully green"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Tourist"
+  ],
+  [
+   100,
+   "Subway Rider"
+  ],
+  [
+   250,
+   "Street Smart"
+  ],
+  [
+   450,
+   "Gotham Scholar"
+  ],
+  [
+   600,
+   "New York Historian"
+  ]
+ ],
+ "heroKey": "ny_sl_now",
+ "heroAlt": "The Statue of Liberty and Liberty Island with the Manhattan skyline behind",
+ "heroLi": "<li>Header: Carol M. Highsmith · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:HIghsmith_2017_LOC_Statue_of_Liberty_NY_Harbor.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Carol M. Highsmith (Library of Congress) · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:HIghsmith_2017_LOC_Statue_of_Liberty_NY_Harbor.jpg\">Source</a>",
+ "mission": "Find four New York icons. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. New York has plenty more stories waiting.",
+ "safetyNote": "<li>New York is busy. Cross only at crosswalks, stay out of bike lanes, keep your belongings close, and only buy ferry tickets from official sellers.</li>",
+ "badgeMap": {
+  "bridge": [
+   "ny_bb_now",
+   "50% 40%"
+  ],
+  "grandcentral": [
+   "ny_gc_now",
+   "50% 40%"
+  ],
+  "flatiron": [
+   "ny_fi_now",
+   "50% 30%"
+  ],
+  "liberty": [
+   "ny_sl_now",
+   "75% 40%"
+  ]
+ }
+}
