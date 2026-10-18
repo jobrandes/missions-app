@@ -342,3 +342,6 @@ details.reg>summary.region::-webkit-details-marker{display:none}
 details.reg>summary.region::after{content:"+";font:600 18px var(--font-mono);color:var(--accent);padding-left:8px}
 details.reg[open]>summary.region::after{content:"–"}
 .rcount{margin-left:auto;font:500 12px var(--font-mono);letter-spacing:.06em;color:var(--muted)}
+
+.rlabel{flex:none;align-self:center;padding:0 6px 0 12px;margin-left:6px;border-left:1px solid var(--line);font:600 11px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.city.home{position:sticky;left:0;z-index:2;background:var(--bg)}

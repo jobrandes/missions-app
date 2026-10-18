@@ -126,7 +126,7 @@
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
-    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+ORDER.map(function(k){
+    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+'<span class="rlabel" aria-hidden="true">'+(c.region||'More places')+'</span>'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===(c.region||'More places'); }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
     }).join('');
     var act=document.querySelector('#cities .city[aria-pressed="true"]'); if(act&&act.scrollIntoView){ try{ var box=document.getElementById('cities'); box.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }

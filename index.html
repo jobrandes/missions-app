@@ -349,6 +349,9 @@ details.reg>summary.region::-webkit-details-marker{display:none}
 details.reg>summary.region::after{content:"+";font:600 18px var(--font-mono);color:var(--accent);padding-left:8px}
 details.reg[open]>summary.region::after{content:"–"}
 .rcount{margin-left:auto;font:500 12px var(--font-mono);letter-spacing:.06em;color:var(--muted)}
+
+.rlabel{flex:none;align-self:center;padding:0 6px 0 12px;margin-left:6px;border-left:1px solid var(--line);font:600 11px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.city.home{position:sticky;left:0;z-index:2;background:var(--bg)}
 </style>
 
 <div class="app">
@@ -512,7 +515,7 @@ details.reg[open]>summary.region::after{content:"–"}
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
-    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+ORDER.map(function(k){
+    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+'<span class="rlabel" aria-hidden="true">'+(c.region||'More places')+'</span>'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===(c.region||'More places'); }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
     }).join('');
     var act=document.querySelector('#cities .city[aria-pressed="true"]'); if(act&&act.scrollIntoView){ try{ var box=document.getElementById('cities'); box.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
