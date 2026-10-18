@@ -227,11 +227,11 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 .case{position:relative;border:0;padding:6px 4px}
 .case.got .bbox{transform:rotate(-6deg)}
 .case.got:nth-child(even) .bbox{transform:rotate(5deg)}
-.case.got .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--accent);opacity:.75;pointer-events:none}
+.case.got .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--ink,var(--accent));opacity:.9;pointer-events:none}
 .case .bbox{position:relative}
 .case:not(.got) .bbox{opacity:.55}
 .case:not(.got) .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--bulb-off);pointer-events:none}
-.case.got .mono{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.case.got .mono{color:var(--ink,var(--accent));font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 @media (prefers-reduced-motion:no-preference){.case.got .bbox{animation:stampin .35s ease-out both}@keyframes stampin{from{transform:scale(1.35) rotate(-14deg);opacity:0}}}
 
 /* Then/Now fade slider */
@@ -259,6 +259,13 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 .fbtn:hover,.fbtn:focus-visible{border-color:var(--accent)}
 .fdone{padding-top:12px;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion:no-preference){.fcard.shake{animation:fshake .35s}@keyframes fshake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}}
+
+/* Stamp ink: XP unlocks */
+.inks{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.ink{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:64px;padding:8px 6px;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:500 11px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.ink i{width:28px;height:28px;border-radius:50%;display:block;border:3px dashed currentColor}
+.ink[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.ink:disabled{opacity:.45;cursor:default}
 </style>
 
 <div class="app">
@@ -647,6 +654,12 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
     var next=RANKS[i+1]||null;
     return {i:i,name:RANKS[i][1],from:RANKS[i][0],to:next?next[0]:RANKS[i][0],next:next};
   }
+  var INKS=[{n:'Blue',c:'#1B58B8'},{n:'Red',c:'#C0392B'},{n:'Green',c:'#2E8B57'},{n:'Purple',c:'#7B4BB7'},{n:'Gold',c:'#D4A017'}], inkI=0;
+  try{ var _k=parseInt(localStorage.getItem('then-now-ink'),10); if(_k>=0&&_k<INKS.length) inkI=_k; }catch(e){}
+  function bestRank(){
+    var best=0; [ALL.reno,ALL.vc].forEach(function(st){ var x=sum(st.done)*100+sum(st.claims)*25, i=0; [0,100,250,450,600].forEach(function(t,k){ if(x>=t) i=k; }); if(i>best) best=i; });
+    return best;
+  }
   function code(){ return 'TN2-'+ALL.reno.done.join('')+ALL.reno.claims.join('')+'-'+ALL.vc.done.join('')+ALL.vc.claims.join(''); }
   function allDone(){ return sum(S.done)===4; }
 
@@ -814,10 +827,15 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 
   function viewRewards(){
     var x=xp(), r=rank(x);
-    var h='<section class="card"><h3>Passport: '+city().name+'</h3><p class="why" style="margin:0 0 10px">Each stop you finish stamps a page.</p><div class="cases">'+STOPS.map(function(s,i){
+    var h='<section class="card"><h3>Passport: '+city().name+'</h3><p class="why" style="margin:0 0 10px">Each stop you finish stamps a page.</p><div class="cases" style="--ink:'+INKS[Math.min(inkI,bestRank())].c+'">'+STOPS.map(function(s,i){
       return '<div class="case'+(S.done[i]?' got':'')+'"><div class="bbox lg">'+badge(s.id,S.done[i])+'</div><span class="nm">'+s.badge+'</span><span class="mono">'+(S.done[i]?'Stamped':'Blank page')+'</span></div>';
     }).join('')+'</div></section>';
     h+='<section class="card"><h3>'+city().explorer+'</h3><div class="master"><div class="bbox lg">'+badge('master',allDone())+'</div><p>'+(allDone()?'Earned. You found every stop in '+city().name+'.':'Earn all four badges to unlock it.')+'</p></div></section>';
+    var br=bestRank();
+    h+='<section class="card"><h3>Stamp ink</h3><p class="why" style="margin:0 0 8px">XP unlocks new inks for your stamps. Higher ranks in any town unlock more.</p><div class="inks" role="group" aria-label="Stamp ink">'+INKS.map(function(k,i){
+      var open=i<=br;
+      return '<button class="ink" data-a="ink" data-i="'+i+'" aria-pressed="'+(i===Math.min(inkI,br))+'"'+(open?'':' disabled')+' style="color:'+k.c+'"><i></i><span style="color:var(--ink)">'+(open?k.n:RANKS[i][0]+' XP')+'</span></button>';
+    }).join('')+'</div></section>';
     h+='<section class="card"><h3>Rank</h3><ul class="ladder">'+RANKS.map(function(rk,i){
       return '<li class="'+(i<=r.i?'got':'')+'"><span>'+rk[1]+'</span><span class="mono">'+(i<=r.i?'Earned':rk[0]+' XP')+'</span></li>';
     }).join('')+'</ul></section>';
@@ -898,6 +916,7 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
       }
       return;
     }
+    if(a==='ink'){ var ii=+b.getAttribute('data-i'); if(ii<=bestRank()){ inkI=ii; try{ localStorage.setItem('then-now-ink',String(ii)); }catch(e){} render(); } return; }
     if(a==='fpick'){ factAnswer(+b.getAttribute('data-c'),+b.getAttribute('data-k')); return; }
     if(a==='cpick'){
       cur.picks[+b.getAttribute('data-c')]=+b.getAttribute('data-k'); cur.checked=false; render(); return;
