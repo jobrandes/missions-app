@@ -30,3 +30,8 @@ full=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="vi
   +rd('src/head.html')+reset+'<style>\n'+rd('src/styles.css')+'</style></head><body>'+rd('src/body.html')+'<script>\n'+js+'</script></body></html>')
 open(R+'site/index.html','w').write(full)
 open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex\n')
+
+import shutil
+for pg in ('privacy.html','support.html'):
+    shutil.copy(R+'src/pages/'+pg,R+'site/'+pg)
+print('copied pages')
