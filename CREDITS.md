@@ -29,4 +29,7 @@ All from Wikimedia Commons, licenses checked via the Commons API. Resized for th
 | Piper's Now (2009) | Vivaverdi | CC BY 3.0 | Virginia City-Pipers Opera House-1885.JPG |
 | School Now | Carol M. Highsmith (LoC) | Public domain | Fourth Ward School ... LCCN2011631000.jpg |
 
-Still PENDING: Enterprise Then (1937 HABS scan would not load; try again), School Then, Reno 1926 arch, Reno 2016 bridge.
+| Enterprise Then (1937) | Robert W. Kerrigan (HABS) | Public domain | ...Mark Twain "Enterprise" Building ... HABS NEV,15-VIRG,6-1.tif |
+| School Then (1937) | Robert W. Kerrigan (HABS) | Public domain | ...Fourth Ward School ... HABS NEV,15-VIRG,8-1.tif |
+
+Still PENDING: Reno 1926 arch and Reno 2016 bridge (no free photo found on Commons). Lead: Commons file "Virginia City, NV rephoto early 1870s + 2007.jpg" (CC BY 2.0, low resolution) for C Street.
