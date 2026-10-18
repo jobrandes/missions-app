@@ -233,6 +233,16 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 .case:not(.got) .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--bulb-off);pointer-events:none}
 .case.got .mono{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 @media (prefers-reduced-motion:no-preference){.case.got .bbox{animation:stampin .35s ease-out both}@keyframes stampin{from{transform:scale(1.35) rotate(-14deg);opacity:0}}}
+
+/* Then/Now fade slider */
+.cmp{margin:0 0 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:10px}
+.cmp .box{position:relative;aspect-ratio:4/3;max-width:100%;border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.cmp .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cmp .top{opacity:0}
+.cmp .row{display:flex;align-items:center;gap:10px;margin-top:10px}
+.cmp .row span{font:600 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);flex:none}
+.cmp input[type=range]{flex:1;min-width:0;height:36px;accent-color:var(--accent)}
+.cmp .hint{margin:6px 0 0;font:500 12px var(--font-mono);color:var(--muted)}
 </style>
 
 <div class="app">
@@ -287,6 +297,14 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
     if(hasPh(st,era)) return '<div class="scene ph'+(extra||'')+'"><img src="'+PHOTOS[st[era].ph.k]+'" alt="'+label+'"></div>';
     return '<div class="scene pend'+(extra||'')+'"><span>Photo pending. A free-to-use photo has not been added here yet.</span></div>';
   }
+  function compare(st){
+    if(!(hasPh(st,'then')&&hasPh(st,'now'))) return '';
+    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Drag to travel back to '+st.then.yr+'.</p></section>';
+  }
+  document.addEventListener('input',function(e){
+    var t=e.target; if(!t||!t.getAttribute||!t.getAttribute('data-cmp')) return;
+    var top=t.closest('.cmp').querySelector('.top'); if(top) top.style.opacity=(t.value/100);
+  });
   function credit(st,era){
     var p=st[era].ph;
     if(hasPh(st,era)) return '<span class="credit">Photo: '+p.by+' · <a target="_blank" rel="noopener" href="'+p.lu+'">'+p.lic+'</a> · <a target="_blank" rel="noopener" href="'+p.page+'">Source</a>'+(p.note?' · '+p.note:'')+'</span>';
@@ -711,6 +729,7 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
       h+='</section>';
     }
     if(cur.step===2 && d){
+      h+=compare(st);
       h+='<div class="pair"><div class="then">'+visual(st,'then',st.then.label+', '+st.then.yr)+'<div class="cap"><strong>Then, '+st.then.yr+': '+st.then.label+'</strong><br>'+st.then.line+'</div>'+credit(st,'then')+'<a target="_blank" rel="noopener" href="'+st.then.link.u+'">'+st.then.link.t+'</a></div>'
         +'<div class="now">'+visual(st,'now',st.now.label)+'<span class="mono">'+(st.now.head||'Now')+'</span><b class="yr">'+st.now.yr+'</b><div class="cap"><strong>'+st.now.label+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
       h+='<section class="card story">'+st.story.map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
