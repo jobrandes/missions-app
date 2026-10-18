@@ -25,3 +25,20 @@ Static site, no build step. On Netlify: new site from this repo, publish directo
 3. Add it to `PHOTOS` in `index.html`, point the stop's `ph` entry at it, and add a row to `CREDITS.md`.
 
 I am not a lawyer. Check each license yourself.
+
+## Project layout (rebuilt Oct 18)
+```
+src/head.html, body.html   page shell (title, fonts, markup)
+src/styles.css             all styling (light + dark tokens)
+src/app.js                 game logic (no town content in here)
+src/packs/<town>.json      one file per town: stops, questions, claims, sources, ranks, photo credits
+src/packs/index.json       which towns ship, in order
+src/photos/*.jpg           real photos (resized), manifest.json lists them
+build.py                   assembles everything into one self-contained index.html
+tests/run_all.sh           build + content checks + layout checks + screen-by-screen snapshot
+```
+**Never edit index.html by hand.** Edit `src/`, then run `sh tests/run_all.sh`.
+
+**Add a town:** copy `src/packs/vc.json`, edit it, add its photos to `src/photos/` and `manifest.json`, add its id to `src/packs/index.json`, run the tests. (Current limits, enforced by the tests: 4 stops per town, 2 Fact or Fiction claims per stop.)
+
+**Add a photo:** save a resized JPEG in `src/photos/`, add its key to `manifest.json`, reference it from a stop with a full credit (`by`, `lic`, `lu`, `page`). The validator refuses a photo without a credit.

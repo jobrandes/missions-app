@@ -1,0 +1,34 @@
+
+
+<div class="app">
+  <nav class="cities" id="cities" aria-label="Towns"></nav>
+  <header class="hero" id="hero">
+    <img class="art" id="heroImg" alt="">
+    <p class="mono">Then &amp; Now</p>
+    <h1 id="cityName">Reno</h1>
+    <div class="rank-row">
+      <span id="rankName"></span>
+      <span id="xpText" class="mono"></span>
+    </div>
+    <div class="xp" role="progressbar" aria-label="Experience points" id="xpBar" aria-valuemin="0" aria-valuemax="600"><div id="xpFill"></div></div>
+    <div class="bulbs" id="bulbs" aria-label="Badges earned"></div>
+    <p class="hero-credit" id="heroCredit"></p>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" data-a="tab" data-t="trail" id="tab-trail">Trail</button>
+    <button class="tab" role="tab" data-a="tab" data-t="cards" id="tab-cards">Cards</button>
+    <button class="tab" role="tab" data-a="tab" data-t="rewards" id="tab-rewards">Rewards</button>
+  </nav>
+
+  <main id="main" class="view" role="tabpanel"></main>
+</div>
+
+<div class="bar" id="bar" hidden>
+  <div class="bar-in">
+    <button class="btn ghost" data-a="goback" id="barBack">‹ Back</button>
+    <button class="btn ghost" data-a="exit" id="barExit">Trail</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+

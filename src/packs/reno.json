@@ -1,0 +1,423 @@
+{
+ "id": "reno",
+ "name": "Reno",
+ "explorer": "Reno Explorer",
+ "initials": "RN",
+ "stops": [
+  {
+   "id": "arch",
+   "name": "The Reno Arch",
+   "short": "Arch",
+   "badge": "Reno Arch",
+   "tag": "Stop 1 of 4",
+   "teaser": "A giant sign over the main street.",
+   "map": "Reno Arch, Reno NV",
+   "clue": "Look for a giant sign that stretches over the main street downtown. Visitors have walked under it for generations. If you get stuck, any local can point the way.",
+   "safety": "Cross only at crosswalks and stay on the sidewalk. This stop is outdoors in public space. Do not step into the street for a photo.",
+   "field": "Field notes pending: sidewalk surfaces and curb cuts have not been checked on foot yet.",
+   "q": {
+    "prompt": "Read the street signs at the corner under the arch. Which two streets meet here?",
+    "options": [
+     "Virginia Street and Commercial Row",
+     "Center Street and Second Street",
+     "Lake Street and Mill Street",
+     "Sierra Street and Liberty Street"
+    ],
+    "answer": 0,
+    "hint": "Look at the street-name signs on the corner posts."
+   },
+   "then": {
+    "yr": "1973",
+    "label": "The second arch",
+    "line": "This 1963 arch stood until the current one replaced it in 1987. Photo taken in June 1973.",
+    "ph": {
+     "k": "sign1973",
+     "by": "Michael Holley (Swtpc6800)",
+     "lic": "CC0",
+     "lu": "http://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Reno_Biggest_Little_City_Sign_Day_1973.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "See the 1926 arch in UNLV Special Collections",
+     "u": "https://special.library.unlv.edu/node/535788"
+    }
+   },
+   "now": {
+    "yr": "1987",
+    "label": "Today's arch",
+    "line": "The arch over Virginia Street went up in 1987 and has been relit and repainted since. Photo taken in 2021.",
+    "ph": {
+     "k": "arch_now",
+     "by": "Missvain",
+     "lic": "CC BY 4.0",
+     "lu": "https://creativecommons.org/licenses/by/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Reno_Arch_-_2021-10-17_-_Sarah_Stierch.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "On October 23, 1926, Reno raised a steel arch over Virginia Street. It marked the completion of the Lincoln and Victory Highways and helped promote a 1927 highways exposition.",
+    "When the exposition ended, residents had grown fond of the arch, so the city kept it and ran a slogan contest. An entrant from Sacramento named Burns won $100 for \"Reno, The Biggest Little City in the World.\"",
+    "A larger arch with plastic panels and a rotating star replaced the first one in 1963. The arch you are standing under today was installed in 1987."
+   ],
+   "fact": "The 1963 arch was donated to Willits, California. The town changed its slogan to welcome visitors to the redwoods.",
+   "disputed": "Sources disagree on when the famous slogan first appeared on the arch. One says June 1929. Another describes it as part of the arch from 1926.",
+   "claims": [
+    {
+     "t": "The first Reno Arch was built in 1926.",
+     "a": 0,
+     "why": "Several sources agree on October 23, 1926."
+    },
+    {
+     "t": "The arch switched to LED lights in 2018.",
+     "a": 1,
+     "why": "One source says 2009 and another says 2018. Until a city record settles it, treat it as disputed."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Reno Arch",
+     "u": "https://en.wikipedia.org/wiki/Reno_Arch"
+    },
+    {
+     "t": "Travel Nevada: Reno Arch",
+     "u": "https://travelnevada.com/historical-interests/reno-arch/"
+    },
+    {
+     "t": "Reno Historical: the arch",
+     "u": "https://www.renohistorical.org/items/show/106"
+    },
+    {
+     "t": "SkyscraperPage: Reno Arch",
+     "u": "https://skyscraperpage.com/b185627"
+    },
+    {
+     "t": "UNLV Northern Nevada Neon: 2018 arch photo record",
+     "u": "https://special-delta.library.unlv.edu/node/547075"
+    }
+   ],
+   "card": {
+    "a": "1973",
+    "b": "2021",
+    "la": "The 1963 arch",
+    "lb": "Lit-up arch today"
+   }
+  },
+  {
+   "id": "oldarch",
+   "name": "The Original Arch",
+   "short": "Old Arch",
+   "badge": "Original Arch",
+   "tag": "Stop 2 of 4",
+   "teaser": "The first arch survived. Find it.",
+   "map": "Original Reno Arch, 1 Lake St, Reno NV",
+   "clue": "The very first arch did not disappear. It was moved, stored, and even starred in a movie. It now stands a few blocks south of the new arch. Find the old sign and see what a 1920s arch looked like.",
+   "safety": "Stay on public sidewalks and cross only at crosswalks. Look from the sidewalk and do not climb on or lean against the sign.",
+   "field": "Field notes pending: the viewing spot and walking route have not been checked on foot yet.",
+   "q": {
+    "prompt": "Read the street sign near the old arch. Which street is it on?",
+    "options": [
+     "Lake Street",
+     "Arlington Avenue",
+     "Sierra Street",
+     "Fourth Street"
+    ],
+    "answer": 0,
+    "hint": "Check the street-name sign at the nearest corner."
+   },
+   "then": {
+    "yr": "1926",
+    "label": "Over Virginia Street",
+    "line": "The original steel arch greeted visitors for 37 years.",
+    "link": {
+     "t": "See the 1926 arch at Reno Historical",
+     "u": "https://www.renohistorical.org/items/show/106"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "label": "On Lake Street",
+    "line": "After years in parks and storage, the restored arch got a permanent home on Lake Street in the mid-1990s. Photo taken in 2011.",
+    "ph": {
+     "k": "oldarch_b",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Original_Reno_Arch,_Reno,_Nevada_(6320278997).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "When the larger arch replaced it in 1963, the original was taken down. It bounced between Idlewild Park, other city parks, and storage yards.",
+    "A film crew needed the old sign as a prop for a 1994 movie. The restored arch was such a hit that the city gave it a permanent home on Lake Street.",
+    "It is the same steel sign people walked under in the 1920s, which makes this the closest thing to a time machine on the trail."
+   ],
+   "fact": "The movie was Cobb, a baseball biopic starring Tommy Lee Jones. The arch was reassembled as a prop.",
+   "disputed": "Sources give the year the arch settled on Lake Street as 1994 or 1995.",
+   "claims": [
+    {
+     "t": "The original arch was used as a movie prop in 1994.",
+     "a": 0,
+     "why": "Travel Nevada and Governing both report this."
+    },
+    {
+     "t": "The original arch has always stood on Lake Street.",
+     "a": 2,
+     "why": "It stood over Virginia Street until 1963 and then moved several times."
+    }
+   ],
+   "sources": [
+    {
+     "t": "KUNR: The evolution of the Reno Arch",
+     "u": "https://www.kunr.org/post/evolution-famous-reno-arch"
+    },
+    {
+     "t": "Governing: Reno's Sign of the Times",
+     "u": "https://www.governing.com/topics/urban/gov-last-look-october.html"
+    },
+    {
+     "t": "Travel Nevada: Reno Arch",
+     "u": "https://travelnevada.com/historical-interests/reno-arch/"
+    },
+    {
+     "t": "Reno Historical: the arch",
+     "u": "https://www.renohistorical.org/items/show/106"
+    },
+    {
+     "t": "UNLV Northern Nevada Neon: old arch record",
+     "u": "https://special.library.unlv.edu/node/547537"
+    }
+   ],
+   "card": {
+    "a": "1926",
+    "b": "1990s",
+    "la": "Over Virginia Street",
+    "lb": "Restored on Lake Street"
+   }
+  },
+  {
+   "id": "bridge",
+   "name": "Virginia Street Bridge",
+   "short": "Bridge",
+   "badge": "Virginia St Bridge",
+   "tag": "Stop 3 of 4",
+   "teaser": "A crossing older than the city.",
+   "map": "Virginia Street Bridge, Reno NV",
+   "clue": "Walk south from the first arch until the street crosses the water. This crossing is older than the city itself, and a famous legend is tied to it.",
+   "safety": "Use the sidewalk and stay behind the railing. Do not lean over, climb, or throw anything into the river.",
+   "field": "Field notes pending: sidewalk width and ramps have not been checked on foot yet.",
+   "q": {
+    "prompt": "Which river flows under this bridge?",
+    "options": [
+     "Truckee River",
+     "Carson River",
+     "Humboldt River",
+     "Walker River"
+    ],
+    "answer": 0,
+    "hint": "This river starts at Lake Tahoe."
+   },
+   "then": {
+    "yr": "1910",
+    "label": "The 1905 bridge",
+    "line": "About five years after it opened, with the old Riverside Hotel rising behind it. Photo from around 1910.",
+    "ph": {
+     "k": "bridge_1910",
+     "by": "Mella Harmon, via the Online Nevada Encyclopedia",
+     "lic": "Public domain",
+     "lu": "https://commons.wikimedia.org/wiki/File:Virginia_Street_Bridge_Reno.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Virginia_Street_Bridge_Reno.jpg"
+    },
+    "link": {
+     "t": "See real archive photos at Reno Historical",
+     "u": "https://www.renohistorical.org/items/show/22"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Before 2015",
+    "label": "The 1905 bridge, last look",
+    "line": "The concrete bridge as documented for the Historic American Engineering Record before it was replaced. The new bridge opened April 12, 2016, with four restored light fixtures from the 1905 one. It has no free photo yet.",
+    "ph": {
+     "k": "bridge_haer",
+     "by": "Library of Congress, HAER NV-14-3",
+     "lic": "Public domain",
+     "lu": "https://commons.wikimedia.org/wiki/File:Virginia_Street_Bridge.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Virginia_Street_Bridge.jpg"
+    }
+   },
+   "story": [
+    "In 1860, Charles Fuller built the first bridge here. Myron Lake took over in 1861 and charged tolls. In 1868 the railroad founded the town of Reno beside this crossing.",
+    "An iron bridge arrived in 1877. In 1905 a concrete bridge designed by John B. Leonard replaced it. It was one of the first reinforced concrete bridges in Nevada and joined the National Register of Historic Places in 1980.",
+    "In 2015 the 1905 bridge was torn down as part of a flood control plan. The new bridge opened in April 2016.",
+    "Reno was once called the Divorce Capital of the World. A popular legend says newly divorced people tossed their wedding rings into the river from this bridge. Books and movies helped spread the story, including a 1929 novel and the 1961 film The Misfits."
+   ],
+   "fact": "The 2016 bridge cost about $18.3 million and is 166 feet long.",
+   "disputed": "The ring-tossing story is a legend. The sources we found do not say how often it happened, if at all.",
+   "claims": [
+    {
+     "t": "The 1905 bridge was torn down in 2015.",
+     "a": 0,
+     "why": "Reno Historical and the Northern Nevada Business Weekly both report it."
+    },
+    {
+     "t": "Newly divorced people regularly threw wedding rings off this bridge.",
+     "a": 1,
+     "why": "It is a well-known legend, but the sources we found do not confirm it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Reno Historical: Virginia Street Bridge",
+     "u": "https://www.renohistorical.org/items/show/22"
+    },
+    {
+     "t": "Northern Nevada Business Weekly: Virginia Street's bridges",
+     "u": "https://nnbw.com/news/2017/sep/14/renos-roots-intertwined-with-virginia-streets-brid"
+    }
+   ],
+   "card": {
+    "a": "1910",
+    "b": "2015",
+    "la": "The 1905 bridge",
+    "lb": "Last look before 2015"
+   }
+  },
+  {
+   "id": "park",
+   "name": "Wingfield Park",
+   "short": "Park",
+   "badge": "Wingfield Park",
+   "tag": "Stop 4 of 4",
+   "teaser": "An island that has been a resort and a runway.",
+   "map": "Wingfield Park, 2 N Arlington Ave, Reno NV",
+   "clue": "Find the island in the middle of the river. It has been a resort, a runway, and a park. Look for the outdoor stage.",
+   "safety": "Stay away from the water's edge. River levels and currents can change quickly, so keep close together.",
+   "field": "Field notes pending: paths and surfaces have not been checked on foot yet.",
+   "q": {
+    "prompt": "Whose name is on this park?",
+    "options": [
+     "George Wingfield",
+     "Myron Lake",
+     "John Sparks",
+     "Charles Fuller"
+    ],
+    "answer": 0,
+    "hint": "He was a Nevada banker and miner who gave the island to the city."
+   },
+   "then": {
+    "yr": "1935",
+    "label": "The river dam by the park",
+    "line": "A hand-tinted photo of the Truckee River dam at Wingfield Park, around 1935.",
+    "ph": {
+     "k": "park_dam",
+     "by": "WaterArchives.org",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:(NEVADA-A-0307)_Wingfield_Park_Dam_(Truckee_River_Dam).jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "See real archive photos at Reno Historical",
+     "u": "https://www.renohistorical.org/items/show/39"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "label": "The river today",
+    "line": "The Truckee River beside downtown Reno, near Wingfield Park. Photo taken in 2015.",
+    "ph": {
+     "k": "park_a",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Truckee_River,_Reno,_Nevada_(18979480279).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Before it was a park, this island was a resort called Belle Isle. By 1911 it had a dance hall, an open-air theater with 700 seats, and boats to rent. Visitors crossed on a footbridge.",
+    "In July 1911, aviation pioneer Eugene Ely used part of the island as a runway. A roller skating rink opened in 1912.",
+    "George Wingfield bought the island in 1920 and gave it to the city. In the late 1930s, Works Progress Administration crews built retaining walls to hold the river banks in place."
+   ],
+   "fact": "The amphitheater is named for Glenn Little, a longtime performer and director of the Reno Municipal Band.",
+   "disputed": "",
+   "claims": [
+    {
+     "t": "Aviation pioneer Eugene Ely used part of this park as a runway in 1911.",
+     "a": 0,
+     "why": "Reno Historical lists it in the park's history."
+    },
+    {
+     "t": "The park has always been called Wingfield Park.",
+     "a": 2,
+     "why": "It was Belle Isle first and was renamed after Wingfield gave it to the city in 1920."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Reno Historical: Wingfield Park",
+     "u": "https://www.renohistorical.org/items/show/39"
+    },
+    {
+     "t": "Living New Deal: Wingfield Park",
+     "u": "https://livingnewdeal.org/?p=81196"
+    }
+   ],
+   "card": {
+    "a": "1935",
+    "b": "2015",
+    "la": "Hand-tinted dam photo",
+    "lb": "The river today"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Out-of-towner"
+  ],
+  [
+   100,
+   "Sidewalk Scholar"
+  ],
+  [
+   250,
+   "Downtown Detective"
+  ],
+  [
+   450,
+   "Arch Expert"
+  ],
+  [
+   600,
+   "Biggest Little Historian"
+  ]
+ ],
+ "heroKey": "hero",
+ "heroAlt": "Downtown Reno skyline with the Sierra beyond",
+ "heroLi": "<li>Skyline at the top: Kc0616 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Reno_skyline.JPG\">Source</a></li>",
+ "heroCredit": "Skyline: Kc0616 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Reno_skyline.JPG\">Source</a>",
+ "mission": "Find four downtown landmarks. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. Try Virginia City next.",
+ "safetyNote": "<li>Every stop is outdoors. Downtown has casinos, and minors generally cannot be on gaming floors, so none of the stops go inside one.</li>",
+ "badgeMap": {
+  "arch": [
+   "arch_now",
+   "50% 28%"
+  ],
+  "oldarch": [
+   "oldarch_b",
+   "50% 40%"
+  ],
+  "bridge": [
+   "bridge_1910",
+   "55% 70%"
+  ],
+  "park": [
+   "park_a",
+   "50% 62%"
+  ]
+ }
+}

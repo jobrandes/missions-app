@@ -1,0 +1,415 @@
+{
+ "id": "vc",
+ "name": "Virginia City",
+ "explorer": "Comstock Explorer",
+ "initials": "VC",
+ "stops": [
+  {
+   "id": "cstreet",
+   "name": "C Street",
+   "short": "C Street",
+   "badge": "C Street",
+   "tag": "Stop 1 of 4",
+   "teaser": "The main street of a silver boom town.",
+   "map": "C Street, Virginia City, NV",
+   "clue": "Find the main street of Virginia City. Its name is just one letter. Two- and three-story brick buildings line it, and most of them went up after a huge fire in 1875.",
+   "safety": "Sidewalks are narrow and steep in places, and cars share the road. Cross only at corners. The town sits at about 6,100 feet, so bring water. Saloons and casinos are for adults, so stay out of them. None of the stops need you to go inside.",
+   "field": "Field notes pending: sidewalk surfaces and slopes have not been checked on foot yet.",
+   "q": {
+    "prompt": "Read the street sign at the corner. Which letter names the main street?",
+    "options": [
+     "A Street",
+     "B Street",
+     "C Street",
+     "D Street"
+    ],
+    "answer": 2,
+    "hint": "Look at the street-name sign. The main street is named with a single letter."
+   },
+   "then": {
+    "ph": {
+     "k": "vc_cs_then",
+     "by": "I. W. Taber (stereo card)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Panorama_of_Virginia_City,_by_Taber,_I._W._(Isaiah_West),_1830-1912.jpg",
+     "note": "cropped and resized"
+    },
+    "yr": "Old view",
+    "label": "Virginia City from the hills",
+    "line": "The archive dates this stereo photo somewhere between 1867 and 1920. About 25,000 people lived here in the mid-1870s, before the Great Fire.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Virginia%20City%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "1961",
+    "head": "Today",
+    "label": "A National Historic Landmark",
+    "line": "The whole historic district became a National Historic Landmark on July 4, 1961. Photo taken in 2015.",
+    "ph": {
+     "k": "vc_cs_now",
+     "by": "Famartin",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:2015-10-30_13_48_37_View_north_along_C_Street_(Nevada_State_Route_341)_between_Taylor_Street_and_Union_Street_in_Virginia_City,_Nevada.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Silver was found here in 1859, and the Comstock Lode set off the first big silver rush. Virginia City was incorporated in February 1861.",
+    "By the mid-1870s more than 25,000 people lived here. On October 26, 1875, the Great Fire burned much of the town, did about $12 million in damage, and left about 2,000 people homeless.",
+    "The town was rebuilt. Most buildings along C Street are two- and three-story brick. Today about 800 people live here, at roughly 6,100 feet above sea level."
+   ],
+   "fact": "One year after the town was founded, it reportedly had 42 saloons, 42 stores, 6 restaurants, 3 hotels, and 868 homes.",
+   "disputed": "The story goes that the town was named when \"Old Virginny\" Finney broke a whiskey bottle at a saloon near Gold Hill. That is local folklore. The settlement also went by earlier names, such as Pleasant Hill and Mount Pleasant Point.",
+   "claims": [
+    {
+     "t": "The Great Fire of Virginia City happened on October 26, 1875.",
+     "a": 0,
+     "why": "Sources agree on the date and on about $12 million in damage."
+    },
+    {
+     "t": "Henry Comstock discovered the Comstock Lode.",
+     "a": 2,
+     "why": "Peter O'Riley and Patrick McLaughlin are credited with the discovery. Comstock later attached his name to it and claimed a share."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Virginia City, Nevada",
+     "u": "https://en.wikipedia.org/wiki/Virginia_City,_Nevada"
+    },
+    {
+     "t": "Wikipedia: Virginia City Historic District",
+     "u": "https://en.wikipedia.org/wiki/Virginia_City_Historic_District_(Virginia_City,_Nevada)"
+    }
+   ],
+   "card": {
+    "a": "1875",
+    "b": "1961",
+    "la": "The boom years",
+    "lb": "National Historic Landmark"
+   }
+  },
+  {
+   "id": "enterprise",
+   "name": "Territorial Enterprise",
+   "short": "Enterprise",
+   "badge": "Territorial Enterprise",
+   "tag": "Stop 2 of 4",
+   "teaser": "Where a young writer became Mark Twain.",
+   "map": "Mark Twain Museum, C Street, Virginia City, NV",
+   "clue": "Walk along C Street and look for the old newspaper building, now a museum with a famous writer's name on it.",
+   "safety": "Stay on the sidewalk. The museum is optional and has its own hours and rules. Look from the street.",
+   "field": "Field notes pending: the exact viewing spot has not been checked on foot yet.",
+   "q": {
+    "prompt": "Which writer's name is on the museum here?",
+    "options": [
+     "Mark Twain",
+     "Jack London",
+     "Ernest Hemingway",
+     "Edgar Allan Poe"
+    ],
+    "answer": 0,
+    "hint": "He wrote for the newspaper in the 1860s and signed his work with a pen name."
+   },
+   "then": {
+    "ph": {
+     "k": "vc_ent_then",
+     "by": "Robert W. Kerrigan (HABS)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Robert_W._Kerrigan,_Photographer_March_1937_-_Mark_Twain_%22Enterprise%22_Building,_C_Street,_Virginia_City,_Storey_County,_NV_HABS_NEV,15-VIRG,6-1.tif",
+     "note": "resized"
+    },
+    "yr": "1937",
+    "label": "The building in 1937",
+    "line": "On February 3, 1863, a letter in this paper was signed \"Mark Twain\" for the first time. This photo of the building was taken in March 1937.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Mark%20Twain%20Enterprise%20Building%20Virginia%20City"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "Mark Twain Museum",
+    "line": "A Mark Twain Museum operates in the original Territorial Enterprise building. Photo taken in 2010.",
+    "ph": {
+     "k": "vc_ent_now",
+     "by": "Jaydec",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Territorial_Enterprise,_2010.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Territorial Enterprise was founded on December 18, 1858, in Genoa, then part of Utah Territory. It moved to Carson City in 1859 and to Virginia City in 1860.",
+    "In 1862 a young writer named Sam Clemens began sending letters to the paper, and that fall he accepted a job as city editor. On February 3, 1863, he signed a funny letter about a party \"Mark Twain\" for the first time.",
+    "He wrote for the paper until 1865, working alongside the writer Dan DeQuille. The two shared a room on North B Street, steps from the newspaper office."
+   ],
+   "fact": "The paper started in Genoa, Nevada, and moved twice before it landed in Virginia City.",
+   "disputed": "One list dates the newspaper building to 1862 and another to the 1870s. We could not find a record that settles it.",
+   "claims": [
+    {
+     "t": "Mark Twain first signed a letter with that name on February 3, 1863.",
+     "a": 0,
+     "why": "Both the Mark Twain at the Territorial Enterprise page and History.com report that date."
+    },
+    {
+     "t": "Twain lived inside the newspaper building.",
+     "a": 2,
+     "why": "One source says he and Dan DeQuille shared a room on North B Street, steps from the office."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Territorial Enterprise",
+     "u": "https://en.wikipedia.org/wiki/Territorial_Enterprise"
+    },
+    {
+     "t": "Wikipedia: Mark Twain at the Territorial Enterprise",
+     "u": "https://en.wikipedia.org/wiki/Mark_Twain_at_the_Territorial_Enterprise"
+    },
+    {
+     "t": "History.com: Mark Twain begins reporting in Virginia City",
+     "u": "https://www.history.com/this-day-in-history/february-3/mark-twain-begins-reporting-in-virginia-city"
+    }
+   ],
+   "card": {
+    "a": "1863",
+    "b": "Today",
+    "la": "A new pen name",
+    "lb": "Mark Twain Museum"
+   }
+  },
+  {
+   "id": "piper",
+   "name": "Piper's Opera House",
+   "short": "Piper",
+   "badge": "Piper's Opera House",
+   "tag": "Stop 3 of 4",
+   "teaser": "A theater that burned down twice.",
+   "map": "Piper's Opera House, Virginia City, NV",
+   "clue": "Find the big theater at the corner of B Street and a cross street. Two earlier opera houses on the spot burned down. This is the third.",
+   "safety": "Stay on the sidewalk and cross at the corner. Hills here are steep, so watch your footing. Look at the building from outside.",
+   "field": "Field notes pending: curb cuts and the viewing spot have not been checked on foot yet.",
+   "q": {
+    "prompt": "Read the street signs at the corner. Piper's Opera House stands at B Street and which other street?",
+    "options": [
+     "Union Street",
+     "Sutton Avenue",
+     "Taylor Street",
+     "Carson Street"
+    ],
+    "answer": 0,
+    "hint": "Check the sign on the cross street at the corner."
+   },
+   "then": {
+    "ph": {
+     "k": "vc_pip_then",
+     "by": "Robert W. Kerrigan (HABS)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Piper%27s_Opera_House.jpg",
+     "note": "resized"
+    },
+    "yr": "1937",
+    "label": "The third Piper's",
+    "line": "It opened with a grand ball on March 6, 1885. This photo was taken in March 1937 for a historic buildings survey.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Piper%27s%20Opera%20House%20Virginia%20City"
+    }
+   },
+   "now": {
+    "yr": "1997",
+    "head": "Today",
+    "label": "A working theater",
+    "line": "A nonprofit bought it in 1997, and it is a performing arts venue today. Photo taken in 2009.",
+    "ph": {
+     "k": "vc_pip_now",
+     "by": "Vivaverdi",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Virginia_City-Pipers_Opera_House-1885.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "John Piper's first opera house opened here in 1863. It burned in the Great Fire of October 26, 1875. A second one opened on January 28, 1878 and burned on March 13, 1883.",
+    "The building you see today opened with a grand ball on March 6, 1885. It switched from gas to electric lighting in 1900.",
+    "Mark Twain lectured on the original stage in 1866 and again in 1868. Later stars included Edwin Booth, Lillie Langtry, John Philip Sousa, and Al Jolson. It joined the National Register of Historic Places on March 21, 1997."
+   ],
+   "fact": "In 1897, the boxer Gentleman Jim Corbett trained here for a big fight against Bob Fitzsimmons.",
+   "disputed": "A famous theater man named David Belasco later published sensational stories about his time here. Historians treat his recollections as unreliable.",
+   "claims": [
+    {
+     "t": "The Piper's Opera House you can visit opened in 1885.",
+     "a": 0,
+     "why": "The current building opened with a grand ball on March 6, 1885."
+    },
+    {
+     "t": "The same building has stood here since 1863.",
+     "a": 2,
+     "why": "The first two opera houses burned, in 1875 and 1883."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Piper's Opera House",
+     "u": "https://en.wikipedia.org/wiki/Piper%27s_Opera_House"
+    },
+    {
+     "t": "National Park Service: National Register record for Piper's Opera House",
+     "u": "https://npgallery.nps.gov/AssetDetail/NRIS/97000217"
+    }
+   ],
+   "card": {
+    "a": "1885",
+    "b": "1997",
+    "la": "The third Piper's",
+    "lb": "A working theater"
+   }
+  },
+  {
+   "id": "school",
+   "name": "Fourth Ward School",
+   "short": "School",
+   "badge": "Fourth Ward School",
+   "tag": "Stop 4 of 4",
+   "teaser": "A four-story school with a steep roof.",
+   "map": "537 S C St, Virginia City, NV",
+   "clue": "Look for a big four-story school building on the south end of C Street. It has a steep roof and a lot of windows. It was built in 1876 for more than 1,000 students.",
+   "safety": "Stay on public sidewalks. The museum inside is optional and has its own hours. Do not climb fences or go into any old mine sites around town.",
+   "field": "Field notes pending: sidewalk slope and the viewing spot have not been checked on foot yet.",
+   "q": {
+    "prompt": "Look at the roof. What shape is the school's roof?",
+    "options": [
+     "Flat roof",
+     "Steep mansard roof",
+     "Round dome",
+     "Thatched roof"
+    ],
+    "answer": 1,
+    "hint": "Second Empire buildings have a steep roof that slopes on all four sides and holds windows."
+   },
+   "then": {
+    "ph": {
+     "k": "vc_sch_then",
+     "by": "Robert W. Kerrigan (HABS)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Robert_W._Kerrigan,_Photographer_March_1937_(NO_LONGER_IN_USE)_-_Fourth_Ward_School,_South_C_Street_at_Highway_17,_Virginia_City,_Storey_County,_HABS_NEV,15-VIRG,8-1.tif",
+     "note": "resized"
+    },
+    "yr": "1937",
+    "label": "The school in 1937",
+    "line": "Built in 1876 for more than 1,000 students, with indoor plumbing and central heat. This photo was taken in March 1937.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Fourth%20Ward%20School%20Virginia%20City"
+    }
+   },
+   "now": {
+    "yr": "1986",
+    "head": "Reopened",
+    "label": "A school museum",
+    "line": "The school reopened in 1986 as the Historic Fourth Ward School Museum. Photo from the Library of Congress, taken between 1980 and 2006.",
+    "ph": {
+     "k": "vc_sch_now",
+     "by": "Carol M. Highsmith",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fourth_Ward_School,_Virginia_City,_Nevada_LCCN2011631000.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Fourth Ward School was built in 1876 in the Second Empire style, with a steep mansard roof and four stories. The architect was C. M. Bennett.",
+    "It was designed for more than 1,000 students. It had indoor plumbing, drinking fountains, gas lighting, and central heat. The last class graduated in 1936, and students moved to a new school.",
+    "The building sat closed and falling apart for years. In 1986 it reopened as the Historic Fourth Ward School Museum at 537 South C Street."
+   ],
+   "fact": "One building held primary school, grammar school, and high school under the same roof.",
+   "disputed": "Some pages call it the last wood-built school of its design in the United States. We could not find a source that backs that up.",
+   "claims": [
+    {
+     "t": "The Fourth Ward School graduated its last class in 1936.",
+     "a": 0,
+     "why": "The school page gives 1936, when students moved to a new school."
+    },
+    {
+     "t": "It is the last wood-built school of its design in the whole country.",
+     "a": 1,
+     "why": "Some pages say so, but we found no source that backs it up."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fourth Ward School (Virginia City, Nevada)",
+     "u": "https://en.wikipedia.org/wiki/Fourth_Ward_School_(Virginia_City,_Nevada)"
+    },
+    {
+     "t": "Wikipedia: Virginia City, Nevada",
+     "u": "https://en.wikipedia.org/wiki/Virginia_City,_Nevada"
+    }
+   ],
+   "card": {
+    "a": "1876",
+    "b": "1986",
+    "la": "A brand-new school",
+    "lb": "A school museum"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Tenderfoot"
+  ],
+  [
+   100,
+   "Prospector"
+  ],
+  [
+   250,
+   "Pick and Shovel"
+  ],
+  [
+   450,
+   "Comstock Scholar"
+  ],
+  [
+   600,
+   "Silver State Historian"
+  ]
+ ],
+ "heroKey": "vc_hero",
+ "heroAlt": "Old stereo photograph of Virginia City from the hills, with mine dumps in front",
+ "heroLi": "<li>Header: C. E. Watkins stereo card, cropped and resized · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Panorama_at_Virginia_City,_by_Watkins,_Carleton_E.,_1829-1916.jpg\">Source</a></li>",
+ "heroCredit": "Photo: C. E. Watkins · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Panorama_at_Virginia_City,_by_Watkins,_Carleton_E.,_1829-1916.jpg\">Source</a>",
+ "mission": "Find four landmarks in an old silver boom town. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. Lake Tahoe is coming next.",
+ "safetyNote": "<li>Every stop is outdoors on public sidewalks. The town is at about 6,100 feet, so bring water. Saloons and casinos are for adults, and none of the stops go inside one. Stay out of old mine sites and fenced areas.</li>",
+ "badgeMap": {
+  "cstreet": [
+   "vc_cs_now",
+   "50% 55%"
+  ],
+  "enterprise": [
+   "vc_ent_now",
+   "50% 30%"
+  ],
+  "piper": [
+   "vc_pip_now",
+   "50% 50%"
+  ],
+  "school": [
+   "vc_sch_now",
+   "50% 50%"
+  ]
+ }
+}
