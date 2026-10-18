@@ -2,7 +2,7 @@
 
 A phone-first scavenger-hunt mission app for towns you visit. Find a real landmark, answer a question you can only answer standing there, earn its badge, then unlock the history story and a Then/Now photo pair.
 
-Built by Jo-Anne and Caden. First mission: downtown Reno (4 stops).
+Built by Jo-Anne and Caden. Missions: downtown Reno and Virginia City (4 stops each). Lake Tahoe is next.
 
 ## Design rules
 - No accounts, no uploads, no GPS, no camera. Progress lives in the browser (localStorage) with a copy/paste save code.

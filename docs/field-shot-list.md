@@ -17,3 +17,11 @@ Landscape (wide) photos fit the app best. Hold the phone sideways.
 
 ## What I need from you
 Attach the photos in chat (or drop them in a folder I can read), plus the date and place each was taken. I will resize them, add them with a credit to you and Caden, and update the rights log.
+
+## Virginia City (all stops need photos)
+Same rules. Wide, landscape, daylight, from the sidewalk. Bring water, the town is at about 6,100 feet. Stay out of saloons, casinos, old mine sites and fenced areas.
+1. **C Street:** a wide shot down the street, and the street-name sign at a corner.
+2. **Territorial Enterprise / Mark Twain Museum:** the building front from across the street.
+3. **Piper's Opera House:** the front and the corner street signs.
+4. **Fourth Ward School:** the whole building from the sidewalk so the steep roof shows.
+For each, note the date and where you stood. Also one wide skyline-style shot of the town for the header.

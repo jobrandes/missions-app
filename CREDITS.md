@@ -16,3 +16,6 @@ All photos are from Wikimedia Commons. Resized to fit. Verified license on the f
 | Stop 4 Now, Wingfield Park badge | File:Truckee River, Reno, Nevada (18979480279).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2015. Caption says "near" the park because the file page does not name the park. |
 
 CC BY-SA: share any adapted version under the same license and link the license. The app links each license and source under the photo.
+
+## Virginia City (pack added)
+All eight Then/Now slots and the header are PENDING. No photos have been added yet. Candidate sources to check, in order: Wikimedia Commons (check each file's license), Library of Congress HABS/HAER (usually public domain), then family photos taken on a visit. Add a row here for every photo that goes in.
