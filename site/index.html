@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><meta charset="utf-8">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0e1d33"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Then &amp; Now"><meta charset="utf-8">
 <title>Then &amp; Now</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -664,6 +664,10 @@ details.reg[open]>summary.region::after{content:"–"}
   }
   function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCeleb(); });
+  /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
+  try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
+  window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
+  window.addEventListener('online',function(){ toast('Back online.'); });
   function stepper(){
     var names=['Find it','Check in','Unlock','Source check'];
     var d=S.done[cur.i];

@@ -664,6 +664,10 @@ details.reg[open]>summary.region::after{content:"–"}
   }
   function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCeleb(); });
+  /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
+  try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
+  window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
+  window.addEventListener('online',function(){ toast('Back online.'); });
   function stepper(){
     var names=['Find it','Check in','Unlock','Source check'];
     var d=S.done[cur.i];

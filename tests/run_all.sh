@@ -6,6 +6,7 @@ python3 build.py
 python3 tests/validate_packs.py
 python3 tests/check.py
 python3 tests/flows.py
+python3 tests/offline.py
 python3 tests/snapshot.py index.html /tmp/_now.json
 python3 - <<'PY'
 import json,sys
