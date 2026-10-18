@@ -1,6 +1,6 @@
 {
  "id": "tahoeicons",
- "name": "Tahoe Icons",
+ "name": "Tahoe Classics",
  "explorer": "Lake Tahoe Explorer",
  "initials": "LT",
  "stops": [
@@ -364,7 +364,7 @@
   ],
   [
    600,
-   "Tahoe Icon Historian"
+   "Tahoe Classics Historian"
   ]
  ],
  "heroKey": "ti_em_now",
@@ -372,7 +372,7 @@
  "heroLi": "<li>Header: DimiTalen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Emerald_Bay_2011.jpg\">Source</a> · resized</li>",
  "heroCredit": "Photo: DimiTalen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Emerald_Bay_2011.jpg\">Source</a>",
  "mission": "Visit four of Lake Tahoe's best-known spots, one on each shore. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. You have done the big four. Ready for the Deep Cuts?",
+ "afterDone": "All four badges earned. You have done the big four. Ready for the Hidden Gems?",
  "safetyNote": "<li>These stops are spread around the lake, so plan the drive. Highway 89 and Highway 28 are busy and winding, so park in marked spots and cross at crosswalks. The lake is cold all year and the area is high, so bring water and sun protection.</li>",
  "badgeMap": {
   "emerald": [
@@ -392,5 +392,5 @@
    "50% 40%"
   ]
  },
- "level": "Icons"
+ "level": "Classics"
 }

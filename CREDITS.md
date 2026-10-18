@@ -71,7 +71,7 @@ All Boston check-in questions carry a `verify` note. Nobody has walked these sto
 
 Jefferson Memorial "then" slot: photo pending (no free historic photo chosen yet). Check-in questions are flagged `verify` until someone checks on site.
 
-## Tahoe Icons
+## Tahoe Classics
 
 | Photo | Credit | License |
 |---|---|---|

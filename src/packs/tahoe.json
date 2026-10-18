@@ -1,6 +1,6 @@
 {
  "id": "tahoe",
- "name": "Tahoe Deep Cuts",
+ "name": "Tahoe Hidden Gems",
  "explorer": "Tahoe City Explorer",
  "initials": "TC",
  "stops": [
@@ -367,5 +367,5 @@
    "55% 55%"
   ]
  },
- "level": "Deep Cuts"
+ "level": "Hidden Gems"
 }
