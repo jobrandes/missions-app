@@ -230,8 +230,8 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 
 /* Then/Now fade slider */
 .cmp{margin:0 0 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:10px}
-.cmp .box{position:relative;aspect-ratio:4/3;max-width:100%;border-radius:8px;overflow:hidden;background:var(--surface-2)}
-.cmp .box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cmp .box{touch-action:pan-y;cursor:ew-resize;user-select:none;-webkit-user-select:none;position:relative;aspect-ratio:4/3;max-width:100%;border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.cmp .box img{-webkit-user-drag:none;pointer-events:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .cmp .top{opacity:0}
 .cmp .row{display:flex;align-items:center;gap:10px;margin-top:10px}
 .cmp .row span{font:600 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);flex:none}

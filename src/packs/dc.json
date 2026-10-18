@@ -298,12 +298,20 @@
     "verify": "Wikipedia gives this line from Jefferson's 1800 letter on the frieze below the dome. Confirm on site."
    },
    "then": {
-    "yr": "1943",
-    "label": "Opened in 1943",
-    "line": "The memorial was dedicated on April 13, 1943, the 200th anniversary of Jefferson's birth. No free historic photo has been added yet.",
+    "yr": "1940",
+    "label": "Under construction",
+    "line": "The memorial under construction in 1940, seen across the Tidal Basin through cherry branches. It was dedicated in 1943.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "dc_jm_then",
+     "by": "Harris & Ewing (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Jefferson_Memorial_under_construction_LCCN2016877445.jpg",
+     "note": "cropped and resized"
     }
    },
    "now": {

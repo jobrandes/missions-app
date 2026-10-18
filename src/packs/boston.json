@@ -106,24 +106,32 @@
    "safety": "Freedom Trail stops are on busy downtown sidewalks. Cross only at crosswalks and watch for bikes and delivery vehicles. Stay with your group. Museums and churches have their own hours, and you do not need to go inside for any check-in. The area around the hall is crowded, so keep track of your group.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Look at the very top of the cupola. What shape is the weathervane?",
+    "prompt": "Find the marker on the east side of Faneuil Hall. It says \"Still used by a free people.\" What year comes right after that?",
     "options": [
-     "A rooster",
-     "A horse",
-     "A grasshopper",
-     "A fish"
+     "1776",
+     "1742",
+     "1930",
+     "1963"
     ],
     "answer": 2,
-    "hint": "It is an insect, and it is gold.",
-    "verify": "Guessable. Replace with something only visible on site once someone has been there."
+    "hint": "It is the year the marker went up, not the year the hall opened.",
+    "verify": "HMDB lists a marker on the east side, from Congress and North Streets, ending 'Still used by a free people 1930'. Confirm on site."
    },
    "then": {
-    "yr": "1742",
-    "label": "A market and meeting hall",
-    "line": "Peter Faneuil offered to give the town a market in 1740. It opened on September 10, 1742. No free historic photo has been added yet.",
+    "yr": "c. 1900",
+    "label": "A colored postcard",
+    "line": "Faneuil Hall on a colored postcard from around 1900, with horse-drawn wagons at the market. Detroit Publishing dated it only as after 1898.",
     "link": {
      "t": "Look for historic photos at the Boston Public Library",
      "u": "https://www.bpl.org/"
+    },
+    "ph": {
+     "k": "bos_fh_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Faneuil_Hall,_Boston,_Mass_(NYPL_b12647398-68720).tiff",
+     "note": "cropped and resized"
     }
    },
    "now": {
@@ -167,6 +175,10 @@
     {
      "t": "Wikipedia: Freedom Trail",
      "u": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    },
+    {
+     "t": "Historical Marker Database: Faneuil Hall",
+     "u": "https://www.hmdb.org/m.asp?m=18088"
     }
    ],
    "card": {
@@ -290,12 +302,20 @@
     "verify": "Wikipedia mentions a 'Christ Church 1723' plaque. Not yet confirmed on site."
    },
    "then": {
-    "yr": "1775",
-    "label": "One if by land",
-    "line": "On the night of April 18, 1775, two lanterns were hung in the steeple. No free historic photo of the church has been added yet.",
+    "yr": "c. 1900",
+    "label": "A colored photochrom",
+    "line": "The steeple of Old North Church in a colored print from around 1900. Cropped to the steeple.",
     "link": {
      "t": "Look for historic photos at the Boston Public Library",
      "u": "https://www.bpl.org/"
+    },
+    "ph": {
+     "k": "bos_onc_then",
+     "by": "Detroit Photographic Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0367).jpg",
+     "note": "cropped and resized"
     }
    },
    "now": {

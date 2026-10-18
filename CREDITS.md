@@ -82,3 +82,11 @@ Jefferson Memorial "then" slot: photo pending (no free historic photo chosen yet
 | ti_cr_now | Blake Everett, Camp Richardson Beach (Commons) | CC0 |
 
 Rejected: a 1921 book panorama that matched "Emerald Bay" in search but is not Emerald Bay; a "1899" Fannette Island photo with an unreliable date. "Then" photos for Emerald Bay, Sand Harbor and Camp Richardson show "photo pending". Pack is flagged `verify` for all check-in questions.
+
+## Added "then" photos (Oct 18, later)
+
+| Photo | Credit | License |
+|---|---|---|
+| bos_fh_then | Detroit Publishing Company (NYPL scan), Faneuil Hall postcard, c. 1900, cropped | Public domain |
+| bos_onc_then | Detroit Photographic Company photochrom, Old North Church steeple, c. 1900, cropped | Public domain |
+| dc_jm_then | Harris & Ewing (Library of Congress), Jefferson Memorial under construction, 1940, cropped | Public domain |

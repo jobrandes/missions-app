@@ -210,16 +210,16 @@
    "safety": "Use the sidewalk and stay behind the railing. Do not lean over, climb, or throw anything into the river.",
    "field": "Field notes pending: sidewalk width and ramps have not been checked on foot yet.",
    "q": {
-    "prompt": "Which river flows under this bridge?",
+    "prompt": "Look for the giant word sculpture in City Plaza, next to the bridge. What word does it spell?",
     "options": [
-     "Carson River",
-     "Humboldt River",
-     "Walker River",
-     "Truckee River"
+     "DREAM",
+     "RENO",
+     "WELCOME",
+     "BELIEVE"
     ],
     "answer": 3,
-    "hint": "This river starts at Lake Tahoe.",
-    "verify": "Guessable. No sign or plaque found in research. Replace after on-site look."
+    "hint": "Its letters are about 12 feet tall.",
+    "verify": "This Is Reno (May 2016) says the BELIEVE sculpture was moved to City Plaza, northeast of the bridge. Sculptures can move, so confirm on site."
    },
    "then": {
     "yr": "1910",
@@ -253,7 +253,7 @@
    "story": [
     "In 1860, Charles Fuller built the first bridge here. Myron Lake took over in 1861 and charged tolls. In 1868 the railroad founded the town of Reno beside this crossing.",
     "An iron bridge arrived in 1877. In 1905 a concrete bridge designed by John B. Leonard replaced it. It was one of the first reinforced concrete bridges in Nevada and joined the National Register of Historic Places in 1980.",
-    "In 2015 the 1905 bridge was torn down as part of a flood control plan. The new bridge opened in April 2016.",
+    "In 2015 the 1905 bridge was torn down as part of a flood control plan. The new bridge opened in April 2016. A 12-foot word sculpture reading BELIEVE, by Laura Kimpton and Jeff Schomberg, was moved to City Plaza beside the new bridge in May 2016.",
     "Reno was once called the Divorce Capital of the World. A popular legend says newly divorced people tossed their wedding rings into the river from this bridge. Books and movies helped spread the story, including a 1929 novel and the 1961 film The Misfits."
    ],
    "fact": "The 2016 bridge cost about $18.3 million and is 166 feet long.",
@@ -278,6 +278,10 @@
     {
      "t": "Northern Nevada Business Weekly: Virginia Street's bridges",
      "u": "https://nnbw.com/news/2017/sep/14/renos-roots-intertwined-with-virginia-streets-brid"
+    },
+    {
+     "t": "This Is Reno: BELIEVE gets a home",
+     "u": "https://thisisreno.com/2016/05/art-dedicated-virginia-street-bridge-believe-gets-home"
     }
    ],
    "card": {
