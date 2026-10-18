@@ -49,9 +49,10 @@
   var RENO_RANKS = __DATA__.packs.reno.ranks, VC_RANKS = __DATA__.packs.vc.ranks;
   var CITIES = __DATA__.packs;
   var RANKS=RENO_RANKS;
-  var KEY='then-now-reno-v1', KEY2='then-now-v2';
+  var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
+  var ORDER=__DATA__.order, SOON=__DATA__.soon||[], atHome=true;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
-  var ALL={reno:blank(),vc:blank()};
+  var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
   var cityId='reno';
   var S=ALL.reno, STOPS=RENO_STOPS;
   function city(){ return CITIES[cityId]; }
@@ -69,20 +70,25 @@
   }
   function load(){
     try{
-      var r2=localStorage.getItem(KEY2);
-      if(r2){
-        var o2=JSON.parse(r2), n;
-        if((n=norm(o2.reno))) ALL.reno=n;
-        if((n=norm(o2.vc))) ALL.vc=n;
-        if(o2.city && CITIES[o2.city]) cityId=o2.city;
+      var r3=localStorage.getItem(KEY3);
+      if(r3){
+        var o3=JSON.parse(r3), n;
+        ORDER.forEach(function(k){ if(o3.p && (n=norm(o3.p[k]))) ALL[k]=n; });
+        if(o3.city && CITIES[o3.city]) cityId=o3.city;
+        atHome=!!o3.home;
       } else {
-        var r=localStorage.getItem(KEY);
-        if(r){ var n1=norm(JSON.parse(r)); if(n1) ALL.reno=n1; }
+        var r2=localStorage.getItem(KEY2), r=localStorage.getItem(KEY);
+        if(r2){
+          var o2=JSON.parse(r2);
+          ORDER.forEach(function(k){ if((n=norm(o2[k]))) ALL[k]=n; });
+          if(o2.city && CITIES[o2.city]) cityId=o2.city;
+          atHome=false;
+        } else if(r){ var n1=norm(JSON.parse(r)); if(n1) ALL.reno=n1; atHome=false; }
       }
     }catch(e){}
     S=ALL[cityId]; STOPS=CITIES[cityId].stops; RANKS=CITIES[cityId].ranks;
   }
-  function save(){ try{ localStorage.setItem(KEY2,JSON.stringify({city:cityId,reno:ALL.reno,vc:ALL.vc})); }catch(e){} }
+  function save(){ try{ localStorage.setItem(KEY3,JSON.stringify({city:cityId,home:atHome?1:0,p:ALL})); }catch(e){} }
   function sum(a){ return a.reduce(function(x,y){return x+y;},0); }
   function xp(){ return sum(S.done)*100 + sum(S.claims)*25; }
   function rank(x){
@@ -93,10 +99,10 @@
   var INKS=[{n:'Blue',c:'#1B58B8'},{n:'Red',c:'#C0392B'},{n:'Green',c:'#2E8B57'},{n:'Purple',c:'#7B4BB7'},{n:'Gold',c:'#D4A017'}], inkI=0;
   try{ var _k=parseInt(localStorage.getItem('then-now-ink'),10); if(_k>=0&&_k<INKS.length) inkI=_k; }catch(e){}
   function bestRank(){
-    var best=0; [ALL.reno,ALL.vc].forEach(function(st){ var x=sum(st.done)*100+sum(st.claims)*25, i=0; [0,100,250,450,600].forEach(function(t,k){ if(x>=t) i=k; }); if(i>best) best=i; });
+    var best=0; ORDER.forEach(function(k){ var st=ALL[k]; var x=sum(st.done)*100+sum(st.claims)*25, i=0; [0,100,250,450,600].forEach(function(t,k){ if(x>=t) i=k; }); if(i>best) best=i; });
     return best;
   }
-  function code(){ return 'TN2-'+ALL.reno.done.join('')+ALL.reno.claims.join('')+'-'+ALL.vc.done.join('')+ALL.vc.claims.join(''); }
+  function code(){ return 'TN3-'+ORDER.map(function(k){ return ALL[k].done.join('')+ALL[k].claims.join(''); }).join('-'); }
   function allDone(){ return sum(S.done)===4; }
 
   function toast(msg){
@@ -114,15 +120,16 @@
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
-    document.getElementById('cities').innerHTML=Object.keys(CITIES).map(function(k){
-      return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(k===cityId)+'">'+CITIES[k].name+'</button>';
-    }).join('')+'<button class="city" disabled aria-label="Lake Tahoe, coming soon">Lake Tahoe · soon</button>';
+    document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+ORDER.map(function(k){
+      return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
+    }).join('')+SOON.map(function(n){ return '<button class="city" disabled aria-label="'+n+', coming soon">'+n+' · soon</button>'; }).join('');
   }
   function setCity(id){
-    if(!CITIES[id]||id===cityId) return;
-    leave(); cityId=id; S=ALL[id]; STOPS=CITIES[id].stops; RANKS=CITIES[id].ranks;
+    if(!CITIES[id]||(id===cityId&&!atHome)) return;
+    leave(); atHome=false; cityId=id; S=ALL[id]; STOPS=CITIES[id].stops; RANKS=CITIES[id].ranks;
     tab='trail'; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0);
   }
+  function goHome(){ leave(); atHome=true; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
   function updateHeader(){
     var x=xp(), r=rank(x);
     document.getElementById('rankName').textContent=r.name;
@@ -141,6 +148,24 @@
   }
 
   /* ---------- views ---------- */
+  function viewHome(){
+    var got=0,total=0;
+    ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
+    var h='<section class="home-hero"><p class="mono">Missions for real places</p><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></section>';
+    h+='<section><h2 class="hh">Pick a mission</h2><ul class="towns">'+ORDER.map(function(k){
+      var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
+      c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
+      var key=c.heroKey||(BMAP[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
+      return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3><span class="sub">'+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button></li>';
+    }).join('')+SOON.map(function(nm){ return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }).join('')+'</ul></section>';
+    h+='<section class="card"><p class="mono">Your passport</p><p><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' towns.</p></section>';
+    h+='<section class="band-home"><p class="mono">How it works</p><ol class="hiw"><li><b>Find the spot.</b> A clue sends you to a real landmark.</li><li><b>Prove it.</b> Answer a question about what you can see there.</li><li><b>Fact or fiction.</b> Sort the famous stories: solid, disputed, or not true.</li><li><b>Get stamped.</b> Unlock the story and a Then/Now photo you can fade through.</li></ol></section>';
+    h+='<section class="card"><p class="mono">For parents</p><p>No accounts, no location tracking, no photo uploads, and no ads. Every story shows its sources and every photo shows its credit. Progress is saved only on this phone.</p></section>';
+    h+='<p class="home-foot">Made by a mom and her teenage son.</p>';
+    return h;
+  }
+
   function viewTrail(){
     var h='';
     if(allDone()){
@@ -283,9 +308,11 @@
 
   function render(focusTitle){
     updateHeader();
+    document.body.classList.toggle('ishome',atHome);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
-    if(cur) m.innerHTML=viewStop();
+    if(atHome&&!cur) m.innerHTML=viewHome();
+    else if(cur) m.innerHTML=viewStop();
     else if(tab==='trail') m.innerHTML=viewTrail();
     else if(tab==='cards') m.innerHTML=viewCards();
     else m.innerHTML=viewRewards();
@@ -335,6 +362,7 @@
   document.addEventListener('click',function(e){
     var b=e.target.closest('[data-a]'); if(!b) return;
     var a=b.getAttribute('data-a');
+    if(a==='home'){ goHome(); return; }
     if(a==='city'){ setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
@@ -378,11 +406,16 @@
     }
     if(a==='restore'){
       var v=(document.getElementById('codeIn').value||'').trim().toUpperCase();
-      var m1=/^TN1-([01]{4})([01]{8})$/.exec(v), m2=/^TN2-([01]{4})([01]{8})-([01]{4})([01]{8})$/.exec(v), msg=document.getElementById('codeMsg');
-      if(!m1 && !m2){ msg.textContent='That code does not look right. It starts with TN2- (or TN1- for older Reno codes).'; return; }
+      var m1=/^TN1-([01]{4})([01]{8})$/.exec(v), m2=/^TN2-([01]{4})([01]{8})-([01]{4})([01]{8})$/.exec(v), m3=/^TN3-([01]{12}(?:-[01]{12})*)$/.exec(v), msg=document.getElementById('codeMsg');
+      if(!m1 && !m2 && !m3){ msg.textContent='That code does not look right. It starts with TN3- (older TN1- and TN2- codes work too).'; return; }
       var arr=function(x){return x.split('').map(Number);};
       if(m1){ ALL.reno={done:arr(m1[1]),claims:arr(m1[2])}; }
-      else { ALL.reno={done:arr(m2[1]),claims:arr(m2[2])}; ALL.vc={done:arr(m2[3]),claims:arr(m2[4])}; }
+      else if(m2){ ALL.reno={done:arr(m2[1]),claims:arr(m2[2])}; ALL.vc={done:arr(m2[3]),claims:arr(m2[4])}; }
+      else {
+        var segs=m3[1].split('-');
+        if(segs.length>ORDER.length){ msg.textContent='That code has more towns than this version of the app. Update the app and try again.'; return; }
+        segs.forEach(function(g,i){ ALL[ORDER[i]]={done:arr(g.slice(0,4)),claims:arr(g.slice(4))}; });
+      }
       S=ALL[cityId]; save(); render(); toast('Progress restored'); return;
     }
     if(a==='resetask'){ confirmReset=true; render(); return; }

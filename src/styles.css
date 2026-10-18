@@ -260,3 +260,24 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 .ink i{width:28px;height:28px;border-radius:50%;display:block;border:3px dashed currentColor}
 .ink[aria-pressed="true"]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
 .ink:disabled{opacity:.45;cursor:default}
+
+/* Home screen */
+body.ishome .hero, body.ishome .tabs{display:none}
+.city.home{font-weight:700}
+.home-hero{padding:24px 0 8px}
+.home-hero h1{font:800 clamp(52px,14vw,96px)/.95 var(--font-display);text-transform:uppercase;margin:6px 0 14px}
+.home-hero .sub{font-size:18px;max-width:36ch;margin:0}
+.hh{font:800 28px var(--font-display);text-transform:uppercase;margin:22px 0 10px}
+.towns{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.town{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:10px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;min-height:84px}
+.town:hover,.town:focus-visible{border-color:var(--accent)}
+.town.soon{opacity:.6;cursor:default;border-style:dashed}
+.town .tph{flex:none;width:72px;height:72px;border-radius:12px;overflow:hidden;background:var(--surface-2);display:block}
+.town .tph img{width:100%;height:100%;object-fit:cover;display:block}
+.town .tin{flex:1;min-width:0;display:block}
+.town h3{margin:0;font:800 24px var(--font-display);text-transform:uppercase}
+.town .sub{color:var(--muted);font-size:14px}
+.town .go{flex:none;font:600 13px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.band-home{margin:18px 0;padding:18px;border-radius:14px;background:var(--surface-2)}
+.hiw{margin:10px 0 0;padding-left:22px;display:grid;gap:10px}
+.home-foot{text-align:center;color:var(--muted);font:500 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px}

@@ -22,7 +22,6 @@ for cid in order:
         need(q.get('hint') and q['hint'] not in q['options'][q['answer']],f'{w}: hint missing or gives the answer away')
         need(len(st['claims'])==2,f'{w}: the XP model assumes 2 claims per stop')
         for c in st['claims']: need(c['a'] in (0,1,2) and c['t'] and c['why'],f'{w}: bad claim')
-        need(len({c['a'] for c in st['claims']})>=1 and any(c['a']==1 for c in st['claims'])==any(c['a']==1 for c in st['claims']),'')
         need(len(st['story'])>=2,f'{w}: story too short')
         need(len(st['sources'])>=2 and all(s['u'].startswith('https://') for s in st['sources']),f'{w}: needs 2+ https sources')
         for era in ('then','now'):
@@ -32,11 +31,9 @@ for cid in order:
                 need(ph['k'] in photos,f'{w}/{era}: photo file missing')
                 for f in ('by','lic','lu','page'): need(ph.get(f),f'{w}/{era}: photo credit missing {f}')
                 need(ph['page'].startswith('https://'),f'{w}/{era}: credit page must be https')
-        need(st['badge'] in st['name'] or True,'')
         need(st['id'] in p['badgeMap'],f'{w}: no badgeMap entry')
         k,pos=p['badgeMap'][st['id']]; need(k in photos,f'{w}: badge photo missing')
         need(re.match(r'^\d+% \d+%$',pos),f'{w}: bad badge position')
-        need('Photo pending' not in json.dumps(st) or True,'')
 bad=[b for b in bad if b]
 print('PACKS: '+('OK' if not bad else 'FAILED')+f' ({len(order)} towns)')
 for b in bad: print(' -',b)
