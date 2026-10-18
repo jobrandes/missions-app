@@ -56,3 +56,17 @@ All photos resized to fit 800px. Source pages are on Wikimedia Commons.
 | bos_onc_now | Old North Church Boston Ma.Winter.jpg | Kram McThunder, 2020 | CC BY 4.0 |
 No free historic photo yet for Faneuil Hall or Old North Church. Candidates seen and rejected: Boston Public Library "NBY" postcards (unknown author and date) and a Carol Highsmith photo dated 1980-2006 (not a "then" photo).
 All Boston check-in questions carry a `verify` note. Nobody has walked these stops, so none are confirmed on site.
+
+## Washington DC
+
+| Photo | Credit | License |
+|---|---|---|
+| dc_lm_then | National Photo Company, Library of Congress (Jan. 1917) | Public domain |
+| dc_lm_now | Carol M. Highsmith, Library of Congress | Public domain |
+| dc_wm_then | Library of Congress photochrom (1903) | Public domain |
+| dc_wm_now | Carol M. Highsmith, Library of Congress | Public domain |
+| dc_cap_then | Library of Congress photochrom (1902) | Public domain |
+| dc_cap_now | Carol M. Highsmith, Library of Congress (2008) | Public domain |
+| dc_jm_now | Carol M. Highsmith, Library of Congress (2006) | Public domain |
+
+Jefferson Memorial "then" slot: photo pending (no free historic photo chosen yet). Check-in questions are flagged `verify` until someone checks on site.

@@ -25,5 +25,12 @@
 "bos_onc_now",
 "bos_osh_then",
 "bos_osh_now",
-"bos_fh_now"
+"bos_fh_now",
+"dc_lm_then",
+"dc_lm_now",
+"dc_wm_then",
+"dc_wm_now",
+"dc_cap_then",
+"dc_cap_now",
+"dc_jm_now"
 ]

@@ -1,0 +1,407 @@
+{
+ "id": "dc",
+ "name": "Washington DC",
+ "explorer": "National Mall Explorer",
+ "initials": "DC",
+ "stops": [
+  {
+   "id": "lincoln",
+   "name": "Lincoln Memorial",
+   "short": "Lincoln",
+   "badge": "Lincoln",
+   "tag": "Stop 1 of 4",
+   "teaser": "A marble temple with a very large seated president.",
+   "map": "Lincoln Memorial, 2 Lincoln Memorial Cir NW, Washington, DC",
+   "clue": "Walk to the west end of the Reflecting Pool. A white temple with tall columns holds a seated figure inside, and the steps are famous for a speech given in 1963.",
+   "safety": "The National Mall is about two miles long, so plan for a lot of walking, shade and water, especially in summer. Cross streets only at crosswalks. Stay on paths and do not climb on statues or walls. Security officers work around the Capitol, so stay in the public areas and follow their directions.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The spot where Martin Luther King Jr. spoke in 1963 is engraved on the landing. How many steps below the statue is it?",
+    "options": [
+     "12",
+     "36",
+     "18",
+     "48"
+    ],
+    "answer": 2,
+    "hint": "Count up from the landing to the chamber floor.",
+    "verify": "Wikipedia says the engraved spot is 18 steps below the statue. Count on site."
+   },
+   "then": {
+    "yr": "1917",
+    "label": "Under construction",
+    "line": "The memorial in January 1917, with cranes and scaffolding. It was dedicated five years later.",
+    "ph": {
+     "k": "dc_lm_then",
+     "by": "National Photo Company (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lincoln_Memorial,_Jany._1917.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "1980s to 2006",
+    "head": "Today",
+    "label": "The memorial today",
+    "line": "The memorial seen across the Reflecting Pool. Carol Highsmith took this photo between 1980 and 2006.",
+    "ph": {
+     "k": "dc_lm_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lincoln_Memorial,_Washington,_D.C_LCCN2011630704.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Construction began in 1914 and the memorial was dedicated on May 30, 1922. Henry Bacon designed the building and Daniel Chester French designed the statue, which took about four years to carve from Georgia marble.",
+    "The 36 columns stand for the 36 states in the Union when Lincoln died. The names of the 48 states of 1922 are carved above them. Inside are the Gettysburg Address and Lincoln's second inaugural address.",
+    "On August 28, 1963, Martin Luther King Jr. spoke from the steps. The spot on the landing was engraved in 2003, forty years later."
+   ],
+   "fact": "The seated statue is about 19 feet tall. Standing, Lincoln would be about 28 feet tall.",
+   "disputed": "A popular legend says Lincoln's hands spell his initials, A and L, in sign language. The National Park Service denies it, and historians say there is no document showing the sculptor meant it. It could not be proven.",
+   "claims": [
+    {
+     "t": "The Lincoln Memorial was dedicated in 1922.",
+     "a": 0,
+     "why": "Wikipedia gives May 30, 1922, with President Harding accepting it."
+    },
+    {
+     "t": "Lincoln's hands in the statue spell the letters A and L in sign language.",
+     "a": 1,
+     "why": "The National Park Service denies it. Some historians say it is possible. No document proves it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Lincoln Memorial",
+     "u": "https://en.wikipedia.org/wiki/Lincoln_Memorial"
+    },
+    {
+     "t": "Wikipedia: National Mall",
+     "u": "https://en.wikipedia.org/wiki/National_Mall"
+    }
+   ],
+   "card": {
+    "a": "1917",
+    "b": "1922",
+    "la": "Under construction",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "monument",
+   "name": "Washington Monument",
+   "short": "Monument",
+   "badge": "Monument",
+   "tag": "Stop 2 of 4",
+   "teaser": "A 555-foot stone needle with two shades of marble.",
+   "map": "Washington Monument, 2 15th St NW, Washington, DC",
+   "clue": "Find the tall white obelisk in the middle of the Mall. A ring of flags circles its base. Look closely at the stone partway up.",
+   "safety": "The National Mall is about two miles long, so plan for a lot of walking, shade and water, especially in summer. Cross streets only at crosswalks. Stay on paths and do not climb on statues or walls. Security officers work around the Capitol, so stay in the public areas and follow their directions.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Count the flags that fly in a circle around the monument. How many are there?",
+    "options": [
+     "50",
+     "13",
+     "48",
+     "36"
+    ],
+    "answer": 0,
+    "hint": "Count slowly. There is one for each state.",
+    "verify": "Wikipedia says 50 flags fly around the monument. Count on site."
+   },
+   "then": {
+    "yr": "1903",
+    "label": "A photochrom print",
+    "line": "A color print of the monument in 1903, standing alone on open grass.",
+    "ph": {
+     "k": "dc_wm_then",
+     "by": "Library of Congress (Prints and Photographs)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Washington_Monument-LCCN2008679642.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "1980s to 2006",
+    "head": "Today",
+    "label": "The monument today",
+    "line": "Carol Highsmith took this photo between 1980 and 2006.",
+    "ph": {
+     "k": "dc_wm_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Washington_Monument,_Washington,_D.C_LCCN2011630604.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The cornerstone was laid on July 4, 1848. Work stopped from 1854 until 1877 because of money problems and the Civil War, and the stone was finished in 1884. It was dedicated on February 21, 1885 and opened to the public on October 9, 1888.",
+    "Look about a third of the way up. The lower part is a whiter marble and the upper part is warmer in color, because different quarries supplied the stone before and after the pause.",
+    "The tip is an aluminum cap cast in 1884. At the time it was the largest piece of aluminum ever cast. A 5.8 magnitude earthquake cracked the monument in 2011, and it reopened in 2014 after $15 million of repairs."
+   ],
+   "fact": "The monument is about 555 feet tall. Official measurements give slightly different numbers depending on the method.",
+   "disputed": "Historians disagree about whether enslaved people helped build it. The first phase may have used some enslaved labor, while the second phase likely did not.",
+   "claims": [
+    {
+     "t": "Work on the Washington Monument stopped for more than 20 years.",
+     "a": 0,
+     "why": "Work stopped in 1854 and began again in the late 1870s."
+    },
+    {
+     "t": "Enslaved people helped build the Washington Monument.",
+     "a": 1,
+     "why": "Historians disagree. The first phase may have used some enslaved labor, while the second phase likely did not."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Washington Monument",
+     "u": "https://en.wikipedia.org/wiki/Washington_Monument"
+    },
+    {
+     "t": "Wikipedia: National Mall",
+     "u": "https://en.wikipedia.org/wiki/National_Mall"
+    }
+   ],
+   "card": {
+    "a": "1848",
+    "b": "1888",
+    "la": "Cornerstone",
+    "lb": "Opened to the public"
+   }
+  },
+  {
+   "id": "capitol",
+   "name": "U.S. Capitol",
+   "short": "Capitol",
+   "badge": "Capitol",
+   "tag": "Stop 3 of 4",
+   "teaser": "The big white dome at the east end of the Mall.",
+   "map": "United States Capitol, Washington, DC",
+   "clue": "Walk to the east end of the Mall. A huge white dome sits on top of the building where Congress meets, and a statue stands on its very top.",
+   "safety": "The National Mall is about two miles long, so plan for a lot of walking, shade and water, especially in summer. Cross streets only at crosswalks. Stay on paths and do not climb on statues or walls. Security officers work around the Capitol, so stay in the public areas and follow their directions.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the very top of the dome. What is the statue called?",
+    "options": [
+     "Lady Liberty",
+     "Statue of Freedom",
+     "Columbia",
+     "Statue of Justice"
+    ],
+    "answer": 1,
+    "hint": "It is the opposite of being held captive.",
+    "verify": "Guessable. Replace with something only visible on site once someone has been there."
+   },
+   "then": {
+    "yr": "1902",
+    "label": "The Capitol in 1902",
+    "line": "A color photo print of the building from 1902, when the grounds were quieter.",
+    "ph": {
+     "k": "dc_cap_then",
+     "by": "Library of Congress (Prints and Photographs)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Capitol_at_Washington-LCCN2008678107.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The Capitol today",
+    "line": "Carol Highsmith took this photo on December 7, 2008.",
+    "ph": {
+     "k": "dc_cap_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:United_States_Capitol,_Washington,_D.C_LCCN2010630189.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "George Washington helped lay the cornerstone on September 18, 1793. William Thornton designed the original building.",
+    "On August 24, 1814, British troops burned the Capitol during the War of 1812. It was repaired and the work was finished by 1826.",
+    "The cast-iron dome you see now was designed by Thomas U. Walter. The decision to replace the old dome was made in 1855, and it was finished around 1866. The Capitol is the meeting place of the U.S. Congress."
+   ],
+   "fact": "The dome is made of cast iron, painted to look like stone.",
+   "disputed": "Who designed the Capitol is argued over. William Thornton's plan was approved in 1793, but other architects changed it a lot, and some credit the dome idea to L'Enfant.",
+   "claims": [
+    {
+     "t": "George Washington took part in laying the Capitol's cornerstone in 1793.",
+     "a": 0,
+     "why": "Wikipedia reports he laid it on September 18, 1793, with Freemasons."
+    },
+    {
+     "t": "The Capitol's dome is made of solid stone.",
+     "a": 2,
+     "why": "The dome is cast iron, designed by Thomas U. Walter and finished around 1866."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: United States Capitol",
+     "u": "https://en.wikipedia.org/wiki/United_States_Capitol"
+    },
+    {
+     "t": "Wikipedia: National Mall",
+     "u": "https://en.wikipedia.org/wiki/National_Mall"
+    }
+   ],
+   "card": {
+    "a": "1793",
+    "b": "1866",
+    "la": "Cornerstone",
+    "lb": "Cast-iron dome"
+   }
+  },
+  {
+   "id": "jefferson",
+   "name": "Jefferson Memorial",
+   "short": "Jefferson",
+   "badge": "Jefferson",
+   "tag": "Stop 4 of 4",
+   "teaser": "A round marble memorial on the Tidal Basin.",
+   "map": "Jefferson Memorial, 900 Ohio Dr SW, Washington, DC",
+   "clue": "Head to the Tidal Basin, where cherry trees bloom in spring. A round white memorial with a dome and columns stands at the water's edge.",
+   "safety": "The National Mall is about two miles long, so plan for a lot of walking, shade and water, especially in summer. Cross streets only at crosswalks. Stay on paths and do not climb on statues or walls. Security officers work around the Capitol, so stay in the public areas and follow their directions. The Tidal Basin has a low wall and open water, so keep back from the edge.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Read the words carved around the inside of the dome. Eternal hostility against every form of what?",
+    "options": [
+     "Ignorance",
+     "Silence",
+     "Greed",
+     "Tyranny"
+    ],
+    "answer": 3,
+    "hint": "It is what a king can rule with.",
+    "verify": "Wikipedia gives this line from Jefferson's 1800 letter on the frieze below the dome. Confirm on site."
+   },
+   "then": {
+    "yr": "1943",
+    "label": "Opened in 1943",
+    "line": "The memorial was dedicated on April 13, 1943, the 200th anniversary of Jefferson's birth. No free historic photo has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2006",
+    "head": "Today",
+    "label": "The memorial at dusk",
+    "line": "Carol Highsmith took this photo on November 25, 2006.",
+    "ph": {
+     "k": "dc_jm_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Jefferson_Memorial,_Washington,_D.C_LCCN2010630676.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "John Russell Pope designed the memorial in a style inspired by the Roman Pantheon and Jefferson's own rotunda at the University of Virginia. It was dedicated on April 13, 1943.",
+    "The first statue was plaster. The 19-foot bronze Jefferson, sculpted by Rudulph Evans, was installed in April 1947.",
+    "In November 1938, women protesters chained themselves to cherry trees at the construction site. Opposition eased once revised plans showed the trees could be kept."
+   ],
+   "fact": "The bronze statue is 19 feet tall and weighs about 10,000 pounds.",
+   "disputed": "The Commission of Fine Arts never approved the design and opposed both it and the site in 1939. Whether trees were cut for the memorial is not settled in the sources we found.",
+   "claims": [
+    {
+     "t": "The Jefferson Memorial was dedicated on the 200th anniversary of Jefferson's birth.",
+     "a": 0,
+     "why": "Wikipedia reports April 13, 1943, the 200th anniversary."
+    },
+    {
+     "t": "The statue inside was bronze from the day the memorial opened in 1943.",
+     "a": 2,
+     "why": "A plaster cast stood there in 1943. The bronze statue was installed in 1947."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Jefferson Memorial",
+     "u": "https://en.wikipedia.org/wiki/Jefferson_Memorial"
+    },
+    {
+     "t": "Wikipedia: National Mall",
+     "u": "https://en.wikipedia.org/wiki/National_Mall"
+    }
+   ],
+   "card": {
+    "a": "1943",
+    "b": "1947",
+    "la": "Dedicated",
+    "lb": "Bronze statue"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Mall Walker"
+  ],
+  [
+   250,
+   "Monument Hunter"
+  ],
+  [
+   450,
+   "Capitol Scholar"
+  ],
+  [
+   600,
+   "National Mall Historian"
+  ]
+ ],
+ "heroKey": "dc_cap_now",
+ "heroAlt": "The U.S. Capitol under a blue sky",
+ "heroLi": "<li>Header: Carol M. Highsmith, Library of Congress · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:United_States_Capitol,_Washington,_D.C_LCCN2010630189.tif\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Carol M. Highsmith (Library of Congress) · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:United_States_Capitol,_Washington,_D.C_LCCN2010630189.tif\">Source</a>",
+ "mission": "Find four landmarks on and around the National Mall. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of the Mall is waiting.",
+ "safetyNote": "<li>The Mall is about two miles long, so bring water and plan your walking. Cross at crosswalks, stay on paths, and follow the directions of security officers near the Capitol.</li>",
+ "badgeMap": {
+  "lincoln": [
+   "dc_lm_now",
+   "50% 50%"
+  ],
+  "monument": [
+   "dc_wm_now",
+   "50% 35%"
+  ],
+  "capitol": [
+   "dc_cap_now",
+   "50% 30%"
+  ],
+  "jefferson": [
+   "dc_jm_now",
+   "50% 50%"
+  ]
+ }
+}
