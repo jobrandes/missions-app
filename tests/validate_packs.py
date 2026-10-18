@@ -18,6 +18,9 @@ for cid in order:
     for st in p['stops']:
         w=f'{cid}/{st["id"]}'
         for f in ('id','name','short','badge','tag','teaser','map','clue','safety','field','fact'): need(st.get(f),f'{w}: missing {f}')
+        if st.get('verified'):
+            for f in ('on','by','note'): need(st['verified'].get(f),f'{w}: verified is missing {f}')
+            need(__import__('re').match(r'^\d{4}-\d{2}-\d{2}$',st['verified'].get('on','')),f'{w}: verified.on must be YYYY-MM-DD')
         q=st['q']; need(2<=len(q['options'])<=4 and 0<=q['answer']<len(q['options']),f'{w}: bad question options/answer')
         need(len(set(q['options']))==len(q['options']),f'{w}: duplicate options')
         need(q.get('hint') and q['hint'] not in q['options'][q['answer']],f'{w}: hint missing or gives the answer away')

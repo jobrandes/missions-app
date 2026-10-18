@@ -390,6 +390,13 @@ details.reg[open]>summary.region::after{content:"–"}
  @keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(420px) rotate(260deg)}}
 }
 .celeb-stamp{margin-bottom:16px}.celeb-card .mono{margin:0}
+
+.vbadge{display:flex;flex-direction:column;gap:2px;margin:12px 0 0;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--line);color:var(--muted);font-size:14px}
+.vbadge b{font:700 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
+.vbadge em{font-style:normal;color:var(--ink);margin-top:2px}
+.vbadge.ok{border:1.5px solid var(--accent);color:var(--ink);background:var(--surface-2)}
+.vbadge.ok b{color:var(--accent)}
+.vchip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font:700 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
 </style>
 
 <div class="app">
@@ -599,6 +606,7 @@ details.reg[open]>summary.region::after{content:"–"}
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var stamps=['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].filter(function(k){return PHOTOS[k];}).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('');
     var h='<section class="home-hero"><div><p class="mono">Missions for real places</p><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
     if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
       h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
@@ -625,7 +633,7 @@ details.reg[open]>summary.region::after{content:"–"}
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
-    h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></section>';
+    h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West and the East so far. More regions on the way.</p>';
     return h;
   }
@@ -646,7 +654,7 @@ details.reg[open]>summary.region::after{content:"–"}
     }
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span></span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
     h+='<details class="card"><summary>Safety, privacy and photo credits</summary><ul><li>Go with a parent or trusted adult, in daylight, and stay on public sidewalks.</li>'+city().safetyNote+'<li>This page has no accounts, uploads, camera use, or location tracking. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
@@ -668,6 +676,13 @@ details.reg[open]>summary.region::after{content:"–"}
   try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
   window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
   window.addEventListener('online',function(){ toast('Back online.'); });
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function vdate(d){ var m=/^(\d{4})-(\d{2})/.exec(d||''); return m?MON[+m[2]-1]+' '+m[1]:''; }
+  function vnote(st){
+    var v=st.verified;
+    if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
+    return '<div class="vbadge"><b>Not verified on site yet</b><span>'+st.field.replace(/^Field notes pending:\s*/i,'')+'</span></div>';
+  }
   function stepper(){
     var names=['Find it','Check in','Unlock','Source check'];
     var d=S.done[cur.i];
@@ -726,7 +741,7 @@ details.reg[open]>summary.region::after{content:"–"}
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
-      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p><div class="safety"><span class="mono">Safety</span><span>'+st.safety+'</span></div><p class="why">'+st.field+'</p>'
+      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p><div class="safety"><span class="mono">Safety</span><span>'+st.safety+'</span></div>'+vnote(st)
         +'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'
         +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button></section>';
     }

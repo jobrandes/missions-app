@@ -383,3 +383,10 @@ details.reg[open]>summary.region::after{content:"–"}
  @keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(420px) rotate(260deg)}}
 }
 .celeb-stamp{margin-bottom:16px}.celeb-card .mono{margin:0}
+
+.vbadge{display:flex;flex-direction:column;gap:2px;margin:12px 0 0;padding:10px 12px;border-radius:10px;border:1.5px dashed var(--line);color:var(--muted);font-size:14px}
+.vbadge b{font:700 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase}
+.vbadge em{font-style:normal;color:var(--ink);margin-top:2px}
+.vbadge.ok{border:1.5px solid var(--accent);color:var(--ink);background:var(--surface-2)}
+.vbadge.ok b{color:var(--accent)}
+.vchip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font:700 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
