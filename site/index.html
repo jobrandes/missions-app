@@ -324,6 +324,15 @@ body.ishome .hero, body.ishome .tabs{display:none}
 .lvl{display:inline-block;margin:2px 0 4px;padding:2px 8px;border-radius:999px;font:600 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted)}
 .lvl.ic{color:var(--accent);border-color:var(--accent)}
 .town .sub{display:block}
+
+/* town rail: one tidy row of tabs instead of wrapping bubbles */
+.cities{flex-wrap:nowrap;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--line);margin:0 0 4px}
+.cities::-webkit-scrollbar{display:none}
+.city{flex:none;scroll-snap-align:start;min-height:44px;padding:8px 14px;border:0;border-bottom:3px solid transparent;border-radius:0;background:transparent;color:var(--muted);font:600 13px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.city:hover{color:var(--ink)}
+.city[aria-pressed="true"]{background:transparent;color:var(--ink);border-color:transparent;border-bottom-color:var(--accent)}
+.city.home{font-weight:700}
+.hero h1.xl{font-size:clamp(34px,9.5vw,58px)}
 </style></head><body>
 
 <div class="app">
@@ -482,14 +491,15 @@ body.ishome .hero, body.ishome .tabs{display:none}
   /* ---------- header ---------- */
   function applyCity(){
     var c=city();
-    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>8?'long':'';
+    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>12?'long xl':(c.name.length>8?'long':'');
     var hero=document.getElementById('hero'), img=document.getElementById('heroImg');
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
     document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+ORDER.map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
-    }).join('')+SOON.map(function(n){ return '<button class="city" disabled aria-label="'+n+', coming soon">'+n+' · soon</button>'; }).join('');
+    }).join('');
+    var act=document.querySelector('#cities .city[aria-pressed="true"]'); if(act&&act.scrollIntoView){ try{ var box=document.getElementById('cities'); box.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
   }
   function setCity(id){
     if(!CITIES[id]||(id===cityId&&!atHome)) return;

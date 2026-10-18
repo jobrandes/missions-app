@@ -121,14 +121,15 @@
   /* ---------- header ---------- */
   function applyCity(){
     var c=city();
-    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>8?'long':'';
+    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>12?'long xl':(c.name.length>8?'long':'');
     var hero=document.getElementById('hero'), img=document.getElementById('heroImg');
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
     document.getElementById('cities').innerHTML='<button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+ORDER.map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
-    }).join('')+SOON.map(function(n){ return '<button class="city" disabled aria-label="'+n+', coming soon">'+n+' · soon</button>'; }).join('');
+    }).join('');
+    var act=document.querySelector('#cities .city[aria-pressed="true"]'); if(act&&act.scrollIntoView){ try{ var box=document.getElementById('cities'); box.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
   }
   function setCity(id){
     if(!CITIES[id]||(id===cityId&&!atHome)) return;
