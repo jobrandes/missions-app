@@ -16,15 +16,16 @@
    "safety": "Cross only at crosswalks and stay on the sidewalk. This stop is outdoors in public space. Do not step into the street for a photo.",
    "field": "Field notes pending: sidewalk surfaces and curb cuts have not been checked on foot yet.",
    "q": {
-    "prompt": "Read the street signs at the corner under the arch. Which two streets meet here?",
+    "prompt": "Find the historical marker on the arch's support column. What year is it dated?",
     "options": [
-     "Virginia Street and Commercial Row",
-     "Center Street and Second Street",
-     "Lake Street and Mill Street",
-     "Sierra Street and Liberty Street"
+     "1987",
+     "1926",
+     "1949",
+     "2001"
     ],
     "answer": 0,
-    "hint": "Look at the street-name signs on the corner posts."
+    "hint": "The marker is at eye level on the east side of the east column.",
+    "verify": "Listed on HMDB (marker dated Aug 8, 1987). Confirm on site."
    },
    "then": {
     "yr": "1973",
@@ -116,15 +117,16 @@
    "safety": "Stay on public sidewalks and cross only at crosswalks. Look from the sidewalk and do not climb on or lean against the sign.",
    "field": "Field notes pending: the viewing spot and walking route have not been checked on foot yet.",
    "q": {
-    "prompt": "Read the street sign near the old arch. Which street is it on?",
+    "prompt": "Read the marker at the base of this arch. What was the arch built in 1926 to promote?",
     "options": [
-     "Lake Street",
-     "Arlington Avenue",
-     "Sierra Street",
-     "Fourth Street"
+     "An exposition celebrating the Lincoln and Victory highways",
+     "The opening of the Truckee River dam",
+     "A railroad centennial",
+     "A divorce-ranch contest"
     ],
     "answer": 0,
-    "hint": "Check the street-name sign at the nearest corner."
+    "hint": "It was built for a 1926 celebration of two famous highways.",
+    "verify": "From an HMDB summary; full wording not seen. Confirm on site."
    },
    "then": {
     "yr": "1926",
@@ -216,7 +218,8 @@
      "Walker River"
     ],
     "answer": 0,
-    "hint": "This river starts at Lake Tahoe."
+    "hint": "This river starts at Lake Tahoe.",
+    "verify": "Guessable. No sign or plaque found in research. Replace after on-site look."
    },
    "then": {
     "yr": "1910",
@@ -296,15 +299,16 @@
    "safety": "Stay away from the water's edge. River levels and currents can change quickly, so keep close together.",
    "field": "Field notes pending: paths and surfaces have not been checked on foot yet.",
    "q": {
-    "prompt": "Whose name is on this park?",
+    "prompt": "Read the marker on West 1st Street. What was this island before it became a city park?",
     "options": [
-     "George Wingfield",
-     "Myron Lake",
-     "John Sparks",
-     "Charles Fuller"
+     "An amusement park (Belle Isle)",
+     "A lumber mill",
+     "A rodeo ground",
+     "A fish hatchery"
     ],
     "answer": 0,
-    "hint": "He was a Nevada banker and miner who gave the island to the city."
+    "hint": "The island's old name was Belle Isle.",
+    "verify": "Listed on HMDB (city acquired Belle Isle in 1920). Confirm on site."
    },
    "then": {
     "yr": "1935",

@@ -27,3 +27,10 @@ Goal: a question should be answerable only by standing there. Rating: GUESSABLE 
 
 ## Status
 Not rewritten yet. Waiting on on-site verification, because the app should not claim something visible on a street that nobody has checked.
+
+## Update (Oct 18): rewritten from published marker listings
+- Arch: year on the support-column marker (1987, HMDB m=312400). Unverified on site.
+- Original arch: what it was built to promote (HMDB m=94431 summary). Full wording not seen. Unverified.
+- Wingfield Park: what the island was before (Belle Isle amusement park, HMDB m=308211). Unverified.
+- Bridge: still guessable (river). No sign or plaque found in research. Needs an on-site look.
+Each question carries a `verify` note in `src/packs/reno.json`.
