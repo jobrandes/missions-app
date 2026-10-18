@@ -43,3 +43,16 @@ All four photos are by Almonroth, CC BY-SA 3.0, taken 12 August 2012, resized to
 | tahoe_dam_now | Lake Tahoe Dam-2.jpg |
 | tahoe_hero | Lake Tahoe Dam-3.jpg |
 No free photos found for Fanny Bridge (old or new) or any "then" views. Those slots show "photo pending". Fanny Bridge has a plain letter badge for the same reason.
+
+## Boston (Freedom Trail)
+All photos resized to fit 800px. Source pages are on Wikimedia Commons.
+| Key | Photo | Photographer / source | License |
+|---|---|---|---|
+| bos_osh_then | Old State House, Boston, Massachusetts, 1900.jpg | Detroit Publishing Co. (Library of Congress), photochrom print | Public domain |
+| bos_osh_now | 2009 BostonMassacre site 3658174192.jpg | Dion Hinchcliffe, 2009 | CC BY-SA 2.0 |
+| bos_fh_now (also header) | Faneuil Hall Boston Suffolk County Massachusetts.jpg | EgorovaSvetlana, 2010 | CC BY-SA 4.0 |
+| bos_prh_then | Forty of Boston's historic houses ... (1912) (14595266497).jpg | Internet Archive Book Images | No known copyright restrictions |
+| bos_prh_now | Paul Revere's House (2006).jpg | surlygirl, 2006 | CC BY 2.0 |
+| bos_onc_now | Old North Church Boston Ma.Winter.jpg | Kram McThunder, 2020 | CC BY 4.0 |
+No free historic photo yet for Faneuil Hall or Old North Church. Candidates seen and rejected: Boston Public Library "NBY" postcards (unknown author and date) and a Carol Highsmith photo dated 1980-2006 (not a "then" photo).
+All Boston check-in questions carry a `verify` note. Nobody has walked these stops, so none are confirmed on site.

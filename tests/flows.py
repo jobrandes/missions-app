@@ -22,7 +22,7 @@ with sync_playwright() as p:
     pg=new()
     need('go there' in pg.inner_text('#main').lower(),'first launch should show Home')
     need(not pg.locator('.hero').is_visible(),'hero should be hidden on Home')
-    need(pg.locator('.town').count()==3,'Home should list 2 towns + 1 coming soon')
+    need(pg.locator('.town:not(.soon)').count()==4 and pg.locator('.town.soon').count()==2,'Home should list 4 towns + 2 coming soon')
     pg.click('.town >> nth=0'); need(pg.locator('.hero').is_visible() and pg.inner_text('#cityName').lower()=='reno','Start Reno from Home')
     pg.click('.city.home'); need('pick a mission' in pg.inner_text('#main').lower(),'Home chip returns Home')
     pg.reload(); need('pick a mission' in pg.inner_text('#main').lower(),'Home persists across reload')
@@ -35,7 +35,7 @@ with sync_playwright() as p:
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
     pg.click('#tab-rewards'); code=pg.input_value('#codeOut')
-    need(code.startswith('TN3-') and code.count('-')==3,f'v2 migrates to a TN3 code, got {code}')
+    need(code.startswith('TN3-') and code.count('-')==4,f'v2 migrates to a TN3 code, got {code}')
     pg.click('.city >> text=Reno'); pg.click('#tab-rewards'); need(pg.input_value('#codeOut')==code,'code is the same from either town')
     # v1 save migrates
     pg=new({'then-now-reno-v1':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]}})

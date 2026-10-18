@@ -1,0 +1,399 @@
+{
+ "id": "boston",
+ "name": "Boston",
+ "explorer": "Freedom Trail Explorer",
+ "initials": "BO",
+ "stops": [
+  {
+   "id": "oldstate",
+   "name": "Old State House",
+   "short": "Old State House",
+   "badge": "Old State House",
+   "tag": "Stop 1 of 4",
+   "teaser": "A 1713 brick building, now surrounded by skyscrapers.",
+   "map": "Old State House, 206 Washington St, Boston, MA",
+   "clue": "Find the small red-brick building with a lion and unicorn on its roof, standing among glass towers. A ring in the pavement beside it marks something that happened in 1770.",
+   "safety": "Freedom Trail stops are on busy downtown sidewalks. Cross only at crosswalks and watch for bikes and delivery vehicles. Stay with your group. Museums and churches have their own hours, and you do not need to go inside for any check-in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find the ring set into the pavement just east of the building. What event does it mark?",
+    "options": [
+     "The Boston Massacre",
+     "The Boston Tea Party",
+     "The Great Fire of 1872",
+     "The Battle of Bunker Hill"
+    ],
+    "answer": 0,
+    "hint": "It happened in March 1770, and British soldiers were involved.",
+    "verify": "HMDB/Wikipedia: marker east of the building, with a brass ring (moved in the 2010s). Not yet confirmed on site."
+   },
+   "then": {
+    "yr": "1900",
+    "label": "A photochrom print",
+    "line": "A color print of the Old State House made in 1900, when tall office buildings were already crowding in. The print is from the Detroit Publishing Co.",
+    "ph": {
+     "k": "bos_osh_then",
+     "by": "Detroit Publishing Co. (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Boston,_Massachusetts,_1900.jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Boston Public Library",
+     "u": "https://www.bpl.org/"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The site of the Boston Massacre",
+    "line": "The stone circle in front is a memorial to the 1770 Boston Massacre. Photo taken in 2009. Since then the marker has been moved and now has a ring with stars.",
+    "ph": {
+     "k": "bos_osh_now",
+     "by": "Dion Hinchcliffe",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:2009_BostonMassacre_site_3658174192.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Old State House was completed in 1713 and is the city's oldest surviving public building. It was the seat of the colonial government, with a merchants' exchange on the first floor and the courts and legislature upstairs.",
+    "A memorial near the building marks the area where the Boston Massacre happened in 1770. On July 18, 1776, two weeks after independence was declared, the Declaration was read from the balcony to the crowds below.",
+    "The lion and the unicorn, symbols of the British Crown, were torn down and burned in 1776. Replicas went back up in the 1800s and 1900s. Today it is a museum, and an entrance to the subway is in the basement."
+   ],
+   "fact": "The building went up in 1713 and is still standing, even though glass towers now rise on every side.",
+   "disputed": "Nobody knows who designed it. Robert Twelves is sometimes credited, but the sources do not settle it.",
+   "claims": [
+    {
+     "t": "The Declaration of Independence was read from the Old State House balcony on July 18, 1776.",
+     "a": 0,
+     "why": "Wikipedia reports the reading on that date, two weeks after independence was declared."
+    },
+    {
+     "t": "The Boston Massacre happened inside the Old State House.",
+     "a": 2,
+     "why": "The memorial marks the street area near the building. The shootings took place outside."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old State House (Boston)",
+     "u": "https://en.wikipedia.org/wiki/Old_State_House_(Boston)"
+    },
+    {
+     "t": "Wikipedia: Freedom Trail",
+     "u": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    }
+   ],
+   "card": {
+    "a": "1713",
+    "b": "1776",
+    "la": "Built",
+    "lb": "Declaration read"
+   }
+  },
+  {
+   "id": "faneuil",
+   "name": "Faneuil Hall",
+   "short": "Faneuil Hall",
+   "badge": "Faneuil Hall",
+   "tag": "Stop 2 of 4",
+   "teaser": "A market hall with a golden grasshopper on top.",
+   "map": "Faneuil Hall, Boston, MA",
+   "clue": "Look for a brick hall with a white cupola. On top of the cupola sits a gilded weathervane in the shape of an insect.",
+   "safety": "Freedom Trail stops are on busy downtown sidewalks. Cross only at crosswalks and watch for bikes and delivery vehicles. Stay with your group. Museums and churches have their own hours, and you do not need to go inside for any check-in. The area around the hall is crowded, so keep track of your group.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the very top of the cupola. What shape is the weathervane?",
+    "options": [
+     "A grasshopper",
+     "A rooster",
+     "A horse",
+     "A fish"
+    ],
+    "answer": 0,
+    "hint": "It is an insect, and it is gold.",
+    "verify": "Guessable. Replace with something only visible on site once someone has been there."
+   },
+   "then": {
+    "yr": "1742",
+    "label": "A market and meeting hall",
+    "line": "Peter Faneuil offered to give the town a market in 1740. It opened on September 10, 1742. No free historic photo has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the Boston Public Library",
+     "u": "https://www.bpl.org/"
+    }
+   },
+   "now": {
+    "yr": "1806",
+    "head": "Today",
+    "label": "Faneuil Hall today",
+    "line": "The hall was doubled in width and a third floor added in 1806 by Charles Bulfinch, so it is wider than the original. Photo taken in 2010.",
+    "ph": {
+     "k": "bos_fh_now",
+     "by": "EgorovaSvetlana",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Faneuil_Hall_Boston_Suffolk_County_Massachusetts.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Peter Faneuil, a wealthy merchant, offered to build a market for Boston. The town voted 367 to 360 to accept it in 1740, so the vote was very close. The hall opened in 1742.",
+    "The ground floor was a market and the second floor was a meeting hall. After 1763 it hosted pro-independence speeches, and it picked up the nickname 'Cradle of Liberty.'",
+    "Faneuil made part of his fortune in the slave trade, and the building was funded in part by those profits. Faneuil Hall now has a permanent exhibit on slavery that opened in 2023."
+   ],
+   "fact": "The gilded grasshopper weathervane on top was made by Shem Drowne in 1742 and weighs 25 pounds.",
+   "disputed": "Nobody agrees on why it is a grasshopper. One theory links it to a London building's crest. Another says Drowne chased grasshoppers as a boy. Both are unproven.",
+   "claims": [
+    {
+     "t": "Faneuil Hall opened in 1742.",
+     "a": 0,
+     "why": "Wikipedia gives September 10, 1742."
+    },
+    {
+     "t": "The grasshopper weathervane was used to catch spies in the War of 1812.",
+     "a": 1,
+     "why": "Wikipedia presents this as a legend. It is not proven."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Faneuil Hall",
+     "u": "https://en.wikipedia.org/wiki/Faneuil_Hall"
+    },
+    {
+     "t": "Wikipedia: Freedom Trail",
+     "u": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    }
+   ],
+   "card": {
+    "a": "1742",
+    "b": "1806",
+    "la": "Opened",
+    "lb": "Expanded"
+   }
+  },
+  {
+   "id": "revere",
+   "name": "Paul Revere House",
+   "short": "Revere House",
+   "badge": "Revere House",
+   "tag": "Stop 3 of 4",
+   "teaser": "Downtown Boston's oldest surviving house.",
+   "map": "Paul Revere House, 19 North Square, Boston, MA",
+   "clue": "Find a dark wooden house on a small square in the North End. Its upstairs windows are made of many tiny panes of glass.",
+   "safety": "Freedom Trail stops are on busy downtown sidewalks. Cross only at crosswalks and watch for bikes and delivery vehicles. Stay with your group. Museums and churches have their own hours, and you do not need to go inside for any check-in. North End streets are narrow and the sidewalks are tight.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the windows on the house. What shape are the small panes?",
+    "options": [
+     "Diamonds",
+     "Squares",
+     "Circles",
+     "Hexagons"
+    ],
+    "answer": 0,
+    "hint": "The panes are set in a lattice that crisscrosses diagonally.",
+    "verify": "Matches the 1912 and 2006 photos in the app. Confirm on site."
+   },
+   "then": {
+    "yr": "1912",
+    "label": "The house in 1912",
+    "line": "A photo from a 1912 book on Boston's historic houses, four years after the house opened as a museum.",
+    "ph": {
+     "k": "bos_prh_then",
+     "by": "Internet Archive Book Images",
+     "lic": "No known copyright restrictions",
+     "lu": "https://www.flickr.com/commons/usage/",
+     "page": "https://commons.wikimedia.org/wiki/File:Forty_of_Boston%27s_historic_houses;_a_brief_illustrated_description_of_the_residences_of_historic_characters_of_Boston_who_have_lived_in_or_near_the_business_section_(1912)_(14595266497).jpg",
+     "note": "resized"
+    },
+    "link": {
+     "t": "Look for historic photos at the Boston Public Library",
+     "u": "https://www.bpl.org/"
+    }
+   },
+   "now": {
+    "yr": "2006",
+    "head": "Today",
+    "label": "Still standing",
+    "line": "Photo taken in 2006. The house has been a museum since April 18, 1908.",
+    "ph": {
+     "k": "bos_prh_now",
+     "by": "surlygirl",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Paul_Revere%E2%80%99s_House_(2006).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The house was built around 1680 and is the oldest surviving residence in downtown Boston. Paul Revere bought it on January 13, 1770, and owned it until 1800.",
+    "In 1907 a memorial association bought the house and restored it, and it opened as a museum on April 18, 1908, the anniversary of Revere's ride.",
+    "Much of the outside was replaced during that restoration. One historian wrote that Revere 'would not recognize it.'"
+   ],
+   "fact": "Paul Revere owned this house from 1770 to 1800, which is thirty years.",
+   "disputed": "Sources give the building date as anywhere from 1676 to 1681. The builder is unknown. Some sources wrongly call it Boston's oldest house.",
+   "claims": [
+    {
+     "t": "Paul Revere owned this house from 1770 to 1800.",
+     "a": 0,
+     "why": "Wikipedia reports he bought it in January 1770 and sold it in 1800."
+    },
+    {
+     "t": "This is the oldest house in all of Boston.",
+     "a": 2,
+     "why": "The James Blake House in Dorchester dates to 1661. This is the oldest surviving residence in downtown Boston."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Paul Revere House",
+     "u": "https://en.wikipedia.org/wiki/Paul_Revere_House"
+    },
+    {
+     "t": "Wikipedia: Freedom Trail",
+     "u": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    }
+   ],
+   "card": {
+    "a": "1680",
+    "b": "1908",
+    "la": "Built, about",
+    "lb": "Opened as a museum"
+   }
+  },
+  {
+   "id": "oldnorth",
+   "name": "Old North Church",
+   "short": "Old North",
+   "badge": "Old North",
+   "tag": "Stop 4 of 4",
+   "teaser": "The steeple where the lanterns hung.",
+   "map": "Old North Church, 193 Salem St, Boston, MA",
+   "clue": "Walk up the tree-lined Paul Revere Mall. At the end stands a tall white steeple on a brick church, the oldest standing church in Boston.",
+   "safety": "Freedom Trail stops are on busy downtown sidewalks. Cross only at crosswalks and watch for bikes and delivery vehicles. Stay with your group. Museums and churches have their own hours, and you do not need to go inside for any check-in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find the plaque on the first-story belt course. What year is on it?",
+    "options": [
+     "1723",
+     "1775",
+     "1804",
+     "1954"
+    ],
+    "answer": 0,
+    "hint": "It is the year the church was started, not the year of the ride.",
+    "verify": "Wikipedia mentions a 'Christ Church 1723' plaque. Not yet confirmed on site."
+   },
+   "then": {
+    "yr": "1775",
+    "label": "One if by land",
+    "line": "On the night of April 18, 1775, two lanterns were hung in the steeple. No free historic photo of the church has been added yet.",
+    "link": {
+     "t": "Look for historic photos at the Boston Public Library",
+     "u": "https://www.bpl.org/"
+    }
+   },
+   "now": {
+    "yr": "2020",
+    "head": "Today",
+    "label": "The steeple today",
+    "line": "The steeple you see now is not the original one. A hurricane knocked it down in 1954 and a new one went up in 1955. Photo taken in 2020, with the Paul Revere statue.",
+    "ph": {
+     "k": "bos_onc_now",
+     "by": "Kram McThunder",
+     "lic": "CC BY 4.0",
+     "lu": "https://creativecommons.org/licenses/by/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_North_Church_Boston_Ma.Winter.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The church's groundbreaking was April 15, 1723, and the first service was held on December 29, 1723. The steeple is 191 feet tall.",
+    "On the night of April 18, 1775, Paul Revere had two lanterns hung in the steeple to warn patriots in Charlestown that the British were moving by water. They were taken down within two minutes.",
+    "The steeple has fallen more than once. A hurricane destroyed the original in 1804, and Hurricane Carol knocked down its replacement in 1954."
+   ],
+   "fact": "The church has eight bells that were cast in 1744 and installed in 1745, and are described as the oldest in North America.",
+   "disputed": "Historians disagree on who hung the lanterns: sexton Robert Newman, sea captain John Pulling, or both. A city commission in 1876 also debated whether it was this church or another one.",
+   "claims": [
+    {
+     "t": "Two lanterns were hung in the steeple on April 18, 1775.",
+     "a": 0,
+     "why": "Wikipedia reports two lanterns, taken down within two minutes."
+    },
+    {
+     "t": "Robert Newman was the one who hung the lanterns.",
+     "a": 1,
+     "why": "Sources credit Newman, John Pulling, or both. It is not settled."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old North Church",
+     "u": "https://en.wikipedia.org/wiki/Old_North_Church"
+    },
+    {
+     "t": "Wikipedia: Freedom Trail",
+     "u": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    }
+   ],
+   "card": {
+    "a": "1723",
+    "b": "1775",
+    "la": "First service",
+    "lb": "The lanterns"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Tourist"
+  ],
+  [
+   100,
+   "Trail Walker"
+  ],
+  [
+   250,
+   "Town Crier"
+  ],
+  [
+   450,
+   "Liberty Scholar"
+  ],
+  [
+   600,
+   "Freedom Trail Historian"
+  ]
+ ],
+ "heroKey": "bos_fh_now",
+ "heroAlt": "The brick front of Faneuil Hall under a white cupola",
+ "heroLi": "<li>Header: EgorovaSvetlana · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Faneuil_Hall_Boston_Suffolk_County_Massachusetts.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: EgorovaSvetlana · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Faneuil_Hall_Boston_Suffolk_County_Massachusetts.jpg\">Source</a>",
+ "mission": "Find four stops on the Freedom Trail, a 2.5-mile walk through old Boston. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of the Freedom Trail is waiting.",
+ "safetyNote": "<li>The stops are on downtown sidewalks that are busy all day. Cross only at crosswalks and stay with your group. Museums and churches have their own hours, and none of the check-ins need you to go inside.</li>",
+ "badgeMap": {
+  "oldstate": [
+   "bos_osh_then",
+   "50% 40%"
+  ],
+  "faneuil": [
+   "bos_fh_now",
+   "50% 30%"
+  ],
+  "revere": [
+   "bos_prh_now",
+   "50% 45%"
+  ],
+  "oldnorth": [
+   "bos_onc_now",
+   "50% 25%"
+  ]
+ }
+}
