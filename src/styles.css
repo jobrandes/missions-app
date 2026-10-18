@@ -356,3 +356,30 @@ details.reg[open]>summary.region::after{content:"–"}
 .rail1 .city.home{position:static;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);padding:8px 14px}
 .rail1 .city.home[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .rlabel{display:none}
+
+/* passport */
+.bbox.sm{width:46px;height:46px;padding:4px}
+.passport{margin:22px 0}
+.pprow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 12px;margin:8px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.pprow.full{border-color:var(--accent)}
+.ppname{min-width:0;flex:1 1 140px}.ppname strong{display:block;font:800 18px var(--font-display);text-transform:uppercase}
+.ppname .mono{color:var(--muted);font-size:12px}
+.ppstamps{display:flex;gap:8px;flex:none}
+/* mission complete */
+.celeb{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-left));background:rgba(8,14,22,.72)}
+.celeb-card{position:relative;overflow:hidden;width:min(440px,100%);max-height:100%;overflow-y:auto;text-align:center;background:var(--surface);color:var(--ink);border:2px solid var(--accent);border-radius:18px;padding:26px 20px}
+.celeb-card h2{margin:4px 0 6px;font:800 clamp(28px,8vw,38px) var(--font-display);text-transform:uppercase;text-wrap:balance}
+.celeb-stamp{display:flex;justify-content:center;margin:0 0 10px}
+.celeb-stats{color:var(--muted);margin:10px 0 16px}
+.celeb-btns{display:grid;gap:10px}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-12px;left:var(--x);width:8px;height:14px;border-radius:2px;background:#FFC83D;opacity:0}
+.confetti i:nth-child(3n+1){background:var(--accent)}.confetti i:nth-child(3n+2){background:#E4572E}
+@media (prefers-reduced-motion:no-preference){
+ .celeb-card{animation:celebin .4s cubic-bezier(.2,1.3,.4,1)}
+ .celeb-stamp .bbox{animation:stampin .6s .25s ease-out both}
+ .confetti i{animation:fall 1.8s var(--d) ease-in forwards}
+ @keyframes celebin{from{transform:scale(.85);opacity:0}}
+ @keyframes fall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(420px) rotate(260deg)}}
+}
+.celeb-stamp{margin-bottom:16px}.celeb-card .mono{margin:0}

@@ -1,15 +1,17 @@
 (function(){
   /* ---------- scene + badge drawing ---------- */
-  var BMAP={}; Object.keys(__DATA__.packs).forEach(function(k){ var b=__DATA__.packs[k].badgeMap||{}; Object.keys(b).forEach(function(i){ BMAP[i]=b[i]; }); });
-  function mono(id){
-    if(id==='master') return city().initials;
-    var t='?'; STOPS.forEach(function(st){ if(st.id===id) t=st.short.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase(); });
+  var BMAPS={}; Object.keys(__DATA__.packs).forEach(function(k){ BMAPS[k]=__DATA__.packs[k].badgeMap||{}; });
+  function mono(id,pid){
+    pid=pid||cityId; var c=CITIES[pid];
+    if(id==='master') return c.initials;
+    var t='?'; c.stops.forEach(function(st){ if(st.id===id) t=st.short.replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase(); });
     return t;
   }
-  function badge(id,on){
-    var m=(id==='master')?(city().heroKey&&PHOTOS[city().heroKey]?[city().heroKey,'50% 60%']:null):BMAP[id];
+  function badge(id,on,pid){
+    pid=pid||cityId; var c=CITIES[pid];
+    var m=(id==='master')?(c.heroKey&&PHOTOS[c.heroKey]?[c.heroKey,'50% 60%']:null):(BMAPS[pid]||{})[id];
     if(m&&PHOTOS[m[0]]) return '<span class="bimg'+(on?' on':'')+'"><img src="'+PHOTOS[m[0]]+'" alt="" style="object-position:'+m[1]+'"></span>';
-    return '<span class="bimg plain'+(on?' on':'')+'"><b>'+mono(id)+'</b></span>';
+    return '<span class="bimg plain'+(on?' on':'')+'"><b>'+mono(id,pid)+'</b></span>';
   }
   var PHOTOS=__PHOTOS__;
   function hasPh(st,era){return !!(st[era].ph && PHOTOS[st[era].ph.k]);}
@@ -176,7 +178,7 @@
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
-      var key=c.heroKey||(BMAP[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
       return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button></li>';
     }
@@ -189,6 +191,10 @@
       var open=(CITIES[cityId]&&(CITIES[cityId].region||'More places')===r)||(regs[0]===r&&!(CITIES[cityId]&&(ALL[cityId]&&sum(ALL[cityId].done)>0)));
       return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
+    h+='<section class="passport" id="passport"><p class="mono">Your passport</p><h2 class="hh2">Every stamp you have earned.</h2>'+ORDER.map(function(k){
+      var c=CITIES[k], d=sum(ALL[k].done);
+      return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+'</span></div><div class="ppstamps">'+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
+    }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.</p></section>';
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
@@ -219,6 +225,18 @@
     return h;
   }
 
+  function celebKeyGet(){ try{ return JSON.parse(localStorage.getItem('then-now-cel')||'{}')||{}; }catch(e){ return {}; } }
+  function celebrate(){
+    var kv=celebKeyGet(); if(kv[cityId]) return; kv[cityId]=1; try{ localStorage.setItem('then-now-cel',JSON.stringify(kv)); }catch(e){}
+    var c=city(), x=xp(), r=rank(x), old=document.getElementById('celeb'); if(old) old.remove();
+    var cf=''; for(var q=0;q<14;q++) cf+='<i style="--x:'+(q*7+3)+'%;--d:'+((q%5)*0.12)+'s;--c:'+(q%3)+'"></i>';
+    var d=document.createElement('div'); d.id='celeb'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','celebT');
+    d.innerHTML='<div class="celeb-card"><div class="confetti" aria-hidden="true">'+cf+'</div><div class="celeb-stamp"><div class="bbox lg">'+badge('master',true)+'</div></div><p class="mono">Mission complete</p><h2 id="celebT">'+c.explorer+'</h2><p>'+c.afterDone+'</p><p class="celeb-stats"><strong>'+r.name+'</strong> · '+x+' XP · 4 of 4 stamps</p><div class="celeb-btns"><button class="btn" data-a="passport">See my passport</button><button class="btn ghost" data-a="celebclose">Keep exploring</button></div></div>';
+    document.body.appendChild(d);
+    var f=d.querySelector('button'); if(f) f.focus();
+  }
+  function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCeleb(); });
   function stepper(){
     var names=['Find it','Check in','Unlock','Source check'];
     var d=S.done[cur.i];
@@ -401,6 +419,8 @@
     var b=e.target.closest('[data-a]'); if(!b) return;
     var a=b.getAttribute('data-a');
     if(a==='home'){ goHome(); return; }
+    if(a==='celebclose'){ closeCeleb(); return; }
+    if(a==='passport'){ closeCeleb(); goHome(); setTimeout(function(){ var p=document.getElementById('passport'); if(p&&p.scrollIntoView) p.scrollIntoView({behavior:'smooth',block:'start'}); },60); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); applyCity(); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
@@ -411,7 +431,7 @@
     if(a==='pick'){
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
-        if(!S.done[cur.i]){ S.done[cur.i]=1; save(); toast('Badge earned: '+st.badge+'. +100 XP'); }
+        if(!S.done[cur.i]){ S.done[cur.i]=1; save(); toast('Badge earned: '+st.badge+'. +100 XP'); if(allDone()) setTimeout(celebrate,450); }
         cur.wrong=[]; render();
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);

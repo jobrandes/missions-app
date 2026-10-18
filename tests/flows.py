@@ -35,6 +35,16 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     need(pg.locator('.resume .rcard').count()==1 and '1 of 4' in pg.inner_text('.resume'),'Home shows a resume card for a town in progress')
     pg.click('.rcard'); need(pg.inner_text('#cityName').lower()=='reno','resume card opens that town')
+    # finishing the 4th stamp shows the celebration once; passport lists stamps
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    pg.click('.stop >> nth=3'); pg.click('text=I am here')
+    for k in range(4):
+        pg.locator('.opt').nth(k).click()
+        if pg.query_selector('.opt.right'): break
+    pg.wait_for_selector('#celeb',timeout=3000); need('mission complete' in pg.inner_text('#celeb').lower(),'celebration shows on the 4th stamp')
+    pg.click('text=See my passport'); pg.wait_for_timeout(300)
+    need(pg.locator('#celeb').count()==0 and pg.locator('#passport .pprow.full').count()==1,'passport shows the completed mission and closes the celebration')
+    pg.reload(); pg.click('.town >> nth=0'); pg.wait_for_timeout(700); need(pg.locator('#celeb').count()==0,'celebration does not repeat')
     # old v2 save migrates
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
