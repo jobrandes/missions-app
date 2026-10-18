@@ -168,18 +168,28 @@
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var stamps=['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].filter(function(k){return PHOTOS[k];}).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('');
     var h='<section class="home-hero"><div><p class="mono">Missions for real places</p><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
-    h+='<section><h2 class="hh">Pick a mission</h2><ul class="towns">'+ORDER.map(function(k){
+    var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
+    if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
+      h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
+    function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
       var key=c.heroKey||(BMAP[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
       return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button></li>';
-    }).join('')+SOON.map(function(nm){ return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }).join('')+'</ul><p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' towns.</p></section>';
+    }
+    function soonLi(o){ var nm=(typeof o==='string')?o:o.name; return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }
+    var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
+    SOON.forEach(function(o){ var r=(typeof o==='string')?'More places':(o.region||'More places'); if(regs.indexOf(r)<0) regs.push(r); });
+    h+='<section><h2 class="hh">Pick a mission</h2>'+regs.map(function(r){
+      var items=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }).map(townLi).join('')+SOON.filter(function(o){ return ((typeof o==='string')?'More places':(o.region||'More places'))===r; }).map(soonLi).join('');
+      return '<h3 class="region">'+r+'</h3><ul class="towns">'+items+'</ul>';
+    }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></section>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>Reno, Virginia City, Tahoe, Boston and DC. More on the way.</p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West and the East so far. More regions on the way.</p>';
     return h;
   }
   function homeAnswer(k){

@@ -1,1 +1,1 @@
-{"order": ["reno", "vc", "tahoeicons", "tahoe", "boston", "dc", "ny"], "soon": ["Paris"]}
+{"order": ["reno", "vc", "tahoeicons", "tahoe", "boston", "dc", "ny"], "soon": [{"name": "Paris", "region": "Europe"}]}

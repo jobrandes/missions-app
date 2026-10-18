@@ -326,3 +326,12 @@ body.ishome .hero, body.ishome .tabs{display:none}
 .city[aria-pressed="true"]{background:transparent;color:var(--ink);border-color:transparent;border-bottom-color:var(--accent)}
 .city.home{font-weight:700}
 .hero h1.xl{font-size:clamp(34px,9.5vw,58px)}
+
+.resume{margin:0 0 18px}
+.rcard{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;text-align:left;min-height:64px;padding:12px 14px;border:1.5px solid var(--accent);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.rcard strong{display:block;font:800 22px var(--font-display);text-transform:uppercase}
+.rcard .rsub{display:block;color:var(--muted);font-size:14px}
+.rcard .go{flex:none;font:600 13px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+.region{margin:18px 0 8px;font:600 12px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.region:first-of-type{margin-top:4px}
