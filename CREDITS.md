@@ -17,5 +17,16 @@ All photos are from Wikimedia Commons. Resized to fit. Verified license on the f
 
 CC BY-SA: share any adapted version under the same license and link the license. The app links each license and source under the photo.
 
-## Virginia City (pack added)
-All eight Then/Now slots and the header are PENDING. No photos have been added yet. Candidate sources to check, in order: Wikimedia Commons (check each file's license), Library of Congress HABS/HAER (usually public domain), then family photos taken on a visit. Add a row here for every photo that goes in.
+## Virginia City (photos added Oct 18)
+All from Wikimedia Commons, licenses checked via the Commons API. Resized for the app.
+
+| Slot | Author | License | File |
+|---|---|---|---|
+| Header + C Street Then (two cards of the same view) | C. E. Watkins / I. W. Taber, stereo cards, cropped | Public domain | Panorama at / of Virginia City |
+| C Street Now (2015) | Famartin | CC BY-SA 4.0 | 2015-10-30 13 48 37 View north along C Street... |
+| Enterprise Now (2010) | Jaydec | CC BY-SA 3.0 | Territorial Enterprise, 2010.JPG |
+| Piper's Then (1937) | Robert W. Kerrigan (HABS) | Public domain | Piper's Opera House.jpg |
+| Piper's Now (2009) | Vivaverdi | CC BY 3.0 | Virginia City-Pipers Opera House-1885.JPG |
+| School Now | Carol M. Highsmith (LoC) | Public domain | Fourth Ward School ... LCCN2011631000.jpg |
+
+Still PENDING: Enterprise Then (1937 HABS scan would not load; try again), School Then, Reno 1926 arch, Reno 2016 bridge.
