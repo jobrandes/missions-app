@@ -221,6 +221,18 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
   @keyframes pop{from{transform:scale(1.4) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
   @keyframes glow{50%{box-shadow:0 0 6px 1px #FFC83D}}
 }
+
+/* Passport page: each earned badge is a stamp */
+.cases{padding:14px 10px;border-radius:12px;background:var(--surface-2);gap:18px 10px}
+.case{position:relative;border:0;padding:6px 4px}
+.case.got .bbox{transform:rotate(-6deg)}
+.case.got:nth-child(even) .bbox{transform:rotate(5deg)}
+.case.got .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--accent);opacity:.75;pointer-events:none}
+.case .bbox{position:relative}
+.case:not(.got) .bbox{opacity:.55}
+.case:not(.got) .bbox::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--bulb-off);pointer-events:none}
+.case.got .mono{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+@media (prefers-reduced-motion:no-preference){.case.got .bbox{animation:stampin .35s ease-out both}@keyframes stampin{from{transform:scale(1.35) rotate(-14deg);opacity:0}}}
 </style>
 
 <div class="app">
@@ -739,8 +751,8 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 
   function viewRewards(){
     var x=xp(), r=rank(x);
-    var h='<section class="card"><h3>Badges</h3><div class="cases">'+STOPS.map(function(s,i){
-      return '<div class="case'+(S.done[i]?' got':'')+'"><div class="bbox lg">'+badge(s.id,S.done[i])+'</div><span class="nm">'+s.badge+'</span><span class="mono">'+(S.done[i]?'Earned':'Locked')+'</span></div>';
+    var h='<section class="card"><h3>Passport: '+city().name+'</h3><p class="why" style="margin:0 0 10px">Each stop you finish stamps a page.</p><div class="cases">'+STOPS.map(function(s,i){
+      return '<div class="case'+(S.done[i]?' got':'')+'"><div class="bbox lg">'+badge(s.id,S.done[i])+'</div><span class="nm">'+s.badge+'</span><span class="mono">'+(S.done[i]?'Stamped':'Blank page')+'</span></div>';
     }).join('')+'</div></section>';
     h+='<section class="card"><h3>'+city().explorer+'</h3><div class="master"><div class="bbox lg">'+badge('master',allDone())+'</div><p>'+(allDone()?'Earned. You found every stop in '+city().name+'.':'Earn all four badges to unlock it.')+'</p></div></section>';
     h+='<section class="card"><h3>Rank</h3><ul class="ladder">'+RANKS.map(function(rk,i){
