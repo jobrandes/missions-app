@@ -243,6 +243,22 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
 .cmp .row span{font:600 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);flex:none}
 .cmp input[type=range]{flex:1;min-width:0;height:36px;accent-color:var(--accent)}
 .cmp .hint{margin:6px 0 0;font:500 12px var(--font-mono);color:var(--muted)}
+
+/* Fact or Fiction */
+.fof{display:flex;flex-direction:column;gap:12px}
+.fdots{display:flex;gap:8px}
+.fdots i{width:26px;height:8px;border-radius:4px;background:var(--bulb-off)}
+.fdots i.on{background:var(--good)}
+.streak{margin:0;font:700 13px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--warn)}
+.fcard{border:2px solid var(--ink);border-radius:16px;background:var(--mat);color:var(--mat-ink);padding:22px 18px;min-height:150px;display:flex;align-items:center;box-shadow:0 6px 0 var(--ink);touch-action:pan-y}
+.ftxt{margin:0;font:700 clamp(20px,5.4vw,26px)/1.25 var(--font-display);letter-spacing:.01em}
+.fbtns{display:grid;gap:10px}
+.fbtn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;min-height:56px;padding:10px 14px;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font-family:var(--font-body);cursor:pointer}
+.fbtn b{font:700 17px var(--font-display);letter-spacing:.03em;text-transform:uppercase}
+.fbtn span{font-size:13px;color:var(--muted)}
+.fbtn:hover,.fbtn:focus-visible{border-color:var(--accent)}
+.fdone{padding-top:12px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:no-preference){.fcard.shake{animation:fshake .35s}@keyframes fshake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}}
 </style>
 
 <div class="app">
@@ -702,6 +718,46 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
     }).join('')+'</div>';
   }
 
+  var streak=0;
+  var FLAB=['Well documented','Disputed or unproven','Not true'];
+  var FSUB=['Solid sources back it up','Historians disagree or cannot prove it','It is a myth or a mistake'];
+  function factGame(st){
+    var n=st.claims.length, next=-1, doneN=0;
+    st.claims.forEach(function(c,ci){ if(S.claims[cur.i*2+ci]) doneN++; else if(next<0) next=ci; });
+    var h='<section class="card fof"><p class="mono">Fact or Fiction</p>';
+    h+='<div class="fdots" aria-label="'+doneN+' of '+n+' claims done">';
+    for(var q=0;q<n;q++) h+='<i class="'+(q<doneN?'on':'')+'"></i>';
+    h+='</div>';
+    if(streak>1) h+='<p class="streak">Streak: '+streak+' in a row</p>';
+    if(next<0){
+      h+='<p><strong>All claims sorted.</strong> Here is what the sources say.</p>';
+      st.claims.forEach(function(c){ h+='<div class="fdone"><p><strong>'+c.t+'</strong></p><p class="feedback good">'+FLAB[c.a]+'. <span class="why">'+c.why+'</span></p></div>'; });
+      return h+'<button class="btn" data-a="exit">Back to the trail</button></section>';
+    }
+    var c=st.claims[next];
+    h+='<p class="why">Is this claim solid, disputed, or not true? Tap a label'+(('ontouchstart' in window)?', or swipe the card right for solid and left for not true':'')+'.</p>';
+    h+='<div class="fcard'+(cur.fbad?' shake':'')+'" data-claim="'+next+'" tabindex="0"><p class="ftxt">'+c.t+'</p></div>';
+    if(cur.fbad) h+='<p class="feedback bad" aria-live="polite">Not quite. Check the story and the sources, then try again.</p>';
+    h+='<div class="fbtns" role="group" aria-label="Choose a label">'+FLAB.map(function(r,k){
+      return '<button class="fbtn" data-a="fpick" data-c="'+next+'" data-k="'+k+'"><b>'+r+'</b><span>'+FSUB[k]+'</span></button>';
+    }).join('')+'</div></section>';
+    return h;
+  }
+  function factAnswer(ci,k){
+    var st=STOPS[cur.i], c=st.claims[ci], gi=cur.i*2+ci;
+    if(S.claims[gi]) return;
+    if(k===c.a){
+      S.claims[gi]=1; streak++; cur.fbad=false; save(); render();
+      toast('Right. +25 XP'+(streak>1?' ('+streak+' in a row)':''));
+    } else {
+      streak=0; cur.fbad=true; render(); toast('Not quite. Try again.');
+    }
+  }
+  (function(){ var x0=null,y0=null;
+    document.addEventListener('touchstart',function(e){ var t=e.target.closest&&e.target.closest('.fcard'); if(!t){x0=null;return;} x0=e.touches[0].clientX; y0=e.touches[0].clientY; },{passive:true});
+    document.addEventListener('touchend',function(e){ if(x0===null) return; var t=e.target.closest&&e.target.closest('.fcard'); var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+      if(!t||Math.abs(dx)<70||Math.abs(dx)<Math.abs(dy)*1.5) return; factAnswer(+t.getAttribute('data-claim'), dx>0?0:2); },{passive:true});
+  })();
   function viewStop(){
     var st=STOPS[cur.i], d=S.done[cur.i];
     var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Cards':'Trail')+'</button><span class="mono">'+st.tag+'</span></div>';
@@ -738,19 +794,7 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
       h+='<details class="card"><summary>Sources</summary><ul class="srcs">'+st.sources.map(function(s){return '<li><a target="_blank" rel="noopener" href="'+s.u+'">'+s.t+'</a></li>';}).join('')+'</ul></details>';
       h+='<button class="btn" data-a="step" data-n="3">Source check: earn up to 50 XP</button>';
     }
-    if(cur.step===3 && d){
-      h+='<section class="card"><p class="mono">Source check</p><p>Historians sort claims by how well they are backed up. Pick a label for each claim, then check your answers.</p>';
-      st.claims.forEach(function(c,ci){
-        var gi=cur.i*2+ci, got=S.claims[gi];
-        var pick=got?c.a:cur.picks[ci];
-        h+='<div class="claim"><p><strong>'+c.t+'</strong></p><div class="chips" role="group" aria-label="Label for claim '+(ci+1)+'">'
-          +RIGHT.map(function(r,k){ return '<button class="chip" data-a="cpick" data-c="'+ci+'" data-k="'+k+'" aria-pressed="'+(pick===k)+'"'+(got?' disabled':'')+'>'+r+'</button>'; }).join('')+'</div>';
-        if(got) h+='<p class="feedback good">Right. +25 XP. <span class="why">'+c.why+'</span></p>';
-        else if(cur.checked && pick!==undefined) h+='<p class="feedback bad">Not yet. Reread the story and the sources, then try again.</p>';
-        h+='</div>';
-      });
-      h+='<button class="btn" data-a="check">Check my answers</button></section>';
-    }
+    if(cur.step===3 && d){ h+=factGame(st); }
     return h;
   }
 
@@ -854,6 +898,7 @@ details ul{margin:0 0 4px;padding-left:20px;display:flex;flex-direction:column;g
       }
       return;
     }
+    if(a==='fpick'){ factAnswer(+b.getAttribute('data-c'),+b.getAttribute('data-k')); return; }
     if(a==='cpick'){
       cur.picks[+b.getAttribute('data-c')]=+b.getAttribute('data-k'); cur.checked=false; render(); return;
     }
