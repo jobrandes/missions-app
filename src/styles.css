@@ -335,3 +335,10 @@ body.ishome .hero, body.ishome .tabs{display:none}
 
 .region{margin:18px 0 8px;font:600 12px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .region:first-of-type{margin-top:4px}
+
+details.reg{margin:0 0 6px}
+details.reg>summary.region{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:44px;margin:8px 0 6px;cursor:pointer;list-style:none}
+details.reg>summary.region::-webkit-details-marker{display:none}
+details.reg>summary.region::after{content:"+";font:600 18px var(--font-mono);color:var(--accent);padding-left:8px}
+details.reg[open]>summary.region::after{content:"–"}
+.rcount{margin-left:auto;font:500 12px var(--font-mono);letter-spacing:.06em;color:var(--muted)}
