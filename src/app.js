@@ -148,22 +148,39 @@
   }
 
   /* ---------- views ---------- */
+  var HCL=[
+    {t:'The first Reno Arch was built in 1926.',a:0,why:'Several sources agree on October 23, 1926. Well documented.'},
+    {t:'The arch switched to LED lights in 2018.',a:1,why:'One source says 2009, another says 2018. Until a city record settles it, it is disputed.'}
+  ], hi=0, hdone=false, hmsg='Pick one.', hcls='';
+  function homeFof(){
+    var c=HCL[hi];
+    return '<div class="fof" aria-live="polite"><p class="mono">Fact or fiction</p><div class="fcard-h">'+(hdone?'You get the idea.':c.t)+'</div>'+(hdone?'':'<div class="fb-h">'+FLAB.map(function(l,k){ return '<button type="button" data-a="hpick" data-k="'+k+'">'+l+'</button>'; }).join('')+'</div>')+'<p class="res-h '+hcls+'">'+hmsg+'</p></div>';
+  }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
-    var h='<section class="home-hero"><p class="mono">Missions for real places</p><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></section>';
+    var stamps=['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].filter(function(k){return PHOTOS[k];}).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('');
+    var h='<section class="home-hero"><div><p class="mono">Missions for real places</p><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     h+='<section><h2 class="hh">Pick a mission</h2><ul class="towns">'+ORDER.map(function(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
       var key=c.heroKey||(BMAP[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
       return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3><span class="sub">'+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button></li>';
-    }).join('')+SOON.map(function(nm){ return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }).join('')+'</ul></section>';
-    h+='<section class="card"><p class="mono">Your passport</p><p><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' towns.</p></section>';
-    h+='<section class="band-home"><p class="mono">How it works</p><ol class="hiw"><li><b>Find the spot.</b> A clue sends you to a real landmark.</li><li><b>Prove it.</b> Answer a question about what you can see there.</li><li><b>Fact or fiction.</b> Sort the famous stories: solid, disputed, or not true.</li><li><b>Get stamped.</b> Unlock the story and a Then/Now photo you can fade through.</li></ol></section>';
-    h+='<section class="card"><p class="mono">For parents</p><p>No accounts, no location tracking, no photo uploads, and no ads. Every story shows its sources and every photo shows its credit. Progress is saved only on this phone.</p></section>';
-    h+='<p class="home-foot">Made by a mom and her teenage son.</p>';
+    }).join('')+SOON.map(function(nm){ return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }).join('')+'</ul><p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' towns.</p></section>';
+    h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there. Google can\'t help you. We checked.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
+    if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Drag back through time.</h2><p>Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
+    h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
+    h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></section>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>Reno first. Virginia City and Tahoe City next.</p>';
     return h;
+  }
+  function homeAnswer(k){
+    var c=HCL[hi];
+    if(k===c.a){ hcls='good'; hmsg='Right. '+c.why;
+      if(hi<HCL.length-1){ hi++; hmsg+=' Next one is below.'; } else { hdone=true; hmsg+=' That is the game. Pick a town and try it for real.'; }
+    } else { hcls='bad'; hmsg='Not quite. Try again.'; }
+    var el=document.getElementById('homefof'); if(el) el.innerHTML=homeFof();
   }
 
   function viewTrail(){
@@ -381,6 +398,7 @@
       return;
     }
     if(a==='ink'){ var ii=+b.getAttribute('data-i'); if(ii<=bestRank()){ inkI=ii; try{ localStorage.setItem('then-now-ink',String(ii)); }catch(e){} render(); } return; }
+    if(a==='hpick'){ homeAnswer(+b.getAttribute('data-k')); return; }
     if(a==='fpick'){ factAnswer(+b.getAttribute('data-c'),+b.getAttribute('data-k')); return; }
     if(a==='cpick'){
       cur.picks[+b.getAttribute('data-c')]=+b.getAttribute('data-k'); cur.checked=false; render(); return;
