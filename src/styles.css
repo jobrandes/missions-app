@@ -313,3 +313,7 @@ body.ishome .hero, body.ishome .tabs{display:none}
 .band-home{margin:18px 0;padding:18px;border-radius:14px;background:var(--surface-2)}
 .hiw{margin:10px 0 0;padding-left:22px;display:grid;gap:10px}
 .home-foot{text-align:center;color:var(--muted);font:500 12px var(--font-mono);letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px}
+
+.lvl{display:inline-block;margin:2px 0 4px;padding:2px 8px;border-radius:999px;font:600 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted)}
+.lvl.ic{color:var(--accent);border-color:var(--accent)}
+.town .sub{display:block}
