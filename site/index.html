@@ -784,7 +784,7 @@ details.reg[open]>summary.region::after{content:"–"}
     if(next<0){
       h+='<p><strong>All claims sorted.</strong> Here is what the sources say.</p>';
       st.claims.forEach(function(c){ h+='<div class="fdone"><p><strong>'+c.t+'</strong></p><p class="feedback good">'+FLAB[c.a]+'. <span class="why">'+c.why+'</span></p></div>'; });
-      return h+'</section>'+nextPanel();
+      return nextPanel()+h+'</section>';
     }
     var c=st.claims[next];
     h+='<p class="why">Open book: the answers are in the story and sources you just read. Is this claim solid, disputed, or not true? Tap a label'+(('ontouchstart' in window)?', or swipe the card right for solid and left for not true':'')+'.</p>';
