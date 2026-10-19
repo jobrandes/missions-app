@@ -33,3 +33,9 @@ Celebration + passport, offline mode, verified-on-site badge, "historians argue"
 - Final challenge rewards: Gold/Silver/Bronze seals (4/3/2 of 4), challenge points (50 per correct, +100 perfect, counted from best score only), per-answer feedback lines and animations, Grand Historian when every town is gold.
 - Next stop panel after each stop's Fact or Fiction.
 - Netlify Forms enabled on the test site (Oct 19) so the report button can send.
+
+## Oct 19: more towns + demo
+- Added Chicago (Midwest), San Francisco (West) and Philadelphia (East): 12 stops, 12 challenge questions, all from sourced facts, check-in questions marked "not yet checked on site".
+- Photos for the new towns are pending (honest "photo pending"). Needs free-to-use photos via Chrome/Commons.
+- "Try it from home (preview)" on unstamped stops: unlocks the story without saving a stamp or points.
+- Home "How it works" now shows the current mission's stop badges.

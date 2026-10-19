@@ -105,3 +105,6 @@ Rejected: a 1921 book panorama that matched "Emerald Bay" in search but is not E
 | ny_sl_now | Carol M. Highsmith (Library of Congress), Aug. 24, 2017 | CC0 |
 
 Rejected: an 1883 newspaper engraving of the bridge (an illustration, not a photo) and Steichen's 1904 Flatiron photo (too dark to compare). All NY check-in questions are flagged `verify`.
+
+## Chicago, San Francisco, Philadelphia (Oct 19)
+No photos yet. Each stop shows "photo pending" until a free-to-use photo is added and logged here.

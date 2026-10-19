@@ -96,7 +96,9 @@
     }catch(e){}
     S=ALL[cityId]; STOPS=CITIES[cityId].stops; RANKS=CITIES[cityId].ranks;
   }
-  function save(){ try{ localStorage.setItem(KEY3,JSON.stringify({city:cityId,home:atHome?1:0,p:ALL})); }catch(e){} }
+  var demoSnap=null, demoC=null;
+  function endDemo(){ if(demoSnap&&demoC){ demoC.done=demoSnap.done.slice(); demoC.claims=demoSnap.claims.slice(); } demoSnap=null; demoC=null; }
+  function save(){ if(demoSnap) return; try{ localStorage.setItem(KEY3,JSON.stringify({city:cityId,home:atHome?1:0,p:ALL})); }catch(e){} }
   function sum(a){ return a.reduce(function(x,y){return x+y;},0); }
   function xp(){ return sum(S.done)*100 + sum(S.claims)*25; }
   function rank(x){
@@ -196,11 +198,13 @@
       var c=CITIES[k], d=sum(ALL[k].done);
       return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</section>';
-    h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
+    var hk=(typeof cityId!=='undefined'&&CITIES[cityId])?cityId:ORDER[0]; ORDER.forEach(function(k){ if(hk===ORDER[0]&&sum(ALL[k].done)>0&&k!==hk) hk=k; });
+    var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
+    h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West and the East so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest and the East so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
     return h;
   }
   function homeAnswer(k){
@@ -399,13 +403,15 @@
   function viewStop(){
     var st=STOPS[cur.i], d=S.done[cur.i];
     var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Cards':'Trail')+'</button><span class="mono">'+st.tag+'</span></div>';
-    h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>'+stepper();
+    h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>';
+    if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Preview mode.</strong> You are trying this from home. No stamp, no points, nothing saved. The real thing needs you on the spot.</p>';
+    h+=stepper();
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
       h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p><div class="safety"><span class="mono">Safety</span><span>'+st.safety+'</span></div>'+vnote(st)
         +'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'
-        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button></section>';
+        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';
@@ -416,7 +422,7 @@
         return '<button type="button" class="'+cls+'" data-a="pick" data-k="'+k+'"'+(d?' disabled':'')+'><span>'+o+'</span>'+mark+'</button>';
       }).join('')+'</fieldset>';
       if(d){
-        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>Badge earned</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
+        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':'Badge earned')+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
       } else {
         h+='<p class="feedback'+(cur.wrong.length?' bad':'')+'" aria-live="polite">'+(cur.wrong.length?'Not yet. '+st.q.hint:'Get it right to earn the '+st.badge+' badge and 100 XP.')+'</p>';
       }
@@ -500,7 +506,7 @@
 
   /* ---------- navigation ---------- */
   function leave(){
-    cur=null;
+    endDemo(); cur=null;
     if(pushed){
       pushed=false; ignorePop=true;
       try{ history.back(); }catch(e){ ignorePop=false; }
@@ -508,6 +514,7 @@
   }
   function exitStop(){ leave(); render(); window.scrollTo(0,0); }
   function openStop(i,step){
+    endDemo();
     var entry=(step!==undefined?step:(S.done[i]?2:0));
     cur={i:i,step:entry,entry:entry,wrong:[],picks:[],checked:false};
     if(!pushed){ try{ history.pushState({stop:1},'','#stop'); pushed=true; }catch(e){} }
@@ -549,11 +556,13 @@
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
     if(a==='exit'){ exitStop(); return; }
     if(a==='goback'){ goBack(); return; }
+    if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
     if(a==='step'){ setStep(+b.getAttribute('data-n')); return; }
     if(a==='pick'){
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
-        if(!S.done[cur.i]){ S.done[cur.i]=1; save(); toast('Badge earned: '+st.badge+'. +100 XP'); if(allDone()) setTimeout(celebrate,450); }
+        if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; save(); toast('Badge earned: '+st.badge+'. +100 XP'); if(allDone()) setTimeout(celebrate,450); }
         cur.wrong=[]; render();
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);

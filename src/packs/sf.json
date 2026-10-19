@@ -1,0 +1,319 @@
+{
+ "id": "sf",
+ "name": "San Francisco",
+ "explorer": "Bay Explorer",
+ "initials": "SF",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Bay Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Hill Scholar"
+  ],
+  [
+   600,
+   "Bay Area Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around San Francisco. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of the Bay is waiting.",
+ "safetyNote": "<li>San Francisco is hilly, windy and often cold, even on sunny days. Bring a jacket, wear real shoes, and watch for traffic on steep streets.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "goldengate",
+   "name": "Golden Gate Bridge",
+   "short": "Golden Gate",
+   "badge": "Golden Gate",
+   "tag": "Stop 1 of 4",
+   "teaser": "The bridge with a color the Navy did not want.",
+   "map": "Golden Gate Bridge Welcome Center, San Francisco, CA",
+   "clue": "Head to the San Francisco end of the bridge, near the Welcome Center and Vista Point. Find the tall red-orange towers.",
+   "safety": "The bridge is windy and cold, and fog can roll in fast. Stay on the sidewalk, watch for cyclists, and never lean over the rail.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The bridge's color has an official name. What is it?",
+    "options": [
+     "Burnt Sienna",
+     "Signal Red",
+     "International Orange",
+     "Coral Fog"
+    ],
+    "answer": 2,
+    "hint": "It sounds like a shipping term.",
+    "verify": "The bridge is painted International Orange (Wikipedia, Golden Gate Bridge). Confirm on site signage. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1933",
+    "label": "Construction begins",
+    "line": "Work started on January 5, 1933."
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The bridge today",
+    "line": "The towers and cables are still painted International Orange."
+   },
+   "story": [
+    "Construction began on January 5, 1933 and the bridge opened on May 27, 1937. Its main span is 4,200 feet, and it was the longest suspension span in the world until 1964. The towers rise 746 feet above the water.",
+    "Joseph Strauss oversaw the project. Leon Moisseiff conceived the suspension design, and Charles Ellis did much of the engineering but received little credit while he lived.",
+    "Architect Irving Morrow designed the Art Deco touches and chose the color. He picked International Orange because it suits the setting and shows up in fog. The Navy had suggested black and yellow stripes."
+   ],
+   "fact": "The Navy wanted stripes. Morrow chose orange.",
+   "disputed": "Credit for the design is argued over. Strauss led the project, but Moisseiff and Ellis did much of the engineering.",
+   "claims": [
+    {
+     "t": "The bridge's color was chosen partly because it shows up well in fog.",
+     "a": 0,
+     "why": "Wikipedia: Morrow chose International Orange partly for visibility in fog."
+    },
+    {
+     "t": "Joseph Strauss alone designed the Golden Gate Bridge.",
+     "a": 1,
+     "why": "Strauss oversaw it. Moisseiff conceived the suspension design and Ellis did much of the engineering."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Golden Gate Bridge",
+     "u": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+    },
+    {
+     "t": "Structurae: Golden Gate Bridge",
+     "u": "https://structurae.net/en/structures/golden-gate-bridge"
+    }
+   ],
+   "card": {
+    "a": "1933",
+    "b": "1937",
+    "la": "Construction began",
+    "lb": "Opened"
+   }
+  },
+  {
+   "id": "ferrybuilding",
+   "name": "Ferry Building",
+   "short": "Ferry Building",
+   "badge": "Ferry Building",
+   "tag": "Stop 2 of 4",
+   "teaser": "A clock tower that outlasted a freeway.",
+   "map": "Ferry Building, 1 Ferry Building, San Francisco, CA",
+   "clue": "Go to the foot of Market Street on the Embarcadero. Find the old stone terminal with a tall clock tower facing the bay.",
+   "safety": "The Embarcadero has streetcars, bikes and ferry crowds. Cross at signals and keep clear of the tracks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Walk around the tower. How many clock faces does it have?",
+    "options": [
+     "2",
+     "4",
+     "3",
+     "6"
+    ],
+    "answer": 1,
+    "hint": "Think compass points.",
+    "verify": "Wikipedia says the tower has four clock dials. Count on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1898",
+    "label": "Opening year",
+    "line": "The Ferry Building opened on July 13, 1898."
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The clock tower faces the bay, and a farmers market fills the plaza."
+   },
+   "story": [
+    "The Ferry Building opened on July 13, 1898. Architect A. Page Brown designed it in a Beaux-Arts style, and its tower is 245 feet tall.",
+    "The clock was made in 1898 by E. Howard of Boston. Each dial is 22 feet across. It was once the world's largest wind-up mechanical dial clock, but it is now powered by electricity.",
+    "The building survived the 1906 and 1989 earthquakes with little damage. A freeway built in the late 1950s had hidden it from Market Street. The 1989 quake damaged that freeway, and it was fully gone by 1992, opening the waterfront again."
+   ],
+   "fact": "Each dial is 22 feet across.",
+   "disputed": "A popular claim says the tower was copied from the Giralda in Seville. Wikipedia notes similarities but finds no evidence it was Brown's model.",
+   "claims": [
+    {
+     "t": "The Ferry Building survived the 1906 earthquake with little damage.",
+     "a": 0,
+     "why": "Wikipedia says the building survived with little damage."
+    },
+    {
+     "t": "The Ferry Building tower was copied from the Giralda in Seville.",
+     "a": 1,
+     "why": "Often claimed. Wikipedia notes similarities but finds no evidence it was the prototype."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: San Francisco Ferry Building",
+     "u": "https://en.wikipedia.org/wiki/San_Francisco_Ferry_Building"
+    },
+    {
+     "t": "American Planning Association: Ferry Building",
+     "u": "https://planning.org/greatplaces/spaces/2010/ferrybuilding.htm"
+    }
+   ],
+   "card": {
+    "a": "1898",
+    "b": "1992",
+    "la": "Opened",
+    "lb": "Freeway gone"
+   }
+  },
+  {
+   "id": "coittower",
+   "name": "Coit Tower",
+   "short": "Coit Tower",
+   "badge": "Coit Tower",
+   "tag": "Stop 3 of 4",
+   "teaser": "A tower paid for by a woman who loved firefighters, full of 1934 murals.",
+   "map": "Coit Tower, 1 Telegraph Hill Blvd, San Francisco, CA",
+   "clue": "Head up Telegraph Hill to a tall, fluted white tower. Parking is tight, so walking or transit is easier.",
+   "safety": "Telegraph Hill is very steep and the roads are narrow with little parking. Take the stairs slowly, watch for cars, and stay on the paths.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "On which hill does Coit Tower stand?",
+    "options": [
+     "Nob Hill",
+     "Russian Hill",
+     "Twin Peaks",
+     "Telegraph Hill"
+    ],
+    "answer": 3,
+    "hint": "The name is on the road you climb.",
+    "verify": "Wikipedia places Coit Tower on Telegraph Hill. Road signs on Telegraph Hill Boulevard should confirm it. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1933",
+    "label": "Dedication year",
+    "line": "Coit Tower was dedicated on October 8, 1933."
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The tower still crowns Telegraph Hill, with the lobby murals inside."
+   },
+   "story": [
+    "Lillie Hitchcock Coit left one third of her fortune, about $118,000, for \"adding to the beauty of the city.\" That money paid for the tower. It was completed in 1933 and dedicated on October 8, 1933.",
+    "Arthur Brown Jr. and Henry Temple Howard designed it. The shaft that holds the viewing platform is 180 feet tall.",
+    "In 1934, twenty-two artists painted the lobby murals on site as part of a federal art program. A censorship dispute led to a hammer and sickle and a \"Western Worker\" banner being removed. The tower opened to the public on October 12, 1934."
+   ],
+   "fact": "Coit's will also paid for a firefighters' memorial in Washington Square.",
+   "disputed": "The story that the tower is shaped like a fire hose nozzle is told a lot, but the record says the resemblance is a coincidence.",
+   "claims": [
+    {
+     "t": "The murals inside Coit Tower were painted in 1934 as part of a federal art program.",
+     "a": 0,
+     "why": "Wikipedia: the Public Works of Art Project, 1934, with 22 artists painting on site."
+    },
+    {
+     "t": "Coit Tower was designed to look like a fire hose nozzle.",
+     "a": 2,
+     "why": "The record says any resemblance is coincidence."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Coit Tower",
+     "u": "https://en.wikipedia.org/wiki/Coit_Tower"
+    },
+    {
+     "t": "A View on Cities: Coit Tower",
+     "u": "https://aviewoncities.com/san-francisco/coit-tower"
+    }
+   ],
+   "card": {
+    "a": "1933",
+    "b": "1934",
+    "la": "Completed",
+    "lb": "Murals finished"
+   }
+  },
+  {
+   "id": "palace",
+   "name": "Palace of Fine Arts",
+   "short": "Palace",
+   "badge": "Palace",
+   "tag": "Stop 4 of 4",
+   "teaser": "A fake Roman ruin that got rebuilt for real.",
+   "map": "Palace of Fine Arts, 3601 Lyon St, San Francisco, CA",
+   "clue": "In the Marina district, find a domed rotunda with tall columns beside a lagoon.",
+   "safety": "Stay on the paths around the lagoon. The edges can be slippery, so keep a safe distance from the water.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the rotunda from above or walk around it. How many sides does it have?",
+    "options": [
+     "6",
+     "7",
+     "8",
+     "10"
+    ],
+    "answer": 2,
+    "hint": "Think stop sign.",
+    "verify": "Sources describe the rotunda as an octagon: eight sides (SAH Archipedia). Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1915",
+    "label": "Built for the fair",
+    "line": "The palace was built for the 1915 Panama-Pacific International Exposition."
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The palace today",
+    "line": "The rebuilt rotunda and colonnade sit beside a lagoon."
+   },
+   "story": [
+    "The Palace of Fine Arts was built in 1915 for the Panama-Pacific International Exposition, a world's fair celebrating the Panama Canal. Bernard Maybeck designed it, inspired by a Roman-ruin engraving.",
+    "It was meant to be temporary. It was built of plaster-fiber over wood and was not supposed to outlast the fair.",
+    "People loved it, but it decayed and closed in 1952. It was rebuilt in concrete, with groundbreaking in 1964 and completion in 1967. The open-air rotunda is an octagon topped with a dome about 162 feet across."
+   ],
+   "fact": "It was built to be torn down and rebuilt for real 50 years later.",
+   "disputed": "Nothing big is disputed here. The common mistake is thinking the original still stands.",
+   "claims": [
+    {
+     "t": "The Palace of Fine Arts was first built for a world's fair in 1915.",
+     "a": 0,
+     "why": "SAH Archipedia: built for the Panama-Pacific International Exposition."
+    },
+    {
+     "t": "The 1915 palace was built of solid stone to last forever.",
+     "a": 2,
+     "why": "It was temporary plaster over wood and was rebuilt in concrete in the 1960s."
+    }
+   ],
+   "sources": [
+    {
+     "t": "SAH Archipedia: Palace of Fine Arts",
+     "u": "https://sah-archipedia.org/buildings/CA-01-075-0036"
+    },
+    {
+     "t": "University of Maryland: World's Fairs",
+     "u": "https://digital.lib.umd.edu/worldsfairs/result/id/umd:1006"
+    }
+   ],
+   "card": {
+    "a": "1915",
+    "b": "1967",
+    "la": "Built for the fair",
+    "lb": "Rebuilt in concrete"
+   }
+  }
+ ]
+}

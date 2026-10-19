@@ -1,37 +1,462 @@
 {
-"reno":[
-{"q":"In what year did Reno first raise a steel arch over Virginia Street?","o":["1905","1926","1963","1987"],"a":1,"why":"The first arch went up on October 23, 1926."},
-{"q":"An entrant from Sacramento won $100 for writing what?","o":["The city's first newspaper","A song for the 1927 exposition","The slogan \"The Biggest Little City in the World\"","The name of the Truckee River bridge"],"a":2,"why":"The slogan contest followed the 1927 highways exposition."},
-{"q":"Who built the first bridge at this crossing in 1860?","o":["Myron Lake","Charles Fuller","George Wingfield","John B. Leonard"],"a":1,"why":"Charles Fuller built it in 1860. Myron Lake took over in 1861 and charged tolls."},
-{"q":"Which California town received the 1963 arch?","o":["Truckee","Willits","Sacramento","Auburn"],"a":1,"why":"The arch went to Willits, which changed its slogan to welcome visitors to the redwoods."}],
-"vc":[
-{"q":"In what year was silver found at Virginia City?","o":["1849","1859","1875","1886"],"a":1,"why":"Silver was found in 1859, setting off the Comstock Lode rush."},
-{"q":"Which newspaper did young Sam Clemens write for in Virginia City?","o":["The Comstock Courier","The Silver Standard","The Territorial Enterprise","The Carson Gazette"],"a":2,"why":"He wrote for the Territorial Enterprise and first signed \"Mark Twain\" in 1863."},
-{"q":"What happened in Virginia City on October 26, 1875?","o":["The Fourth Ward School opened","The Great Fire","The silver ran out","The railroad arrived"],"a":1,"why":"The Great Fire burned much of the town and left about 2,000 people homeless."},
-{"q":"In what year did the last class graduate from the Fourth Ward School?","o":["1876","1936","1961","1986"],"a":1,"why":"The last class graduated in 1936. The building reopened as a museum in 1986."}],
-"tahoeicons":[
-{"q":"Who built Vikingsholm in 1929?","o":["George Whittell Jr.","Alonzo Richardson","Lora Josephine Knight","Walter Hobart Jr."],"a":2,"why":"Lora Josephine Knight built it, with the architect Lennart Palme."},
-{"q":"What is the only island in Lake Tahoe called?","o":["Bliss Island","Fannette Island","Tallac Island","Richardson Island"],"a":1,"why":"Fannette Island sits in Emerald Bay."},
-{"q":"In what year did the Sand Harbor park have its grand opening?","o":["1892","1958","1971","1994"],"a":2,"why":"Lake Tahoe Nevada State Park held its grand opening in 1971."},
-{"q":"Camp Richardson is named after whom?","o":["Captain Alonzo L. Richardson","Governor Richardson","Joe King","Robert Watson"],"a":0,"why":"Captain Alonzo L. Richardson started a stage service here in 1921."}],
-"tahoe":[
-{"q":"Which river leaves Lake Tahoe at Fanny Bridge?","o":["Carson River","Truckee River","Walker River","American River"],"a":1,"why":"The Truckee River is the lake's only outlet."},
-{"q":"In what year was the present concrete Lake Tahoe Dam finished?","o":["1870","1909","1913","1981"],"a":2,"why":"It was built between 1909 and 1913."},
-{"q":"When did the original gatekeeper's cabin burn?","o":["1910","1964","1978","1981"],"a":2,"why":"It burned in 1978. The present cabin was finished in 1981."},
-{"q":"For whom did Robert Watson build his log cabin in 1908?","o":["His son and daughter-in-law","The new gatekeeper","A summer gift shop","The Tahoe Water War judge"],"a":0,"why":"He built it for his son and daughter-in-law, who moved in during 1909."}],
-"boston":[
-{"q":"In what year was the Old State House completed?","o":["1680","1713","1742","1776"],"a":1,"why":"It is the city's oldest surviving public building."},
-{"q":"How did the town vote on accepting Faneuil's market in 1740?","o":["Unanimously","367 to 360","200 to 10","It was decided by a coin flip"],"a":1,"why":"The vote was 367 to 360, so it was very close."},
-{"q":"In what year did Paul Revere buy his house?","o":["1680","1735","1770","1800"],"a":2,"why":"He bought it on January 13, 1770, and owned it until 1800."},
-{"q":"How many lanterns were hung in the Old North Church steeple on April 18, 1775?","o":["One","Two","Three","Four"],"a":1,"why":"Two lanterns warned patriots in Charlestown that the British were moving by water."}],
-"dc":[
-{"q":"In what year was the Lincoln Memorial dedicated?","o":["1863","1922","1943","1963"],"a":1,"why":"It was dedicated on May 30, 1922."},
-{"q":"Work on the Washington Monument stopped in 1854. When did it resume?","o":["1865","1877","1888","1913"],"a":1,"why":"Work stopped from 1854 until 1877 because of money problems and the Civil War."},
-{"q":"In what year did British troops burn the Capitol?","o":["1776","1793","1814","1866"],"a":2,"why":"British troops burned it on August 24, 1814, during the War of 1812."},
-{"q":"When was the bronze statue of Jefferson installed?","o":["1943","1947","1952","1969"],"a":1,"why":"A plaster statue stood there in 1943. The bronze one arrived in April 1947."}],
-"ny":[
-{"q":"Who helped supervise the Brooklyn Bridge construction for about 11 years after Washington Roebling became too ill to visit?","o":["John A. Roebling","Emily Warren Roebling","P. T. Barnum","Daniel Burnham"],"a":1,"why":"Emily Warren Roebling relayed communications and managed daily work."},
-{"q":"When did Grand Central Terminal open?","o":["1883","1902","1913","1950"],"a":2,"why":"It opened on February 2, 1913."},
-{"q":"What was the Flatiron Building first called?","o":["The Fuller Building","The Burnham Tower","The Broadway Wedge","The Fifth Avenue Building"],"a":0,"why":"It was named for George A. Fuller, founder of the Fuller Company."},
-{"q":"Whose company built the iron frame inside the Statue of Liberty?","o":["Bartholdi's","Gustave Eiffel's","Daniel Burnham's","Thomas Walter's"],"a":1,"why":"Gustave Eiffel's company built the frame. Bartholdi was the sculptor."}]
+ "reno": [
+  {
+   "q": "In what year did Reno first raise a steel arch over Virginia Street?",
+   "o": [
+    "1905",
+    "1926",
+    "1963",
+    "1987"
+   ],
+   "a": 1,
+   "why": "The first arch went up on October 23, 1926."
+  },
+  {
+   "q": "An entrant from Sacramento won $100 for writing what?",
+   "o": [
+    "The city's first newspaper",
+    "A song for the 1927 exposition",
+    "The slogan \"The Biggest Little City in the World\"",
+    "The name of the Truckee River bridge"
+   ],
+   "a": 2,
+   "why": "The slogan contest followed the 1927 highways exposition."
+  },
+  {
+   "q": "Who built the first bridge at this crossing in 1860?",
+   "o": [
+    "Myron Lake",
+    "Charles Fuller",
+    "George Wingfield",
+    "John B. Leonard"
+   ],
+   "a": 1,
+   "why": "Charles Fuller built it in 1860. Myron Lake took over in 1861 and charged tolls."
+  },
+  {
+   "q": "Which California town received the 1963 arch?",
+   "o": [
+    "Truckee",
+    "Willits",
+    "Sacramento",
+    "Auburn"
+   ],
+   "a": 1,
+   "why": "The arch went to Willits, which changed its slogan to welcome visitors to the redwoods."
+  }
+ ],
+ "vc": [
+  {
+   "q": "In what year was silver found at Virginia City?",
+   "o": [
+    "1849",
+    "1859",
+    "1875",
+    "1886"
+   ],
+   "a": 1,
+   "why": "Silver was found in 1859, setting off the Comstock Lode rush."
+  },
+  {
+   "q": "Which newspaper did young Sam Clemens write for in Virginia City?",
+   "o": [
+    "The Comstock Courier",
+    "The Silver Standard",
+    "The Territorial Enterprise",
+    "The Carson Gazette"
+   ],
+   "a": 2,
+   "why": "He wrote for the Territorial Enterprise and first signed \"Mark Twain\" in 1863."
+  },
+  {
+   "q": "What happened in Virginia City on October 26, 1875?",
+   "o": [
+    "The Fourth Ward School opened",
+    "The Great Fire",
+    "The silver ran out",
+    "The railroad arrived"
+   ],
+   "a": 1,
+   "why": "The Great Fire burned much of the town and left about 2,000 people homeless."
+  },
+  {
+   "q": "In what year did the last class graduate from the Fourth Ward School?",
+   "o": [
+    "1876",
+    "1936",
+    "1961",
+    "1986"
+   ],
+   "a": 1,
+   "why": "The last class graduated in 1936. The building reopened as a museum in 1986."
+  }
+ ],
+ "tahoeicons": [
+  {
+   "q": "Who built Vikingsholm in 1929?",
+   "o": [
+    "George Whittell Jr.",
+    "Alonzo Richardson",
+    "Lora Josephine Knight",
+    "Walter Hobart Jr."
+   ],
+   "a": 2,
+   "why": "Lora Josephine Knight built it, with the architect Lennart Palme."
+  },
+  {
+   "q": "What is the only island in Lake Tahoe called?",
+   "o": [
+    "Bliss Island",
+    "Fannette Island",
+    "Tallac Island",
+    "Richardson Island"
+   ],
+   "a": 1,
+   "why": "Fannette Island sits in Emerald Bay."
+  },
+  {
+   "q": "In what year did the Sand Harbor park have its grand opening?",
+   "o": [
+    "1892",
+    "1958",
+    "1971",
+    "1994"
+   ],
+   "a": 2,
+   "why": "Lake Tahoe Nevada State Park held its grand opening in 1971."
+  },
+  {
+   "q": "Camp Richardson is named after whom?",
+   "o": [
+    "Captain Alonzo L. Richardson",
+    "Governor Richardson",
+    "Joe King",
+    "Robert Watson"
+   ],
+   "a": 0,
+   "why": "Captain Alonzo L. Richardson started a stage service here in 1921."
+  }
+ ],
+ "tahoe": [
+  {
+   "q": "Which river leaves Lake Tahoe at Fanny Bridge?",
+   "o": [
+    "Carson River",
+    "Truckee River",
+    "Walker River",
+    "American River"
+   ],
+   "a": 1,
+   "why": "The Truckee River is the lake's only outlet."
+  },
+  {
+   "q": "In what year was the present concrete Lake Tahoe Dam finished?",
+   "o": [
+    "1870",
+    "1909",
+    "1913",
+    "1981"
+   ],
+   "a": 2,
+   "why": "It was built between 1909 and 1913."
+  },
+  {
+   "q": "When did the original gatekeeper's cabin burn?",
+   "o": [
+    "1910",
+    "1964",
+    "1978",
+    "1981"
+   ],
+   "a": 2,
+   "why": "It burned in 1978. The present cabin was finished in 1981."
+  },
+  {
+   "q": "For whom did Robert Watson build his log cabin in 1908?",
+   "o": [
+    "His son and daughter-in-law",
+    "The new gatekeeper",
+    "A summer gift shop",
+    "The Tahoe Water War judge"
+   ],
+   "a": 0,
+   "why": "He built it for his son and daughter-in-law, who moved in during 1909."
+  }
+ ],
+ "boston": [
+  {
+   "q": "In what year was the Old State House completed?",
+   "o": [
+    "1680",
+    "1713",
+    "1742",
+    "1776"
+   ],
+   "a": 1,
+   "why": "It is the city's oldest surviving public building."
+  },
+  {
+   "q": "How did the town vote on accepting Faneuil's market in 1740?",
+   "o": [
+    "Unanimously",
+    "367 to 360",
+    "200 to 10",
+    "It was decided by a coin flip"
+   ],
+   "a": 1,
+   "why": "The vote was 367 to 360, so it was very close."
+  },
+  {
+   "q": "In what year did Paul Revere buy his house?",
+   "o": [
+    "1680",
+    "1735",
+    "1770",
+    "1800"
+   ],
+   "a": 2,
+   "why": "He bought it on January 13, 1770, and owned it until 1800."
+  },
+  {
+   "q": "How many lanterns were hung in the Old North Church steeple on April 18, 1775?",
+   "o": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "a": 1,
+   "why": "Two lanterns warned patriots in Charlestown that the British were moving by water."
+  }
+ ],
+ "dc": [
+  {
+   "q": "In what year was the Lincoln Memorial dedicated?",
+   "o": [
+    "1863",
+    "1922",
+    "1943",
+    "1963"
+   ],
+   "a": 1,
+   "why": "It was dedicated on May 30, 1922."
+  },
+  {
+   "q": "Work on the Washington Monument stopped in 1854. When did it resume?",
+   "o": [
+    "1865",
+    "1877",
+    "1888",
+    "1913"
+   ],
+   "a": 1,
+   "why": "Work stopped from 1854 until 1877 because of money problems and the Civil War."
+  },
+  {
+   "q": "In what year did British troops burn the Capitol?",
+   "o": [
+    "1776",
+    "1793",
+    "1814",
+    "1866"
+   ],
+   "a": 2,
+   "why": "British troops burned it on August 24, 1814, during the War of 1812."
+  },
+  {
+   "q": "When was the bronze statue of Jefferson installed?",
+   "o": [
+    "1943",
+    "1947",
+    "1952",
+    "1969"
+   ],
+   "a": 1,
+   "why": "A plaster statue stood there in 1943. The bronze one arrived in April 1947."
+  }
+ ],
+ "ny": [
+  {
+   "q": "Who helped supervise the Brooklyn Bridge construction for about 11 years after Washington Roebling became too ill to visit?",
+   "o": [
+    "John A. Roebling",
+    "Emily Warren Roebling",
+    "P. T. Barnum",
+    "Daniel Burnham"
+   ],
+   "a": 1,
+   "why": "Emily Warren Roebling relayed communications and managed daily work."
+  },
+  {
+   "q": "When did Grand Central Terminal open?",
+   "o": [
+    "1883",
+    "1902",
+    "1913",
+    "1950"
+   ],
+   "a": 2,
+   "why": "It opened on February 2, 1913."
+  },
+  {
+   "q": "What was the Flatiron Building first called?",
+   "o": [
+    "The Fuller Building",
+    "The Burnham Tower",
+    "The Broadway Wedge",
+    "The Fifth Avenue Building"
+   ],
+   "a": 0,
+   "why": "It was named for George A. Fuller, founder of the Fuller Company."
+  },
+  {
+   "q": "Whose company built the iron frame inside the Statue of Liberty?",
+   "o": [
+    "Bartholdi's",
+    "Gustave Eiffel's",
+    "Daniel Burnham's",
+    "Thomas Walter's"
+   ],
+   "a": 1,
+   "why": "Gustave Eiffel's company built the frame. Bartholdi was the sculptor."
+  }
+ ],
+ "chicago": [
+  {
+   "q": "How many stainless steel plates make up Cloud Gate?",
+   "o": [
+    "88",
+    "168",
+    "240",
+    "336"
+   ],
+   "a": 1,
+   "why": "Wikipedia gives 168 plates."
+  },
+  {
+   "q": "What did the Chicago Water Tower's castle look hide?",
+   "o": [
+    "A bell tower",
+    "A lighthouse",
+    "A standpipe that smoothed water pressure",
+    "A jail"
+   ],
+   "a": 2,
+   "why": "It was a standpipe added in 1869."
+  },
+  {
+   "q": "The sea horses at Buckingham Fountain stand for what?",
+   "o": [
+    "Four famous mayors",
+    "The four states that touch Lake Michigan",
+    "Four Great Lakes",
+    "Chicago's four founders"
+   ],
+   "a": 1,
+   "why": "Illinois, Wisconsin, Michigan and Indiana."
+  },
+  {
+   "q": "How was the Chicago Theatre promoted when it opened in 1921?",
+   "o": [
+    "Jewel of State Street",
+    "Palace of the Prairie",
+    "Wonder Theatre of the World",
+    "Temple of the Lakefront"
+   ],
+   "a": 2,
+   "why": "It opened on October 26, 1921, promoted as the Wonder Theatre of the World."
+  }
+ ],
+ "sf": [
+  {
+   "q": "What is the Golden Gate Bridge's official color called?",
+   "o": [
+    "International Orange",
+    "Signal Red",
+    "Burnt Sienna",
+    "Coral Fog"
+   ],
+   "a": 0,
+   "why": "Irving Morrow chose International Orange."
+  },
+  {
+   "q": "In what year did the Ferry Building open?",
+   "o": [
+    "1869",
+    "1898",
+    "1915",
+    "1937"
+   ],
+   "a": 1,
+   "why": "It opened on July 13, 1898."
+  },
+  {
+   "q": "Lillie Hitchcock Coit left money for what purpose?",
+   "o": [
+    "Building a hospital",
+    "Paying for a bridge",
+    "Adding to the beauty of the city",
+    "Founding a school"
+   ],
+   "a": 2,
+   "why": "Her bequest funded Coit Tower."
+  },
+  {
+   "q": "Why was the Palace of Fine Arts rebuilt in concrete?",
+   "o": [
+    "A fire destroyed it",
+    "The temporary plaster building decayed",
+    "It was moved",
+    "A flood washed it away"
+   ],
+   "a": 1,
+   "why": "It was built of plaster over wood for the 1915 fair and decayed."
+  }
+ ],
+ "philly": [
+  {
+   "q": "Which document was drafted at Independence Hall in 1787?",
+   "o": [
+    "The Emancipation Proclamation",
+    "The Articles of Confederation",
+    "The U.S. Constitution",
+    "The Bill of Rights"
+   ],
+   "a": 2,
+   "why": "The Constitutional Convention met May 25 to September 17, 1787."
+  },
+  {
+   "q": "Who gave the Liberty Bell its famous name in the 1830s?",
+   "o": [
+    "The Founders",
+    "Abolitionists",
+    "Congress",
+    "A bell maker"
+   ],
+   "a": 1,
+   "why": "Abolitionist societies called it the Liberty Bell."
+  },
+  {
+   "q": "The Betsy Ross flag story traces back mostly to whom?",
+   "o": [
+    "Her relatives and the 1876 Centennial",
+    "George Washington's diary",
+    "A Congress record",
+    "A newspaper from 1777"
+   ],
+   "a": 0,
+   "why": "Historians trace it to her grandsons, the Canbys, and the Centennial."
+  },
+  {
+   "q": "Elfreth's Alley is called the nation's oldest what?",
+   "o": [
+    "Residential street",
+    "Public park",
+    "Market",
+    "Bridge"
+   ],
+   "a": 0,
+   "why": "Wikipedia calls it our nation's oldest residential street."
+  }
+ ]
 }
