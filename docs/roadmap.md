@@ -32,3 +32,4 @@ Celebration + passport, offline mode, verified-on-site badge, "historians argue"
 - Fixed a flaky test seed (tests now seed before load).
 - Final challenge rewards: Gold/Silver/Bronze seals (4/3/2 of 4), challenge points (50 per correct, +100 perfect, counted from best score only), per-answer feedback lines and animations, Grand Historian when every town is gold.
 - Next stop panel after each stop's Fact or Fiction.
+- Netlify Forms enabled on the test site (Oct 19) so the report button can send.
