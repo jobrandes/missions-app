@@ -44,9 +44,9 @@
    "me_gl_now",
    "50% 50%"
   ],
-  "peabody": [
-   "me_pe_now",
-   "50% 50%"
+  "cottonex": [
+   "me_ce_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -340,17 +340,33 @@
    "then": {
     "yr": "1939",
     "label": "The trading floor then",
-    "line": "Cotton merchants on the exchange floor in 1939.",
+    "line": "Traders on the exchange floor in November 1939.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "me_ce_then",
+     "by": "Marion Post Wolcott (Farm Security Administration)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Memphis_Cotton_Exchange.JPG",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The building today",
-    "line": "The old trading floor is now a museum."
+    "line": "The old trading floor is now a museum.",
+    "ph": {
+     "k": "me_ce_now",
+     "by": "Thomas R Machnitzki",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cotton_Exchange_Building_Memphis_TN.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Memphis Cotton Exchange was founded in 1874, after the Civil War. It operated as a spot market, where cotton was bought and sold for immediate delivery.",

@@ -25,28 +25,28 @@
    "Los Angeles Historian"
   ]
  ],
- "heroAlt": "Griffith Observatory above Los Angeles",
- "heroLi": "<li>Header: Mike Peel · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg\">Source</a> · resized</li>",
- "heroCredit": "Photo: Mike Peel · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg\">Source</a>",
+ "heroAlt": "The glass-roofed court inside the Bradbury Building",
+ "heroLi": "<li>Header: Stephen Weissberger · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Bradbury_Atrium.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Stephen Weissberger · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Bradbury_Atrium.jpg\">Source</a>",
  "mission": "Find four landmarks around Los Angeles. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of LA is waiting.",
  "safetyNote": "<li>Los Angeles is spread out and traffic is heavy. Plan your rides, bring water, and cross only at crosswalks. Do not climb or hike to restricted areas.</li>",
  "badgeMap": {
-  "griffith": [
-   "la_gr_now",
-   "50% 40%"
-  ],
   "hollywoodsign": [
    "la_hs_now",
    "50% 50%"
   ],
-  "chinesetheatre": [
-   "la_ct_now",
-   "50% 30%"
+  "bradbury": [
+   "la_br_now",
+   "50% 45%"
   ],
-  "unionstation": [
-   "la_us_now",
-   "50% 40%"
+  "angelsflight": [
+   "la_af_now",
+   "50% 45%"
+  ],
+  "olvera": [
+   "la_ol_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -76,19 +76,35 @@
     "verify": "Wikipedia says the court rises five stories. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1960",
-    "label": "The court then",
-    "line": "The atrium and balconies in the 1960s.",
+    "yr": "1894",
+    "label": "The building then",
+    "line": "The Bradbury Building in 1894, the year it was finished.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "la_br_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Bradbury_Building_1894.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The court today",
-    "line": "The glass-roofed court is lit by daylight."
+    "line": "The glass-roofed court is lit by daylight.",
+    "ph": {
+     "k": "la_br_now",
+     "by": "Stephen Weissberger",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Bradbury_Atrium.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Bradbury Building was built in 1893 and finished in 1894 at a cost of $500,000, about three times its original $175,000 budget. Lewis L. Bradbury, a mining and real estate millionaire, began planning it in 1892 and died that year, some months before it opened.",
@@ -242,17 +258,33 @@
    "then": {
     "yr": "1960",
     "label": "The funicular then",
-    "line": "The cars and the hillside in the 1960s.",
+    "line": "The funicular on October 2, 1960, nine years before it closed.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "la_af_then",
+     "by": "Jack Boucher (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:AngelsFlight.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The funicular today",
-    "line": "The two cars run on a short track on Hill Street."
+    "line": "The two cars run on a short track on Hill Street.",
+    "ph": {
+     "k": "la_af_now",
+     "by": "Difference engine",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Angels_Flight_after_reopening_in_September_2017.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Angels Flight opened in 1901 as the Los Angeles Incline Railway, financed by Colonel J. W. Eddy. It has about 298 feet of track with a 96-foot rise, a grade of about 33 percent. The two cars, Olivet and Sinai, run in opposite directions on a shared cable.",
@@ -314,19 +346,35 @@
     "verify": "Wikipedia says the Avila Adobe is the oldest surviving residence in Los Angeles. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1869",
+    "yr": "1868",
     "label": "The Plaza then",
-    "line": "The old Plaza in 1869.",
+    "line": "The old Plaza in about 1868.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "la_ol_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:LosAngeles-Plaza-1869.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The street today",
-    "line": "Shops and stalls line the brick street."
+    "line": "Shops and stalls line the brick street.",
+    "ph": {
+     "k": "la_ol_now",
+     "by": "Visitor7",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Olvera_Street,_Los_Angeles-4.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Spanish settlers founded Los Angeles in 1781: 11 families, 44 people, plus a few soldiers, on a site southeast of today's Olvera Street. The street's early names included Placita Olvera and Wine Street. In 1877 a City Council ordinance renamed Wine Street for Agustín Olvera, the first Superior Court judge of Los Angeles County.",
@@ -365,5 +413,5 @@
    }
   }
  ],
- "heroKey": "la_gr_now"
+ "heroKey": "la_br_now"
 }

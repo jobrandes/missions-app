@@ -44,9 +44,9 @@
    "sv_ca_now",
    "50% 40%"
   ],
-  "colonial": [
-   "sv_cp_now",
-   "50% 50%"
+  "pulaski": [
+   "sv_pu_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -348,17 +348,33 @@
    "then": {
     "yr": "1862",
     "label": "After the siege",
-    "line": "The fort in 1862.",
+    "line": "The damaged corner wall after the 1862 siege.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sv_pu_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:FTPulaski1862a01.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The fort today",
-    "line": "The brick fort sits on Cockspur Island."
+    "line": "The brick fort sits on Cockspur Island.",
+    "ph": {
+     "k": "sv_pu_now",
+     "by": "Jud McCranie",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:FtPulaskiFront.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Fort Pulaski was built from 1829 to 1847 on Cockspur Island at the mouth of the Savannah River. It was named in 1833 for Casimir Pulaski, a Polish-born soldier who fought in the American Revolution. About 25 million bricks went into it, supported by wooden pilings sunk up to 70 feet.",

@@ -44,9 +44,9 @@
    "ph_br_now",
    "50% 50%"
   ],
-  "elfreth": [
-   "ph_ea_now",
-   "50% 50%"
+  "carpenters": [
+   "ph_ch_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -346,19 +346,35 @@
     "verify": "Wikipedia says the First Continental Congress met there from September 5 to October 26, 1774. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1905",
-    "label": "The hall then",
-    "line": "The hall in about 1905.",
+    "yr": "Old plans",
+    "label": "The hall on paper",
+    "line": "An old measured drawing of the hall: front elevation and floor plan.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ph_ch_then",
+     "by": "New York Public Library (scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Carpenter's_Hall,_Phil_(NYPL_NYPG94-F149-419968).jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The hall today",
-    "line": "The red-brick hall stands in a courtyard off Chestnut Street."
+    "line": "The red-brick hall stands in a courtyard off Chestnut Street.",
+    "ph": {
+     "k": "ph_ch_now",
+     "by": "Pbjamesphoto",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Carpenters'_Hall,_Philadelphia,_U.S.,_May_2015.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Carpenters' Hall is owned by the Carpenters' Company of the City and County of Philadelphia. The land was bought in 1768. The company decided to build on January 30, 1770, and construction was completed in August 1774. Robert Smith designed it, in Georgian style, but did not supervise construction.",

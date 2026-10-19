@@ -44,9 +44,9 @@
    "sea_st_now",
    "50% 30%"
   ],
-  "gasworks": [
-   "sea_gw_now",
-   "50% 50%"
+  "pioneersq": [
+   "se_ps_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -346,19 +346,35 @@
     "verify": "Wikipedia says an iron and glass pergola designed by Julian F. Everett was added in 1909. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1902",
+    "yr": "1901",
     "label": "The street then",
-    "line": "1st Avenue S in Pioneer Square in 1902.",
+    "line": "First Avenue South in Pioneer Square in 1901.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "se_ps_then",
+     "by": "Asahel Curtis",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:1st_Ave_S,_Pioneer_Square_district,_Seattle,_1901_(CURTIS_2044).jpeg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The park today",
-    "line": "The pergola stands beside the totem pole."
+    "line": "The pergola stands beside the totem pole.",
+    "ph": {
+     "k": "se_ps_now",
+     "by": "Joe Mabel",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pioneer_Square_Pergola_01.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Seattle's founders settled at Pioneer Square in 1852. Henry Yesler built a sawmill at the foot of what is now Yesler Way. The neighborhood was once known as Skid Road and Skid Row.",

@@ -25,9 +25,9 @@
    "Atlanta Historian"
   ]
  ],
- "heroAlt": "The Fox Theatre sign in Atlanta",
- "heroLi": "<li>Header: Atlantacitizen · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg\">Source</a> · resized</li>",
- "heroCredit": "Photo: Atlantacitizen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg\">Source</a>",
+ "heroAlt": "The Georgia State Capitol and its gold dome",
+ "heroLi": "<li>Header: Ken Lund · CC BY-SA 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Georgia_State_Capitol,_Atlanta,_Georgia.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Ken Lund · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Georgia_State_Capitol,_Atlanta,_Georgia.jpg\">Source</a>",
  "mission": "Find four landmarks around Atlanta. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Atlanta is waiting.",
  "safetyNote": "<li>Atlanta is hot and humid in summer. Bring water, use crosswalks, and be respectful at churches and cemeteries.</li>",
@@ -36,17 +36,17 @@
    "at_eb_now",
    "40% 40%"
   ],
-  "centennial": [
-   "at_co_now",
-   "50% 60%"
+  "capitol": [
+   "at_cp_now",
+   "50% 45%"
   ],
-  "foxatl": [
-   "at_fx_now",
-   "50% 30%"
+  "flatiron": [
+   "at_fl_now",
+   "50% 45%"
   ],
-  "oakland": [
-   "at_oc_now",
-   "50% 50%"
+  "piedmont": [
+   "at_pk_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -160,17 +160,33 @@
    "then": {
     "yr": "1889",
     "label": "The Capitol then",
-    "line": "The Capitol in its early years.",
+    "line": "An 1889 print of the Capitol from a cigarette card series.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "at_cp_then",
+     "by": "Allen & Ginter / August Gast",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Capitol_of_Georgia_in_Atlanta,_from_the_General_Government_and_State_Capitol_Buildings_series_(N14)_for_Allen_%26_Ginter_Cigarettes_Brands_MET_DP834734.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The Capitol today",
-    "line": "The gold dome rises over downtown Atlanta."
+    "line": "The gold dome rises over downtown Atlanta.",
+    "ph": {
+     "k": "at_cp_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Georgia_State_Capitol,_Atlanta,_Georgia.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Georgia State Capitol was completed in March 1889. Willoughby J. Edbrooke and Franklin Pierce Burnham of Chicago designed it. Miles and Horne of Toledo handled construction. The style is Renaissance Revival and Classical Revival, modeled to resemble the U.S. Capitol.",
@@ -232,19 +248,35 @@
     "verify": "Wikipedia says 11 stories. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1897",
+    "yr": "1921",
     "label": "The building then",
-    "line": "The building in its early years.",
+    "line": "A magazine photograph of the Flatiron Building in 1921.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "at_fl_then",
+     "by": "Ewing Galloway",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Collier's_1921_Georgia_-_Atlanta_(Flatiron_Building).jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The building today",
-    "line": "The wedge-shaped tower stands on Peachtree Street."
+    "line": "The wedge-shaped tower stands on Peachtree Street.",
+    "ph": {
+     "k": "at_fl_now",
+     "by": "dbking",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Flatiron_Building_Atlanta.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Flatiron Building was built in 1897 and designed by Bradford Gilbert. It goes by several names: the English-American Building, the Georgia Savings Bank Building and the Empire Life Insurance Building.",
@@ -308,17 +340,33 @@
    "then": {
     "yr": "1902",
     "label": "The park then",
-    "line": "A view of the park in 1902.",
+    "line": "A newspaper photograph of the grandstand at Piedmont Park in 1902.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "at_pk_then",
+     "by": "Unknown (newspaper photograph)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Piedmont_Park_Atlanta_1902_04_27.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The park today",
-    "line": "The lake and lawn sit in the middle of Midtown."
+    "line": "The lake and lawn sit in the middle of Midtown.",
+    "ph": {
+     "k": "at_pk_now",
+     "by": "Gatorfan252525",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:View_of_Lake_Clara_Meer_from_bridge.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Piedmont Park covers 189 acres in Atlanta. It sits on the site of the 1895 Cotton States and International Exposition. The city bought the land in 1904, which extended the city limits to include the park and several developing neighborhoods.",
@@ -357,5 +405,5 @@
    }
   }
  ],
- "heroKey": "at_fx_now"
+ "heroKey": "at_cp_now"
 }

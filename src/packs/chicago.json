@@ -36,17 +36,17 @@
    "chi_cg_now",
    "50% 40%"
   ],
-  "watertower": [
-   "chi_wt_now",
-   "50% 30%"
-  ],
   "buckingham": [
    "chi_bf_now",
    "50% 30%"
   ],
-  "chicagotheatre": [
-   "chi_ct_now",
-   "50% 25%"
+  "rookery": [
+   "chi_ro_now",
+   "50% 45%"
+  ],
+  "lpconservatory": [
+   "chi_lp_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -167,18 +167,34 @@
    },
    "then": {
     "yr": "1891",
-    "label": "The building then",
-    "line": "The building about three years after it opened.",
+    "label": "The Rookery then",
+    "line": "The Rookery in 1891, three years after it opened.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "chi_ro_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:1891_Rookery_building.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The building today",
-    "line": "The red-brick building stands on LaSalle Street."
+    "line": "The red-brick building stands on LaSalle Street.",
+    "ph": {
+     "k": "chi_ro_now",
+     "by": "Marlene Calderon",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Rookery,_Chicago,_IL.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Rookery was completed in 1888 and designed by Burnham and Root. The name may refer to pigeons that nested on a reservoir previously on the site, or to the temporary city hall that later stood there. The old city hall was nicknamed a rookery for the crows and pigeons that flocked to it and for the corrupt politicians it housed.",
@@ -332,17 +348,33 @@
    "then": {
     "yr": "1914",
     "label": "The conservatory then",
-    "line": "The conservatory and flower garden in 1914.",
+    "line": "A postcard of the flower garden and conservatory, about 1914.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "chi_lp_then",
+     "by": "Unknown (Library of Congress / NYPL postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:392,_Flower_Garden,_Fountain,_and_Conservatory,_Lincoln_Park_(NBY_417804).jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The conservatory today",
-    "line": "The glass house stands beside the flower garden."
+    "line": "The glass house stands beside the flower garden.",
+    "ph": {
+     "k": "chi_lp_now",
+     "by": "Alanscottwalker",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:LPConserv.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "The current Lincoln Park Conservatory was built between 1890 and 1895 by the Lincoln Park Commission. Joseph Lyman Silsbee designed it with Mifflin E. Bell. The style is Victorian and exotic, with trusses shaped as ogee arches.",

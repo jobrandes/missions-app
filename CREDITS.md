@@ -204,3 +204,39 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sf_gg_then | File:GoldenGateBridge_openingday.jpg | Mr. Euler | CC BY-SA 3.0 | 1937 |
 | ph_lb_then | File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg | Abbie Rowe, National Park Service | Public domain | 1951 |
 | no_js_then | File:Jackson_Square,_New_Orleans.jpg | W. P. Snyder | Public domain | 1885 |
+
+### Swap batch Oct 19 (16 replacement stops, now and then photos)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| de_fb_now | File:Detroit December 2021 12 (Fisher Building).jpg | Michael Barera | CC BY-SA 4.0 | 2021 |
+| de_fb_then | File:Fisher Building, West Grand Boulevard, Detroit, Mich (65799).jpg | Tichnor Brothers (publisher) | Public domain | c. 1930s |
+| de_cm_now | File:Detroit December 2015 22 (Campus Martius Park).jpg | Michael Barera | CC BY-SA 4.0 | 2015 |
+| de_cm_then | File:CampusMartius1907.JPG | Unknown (postcard, uploaded by Dave Parker) | Public domain | 1907 |
+| mn_sf_now | File:Upper St. Anthony Falls 2020-07-11.jpg | August Schwerdfeger | CC BY 4.0 | 2020 |
+| mn_sf_then | File:St. Anthony's Falls and Exposition Building, Minneapolis, Minn (NYPL b12647398-66728).tiff | Detroit Publishing Company | Public domain | after 1898 |
+| mn_bs_now | File:Front Entrance to the Basilica of Saint Mary.jpg | Switchroyale | CC BY-SA 4.0 | 2018 |
+| mn_bs_then | File:St. Mary's groundbreaking.jpg | Unknown | Public domain | 1907 |
+| at_cp_now | File:Georgia State Capitol, Atlanta, Georgia.jpg | Ken Lund | CC BY-SA 2.0 | 2011 |
+| at_cp_then | File:Capitol of Georgia in Atlanta, from the General Government and State Capitol Buildings series (N14) for Allen & Ginter Cigarettes Brands MET DP834734.jpg | Allen & Ginter / August Gast | CC0 | 1889 |
+| at_fl_now | File:Flatiron Building Atlanta.jpg | dbking | CC BY 2.0 | 2006 |
+| at_fl_then | File:Collier's 1921 Georgia - Atlanta (Flatiron Building).jpg | Ewing Galloway | Public domain | 1921 |
+| at_pk_now | File:View of Lake Clara Meer from bridge.jpg | Gatorfan252525 | CC BY-SA 4.0 | 2021 |
+| at_pk_then | File:Piedmont Park Atlanta 1902 04 27.jpg | Unknown (newspaper photograph) | Public domain | 1902 |
+| me_ce_now | File:Cotton Exchange Building Memphis TN.jpg | Thomas R Machnitzki | CC BY-SA 3.0 | 2009 |
+| me_ce_then | File:Memphis Cotton Exchange.JPG | Marion Post Wolcott (Farm Security Administration) | Public domain | 1939 |
+| sv_pu_now | File:FtPulaskiFront.jpg | Jud McCranie | CC BY 3.0 | 2008 |
+| sv_pu_then | File:FTPulaski1862a01.jpg | Unknown | Public domain | 1862 |
+| chi_ro_now | File:The Rookery, Chicago, IL.jpg | Marlene Calderon | CC BY-SA 3.0 | 2014 |
+| chi_ro_then | File:1891 Rookery building.jpg | Unknown | Public domain | 1891 |
+| chi_lp_now | File:LPConserv.JPG | Alanscottwalker | CC BY-SA 3.0 | 2010 |
+| chi_lp_then | File:392, Flower Garden, Fountain, and Conservatory, Lincoln Park (NBY 417804).jpg | Unknown (Library of Congress / NYPL postcard) | Public domain | c. 1914 |
+| la_br_now | File:Bradbury Atrium.jpg | Stephen Weissberger | CC BY-SA 4.0 | 2013 |
+| la_br_then | File:Bradbury Building 1894.jpg | Unknown | Public domain | 1894 |
+| la_af_now | File:Angels Flight after reopening in September 2017.jpg | Difference engine | CC BY-SA 4.0 | 2017 |
+| la_af_then | File:AngelsFlight.jpg | Jack Boucher (Historic American Buildings Survey) | Public domain | 1960 |
+| la_ol_now | File:Olvera Street, Los Angeles-4.jpg | Visitor7 | CC BY-SA 3.0 | 2014 |
+| la_ol_then | File:LosAngeles-Plaza-1869.jpg | Unknown | Public domain | c. 1868 |
+| se_ps_now | File:Pioneer Square Pergola 01.jpg | Joe Mabel | CC BY-SA 3.0 | 2007 |
+| se_ps_then | File:1st Ave S, Pioneer Square district, Seattle, 1901 (CURTIS 2044).jpeg | Asahel Curtis | Public domain | 1901 |
+| ph_ch_now | File:Carpenters' Hall, Philadelphia, U.S., May 2015.jpg | Pbjamesphoto | CC BY-SA 4.0 | 2015 |
+| ph_ch_then | File:Carpenter's Hall, Phil (NYPL NYPG94-F149-419968).jpg | New York Public Library (scan) | Public domain | undated |

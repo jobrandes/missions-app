@@ -40,20 +40,21 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 ## Photo pipeline (what works)
 - Wikimedia/LoC downloads run in the Claude app's built-in browser (Chrome JS from Apple Events is unreliable). Request site access for commons.wikimedia.org, upload.wikimedia.org, en.wikipedia.org, loc.gov.
 - Search the Commons API; filter licenses to Public domain, CC0, CC BY, CC BY-SA; width at least 1000 for "now", at least 600 for old PD.
-- For "then" photos the Commons keyword search is poor. Better: pull each Wikipedia article's image list, then filter by date. Also try LoC HABS/HAER surveys and DPLA postcards.
+- For "then" photos the Commons keyword search is poor. Best method: on an en.wikipedia.org page, call /w/api.php with generator=images (article) or generator=categorymembers (Commons category, from a commons.wikimedia.org page) plus prop=imageinfo&iiurlwidth=960, filter license and date, fetch the thumbnail cross-origin (upload.wikimedia.org allows it), shrink on a canvas to 720 px and trigger an <a download>. Also try LoC HABS/HAER surveys and DPLA postcards.
 - Download: navigate a tab to the upload.wikimedia.org 960px thumbnail, fetch same-origin, save via `<a download>`. Files land in `~/Downloads` as hidden temp files; rename by byte size, then `device_stage_files`, view a contact sheet to confirm each photo matches its stop, then resize and wire in.
 
 ## Status (Oct 19, 2026)
-18 towns, 72 stops, 112 photos:
+18 towns, 72 stops, 136 photos. 16 stops were swapped Oct 19 for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia State Capitol, Flatiron (Atlanta), Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall.
 - West: Reno, Virginia City, Lake Tahoe (two packs), San Francisco, Los Angeles, Seattle
 - East: Boston, Washington DC, New York, Philadelphia
 - Midwest: Chicago, Detroit, Minneapolis
 - South: New Orleans, Atlanta, Memphis, Savannah
 - "Coming soon": Paris.
 Also done: demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
+Page size is 15.4 MB of the 16 MB Artifact limit; keep photos at 720 px q66 and watch the budget when adding towns.
 
 ## Still to do
-1. **"Then" photos** for the stops still showing "photo pending" (blocks going live). Found so far: Mill City (1878 stereoview), Savannah cathedral and waterfront, Graceland 1989, plus earlier towns. Still pending: Chicago (Water Tower, Buckingham, Theatre), Golden Gate, Liberty Bell, Elfreth's Alley, Jackson Square, Griffith, Chinese Theatre, Union Station, Gas Works, and Detroit (all but Rivera and Michigan Central), Spoonbridge, Foshay, Atlanta (all four), Sun Studio, Beale, Peabody, Forsyth done, Colonial Park. Many post-1950 places have no free-licensed historic photos at all.
+1. **Missing "then" photos (blocks going live)**: Ebenezer Baptist (LoC HABS ga0474.photos.057134p identified, not yet wired), Sun Studio (LoC FSA 2017770211, Union Avenue 1937, not yet wired), Reno Old Arch, and 7 Tahoe stops (Fanny Bridge, Lake Tahoe Dam, Gate, Watson Cabin, Emerald Bay, Sand Harbor, Richardson's), plus a "now" for Fanny Bridge. Decision with Jo-Anne pending: swap them too, or ship an honest "no free photo" state.
 2. **Southwest/Mountain region**: Denver, Santa Fe or Phoenix, 4 stops each. Then maybe Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
 3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
 4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.

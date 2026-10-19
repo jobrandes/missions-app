@@ -40,13 +40,13 @@
    "mn_mc_now",
    "40% 50%"
   ],
-  "spoonbridge": [
-   "mn_sb_now",
-   "85% 70%"
+  "stanthony": [
+   "mn_sf_now",
+   "50% 45%"
   ],
-  "foshay": [
-   "mn_fo_now",
-   "50% 40%"
+  "basilica": [
+   "mn_bs_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -256,19 +256,35 @@
     "verify": "Wikipedia says Father Louis Hennepin named the falls in 1680. Confirm on a sign. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1859",
+    "yr": "1898",
     "label": "The falls then",
-    "line": "The falls as photographed in 1859.",
+    "line": "A postcard of the falls and the Exposition Building, made after 1898.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mn_sf_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:St._Anthony's_Falls_and_Exposition_Building,_Minneapolis,_Minn_(NYPL_b12647398-66728).tiff",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The falls today",
-    "line": "The falls drop over a wide apron beside the mill ruins."
+    "line": "The falls drop over a wide apron beside the mill ruins.",
+    "ph": {
+     "k": "mn_sf_now",
+     "by": "August Schwerdfeger",
+     "lic": "CC BY 4.0",
+     "lu": "https://creativecommons.org/licenses/by/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Upper_St._Anthony_Falls_2020-07-11.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Saint Anthony Falls was the only natural major waterfall on the Mississippi River. Father Louis Hennepin named it in 1680 after St. Anthony of Padua. The Dakota name is Owámniyomni, meaning whirlpool.",
@@ -331,18 +347,34 @@
    },
    "then": {
     "yr": "1907",
-    "label": "The basilica then",
-    "line": "A view of the basilica around 1907.",
+    "label": "The groundbreaking",
+    "line": "The groundbreaking in 1907.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mn_bs_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:St._Mary's_groundbreaking.jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The basilica today",
-    "line": "The domed church stands on Hennepin Avenue."
+    "line": "The domed church stands on Hennepin Avenue.",
+    "ph": {
+     "k": "mn_bs_now",
+     "by": "Switchroyale",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Front_Entrance_to_the_Basilica_of_Saint_Mary.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Basilica of Saint Mary was designated a minor basilica by Pope Pius XI in 1926, the first in the United States. Emmanuel Masqueray was the architect. Construction ran from 1907 to 1914, and the first Mass was held on May 31, 1914.",

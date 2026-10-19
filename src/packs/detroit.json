@@ -25,21 +25,13 @@
    "Detroit Historian"
   ]
  ],
- "heroAlt": "The Spirit of Detroit statue",
- "heroLi": "<li>Header: JJonahJackalope · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg\">Source</a> · resized</li>",
- "heroCredit": "Photo: JJonahJackalope · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg\">Source</a>",
+ "heroAlt": "The Fisher Building tower",
+ "heroLi": "<li>Header: Michael Barera · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Detroit_December_2021_12_(Fisher_Building).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Michael Barera · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Detroit_December_2021_12_(Fisher_Building).jpg\">Source</a>",
  "mission": "Find four landmarks around Detroit. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Detroit is waiting.",
  "safetyNote": "<li>Downtown Detroit is spread out. Stay on busy, well-lit streets, watch for traffic and the QLine streetcar, and keep your belongings close.</li>",
  "badgeMap": {
-  "spirit": [
-   "de_sp_now",
-   "50% 55%"
-  ],
-  "fox": [
-   "de_fx_now",
-   "50% 80%"
-  ],
   "dia": [
    "de_di_now",
    "60% 40%"
@@ -47,6 +39,14 @@
   "michigancentral": [
    "de_mc_now",
    "50% 40%"
+  ],
+  "fisher": [
+   "de_fb_now",
+   "50% 45%"
+  ],
+  "campus": [
+   "de_cm_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",
@@ -76,19 +76,35 @@
     "verify": "Wikipedia says 30 stories. Estimate from the street. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1930",
+    "yr": "1930s",
     "label": "The tower then",
-    "line": "The tower in about 1930, soon after it opened.",
+    "line": "A postcard of the tower from the 1930s.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "de_fb_then",
+     "by": "Tichnor Brothers (publisher)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fisher_Building,_West_Grand_Boulevard,_Detroit,_Mich_(65799).jpg",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The tower today",
-    "line": "The tower stands in New Center."
+    "line": "The tower stands in New Center.",
+    "ph": {
+     "k": "de_fb_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_December_2021_12_(Fisher_Building).jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Fisher Building was completed in 1928. Albert Kahn Associates designed it, with Joseph Nathaniel French as chief architect. It has 30 stories. The roof is 428 feet up and the spire reaches 444 feet.",
@@ -152,17 +168,33 @@
    "then": {
     "yr": "1907",
     "label": "The square then",
-    "line": "Campus Martius in 1907.",
+    "line": "Campus Martius on a postcard from 1907.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "de_cm_then",
+     "by": "Unknown (postcard, uploaded by Dave Parker)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:CampusMartius1907.JPG",
+     "note": "resized"
     }
    },
    "now": {
     "yr": "Today",
     "head": "Today",
     "label": "The park today",
-    "line": "The park is the center of downtown."
+    "line": "The park is the center of downtown.",
+    "ph": {
+     "k": "de_cm_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_December_2015_22_(Campus_Martius_Park).jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "After the Great Fire of 1805, Judge Augustus Woodward planned the rebuilding of Detroit around Campus Martius. It is named for the main square in Marietta, Ohio, the first capital of the Northwest Territory. The name is Latin for Field of Mars.",
@@ -381,5 +413,5 @@
    }
   }
  ],
- "heroKey": "de_sp_now"
+ "heroKey": "de_fb_now"
 }
