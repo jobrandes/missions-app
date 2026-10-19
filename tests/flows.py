@@ -61,6 +61,24 @@ with sync_playwright() as p:
         pg.locator('.opt').first.click(); pg.click('[data-a=bnext]')
     need('of 4' in pg.inner_text('.boss-res').lower() and pg.evaluate("localStorage.getItem('then-now-boss')")!=None,'final challenge ends with a score and saves it')
     pg.click('text=Back to the trail'); need(pg.locator('.stops').count()==1,'final challenge returns to the trail')
+    # perfect final challenge earns a gold seal and points; feedback shows per answer
+    boss_ans=[q['a'] for q in json.load(open(R+'src/boss.json'))['reno']]
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,1],'claims':[0,0,0,0,0,0,0,0]}}},'then-now-cel':{'reno':1}})
+    pg.click('[data-a=boss]')
+    for i,a in enumerate(boss_ans):
+        pg.locator('.opt').nth(a).click()
+        need(pg.locator('.bfb.good').count()==1,'right answer shows a good line')
+        pg.click('[data-a=bnext]')
+    need(pg.locator('.boss-res .seal[aria-label="Gold Seal"]').count()==1,'perfect run earns a gold seal')
+    need('+300 challenge points' in pg.inner_text('.boss-res').lower(),'perfect run earns 300 challenge points')
+    pg.click('[data-a=bossexit]'); need(pg.locator('.sealwrap .seal').count()==1,'trail shows the earned seal')
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,1],'claims':[0,0,0,0,0,0,0,0]}}},'then-now-cel':{'reno':1}})
+    pg.click('[data-a=boss]')
+    for i,a in enumerate(boss_ans):
+        pg.locator('.opt').nth((a+1)%4).click()
+        need(pg.locator('.bfb.bad').count()==1,'wrong answer shows a bad line')
+        pg.click('[data-a=bnext]')
+    need(pg.locator('.boss-res .seal').count()==0,'zero correct earns no seal')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')

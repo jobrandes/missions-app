@@ -408,3 +408,19 @@ details.reg[open]>summary.region::after{content:"–"}
 .tour-dots{display:flex;justify-content:center;gap:8px;margin:14px 0 16px}
 .tour-dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
 .tour-dots i.on{background:var(--accent)}
+
+.sealwrap{display:flex;flex-direction:column;align-items:center;gap:4px;margin:10px 0;text-align:center}
+.sealwrap span{font-size:13px;opacity:.8}
+.seal{display:block;max-width:100%;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.sealbox{display:grid;place-items:center;padding:2px}
+.grand-line{display:flex;align-items:center;gap:10px;margin:10px 0;font-size:14px}
+.bfb{margin:12px 0 4px;font-weight:700}
+.bfb.good{color:var(--good,#1f7a45)}
+.bfb.bad{color:var(--bad,#b3342b)}
+@media (prefers-reduced-motion:no-preference){
+.opt.thunk{animation:thunk .35s}
+@keyframes thunk{0%{transform:scale(1.07)}60%{transform:scale(.97)}100%{transform:scale(1)}}
+.opt.shk{animation:fshake .35s}
+.sealwrap.pop .seal{animation:sealin .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes sealin{0%{transform:scale(.3) rotate(-25deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
+}

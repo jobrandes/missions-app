@@ -194,8 +194,8 @@
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
     h+='<section class="passport" id="passport"><p class="mono">Your passport</p><h2 class="hh2">Every stamp you have earned.</h2>'+ORDER.map(function(k){
       var c=CITIES[k], d=sum(ALL[k].done);
-      return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
-    }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.</p></section>';
+      return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
+    }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</section>';
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><div class="hsteps"><div class="hstep"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div><div class="hstep"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div><div class="hstep"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div><div class="hstep"><b>4</b><h3>Get stamped</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through.</p></div></div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
@@ -215,7 +215,7 @@
     var h='';
     if(allDone()){
       h+='<section class="done-banner pop" aria-label="Mission complete"><div class="bbox lg">'+badge('master',true)+'</div><div><h2>'+city().explorer+'</h2><p>'+city().afterDone+'</p></div></section>';
-      if(((__DATA__.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p><button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
+      if(((__DATA__.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
     } else {
       h+='<section class="card"><h3>Your mission</h3><p>'+city().mission+'</p></section>';
     }
@@ -277,20 +277,35 @@
   /* ---------- final challenge (boss round) ---------- */
   var boss=null;
   function bossBest(){ try{ return JSON.parse(localStorage.getItem('then-now-boss')||'{}')||{}; }catch(e){ return {}; } }
-  function bossSave(pid,n){ var b=bossBest(); if(b[pid]===undefined||n>b[pid]){ b[pid]=n; try{ localStorage.setItem('then-now-boss',JSON.stringify(b)); }catch(e){} } }
+  var SEALS={gold:['#f2cf72','#b8872a','#6e4b0c','Gold Seal','Master Historian'],silver:['#eceff3','#9aa3b0','#566070','Silver Seal','Sharp Eye'],bronze:['#e8b58a','#a8693a','#643415','Bronze Seal','Plaque Reader'],grand:['#f2cf72','#1d3557','#f2cf72','Grand Historian','Gold in every town']};
+  function sealTier(n){ return n>=4?'gold':(n===3?'silver':(n===2?'bronze':null)); }
+  function ptsOf(n){ return n===undefined||n===null?0:50*n+(n>=4?100:0); }
+  function totalPts(){ var b=bossBest(),t=0; ORDER.forEach(function(k){ t+=ptsOf(b[k]); }); return t; }
+  function grandOk(){ var b=bossBest(); return ORDER.length>0&&ORDER.every(function(k){ return b[k]>=4; }); }
+  function seal(t,sz){
+    var c=SEALS[t]; if(!c) return '';
+    var p='',i,a,x,y,pts='';
+    for(i=0;i<14;i++){ a=i*Math.PI*2/14; p+='<circle cx="'+(50+39*Math.cos(a)).toFixed(1)+'" cy="'+(50+39*Math.sin(a)).toFixed(1)+'" r="8" fill="'+c[1]+'"/>'; }
+    for(i=0;i<10;i++){ a=-Math.PI/2+i*Math.PI/5; var r=i%2?9:21; pts+=(50+r*Math.cos(a)).toFixed(1)+','+(50+r*Math.sin(a)).toFixed(1)+' '; }
+    return '<svg class="seal" width="'+(sz||64)+'" height="'+(sz||64)+'" viewBox="0 0 100 100" role="img" aria-label="'+c[3]+'">'+p+'<circle cx="50" cy="50" r="38" fill="'+c[1]+'"/><circle cx="50" cy="50" r="31" fill="'+c[0]+'" stroke="'+c[2]+'" stroke-width="2"/><polygon points="'+pts+'" fill="'+c[2]+'"/></svg>';
+  }
+  var OKL=['Stamped.','Nailed it.','Clean.','Plaque reader.'], BADL=['Ouch. The plaque disagrees.','Nope. Historians winced.','Close, the way a bird is close to a plane.','Not this time. The answer is in green.'];
+  function bossSave(pid,n){ var b=bossBest(); boss.prev=b[pid]; boss.gain=ptsOf(Math.max(n,b[pid]===undefined?0:b[pid]))-ptsOf(b[pid]); if(b[pid]===undefined||n>b[pid]){ b[pid]=n; try{ localStorage.setItem('then-now-boss',JSON.stringify(b)); }catch(e){} } }
   function viewBoss(){
     var Q=(__DATA__.boss||{})[boss.pid]||[], n=Q.length;
     var h='<div class="stophead"><button class="link" data-a="bossexit">‹ Trail</button><span class="mono">Final challenge</span></div>';
     if(boss.i>=n){
       var perfect=boss.score===n, best=bossBest()[boss.pid];
-      h+='<section class="card boss-res'+(perfect?' perfect':'')+'"><p class="mono">'+(perfect?'Perfect score':'Challenge complete')+'</p><h2>'+boss.score+' of '+n+'</h2><p>'+(perfect?'Not one slip. You really read the plaques.':(boss.score>=n-1?'So close. One more try for a perfect run?':'Good effort. The stories are still on the Cards tab if you want to read them again.'))+'</p>'+(best!==undefined?'<p class="mono">Best: '+best+' of '+n+'</p>':'')+'<div class="celeb-btns"><button class="btn" data-a="bossagain">Try again</button><button class="btn ghost" data-a="bossexit">Back to the trail</button></div></section>';
+      var rt=sealTier(boss.score);
+      h+='<section class="card boss-res'+(perfect?' perfect':'')+'"><p class="mono">'+(perfect?'Perfect score':'Challenge complete')+'</p>'+(rt?'<div class="sealwrap pop">'+seal(rt,96)+'<strong>'+SEALS[rt][3]+'</strong><span>'+SEALS[rt][4]+'</span></div>':'<p class="why">No seal yet. Re-read the stories and come back. It is 2 of 4 for Bronze.</p>')+'<h2>'+boss.score+' of '+n+'</h2><p>'+(perfect?'Not one slip. You really read the plaques.':(boss.score>=n-1?'So close. One more try for a perfect run?':'Good effort. The stories are still on the Cards tab if you want to read them again.'))+'</p>'+(best!==undefined?'<p class="mono">Best: '+best+' of '+n+'</p>':'')+'<p class="mono">'+(boss.gain>0?'+'+boss.gain+' challenge points':'No new points. Beat your best to earn more.')+'</p>'+(grandOk()?'<p class="grand-line">'+seal('grand',44)+' <strong>Grand Historian.</strong> Gold in every town.</p>':'')+'<div class="celeb-btns"><button class="btn" data-a="bossagain">Try again</button><button class="btn ghost" data-a="bossexit">Back to the trail</button></div></section>';
       return h;
     }
     var q=Q[boss.i];
     h+='<h2 id="stopTitle" tabindex="-1">Question '+(boss.i+1)+' of '+n+'</h2><fieldset class="opts"><legend>'+q.q+'</legend>'+q.o.map(function(o,k){
-      var cls=''; if(boss.pick!==null){ if(k===q.a) cls=' right'; else if(k===boss.pick) cls=' wrong'; }
+      var cls=''; if(boss.pick!==null){ if(k===q.a) cls=' right'+(k===boss.pick?' thunk':''); else if(k===boss.pick) cls=' wrong shk'; }
       return '<button class="opt'+cls+'" data-a="bpick" data-k="'+k+'"'+(boss.pick!==null?' disabled':'')+'><span>'+o+'</span>'+(boss.pick!==null&&k===q.a?'<em>Correct</em>':(boss.pick===k?'<em>Not this one</em>':''))+'</button>';
     }).join('')+'</fieldset>';
+    if(boss.pick!==null){ var okb=boss.pick===q.a; h+='<p class="bfb '+(okb?'good':'bad')+'" aria-live="polite">'+(okb?OKL[boss.i%4]+((boss.streak||0)>1?' '+boss.streak+' in a row.':''):BADL[boss.i%4])+'</p>'; }
     if(boss.pick!==null) h+='<p class="why" aria-live="polite">'+q.why+'</p><button class="btn" data-a="bnext">'+(boss.i+1>=n?'See my score':'Next question')+'</button>';
     return h;
   }
@@ -495,7 +510,7 @@
     if(a==='bossgo'){ leave(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='boss'||a==='bossagain'){ boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
-    if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a) boss.score++; render(); } return; }
+    if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a){ boss.score++; boss.streak=(boss.streak||0)+1; } else boss.streak=0; render(); } return; }
     if(a==='bnext'){ if(boss){ boss.i++; boss.pick=null; if(boss.i>=__DATA__.boss[boss.pid].length) bossSave(boss.pid,boss.score); render(); window.scrollTo(0,0); } return; }
     if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
     if(a==='tourskip'){ endTour(); return; }
