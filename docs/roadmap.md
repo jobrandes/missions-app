@@ -36,6 +36,6 @@ Celebration + passport, offline mode, verified-on-site badge, "historians argue"
 
 ## Oct 19: more towns + demo
 - Added Chicago (Midwest), San Francisco (West) and Philadelphia (East): 12 stops, 12 challenge questions, all from sourced facts, check-in questions marked "not yet checked on site".
-- Photos for the new towns are pending (honest "photo pending"). Needs free-to-use photos via Chrome/Commons.
+- Photos added for the new towns (18 free-licensed images). Still pending: a few "then" photos (see CREDITS.md).
 - "Try it from home (preview)" on unstamped stops: unlocks the story without saving a stamp or points.
 - Home "How it works" now shows the current mission's stop badges.

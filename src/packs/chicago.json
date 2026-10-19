@@ -25,13 +25,30 @@
    "Chicago Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "Buckingham Fountain with the Chicago skyline behind it",
+ "heroLi": "<li>Header: Cdurrani · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Cdurrani · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a>",
  "mission": "Find four landmarks in and around the Loop. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Chicago is waiting.",
  "safetyNote": "<li>Chicago weather swings fast and the lakefront wind is real. Dress for it, cross at crosswalks, and keep an eye on traffic and bikes near the park paths.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "cloudgate": [
+   "chi_cg_now",
+   "50% 40%"
+  ],
+  "watertower": [
+   "chi_wt_now",
+   "50% 30%"
+  ],
+  "buckingham": [
+   "chi_bf_now",
+   "50% 30%"
+  ],
+  "chicagotheatre": [
+   "chi_ct_now",
+   "50% 25%"
+  ]
+ },
  "level": "Classics",
  "region": "The Midwest",
  "stops": [
@@ -60,14 +77,34 @@
    },
    "then": {
     "yr": "2004",
-    "label": "Opening year",
-    "line": "Cloud Gate was partly unveiled when Millennium Park opened on July 15, 2004. It was finished in 2005."
+    "label": "Under construction",
+    "line": "Cloud Gate under construction in 2004, with a crane and a large steel ring on the site.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "chi_cg_then",
+     "by": "Cmgiulini",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cloud_gate_construction.jpg",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2013",
     "head": "Today",
-    "label": "Cloud Gate today",
-    "line": "The polished sculpture reflects the Chicago skyline and the people walking under it."
+    "label": "From under Cloud Gate",
+    "line": "The Chicago skyline seen from underneath the sculpture. Photo from 2013.",
+    "ph": {
+     "k": "chi_cg_now",
+     "by": "Roman Boed",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Chicago_from_under_the_Cloud_Gate_(9694666470).jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Artist Anish Kapoor designed it, and it was built from 2004 to 2006. It was partly unveiled at the Millennium Park opening on July 15, 2004, finished in August 2005, and formally dedicated on May 15, 2006.",
@@ -131,13 +168,25 @@
    "then": {
     "yr": "1869",
     "label": "Just finished",
-    "line": "The tower was completed in 1869 as a standpipe for the city's water system."
+    "line": "The tower was completed in 1869 as a standpipe for the city's water system.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2004",
     "head": "Today",
     "label": "The tower today",
-    "line": "The little limestone castle stands among skyscrapers on Michigan Avenue."
+    "line": "The little limestone castle among the skyscrapers on Michigan Avenue. Photo from 2004.",
+    "ph": {
+     "k": "chi_wt_now",
+     "by": "Didier B (Sam67fr)",
+     "lic": "CC BY-SA 2.5",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.5/",
+     "page": "https://commons.wikimedia.org/wiki/File:Water_Tower_-_Chicago_Nov_2004.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Water Tower was completed in 1869. William W. Boyington designed it in a castle-like Gothic Revival style, in yellow Joliet limestone.",
@@ -201,13 +250,25 @@
    "then": {
     "yr": "1927",
     "label": "Dedication year",
-    "line": "The fountain was dedicated on August 26, 1927."
+    "line": "The fountain was dedicated on August 26, 1927.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The fountain today",
-    "line": "Shows run on the hour in warm months, and after dusk they are set to lights and music."
+    "line": "Buckingham Fountain in front of the Chicago skyline. Photo from 2012.",
+    "ph": {
+     "k": "chi_bf_now",
+     "by": "Cdurrani",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "The fountain was dedicated on August 26, 1927. Kate Sturges Buckingham gave it to the city in memory of her brother Clarence Buckingham.",
@@ -271,13 +332,25 @@
    "then": {
     "yr": "1921",
     "label": "Opening year",
-    "line": "The Chicago Theatre opened in 1921 and was promoted as the \"Wonder Theatre of the World.\""
+    "line": "The Chicago Theatre opened in 1921 and was promoted as the \"Wonder Theatre of the World.\"",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2010",
     "head": "Today",
-    "label": "The theatre today",
-    "line": "The vertical sign and marquee are one of the city's best known sights."
+    "label": "The sign at night",
+    "line": "The vertical CHICAGO sign and marquee glowing on State Street. Photo from 2010.",
+    "ph": {
+     "k": "chi_ct_now",
+     "by": "Daniel Schwen",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Chicago_Theatre_2.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The theatre opened on October 26, 1921. Brothers Cornelius and George Rapp (Rapp and Rapp) designed it, with a French Baroque interior. It was promoted as the \"Wonder Theatre of the World.\"",
@@ -315,5 +388,6 @@
     "lb": "Chicago Landmark"
    }
   }
- ]
+ ],
+ "heroKey": "chi_bf_now"
 }

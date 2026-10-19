@@ -25,13 +25,30 @@
    "Old City Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "Independence Hall and its clock tower seen across the park",
+ "heroLi": "<li>Header: Kwdavids · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Kwdavids · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a>",
  "mission": "Find four landmarks in Philadelphia's Old City. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Philadelphia is waiting.",
  "safetyNote": "<li>Old City has uneven brick sidewalks and busy streets. Watch your footing, cross at crosswalks, and respect the people who live and work here.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "independence": [
+   "ph_ih_now",
+   "50% 50%"
+  ],
+  "libertybell": [
+   "ph_lb_now",
+   "50% 55%"
+  ],
+  "betsyross": [
+   "ph_br_now",
+   "50% 50%"
+  ],
+  "elfreth": [
+   "ph_ea_now",
+   "50% 50%"
+  ]
+ },
  "level": "Classics",
  "region": "The East",
  "stops": [
@@ -59,15 +76,35 @@
     "verify": "The central tower has a clock facing the street. Check on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1776",
-    "label": "The Declaration",
-    "line": "The Declaration of Independence was adopted here in 1776."
+    "yr": "about 1900",
+    "label": "A century later",
+    "line": "A color-tinted photo of Independence Hall from around 1900, held by the Library of Congress.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ph_ih_then",
+     "by": "Library of Congress",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia-LCCN2008679522.jpg",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2013",
     "head": "Today",
     "label": "The hall today",
-    "line": "The red brick State House is the centerpiece of Independence National Historical Park."
+    "line": "Independence Hall and its clock tower seen across the park. Photo from 2013.",
+    "ph": {
+     "k": "ph_ih_now",
+     "by": "Kwdavids",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "The building was built from 1732 to 1753 as the Pennsylvania State House. Edmund Woolley and Andrew Hamilton designed it.",
@@ -131,13 +168,25 @@
    "then": {
     "yr": "1752",
     "label": "Cast in London",
-    "line": "The bell was cast in 1752, cracked, and was recast in Philadelphia."
+    "line": "The bell was cast in 1752, cracked, and was recast in Philadelphia.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2019",
     "head": "Today",
     "label": "The bell today",
-    "line": "The bell sits in the Liberty Bell Center, across from Independence Hall."
+    "line": "The Liberty Bell in the Liberty Bell Center, with Independence Hall behind it. Photo from 2019.",
+    "ph": {
+     "k": "ph_lb_now",
+     "by": "Mys 721tx",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell,_Aug_2019.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The bell was cast in 1752 in London by Lester and Pack, later the Whitechapel Bell Foundry. It cracked on its first strike in Philadelphia. John Pass and John Stow recast it in 1752 and 1753, adding copper. The first recast sounded bad, so they did it again.",
@@ -199,15 +248,35 @@
     "verify": "The house is at 239 Arch Street. Check the street sign on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1740",
-    "label": "House built (about)",
-    "line": "The front of the house was built around 1740."
+    "yr": "1903",
+    "label": "Birthplace of Old Glory",
+    "line": "The house in 1903, when a sign on the front called it the \"Birthplace of Old Glory.\"",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ph_br_then",
+     "by": "Not credited",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Birthplace_of_Old_Glory_Betsy_Ross_House_Philadelphia_Pa_1903.jpg",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The house today",
-    "line": "The house is restored and run as a small museum."
+    "line": "The Betsy Ross House on Arch Street. Photo from 2012.",
+    "ph": {
+     "k": "ph_br_now",
+     "by": "Beyond My Ken",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_239_Arch_Street.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The front of the house was built around 1740. The stair hall and back section were added 10 to 20 years later.",
@@ -271,13 +340,25 @@
    "then": {
     "yr": "1703",
     "label": "The alley opens",
-    "line": "The alley was laid out between 1702 and 1704."
+    "line": "The alley was laid out between 1702 and 1704.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2006",
     "head": "Today",
     "label": "The alley today",
-    "line": "The row houses are still homes, and the lane is a National Historic Landmark."
+    "line": "Elfreth's Alley, a narrow lane of old row houses. Photo from 2006.",
+    "ph": {
+     "k": "ph_ea_now",
+     "by": "Kjetil Ree",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "Elfreth's Alley was laid out between 1702 and 1704. Wikipedia gives 1703 as the founding date. It has 32 houses, built between 1703 and 1836.",
@@ -315,5 +396,6 @@
     "lb": "National Historic Landmark"
    }
   }
- ]
+ ],
+ "heroKey": "ph_ih_now"
 }

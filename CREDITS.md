@@ -107,4 +107,28 @@ Rejected: a 1921 book panorama that matched "Emerald Bay" in search but is not E
 Rejected: an 1883 newspaper engraving of the bridge (an illustration, not a photo) and Steichen's 1904 Flatiron photo (too dark to compare). All NY check-in questions are flagged `verify`.
 
 ## Chicago, San Francisco, Philadelphia (Oct 19)
-No photos yet. Each stop shows "photo pending" until a free-to-use photo is added and logged here.
+Photos for these three towns are logged below.
+
+### Photos added Oct 19 (Chicago, San Francisco, Philadelphia)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| chi_cg_now | File:Chicago_from_under_the_Cloud_Gate_(9694666470).jpg | Roman Boed | CC BY 2.0 | 2013 |
+| chi_cg_then | File:Cloud_gate_construction.jpg | Cmgiulini | CC BY 3.0 | 2004 |
+| chi_wt_now | File:Water_Tower_-_Chicago_Nov_2004.jpg | Didier B (Sam67fr) | CC BY-SA 2.5 | 2004 |
+| chi_bf_now | File:Buckingham_Fountain_-_Chicago,_IL.JPG | Cdurrani | CC BY-SA 3.0 | 2012 |
+| chi_ct_now | File:Chicago_Theatre_2.jpg | Daniel Schwen | CC BY-SA 4.0 | 2010 |
+| sf_gg_now | File:GoldenGateBridge_BakerBeach_MC.jpg | Christian Mehlführer | CC BY 3.0 | 2008 |
+| sf_fb_now | File:San_Francisco_Ferry_Building_(cropped).jpg | JaGa | CC BY-SA 4.0 | 2008 |
+| sf_fb_then | File:Willard_Wodern--Willard_Wodern--Market_Street_looking_toward_Ferry_Building_after_1906_San_Francisco_Earthquake.webp | Willard Worden | Public domain | 1906 |
+| sf_ct_now | File:Coit_Memorial_Tower,_San_Francisco.JPG | Erraticrabbit | Public domain | 2012 |
+| sf_ct_then | File:Zan_1527_-_Coit_Tower_on_Telegraph_Hill_San_Francisco.jpg | Zan | Public domain | circa 1930s |
+| sf_pf_now | File:Palace_of_Fine_Arts_San_Francisco_January_2014_003.jpg | King of Hearts | CC BY-SA 4.0 | 2014 |
+| sf_pf_then | File:Palace_of_Fine_Arts_Postcard_from_the_Panama-Pacific_Exposition.jpg | Pacific Novelty Co. | Public domain | 1915 |
+| ph_ih_now | File:Independence_Hall,_Philadelphia_PA.JPG | Kwdavids | CC BY-SA 3.0 | 2013 |
+| ph_ih_then | File:Independence_Hall,_Philadelphia-LCCN2008679522.jpg | Library of Congress | Public domain | about 1900 |
+| ph_lb_now | File:Liberty_Bell,_Aug_2019.jpg | Mys 721tx | CC BY-SA 3.0 | 2019 |
+| ph_br_now | File:Betsy_Ross_House_239_Arch_Street.jpg | Beyond My Ken | CC BY-SA 4.0 | 2012 |
+| ph_br_then | File:Birthplace_of_Old_Glory_Betsy_Ross_House_Philadelphia_Pa_1903.jpg | Not credited | Public domain | 1903 |
+| ph_ea_now | File:Elfreth%27s_Alley.JPG | Kjetil Ree | CC BY-SA 3.0 | 2006 |
+
+Still pending (no free photo found): Chicago Water Tower/Buckingham/Chicago Theatre then; Golden Gate then; Liberty Bell then; Elfreth's Alley then.

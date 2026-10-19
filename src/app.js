@@ -169,10 +169,18 @@
     var c=HCL[hi];
     return '<div class="fof" aria-live="polite"><p class="mono">Fact or fiction</p><div class="fcard-h">'+(hdone?'You get the idea.':c.t)+'</div>'+(hdone?'':'<div class="fb-h">'+FLAB.map(function(l,k){ return '<button type="button" data-a="hpick" data-k="'+k+'">'+l+'</button>'; }).join('')+'</div>')+'<p class="res-h '+hcls+'">'+hmsg+'</p></div>';
   }
+  function homeTown(){
+    var hk=CITIES[cityId]?cityId:ORDER[0];
+    if(!atHome||sum(ALL[hk].done)===0){ ORDER.forEach(function(k){ if(sum(ALL[k].done)>0&&(sum(ALL[hk].done)===0)) hk=k; }); }
+    return hk;
+  }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
-    var stamps=['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].filter(function(k){return PHOTOS[k];}).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('');
+    var hk=homeTown(), hkeys=[];
+    CITIES[hk].stops.forEach(function(st){ var k=((BMAPS[hk]||{})[st.id]||[])[0]; if(!(k&&PHOTOS[k])) k=(st.now.ph&&st.now.ph.k)||''; if(k&&PHOTOS[k]&&hkeys.indexOf(k)<0) hkeys.push(k); });
+    ['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].forEach(function(k){ if(hkeys.length<4&&PHOTOS[k]&&hkeys.indexOf(k)<0) hkeys.push(k); });
+    var stamps=hkeys.slice(0,4).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('')+'<p class="hstamps-cap mono">'+CITIES[hk].name+'</p>';
     var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
@@ -198,7 +206,6 @@
       var c=CITIES[k], d=sum(ALL[k].done);
       return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</section>';
-    var hk=(typeof cityId!=='undefined'&&CITIES[cityId])?cityId:ORDER[0]; ORDER.forEach(function(k){ if(hk===ORDER[0]&&sum(ALL[k].done)>0&&k!==hk) hk=k; });
     var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';

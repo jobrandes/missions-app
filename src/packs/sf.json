@@ -25,13 +25,30 @@
    "Bay Area Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The San Francisco Ferry Building and its clock tower",
+ "heroLi": "<li>Header: JaGa · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Francisco_Ferry_Building_(cropped).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: JaGa · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Francisco_Ferry_Building_(cropped).jpg\">Source</a>",
  "mission": "Find four landmarks around San Francisco. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of the Bay is waiting.",
  "safetyNote": "<li>San Francisco is hilly, windy and often cold, even on sunny days. Bring a jacket, wear real shoes, and watch for traffic on steep streets.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "goldengate": [
+   "sf_gg_now",
+   "50% 45%"
+  ],
+  "ferrybuilding": [
+   "sf_fb_now",
+   "50% 40%"
+  ],
+  "coittower": [
+   "sf_ct_now",
+   "50% 40%"
+  ],
+  "palace": [
+   "sf_pf_now",
+   "50% 50%"
+  ]
+ },
  "level": "Classics",
  "region": "The West",
  "stops": [
@@ -61,13 +78,25 @@
    "then": {
     "yr": "1933",
     "label": "Construction begins",
-    "line": "Work started on January 5, 1933."
+    "line": "Work started on January 5, 1933.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2008",
     "head": "Today",
-    "label": "The bridge today",
-    "line": "The towers and cables are still painted International Orange."
+    "label": "From Baker Beach",
+    "line": "The bridge seen from Baker Beach at sunset. Photo from 2008.",
+    "ph": {
+     "k": "sf_gg_now",
+     "by": "Christian Mehlführer",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:GoldenGateBridge_BakerBeach_MC.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Construction began on January 5, 1933 and the bridge opened on May 27, 1937. Its main span is 4,200 feet, and it was the longest suspension span in the world until 1964. The towers rise 746 feet above the water.",
@@ -129,15 +158,35 @@
     "verify": "Wikipedia says the tower has four clock dials. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1898",
-    "label": "Opening year",
-    "line": "The Ferry Building opened on July 13, 1898."
+    "yr": "1906",
+    "label": "After the earthquake",
+    "line": "Market Street looking toward the Ferry Building after the 1906 earthquake. The building survived with little damage.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sf_fb_then",
+     "by": "Willard Worden",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Willard_Wodern--Willard_Wodern--Market_Street_looking_toward_Ferry_Building_after_1906_San_Francisco_Earthquake.webp",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2008",
     "head": "Today",
-    "label": "The building today",
-    "line": "The clock tower faces the bay, and a farmers market fills the plaza."
+    "label": "The Ferry Building today",
+    "line": "The clock tower rising over the Ferry Building and the Embarcadero. Photo from 2008.",
+    "ph": {
+     "k": "sf_fb_now",
+     "by": "JaGa",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Francisco_Ferry_Building_(cropped).jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Ferry Building opened on July 13, 1898. Architect A. Page Brown designed it in a Beaux-Arts style, and its tower is 245 feet tall.",
@@ -199,15 +248,35 @@
     "verify": "Wikipedia places Coit Tower on Telegraph Hill. Road signs on Telegraph Hill Boulevard should confirm it. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1933",
-    "label": "Dedication year",
-    "line": "Coit Tower was dedicated on October 8, 1933."
+    "yr": "circa 1930s",
+    "label": "Newly built",
+    "line": "An old postcard-style photo of Coit Tower on Telegraph Hill.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sf_ct_then",
+     "by": "Zan",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Zan_1527_-_Coit_Tower_on_Telegraph_Hill_San_Francisco.jpg",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The tower today",
-    "line": "The tower still crowns Telegraph Hill, with the lobby murals inside."
+    "line": "Coit Tower on Telegraph Hill, with the statue of Christopher Columbus in the foreground. Photo from 2012.",
+    "ph": {
+     "k": "sf_ct_now",
+     "by": "Erraticrabbit",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Coit_Memorial_Tower,_San_Francisco.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "Lillie Hitchcock Coit left one third of her fortune, about $118,000, for \"adding to the beauty of the city.\" That money paid for the tower. It was completed in 1933 and dedicated on October 8, 1933.",
@@ -271,13 +340,33 @@
    "then": {
     "yr": "1915",
     "label": "Built for the fair",
-    "line": "The palace was built for the 1915 Panama-Pacific International Exposition."
+    "line": "A postcard of the Palace of Fine Arts from the Panama-Pacific Exposition.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sf_pf_then",
+     "by": "Pacific Novelty Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Palace_of_Fine_Arts_Postcard_from_the_Panama-Pacific_Exposition.jpg",
+     "note": "resized"
+    }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2014",
     "head": "Today",
     "label": "The palace today",
-    "line": "The rebuilt rotunda and colonnade sit beside a lagoon."
+    "line": "The rebuilt rotunda and colonnade reflected in the lagoon. Photo from 2014.",
+    "ph": {
+     "k": "sf_pf_now",
+     "by": "King of Hearts",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Palace_of_Fine_Arts_San_Francisco_January_2014_003.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Palace of Fine Arts was built in 1915 for the Panama-Pacific International Exposition, a world's fair celebrating the Panama Canal. Bernard Maybeck designed it, inspired by a Roman-ruin engraving.",
@@ -315,5 +404,6 @@
     "lb": "Rebuilt in concrete"
    }
   }
- ]
+ ],
+ "heroKey": "sf_fb_now"
 }
