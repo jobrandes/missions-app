@@ -166,12 +166,20 @@
     "verify": "Wikipedia says large tankers and container ships sometimes pass within yards of the promenade. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1850s",
-    "label": "Cotton warehouses",
-    "line": "Cotton brokers worked along the bluff in the 1850s.",
+    "yr": "1883",
+    "label": "The waterfront then",
+    "line": "An 1883 illustration of Savannah and its harbor, with ships along the river.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sv_rs_then",
+     "by": "J. O. Davidson (illustrator)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:City_and_Harbor_of_Savannah,_Georgia.jpg",
+     "note": "resized"
     }
    },
    "now": {
@@ -248,12 +256,20 @@
     "verify": "Wikipedia mentions the cathedral's spires. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1876",
-    "label": "Dedicated",
-    "line": "The cathedral was dedicated on April 30, 1876.",
+    "yr": "before 1914",
+    "label": "The cathedral then",
+    "line": "A printed view of the cathedral and its two spires, published before 1914.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sv_ca_then",
+     "by": "Unknown (print published before 1914)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._John_the_Baptist,_Savannah,_Georgia.jpg",
+     "note": "resized"
     }
    },
    "now": {

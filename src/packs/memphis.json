@@ -248,12 +248,20 @@
     "verify": "Wikipedia says the gate is shaped like a book of sheet music. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1957",
-    "label": "Elvis moves in",
-    "line": "Elvis bought the house in March 1957.",
+    "yr": "1989",
+    "label": "Graceland in 1989",
+    "line": "Visitors outside the mansion in August 1989.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "me_gl_then",
+     "by": "Bruce Andersen",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Graceland_1989.jpg",
+     "note": "resized"
     }
    },
    "now": {

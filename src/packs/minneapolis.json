@@ -167,11 +167,19 @@
    },
    "then": {
     "yr": "1878",
-    "label": "The explosion",
-    "line": "A flour-dust explosion destroyed the mills in 1878.",
+    "label": "The mill burning",
+    "line": "A stereoview of the Washburn A Mill explosion in 1878.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mn_mc_then",
+     "by": "Unknown photographer (stereoview of the 1878 mill)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Washburnamill.jpg",
+     "note": "resized"
     }
    },
    "now": {

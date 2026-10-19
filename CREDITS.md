@@ -188,3 +188,11 @@ Still pending: Jackson Square then, Griffith Observatory, Chinese Theatre, Union
 | sv_cp_now | File:Colonial_Cemetery_in_Savannah,_Georgia.JPG | Daniel Mayer | CC BY-SA 3.0 | 2007 |
 
 Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City, Spoonbridge, Foshay Tower, all four Atlanta stops, Sun Studio, Graceland, Peabody, River Street, the Savannah cathedral and Colonial Park.
+
+### "Then" photos added Oct 19 (second pass)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| mn_mc_then | File:Washburnamill.jpg | Unknown photographer (stereoview of the 1878 mill) | Public domain | 1878 |
+| sv_ca_then | File:Cathedral_of_St._John_the_Baptist,_Savannah,_Georgia.jpg | Unknown (print published before 1914) | Public domain | before 1914 |
+| sv_rs_then | File:City_and_Harbor_of_Savannah,_Georgia.jpg | J. O. Davidson (illustrator) | Public domain | 1883 |
+| me_gl_then | File:Graceland_1989.jpg | Bruce Andersen | CC BY 3.0 | 1989 |

@@ -1,0 +1,62 @@
+# Stamp the Past: project brief for Claude
+
+Read this first in every session. Keep it current: update it whenever scope, rules, status or the roadmap change.
+
+## What this is
+**Stamp the Past** is a phone-first history scavenger-hunt app about real landmarks. Tagline: "Go there. Prove it. Stamp the past."
+Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and idea source). Public credit: "made by a mom and her teenage son". Never name the son publicly.
+
+- Repo: `jobrandes/missions-app` (private). Test site: `missions-app-test.netlify.app` (Netlify auto-deploys on push to GitHub).
+- Claude Artifact copy: https://claude.ai/artifact/4jha39rpChXp1cMVXRYkBs (republish after every build; the page must stay under 16 MB).
+- The App Store is the eventual destination. Netlify is only for testing.
+
+## Goals (apply to every decision)
+1. Fun to build together. "We made this."
+2. Unique, not a copy of an existing app. Not a Strava-style "Local Legend" feature (explicitly rejected).
+3. Aim for a top App Store ranking. Eventually earns money.
+4. Funny, confident tone. Sarcasm and humor welcome.
+5. Go global months after the MVP (France, Mexico, Italy, etc.), so nothing may be tied to one town or an English idiom.
+
+## Hard rules
+- No weapons or tactical guidance. No surveillance. No precise location data from kids. No GPS, accounts or uploads in the MVP.
+- Caden does not manage payments or accounts, and does not publish personal info.
+- Jo-Anne verifies on site. Content is "written from sources, not yet checked on site" until she walks it.
+- Photos: real, freely licensed photos only (Wikimedia Commons, Library of Congress, public domain). Credit every photo in `CREDITS.md` and in the stop's `ph` block. If no free photo exists, show an honest "photo pending". **Do not go live with missing photos** (her requirement, Oct 19). Never email archives or ask permission-by-email.
+- In-phone missions only, not printable.
+- Naming: no teen slang, no mashed-up made-up words. Domain not purchased yet. No lawyer. Claude checks App Store, domains and trademarks itself.
+- Protect her Claude usage. Connect to GitHub, Netlify and Google instead of doing things by hand. Check quality and mobile and desktop responsiveness every time. She is not a developer but knows quality engineering.
+- Verify facts from fetched sources, never memory. When a source disagrees with a popular claim, use the source and mark the claim "disputed" or "not true".
+
+## How the code works
+- `build.py` builds `index.html` (the Artifact fragment) and `site/` (index, `_headers`, `sw.js`, manifest, icons, privacy, support, hidden Netlify form) from `src/`. `netlify.toml` publishes `site/`.
+- Packs: `src/packs/<id>.json`. Order and "coming soon" list: `src/packs/index.json`. Boss questions: `src/boss.json` (4 per pack). Photos: `src/photos/<key>.jpg` (max 720 px, q66) plus `manifest.json`.
+- Pack schema: id, name, explorer, initials, ranks, heroKey, heroAlt, heroLi, heroCredit, mission, afterDone, safetyNote, badgeMap {stopId:[photoKey,"x% y%"]}, level, region, stops. Exactly 4 stops per town. Each stop has id, name, short, badge, tag, teaser, map, clue, safety, field, q{prompt,options,answer,hint,verify}, then{yr,label,line,ph?,link{t,u}} (link is REQUIRED), now{...,ph?}, story[], fact, disputed, claims[] (2, a: 0 solid, 1 disputed, 2 not true), sources[] (2+ https), card.
+- XP: 100 per stop, 25 per claim, 600 max per town. Save code is `TN3-` plus one 12-char group per town, so the dash count equals the town count. When adding towns, bump the counts in `tests/flows.py` (town count, `code.count('-')`, and the "too many towns" test with N+1 groups).
+- Validator rules: 3+ distinct correct-answer positions per pack, hint must not give the answer, boss answers not all in one slot, 4 distinct boss options.
+- Home: regions are collapsible groups and rails. The passport is grouped by region (folds, with per-region stamp counts). The hero circles and "How it works" badges follow the current mission. "Try it from home" demo mode earns no saved stamp.
+- Tests: `sh tests/run_all.sh`. If only expected screens change, accept with `python3 tests/snapshot.py index.html tests/baseline.json`.
+- Commit trailers: `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>` and the session link.
+
+## Photo pipeline (what works)
+- Wikimedia/LoC downloads run in the Claude app's built-in browser (Chrome JS from Apple Events is unreliable). Request site access for commons.wikimedia.org, upload.wikimedia.org, en.wikipedia.org, loc.gov.
+- Search the Commons API; filter licenses to Public domain, CC0, CC BY, CC BY-SA; width at least 1000 for "now", at least 600 for old PD.
+- For "then" photos the Commons keyword search is poor. Better: pull each Wikipedia article's image list, then filter by date. Also try LoC HABS/HAER surveys and DPLA postcards.
+- Download: navigate a tab to the upload.wikimedia.org 960px thumbnail, fetch same-origin, save via `<a download>`. Files land in `~/Downloads` as hidden temp files; rename by byte size, then `device_stage_files`, view a contact sheet to confirm each photo matches its stop, then resize and wire in.
+
+## Status (Oct 19, 2026)
+18 towns, 72 stops, 112 photos:
+- West: Reno, Virginia City, Lake Tahoe (two packs), San Francisco, Los Angeles, Seattle
+- East: Boston, Washington DC, New York, Philadelphia
+- Midwest: Chicago, Detroit, Minneapolis
+- South: New Orleans, Atlanta, Memphis, Savannah
+- "Coming soon": Paris.
+Also done: demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
+
+## Still to do
+1. **"Then" photos** for the stops still showing "photo pending" (blocks going live). Found so far: Mill City (1878 stereoview), Savannah cathedral and waterfront, Graceland 1989, plus earlier towns. Still pending: Chicago (Water Tower, Buckingham, Theatre), Golden Gate, Liberty Bell, Elfreth's Alley, Jackson Square, Griffith, Chinese Theatre, Union Station, Gas Works, and Detroit (all but Rivera and Michigan Central), Spoonbridge, Foshay, Atlanta (all four), Sun Studio, Beale, Peabody, Forsyth done, Colonial Park. Many post-1950 places have no free-licensed historic photos at all.
+2. **Southwest/Mountain region**: Denver, Santa Fe or Phoenix, 4 stops each. Then maybe Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
+3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
+4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.
+5. Later: wrap for the App Store, pricing/monetization decision, more towns each month.
+
+Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-checklist.md`, `docs/tester-post.md`, `CREDITS.md`.
