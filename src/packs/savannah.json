@@ -25,13 +25,30 @@
    "Savannah Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The fountain in Forsyth Park",
+ "heroLi": "<li>Header: Jennifer Morrow · CC BY 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Forsyth_Park_Fountain_(1).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Jennifer Morrow · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/2.0/\">CC BY 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Forsyth_Park_Fountain_(1).jpg\">Source</a>",
  "mission": "Find four landmarks around Savannah. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Savannah is waiting.",
  "safetyNote": "<li>Savannah is hot and humid in summer. Bring water, use crosswalks, and watch your step on cobblestones and uneven sidewalks.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "forsyth": [
+   "sv_fp_now",
+   "50% 45%"
+  ],
+  "riverstreet": [
+   "sv_rs_now",
+   "50% 50%"
+  ],
+  "cathedral": [
+   "sv_ca_now",
+   "50% 40%"
+  ],
+  "colonial": [
+   "sv_cp_now",
+   "50% 50%"
+  ]
+ },
  "level": "Classics",
  "region": "The South",
  "stops": [
@@ -59,19 +76,35 @@
     "verify": "Wikipedia says the fountain is turned green on St. Patrick's Day. Confirm the normal color. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1858",
-    "label": "Fountain installed",
-    "line": "The fountain was installed in 1858.",
+    "yr": "about 1870",
+    "label": "The fountain then",
+    "line": "A stereoview of the fountain from about 1870.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sv_fp_then",
+     "by": "J. A. Palmer",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fountain_in_Forsyth_Park,_Savannah,_Ga,_by_J._A._Palmer.jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2010",
     "head": "Today",
     "label": "The fountain today",
-    "line": "The fountain is the park's centerpiece."
+    "line": "The white iron fountain in Forsyth Park. Photo from 2010.",
+    "ph": {
+     "k": "sv_fp_now",
+     "by": "Jennifer Morrow",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Forsyth_Park_Fountain_(1).jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Forsyth Park began in the 1840s on 10 acres given by William Brown Hodgson. It was expanded and named for Georgia Governor John Forsyth in 1851. It covers 30 acres.",
@@ -142,10 +175,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2017",
     "head": "Today",
     "label": "The street today",
-    "line": "Shops and restaurants fill the old warehouses."
+    "line": "The cobbled street and old warehouses along the river. Photo from 2017.",
+    "ph": {
+     "k": "sv_rs_now",
+     "by": "Seasider53",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:River_Street,_Savannah,_Georgia,_2017.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "River Street is about 2 miles long along the Savannah River, according to Wikipedia. The south side has rows of former cotton warehouses, some dating from the 1850s.",
@@ -216,10 +257,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2015",
     "head": "Today",
-    "label": "The cathedral today",
-    "line": "The spires rise above Lafayette Square."
+    "label": "Inside the cathedral",
+    "line": "A stained-glass window inside the cathedral. Photo from 2015.",
+    "ph": {
+     "k": "sv_ca_now",
+     "by": "Dsdugan",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Savannah_cathedral_2015_17_052.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The parish started in 1799. The present cathedral was dedicated on April 30, 1876, and Ephraim Francis Baldwin was its architect, in Gothic Revival style.",
@@ -290,10 +339,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2007",
     "head": "Today",
     "label": "The cemetery today",
-    "line": "The cemetery is now a public park."
+    "line": "Old graves and tombs under the trees. Photo from 2007.",
+    "ph": {
+     "k": "sv_cp_now",
+     "by": "Daniel Mayer",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Colonial_Cemetery_in_Savannah,_Georgia.JPG",
+     "note": "resized"
+    }
    },
    "story": [
     "Colonial Park Cemetery was established in 1750, when Savannah was the capital of the British Province of Georgia. It closed to burials in 1853 and has been a public park since 1896.",
@@ -331,5 +388,6 @@
     "lb": "Public park"
    }
   }
- ]
+ ],
+ "heroKey": "sv_fp_now"
 }

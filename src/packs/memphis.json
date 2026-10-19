@@ -25,13 +25,30 @@
    "Memphis Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The front of Graceland",
+ "heroLi": "<li>Header: Maha · CC BY 2.5 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Graceland_front.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Maha · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/2.5/\">CC BY 2.5</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Graceland_front.jpg\">Source</a>",
  "mission": "Find four landmarks around Memphis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Memphis is waiting.",
  "safetyNote": "<li>Memphis summers are hot. Bring water, stay in busy areas at night, and respect that Graceland and Sun Studio are tour sites with tickets.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "sun": [
+   "me_su_now",
+   "70% 40%"
+  ],
+  "beale": [
+   "me_be_now",
+   "30% 20%"
+  ],
+  "graceland": [
+   "me_gl_now",
+   "50% 50%"
+  ],
+  "peabody": [
+   "me_pe_now",
+   "50% 50%"
+  ]
+ },
  "level": "Classics",
  "region": "The South",
  "stops": [
@@ -68,10 +85,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The studio today",
-    "line": "The studio gives tours and still makes records."
+    "line": "The Sun Studio sign on the brick wall. Photo from 2012.",
+    "ph": {
+     "k": "me_su_now",
+     "by": "Adam Jones, Ph.D.",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Facade_of_Sun_Studio_-_Memphis_-_Tennessee_-_USA.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Sam Phillips opened Sun Studio on January 3, 1950, as the Memphis Recording Service, at 706 Union Avenue.",
@@ -133,19 +158,35 @@
     "verify": "Wikipedia lists B.B. King's Blues Club at 143 Beale. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1841",
-    "label": "Laid out",
-    "line": "Robertson Topp laid out the street in 1841.",
+    "yr": "1939",
+    "label": "Beale Street then",
+    "line": "Beale Street in October 1939.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "me_be_then",
+     "by": "New York Public Library",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Memphis,_Tennessee,_Beale_Street,_October_1939._(3110571760).jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The street today",
-    "line": "Neon-lit clubs line the pedestrian blocks."
+    "line": "Neon signs on Beale Street. Photo from 2012.",
+    "ph": {
+     "k": "me_be_now",
+     "by": "Adam Jones, Ph.D.",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Beale_Street_Pastiche_-_Downtown_Memphis_-_Tennessee_-_USA.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Developer Robertson Topp laid out Beale Street in 1841. It was first called Beale Avenue and was later renamed for Edward Fitzgerald Beale.",
@@ -216,10 +257,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2006",
     "head": "Today",
-    "label": "The house today",
-    "line": "The mansion is a museum and National Historic Landmark."
+    "label": "The mansion today",
+    "line": "The front of Graceland. Photo from 2006.",
+    "ph": {
+     "k": "me_gl_now",
+     "by": "Maha",
+     "lic": "CC BY 2.5",
+     "lu": "https://creativecommons.org/licenses/by/2.5/",
+     "page": "https://commons.wikimedia.org/wiki/File:Graceland_front.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Ruth and Thomas Moore built the house in 1939 and named it for Grace Toof, a family relative. Elvis Presley bought it on March 19, 1957 for $102,500.",
@@ -290,10 +339,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2008",
     "head": "Today",
-    "label": "The march today",
-    "line": "The ducks march at 11 a.m. and 5 p.m."
+    "label": "The ducks today",
+    "line": "Mallards in the Peabody lobby fountain. Photo from 2008.",
+    "ph": {
+     "k": "me_pe_now",
+     "by": "Roger Schultz",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Peabody_Hotel_Ducks.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "In 1933, after a fruitless hunting trip, the Peabody's general manager released his English call ducks, which he used as live bait, into the Grand Lobby fountain. Guests loved them, so the hotel got five North American Mallards.",
@@ -331,5 +388,6 @@
     "lb": "Ducks trained"
    }
   }
- ]
+ ],
+ "heroKey": "me_gl_now"
 }

@@ -25,13 +25,30 @@
    "Atlanta Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The Fox Theatre sign in Atlanta",
+ "heroLi": "<li>Header: Atlantacitizen · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Atlantacitizen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg\">Source</a>",
  "mission": "Find four landmarks around Atlanta. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Atlanta is waiting.",
  "safetyNote": "<li>Atlanta is hot and humid in summer. Bring water, use crosswalks, and be respectful at churches and cemeteries.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "ebenezer": [
+   "at_eb_now",
+   "40% 40%"
+  ],
+  "centennial": [
+   "at_co_now",
+   "50% 60%"
+  ],
+  "foxatl": [
+   "at_fx_now",
+   "50% 30%"
+  ],
+  "oakland": [
+   "at_oc_now",
+   "50% 50%"
+  ]
+ },
  "level": "Classics",
  "region": "The South",
  "stops": [
@@ -68,10 +85,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2007",
     "head": "Today",
     "label": "The church today",
-    "line": "The church sits inside the national historical park."
+    "line": "The brick church with its Ebenezer sign on Auburn Avenue. Photo from 2007.",
+    "ph": {
+     "k": "at_eb_now",
+     "by": "Erin McDaniel (Erinmcd)",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Ebenezer_Baptist_Church.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Ebenezer Baptist Church was founded in 1886 by Pastor John A. Parker and eight people on Airline Street.",
@@ -142,10 +167,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2013",
     "head": "Today",
-    "label": "The park today",
-    "line": "The park is a downtown gathering spot."
+    "label": "The fountain today",
+    "line": "Children playing in the Fountain of Rings. Photo from 2013.",
+    "ph": {
+     "k": "at_co_now",
+     "by": "Robert Neff",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fountains_Centennial_Olympic_Park.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Centennial Olympic Park was built for the 1996 Summer Olympics by the Atlanta Committee for the Olympic Games. Billy Payne, the chief executive, came up with it. Phase I opened in July 1996, and Phase II was finished in 1998.",
@@ -216,10 +249,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2007",
     "head": "Today",
     "label": "The theatre today",
-    "line": "The theater is a major live-performance venue."
+    "line": "The tall FOX sign and marquee on Peachtree Street. Photo from 2007.",
+    "ph": {
+     "k": "at_fx_now",
+     "by": "Atlantacitizen",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Fox was planned as the Yaarab Temple of the Shriners and shared with William Fox's theater. Construction ran from 1925 to 1929, and it opened on Christmas Day 1929. Marye, Alger and Vinour were the architects.",
@@ -290,10 +331,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2007",
     "head": "Today",
     "label": "The cemetery today",
-    "line": "The Victorian cemetery covers 48 acres near downtown."
+    "line": "Old graves and trees with downtown Atlanta behind. Photo from 2007.",
+    "ph": {
+     "k": "at_oc_now",
+     "by": "Mike Schinkel",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Oakland_Cemetery_and_Atlanta_Skyscrapers.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Oakland Cemetery started in 1850 as Atlanta Cemetery on six acres and was renamed in 1872 for its oaks and magnolias. It now covers 48 acres in the Victorian garden style.",
@@ -331,5 +380,6 @@
     "lb": "Bell Tower built"
    }
   }
- ]
+ ],
+ "heroKey": "at_fx_now"
 }

@@ -157,3 +157,34 @@ Still pending (no free photo found): Chicago Water Tower/Buckingham/Chicago Thea
 | no_fm_then | File:Detroit_Photographic_Company_(0347)_-_French_Market,_New_Orleans.jpg | Detroit Photographic Company | Public domain | about 1900 |
 
 Still pending: Jackson Square then, Griffith Observatory, Chinese Theatre, Union Station and Gas Works Park "then" photos.
+
+### Photos added Oct 19 (Detroit, Minneapolis, Atlanta, Memphis, Savannah)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| de_sp_now | File:The_Spirit_of_Detroit.jpg | JJonahJackalope | CC BY-SA 4.0 | 2022 |
+| de_fx_now | File:Detroitfox3.jpg | Mikerussell | CC BY-SA 3.0 | 2007 |
+| de_di_now | File:Detroit_Industrial_Murals.jpg | Timsox6 | CC BY-SA 4.0 | 2017 |
+| de_di_then | File:Rivera_detroit_industry_north.jpg | Cactus.man (photo of a 1932-33 mural by Diego Rivera) | Public domain | 1932 |
+| de_mc_now | File:MichiganCentral2024.jpg | Coreyfein01 | CC BY-SA 4.0 | 2024 |
+| de_mc_then | File:Michigan_Central_Station,_Detroit_(2013).jpg | Bartosz Brzezinski | CC BY 2.0 | 2013 |
+| mn_sa_now | File:Stone_Arch_Bridge,_Minneapolis_2012.jpg | Jim Cadwell | CC BY-SA 2.0 | 2012 |
+| mn_sa_then | File:Stone_Arch_Bridge,_Minneapolis_1906_Post_Card.jpg | Pamla J. Eisenberg (scan of an old postcard) | CC BY-SA 2.0 | about 1906 |
+| mn_mc_now | File:Washburn_A_Mill_2014.jpg | McGhiever | CC BY-SA 4.0 | 2014 |
+| mn_sb_now | File:Scaffold_sculpture,_and_Spoon_and_Cherry_bridge_during_protests.jpg | Lorie Shaull | CC BY-SA 2.0 | 2017 |
+| mn_fo_now | File:Foshay_Tower_01.jpg | Raggedkompany | CC BY-SA 3.0 | 2011 |
+| at_eb_now | File:Ebenezer_Baptist_Church.jpg | Erin McDaniel (Erinmcd) | CC BY 3.0 | 2007 |
+| at_co_now | File:Fountains_Centennial_Olympic_Park.jpg | Robert Neff | CC BY 2.0 | 2013 |
+| at_fx_now | File:Fox_Theatre_Atlanta.jpg | Atlantacitizen | Public domain | 2007 |
+| at_oc_now | File:Oakland_Cemetery_and_Atlanta_Skyscrapers.jpg | Mike Schinkel | CC BY 2.0 | 2007 |
+| me_su_now | File:Facade_of_Sun_Studio_-_Memphis_-_Tennessee_-_USA.jpg | Adam Jones, Ph.D. | CC BY-SA 3.0 | 2012 |
+| me_be_now | File:Beale_Street_Pastiche_-_Downtown_Memphis_-_Tennessee_-_USA.jpg | Adam Jones, Ph.D. | CC BY-SA 3.0 | 2012 |
+| me_be_then | File:Memphis,_Tennessee,_Beale_Street,_October_1939._(3110571760).jpg | New York Public Library | Public domain | 1939 |
+| me_gl_now | File:Graceland_front.jpg | Maha | CC BY 2.5 | 2006 |
+| me_pe_now | File:Peabody_Hotel_Ducks.jpg | Roger Schultz | CC BY 2.0 | 2008 |
+| sv_fp_now | File:Forsyth_Park_Fountain_(1).jpg | Jennifer Morrow | CC BY 2.0 | 2010 |
+| sv_fp_then | File:Fountain_in_Forsyth_Park,_Savannah,_Ga,_by_J._A._Palmer.jpg | J. A. Palmer | Public domain | about 1870 |
+| sv_rs_now | File:River_Street,_Savannah,_Georgia,_2017.jpg | Seasider53 | CC BY-SA 4.0 | 2017 |
+| sv_ca_now | File:Savannah_cathedral_2015_17_052.jpg | Dsdugan | CC0 | 2015 |
+| sv_cp_now | File:Colonial_Cemetery_in_Savannah,_Georgia.JPG | Daniel Mayer | CC BY-SA 3.0 | 2007 |
+
+Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City, Spoonbridge, Foshay Tower, all four Atlanta stops, Sun Studio, Graceland, Peabody, River Street, the Savannah cathedral and Colonial Park.

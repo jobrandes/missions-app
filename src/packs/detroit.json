@@ -25,13 +25,30 @@
    "Detroit Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The Spirit of Detroit statue",
+ "heroLi": "<li>Header: JJonahJackalope · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: JJonahJackalope · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg\">Source</a>",
  "mission": "Find four landmarks around Detroit. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Detroit is waiting.",
  "safetyNote": "<li>Downtown Detroit is spread out. Stay on busy, well-lit streets, watch for traffic and the QLine streetcar, and keep your belongings close.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "spirit": [
+   "de_sp_now",
+   "50% 55%"
+  ],
+  "fox": [
+   "de_fx_now",
+   "50% 80%"
+  ],
+  "dia": [
+   "de_di_now",
+   "60% 40%"
+  ],
+  "michigancentral": [
+   "de_mc_now",
+   "50% 40%"
+  ]
+ },
  "level": "Classics",
  "region": "The Midwest",
  "stops": [
@@ -68,10 +85,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2022",
     "head": "Today",
     "label": "The statue today",
-    "line": "The bronze figure sits outside the municipal center, sometimes in a jersey."
+    "line": "The bronze figure with its gilded sphere and family group. Photo from 2022.",
+    "ph": {
+     "k": "de_sp_now",
+     "by": "JJonahJackalope",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Marshall Fredericks made the bronze statue, cast in Oslo, Norway. It was dedicated on September 23, 1958 outside what is now the Coleman A. Young Municipal Center, on a 60-ton marble base.",
@@ -142,10 +167,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2007",
     "head": "Today",
     "label": "The theatre today",
-    "line": "The restored theatre is a major venue on Woodward Avenue."
+    "line": "The Fox marquee and tower on Woodward Avenue. Photo from 2007.",
+    "ph": {
+     "k": "de_fx_now",
+     "by": "Mikerussell",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroitfox3.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Fox opened on September 21, 1928. C. Howard Crane designed it. It has 5,048 seats, or 5,174 with removable seats in the orchestra pit.",
@@ -208,18 +241,34 @@
    },
    "then": {
     "yr": "1932",
-    "label": "Rivera arrives",
-    "line": "Rivera began the murals in 1932 and finished in 1933.",
+    "label": "The mural",
+    "line": "One wall of the Detroit Industry mural, painted in 1932 and 1933.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "de_di_then",
+     "by": "Cactus.man (photo of a 1932-33 mural by Diego Rivera)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rivera_detroit_industry_north.jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2017",
     "head": "Today",
-    "label": "The court today",
-    "line": "The painted court is open to visitors inside the museum."
+    "label": "The Rivera Court today",
+    "line": "Visitors in the Rivera Court under the glass roof, with the murals behind them. Photo from 2017.",
+    "ph": {
+     "k": "de_di_now",
+     "by": "Timsox6",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Industrial_Murals.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Diego Rivera, the Mexican muralist, painted the Detroit Industry murals in fresco in 1932 and 1933. They cover 27 panels on four walls of the Rivera Court at the Detroit Institute of Arts.",
@@ -281,19 +330,35 @@
     "verify": "The tower is 18 stories according to Bridge Michigan. Estimate from the street. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1913",
-    "label": "Opening year",
-    "line": "The station opened in December 1913.",
+    "yr": "2013",
+    "label": "Vacant",
+    "line": "The empty station in 2013, before the restoration.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "de_mc_then",
+     "by": "Bartosz Brzezinski",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Michigan_Central_Station,_Detroit_(2013).jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2024",
     "head": "Today",
     "label": "The station today",
-    "line": "The restored station and tower reopened in June 2024."
+    "line": "The restored station and tower in 2024.",
+    "ph": {
+     "k": "de_mc_now",
+     "by": "Coreyfein01",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:MichiganCentral2024.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Michigan Central Station opened in December 1913. Warren & Wetmore and Reed & Stem designed it. Allen Stem of Reed & Stem also helped design New York's Grand Central. The tower is 18 stories with more than 500 offices.",
@@ -331,5 +396,6 @@
     "lb": "Reopened"
    }
   }
- ]
+ ],
+ "heroKey": "de_sp_now"
 }

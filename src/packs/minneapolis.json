@@ -25,13 +25,30 @@
    "Minneapolis Historian"
   ]
  ],
- "heroAlt": "",
- "heroLi": "",
- "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "heroAlt": "The Stone Arch Bridge over the Mississippi",
+ "heroLi": "<li>Header: Jim Cadwell · CC BY-SA 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Stone_Arch_Bridge,_Minneapolis_2012.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Jim Cadwell · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Stone_Arch_Bridge,_Minneapolis_2012.jpg\">Source</a>",
  "mission": "Find four landmarks around Minneapolis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Minneapolis is waiting.",
  "safetyNote": "<li>Stay on trails and bridges near the river, keep back from the edges and the falls, and dress for the weather. Winters are very cold.</li>",
- "badgeMap": {},
+ "badgeMap": {
+  "stonearch": [
+   "mn_sa_now",
+   "70% 40%"
+  ],
+  "millcity": [
+   "mn_mc_now",
+   "40% 50%"
+  ],
+  "spoonbridge": [
+   "mn_sb_now",
+   "85% 70%"
+  ],
+  "foshay": [
+   "mn_fo_now",
+   "50% 40%"
+  ]
+ },
  "level": "Classics",
  "region": "The Midwest",
  "stops": [
@@ -59,19 +76,35 @@
     "verify": "Wikipedia says it became a bike and walking path in 1994. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1883",
-    "label": "Railroad bridge",
-    "line": "The bridge carried trains for the Manitoba line.",
+    "yr": "about 1906",
+    "label": "The bridge then",
+    "line": "A postcard of the bridge and the mill district, around 1906.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mn_sa_then",
+     "by": "Pamla J. Eisenberg (scan of an old postcard)",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Stone_Arch_Bridge,_Minneapolis_1906_Post_Card.jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2012",
     "head": "Today",
     "label": "The bridge today",
-    "line": "Walkers and cyclists cross above the falls."
+    "line": "The curved stone arches over the Mississippi, with downtown behind. Photo from 2012.",
+    "ph": {
+     "k": "mn_sa_now",
+     "by": "Jim Cadwell",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Stone_Arch_Bridge,_Minneapolis_2012.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "James J. Hill built the bridge in 1882 and 1883 for his railroad, the St. Paul, Minneapolis and Manitoba, which became the Great Northern Railway. Charles C. Smith designed it.",
@@ -142,10 +175,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2014",
     "head": "Today",
-    "label": "The ruins today",
-    "line": "The museum is built inside the old mill's walls."
+    "label": "The mill ruins today",
+    "line": "The Washburn A Mill ruins beside the silos. Photo from 2014.",
+    "ph": {
+     "k": "mn_mc_now",
+     "by": "McGhiever",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Washburn_A_Mill_2014.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "The Washburn A Mill was built in 1874 and was called the largest flour mill in the world. On May 2, 1878, airborne flour dust ignited. The explosion killed 14 workers instantly and four more died in the fire. Five other mills were destroyed.",
@@ -216,10 +257,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2017",
     "head": "Today",
     "label": "The sculpture today",
-    "line": "The spoon and cherry sit in the middle of the garden."
+    "line": "The spoon and red cherry seen from behind a wooden scaffold sculpture in the garden. Photo from 2017.",
+    "ph": {
+     "k": "mn_sb_now",
+     "by": "Lorie Shaull",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Scaffold_sculpture,_and_Spoon_and_Cherry_bridge_during_protests.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Claes Oldenburg and Coosje van Bruggen made Spoonbridge and Cherry. It was placed by cranes on May 9, 1988, and the Sculpture Garden opened that fall with ceremonies September 9 to 11.",
@@ -290,10 +339,18 @@
     }
    },
    "now": {
-    "yr": "Today",
+    "yr": "2011",
     "head": "Today",
     "label": "The tower today",
-    "line": "The tower is a hotel with an observation deck."
+    "line": "The sloped, stepped tower against the sky. Photo from 2011.",
+    "ph": {
+     "k": "mn_fo_now",
+     "by": "Raggedkompany",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Foshay_Tower_01.jpg",
+     "note": "resized"
+    }
    },
    "story": [
     "Foshay Tower opened in November 1929. It is 447 feet tall, designed by Léon Eugène Arnal for Magney & Tusler, and modeled on the Washington Monument, with sides that slope slightly inward.",
@@ -331,5 +388,6 @@
     "lb": "Hotel opened"
    }
   }
- ]
+ ],
+ "heroKey": "mn_sa_now"
 }
