@@ -26,7 +26,7 @@ with sync_playwright() as p:
                 pg.click('text=Unlock the story')
                 need(pg.evaluate('document.documentElement.scrollWidth')<=w,f'{tag} {city}: sideways scroll on unlock')
                 need(pg.evaluate("[...document.images].every(i=>i.complete&&i.naturalWidth>0)"),f'{tag} {city}: broken image')
-                pg.click('text=Source check')
+                pg.click('text=sort fact from fiction')
                 need(pg.evaluate('document.documentElement.scrollWidth')<=w,f'{tag} {city}: sideways scroll on game')
                 hts=pg.evaluate("[...document.querySelectorAll('.fbtn,#bar .btn')].map(e=>e.getBoundingClientRect().height)")
                 need(all(x>=40 for x in hts),f'{tag} {city}: tap target under 40px {hts}')

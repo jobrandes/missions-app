@@ -308,6 +308,19 @@
   var streak=0;
   var FLAB=['Well documented','Disputed or unproven','Not true'];
   var FSUB=['Solid sources back it up','Historians disagree or cannot prove it','It is a myth or a mistake'];
+  function nextPanel(){
+    var n=STOPS.length, j=-1, k, t;
+    for(k=1;k<n;k++){ t=(cur.i+k)%n; if(!S.done[t]){ j=t; break; } }
+    var h='<section class="card nextstop"><p class="mono">What next</p>';
+    if(j>=0){
+      h+='<p>Stop done. Now go to <strong>'+STOPS[j].name+'</strong>, then check in there.</p><button class="btn" data-a="nextstop" data-i="'+j+'">Next stop: '+STOPS[j].name+'</button><button class="btn ghost" data-a="exit">Back to the trail</button>';
+    } else {
+      h+='<p>That is every stop in '+city().name+'. Nicely done.</p>';
+      if(((__DATA__.boss||{})[cityId]||[]).length) h+='<button class="btn" data-a="bossgo">Take the final challenge</button>';
+      h+='<button class="btn ghost" data-a="tab" data-t="rewards">See my passport</button><button class="btn ghost" data-a="exit">Back to the trail</button>';
+    }
+    return h+'</section>';
+  }
   function factGame(st){
     var n=st.claims.length, next=-1, doneN=0;
     st.claims.forEach(function(c,ci){ if(S.claims[cur.i*2+ci]) doneN++; else if(next<0) next=ci; });
@@ -319,10 +332,10 @@
     if(next<0){
       h+='<p><strong>All claims sorted.</strong> Here is what the sources say.</p>';
       st.claims.forEach(function(c){ h+='<div class="fdone"><p><strong>'+c.t+'</strong></p><p class="feedback good">'+FLAB[c.a]+'. <span class="why">'+c.why+'</span></p></div>'; });
-      return h+'<button class="btn" data-a="exit">Back to the trail</button></section>';
+      return h+'</section>'+nextPanel();
     }
     var c=st.claims[next];
-    h+='<p class="why">Is this claim solid, disputed, or not true? Tap a label'+(('ontouchstart' in window)?', or swipe the card right for solid and left for not true':'')+'.</p>';
+    h+='<p class="why">Open book: the answers are in the story and sources you just read. Is this claim solid, disputed, or not true? Tap a label'+(('ontouchstart' in window)?', or swipe the card right for solid and left for not true':'')+'.</p>';
     h+='<div class="fcard'+(cur.fbad?' shake':'')+'" data-claim="'+next+'" tabindex="0"><p class="ftxt">'+c.t+'</p></div>';
     if(cur.fbad) h+='<p class="feedback bad" aria-live="polite">Not quite. Check the story and the sources, then try again.</p>';
     h+='<div class="fbtns" role="group" aria-label="Choose a label">'+FLAB.map(function(r,k){
@@ -379,7 +392,7 @@
       if(st.disputed) h+='<aside class="argue" aria-label="Historians argue about this"><div class="argue-h"><span class="argue-ic" aria-hidden="true">?</span><span><b>Historians argue about this</b><em>Not everything here is settled.</em></span></div><p>'+st.disputed+'</p><p class="argue-go">Think you can tell solid from shaky? The Source check is next.</p></aside>';
       h+='<div class="fact"><span class="mono">Did you know</span><span>'+st.fact+'</span></div>';
       h+='<details class="card"><summary>Sources</summary><ul class="srcs">'+st.sources.map(function(s){return '<li><a target="_blank" rel="noopener" href="'+s.u+'">'+s.t+'</a></li>';}).join('')+'</ul></details>';
-      h+='<button class="btn" data-a="step" data-n="3">Source check: earn up to 50 XP</button>';
+      h+='<button class="btn" data-a="step" data-n="3">Next: sort fact from fiction (up to 50 XP)</button>';
     }
     if(cur.step===3 && d){ h+=factGame(st); }
     return h;
@@ -478,6 +491,8 @@
     var b=e.target.closest('[data-a]'); if(!b) return;
     var a=b.getAttribute('data-a');
     if(a==='home'){ goHome(); return; }
+    if(a==='nextstop'){ openStop(+b.getAttribute('data-i'),0); return; }
+    if(a==='bossgo'){ leave(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='boss'||a==='bossagain'){ boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
     if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a) boss.score++; render(); } return; }

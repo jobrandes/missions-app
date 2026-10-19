@@ -61,6 +61,15 @@ with sync_playwright() as p:
         pg.locator('.opt').first.click(); pg.click('[data-a=bnext]')
     need('of 4' in pg.inner_text('.boss-res').lower() and pg.evaluate("localStorage.getItem('then-now-boss')")!=None,'final challenge ends with a score and saves it')
     pg.click('text=Back to the trail'); need(pg.locator('.stops').count()==1,'final challenge returns to the trail')
+    # finishing a stop points at the next one
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
+    pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')
+    need(pg.locator('.nextstop [data-a=nextstop]').count()==1,'finished stop offers a Next stop button')
+    pg.click('[data-a=nextstop]'); need('i am here' in pg.inner_text('#main').lower(),'Next stop opens the next stop at Find it')
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}},'then-now-cel':{'reno':1}})
+    pg.click('.stop >> nth=3'); pg.click('text=sort fact from fiction')
+    need(pg.locator('[data-a=bossgo]').count()==1,'last stop offers the final challenge')
+    pg.click('[data-a=bossgo]'); need(pg.locator('.opt').count()>=4,'final challenge opens from the last stop')
     # old v2 save migrates
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
