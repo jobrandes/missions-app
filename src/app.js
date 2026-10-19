@@ -238,7 +238,7 @@
     var f=d.querySelector('button'); if(f) f.focus();
   }
   function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeCeleb(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeCeleb(); if(document.getElementById('tour')) endTour(); } });
   /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
   try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
   window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
@@ -250,6 +250,27 @@
     if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
     return '<div class="vbadge"><b>Not verified on site yet</b><span>'+st.field.replace(/^Field notes pending:\s*/i,'')+'</span></div>';
   }
+  /* ---------- first-run tour ---------- */
+  var TOUR=[
+    {k:'Step 1',h:'Go there.',p:'Every mission sends you to a real place. Read the clue, find the spot, and bring your own two feet.'},
+    {k:'Step 2',h:'Prove it.',p:'Answer a question you can only get by standing there. Get it right and you earn the stamp and unlock the story.'},
+    {k:'Step 3',h:'Stamp it.',p:'Swipe a real old photo into today, then sort the claims: solid, disputed, or not true. Everything stays on this phone.'}
+  ], tourI=0;
+  function maybeTour(){
+    var seen=null; try{ seen=localStorage.getItem('then-now-tour'); }catch(e){}
+    if(seen) return;
+    var anyProgress=false; ORDER.forEach(function(k){ if(sum(ALL[k].done)>0) anyProgress=true; });
+    if(anyProgress){ try{ localStorage.setItem('then-now-tour','1'); }catch(e){} return; }
+    showTour();
+  }
+  function showTour(){
+    var old=document.getElementById('tour'); if(old) old.remove();
+    var t=TOUR[tourI], last=tourI===TOUR.length-1;
+    var d=document.createElement('div'); d.id='tour'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','tourT');
+    d.innerHTML='<div class="celeb-card tour-card"><p class="mono">'+t.k+' of 3</p><h2 id="tourT">'+t.h+'</h2><p>'+t.p+'</p><div class="tour-dots" aria-hidden="true">'+TOUR.map(function(_,i){ return '<i'+(i===tourI?' class="on"':'')+'></i>'; }).join('')+'</div><div class="celeb-btns"><button class="btn" data-a="tournext">'+(last?'Let us go':'Next')+'</button>'+(last?'':'<button class="btn ghost" data-a="tourskip">Skip</button>')+'</div></div>';
+    document.body.appendChild(d); var f=d.querySelector('button'); if(f) f.focus();
+  }
+  function endTour(){ var e=document.getElementById('tour'); if(e) e.remove(); try{ localStorage.setItem('then-now-tour','1'); }catch(x){} }
   /* ---------- final challenge (boss round) ---------- */
   var boss=null;
   function bossBest(){ try{ return JSON.parse(localStorage.getItem('then-now-boss')||'{}')||{}; }catch(e){ return {}; } }
@@ -458,6 +479,8 @@
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
     if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a) boss.score++; render(); } return; }
     if(a==='bnext'){ if(boss){ boss.i++; boss.pick=null; if(boss.i>=__DATA__.boss[boss.pid].length) bossSave(boss.pid,boss.score); render(); window.scrollTo(0,0); } return; }
+    if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
+    if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
     if(a==='passport'){ closeCeleb(); goHome(); setTimeout(function(){ var p=document.getElementById('passport'); if(p&&p.scrollIntoView) p.scrollIntoView({behavior:'smooth',block:'start'}); },60); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); applyCity(); return; }
@@ -522,5 +545,5 @@
     if(a==='resetyes'){ ALL[cityId]=blank(); S=ALL[cityId]; save(); confirmReset=false; render(); toast('Progress erased'); return; }
   });
 
-  load(); applyCity(); render();
+  load(); applyCity(); render(); maybeTour();
 })();

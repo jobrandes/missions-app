@@ -403,3 +403,8 @@ details.reg[open]>summary.region::after{content:"–"}
 .boss-res h2{font:800 clamp(44px,14vw,72px) var(--font-display);margin:4px 0}
 .boss-res.perfect{border:2px solid var(--accent)}
 .opt:disabled{cursor:default}
+
+.tour-card h2{font-size:clamp(34px,10vw,48px)}
+.tour-dots{display:flex;justify-content:center;gap:8px;margin:14px 0 16px}
+.tour-dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.tour-dots i.on{background:var(--accent)}

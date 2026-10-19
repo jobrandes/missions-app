@@ -11,13 +11,19 @@ def need(c,m):
     if not c: bad.append(m)
 with sync_playwright() as p:
     b=p.chromium.launch()
-    def new(seed=None):
-        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce'); pg=ctx.new_page(); pg.on('pageerror',lambda e:errs.append(str(e)))
+    def new(seed=None,tour=False):
+        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce')
+        if not tour: ctx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}")
+        pg=ctx.new_page(); pg.on('pageerror',lambda e:errs.append(str(e)))
         pg.goto(U)
         if seed:
             for k,v in seed.items(): pg.evaluate('([k,v])=>localStorage.setItem(k,v)',[k,json.dumps(v)])
             pg.reload()
         return pg
+    # first-run tour shows once, can be finished, and does not return
+    pg=new(tour=True); need(pg.locator('#tour').count()==1,'first-run tour shows on a fresh phone')
+    pg.click('[data-a=tournext]'); pg.click('[data-a=tournext]'); pg.click('[data-a=tournext]')
+    need(pg.locator('#tour').count()==0,'tour closes after the last step'); pg.reload(); pg.wait_for_timeout(300); need(pg.locator('#tour').count()==0,'tour does not return after finishing')
     # first launch -> home
     pg=new()
     need('go there' in pg.inner_text('#main').lower(),'first launch should show Home')

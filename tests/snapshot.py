@@ -8,7 +8,7 @@ open(wrap,'w').write('<!doctype html><html><head><meta charset="utf-8"><meta nam
 def h(x): return hashlib.sha1(x.encode()).hexdigest()[:12]
 out={};errs=[]
 with sync_playwright() as p:
-    b=p.chromium.launch(); pg=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce').new_page()
+    b=p.chromium.launch(); cx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce'); cx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}"); pg=cx.new_page()
     pg.on('pageerror',lambda e:errs.append(str(e)))
     pg.goto('file://'+wrap)
     for city in ('Reno','Virginia City'):

@@ -12,7 +12,7 @@ def need(c,m):
 with sync_playwright() as p:
     b=p.chromium.launch()
     for w,h,cs in [(360,740,'light'),(390,844,'dark'),(768,1024,'light'),(1280,900,'light'),(1280,900,'dark')]:
-        pg=b.new_context(viewport={'width':w,'height':h},color_scheme=cs,reduced_motion='reduce').new_page()
+        cx=b.new_context(viewport={'width':w,'height':h},color_scheme=cs,reduced_motion='reduce'); cx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}"); pg=cx.new_page()
         pg.on('pageerror',lambda e:errs.append(str(e)))
         pg.goto('file:///tmp/_chk.html'); tag=f'{w}px/{cs}'
         for city in ('Reno','Virginia City'):
