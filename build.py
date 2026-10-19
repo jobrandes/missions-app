@@ -26,7 +26,7 @@ print('built index.html',len(out)//1024,'KB;',len(photos),'photos;',len(packs),'
 # Standalone copy for static hosting (Netlify test site). Same content, wrapped in a full document.
 os.makedirs(R+'site',exist_ok=True)
 reset='<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>'
-full=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0e1d33"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Then &amp; Now">'
+full=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0e1d33"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Stamp the Past">'
   +rd('src/head.html')+reset+'<style>\n'+rd('src/styles.css')+'</style></head><body>'+rd('src/body.html')+'<form name="report" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="form-name" value="report"><input name="bot-field"><input name="where"><input name="message"><input name="contact"></form><script>\n'+js+'</script></body></html>')
 open(R+'site/index.html','w').write(full)
 open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex\n')
@@ -40,7 +40,7 @@ print('copied pages')
 import hashlib
 h=hashlib.sha1(full.encode()).hexdigest()[:10]
 open(R+'site/sw.js','w').write(rd('src/sw.js').replace('__BUILD__',h))
-open(R+'site/manifest.webmanifest','w').write(json.dumps({"name":"Then & Now","short_name":"Then & Now","start_url":"./","scope":"./","display":"standalone","background_color":"#0e1d33","theme_color":"#0e1d33","description":"Missions for real places.","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}))
+open(R+'site/manifest.webmanifest','w').write(json.dumps({"name":"Stamp the Past","short_name":"Stamp the Past","start_url":"./","scope":"./","display":"standalone","background_color":"#0e1d33","theme_color":"#0e1d33","description":"Missions for real places.","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}))
 for f in ('icon-192.png','icon-512.png','icon-maskable-512.png','apple-touch-icon.png'):
     shutil.copy(R+'src/assets/'+f,R+'site/'+f)
 hd=open(R+'site/_headers').read()+'/sw.js\n  Cache-Control: no-cache\n/index.html\n  Cache-Control: no-cache\n'

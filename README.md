@@ -1,4 +1,4 @@
-# Then & Now
+# Stamp the Past
 
 A phone-first scavenger-hunt mission app for towns you visit. Find a real landmark, answer a question you can only answer standing there, earn its badge, then unlock the history story and a Then/Now photo pair.
 

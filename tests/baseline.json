@@ -1,5 +1,5 @@
 {
- "Reno:trail": "2017da2f96f5",
+ "Reno:trail": "4020589290d6",
  "Reno:0:find": "84a68676f1fe",
  "Reno:0:checkin": "524dcdc86861",
  "Reno:0:unlock": "2f9c33104468",
@@ -24,8 +24,8 @@
  "Reno:tab:cards": "88973948b2ee",
  "Reno:tab:rewards": "577a550f7911",
  "Reno:tab:trail": "b981a5176963",
- "Reno:hdr": "4acc89006cbe",
- "Virginia City:trail": "d6bcf3c8cad1",
+ "Reno:hdr": "54396cfa5e28",
+ "Virginia City:trail": "4e8dc773827b",
  "Virginia City:0:find": "1fc62e4e29e8",
  "Virginia City:0:checkin": "621698888647",
  "Virginia City:0:unlock": "88af181d9b42",
@@ -50,6 +50,6 @@
  "Virginia City:tab:cards": "5a3fd3ae190b",
  "Virginia City:tab:rewards": "52fb50357b91",
  "Virginia City:tab:trail": "a70a26bb612a",
- "Virginia City:hdr": "c3ab3587e8e3",
+ "Virginia City:hdr": "17eb6d016e27",
  "errors": []
 }

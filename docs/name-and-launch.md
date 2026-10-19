@@ -1,5 +1,8 @@
 # App name and App Store checklist (draft, not legal advice)
 
+## Decision (Oct 19, 2026): working name is **Stamp the Past**
+Tagline: "Go there. Prove it. Stamp the past." Checked: no exact App Store match (neighbors are stamp/timestamp tools), no business found by web search, `.com` lookup returned no record (unconfirmed). Still to do: confirm `stampthepast.com` at a registrar, run the free USPTO search, then buy. Rejected after checking: Plaquest, Yorewalk, Yesterspot, Footprove, Tall Tale Trail, Pastport, Postmarked, Wet Ink, Plant Your Flag and others (too close to existing apps, taken, or off-tone).
+
 ## Name: what the quick search found (Oct 18, 2026)
 Close neighbors already on the App Store or the web: **On This Spot**, **Now & Then**, **Stamp Hunt**, **PlaquePro**, **PastViewer**. "Then & Now" is a very common phrase, so it is a weak, crowded name. Treat the current working name as a placeholder.
 
