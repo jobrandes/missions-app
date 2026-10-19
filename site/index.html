@@ -397,6 +397,14 @@ details.reg[open]>summary.region::after{content:"–"}
 .vbadge.ok{border:1.5px solid var(--accent);color:var(--ink);background:var(--surface-2)}
 .vbadge.ok b{color:var(--accent)}
 .vchip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font:700 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+
+.argue{margin:14px 0;border:2px solid var(--warn);border-radius:14px;padding:14px;background:var(--surface-2)}
+.argue-h{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.argue-ic{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2.5px solid var(--warn);color:var(--warn);font:800 24px var(--font-display)}
+.argue-h b{display:block;font:800 19px var(--font-display);text-transform:uppercase;letter-spacing:.02em}
+.argue-h em{display:block;font-style:normal;color:var(--muted);font-size:13px}
+.argue p{margin:0 0 6px}
+.argue .argue-go{margin:8px 0 0;color:var(--muted);font:600 12px var(--font-mono);letter-spacing:.04em}
 </style></head><body>
 
 <div class="app">
@@ -765,8 +773,8 @@ details.reg[open]>summary.region::after{content:"–"}
       h+='<div class="pair"><div class="then">'+visual(st,'then',st.then.label+', '+st.then.yr)+'<div class="cap"><strong>Then, '+st.then.yr+': '+st.then.label+'</strong><br>'+st.then.line+'</div>'+credit(st,'then')+'<a target="_blank" rel="noopener" href="'+st.then.link.u+'">'+st.then.link.t+'</a></div>'
         +'<div class="now">'+visual(st,'now',st.now.label)+'<span class="mono">'+(st.now.head||'Now')+'</span><b class="yr">'+st.now.yr+'</b><div class="cap"><strong>'+st.now.label+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
       h+='<section class="card story">'+st.story.map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
+      if(st.disputed) h+='<aside class="argue" aria-label="Historians argue about this"><div class="argue-h"><span class="argue-ic" aria-hidden="true">?</span><span><b>Historians argue about this</b><em>Not everything here is settled.</em></span></div><p>'+st.disputed+'</p><p class="argue-go">Think you can tell solid from shaky? The Source check is next.</p></aside>';
       h+='<div class="fact"><span class="mono">Did you know</span><span>'+st.fact+'</span></div>';
-      if(st.disputed) h+='<div class="note"><span class="mono">Sources disagree</span><span>'+st.disputed+'</span></div>';
       h+='<details class="card"><summary>Sources</summary><ul class="srcs">'+st.sources.map(function(s){return '<li><a target="_blank" rel="noopener" href="'+s.u+'">'+s.t+'</a></li>';}).join('')+'</ul></details>';
       h+='<button class="btn" data-a="step" data-n="3">Source check: earn up to 50 XP</button>';
     }

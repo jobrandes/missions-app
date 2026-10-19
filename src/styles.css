@@ -390,3 +390,11 @@ details.reg[open]>summary.region::after{content:"–"}
 .vbadge.ok{border:1.5px solid var(--accent);color:var(--ink);background:var(--surface-2)}
 .vbadge.ok b{color:var(--accent)}
 .vchip{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);font:700 11px var(--font-mono);letter-spacing:.08em;text-transform:uppercase}
+
+.argue{margin:14px 0;border:2px solid var(--warn);border-radius:14px;padding:14px;background:var(--surface-2)}
+.argue-h{display:flex;align-items:center;gap:12px;margin:0 0 8px}
+.argue-ic{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2.5px solid var(--warn);color:var(--warn);font:800 24px var(--font-display)}
+.argue-h b{display:block;font:800 19px var(--font-display);text-transform:uppercase;letter-spacing:.02em}
+.argue-h em{display:block;font-style:normal;color:var(--muted);font-size:13px}
+.argue p{margin:0 0 6px}
+.argue .argue-go{margin:8px 0 0;color:var(--muted);font:600 12px var(--font-mono);letter-spacing:.04em}
