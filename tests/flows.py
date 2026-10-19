@@ -14,11 +14,11 @@ with sync_playwright() as p:
     def new(seed=None,tour=False):
         ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce')
         if not tour: ctx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}")
+        if seed:
+            js="try{if(!sessionStorage.getItem('_seeded')){sessionStorage.setItem('_seeded','1');"+''.join("localStorage.setItem(%s,%s);"%(json.dumps(k),json.dumps(json.dumps(v))) for k,v in seed.items())+"}}catch(e){}"
+            ctx.add_init_script(js)
         pg=ctx.new_page(); pg.on('pageerror',lambda e:errs.append(str(e)))
         pg.goto(U)
-        if seed:
-            for k,v in seed.items(): pg.evaluate('([k,v])=>localStorage.setItem(k,v)',[k,json.dumps(v)])
-            pg.reload()
         return pg
     # first-run tour shows once, can be finished, and does not return
     pg=new(tour=True); need(pg.locator('#tour').count()==1,'first-run tour shows on a fresh phone')

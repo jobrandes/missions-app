@@ -25,3 +25,8 @@ Celebration + passport, offline mode, verified-on-site badge, "historians argue"
 - Hints that cost XP; streaks / mission of the day.
 - "Local legend" card at each stop.
 - Accessibility pass (text size, screen reader labels, reduced motion).
+
+## Done while away
+- First-run walkthrough (3 steps, once, skippable).
+- Accessibility: keyboard focus stays inside popups; Esc closes them.
+- Fixed a flaky test seed (tests now seed before load).
