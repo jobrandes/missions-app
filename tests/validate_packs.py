@@ -42,3 +42,15 @@ bad=[b for b in bad if b]
 print('PACKS: '+('OK' if not bad else 'FAILED')+f' ({len(order)} towns)')
 for b in bad: print(' -',b)
 sys.exit(1 if bad else 0)
+
+# final challenge questions
+import json as _j,os as _o
+_b=_j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'..','src','boss.json')))
+_order=_j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)),'..','src','packs','index.json')))['order']
+for _k in _order:
+    _q=_b.get(_k)
+    if not _q or len(_q)!=4: print(f'BOSS: {_k} needs exactly 4 questions'); raise SystemExit(1)
+    if len({x['a'] for x in _q})<2: print(f'BOSS: {_k} answers all in one slot'); raise SystemExit(1)
+    for x in _q:
+        if len(x['o'])!=4 or len(set(x['o']))!=4 or not 0<=x['a']<4 or not x.get('why'): print(f'BOSS: {_k} bad question {x[chr(113)]}'); raise SystemExit(1)
+print('BOSS: OK')

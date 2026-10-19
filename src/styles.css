@@ -398,3 +398,8 @@ details.reg[open]>summary.region::after{content:"–"}
 .argue-h em{display:block;font-style:normal;color:var(--muted);font-size:13px}
 .argue p{margin:0 0 6px}
 .argue .argue-go{margin:8px 0 0;color:var(--muted);font:600 12px var(--font-mono);letter-spacing:.04em}
+
+.boss-res{text-align:center}
+.boss-res h2{font:800 clamp(44px,14vw,72px) var(--font-display);margin:4px 0}
+.boss-res.perfect{border:2px solid var(--accent)}
+.opt:disabled{cursor:default}

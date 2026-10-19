@@ -45,6 +45,16 @@ with sync_playwright() as p:
     pg.click('text=See my passport'); pg.wait_for_timeout(300)
     need(pg.locator('#celeb').count()==0 and pg.locator('#passport .pprow.full').count()==1,'passport shows the completed mission and closes the celebration')
     pg.reload(); pg.click('.town >> nth=0'); pg.wait_for_timeout(700); need(pg.locator('#celeb').count()==0,'celebration does not repeat')
+    # final challenge: only after all four stamps; scores and saves best
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    need(pg.locator('[data-a=boss]').count()==0,'final challenge is hidden until the mission is complete')
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,1],'claims':[0,0,0,0,0,0,0,0]}}},'then-now-cel':{'reno':1}})
+    pg.wait_for_timeout(400)
+    pg.click('[data-a=boss]')
+    for i in range(4):
+        pg.locator('.opt').first.click(); pg.click('[data-a=bnext]')
+    need('of 4' in pg.inner_text('.boss-res').lower() and pg.evaluate("localStorage.getItem('then-now-boss')")!=None,'final challenge ends with a score and saves it')
+    pg.click('text=Back to the trail'); need(pg.locator('.stops').count()==1,'final challenge returns to the trail')
     # old v2 save migrates
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
