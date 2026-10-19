@@ -166,12 +166,20 @@
     "verify": "Wikipedia gives the inscription as \"Proclaim LIBERTY Throughout all the Land,\" from Leviticus 25:10. Check the lettering on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1752",
-    "label": "Cast in London",
-    "line": "The bell was cast in 1752, cracked, and was recast in Philadelphia.",
+    "yr": "1951",
+    "label": "The bell in 1951",
+    "line": "A crowd gathered around the Liberty Bell on July 3, 1951.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ph_lb_then",
+     "by": "Abbie Rowe, National Park Service",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg",
+     "note": "resized"
     }
    },
    "now": {

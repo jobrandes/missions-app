@@ -196,3 +196,11 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sv_ca_then | File:Cathedral_of_St._John_the_Baptist,_Savannah,_Georgia.jpg | Unknown (print published before 1914) | Public domain | before 1914 |
 | sv_rs_then | File:City_and_Harbor_of_Savannah,_Georgia.jpg | J. O. Davidson (illustrator) | Public domain | 1883 |
 | me_gl_then | File:Graceland_1989.jpg | Bruce Andersen | CC BY 3.0 | 1989 |
+
+### "Then" photos added Oct 19 (third pass)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| chi_bf_then | File:Buckinghamfountain3g05158u.jpg | John Buczak, Federal Art Project | Public domain | 1939 |
+| sf_gg_then | File:GoldenGateBridge_openingday.jpg | Mr. Euler | CC BY-SA 3.0 | 1937 |
+| ph_lb_then | File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg | Abbie Rowe, National Park Service | Public domain | 1951 |
+| no_js_then | File:Jackson_Square,_New_Orleans.jpg | W. P. Snyder | Public domain | 1885 |

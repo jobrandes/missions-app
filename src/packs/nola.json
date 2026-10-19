@@ -76,12 +76,20 @@
     "verify": "The square is named for Andrew Jackson, whose statue was erected in 1851 (National Park Service). Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1851",
-    "label": "Renamed",
-    "line": "The square became Jackson Square in 1851.",
+    "yr": "1885",
+    "label": "The square then",
+    "line": "A view of Jackson Square from above in 1885, with the statue at the center.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "no_js_then",
+     "by": "W. P. Snyder",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans.jpg",
+     "note": "resized"
     }
    },
    "now": {

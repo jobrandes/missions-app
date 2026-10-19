@@ -248,12 +248,20 @@
     "verify": "Four pairs of sea horses stand for four states (Wikipedia, Buckingham Fountain). Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1927",
-    "label": "Dedication year",
-    "line": "The fountain was dedicated on August 26, 1927.",
+    "yr": "1939",
+    "label": "A 1939 poster",
+    "line": "A Federal Art Project poster advertising the fountain as free, in 1939.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "chi_bf_then",
+     "by": "John Buczak, Federal Art Project",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Buckinghamfountain3g05158u.jpg",
+     "note": "resized"
     }
    },
    "now": {

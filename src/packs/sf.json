@@ -76,12 +76,20 @@
     "verify": "The bridge is painted International Orange (Wikipedia, Golden Gate Bridge). Confirm on site signage. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1933",
-    "label": "Construction begins",
-    "line": "Work started on January 5, 1933.",
+    "yr": "1937",
+    "label": "Opening day",
+    "line": "A visitor on the bridge on opening day, May 26, 1937.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sf_gg_then",
+     "by": "Mr. Euler",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:GoldenGateBridge_openingday.jpg",
+     "note": "resized"
     }
    },
    "now": {
