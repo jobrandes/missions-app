@@ -132,3 +132,28 @@ Photos for these three towns are logged below.
 | ph_ea_now | File:Elfreth%27s_Alley.JPG | Kjetil Ree | CC BY-SA 3.0 | 2006 |
 
 Still pending (no free photo found): Chicago Water Tower/Buckingham/Chicago Theatre then; Golden Gate then; Liberty Bell then; Elfreth's Alley then.
+
+### Photos added Oct 19 (Los Angeles, Seattle, New Orleans)
+| Key | File on Commons | Author | License | Year |
+|---|---|---|---|---|
+| la_gr_now | File:Griffith_Observatory_2012_01.jpg | Mike Peel | CC BY-SA 4.0 | 2012 |
+| la_hs_now | File:Hollywood_Sign_(Zuschnitt).jpg | Thomas Wolf | CC BY-SA 3.0 | 2015 |
+| la_hs_then | File:Hollywoodland_Sign_1920s.jpg | Unknown author | Public domain | 1920s |
+| la_ct_now | File:Grauman's_Chinese_Theatre,_by_Carol_Highsmith.jpg | Carol M. Highsmith (Library of Congress) | Public domain | 2004 |
+| la_us_now | File:Los_Angeles_(California,_USA),_Union_Station_--_2012_--_4938.jpg | Dietmar Rabich | CC BY-SA 4.0 | 2012 |
+| sea_sn_now | File:Seattle_(WA,_USA),_Space_Needle_--_2022_--_1498.jpg | Dietmar Rabich | CC BY-SA 4.0 | 2022 |
+| sea_sn_then | File:Aerial_photo_of_Space_Needle_under_construction,_1961.jpg | Seattle Municipal Archives | CC BY 2.0 | 1961 |
+| sea_pp_now | File:Public_Market_sign_at_Pike_Place_Market,_2017.jpg | Madi Fawcett | CC BY-SA 4.0 | 2017 |
+| sea_pp_then | File:Market_vendors_gathering_on_Pike_Place,_ca._1907_-_DPLA_-_f62ac740d22b6ca81f281666c4c52882_(page_1).jpg | Digital Public Library of America | Public domain | about 1907 |
+| sea_st_now | File:Seattle_-_Smith_Tower_01.jpg | Joe Mabel | CC BY-SA 3.0 | 2007 |
+| sea_st_then | File:LC_Smith_Tower_and_Mt_Rainier,_1914_(SEATTLE_3137).jpg | Frank H. Nowell | Public domain | 1914 |
+| sea_gw_now | File:Gas_Works_Park_(Seattle,_Washington).jpg | Visitor7 | CC BY-SA 3.0 | 2011 |
+| no_js_now | File:Jackson_Square,_New_Orleans,_USA1.jpg | Diego Delso | CC BY-SA 3.0 | 2008 |
+| no_ca_now | File:St._Louis_Cathedral_(New_Orleans)_2.jpg | APK | CC BY-SA 4.0 | 2022 |
+| no_ca_then | File:Jackson_Square_&_Cathedral_of_St._Louis,_New_Orleans_LCCN2017658694.jpg | Detroit Photographic Co. | Public domain | about 1900 |
+| no_cb_now | File:Cabildo9Jul07SousaphoneFront.jpg | Infrogmation of New Orleans | CC BY-SA 3.0 | 2007 |
+| no_cb_then | File:Cabildo_Supreme_Court_c_1900_New_Orleans.jpg | Detroit Publishing Co. | Public domain | about 1900 |
+| no_fm_now | File:French_Market_Hall_New_Orleans_11_October_2016.jpg | Infrogmation of New Orleans | CC BY-SA 4.0 | 2016 |
+| no_fm_then | File:Detroit_Photographic_Company_(0347)_-_French_Market,_New_Orleans.jpg | Detroit Photographic Company | Public domain | about 1900 |
+
+Still pending: Jackson Square then, Griffith Observatory, Chinese Theatre, Union Station and Gas Works Park "then" photos.

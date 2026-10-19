@@ -458,5 +458,143 @@
    "a": 0,
    "why": "Wikipedia calls it our nation's oldest residential street."
   }
+ ],
+ "la": [
+  {
+   "q": "Who donated the land for Griffith Observatory?",
+   "o": [
+    "Walt Disney",
+    "Griffith J. Griffith",
+    "Harry Chandler",
+    "Sid Grauman"
+   ],
+   "a": 1,
+   "why": "Griffith J. Griffith donated 3,015 acres in 1896."
+  },
+  {
+   "q": "What did the Hollywood Sign originally read?",
+   "o": [
+    "Hollywoodland",
+    "Hollywood Hills",
+    "Tinseltown",
+    "Studio City"
+   ],
+   "a": 0,
+   "why": "It advertised the Hollywoodland housing development in 1923."
+  },
+  {
+   "q": "Which film opened Grauman's Chinese Theatre in 1927?",
+   "o": [
+    "Ben-Hur",
+    "Sunrise",
+    "The Jazz Singer",
+    "The King of Kings"
+   ],
+   "a": 3,
+   "why": "It opened May 18, 1927 with DeMille's The King of Kings."
+  },
+  {
+   "q": "When did Union Station open?",
+   "o": [
+    "1939",
+    "1915",
+    "1952",
+    "1927"
+   ],
+   "a": 0,
+   "why": "It opened on May 3, 1939."
+  }
+ ],
+ "seattle": [
+  {
+   "q": "What was the Space Needle built for?",
+   "o": [
+    "A baseball opening",
+    "The 1962 World's Fair",
+    "A radio station",
+    "A lumber company"
+   ],
+   "a": 1,
+   "why": "It opened April 21, 1962 for the Century 21 Exposition."
+  },
+  {
+   "q": "Who is the bronze pig at Pike Place Market named?",
+   "o": [
+    "Penny",
+    "Wilbur",
+    "Pearl",
+    "Rachel"
+   ],
+   "a": 3,
+   "why": "Rachel is a 550-pound bronze piggy bank."
+  },
+  {
+   "q": "Smith Tower was the tallest building west of the Mississippi until which year?",
+   "o": [
+    "1931",
+    "1962",
+    "1914",
+    "1948"
+   ],
+   "a": 0,
+   "why": "The Kansas City Power & Light Building passed it in 1931."
+  },
+  {
+   "q": "What did Gas Works Park used to be?",
+   "o": [
+    "A shipyard",
+    "A gasification plant",
+    "A brewery",
+    "A sawmill"
+   ],
+   "a": 1,
+   "why": "A coal gasification plant ran there from 1906 to 1956."
+  }
+ ],
+ "nola": [
+  {
+   "q": "When did Jackson Square get its current name?",
+   "o": [
+    "1803",
+    "1814",
+    "1851",
+    "1895"
+   ],
+   "a": 2,
+   "why": "It kept the name Place d'Armes until 1851."
+  },
+  {
+   "q": "What destroyed the earlier St. Louis church in 1788?",
+   "o": [
+    "A hurricane",
+    "A flood",
+    "An earthquake",
+    "The Great New Orleans Fire"
+   ],
+   "a": 3,
+   "why": "It burned on Good Friday, March 21, 1788."
+  },
+  {
+   "q": "Which roof was added to the Cabildo in 1847?",
+   "o": [
+    "A thatched roof",
+    "A mansard roof",
+    "A glass roof",
+    "A dome"
+   ],
+   "a": 1,
+   "why": "A third floor with a French-style mansard roof."
+  },
+  {
+   "q": "The French Market was dedicated as a market in which year?",
+   "o": [
+    "1791",
+    "1850",
+    "1815",
+    "1920"
+   ],
+   "a": 0,
+   "why": "Part of the space was dedicated as a market in 1791."
+  }
  ]
 }

@@ -1,0 +1,409 @@
+{
+ "id": "seattle",
+ "name": "Seattle",
+ "explorer": "Emerald City Explorer",
+ "initials": "SEA",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Waterfront Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Puget Scholar"
+  ],
+  [
+   600,
+   "Seattle Historian"
+  ]
+ ],
+ "heroAlt": "The Space Needle against the sky",
+ "heroLi": "<li>Header: Dietmar Rabich · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Seattle_(WA,_USA),_Space_Needle_--_2022_--_1498.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Dietmar Rabich · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Seattle_(WA,_USA),_Space_Needle_--_2022_--_1498.jpg\">Source</a>",
+ "mission": "Find four landmarks around Seattle. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Seattle is waiting.",
+ "safetyNote": "<li>Seattle is hilly and often rainy. Wear good shoes, bring a jacket, and take care on wet pavement and steep streets.</li>",
+ "badgeMap": {
+  "spaceneedle": [
+   "sea_sn_now",
+   "50% 40%"
+  ],
+  "pikeplace": [
+   "sea_pp_now",
+   "50% 50%"
+  ],
+  "smithtower": [
+   "sea_st_now",
+   "50% 30%"
+  ],
+  "gasworks": [
+   "sea_gw_now",
+   "50% 50%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "spaceneedle",
+   "name": "Space Needle",
+   "short": "Space Needle",
+   "badge": "Space Needle",
+   "tag": "Stop 1 of 4",
+   "teaser": "A flying saucer on a tripod, built in about 8 months.",
+   "map": "Space Needle, 400 Broad St, Seattle, WA",
+   "clue": "Go to Seattle Center and look up at the tall tower with a saucer-shaped top.",
+   "safety": "Seattle Center is busy. Stay on walkways and crossings, and note that the observation deck needs a ticket. Check the weather first.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the base of the tower. How many legs does it stand on?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "6"
+    ],
+    "answer": 1,
+    "hint": "Think tripod.",
+    "verify": "Wikipedia credits Victor Steinbrueck with the tripod design. Count the legs on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1961",
+    "label": "Under construction",
+    "line": "An aerial photo of the Space Needle under construction in 1961.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sea_sn_then",
+     "by": "Seattle Municipal Archives",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Aerial_photo_of_Space_Needle_under_construction,_1961.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2022",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The Space Needle against the sky. Photo from 2022.",
+    "ph": {
+     "k": "sea_sn_now",
+     "by": "Dietmar Rabich",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seattle_(WA,_USA),_Space_Needle_--_2022_--_1498.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Construction began on April 17, 1961. The tower opened on April 21, 1962 for the 1962 World's Fair, called Century 21. It stands 605 feet tall to the top of the spire.",
+    "Edward E. Carlson's concept was a giant tethered balloon, sketched on a napkin. John Graham's concept was a flying saucer holding the restaurant and observation deck. Victor Steinbrueck added the hourglass profile and tripod design.",
+    "The revolving restaurant stopped turning on March 27, 1964, after the Alaska earthquake. A $100 million renovation reopened in August 2018, with a revolving glass floor called the Loupe."
+   ],
+   "fact": "The original paint names were Orbital Olive, Astronaut White, Re-entry Red and Galaxy Gold.",
+   "disputed": "Nothing big is disputed. The most common mistake is thinking the restaurant has always rotated.",
+   "claims": [
+    {
+     "t": "The Space Needle was built for the 1962 World's Fair.",
+     "a": 0,
+     "why": "Wikipedia: it opened April 21, 1962 for the Century 21 Exposition."
+    },
+    {
+     "t": "The Space Needle's restaurant has rotated nonstop since 1962.",
+     "a": 2,
+     "why": "It stopped rotating on March 27, 1964, after the Alaska earthquake."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Space Needle",
+     "u": "https://en.wikipedia.org/wiki/Space_Needle"
+    },
+    {
+     "t": "The Clio: Space Needle",
+     "u": "https://theclio.com/tour/193/4"
+    }
+   ],
+   "card": {
+    "a": "1961",
+    "b": "1962",
+    "la": "Construction began",
+    "lb": "Opened"
+   }
+  },
+  {
+   "id": "pikeplace",
+   "name": "Pike Place Market",
+   "short": "Pike Place",
+   "badge": "Pike Place",
+   "tag": "Stop 2 of 4",
+   "teaser": "A market where fish fly and a bronze pig keeps the money.",
+   "map": "Pike Place Market, 85 Pike St, Seattle, WA",
+   "clue": "Walk to the market on Pike Place near the waterfront. Find the big bronze pig near the \"Public Market Center\" sign.",
+   "safety": "The market is very crowded. Watch for delivery carts, wet floors near fish counters, and traffic on the cobbled street.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find the large bronze pig near the Public Market Center sign. What is its name?",
+    "options": [
+     "Wilbur",
+     "Penny",
+     "Rachel",
+     "Pearl"
+    ],
+    "answer": 2,
+    "hint": "Check the plaque near the statue.",
+    "verify": "Wikipedia says the 550-pound bronze piggy bank is named Rachel. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "about 1907",
+    "label": "The early market",
+    "line": "Vendors gathering on Pike Place around the time the market opened in 1907.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sea_pp_then",
+     "by": "Digital Public Library of America",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Market_vendors_gathering_on_Pike_Place,_ca._1907_-_DPLA_-_f62ac740d22b6ca81f281666c4c52882_(page_1).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2017",
+    "head": "Today",
+    "label": "The Public Market sign",
+    "line": "The Public Market Center sign at Pike Place Market. Photo from 2017.",
+    "ph": {
+     "k": "sea_pp_now",
+     "by": "Madi Fawcett",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Public_Market_sign_at_Pike_Place_Market,_2017.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Pike Place Market opened on August 17, 1907. Its goal was to let consumers \"Meet the Producer.\" Frank Goodwin and his brothers developed most of the core buildings and kept the decoration minimal so the focus stayed on products and low prices.",
+    "In 1971, voters passed a historic preservation initiative on November 2 by a 2-to-1 margin. It created a historic district and kept the market in public hands.",
+    "Rachel is a 550-pound bronze piggy bank by Georgia Gerber, in place since 1986. It collects roughly $6,000 to $9,000 a year for the Market Foundation's social services."
+   ],
+   "fact": "Employees throw fish, such as three-foot salmon, across the counter instead of handing them over.",
+   "disputed": "Wikipedia calls it \"one of the older continuously operated public farmers' markets,\" not the oldest, so be wary of bigger claims.",
+   "claims": [
+    {
+     "t": "Pike Place Market opened in 1907.",
+     "a": 0,
+     "why": "Wikipedia: opened August 17, 1907."
+    },
+    {
+     "t": "The Starbucks at Pike Place Market is still in its original 1971 location.",
+     "a": 2,
+     "why": "The first Starbucks opened in 1971 at 2000 Western Avenue and moved in 1977 to 1912 Pike Place."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Pike Place Market",
+     "u": "https://en.wikipedia.org/wiki/Pike_Place_Market"
+    },
+    {
+     "t": "HistoryLink: Pike Place Market",
+     "u": "https://www.historylink.org/file/1602"
+    }
+   ],
+   "card": {
+    "a": "1907",
+    "b": "1971",
+    "la": "Opened",
+    "lb": "Preservation vote"
+   }
+  },
+  {
+   "id": "smithtower",
+   "name": "Smith Tower",
+   "short": "Smith Tower",
+   "badge": "Smith Tower",
+   "tag": "Stop 3 of 4",
+   "teaser": "A skyscraper built by a typewriter fortune.",
+   "map": "Smith Tower, 506 2nd Ave, Seattle, WA",
+   "clue": "Go to Pioneer Square and look for the white terra-cotta tower with a pointed roof.",
+   "safety": "Pioneer Square sidewalks are busy and uneven. Watch for traffic and stay on crossings.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the very top of the tower. What shape is the roof?",
+    "options": [
+     "A pyramid",
+     "A dome",
+     "Flat",
+     "A clock tower"
+    ],
+    "answer": 0,
+    "hint": "Think Egypt.",
+    "verify": "Sources describe the tower topped by a pyramid. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1914",
+    "label": "Newly built",
+    "line": "Smith Tower with Mount Rainier behind it, in 1914.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sea_st_then",
+     "by": "Frank H. Nowell",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:LC_Smith_Tower_and_Mt_Rainier,_1914_(SEATTLE_3137).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "Smith Tower rising over Pioneer Square. Photo from 2007.",
+    "ph": {
+     "k": "sea_st_now",
+     "by": "Joe Mabel",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seattle_-_Smith_Tower_01.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Smith Tower was completed in 1914 and opened to the public on July 4, 1914. It is named for Lyman Cornelius Smith, a New York industrialist known for firearms and typewriters. He died in 1910, before construction began, and his son Burns Lyman Smith oversaw it. Gaggin & Gaggin of Syracuse, New York designed it.",
+    "It was the tallest building west of the Mississippi River until the Kansas City Power & Light Building was finished in 1931.",
+    "On the top floor, the Chinese Room has a carved teak ceiling and blackwood furniture said to be furnished by Empress Cixi. The tower kept elevator operators longer than most West Coast buildings. Elevators were automated starting in 2017."
+   ],
+   "fact": "The tower was one of the last on the West Coast to use elevator operators.",
+   "disputed": "The tower's height is quoted differently in different sources, and the Wishing Chair story is a legend.",
+   "claims": [
+    {
+     "t": "Smith Tower was the tallest building west of the Mississippi River when it was finished.",
+     "a": 0,
+     "why": "Wikipedia: it held that title until 1931."
+    },
+    {
+     "t": "Sitting in the Wishing Chair in the Chinese Room will bring marriage within a year.",
+     "a": 1,
+     "why": "It is a legend. Smith's daughter married in the room, but nobody can prove the chair works."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Smith Tower",
+     "u": "https://en.wikipedia.org/wiki/Smith_Tower"
+    },
+    {
+     "t": "HistoryLink: Smith Tower",
+     "u": "https://www.historylink.org/File/4310"
+    }
+   ],
+   "card": {
+    "a": "1914",
+    "b": "1931",
+    "la": "Opened",
+    "lb": "Lost tallest-west title"
+   }
+  },
+  {
+   "id": "gasworks",
+   "name": "Gas Works Park",
+   "short": "Gas Works",
+   "badge": "Gas Works",
+   "tag": "Stop 4 of 4",
+   "teaser": "A park built around a rusty gas plant.",
+   "map": "Gas Works Park, 2101 N Northlake Way, Seattle, WA",
+   "clue": "Cross to the north shore of Lake Union. Find the rusty industrial towers standing on a grassy hill.",
+   "safety": "Do not climb the towers or structures. They are fenced for a reason. Watch for broken surfaces, and keep a safe distance from the water.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Climb the grassy mound. What sits at the top?",
+    "options": [
+     "A flagpole",
+     "A fountain",
+     "A statue",
+     "A sundial"
+    ],
+    "answer": 3,
+    "hint": "Look at the top and check the shadows.",
+    "verify": "Wikipedia says artists built a sundial atop the mound. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1975",
+    "label": "Park opening",
+    "line": "The park opened in 1975.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The park today",
+    "line": "The old gas plant towers in Gas Works Park. Photo from 2011.",
+    "ph": {
+     "k": "sea_gw_now",
+     "by": "Visitor7",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Gas_Works_Park_(Seattle,_Washington).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "A coal gasification plant ran on this site from 1906 to 1956. Landscape architect Richard Haag designed the park, which opened in 1975, and he kept six of the old generator towers.",
+    "The Great Mound is an artificial hill made from rubble from old foundations, covered with fresh topsoil. On top is a sundial by artists Chuck Greening and Kim Lazare, where visitors act as the gnomon.",
+    "Workers treated the polluted soil with bio-phytoremediation. The Play Barn was built partly from the plant's old exhauster-compressor building. The park was added to the National Register of Historic Places on January 2, 2013."
+   ],
+   "fact": "Visitors work as the sundial's pointer: your shadow tells the time.",
+   "disputed": "Safety around the old towers is debated, and there is a dispute over removing their ladders and catwalks.",
+   "claims": [
+    {
+     "t": "Gas Works Park sits on the site of a former gasification plant.",
+     "a": 0,
+     "why": "Wikipedia: the plant ran from 1906 to 1956."
+    },
+    {
+     "t": "The old plant was torn down completely before the park was built.",
+     "a": 2,
+     "why": "Haag kept six of the generator towers and other structures in the park."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Gas Works Park",
+     "u": "https://en.wikipedia.org/wiki/Gas_Works_Park"
+    },
+    {
+     "t": "HistoryLink: Gas Works Park",
+     "u": "https://historylink.org/File/20978"
+    }
+   ],
+   "card": {
+    "a": "1906",
+    "b": "1975",
+    "la": "Plant opened",
+    "lb": "Park opened"
+   }
+  }
+ ],
+ "heroKey": "sea_sn_now"
+}

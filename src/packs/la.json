@@ -1,0 +1,393 @@
+{
+ "id": "la",
+ "name": "Los Angeles",
+ "explorer": "City of Angels Explorer",
+ "initials": "LA",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Boulevard Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Studio Scholar"
+  ],
+  [
+   600,
+   "Los Angeles Historian"
+  ]
+ ],
+ "heroAlt": "Griffith Observatory above Los Angeles",
+ "heroLi": "<li>Header: Mike Peel · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Mike Peel · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg\">Source</a>",
+ "mission": "Find four landmarks around Los Angeles. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of LA is waiting.",
+ "safetyNote": "<li>Los Angeles is spread out and traffic is heavy. Plan your rides, bring water, and cross only at crosswalks. Do not climb or hike to restricted areas.</li>",
+ "badgeMap": {
+  "griffith": [
+   "la_gr_now",
+   "50% 40%"
+  ],
+  "hollywoodsign": [
+   "la_hs_now",
+   "50% 50%"
+  ],
+  "chinesetheatre": [
+   "la_ct_now",
+   "50% 30%"
+  ],
+  "unionstation": [
+   "la_us_now",
+   "50% 40%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "griffith",
+   "name": "Griffith Observatory",
+   "short": "Griffith",
+   "badge": "Griffith",
+   "tag": "Stop 1 of 4",
+   "teaser": "A free observatory above the city, with a pendulum that proves the Earth spins.",
+   "map": "Griffith Observatory, 2800 E Observatory Rd, Los Angeles, CA",
+   "clue": "Head up to the domed observatory on the slope of Griffith Park, high above the city. Find the monument on the front lawn.",
+   "safety": "Parking is limited and the road is busy. It can be hot and exposed, so bring water. Stay on paths near edges and slopes.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "On the front lawn is the Astronomers Monument. How many scientists does it honor?",
+    "options": [
+     "4",
+     "6",
+     "8",
+     "12"
+    ],
+    "answer": 1,
+    "hint": "Count the figures around the monument.",
+    "verify": "Wikipedia lists six: Hipparchus, Copernicus, Galileo, Kepler, Newton and Herschel. Count on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1935",
+    "label": "Opening year",
+    "line": "The observatory opened on May 14, 1935.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The observatory today",
+    "line": "The domed observatory above Los Angeles. Photo from 2012.",
+    "ph": {
+     "k": "la_gr_now",
+     "by": "Mike Peel",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The observatory opened on May 14, 1935. Griffith J. Griffith donated 3,015 acres of land on December 16, 1896, and his will provided money for the observatory, an exhibit hall and a planetarium. John C. Austin and Frederic M. Ashley designed it, based on sketches by Russell W. Porter.",
+    "Admission to the building and grounds is free, as Griffith's will asked. The first exhibit visitors saw in 1935 was the Foucault pendulum, which shows Earth's rotation. Over 9 million people have looked through the 12-inch Zeiss telescope on the roof.",
+    "The Astronomers Monument on the lawn honors Hipparchus, Copernicus, Galileo, Kepler, Newton and William Herschel. The observatory also appears twice in the 1955 film Rebel Without a Cause."
+   ],
+   "fact": "The observatory sits about 1,135 feet above sea level.",
+   "disputed": "Nothing big is disputed here. The usual mistake is mixing up the year the land was given with the year the building opened.",
+   "claims": [
+    {
+     "t": "Admission to Griffith Observatory is free.",
+     "a": 0,
+     "why": "Wikipedia: admission to the building and grounds is free, as Griffith's will asked. Planetarium shows have a small fee."
+    },
+    {
+     "t": "Griffith Observatory was built in 1896.",
+     "a": 2,
+     "why": "The land was donated in 1896. The observatory opened on May 14, 1935."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Griffith Observatory",
+     "u": "https://en.wikipedia.org/wiki/Griffith_Observatory"
+    },
+    {
+     "t": "Griffith Observatory: History",
+     "u": "https://griffithobservatory.org/about/observatory-history/"
+    }
+   ],
+   "card": {
+    "a": "1896",
+    "b": "1935",
+    "la": "Land donated",
+    "lb": "Opened"
+   }
+  },
+  {
+   "id": "hollywoodsign",
+   "name": "Hollywood Sign",
+   "short": "Hollywood Sign",
+   "badge": "Hollywood Sign",
+   "tag": "Stop 2 of 4",
+   "teaser": "A giant real estate ad that became a symbol.",
+   "map": "Lake Hollywood Park, Los Angeles, CA",
+   "clue": "Find a public viewing spot, such as Lake Hollywood Park or an overlook in Griffith Park, where you can see the white letters on the hillside. Do not try to climb to the sign.",
+   "safety": "The sign is on a protected hillside and hiking up to it is not allowed. View it from a distance. Park legally, stay quiet near homes and do not block narrow residential streets.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the sign on the hillside. How many letters are in it?",
+    "options": [
+     "7",
+     "8",
+     "9",
+     "11"
+    ],
+    "answer": 2,
+    "hint": "It spells the neighborhood name.",
+    "verify": "The sign spells HOLLYWOOD, which has 9 letters (Hollywood Sign Trust). Check from the viewing spot. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1920s",
+    "label": "Hollywoodland",
+    "line": "The sign when it still read HOLLYWOODLAND.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "la_hs_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hollywoodland_Sign_1920s.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The sign today",
+    "line": "The white letters on the hillside above Hollywood. Photo from 2015.",
+    "ph": {
+     "k": "la_hs_now",
+     "by": "Thomas Wolf",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hollywood_Sign_(Zuschnitt).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The sign was built in 1923. It originally read \"Hollywoodland.\" Los Angeles Times publisher Harry Chandler built it as a billboard advertising his upscale Hollywoodland real estate development.",
+    "Each letter was about 43 feet tall and 30 feet wide. The original sign was lit by 4,000 20-watt light bulbs spaced 8 inches apart.",
+    "It was never meant to last. It became a symbol of the film industry that grew up around it."
+   ],
+   "fact": "The original sign had 4,000 light bulbs.",
+   "disputed": "Nothing big is disputed here. The popular guess is that it was built for the movie business, but it was built to sell houses.",
+   "claims": [
+    {
+     "t": "The Hollywood Sign was first built as an advertisement for a housing development.",
+     "a": 0,
+     "why": "The Hollywood Sign Trust: Harry Chandler built it in 1923 to advertise Hollywoodland."
+    },
+    {
+     "t": "The Hollywood Sign was built to honor the film industry.",
+     "a": 2,
+     "why": "It was a real estate billboard. Its meaning came later."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Hollywood Sign Trust: A sign is born",
+     "u": "https://www.hollywoodsign.org/history/a-sign-is-born"
+    },
+    {
+     "t": "UCLA Library: 1923 landmarks",
+     "u": "https://www.library.ucla.edu/about/news/100-years-ago-in-los-angeles-the-1923-debut-of-historic-landmarks"
+    }
+   ],
+   "card": {
+    "a": "1923",
+    "b": "Today",
+    "la": "Hollywoodland",
+    "lb": "Hollywood"
+   }
+  },
+  {
+   "id": "chinesetheatre",
+   "name": "TCL Chinese Theatre",
+   "short": "Chinese Theatre",
+   "badge": "Chinese Theatre",
+   "tag": "Stop 3 of 4",
+   "teaser": "A pagoda, a dragon and a courtyard of famous handprints.",
+   "map": "TCL Chinese Theatre, 6925 Hollywood Blvd, Los Angeles, CA",
+   "clue": "Walk Hollywood Boulevard until you see a pagoda-style theater with two big coral-red columns and a courtyard of signed concrete squares out front.",
+   "safety": "Hollywood Boulevard sidewalks are crowded. Watch your belongings, stay out of traffic, and do not step on or damage the concrete squares.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "A large stone creature guards the entrance. What is it?",
+    "options": [
+     "A lion",
+     "An eagle",
+     "A tiger",
+     "A dragon"
+    ],
+    "answer": 3,
+    "hint": "Think of a pagoda.",
+    "verify": "Wikipedia describes a 30-foot-high stone dragon at the entrance. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1927",
+    "label": "Opening year",
+    "line": "Grauman's Chinese Theatre opened on May 18, 1927.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2004",
+    "head": "Today",
+    "label": "The theater today",
+    "line": "The pagoda front and forecourt on Hollywood Boulevard. Carol Highsmith took this photo in 2004.",
+    "ph": {
+     "k": "la_ct_now",
+     "by": "Carol M. Highsmith (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Grauman's_Chinese_Theatre,_by_Carol_Highsmith.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The theater opened on May 18, 1927 with Cecil B. DeMille's The King of Kings. Sid Grauman built it for about $2 million with Joseph Schenck, Mary Pickford and Douglas Fairbanks.",
+    "Raymond Kennedy of the Meyer & Holler firm designed the pagoda. It has two massive coral-red columns and a 30-foot-high stone dragon. Director Moon Quan designed many of the statues with Chinese artisans, and actor Keye Luke painted the lobby murals.",
+    "In the forecourt, the oldest official prints, from 1927, belong to Douglas Fairbanks and Mary Pickford. A well-known legend says Sid Grauman and Norma Talmadge accidentally stepped into wet concrete during construction."
+   ],
+   "fact": "The dragon above the entrance is 30 feet high.",
+   "disputed": "The wet-concrete story is the most cited legend, but the oldest official prints belong to Fairbanks and Pickford.",
+   "claims": [
+    {
+     "t": "The Chinese Theatre opened in 1927 with The King of Kings.",
+     "a": 0,
+     "why": "The Academy Museum: opened May 18, 1927 with Cecil B. DeMille's film."
+    },
+    {
+     "t": "The forecourt tradition began when Norma Talmadge accidentally stepped in wet cement.",
+     "a": 1,
+     "why": "It is the most cited legend, but the oldest official prints, from 1927, are Fairbanks and Pickford."
+    }
+   ],
+   "sources": [
+    {
+     "t": "The Academy Museum: Grauman's Chinese Theatre",
+     "u": "https://www.academymuseum.org/en/hollywood-past-and-present/graumans-chinese-theatre"
+    },
+    {
+     "t": "Wikipedia: TCL Chinese Theatre",
+     "u": "https://en.wikipedia.org/wiki/TCL_Chinese_Theatre"
+    }
+   ],
+   "card": {
+    "a": "1927",
+    "b": "Today",
+    "la": "Opened",
+    "lb": "Today"
+   }
+  },
+  {
+   "id": "unionstation",
+   "name": "Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 4 of 4",
+   "teaser": "The last of the great railway stations, and a movie star.",
+   "map": "Union Station, 800 N Alameda St, Los Angeles, CA",
+   "clue": "Go to the station near Olvera Street. Step into the big main waiting room with the very high ceiling.",
+   "safety": "It is an active station with trains and buses. Stay out of restricted areas and off the tracks, and watch your belongings in the crowds.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Step into the main waiting room and look up. What hangs from the high ceiling?",
+    "options": [
+     "Huge chandeliers",
+     "Airplane models",
+     "State flags",
+     "Rows of clocks"
+    ],
+    "answer": 0,
+    "hint": "Think of a grand hall.",
+    "verify": "Union Station's waiting room has large hanging chandeliers. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1939",
+    "label": "Opening year",
+    "line": "The station opened on May 3, 1939.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The station tower and entrance. Photo from 2012.",
+    "ph": {
+     "k": "la_us_now",
+     "by": "Dietmar Rabich",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Union_Station_--_2012_--_4938.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Union Station opened on May 3, 1939 as the Los Angeles Union Passenger Terminal. John and Donald Parkinson, a father-and-son firm, designed it with other architects. Its style mixes Art Deco, Mission Revival and Streamline Moderne.",
+    "It is known as the \"Last of the Great Railway Stations\" built in the United States. Mary Colter, a Southwestern architect, designed the station restaurant, the last Harvey House built as part of a passenger terminal. It closed in 1967 and reopened in October 2018 as Imperial Western Beer Co.",
+    "The station was the backdrop for the 1950 film Union Station and appears in Blade Runner, Bugsy and The Dark Knight Rises. It is Los Angeles Historic-Cultural Monument No. 101 and is on the National Register of Historic Places."
+   ],
+   "fact": "The station restaurant was the last Harvey House built in a terminal.",
+   "disputed": "\"Last of the great railway stations\" is a nickname, not a precise record. Other big stations were still built or planned elsewhere.",
+   "claims": [
+    {
+     "t": "Union Station opened in 1939.",
+     "a": 0,
+     "why": "Wikipedia: opened May 3, 1939."
+    },
+    {
+     "t": "Union Station was the very last passenger train station ever built in the United States.",
+     "a": 1,
+     "why": "It is called the \"Last of the Great Railway Stations,\" a nickname. It does not mean no station was built afterward."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Los Angeles Union Station",
+     "u": "https://en.wikipedia.org/wiki/Los_Angeles_Union_Station"
+    },
+    {
+     "t": "The Clio: Los Angeles Union Station",
+     "u": "https://theclio.com/entry/23792"
+    }
+   ],
+   "card": {
+    "a": "1939",
+    "b": "1980",
+    "la": "Opened",
+    "lb": "National Register"
+   }
+  }
+ ],
+ "heroKey": "la_gr_now"
+}
