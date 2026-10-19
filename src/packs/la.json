@@ -53,85 +53,77 @@
  "region": "The West",
  "stops": [
   {
-   "id": "griffith",
-   "name": "Griffith Observatory",
-   "short": "Griffith",
-   "badge": "Griffith",
+   "id": "bradbury",
+   "name": "Bradbury Building",
+   "short": "Bradbury",
+   "badge": "Bradbury",
    "tag": "Stop 1 of 4",
-   "teaser": "A free observatory above the city, with a pendulum that proves the Earth spins.",
-   "map": "Griffith Observatory, 2800 E Observatory Rd, Los Angeles, CA",
-   "clue": "Head up to the domed observatory on the slope of Griffith Park, high above the city. Find the monument on the front lawn.",
-   "safety": "Parking is limited and the road is busy. It can be hot and exposed, so bring water. Stay on paths near edges and slopes.",
+   "teaser": "A plain brick box hiding a five-story glass court and open-cage elevators.",
+   "map": "Bradbury Building, 304 S Broadway, Los Angeles, CA",
+   "clue": "Go downtown to Broadway and 3rd Street and find the plain-looking brick building with an arched entrance. Step inside the lobby court if it is open.",
+   "safety": "Downtown is busy. Use crosswalks. The building has offices, so be quiet and follow posted visiting rules.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "On the front lawn is the Astronomers Monument. How many scientists does it honor?",
+    "prompt": "Look up in the central court. How many stories does the open atrium rise?",
     "options": [
-     "4",
-     "6",
-     "8",
-     "12"
+     "3",
+     "5",
+     "7",
+     "10"
     ],
     "answer": 1,
-    "hint": "Count the figures around the monument.",
-    "verify": "Wikipedia lists six: Hipparchus, Copernicus, Galileo, Kepler, Newton and Herschel. Count on site. Written from sources, not yet checked on site."
+    "hint": "Not quite as many as a skyscraper.",
+    "verify": "Wikipedia says the court rises five stories. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1935",
-    "label": "Opening year",
-    "line": "The observatory opened on May 14, 1935.",
+    "yr": "1960",
+    "label": "The court then",
+    "line": "The atrium and balconies in the 1960s.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2012",
+    "yr": "Today",
     "head": "Today",
-    "label": "The observatory today",
-    "line": "The domed observatory above Los Angeles. Photo from 2012.",
-    "ph": {
-     "k": "la_gr_now",
-     "by": "Mike Peel",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Griffith_Observatory_2012_01.jpg",
-     "note": "resized"
-    }
+    "label": "The court today",
+    "line": "The glass-roofed court is lit by daylight."
    },
    "story": [
-    "The observatory opened on May 14, 1935. Griffith J. Griffith donated 3,015 acres of land on December 16, 1896, and his will provided money for the observatory, an exhibit hall and a planetarium. John C. Austin and Frederic M. Ashley designed it, based on sketches by Russell W. Porter.",
-    "Admission to the building and grounds is free, as Griffith's will asked. The first exhibit visitors saw in 1935 was the Foucault pendulum, which shows Earth's rotation. Over 9 million people have looked through the 12-inch Zeiss telescope on the roof.",
-    "The Astronomers Monument on the lawn honors Hipparchus, Copernicus, Galileo, Kepler, Newton and William Herschel. The observatory also appears twice in the 1955 film Rebel Without a Cause."
+    "The Bradbury Building was built in 1893 and finished in 1894 at a cost of $500,000, about three times its original $175,000 budget. Lewis L. Bradbury, a mining and real estate millionaire, began planning it in 1892 and died that year, some months before it opened.",
+    "Bradbury first hired Sumner Hunt, then dismissed his design and hired George Wyman, a draftsman who earned $5 a week and had no formal architecture training. Wikipedia says there is no concrete evidence that Wyman changed Hunt's design, which is why some people dispute who the true architect was.",
+    "The five-story central court has a skylight, open bird-cage elevators, wrought-iron grillwork made in France and shown at the 1893 Chicago World's Fair, and yellow and pink brick. It was a National Historic Landmark in 1977 and appears in Blade Runner (1982)."
    ],
-   "fact": "The observatory sits about 1,135 feet above sea level.",
-   "disputed": "Nothing big is disputed here. The usual mistake is mixing up the year the land was given with the year the building opened.",
+   "fact": "Blade Runner filmed here in 1982.",
+   "disputed": "Who is the true architect is a long argument. Hunt drew the plans, but Wyman built it and Wikipedia says it is unclear what he changed.",
    "claims": [
     {
-     "t": "Admission to Griffith Observatory is free.",
+     "t": "The Bradbury Building was completed in the 1890s.",
      "a": 0,
-     "why": "Wikipedia: admission to the building and grounds is free, as Griffith's will asked. Planetarium shows have a small fee."
+     "why": "Wikipedia: built 1893 and completed 1894."
     },
     {
-     "t": "Griffith Observatory was built in 1896.",
+     "t": "George Wyman was a famous architect when he got the job.",
      "a": 2,
-     "why": "The land was donated in 1896. The observatory opened on May 14, 1935."
+     "why": "He was a draftsman earning $5 a week with no formal training."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Griffith Observatory",
-     "u": "https://en.wikipedia.org/wiki/Griffith_Observatory"
+     "t": "Wikipedia: Bradbury Building",
+     "u": "https://en.wikipedia.org/wiki/Bradbury_Building"
     },
     {
-     "t": "Griffith Observatory: History",
-     "u": "https://griffithobservatory.org/about/observatory-history/"
+     "t": "SAH Archipedia: Bradbury Building",
+     "u": "https://sah-archipedia.org/node/7962"
     }
    ],
    "card": {
-    "a": "1896",
-    "b": "1935",
-    "la": "Land donated",
-    "lb": "Opened"
+    "a": "1893",
+    "b": "1977",
+    "la": "Built",
+    "lb": "Landmark status"
    }
   },
   {
@@ -225,167 +217,151 @@
    }
   },
   {
-   "id": "chinesetheatre",
-   "name": "TCL Chinese Theatre",
-   "short": "Chinese Theatre",
-   "badge": "Chinese Theatre",
+   "id": "angelsflight",
+   "name": "Angels Flight",
+   "short": "Angels Flight",
+   "badge": "Angels Flight",
    "tag": "Stop 3 of 4",
-   "teaser": "A pagoda, a dragon and a courtyard of famous handprints.",
-   "map": "TCL Chinese Theatre, 6925 Hollywood Blvd, Los Angeles, CA",
-   "clue": "Walk Hollywood Boulevard until you see a pagoda-style theater with two big coral-red columns and a courtyard of signed concrete squares out front.",
-   "safety": "Hollywood Boulevard sidewalks are crowded. Watch your belongings, stay out of traffic, and do not step on or damage the concrete squares.",
+   "teaser": "The world's shortest railway, with two cars named Olivet and Sinai.",
+   "map": "Angels Flight Railway, 351 S Hill St, Los Angeles, CA",
+   "clue": "Go downtown to Hill Street near Grand Central Market and find the tiny orange-and-black funicular with two cars.",
+   "safety": "Hill Street is busy. Use crosswalks. Check the funicular's status first, because it has closed many times.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "A large stone creature guards the entrance. What is it?",
+    "prompt": "What are the two cars named?",
     "options": [
-     "A lion",
-     "An eagle",
-     "A tiger",
-     "A dragon"
+     "Olivet and Sinai",
+     "Faith and Hope",
+     "Sun and Moon",
+     "Hill and Dale"
     ],
-    "answer": 3,
-    "hint": "Think of a pagoda.",
-    "verify": "Wikipedia describes a 30-foot-high stone dragon at the entrance. Check on site. Written from sources, not yet checked on site."
+    "answer": 0,
+    "hint": "Names from the Bible.",
+    "verify": "Wikipedia says the cars are named Olivet and Sinai. Read the cars on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1927",
-    "label": "Opening year",
-    "line": "Grauman's Chinese Theatre opened on May 18, 1927.",
+    "yr": "1960",
+    "label": "The funicular then",
+    "line": "The cars and the hillside in the 1960s.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2004",
+    "yr": "Today",
     "head": "Today",
-    "label": "The theater today",
-    "line": "The pagoda front and forecourt on Hollywood Boulevard. Carol Highsmith took this photo in 2004.",
-    "ph": {
-     "k": "la_ct_now",
-     "by": "Carol M. Highsmith (Library of Congress)",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Grauman's_Chinese_Theatre,_by_Carol_Highsmith.jpg",
-     "note": "resized"
-    }
+    "label": "The funicular today",
+    "line": "The two cars run on a short track on Hill Street."
    },
    "story": [
-    "The theater opened on May 18, 1927 with Cecil B. DeMille's The King of Kings. Sid Grauman built it for about $2 million with Joseph Schenck, Mary Pickford and Douglas Fairbanks.",
-    "Raymond Kennedy of the Meyer & Holler firm designed the pagoda. It has two massive coral-red columns and a 30-foot-high stone dragon. Director Moon Quan designed many of the statues with Chinese artisans, and actor Keye Luke painted the lobby murals.",
-    "In the forecourt, the oldest official prints, from 1927, belong to Douglas Fairbanks and Mary Pickford. A well-known legend says Sid Grauman and Norma Talmadge accidentally stepped into wet concrete during construction."
+    "Angels Flight opened in 1901 as the Los Angeles Incline Railway, financed by Colonel J. W. Eddy. It has about 298 feet of track with a 96-foot rise, a grade of about 33 percent. The two cars, Olivet and Sinai, run in opposite directions on a shared cable.",
+    "The railway closed in May 1969 for Bunker Hill redevelopment, and the cars sat in storage for 27 years. It reopened on February 24, 1996 at a new site half a block south.",
+    "On February 1, 2001, the car Sinai rolled downhill uncontrolled and hit Olivet. One 83-year-old man died and eight others were hurt. The NTSB blamed improper design and construction of the drive system. It reopened in 2010, closed again, and reopened in 2017."
    ],
-   "fact": "The dragon above the entrance is 30 feet high.",
-   "disputed": "The wet-concrete story is the most cited legend, but the oldest official prints belong to Fairbanks and Pickford.",
+   "fact": "It is Los Angeles Historic-Cultural Monument No. 4.",
+   "disputed": "\"World's shortest railway\" is a plaque's wording: \"said to be the world's shortest incorporated railway.\" Treat it as a claim.",
    "claims": [
     {
-     "t": "The Chinese Theatre opened in 1927 with The King of Kings.",
+     "t": "Angels Flight opened in 1901.",
      "a": 0,
-     "why": "The Academy Museum: opened May 18, 1927 with Cecil B. DeMille's film."
+     "why": "Wikipedia: opened in 1901."
     },
     {
-     "t": "The forecourt tradition began when Norma Talmadge accidentally stepped in wet cement.",
-     "a": 1,
-     "why": "It is the most cited legend, but the oldest official prints, from 1927, are Fairbanks and Pickford."
+     "t": "Angels Flight has always stayed at its original site.",
+     "a": 2,
+     "why": "It closed in 1969 and reopened in 1996 half a block south."
     }
    ],
    "sources": [
     {
-     "t": "The Academy Museum: Grauman's Chinese Theatre",
-     "u": "https://www.academymuseum.org/en/hollywood-past-and-present/graumans-chinese-theatre"
+     "t": "Wikipedia: Angels Flight",
+     "u": "https://en.wikipedia.org/wiki/Angels_Flight"
     },
     {
-     "t": "Wikipedia: TCL Chinese Theatre",
-     "u": "https://en.wikipedia.org/wiki/TCL_Chinese_Theatre"
+     "t": "Los Angeles Public Library: Angels Flight",
+     "u": "https://lapl.org/node/43072"
     }
    ],
    "card": {
-    "a": "1927",
-    "b": "Today",
+    "a": "1901",
+    "b": "1996",
     "la": "Opened",
-    "lb": "Today"
+    "lb": "Reopened"
    }
   },
   {
-   "id": "unionstation",
-   "name": "Union Station",
-   "short": "Union Station",
-   "badge": "Union Station",
+   "id": "olvera",
+   "name": "Olvera Street",
+   "short": "Olvera Street",
+   "badge": "Olvera Street",
    "tag": "Stop 4 of 4",
-   "teaser": "The last of the great railway stations, and a movie star.",
-   "map": "Union Station, 800 N Alameda St, Los Angeles, CA",
-   "clue": "Go to the station near Olvera Street. Step into the big main waiting room with the very high ceiling.",
-   "safety": "It is an active station with trains and buses. Stay out of restricted areas and off the tracks, and watch your belongings in the crowds.",
+   "teaser": "The oldest part of Los Angeles, with the oldest house still standing.",
+   "map": "Olvera Street, Los Angeles, CA",
+   "clue": "Walk across from Union Station to the brick-paved marketplace street beside the old Plaza.",
+   "safety": "The street is crowded and has uneven bricks. Use crosswalks to cross Main and Alameda, and watch for kids and carts.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Step into the main waiting room and look up. What hangs from the high ceiling?",
+    "prompt": "Find the Avila Adobe at 10 Olvera Street. It is the oldest surviving what in Los Angeles?",
     "options": [
-     "Huge chandeliers",
-     "Airplane models",
-     "State flags",
-     "Rows of clocks"
+     "Church",
+     "School",
+     "Residence",
+     "Store"
     ],
-    "answer": 0,
-    "hint": "Think of a grand hall.",
-    "verify": "Union Station's waiting room has large hanging chandeliers. Confirm on site. Written from sources, not yet checked on site."
+    "answer": 2,
+    "hint": "Someone lived there.",
+    "verify": "Wikipedia says the Avila Adobe is the oldest surviving residence in Los Angeles. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1939",
-    "label": "Opening year",
-    "line": "The station opened on May 3, 1939.",
+    "yr": "1869",
+    "label": "The Plaza then",
+    "line": "The old Plaza in 1869.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2012",
+    "yr": "Today",
     "head": "Today",
-    "label": "The station today",
-    "line": "The station tower and entrance. Photo from 2012.",
-    "ph": {
-     "k": "la_us_now",
-     "by": "Dietmar Rabich",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_Union_Station_--_2012_--_4938.jpg",
-     "note": "resized"
-    }
+    "label": "The street today",
+    "line": "Shops and stalls line the brick street."
    },
    "story": [
-    "Union Station opened on May 3, 1939 as the Los Angeles Union Passenger Terminal. John and Donald Parkinson, a father-and-son firm, designed it with other architects. Its style mixes Art Deco, Mission Revival and Streamline Moderne.",
-    "It is known as the \"Last of the Great Railway Stations\" built in the United States. Mary Colter, a Southwestern architect, designed the station restaurant, the last Harvey House built as part of a passenger terminal. It closed in 1967 and reopened in October 2018 as Imperial Western Beer Co.",
-    "The station was the backdrop for the 1950 film Union Station and appears in Blade Runner, Bugsy and The Dark Knight Rises. It is Los Angeles Historic-Cultural Monument No. 101 and is on the National Register of Historic Places."
+    "Spanish settlers founded Los Angeles in 1781: 11 families, 44 people, plus a few soldiers, on a site southeast of today's Olvera Street. The street's early names included Placita Olvera and Wine Street. In 1877 a City Council ordinance renamed Wine Street for Agustín Olvera, the first Superior Court judge of Los Angeles County.",
+    "The Avila Adobe was built in 1818 by Francisco Ávila at 10 Olvera Street. It is described as the oldest surviving residence in Los Angeles. Christine Sterling began her campaign to save the area in 1926, and the street opened on Easter Sunday 1930 as Paseo de Los Angeles.",
+    "David Siqueiros's mural América Tropical was unveiled above the street in 1932 and soon covered up because of its politics. The Getty Conservation Institute began conservation work in 2010, and an interpretive center opened in 2012. The area is El Pueblo de Los Ángeles Historical Monument."
    ],
-   "fact": "The station restaurant was the last Harvey House built in a terminal.",
-   "disputed": "\"Last of the great railway stations\" is a nickname, not a precise record. Other big stations were still built or planned elsewhere.",
+   "fact": "The Avila Adobe was built in 1818.",
+   "disputed": "Some critics call the street a sanitized tourist version of Mexican culture, and Wikipedia says so. The oldest brick house claim for the Pelanconi House also lists two different dates.",
    "claims": [
     {
-     "t": "Union Station opened in 1939.",
+     "t": "The Avila Adobe is the oldest surviving residence in Los Angeles.",
      "a": 0,
-     "why": "Wikipedia: opened May 3, 1939."
+     "why": "Wikipedia: built in 1818."
     },
     {
-     "t": "Union Station was the very last passenger train station ever built in the United States.",
-     "a": 1,
-     "why": "It is called the \"Last of the Great Railway Stations,\" a nickname. It does not mean no station was built afterward."
+     "t": "Olvera Street was built by the original 1781 settlers as a market.",
+     "a": 2,
+     "why": "It opened as a marketplace on Easter Sunday 1930."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Los Angeles Union Station",
-     "u": "https://en.wikipedia.org/wiki/Los_Angeles_Union_Station"
+     "t": "Wikipedia: Olvera Street",
+     "u": "https://en.wikipedia.org/wiki/Olvera_Street"
     },
     {
-     "t": "The Clio: Los Angeles Union Station",
-     "u": "https://theclio.com/entry/23792"
+     "t": "Wikipedia: Avila Adobe",
+     "u": "https://en.wikipedia.org/wiki/Avila_Adobe"
     }
    ],
    "card": {
-    "a": "1939",
-    "b": "1980",
-    "la": "Opened",
-    "lb": "National Register"
+    "a": "1781",
+    "b": "1930",
+    "la": "Founded",
+    "lb": "Opened as a market"
    }
   }
  ],

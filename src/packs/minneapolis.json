@@ -233,167 +233,151 @@
    }
   },
   {
-   "id": "spoonbridge",
-   "name": "Spoonbridge and Cherry",
-   "short": "Spoonbridge",
-   "badge": "Spoonbridge",
+   "id": "stanthony",
+   "name": "Saint Anthony Falls",
+   "short": "St. Anthony Falls",
+   "badge": "St. Anthony Falls",
    "tag": "Stop 3 of 4",
-   "teaser": "A giant spoon with a cherry that squirts water.",
-   "map": "Minneapolis Sculpture Garden, 725 Vineland Pl, Minneapolis, MN",
-   "clue": "Find the Minneapolis Sculpture Garden, across from the Walker Art Center, and look for the oversized spoon holding a bright cherry.",
-   "safety": "Stay on paths and off the sculpture. The garden is a public park, so keep an eye on small kids near the pond.",
+   "teaser": "The only big waterfall on the Mississippi, and the reason there was a mill city.",
+   "map": "Saint Anthony Falls, Minneapolis, MN",
+   "clue": "Walk to the river just upstream of the Stone Arch Bridge, where the water drops over a wide apron beside the old mills.",
+   "safety": "Stay behind railings and on marked paths. Do not climb on the apron or lock walls. Wet stone is slippery.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "What color is the cherry on the spoon?",
+    "prompt": "Read the signs at the falls. Who named them in 1680?",
     "options": [
-     "Yellow",
-     "Green",
-     "Purple",
-     "Red"
+     "Louis Hennepin",
+     "Zebulon Pike",
+     "James J. Hill",
+     "Henry Sibley"
     ],
-    "answer": 3,
-    "hint": "Think of a cherry.",
-    "verify": "The cherry is painted. Confirm the color on site. Written from sources, not yet checked on site."
+    "answer": 0,
+    "hint": "A priest and explorer who named them for his patron saint.",
+    "verify": "Wikipedia says Father Louis Hennepin named the falls in 1680. Confirm on a sign. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1988",
-    "label": "Installed",
-    "line": "The sculpture was placed by cranes on May 9, 1988.",
+    "yr": "1859",
+    "label": "The falls then",
+    "line": "The falls as photographed in 1859.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2017",
+    "yr": "Today",
     "head": "Today",
-    "label": "The sculpture today",
-    "line": "The spoon and red cherry seen from behind a wooden scaffold sculpture in the garden. Photo from 2017.",
-    "ph": {
-     "k": "mn_sb_now",
-     "by": "Lorie Shaull",
-     "lic": "CC BY-SA 2.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Scaffold_sculpture,_and_Spoon_and_Cherry_bridge_during_protests.jpg",
-     "note": "resized"
-    }
+    "label": "The falls today",
+    "line": "The falls drop over a wide apron beside the mill ruins."
    },
    "story": [
-    "Claes Oldenburg and Coosje van Bruggen made Spoonbridge and Cherry. It was placed by cranes on May 9, 1988, and the Sculpture Garden opened that fall with ceremonies September 9 to 11.",
-    "It measures about 30 by 13 by 52 feet. The spoon weighs about 5,800 pounds and the cherry about 1,200. It is stainless steel and aluminum with a polyurethane enamel coat. The cherry was repainted in 1995 and again in 2021 and 2022.",
-    "Water sprays from the tip and base of the cherry's stem. The spoon straddles a small pond shaped like a linden tree seed, matching the lindens around it."
+    "Saint Anthony Falls was the only natural major waterfall on the Mississippi River. Father Louis Hennepin named it in 1680 after St. Anthony of Padua. The Dakota name is Owámniyomni, meaning whirlpool.",
+    "The total drop is 49 feet. The natural falls were about 35 feet and the upper dam adds about 14. On October 5, 1869, the limestone cap was breached during a tunnel project, and a concrete dike finished in 1876 fixed the damage. An Army Corps of Engineers wooden apron went in around 1880 and was replaced with concrete after it was destroyed in 1952.",
+    "Water power ran flour and lumber mills, and Minneapolis was known as the Flour Milling Capital of the World from about 1880 to 1930. The locks were completed in 1963. The upper lock was permanently closed in 2015 to help stop the spread of Asian carp."
    ],
-   "fact": "The cherry was repainted in 1995 and again in 2021 and 2022.",
-   "disputed": "Many people assume it is a bridge. Wikipedia does not describe it that way, so the name is a joke.",
+   "fact": "The upper lock was closed in 2015 to stop Asian carp.",
+   "disputed": "Wikipedia says the falls was the only natural major waterfall, so some sources call it the only waterfall on the river. The natural falls no longer look natural, because the apron and dam changed them.",
    "claims": [
     {
-     "t": "Spoonbridge and Cherry was installed in 1988.",
+     "t": "Saint Anthony Falls was named in 1680.",
      "a": 0,
-     "why": "Wikipedia: placed by cranes on May 9, 1988."
+     "why": "Wikipedia: Father Louis Hennepin named it in 1680."
     },
     {
-     "t": "Spoonbridge and Cherry is made of wood.",
+     "t": "The falls you see today are completely natural.",
      "a": 2,
-     "why": "It is stainless steel and aluminum."
+     "why": "A concrete apron, dike and dam control the water."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Spoonbridge and Cherry",
-     "u": "https://en.wikipedia.org/wiki/Spoonbridge_and_Cherry"
+     "t": "Wikipedia: Saint Anthony Falls",
+     "u": "https://en.wikipedia.org/wiki/Saint_Anthony_Falls"
     },
     {
-     "t": "Wikipedia: Minneapolis Sculpture Garden",
-     "u": "https://en.wikipedia.org/wiki/Minneapolis_Sculpture_Garden"
+     "t": "Wikipedia: Mill City Museum",
+     "u": "https://en.wikipedia.org/wiki/Mill_City_Museum"
     }
    ],
    "card": {
-    "a": "1988",
-    "b": "2022",
-    "la": "Installed",
-    "lb": "Repainted"
+    "a": "1680",
+    "b": "1963",
+    "la": "Named",
+    "lb": "Locks completed"
    }
   },
   {
-   "id": "foshay",
-   "name": "Foshay Tower",
-   "short": "Foshay Tower",
-   "badge": "Foshay Tower",
+   "id": "basilica",
+   "name": "Basilica of Saint Mary",
+   "short": "Basilica",
+   "badge": "Basilica",
    "tag": "Stop 4 of 4",
-   "teaser": "A skyscraper copied from the Washington Monument, and a bounced check to John Philip Sousa.",
-   "map": "Foshay Tower, 821 Marquette Ave, Minneapolis, MN",
-   "clue": "Find the tall tower downtown with sides that slope slightly inward. It looks like the Washington Monument that grew up in the city.",
-   "safety": "Downtown is busy. Use crosswalks and keep clear of loading areas and transit lanes.",
+   "teaser": "America's first basilica, with a dome you can see from the highway.",
+   "map": "Basilica of Saint Mary, 1600 Hennepin Ave, Minneapolis, MN",
+   "clue": "Go to Hennepin Avenue near Loring Park and find the big domed church between 16th and 17th Streets.",
+   "safety": "It is an active church. Be quiet and respectful, check visiting hours, and use crosswalks on Hennepin.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "The tower is a hotel now. What does the name on the building say, besides Foshay?",
+    "prompt": "Step inside if it is open. How many large arched stained glass windows light the nave?",
     "options": [
-     "Ritz",
-     "W",
-     "Hyatt",
-     "Hilton"
+     "3",
+     "4",
+     "6",
+     "5"
     ],
-    "answer": 1,
-    "hint": "One letter.",
-    "verify": "Wikipedia says it is now W Minneapolis - The Foshay. Check the entrance. Written from sources, not yet checked on site."
+    "answer": 3,
+    "hint": "Count the big arched windows along the nave.",
+    "verify": "Wikipedia says five large arched windows. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1929",
-    "label": "Opening year",
-    "line": "The tower opened in 1929.",
+    "yr": "1907",
+    "label": "The basilica then",
+    "line": "A view of the basilica around 1907.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2011",
+    "yr": "Today",
     "head": "Today",
-    "label": "The tower today",
-    "line": "The sloped, stepped tower against the sky. Photo from 2011.",
-    "ph": {
-     "k": "mn_fo_now",
-     "by": "Raggedkompany",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Foshay_Tower_01.jpg",
-     "note": "resized"
-    }
+    "label": "The basilica today",
+    "line": "The domed church stands on Hennepin Avenue."
    },
    "story": [
-    "Foshay Tower opened in November 1929. It is 447 feet tall, designed by Léon Eugène Arnal for Magney & Tusler, and modeled on the Washington Monument, with sides that slope slightly inward.",
-    "Wilbur Foshay was a businessman who built three utility empires. John Philip Sousa wrote the Foshay Tower-Washington Memorial March for the dedication. Foshay's check to Sousa bounced, so Sousa barred performances of the march until the debt was repaid in 1988.",
-    "Foshay's corporate empire entered receivership about six weeks after the building opened, and he never lived in it. The tower was renovated as the W Minneapolis - The Foshay hotel, which opened in 2008, with a 30th-floor observation deck."
+    "The Basilica of Saint Mary was designated a minor basilica by Pope Pius XI in 1926, the first in the United States. Emmanuel Masqueray was the architect. Construction ran from 1907 to 1914, and the first Mass was held on May 31, 1914.",
+    "The sanctuary dome rises 138 feet above the floor. With the flèche and cross it reaches 200 feet. The nave is lit by five large arched stained glass windows, and the pews hold 1,600 people.",
+    "The style is Classical Revival, and the history section calls it Beaux-Arts. It stands at 1600 Hennepin Avenue between 16th and 17th Streets."
    ],
-   "fact": "The march was banned for decades.",
-   "disputed": "The date is written two ways. The infobox says August 30, 1929, and the text says November 2, 1929. Sources also disagree on whether the IDS Center passed it in 1972 or 1973.",
+   "fact": "The pews seat 1,600 people.",
+   "disputed": "Wikipedia gives two dedication dates, 1913 in the lead and 1921 in the history section, and does not reconcile them. Check a church source before repeating one.",
    "claims": [
     {
-     "t": "Foshay Tower was modeled on the Washington Monument.",
+     "t": "The Basilica of Saint Mary was the first basilica in the United States.",
      "a": 0,
-     "why": "Wikipedia: its design is modeled on the monument."
+     "why": "Wikipedia: designated by Pope Pius XI in 1926."
     },
     {
-     "t": "Wilbur Foshay lived in the tower for years.",
+     "t": "The basilica was finished in 1907.",
      "a": 2,
-     "why": "He never lived in it."
+     "why": "Construction began in 1907. The first Mass was on May 31, 1914."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Foshay Tower",
-     "u": "https://en.wikipedia.org/wiki/Foshay_Tower"
+     "t": "Wikipedia: Basilica of Saint Mary (Minneapolis)",
+     "u": "https://en.wikipedia.org/wiki/Basilica_of_Saint_Mary_(Minneapolis)"
     },
     {
-     "t": "Wikipedia: Washington Monument",
-     "u": "https://en.wikipedia.org/wiki/Washington_Monument"
+     "t": "MNopedia: Basilica of St. Mary",
+     "u": "https://www.mnhs.org/mnopedia/search/index/structure/basilica-st-mary-minneapolis"
     }
    ],
    "card": {
-    "a": "1929",
-    "b": "2008",
-    "la": "Opened",
-    "lb": "Hotel opened"
+    "a": "1907",
+    "b": "1926",
+    "la": "Construction began",
+    "lb": "Named a basilica"
    }
   }
  ],

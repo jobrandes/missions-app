@@ -53,167 +53,151 @@
  "region": "The Midwest",
  "stops": [
   {
-   "id": "spirit",
-   "name": "The Spirit of Detroit",
-   "short": "Spirit",
-   "badge": "Spirit",
+   "id": "fisher",
+   "name": "Fisher Building",
+   "short": "Fisher Building",
+   "badge": "Fisher Building",
    "tag": "Stop 1 of 4",
-   "teaser": "A bronze giant who gets dressed up in a jersey when the home team wins.",
-   "map": "Spirit of Detroit, 2 Woodward Ave, Detroit, MI",
-   "clue": "Go to the Coleman A. Young Municipal Center near the river. Out front sits a giant seated bronze figure on a marble base.",
-   "safety": "The plaza is by a busy street. Use crosswalks and do not climb on the base.",
+   "teaser": "A 30-story art deco tower with a roof that glows gold at night.",
+   "map": "Fisher Building, 3011 W Grand Blvd, Detroit, MI",
+   "clue": "Go to the New Center area, north of downtown, and find the tall tower with the green roof on West Grand Boulevard.",
+   "safety": "West Grand Boulevard is busy. Use crosswalks. Respect the building's lobby hours and rules.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "In the giant figure's other hand are small gold figures of a family. How many are there?",
+    "prompt": "Count the floors up the tower. About how many stories does the Fisher Building have?",
     "options": [
-     "2",
-     "3",
-     "4",
-     "5"
+     "12",
+     "20",
+     "30",
+     "50"
     ],
-    "answer": 1,
-    "hint": "Count the people in the family group.",
-    "verify": "Wikipedia says the small gold figures are a man, a woman and a child. Count on site. Written from sources, not yet checked on site."
+    "answer": 2,
+    "hint": "More than a couple of dozen, fewer than forty.",
+    "verify": "Wikipedia says 30 stories. Estimate from the street. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1958",
-    "label": "Dedication",
-    "line": "The statue was dedicated on September 23, 1958.",
+    "yr": "1930",
+    "label": "The tower then",
+    "line": "The tower in about 1930, soon after it opened.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2022",
+    "yr": "Today",
     "head": "Today",
-    "label": "The statue today",
-    "line": "The bronze figure with its gilded sphere and family group. Photo from 2022.",
-    "ph": {
-     "k": "de_sp_now",
-     "by": "JJonahJackalope",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:The_Spirit_of_Detroit.jpg",
-     "note": "resized"
-    }
+    "label": "The tower today",
+    "line": "The tower stands in New Center."
    },
    "story": [
-    "Marshall Fredericks made the bronze statue, cast in Oslo, Norway. It was dedicated on September 23, 1958 outside what is now the Coleman A. Young Municipal Center, on a 60-ton marble base.",
-    "In its left hand the figure holds a gilded sphere with rays, a symbol of God. In its right hand it holds smaller gold figures of a man, woman and child, a symbol of human relationships. The city commissioned it on August 2, 1955 for $58,000, and Fredericks waived his fee as a civic duty.",
-    "The statue often wears an oversized team jersey during big sports moments. A 2017 resolution limited this to championship wins, and since 2020 teams can dress it when they are in championship contention. A $25,000 fee covers restoration afterward."
+    "The Fisher Building was completed in 1928. Albert Kahn Associates designed it, with Joseph Nathaniel French as chief architect. It has 30 stories. The roof is 428 feet up and the spire reaches 444 feet.",
+    "The Fisher family paid for it with money from selling Fisher Body to General Motors. The three-story barrel-vaulted lobby uses forty kinds of marble and was decorated by the Hungarian artist Géza Maróti. Several sculptors worked on the outside, including Corrado Parducci.",
+    "The roof was first covered in gold-leaf tiles. They were covered with asphalt during World War II and replaced with green tiles. Since the 1980s, colored lights have made the green tiles look gold at night. It became a National Historic Landmark on June 29, 1989."
    ],
-   "fact": "The sculptor gave up his fee.",
-   "disputed": "Sources disagree on the exact height. Wikipedia says about 26 feet, so treat any number as approximate.",
+   "fact": "The lobby uses forty kinds of marble.",
+   "disputed": "\"Detroit's largest art object\" is a nickname that the Detroit News used. Wikipedia treats it as a quote, not a measured fact.",
    "claims": [
     {
-     "t": "The Spirit of Detroit was dedicated in 1958.",
+     "t": "The Fisher Building was completed in 1928.",
      "a": 0,
-     "why": "Wikipedia: dedicated September 23, 1958."
+     "why": "Wikipedia: completed in 1928."
     },
     {
-     "t": "The sculptor was paid the full $58,000.",
+     "t": "The Fisher Building's roof has always been green.",
      "a": 2,
-     "why": "Fredericks waived his fee as a civic duty."
+     "why": "It was gold-leaf tiles at first, then green after World War II. The lights make it look gold at night."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: The Spirit of Detroit",
-     "u": "https://en.wikipedia.org/wiki/The_Spirit_of_Detroit"
+     "t": "Wikipedia: Fisher Building",
+     "u": "https://en.wikipedia.org/wiki/Fisher_Building"
     },
     {
-     "t": "Wikipedia: Marshall Fredericks",
-     "u": "https://en.wikipedia.org/wiki/Marshall_Fredericks"
-    }
-   ],
-   "card": {
-    "a": "1955",
-    "b": "1958",
-    "la": "Commissioned",
-    "lb": "Dedicated"
-   }
-  },
-  {
-   "id": "fox",
-   "name": "Fox Theatre",
-   "short": "Fox Theatre",
-   "badge": "Fox Theatre",
-   "tag": "Stop 2 of 4",
-   "teaser": "The biggest movie palace of the 1920s still standing, and it's covered in gold.",
-   "map": "Fox Theatre, 2211 Woodward Ave, Detroit, MI",
-   "clue": "Go to the Woodward Avenue facade, where the big theater stands in the entertainment district.",
-   "safety": "Woodward Avenue is busy and event nights are crowded. Use crosswalks and watch for the streetcar.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Check the street sign near the theatre entrance. Which avenue is it on?",
-    "options": [
-     "Michigan Avenue",
-     "Jefferson Avenue",
-     "Gratiot Avenue",
-     "Woodward Avenue"
-    ],
-    "answer": 3,
-    "hint": "It is also the street the QLine runs along.",
-    "verify": "Wikipedia describes the Woodward facade with Asian motifs. Read the sign on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1928",
-    "label": "Opening year",
-    "line": "The Fox opened with a gala on September 21, 1928.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    }
-   },
-   "now": {
-    "yr": "2007",
-    "head": "Today",
-    "label": "The theatre today",
-    "line": "The Fox marquee and tower on Woodward Avenue. Photo from 2007.",
-    "ph": {
-     "k": "de_fx_now",
-     "by": "Mikerussell",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Detroitfox3.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The Fox opened on September 21, 1928. C. Howard Crane designed it. It has 5,048 seats, or 5,174 with removable seats in the orchestra pit.",
-    "The style is Art Deco with Burmese, Chinese, Indian and Persian motifs inside. A four-manual Wurlitzer organ with 36 ranks was built for the theater and is still in its original installation.",
-    "Mike and Marian Ilitch bought the theater in 1988 and restored it for $12 million. It is the largest surviving movie palace of the 1920s and a National Historic Landmark since 1989."
-   ],
-   "fact": "The marquee was rebuilt in 1987 based on the original from the 1950s.",
-   "disputed": "\"Largest\" is measured among surviving 1920s movie palaces. Other theaters were larger once, but they are gone.",
-   "claims": [
-    {
-     "t": "The Fox Theatre opened in 1928.",
-     "a": 0,
-     "why": "Wikipedia: gala opening September 21, 1928."
-    },
-    {
-     "t": "The Fox Theatre has fewer than 1,000 seats.",
-     "a": 2,
-     "why": "It has over 5,000 seats."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Fox Theatre (Detroit)",
-     "u": "https://en.wikipedia.org/wiki/Fox_Theatre_(Detroit)"
-    },
-    {
-     "t": "Wikipedia: C. Howard Crane",
-     "u": "https://en.wikipedia.org/wiki/C._Howard_Crane"
+     "t": "Wikipedia: Albert Kahn (architect)",
+     "u": "https://en.wikipedia.org/wiki/Albert_Kahn_(architect)"
     }
    ],
    "card": {
     "a": "1928",
-    "b": "1988",
-    "la": "Opened",
-    "lb": "Ilitch purchase"
+    "b": "1989",
+    "la": "Completed",
+    "lb": "Landmark status"
+   }
+  },
+  {
+   "id": "campus",
+   "name": "Campus Martius Park",
+   "short": "Campus Martius",
+   "badge": "Campus Martius",
+   "tag": "Stop 2 of 4",
+   "teaser": "The spot where every Detroit road number begins.",
+   "map": "Campus Martius Park, 800 Woodward Ave, Detroit, MI",
+   "clue": "Go to the downtown park around Woodward Avenue. Look for a medallion set into the stone walkway near the fountain.",
+   "safety": "Woodward Avenue is busy. Use crosswalks. In winter the ice rink gets crowded.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find the Point of Origin medallion in the walkway. What does it mark the start of?",
+    "options": [
+     "Detroit's first church",
+     "Detroit's coordinate system",
+     "A river ferry",
+     "The city wall"
+    ],
+    "answer": 1,
+    "hint": "Think of Eight Mile Road.",
+    "verify": "Wikipedia says Detroit's coordinate system starts at the medallion. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1907",
+    "label": "The square then",
+    "line": "Campus Martius in 1907.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The park today",
+    "line": "The park is the center of downtown."
+   },
+   "story": [
+    "After the Great Fire of 1805, Judge Augustus Woodward planned the rebuilding of Detroit around Campus Martius. It is named for the main square in Marietta, Ohio, the first capital of the Northwest Territory. The name is Latin for Field of Mars.",
+    "Detroit's coordinate system starts here, marked by a medallion in the stone walkway. Seven Mile Road is seven miles north, Eight Mile Road is eight miles north, and so on.",
+    "The new park was dedicated on November 19, 2004. It has a seasonal ice rink designed to look like Rockefeller Center's rink, but larger. A Civil War-era monument stands on Campus Martius."
+   ],
+   "fact": "Seven Mile and Eight Mile Roads are named for their distance from here.",
+   "disputed": "Wikipedia lists the park as created in 1850 and 2004 without explaining 1850. Treat any single founding year with caution.",
+   "claims": [
+    {
+     "t": "Detroit's coordinate system starts at Campus Martius.",
+     "a": 0,
+     "why": "Wikipedia: the Point of Origin medallion marks the start."
+    },
+    {
+     "t": "Eight Mile Road is named for its distance to Lake Michigan.",
+     "a": 2,
+     "why": "It is eight miles north of the Point of Origin."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Campus Martius Park",
+     "u": "https://en.wikipedia.org/wiki/Campus_Martius_Park"
+    },
+    {
+     "t": "Detroit Historical Society: Campus Martius Park",
+     "u": "https://detroithistorical.org/learn/encyclopedia-of-detroit/campus-martius-park"
+    }
+   ],
+   "card": {
+    "a": "1805",
+    "b": "2004",
+    "la": "Rebuilding plan",
+    "lb": "Park dedicated"
    }
   },
   {

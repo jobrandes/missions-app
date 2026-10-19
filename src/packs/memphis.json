@@ -315,85 +315,77 @@
    }
   },
   {
-   "id": "peabody",
-   "name": "The Peabody Hotel",
-   "short": "Peabody",
-   "badge": "Peabody",
+   "id": "cottonex",
+   "name": "Memphis Cotton Exchange",
+   "short": "Cotton Exchange",
+   "badge": "Cotton Exchange",
    "tag": "Stop 4 of 4",
-   "teaser": "Five ducks march to a fountain every day, and have since the 1930s.",
-   "map": "The Peabody Memphis, 149 Union Ave, Memphis, TN",
-   "clue": "Go to the grand hotel on Union Avenue. Head into the lobby, where the marble fountain sits.",
-   "safety": "The lobby is crowded at 11 a.m. and 5 p.m. Keep back from the red carpet and do not touch the ducks.",
+   "teaser": "Where fortunes were made on cotton, until trading went digital in 1978.",
+   "map": "Cotton Exchange Building, 65 Union Ave, Memphis, TN",
+   "clue": "Go downtown to the corner of Front Street and Union Avenue and find the old exchange building.",
+   "safety": "Front Street and Union Avenue are busy. Use crosswalks. The museum has its own hours and tickets.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "How many ducks march down the red carpet?",
+    "prompt": "Look for the sign or plaque. In what year did the Memphis Cotton Exchange start trading?",
     "options": [
-     "Five",
-     "Two",
-     "Eight",
-     "Twelve"
+     "1850",
+     "1900",
+     "1925",
+     "1874"
     ],
-    "answer": 0,
-    "hint": "Count the Mallards.",
-    "verify": "The Peabody says five Mallards. Check during the march. Written from sources, not yet checked on site."
+    "answer": 3,
+    "hint": "Nine years after the Civil War ended.",
+    "verify": "Wikipedia says the exchange was founded in 1874. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1933",
-    "label": "Ducks arrive",
-    "line": "The ducks first splashed in the lobby fountain in 1933.",
+    "yr": "1939",
+    "label": "The trading floor then",
+    "line": "Cotton merchants on the exchange floor in 1939.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2008",
+    "yr": "Today",
     "head": "Today",
-    "label": "The ducks today",
-    "line": "Mallards in the Peabody lobby fountain. Photo from 2008.",
-    "ph": {
-     "k": "me_pe_now",
-     "by": "Roger Schultz",
-     "lic": "CC BY 2.0",
-     "lu": "https://creativecommons.org/licenses/by/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Peabody_Hotel_Ducks.jpg",
-     "note": "resized"
-    }
+    "label": "The building today",
+    "line": "The old trading floor is now a museum."
    },
    "story": [
-    "In 1933, after a fruitless hunting trip, the Peabody's general manager released his English call ducks, which he used as live bait, into the Grand Lobby fountain. Guests loved them, so the hotel got five North American Mallards.",
-    "In 1940, Edward Pembroke, a former circus trainer and bellman, taught the ducks to march. He served as the first Duckmaster for about 50 years.",
-    "The ducks march down a red carpet at 11 a.m. and rest in the fountain until 5 p.m., when they march back to their rooftop Royal Duck Palace, which cost $200,000. They spend about three months at the hotel before returning to a farm pond."
+    "The Memphis Cotton Exchange was founded in 1874, after the Civil War. It operated as a spot market, where cotton was bought and sold for immediate delivery.",
+    "The Cotton Exchange Building stands at the corner of Front Street and Union Avenue. Trading took place on the first floor, where only exchange members could trade.",
+    "Floor trading ended in 1978, when computer trading took over. The remodeled historic trading floor is now home to The Cotton Museum."
    ],
-   "fact": "The ducks live on the roof.",
-   "disputed": "Some tales say the ducks have lived there forever. They stay a few months each and then go back to a farm.",
+   "fact": "Only exchange members could trade on the floor.",
+   "disputed": "Wikipedia is inconsistent on the building date. The infobox says 1925 and the text also mentions 1922, so check the museum's own history.",
    "claims": [
     {
-     "t": "The Peabody ducks have marched since the 1930s.",
+     "t": "The Memphis Cotton Exchange was founded in 1874.",
      "a": 0,
-     "why": "The tradition began in 1933 and the march was trained in 1940."
+     "why": "Wikipedia: founded in 1874."
     },
     {
-     "t": "The same five ducks have lived there for decades.",
+     "t": "Floor trading at the exchange ended in 1925.",
      "a": 2,
-     "why": "They stay about three months, then return to a farm pond."
+     "why": "1925 is the likely building date. Floor trading closed in 1978."
     }
    ],
    "sources": [
     {
-     "t": "Audubon: The duck tradition",
-     "u": "https://www.audubon.org/magazine/tennessees-most-historic-hotel-also-home-greatest-duck-tradition"
+     "t": "Wikipedia: Memphis Cotton Exchange",
+     "u": "https://en.wikipedia.org/wiki/Memphis_Cotton_Exchange"
     },
     {
-     "t": "Historic Hotels: The Peabody Memphis",
-     "u": "https://www.historichotels.org/us/hotels-resorts/the-peabody-memphis/history"
+     "t": "Wikipedia: The Cotton Museum",
+     "u": "https://en.wikipedia.org/wiki/The_Cotton_Museum"
     }
    ],
    "card": {
-    "a": "1933",
-    "b": "1940",
-    "la": "Ducks arrive",
-    "lb": "Ducks trained"
+    "a": "1874",
+    "b": "1978",
+    "la": "Founded",
+    "lb": "Floor trading ended"
    }
   }
  ],

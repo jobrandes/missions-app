@@ -334,15 +334,15 @@
    "why": "Wikipedia gives 168 plates."
   },
   {
-   "q": "What did the Chicago Water Tower's castle look hide?",
+   "q": "Who remodeled the Rookery's lobby in 1905?",
    "o": [
-    "A bell tower",
-    "A lighthouse",
-    "A standpipe that smoothed water pressure",
-    "A jail"
+    "Louis Sullivan",
+    "Mies van der Rohe",
+    "Daniel Burnham",
+    "Frank Lloyd Wright"
    ],
-   "a": 2,
-   "why": "It was a standpipe added in 1869."
+   "a": 3,
+   "why": "Frank Lloyd Wright, from 1905 to 1907."
   },
   {
    "q": "The sea horses at Buckingham Fountain stand for what?",
@@ -356,15 +356,15 @@
    "why": "Illinois, Wisconsin, Michigan and Indiana."
   },
   {
-   "q": "How was the Chicago Theatre promoted when it opened in 1921?",
+   "q": "About how big is the Lincoln Park Conservatory?",
    "o": [
-    "Jewel of State Street",
-    "Palace of the Prairie",
-    "Wonder Theatre of the World",
-    "Temple of the Lakefront"
+    "3 acres",
+    "30 acres",
+    "300 acres",
+    "1 acre"
    ],
-   "a": 2,
-   "why": "It opened on October 26, 1921, promoted as the Wonder Theatre of the World."
+   "a": 0,
+   "why": "About 3 acres."
   }
  ],
  "sf": [
@@ -448,28 +448,28 @@
    "why": "Historians trace it to her grandsons, the Canbys, and the Centennial."
   },
   {
-   "q": "Elfreth's Alley is called the nation's oldest what?",
+   "q": "Carpenters' Hall hosted which Congress in 1774?",
    "o": [
-    "Residential street",
-    "Public park",
-    "Market",
-    "Bridge"
+    "Second Continental Congress",
+    "First Continental Congress",
+    "Confederation Congress",
+    "Congress of the Union"
    ],
-   "a": 0,
-   "why": "Wikipedia calls it our nation's oldest residential street."
+   "a": 1,
+   "why": "The First Continental Congress, September 5 to October 26, 1774."
   }
  ],
  "la": [
   {
-   "q": "Who donated the land for Griffith Observatory?",
+   "q": "When was the Bradbury Building built?",
    "o": [
-    "Walt Disney",
-    "Griffith J. Griffith",
-    "Harry Chandler",
-    "Sid Grauman"
+    "1850",
+    "1920",
+    "1893",
+    "1975"
    ],
-   "a": 1,
-   "why": "Griffith J. Griffith donated 3,015 acres in 1896."
+   "a": 2,
+   "why": "It was built in 1893 and finished in 1894."
   },
   {
    "q": "What did the Hollywood Sign originally read?",
@@ -483,26 +483,26 @@
    "why": "It advertised the Hollywoodland housing development in 1923."
   },
   {
-   "q": "Which film opened Grauman's Chinese Theatre in 1927?",
+   "q": "Angels Flight opened in which year?",
    "o": [
-    "Ben-Hur",
-    "Sunrise",
-    "The Jazz Singer",
-    "The King of Kings"
-   ],
-   "a": 3,
-   "why": "It opened May 18, 1927 with DeMille's The King of Kings."
-  },
-  {
-   "q": "When did Union Station open?",
-   "o": [
-    "1939",
-    "1915",
-    "1952",
-    "1927"
+    "1901",
+    "1925",
+    "1950",
+    "1996"
    ],
    "a": 0,
-   "why": "It opened on May 3, 1939."
+   "why": "It opened in 1901."
+  },
+  {
+   "q": "How many settlers founded Los Angeles in 1781?",
+   "o": [
+    "12",
+    "44",
+    "100",
+    "200"
+   ],
+   "a": 1,
+   "why": "11 families, 44 people."
   }
  ],
  "seattle": [
@@ -540,15 +540,15 @@
    "why": "The Kansas City Power & Light Building passed it in 1931."
   },
   {
-   "q": "What did Gas Works Park used to be?",
+   "q": "Which Seattle neighborhood was destroyed in the fire of June 6, 1889?",
    "o": [
-    "A shipyard",
-    "A gasification plant",
-    "A brewery",
-    "A sawmill"
+    "Pioneer Square",
+    "Capitol Hill",
+    "Ballard",
+    "Fremont"
    ],
-   "a": 1,
-   "why": "A coal gasification plant ran there from 1906 to 1956."
+   "a": 0,
+   "why": "Pioneer Square."
   }
  ],
  "nola": [
@@ -610,26 +610,26 @@
    "why": "He painted the Detroit Industry murals in fresco, 1932 to 1933."
   },
   {
-   "q": "When was the Spirit of Detroit dedicated?",
+   "q": "What was the Fisher Building's roof first covered in?",
    "o": [
-    "1958",
-    "1927",
-    "1976",
-    "1945"
-   ],
-   "a": 0,
-   "why": "September 23, 1958."
-  },
-  {
-   "q": "About how many seats does the Fox Theatre have?",
-   "o": [
-    "1,200",
-    "2,500",
-    "3,000",
-    "5,000"
+    "Copper sheets",
+    "Slate",
+    "Glass",
+    "Gold-leaf tiles"
    ],
    "a": 3,
-   "why": "It has 5,048 seats."
+   "why": "The roof was gold-leaf tiles at first."
+  },
+  {
+   "q": "What do roads like Eight Mile measure their distance from?",
+   "o": [
+    "Campus Martius",
+    "Belle Isle",
+    "The Ambassador Bridge",
+    "Eastern Market"
+   ],
+   "a": 0,
+   "why": "Detroit's coordinate system starts at the Point of Origin in Campus Martius."
   },
   {
    "q": "When did Michigan Central Station reopen?",
@@ -667,26 +667,26 @@
    "why": "It carried a railroad."
   },
   {
-   "q": "Who wrote a march for Foshay Tower's dedication?",
+   "q": "Which waterfall was the only natural major waterfall on the Mississippi?",
    "o": [
-    "Irving Berlin",
-    "Duke Ellington",
-    "Aaron Copland",
-    "John Philip Sousa"
+    "Minnehaha Falls",
+    "Niagara Falls",
+    "Saint Anthony Falls",
+    "Hidden Falls"
    ],
-   "a": 3,
-   "why": "Sousa wrote it, and Foshay's check bounced."
+   "a": 2,
+   "why": "Saint Anthony Falls."
   },
   {
-   "q": "Spoonbridge and Cherry was installed in which year?",
+   "q": "Who designated the Basilica of Saint Mary a basilica in 1926?",
    "o": [
-    "1976",
-    "1988",
-    "1995",
-    "2003"
+    "Pope Leo XIII",
+    "Pope John Paul II",
+    "Pope Benedict XV",
+    "Pope Pius XI"
    ],
-   "a": 1,
-   "why": "It was placed by cranes on May 9, 1988."
+   "a": 3,
+   "why": "Pope Pius XI made it the first basilica in the United States."
   }
  ],
  "atlanta": [
@@ -702,37 +702,37 @@
    "why": "King served as co-pastor until 1968."
   },
   {
-   "q": "Centennial Olympic Park was built for which Games?",
+   "q": "The Georgia Capitol's gold leaf came from near which town?",
    "o": [
-    "1984",
-    "1996",
-    "2000",
-    "1988"
-   ],
-   "a": 1,
-   "why": "The 1996 Summer Olympics."
-  },
-  {
-   "q": "What campaign saved the Atlanta Fox in 1974?",
-   "o": [
-    "Save the Fox",
-    "Rescue Peachtree",
-    "Fox Forever",
-    "Keep the Mosque"
+    "Dahlonega",
+    "Sacramento",
+    "Fairbanks",
+    "Johannesburg"
    ],
    "a": 0,
-   "why": "Save the Fox formed after a demolition plan."
+   "why": "Gold from near Dahlonega in Lumpkin County."
   },
   {
-   "q": "What year did Oakland Cemetery begin?",
+   "q": "Atlanta's Flatiron Building was finished how many years before New York's?",
    "o": [
-    "1864",
-    "1872",
-    "1899",
-    "1850"
+    "1",
+    "5",
+    "10",
+    "25"
    ],
-   "a": 3,
-   "why": "It began in 1850 as Atlanta Cemetery."
+   "a": 1,
+   "why": "Five years."
+  },
+  {
+   "q": "Piedmont Park sits on the site of which 1895 event?",
+   "o": [
+    "A World's Fair",
+    "A Civil War muster",
+    "Cotton States and International Exposition",
+    "The Olympic Games"
+   ],
+   "a": 2,
+   "why": "The Cotton States and International Exposition."
   }
  ],
  "memphis": [
@@ -770,15 +770,15 @@
    "why": "He paid $102,500 in 1957."
   },
   {
-   "q": "How many Mallards march at the Peabody?",
+   "q": "Floor trading at the Memphis Cotton Exchange ended in which year?",
    "o": [
-    "Five",
-    "Two",
-    "Eight",
-    "Twelve"
+    "1939",
+    "1950",
+    "1978",
+    "2001"
    ],
-   "a": 0,
-   "why": "Five North American Mallards."
+   "a": 2,
+   "why": "Floor trading closed in 1978."
   }
  ],
  "savannah": [
@@ -805,15 +805,15 @@
    "why": "Fire destroyed the interior on February 6, 1898."
   },
   {
-   "q": "Which Declaration signer is buried at Colonial Park?",
+   "q": "Which Georgia fort fell to rifled cannon in about 30 hours in 1862?",
    "o": [
-    "Button Gwinnett",
-    "John Hancock",
-    "Ben Franklin",
-    "Thomas Jefferson"
+    "Fort Pulaski",
+    "Fort Sumter",
+    "Fort Moultrie",
+    "Fort McHenry"
    ],
    "a": 0,
-   "why": "Button Gwinnett."
+   "why": "Fort Pulaski, on Cockspur Island."
   },
   {
    "q": "What trade built River Street's warehouses?",

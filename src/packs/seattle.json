@@ -323,85 +323,77 @@
    }
   },
   {
-   "id": "gasworks",
-   "name": "Gas Works Park",
-   "short": "Gas Works",
-   "badge": "Gas Works",
+   "id": "pioneersq",
+   "name": "Pioneer Square",
+   "short": "Pioneer Square",
+   "badge": "Pioneer Square",
    "tag": "Stop 4 of 4",
-   "teaser": "A park built around a rusty gas plant.",
-   "map": "Gas Works Park, 2101 N Northlake Way, Seattle, WA",
-   "clue": "Cross to the north shore of Lake Union. Find the rusty industrial towers standing on a grassy hill.",
-   "safety": "Do not climb the towers or structures. They are fenced for a reason. Watch for broken surfaces, and keep a safe distance from the water.",
+   "teaser": "Seattle's original downtown, rebuilt in brick after a fire.",
+   "map": "Pioneer Square, 1st Ave S and Yesler Way, Seattle, WA",
+   "clue": "Walk to Occidental Park and Pioneer Place, where Yesler Way meets 1st Avenue, and find the iron-and-glass pergola.",
+   "safety": "The area is busy, with traffic and light rail nearby. Use crosswalks and watch for uneven brick sidewalks.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Climb the grassy mound. What sits at the top?",
+    "prompt": "Find the old iron and glass pergola in the small park. In what year was it added?",
     "options": [
-     "A flagpole",
-     "A fountain",
-     "A statue",
-     "A sundial"
+     "1889",
+     "1909",
+     "1929",
+     "1962"
     ],
-    "answer": 3,
-    "hint": "Look at the top and check the shadows.",
-    "verify": "Wikipedia says artists built a sundial atop the mound. Confirm on site. Written from sources, not yet checked on site."
+    "answer": 1,
+    "hint": "About 20 years after the great fire.",
+    "verify": "Wikipedia says an iron and glass pergola designed by Julian F. Everett was added in 1909. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1975",
-    "label": "Park opening",
-    "line": "The park opened in 1975.",
+    "yr": "1902",
+    "label": "The street then",
+    "line": "1st Avenue S in Pioneer Square in 1902.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2011",
+    "yr": "Today",
     "head": "Today",
     "label": "The park today",
-    "line": "The old gas plant towers in Gas Works Park. Photo from 2011.",
-    "ph": {
-     "k": "sea_gw_now",
-     "by": "Visitor7",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Gas_Works_Park_(Seattle,_Washington).jpg",
-     "note": "resized"
-    }
+    "line": "The pergola stands beside the totem pole."
    },
    "story": [
-    "A coal gasification plant ran on this site from 1906 to 1956. Landscape architect Richard Haag designed the park, which opened in 1975, and he kept six of the old generator towers.",
-    "The Great Mound is an artificial hill made from rubble from old foundations, covered with fresh topsoil. On top is a sundial by artists Chuck Greening and Kim Lazare, where visitors act as the gnomon.",
-    "Workers treated the polluted soil with bio-phytoremediation. The Play Barn was built partly from the plant's old exhauster-compressor building. The park was added to the National Register of Historic Places on January 2, 2013."
+    "Seattle's founders settled at Pioneer Square in 1852. Henry Yesler built a sawmill at the foot of what is now Yesler Way. The neighborhood was once known as Skid Road and Skid Row.",
+    "The Great Seattle Fire of June 6, 1889 destroyed Pioneer Square. By the end of 1890, dozens of brick and stone buildings in the Richardsonian Romanesque style had replaced the wood ones. The Seattle Underground Tour shows old storefronts buried when streets were raised.",
+    "In 1899, citizens stole a Tlingit totem pole and set it in Pioneer Place Park. They paid a $500 settlement. After an arsonist damaged it in 1938, a replacement was installed in 1940. The Pioneer Square-Skid Road Historic District was added to the National Register on June 22, 1970."
    ],
-   "fact": "Visitors work as the sundial's pointer: your shadow tells the time.",
-   "disputed": "Safety around the old towers is debated, and there is a dispute over removing their ladders and catwalks.",
+   "fact": "Citizens stole a totem pole in 1899 and paid a $500 settlement.",
+   "disputed": "The Wikipedia page for the neighborhood does not explain where the term Skid Road came from, so do not repeat popular origin stories without a source.",
    "claims": [
     {
-     "t": "Gas Works Park sits on the site of a former gasification plant.",
+     "t": "A fire destroyed Pioneer Square in 1889.",
      "a": 0,
-     "why": "Wikipedia: the plant ran from 1906 to 1956."
+     "why": "Wikipedia: June 6, 1889."
     },
     {
-     "t": "The old plant was torn down completely before the park was built.",
+     "t": "Henry Yesler's sawmill was built after the 1889 fire.",
      "a": 2,
-     "why": "Haag kept six of the generator towers and other structures in the park."
+     "why": "Yesler chose the site in 1852, before the fire."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Gas Works Park",
-     "u": "https://en.wikipedia.org/wiki/Gas_Works_Park"
+     "t": "Wikipedia: Pioneer Square, Seattle",
+     "u": "https://en.wikipedia.org/wiki/Pioneer_Square,_Seattle"
     },
     {
-     "t": "HistoryLink: Gas Works Park",
-     "u": "https://historylink.org/File/20978"
+     "t": "HistoryLink: Pioneer Square",
+     "u": "https://www.historylink.org/"
     }
    ],
    "card": {
-    "a": "1906",
-    "b": "1975",
-    "la": "Plant opened",
-    "lb": "Park opened"
+    "a": "1852",
+    "b": "1970",
+    "la": "Founded",
+    "lb": "Historic district"
    }
   }
  ],

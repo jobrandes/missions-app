@@ -323,85 +323,77 @@
    }
   },
   {
-   "id": "colonial",
-   "name": "Colonial Park Cemetery",
-   "short": "Colonial Park",
-   "badge": "Colonial Park",
+   "id": "pulaski",
+   "name": "Fort Pulaski",
+   "short": "Fort Pulaski",
+   "badge": "Fort Pulaski",
    "tag": "Stop 4 of 4",
-   "teaser": "A 1750 cemetery where a signer of the Declaration of Independence is buried.",
-   "map": "Colonial Park Cemetery, 200 Abercorn St, Savannah, GA",
-   "clue": "Find the old cemetery with brick walls and old tombs near Oglethorpe Avenue.",
-   "safety": "It is a place of rest. Stay on paths, do not touch or rub markers, and be quiet.",
+   "teaser": "A fort with 11-foot walls that fell in 30 hours.",
+   "map": "Fort Pulaski National Monument, Cockspur Island, GA",
+   "clue": "Drive east of Savannah toward Tybee Island to Cockspur Island and find the brick fort surrounded by a moat.",
+   "safety": "It is a national park site on an island. Watch for traffic on the highway, stay on trails and bring water and sun protection.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Look for the marker for Button Gwinnett. What historic document did he sign?",
+    "prompt": "How thick are the fort's walls?",
     "options": [
-     "The Constitution",
-     "The Emancipation Proclamation",
-     "The Declaration of Independence",
-     "The Bill of Rights"
+     "3 feet",
+     "7 feet",
+     "11 feet",
+     "20 feet"
     ],
     "answer": 2,
-    "hint": "He was a founding-era signer.",
-    "verify": "Wikipedia says Gwinnett signed the Declaration of Independence. Written from sources, not yet checked on site."
+    "hint": "A bit more than a basketball hoop is tall.",
+    "verify": "Wikipedia says the walls are 11 feet thick. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1750",
-    "label": "Established",
-    "line": "The cemetery was established in 1750.",
+    "yr": "1862",
+    "label": "After the siege",
+    "line": "The fort in 1862.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2007",
+    "yr": "Today",
     "head": "Today",
-    "label": "The cemetery today",
-    "line": "Old graves and tombs under the trees. Photo from 2007.",
-    "ph": {
-     "k": "sv_cp_now",
-     "by": "Daniel Mayer",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Colonial_Cemetery_in_Savannah,_Georgia.JPG",
-     "note": "resized"
-    }
+    "label": "The fort today",
+    "line": "The brick fort sits on Cockspur Island."
    },
    "story": [
-    "Colonial Park Cemetery was established in 1750, when Savannah was the capital of the British Province of Georgia. It closed to burials in 1853 and has been a public park since 1896.",
-    "Button Gwinnett, signer of the Declaration of Independence, is buried there, along with Lachlan McIntosh and James Habersham. An estimated 9,000 graves are there.",
-    "After Union troops occupied Savannah on December 24, 1864, the cemetery sheltered several hundred Union soldiers. Soldiers allegedly damaged some markers, altering dates and ages."
+    "Fort Pulaski was built from 1829 to 1847 on Cockspur Island at the mouth of the Savannah River. It was named in 1833 for Casimir Pulaski, a Polish-born soldier who fought in the American Revolution. About 25 million bricks went into it, supported by wooden pilings sunk up to 70 feet.",
+    "As a young second lieutenant, Robert E. Lee worked on its construction under Major Samuel Babcock. The walls are 11 feet thick.",
+    "In April 1862, Union forces used 36 guns, including James rifled cannons and Parrott rifles, to breach the corner wall within about 30 hours. Colonel Charles H. Olmstead surrendered reluctantly. Only two soldiers were killed. The success of rifled cannon rendered brick forts obsolete. It became a national monument on October 15, 1924."
    ],
-   "fact": "Button Gwinnett is buried there.",
-   "disputed": "The story of soldiers altering headstones is told as a rumor. Wikipedia uses the word allegedly.",
+   "fact": "Only two soldiers were killed in the siege.",
+   "disputed": "Dates for the surrender differ slightly. The siege began on April 10, 1862, and a photo of the surrender room is dated April 11.",
    "claims": [
     {
-     "t": "Colonial Park Cemetery opened in 1750.",
+     "t": "Fort Pulaski was breached by rifled cannon in 1862.",
      "a": 0,
-     "why": "Wikipedia: established in 1750."
+     "why": "Wikipedia: the corner wall was breached within 30 hours."
     },
     {
-     "t": "Union soldiers certainly carved fake dates on gravestones.",
-     "a": 1,
-     "why": "The story is repeated, but Wikipedia says only that they allegedly altered some markers."
+     "t": "Robert E. Lee designed Fort Pulaski.",
+     "a": 2,
+     "why": "He worked on construction as a young lieutenant, but did not design it."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Colonial Park Cemetery",
-     "u": "https://en.wikipedia.org/wiki/Colonial_Park_Cemetery"
+     "t": "Wikipedia: Fort Pulaski National Monument",
+     "u": "https://en.wikipedia.org/wiki/Fort_Pulaski_National_Monument"
     },
     {
-     "t": "Wikipedia: Button Gwinnett",
-     "u": "https://en.wikipedia.org/wiki/Button_Gwinnett"
+     "t": "Georgia Encyclopedia: Fort Pulaski",
+     "u": "https://www.georgiaencyclopedia.org/articles/counties-cities-neighborhoods/chatham-county/m-851"
     }
    ],
    "card": {
-    "a": "1750",
-    "b": "1896",
-    "la": "Established",
-    "lb": "Public park"
+    "a": "1829",
+    "b": "1862",
+    "la": "Construction began",
+    "lb": "Siege"
    }
   }
  ],

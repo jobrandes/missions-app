@@ -323,85 +323,77 @@
    }
   },
   {
-   "id": "elfreth",
-   "name": "Elfreth's Alley",
-   "short": "Elfreth's Alley",
-   "badge": "Elfreth's Alley",
+   "id": "carpenters",
+   "name": "Carpenters' Hall",
+   "short": "Carpenters' Hall",
+   "badge": "Carpenters' Hall",
    "tag": "Stop 4 of 4",
-   "teaser": "A tiny street older than the country, still full of people's homes.",
-   "map": "Elfreth's Alley, Philadelphia, PA",
-   "clue": "In Old City, find a narrow lane of small brick row houses, near 2nd Street, just north of Arch.",
-   "safety": "People live here. Be quiet, stay out of doorways and private steps, and do not photograph inside windows. Cars and delivery drivers also use the lane.",
+   "teaser": "Where the First Continental Congress met in 1774, in a guild's meeting hall.",
+   "map": "Carpenters' Hall, 320 Chestnut St, Philadelphia, PA",
+   "clue": "Walk to Independence National Historical Park and find the red-brick hall with a small cupola, tucked down a passage off Chestnut Street.",
+   "safety": "The street is busy. Use crosswalks. Check the hall's visiting hours, because it is a working guild building.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Walk the alley. What is the street surface made of?",
+    "prompt": "Which Congress met in Carpenters' Hall in September 1774?",
     "options": [
-     "Cobblestones",
-     "Gravel",
-     "Wood planks",
-     "Smooth asphalt"
+     "Second Continental Congress",
+     "Constitutional Convention",
+     "First Continental Congress",
+     "Confederation Congress"
     ],
-    "answer": 0,
-    "hint": "Look at your feet.",
-    "verify": "The alley is paved with cobblestones. Check on site. Written from sources, not yet checked on site."
+    "answer": 2,
+    "hint": "The earliest one.",
+    "verify": "Wikipedia says the First Continental Congress met there from September 5 to October 26, 1774. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1703",
-    "label": "The alley opens",
-    "line": "The alley was laid out between 1702 and 1704.",
+    "yr": "1905",
+    "label": "The hall then",
+    "line": "The hall in about 1905.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2006",
+    "yr": "Today",
     "head": "Today",
-    "label": "The alley today",
-    "line": "Elfreth's Alley, a narrow lane of old row houses. Photo from 2006.",
-    "ph": {
-     "k": "ph_ea_now",
-     "by": "Kjetil Ree",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Elfreth%27s_Alley.JPG",
-     "note": "resized"
-    }
+    "label": "The hall today",
+    "line": "The red-brick hall stands in a courtyard off Chestnut Street."
    },
    "story": [
-    "Elfreth's Alley was laid out between 1702 and 1704. Wikipedia gives 1703 as the founding date. It has 32 houses, built between 1703 and 1836.",
-    "Early residents were artisans, such as shipwrights, silver and pewter smiths, glassblowers and furniture builders.",
-    "The alley is called the nation's oldest residential street. It became a National Historic Landmark on October 9, 1960. Each June a Fete Day opens homes to visitors."
+    "Carpenters' Hall is owned by the Carpenters' Company of the City and County of Philadelphia. The land was bought in 1768. The company decided to build on January 30, 1770, and construction was completed in August 1774. Robert Smith designed it, in Georgian style, but did not supervise construction.",
+    "The First Continental Congress met there from September 5 to October 26, 1774. The Pennsylvania Provincial Conference met there in June 1776. During the Revolution it served as a hospital for British and American troops.",
+    "It also housed the Library Company, the American Philosophical Society and the First and Second Banks of the United States. It was a Federal Custom House from 1802 to 1819. It is a National Historic Landmark and admission is free."
    ],
-   "fact": "Real people still live in these houses today.",
-   "disputed": "\"Oldest\" is argued. The word \"continuously inhabited\" shows up in Wikipedia only in a footnote about other places with old houses, so check the exact wording whenever you read it.",
+   "fact": "It is still owned by the carpenters' guild.",
+   "disputed": "Wikipedia gives two completion years, 1774 and 1775, and two descriptions of the British occupation of the hall. Check the hall's own timeline before repeating either.",
    "claims": [
     {
-     "t": "Elfreth's Alley has 32 houses built between 1703 and 1836.",
+     "t": "The First Continental Congress met at Carpenters' Hall in 1774.",
      "a": 0,
-     "why": "Wikipedia gives 32 houses from 1703 to 1836."
+     "why": "Wikipedia: September 5 to October 26, 1774."
     },
     {
-     "t": "Elfreth's Alley is the oldest continuously inhabited street in America.",
-     "a": 1,
-     "why": "Wikipedia calls it the nation's oldest residential street. Other places also claim old homes, so the exact wording matters."
+     "t": "The Declaration of Independence was signed at Carpenters' Hall.",
+     "a": 2,
+     "why": "It was signed at Independence Hall."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Elfreth's Alley",
-     "u": "https://en.wikipedia.org/wiki/Elfreth%27s_Alley"
+     "t": "Wikipedia: Carpenters' Hall",
+     "u": "https://en.wikipedia.org/wiki/Carpenters%27_Hall"
     },
     {
-     "t": "ushistory.org: Elfreth's Alley",
-     "u": "https://www.ushistory.org/tour/elfreths-alley.htm"
+     "t": "Carpenters' Hall: Timeline",
+     "u": "https://www.carpentershall.org/timeline"
     }
    ],
    "card": {
-    "a": "1703",
-    "b": "1960",
-    "la": "Founded",
-    "lb": "National Historic Landmark"
+    "a": "1774",
+    "b": "1970",
+    "la": "Congress met",
+    "lb": "Landmark status"
    }
   }
  ],

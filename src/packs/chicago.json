@@ -143,85 +143,77 @@
    }
   },
   {
-   "id": "watertower",
-   "name": "Chicago Water Tower",
-   "short": "Water Tower",
-   "badge": "Water Tower",
+   "id": "rookery",
+   "name": "The Rookery",
+   "short": "The Rookery",
+   "badge": "The Rookery",
    "tag": "Stop 2 of 4",
-   "teaser": "A tiny castle that outlasted a city on fire.",
-   "map": "Chicago Water Tower, 806 N Michigan Ave, Chicago, IL",
-   "clue": "Walk the Magnificent Mile on North Michigan Avenue. Find a small pale stone castle with turrets, wedged between skyscrapers.",
-   "safety": "North Michigan Avenue sidewalks are packed and the corner is a busy intersection. Cross only at the signal and keep out of the street while taking photos.",
+   "teaser": "A building named for a pigeon-and-politician nest, with a Frank Lloyd Wright lobby.",
+   "map": "The Rookery Building, 209 S LaSalle St, Chicago, IL",
+   "clue": "Go to the Loop at LaSalle and Adams Streets and find the big red-brick building with a glowing glass court inside.",
+   "safety": "The Loop is busy on weekdays. Use crosswalks. The lobby is open to the public on business days only.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Look at the tower's walls. What color is the stone?",
+    "prompt": "Look at the building from the street. About how many stories is the Rookery?",
     "options": [
-     "Red brick",
-     "Dark gray",
-     "Bright white",
-     "Pale yellow"
+     "8",
+     "12",
+     "20",
+     "30"
     ],
-    "answer": 3,
-    "hint": "Think sunny, not stormy.",
-    "verify": "Sources say it is built of yellow Joliet limestone (Chicago Architecture Center). Written from sources, not yet checked on site."
+    "answer": 1,
+    "hint": "More than ten, fewer than twenty.",
+    "verify": "Wikipedia says 12 stories. Estimate from the street. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1869",
-    "label": "Just finished",
-    "line": "The tower was completed in 1869 as a standpipe for the city's water system.",
+    "yr": "1891",
+    "label": "The building then",
+    "line": "The building about three years after it opened.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2004",
+    "yr": "Today",
     "head": "Today",
-    "label": "The tower today",
-    "line": "The little limestone castle among the skyscrapers on Michigan Avenue. Photo from 2004.",
-    "ph": {
-     "k": "chi_wt_now",
-     "by": "Didier B (Sam67fr)",
-     "lic": "CC BY-SA 2.5",
-     "lu": "https://creativecommons.org/licenses/by-sa/2.5/",
-     "page": "https://commons.wikimedia.org/wiki/File:Water_Tower_-_Chicago_Nov_2004.jpg",
-     "note": "resized"
-    }
+    "label": "The building today",
+    "line": "The red-brick building stands on LaSalle Street."
    },
    "story": [
-    "The Water Tower was completed in 1869. William W. Boyington designed it in a castle-like Gothic Revival style, in yellow Joliet limestone.",
-    "It is not a real castle. The tower hid a standpipe, a tall pipe added to smooth out pressure surges from the city's pumps. The fancy outside covers a simple job.",
-    "In October 1871 the Great Chicago Fire burned much of the city, but the Water Tower and its pumping station were not badly damaged. They were built with little or no wood. They were not the only structures left standing."
+    "The Rookery was completed in 1888 and designed by Burnham and Root. The name may refer to pigeons that nested on a reservoir previously on the site, or to the temporary city hall that later stood there. The old city hall was nicknamed a rookery for the crows and pigeons that flocked to it and for the corrupt politicians it housed.",
+    "It has 12 stories and stands 181 feet tall. The exterior walls carry load, and there is an interior steel frame. Frank Lloyd Wright redesigned the lobby between 1905 and 1907, and William Drummond remodeled the building in 1931.",
+    "A two-story light court in white terracotta brings daylight to inside offices. Its skylight has 5,000 glass panes. It was designated a National Historic Landmark on May 15, 1975."
    ],
-   "fact": "The pretty castle is actually a disguise for a plumbing pipe.",
-   "disputed": "A guide's story credits a fireman, Frank Trautman, with saving it by covering it in wet blankets and canvas. That is one docent's account. The documented reason is that the tower was built of stone with almost no wood.",
+   "fact": "The skylight has 5,000 glass panes.",
+   "disputed": "The name has two origin stories, and Wikipedia gives both without choosing one.",
    "claims": [
     {
-     "t": "The Chicago Water Tower was built in 1869, before the Great Fire.",
+     "t": "Frank Lloyd Wright remodeled the Rookery's lobby.",
      "a": 0,
-     "why": "The Chicago Architecture Center gives 1869 as its completion date."
+     "why": "Wikipedia: he remodeled it from 1905 to 1907."
     },
     {
-     "t": "The Water Tower was the only building left standing after the 1871 fire.",
-     "a": 2,
-     "why": "The Chicago Architecture Center says it was not the only structure left standing."
+     "t": "The Rookery was named for a flock of pigeons, and nothing else.",
+     "a": 1,
+     "why": "Wikipedia gives two accounts: pigeons on an old reservoir, or an old city hall nicknamed the rookery."
     }
    ],
    "sources": [
     {
-     "t": "Chicago Architecture Center: Chicago Water Tower",
-     "u": "https://www.architecture.org/online-resources/buildings-of-chicago/chicago-water-tower"
+     "t": "Wikipedia: Rookery Building",
+     "u": "https://en.wikipedia.org/wiki/Rookery_Building"
     },
     {
-     "t": "Library of Congress: HABS record",
-     "u": "https://www.loc.gov/item/il0097"
+     "t": "Encyclopedia of Chicago: Rookery",
+     "u": "https://encyclopedia.chicagohistory.org/pages/10549.html"
     }
    ],
    "card": {
-    "a": "1869",
-    "b": "1871",
+    "a": "1888",
+    "b": "1907",
     "la": "Built",
-    "lb": "The Great Fire"
+    "lb": "Wright's lobby"
    }
   },
   {
@@ -315,85 +307,77 @@
    }
   },
   {
-   "id": "chicagotheatre",
-   "name": "Chicago Theatre",
-   "short": "Theatre",
-   "badge": "Theatre",
+   "id": "lpconservatory",
+   "name": "Lincoln Park Conservatory",
+   "short": "Conservatory",
+   "badge": "Conservatory",
    "tag": "Stop 4 of 4",
-   "teaser": "A French palace on State Street, with the sign everyone knows.",
-   "map": "Chicago Theatre, 175 N State St, Chicago, IL",
-   "clue": "Walk to State Street in the Loop. Look for a tall vertical sign that spells the city's name above a grand arch.",
-   "safety": "State Street is busy with buses, bikes and pedestrians. Stay on the sidewalk and cross only at the lights.",
+   "teaser": "A glass-house jungle in the middle of winter.",
+   "map": "Lincoln Park Conservatory, 2391 N Stockton Dr, Chicago, IL",
+   "clue": "Go to Lincoln Park and find the big glass-house conservatory near the zoo.",
+   "safety": "Watch for bikes on park paths. Stay on walkways and do not pick or touch plants.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Count the letters on the tall vertical sign. How many?",
+    "prompt": "One room sits about 5.5 feet below ground level, filled with ferns. What is it called?",
     "options": [
-     "5",
-     "6",
-     "7",
-     "9"
+     "The Palm House",
+     "The Orchid Room",
+     "The Display House",
+     "The Fern Room"
     ],
-    "answer": 2,
-    "hint": "It spells the name of the city.",
-    "verify": "The vertical sign spells CHICAGO, which is 7 letters (Wikipedia, Chicago Theatre). Check that no extra words are on it. Written from sources, not yet checked on site."
+    "answer": 3,
+    "hint": "It's named for what grows in it.",
+    "verify": "Wikipedia says the Fern Room sits about 5.5 feet below grade. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1921",
-    "label": "Opening year",
-    "line": "The Chicago Theatre opened in 1921 and was promoted as the \"Wonder Theatre of the World.\"",
+    "yr": "1914",
+    "label": "The conservatory then",
+    "line": "The conservatory and flower garden in 1914.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2010",
+    "yr": "Today",
     "head": "Today",
-    "label": "The sign at night",
-    "line": "The vertical CHICAGO sign and marquee glowing on State Street. Photo from 2010.",
-    "ph": {
-     "k": "chi_ct_now",
-     "by": "Daniel Schwen",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Chicago_Theatre_2.jpg",
-     "note": "resized"
-    }
+    "label": "The conservatory today",
+    "line": "The glass house stands beside the flower garden."
    },
    "story": [
-    "The theatre opened on October 26, 1921. Brothers Cornelius and George Rapp (Rapp and Rapp) designed it, with a French Baroque interior. It was promoted as the \"Wonder Theatre of the World.\"",
-    "It opened with 3,880 seats. A restoration in 1986 left about 3,600.",
-    "The marquee has been replaced several times, most recently in 1994, and keeps its earlier look. The original marquee went to the Smithsonian Institution in 2004. The theatre is a Chicago Landmark (1983) and is on the National Register of Historic Places (1979)."
+    "The current Lincoln Park Conservatory was built between 1890 and 1895 by the Lincoln Park Commission. Joseph Lyman Silsbee designed it with Mifflin E. Bell. The style is Victorian and exotic, with trusses shaped as ogee arches.",
+    "The vestibule and Palm House opened in 1892. The Fern Room and the Tropical Room, now the Orchid Room, opened in 1895. The Display House shows seasonal flower shows.",
+    "The conservatory covers about 3 acres. It has four display halls, a vestibule and fifteen propagating and growing houses. A fiddle-leaf rubber tree in the Palm House was planted in 1891."
    ],
-   "fact": "The Y-shaped symbol on the sign stands for the forked Chicago River.",
-   "disputed": "Nothing big is disputed here. The main trap is assuming the sign you see is the 1921 one.",
+   "fact": "A rubber tree in the Palm House was planted in 1891.",
+   "disputed": "Wikipedia lists several different dates for the greenhouse and the present building, so use ranges.",
    "claims": [
     {
-     "t": "The Chicago Theatre opened in 1921.",
+     "t": "The current conservatory was built in the early 1890s.",
      "a": 0,
-     "why": "Wikipedia gives October 26, 1921."
+     "why": "Wikipedia: built 1890 to 1895."
     },
     {
-     "t": "The marquee on the building today is the original one from 1921.",
+     "t": "The conservatory is entirely outdoors.",
      "a": 2,
-     "why": "It has been replaced several times, the whole marquee in 1994. The original went to the Smithsonian in 2004."
+     "why": "It is a glass building with indoor display houses."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Chicago Theatre",
-     "u": "https://en.wikipedia.org/wiki/Chicago_Theatre"
+     "t": "Wikipedia: Lincoln Park Conservatory",
+     "u": "https://en.wikipedia.org/wiki/Lincoln_Park_Conservatory"
     },
     {
-     "t": "City of Chicago: Landmark details",
-     "u": "https://webapps1.chicago.gov/landmarksweb/web/landmarkdetails.htm?lanId=1275"
+     "t": "TCLF: Lincoln Park Conservatory",
+     "u": "https://www.tclf.org/lincoln-park-conservatory"
     }
    ],
    "card": {
-    "a": "1921",
-    "b": "1983",
-    "la": "Opened",
-    "lb": "Chicago Landmark"
+    "a": "1892",
+    "b": "1895",
+    "la": "Palm House",
+    "lb": "Fern Room"
    }
   }
  ],

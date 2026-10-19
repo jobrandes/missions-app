@@ -135,249 +135,225 @@
    }
   },
   {
-   "id": "centennial",
-   "name": "Centennial Olympic Park",
-   "short": "Olympic Park",
-   "badge": "Olympic Park",
+   "id": "capitol",
+   "name": "Georgia State Capitol",
+   "short": "State Capitol",
+   "badge": "State Capitol",
    "tag": "Stop 2 of 4",
-   "teaser": "A park built for the 1996 Games, with water that dances to music.",
-   "map": "Centennial Olympic Park, 265 Park Ave W NW, Atlanta, GA",
-   "clue": "Go downtown to the big park beside the aquarium. Find the fountain with the five rings.",
-   "safety": "The fountain shows are popular and the plaza gets wet. Watch your step on slippery bricks and keep an eye on small kids.",
+   "teaser": "A gold dome made from gold dug up in Georgia.",
+   "map": "Georgia State Capitol, 206 Washington St SW, Atlanta, GA",
+   "clue": "Go downtown near Underground Atlanta and find the big domed building with a gold top.",
+   "safety": "Downtown streets are busy. Use crosswalks. The building has security screening and set visiting hours.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "The fountain uses lights, water and what else, to put on its show?",
+    "prompt": "Look at the dome. What is it covered in?",
     "options": [
-     "Music",
-     "Fire",
-     "Fog",
-     "Bells"
+     "Gold leaf",
+     "Copper",
+     "Slate",
+     "Terra cotta"
     ],
     "answer": 0,
-    "hint": "Think of a show you can hear.",
-    "verify": "Wikipedia says the lights and water are synchronized to music. Confirm on site. Written from sources, not yet checked on site."
+    "hint": "A precious metal.",
+    "verify": "Wikipedia says the dome is gilded with gold leaf. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1996",
-    "label": "Park opens",
-    "line": "Phase I opened in July 1996 for the Games.",
+    "yr": "1889",
+    "label": "The Capitol then",
+    "line": "The Capitol in its early years.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2013",
+    "yr": "Today",
     "head": "Today",
-    "label": "The fountain today",
-    "line": "Children playing in the Fountain of Rings. Photo from 2013.",
-    "ph": {
-     "k": "at_co_now",
-     "by": "Robert Neff",
-     "lic": "CC BY 2.0",
-     "lu": "https://creativecommons.org/licenses/by/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Fountains_Centennial_Olympic_Park.jpg",
-     "note": "resized"
-    }
+    "label": "The Capitol today",
+    "line": "The gold dome rises over downtown Atlanta."
    },
    "story": [
-    "Centennial Olympic Park was built for the 1996 Summer Olympics by the Atlanta Committee for the Olympic Games. Billy Payne, the chief executive, came up with it. Phase I opened in July 1996, and Phase II was finished in 1998.",
-    "The Fountain of Rings has 251 jets that shoot 12 to 35 feet high, with computer-controlled lights and water synchronized to music. Shows run four times a day.",
-    "Visitors could buy a brick for $35 with a message of up to 15 characters on two lines. About 800,000 bricks were used. The park replaced vacant lots and run-down industrial buildings, and the Georgia Aquarium and the World of Coca-Cola are on its north side."
+    "The Georgia State Capitol was completed in March 1889. Willoughby J. Edbrooke and Franklin Pierce Burnham of Chicago designed it. Miles and Horne of Toledo handled construction. The style is Renaissance Revival and Classical Revival, modeled to resemble the U.S. Capitol.",
+    "The dome was gilded in a 1958 renovation with native gold leaf from near Dahlonega in Lumpkin County. The original dome was terra cotta covered with tin. A statue named Miss Freedom has stood on top since the building opened.",
+    "A convention voted in 1877 to move the state capital permanently to Atlanta, and the city handed over its City Hall tract in 1880. The Georgia Capitol Museum has existed inside since 1889."
    ],
-   "fact": "The park's pavers are engraved with donor messages.",
-   "disputed": "Sources give the park as 21 or 22 acres. Wikipedia's article uses both.",
+   "fact": "The dome was gilded with gold from near Dahlonega in 1958.",
+   "disputed": "Wikipedia does not say whether the dome was gilded before 1958. Do not claim it was always gold.",
    "claims": [
     {
-     "t": "Centennial Olympic Park was built for the 1996 Games.",
+     "t": "The Georgia State Capitol was completed in 1889.",
      "a": 0,
-     "why": "Wikipedia: built by ACOG for the 1996 Summer Olympics."
+     "why": "Wikipedia: completed March 1889."
     },
     {
-     "t": "The brick pavers are blank.",
+     "t": "The dome has always been covered in gold.",
      "a": 2,
-     "why": "Donors paid $35 for an engraved message on each brick."
+     "why": "The original dome was terra cotta covered in tin. The gold leaf was added in 1958."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Centennial Olympic Park",
-     "u": "https://en.wikipedia.org/wiki/Centennial_Olympic_Park"
+     "t": "Wikipedia: Georgia State Capitol",
+     "u": "https://en.wikipedia.org/wiki/Georgia_State_Capitol"
     },
     {
-     "t": "Wikipedia: 1996 Summer Olympics",
-     "u": "https://en.wikipedia.org/wiki/1996_Summer_Olympics"
+     "t": "Georgia Encyclopedia: Georgia State Capitol",
+     "u": "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-state-capitol/"
     }
    ],
    "card": {
-    "a": "1996",
-    "b": "1998",
-    "la": "Phase I opened",
-    "lb": "Phase II"
+    "a": "1889",
+    "b": "1958",
+    "la": "Completed",
+    "lb": "Dome gilded"
    }
   },
   {
-   "id": "foxatl",
-   "name": "Fox Theatre",
-   "short": "Fox Theatre",
-   "badge": "Fox Theatre",
+   "id": "flatiron",
+   "name": "Flatiron Building",
+   "short": "Flatiron",
+   "badge": "Flatiron",
    "tag": "Stop 3 of 4",
-   "teaser": "A theater that was almost torn down, saved by the people of Atlanta.",
-   "map": "Fox Theatre, 660 Peachtree St NE, Atlanta, GA",
-   "clue": "Go to Peachtree Street in Midtown and find the grand theater with the striped towers and domes that look like a mosque.",
-   "safety": "Peachtree Street is a busy road. Use crosswalks and watch for event crowds.",
+   "teaser": "A wedge-shaped skyscraper that beat New York's by five years.",
+   "map": "Flatiron Building, 84 Peachtree St NW, Atlanta, GA",
+   "clue": "Walk to the downtown block where Peachtree, Poplar and Broad Streets meet and look for the narrow wedge-shaped tower.",
+   "safety": "Peachtree Street is busy. Use crosswalks, and stay on public sidewalks around the building.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Look at the big sign out front. How many letters are in the word FOX?",
+    "prompt": "The building sits on a wedge-shaped block. About how many stories does it have?",
     "options": [
-     "2",
-     "3",
-     "4",
-     "5"
+     "8",
+     "11",
+     "15",
+     "20"
     ],
     "answer": 1,
-    "hint": "Count the letters in the word.",
-    "verify": "Read the large sign on the building. Written from sources, not yet checked on site."
+    "hint": "More than ten, fewer than fifteen.",
+    "verify": "Wikipedia says 11 stories. Count on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1929",
-    "label": "Opening day",
-    "line": "The Fox opened on Christmas Day 1929.",
+    "yr": "1897",
+    "label": "The building then",
+    "line": "The building in its early years.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2007",
+    "yr": "Today",
     "head": "Today",
-    "label": "The theatre today",
-    "line": "The tall FOX sign and marquee on Peachtree Street. Photo from 2007.",
-    "ph": {
-     "k": "at_fx_now",
-     "by": "Atlantacitizen",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Fox_Theatre_Atlanta.jpg",
-     "note": "resized"
-    }
+    "label": "The building today",
+    "line": "The wedge-shaped tower stands on Peachtree Street."
    },
    "story": [
-    "The Fox was planned as the Yaarab Temple of the Shriners and shared with William Fox's theater. Construction ran from 1925 to 1929, and it opened on Christmas Day 1929. Marye, Alger and Vinour were the architects.",
-    "It uses Islamic and Egyptian decorative motifs. The auditorium was designed as an Arab-style courtyard under a night sky, with 96 bulbs and a projector that moved clouds across the ceiling. The Mighty Mo organ has 3,622 pipes.",
-    "In 1974 Southern Bell planned to tear down the closed theater. The Save the Fox campaign formed, Mayor Maynard Jackson imposed an eight-month moratorium on demolition, and the Fox was listed on the National Register that year."
+    "The Flatiron Building was built in 1897 and designed by Bradford Gilbert. It goes by several names: the English-American Building, the Georgia Savings Bank Building and the Empire Life Insurance Building.",
+    "It has 11 stories on a wedge-shaped block at 84 Peachtree Street NW, between Peachtree Street NE, Poplar Street NW and Broad Street NW. It was completed five years before New York's Flatiron Building and is described as the city's oldest standing skyscraper.",
+    "It was added to the National Register of Historic Places on March 26, 1976. It is now used for offices and includes a Microsoft Innovation Center."
    ],
-   "fact": "The ceiling has moving clouds.",
-   "disputed": "Do not mix up the Fox in Atlanta with the Fox Theatre in Detroit. Both are old movie palaces with different histories.",
+   "fact": "It was finished five years before New York's Flatiron.",
+   "disputed": "\"Oldest\" depends on how you define a skyscraper. Wikipedia calls it the city's second and oldest standing one in the same description.",
    "claims": [
     {
-     "t": "The Fox Theatre in Atlanta was saved from demolition in the 1970s.",
+     "t": "Atlanta's Flatiron Building was built before New York's.",
      "a": 0,
-     "why": "Wikipedia: the Save the Fox campaign began in 1974."
+     "why": "Wikipedia: completed five years before New York's Flatiron Building."
     },
     {
-     "t": "The Fox opened in 1974.",
+     "t": "The building has 50 stories.",
      "a": 2,
-     "why": "It opened on Christmas Day 1929. 1974 is the year of the demolition threat."
+     "why": "It has 11 stories."
     }
    ],
    "sources": [
     {
-     "t": "SAH Archipedia: Fox Theatre",
-     "u": "https://sah-archipedia.org/node/10683"
+     "t": "Wikipedia: Flatiron Building (Atlanta)",
+     "u": "https://en.wikipedia.org/wiki/Flatiron_Building_(Atlanta)"
     },
     {
-     "t": "The Clio: Fox Theatre",
-     "u": "https://theclio.com/entry/1734"
+     "t": "The Clio: The Flatiron Building",
+     "u": "https://www.theclio.com/tour/2431/5"
     }
    ],
    "card": {
-    "a": "1929",
-    "b": "1974",
-    "la": "Opened",
-    "lb": "Save the Fox"
+    "a": "1897",
+    "b": "1976",
+    "la": "Built",
+    "lb": "National Register"
    }
   },
   {
-   "id": "oakland",
-   "name": "Oakland Cemetery",
-   "short": "Oakland",
-   "badge": "Oakland",
+   "id": "piedmont",
+   "name": "Piedmont Park",
+   "short": "Piedmont Park",
+   "badge": "Piedmont Park",
    "tag": "Stop 4 of 4",
-   "teaser": "A garden cemetery that survived the Civil War, with a famous author's grave.",
-   "map": "Oakland Cemetery, 248 Oakland Ave SE, Atlanta, GA",
-   "clue": "Go to the Victorian cemetery just southeast of downtown. Find the brick Bell Tower near the entrance.",
-   "safety": "It is a place of rest. Stay on paths, do not touch or rub the markers, and be quiet.",
+   "teaser": "A park built on the site of an 1895 world's fair.",
+   "map": "Piedmont Park, 1071 Piedmont Ave NE, Atlanta, GA",
+   "clue": "Go to the big park in Midtown and walk to the lake in the middle, Lake Clara Meer.",
+   "safety": "Watch for bikes, skaters and joggers on the paths. Stay back from the water's edge.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "The visitor center is in a tower. What is it called?",
+    "prompt": "Lake Clara Meer is part of a park plan by which firm?",
     "options": [
-     "Clock Tower",
-     "Water Tower",
-     "Bell Tower",
-     "Fire Tower"
+     "Wright Brothers",
+     "Warner Brothers",
+     "Ringling Brothers",
+     "Olmsted Brothers"
     ],
-    "answer": 2,
-    "hint": "It rings.",
-    "verify": "Wikipedia says the visitor center is in the Bell Tower. Confirm on site. Written from sources, not yet checked on site."
+    "answer": 3,
+    "hint": "They were landscape architects.",
+    "verify": "Wikipedia says Lake Clara Meer is in the Olmsted Brothers design. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1850",
-    "label": "Founded",
-    "line": "The cemetery began as Atlanta Cemetery on six acres.",
+    "yr": "1902",
+    "label": "The park then",
+    "line": "A view of the park in 1902.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     }
    },
    "now": {
-    "yr": "2007",
+    "yr": "Today",
     "head": "Today",
-    "label": "The cemetery today",
-    "line": "Old graves and trees with downtown Atlanta behind. Photo from 2007.",
-    "ph": {
-     "k": "at_oc_now",
-     "by": "Mike Schinkel",
-     "lic": "CC BY 2.0",
-     "lu": "https://creativecommons.org/licenses/by/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Oakland_Cemetery_and_Atlanta_Skyscrapers.jpg",
-     "note": "resized"
-    }
+    "label": "The park today",
+    "line": "The lake and lawn sit in the middle of Midtown."
    },
    "story": [
-    "Oakland Cemetery started in 1850 as Atlanta Cemetery on six acres and was renamed in 1872 for its oaks and magnolias. It now covers 48 acres in the Victorian garden style.",
-    "Margaret Mitchell, author of Gone with the Wind, golfer Bobby Jones and former mayor Maynard Jackson are buried there. Many African American graves were marked with wood, which decayed, so a lot of graves are unidentified.",
-    "Most of Atlanta burned in 1864, but the original six acres survived. The Bell Tower was built in 1899 and now houses the visitor center. The Historic Oakland Foundation restores graves and offers tours."
+    "Piedmont Park covers 189 acres in Atlanta. It sits on the site of the 1895 Cotton States and International Exposition. The city bought the land in 1904, which extended the city limits to include the park and several developing neighborhoods.",
+    "The Olmsted Brothers offered a design between 1909 and 1912, and some of it was built. It includes Lake Clara Meer, an 11.5-acre lake.",
+    "The park gained a bathhouse, the Park Drive Bridge and Isamu Noguchi's Playscapes playground. After two decades of decline, the city adopted a master plan in 1982 and the Piedmont Park Conservancy formed in 1983. It was listed on the National Register of Historic Places in 1976."
    ],
-   "fact": "General Hood watched the Battle of Atlanta from near the Bell Tower.",
-   "disputed": "The Confederate section holds about 6,900 burials, and roughly 3,000 are unknown. Read counts carefully, because they differ by section.",
+   "fact": "The Conservancy formed in 1983.",
+   "disputed": "The Olmsted plan was only partly built. Do not say the whole park follows it.",
    "claims": [
     {
-     "t": "Oakland Cemetery was established in 1850.",
+     "t": "Piedmont Park is on the site of the 1895 Cotton States and International Exposition.",
      "a": 0,
-     "why": "Wikipedia: established in 1850 as Atlanta Cemetery."
+     "why": "Wikipedia: the park is on the exposition's site."
     },
     {
-     "t": "Oakland Cemetery was founded in 1864.",
-     "a": 2,
-     "why": "It began in 1850. 1864 is the year of the Battle of Atlanta."
+     "t": "The Olmsted Brothers designed the entire park.",
+     "a": 1,
+     "why": "Wikipedia says some of the plan was realized, but not all."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Oakland Cemetery (Atlanta)",
-     "u": "https://en.wikipedia.org/wiki/Oakland_Cemetery_(Atlanta)"
+     "t": "TCLF: Piedmont Park",
+     "u": "https://www.tclf.org/piedmont-park"
     },
     {
-     "t": "Wikipedia: Battle of Atlanta",
-     "u": "https://en.wikipedia.org/wiki/Battle_of_Atlanta"
+     "t": "Wikipedia: Piedmont Park",
+     "u": "https://en.wikipedia.org/wiki/Piedmont_Park"
     }
    ],
    "card": {
-    "a": "1850",
-    "b": "1899",
-    "la": "Founded",
-    "lb": "Bell Tower built"
+    "a": "1895",
+    "b": "1983",
+    "la": "Exposition",
+    "lb": "Conservancy formed"
    }
   }
  ],
