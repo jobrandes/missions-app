@@ -1,0 +1,335 @@
+{
+ "id": "savannah",
+ "name": "Savannah",
+ "explorer": "Hostess City Explorer",
+ "initials": "SAV",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Square Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Savannah Scholar"
+  ],
+  [
+   600,
+   "Savannah Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around Savannah. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Savannah is waiting.",
+ "safetyNote": "<li>Savannah is hot and humid in summer. Bring water, use crosswalks, and watch your step on cobblestones and uneven sidewalks.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "forsyth",
+   "name": "Forsyth Park Fountain",
+   "short": "Forsyth Fountain",
+   "badge": "Forsyth Fountain",
+   "tag": "Stop 1 of 4",
+   "teaser": "A white iron fountain that turns green every St. Patrick's Day.",
+   "map": "Forsyth Park Fountain, Forsyth Park, Savannah, GA",
+   "clue": "Find the big park at the south end of the historic district and head for the large white fountain in the middle.",
+   "safety": "Watch for bikes and joggers on the park paths. Stay out of the fountain.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What color is the fountain, normally?",
+    "options": [
+     "White",
+     "Green",
+     "Black",
+     "Gold"
+    ],
+    "answer": 0,
+    "hint": "On St. Patrick's Day it is a different color.",
+    "verify": "Wikipedia says the fountain is turned green on St. Patrick's Day. Confirm the normal color. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1858",
+    "label": "Fountain installed",
+    "line": "The fountain was installed in 1858.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The fountain today",
+    "line": "The fountain is the park's centerpiece."
+   },
+   "story": [
+    "Forsyth Park began in the 1840s on 10 acres given by William Brown Hodgson. It was expanded and named for Georgia Governor John Forsyth in 1851. It covers 30 acres.",
+    "The fountain was installed in 1858 and cast by Janes, Beebe & Company. Its design comes from the work of French sculptor Michel Lienard and resembles fountains at the Place de la Concorde in Paris.",
+    "The Confederate Memorial was unveiled in 1874 and a bronze soldier was added in 1879. The Fragrant Garden was designed for the blind, and the fountain is ceremonially turned green for St. Patrick's Day."
+   ],
+   "fact": "The fountain is turned green for St. Patrick's Day.",
+   "disputed": "Many sources say Forsyth donated the land. Wikipedia says William Brown Hodgson gave the first 10 acres.",
+   "claims": [
+    {
+     "t": "The Forsyth Park fountain was installed in 1858.",
+     "a": 0,
+     "why": "Wikipedia: installed in 1858."
+    },
+    {
+     "t": "Governor Forsyth donated the first 10 acres.",
+     "a": 2,
+     "why": "William Brown Hodgson donated the first 10 acres."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Forsyth Park",
+     "u": "https://en.wikipedia.org/wiki/Forsyth_Park"
+    },
+    {
+     "t": "Wikipedia: Savannah Historic District",
+     "u": "https://en.wikipedia.org/wiki/Savannah_Historic_District"
+    }
+   ],
+   "card": {
+    "a": "1851",
+    "b": "1858",
+    "la": "Park named",
+    "lb": "Fountain installed"
+   }
+  },
+  {
+   "id": "riverstreet",
+   "name": "River Street",
+   "short": "River Street",
+   "badge": "River Street",
+   "tag": "Stop 2 of 4",
+   "teaser": "A cobbled street where giant ships pass within a few yards.",
+   "map": "River Street, Savannah, GA",
+   "clue": "Take the steps or ramp down the bluff to the cobbled street on the Savannah River, lined with old cotton warehouses.",
+   "safety": "The cobblestones are uneven and slippery when wet. Watch for streetcar tracks and keep back from the river edge.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Looking at the river, what kind of vessels pass close to the promenade?",
+    "options": [
+     "Kayaks",
+     "Large cargo ships",
+     "Ferries only",
+     "Sailboats only"
+    ],
+    "answer": 1,
+    "hint": "Think of the Port of Savannah.",
+    "verify": "Wikipedia says large tankers and container ships sometimes pass within yards of the promenade. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1850s",
+    "label": "Cotton warehouses",
+    "line": "Cotton brokers worked along the bluff in the 1850s.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The street today",
+    "line": "Shops and restaurants fill the old warehouses."
+   },
+   "story": [
+    "River Street is about 2 miles long along the Savannah River, according to Wikipedia. The south side has rows of former cotton warehouses, some dating from the 1850s.",
+    "Factors Walk is built on the middle level of the sloping bluff, with warehouses beneath and Bay Street above. Cotton brokers, called factors, bargained there. The name Factors Row preserves the industry's name.",
+    "The pavement is Belgian block with streetcar tracks set in. Large tankers and container ships heading to and from the Port of Savannah sometimes pass within yards of the promenade."
+   ],
+   "fact": "The warehouses were built for the cotton trade.",
+   "disputed": "A popular claim says the cobblestones are old ship ballast stones. Wikipedia describes Belgian block paving instead.",
+   "claims": [
+    {
+     "t": "River Street has former cotton warehouses.",
+     "a": 0,
+     "why": "Wikipedia: terraces of former King Cotton warehouses."
+    },
+    {
+     "t": "The paving is all old ship ballast.",
+     "a": 1,
+     "why": "A popular story, but Wikipedia describes Belgian block paving."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: River Street (Savannah, Georgia)",
+     "u": "https://en.wikipedia.org/wiki/River_Street_(Savannah,_Georgia)"
+    },
+    {
+     "t": "Wikipedia: Factors Walk",
+     "u": "https://en.wikipedia.org/wiki/Factors_Walk"
+    }
+   ],
+   "card": {
+    "a": "1850s",
+    "b": "Today",
+    "la": "Warehouses",
+    "lb": "Waterfront"
+   }
+  },
+  {
+   "id": "cathedral",
+   "name": "Cathedral of St. John the Baptist",
+   "short": "Cathedral",
+   "badge": "Cathedral",
+   "tag": "Stop 3 of 4",
+   "teaser": "Spires over Lafayette Square, rebuilt after a fire.",
+   "map": "Cathedral Basilica of St. John the Baptist, 222 E Harris St, Savannah, GA",
+   "clue": "Go to Lafayette Square and find the big Gothic church with tall spires.",
+   "safety": "It is an active church. Be quiet and respectful, check visiting hours, and watch for traffic around the square.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many tall spires rise from the front of the cathedral?",
+    "options": [
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "answer": 1,
+    "hint": "Look at the front tower area.",
+    "verify": "Wikipedia mentions the cathedral's spires. Count on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1876",
+    "label": "Dedicated",
+    "line": "The cathedral was dedicated on April 30, 1876.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The cathedral today",
+    "line": "The spires rise above Lafayette Square."
+   },
+   "story": [
+    "The parish started in 1799. The present cathedral was dedicated on April 30, 1876, and Ephraim Francis Baldwin was its architect, in Gothic Revival style.",
+    "A fire destroyed the interior on February 6, 1898. The first Mass in the rebuilt building was held in December 1899, and it was rededicated on October 28, 1900.",
+    "It is 214 feet tall overall and has 81 stained-glass windows. Windows installed in 1904 came from Austria-Hungary. Pope Francis made it a minor basilica in January 2020."
+   ],
+   "fact": "It became a minor basilica in 2020.",
+   "disputed": "Older guides say the basilica title dates to the 1990s. Wikipedia says January 2020.",
+   "claims": [
+    {
+     "t": "The cathedral was dedicated in 1876.",
+     "a": 0,
+     "why": "Wikipedia: dedicated April 30, 1876."
+    },
+    {
+     "t": "The cathedral was named a basilica in 1996.",
+     "a": 2,
+     "why": "Pope Francis elevated it in January 2020."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cathedral Basilica of St. John the Baptist",
+     "u": "https://en.wikipedia.org/wiki/Cathedral_Basilica_of_St._John_the_Baptist_(Savannah,_Georgia)"
+    },
+    {
+     "t": "Wikipedia: Lafayette Square (Savannah)",
+     "u": "https://en.wikipedia.org/wiki/Lafayette_Square_(Savannah,_Georgia)"
+    }
+   ],
+   "card": {
+    "a": "1876",
+    "b": "1900",
+    "la": "Dedicated",
+    "lb": "Rededicated"
+   }
+  },
+  {
+   "id": "colonial",
+   "name": "Colonial Park Cemetery",
+   "short": "Colonial Park",
+   "badge": "Colonial Park",
+   "tag": "Stop 4 of 4",
+   "teaser": "A 1750 cemetery where a signer of the Declaration of Independence is buried.",
+   "map": "Colonial Park Cemetery, 200 Abercorn St, Savannah, GA",
+   "clue": "Find the old cemetery with brick walls and old tombs near Oglethorpe Avenue.",
+   "safety": "It is a place of rest. Stay on paths, do not touch or rub markers, and be quiet.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look for the marker for Button Gwinnett. What historic document did he sign?",
+    "options": [
+     "The Constitution",
+     "The Emancipation Proclamation",
+     "The Declaration of Independence",
+     "The Bill of Rights"
+    ],
+    "answer": 2,
+    "hint": "He was a founding-era signer.",
+    "verify": "Wikipedia says Gwinnett signed the Declaration of Independence. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1750",
+    "label": "Established",
+    "line": "The cemetery was established in 1750.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The cemetery today",
+    "line": "The cemetery is now a public park."
+   },
+   "story": [
+    "Colonial Park Cemetery was established in 1750, when Savannah was the capital of the British Province of Georgia. It closed to burials in 1853 and has been a public park since 1896.",
+    "Button Gwinnett, signer of the Declaration of Independence, is buried there, along with Lachlan McIntosh and James Habersham. An estimated 9,000 graves are there.",
+    "After Union troops occupied Savannah on December 24, 1864, the cemetery sheltered several hundred Union soldiers. Soldiers allegedly damaged some markers, altering dates and ages."
+   ],
+   "fact": "Button Gwinnett is buried there.",
+   "disputed": "The story of soldiers altering headstones is told as a rumor. Wikipedia uses the word allegedly.",
+   "claims": [
+    {
+     "t": "Colonial Park Cemetery opened in 1750.",
+     "a": 0,
+     "why": "Wikipedia: established in 1750."
+    },
+    {
+     "t": "Union soldiers certainly carved fake dates on gravestones.",
+     "a": 1,
+     "why": "The story is repeated, but Wikipedia says only that they allegedly altered some markers."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Colonial Park Cemetery",
+     "u": "https://en.wikipedia.org/wiki/Colonial_Park_Cemetery"
+    },
+    {
+     "t": "Wikipedia: Button Gwinnett",
+     "u": "https://en.wikipedia.org/wiki/Button_Gwinnett"
+    }
+   ],
+   "card": {
+    "a": "1750",
+    "b": "1896",
+    "la": "Established",
+    "lb": "Public park"
+   }
+  }
+ ]
+}

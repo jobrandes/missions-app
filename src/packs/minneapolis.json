@@ -1,0 +1,335 @@
+{
+ "id": "minneapolis",
+ "name": "Minneapolis",
+ "explorer": "Mill City Explorer",
+ "initials": "MSP",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Mill City Scholar"
+  ],
+  [
+   600,
+   "Minneapolis Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around Minneapolis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Minneapolis is waiting.",
+ "safetyNote": "<li>Stay on trails and bridges near the river, keep back from the edges and the falls, and dress for the weather. Winters are very cold.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "stonearch",
+   "name": "Stone Arch Bridge",
+   "short": "Stone Arch",
+   "badge": "Stone Arch",
+   "tag": "Stop 1 of 4",
+   "teaser": "A curved railroad bridge now just for walking and biking.",
+   "map": "Stone Arch Bridge, Minneapolis, MN",
+   "clue": "Walk to the old railroad bridge that curves across the Mississippi River next to Saint Anthony Falls.",
+   "safety": "The bridge is shared with bikes. Stay to the right, keep back from railings and watch your step.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is the bridge now used for, based on the signs and the people on it?",
+    "options": [
+     "Trains only",
+     "Cars",
+     "Walking and biking",
+     "Boats"
+    ],
+    "answer": 2,
+    "hint": "Look at who is crossing.",
+    "verify": "Wikipedia says it became a bike and walking path in 1994. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1883",
+    "label": "Railroad bridge",
+    "line": "The bridge carried trains for the Manitoba line.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The bridge today",
+    "line": "Walkers and cyclists cross above the falls."
+   },
+   "story": [
+    "James J. Hill built the bridge in 1882 and 1883 for his railroad, the St. Paul, Minneapolis and Manitoba, which became the Great Northern Railway. Charles C. Smith designed it.",
+    "It is about 2,100 feet long, with granite piers from Sauk Rapids and limestone upper sections. It carried trains to the Great Northern Depot.",
+    "The Minneapolis Park Board converted it to a bike and walking path in 1994. It was named a National Historic Civil Engineering Landmark in 1974."
+   ],
+   "fact": "The bridge curves.",
+   "disputed": "Counts of its arches vary by source, since one span is steel. Treat any number you read as approximate.",
+   "claims": [
+    {
+     "t": "The Stone Arch Bridge was built in the 1880s.",
+     "a": 0,
+     "why": "Wikipedia: built 1882 to 1883."
+    },
+    {
+     "t": "The Stone Arch Bridge was built for cars.",
+     "a": 2,
+     "why": "It was built as a railroad bridge."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Stone Arch Bridge (Minneapolis)",
+     "u": "https://en.wikipedia.org/wiki/Stone_Arch_Bridge_(Minneapolis)"
+    },
+    {
+     "t": "Wikipedia: Saint Anthony Falls",
+     "u": "https://en.wikipedia.org/wiki/Saint_Anthony_Falls"
+    }
+   ],
+   "card": {
+    "a": "1883",
+    "b": "1994",
+    "la": "Railroad bridge",
+    "lb": "Pedestrian path"
+   }
+  },
+  {
+   "id": "millcity",
+   "name": "Mill City Museum",
+   "short": "Mill City",
+   "badge": "Mill City",
+   "tag": "Stop 2 of 4",
+   "teaser": "The mill that blew up, and the ruins they built a museum inside.",
+   "map": "Mill City Museum, 704 S 2nd St, Minneapolis, MN",
+   "clue": "Find the museum built inside the ruins of a giant flour mill on the river, just west of the Stone Arch Bridge.",
+   "safety": "Museum hours and ticket rules apply. Stay on public paths and outside any fenced ruins.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The museum rests inside what kind of old building?",
+    "options": [
+     "A brewery",
+     "A flour mill",
+     "A railroad depot",
+     "A sawmill"
+    ],
+    "answer": 1,
+    "hint": "It is the reason for the city's nickname.",
+    "verify": "Wikipedia says it is in the ruins of the Washburn A Mill. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1878",
+    "label": "The explosion",
+    "line": "A flour-dust explosion destroyed the mills in 1878.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The ruins today",
+    "line": "The museum is built inside the old mill's walls."
+   },
+   "story": [
+    "The Washburn A Mill was built in 1874 and was called the largest flour mill in the world. On May 2, 1878, airborne flour dust ignited. The explosion killed 14 workers instantly and four more died in the fire. Five other mills were destroyed.",
+    "Afterward, mills across the country added ventilation and other safety devices. William de la Barre designed a new Washburn A Mill, which opened in 1880 as the world's largest flour mill until 1881.",
+    "A fire in 1991 nearly destroyed the old mill. The Minnesota Historical Society opened the Mill City Museum in 2003, with a Flour Tower freight-elevator exhibit that feels like a working mill."
+   ],
+   "fact": "The museum opened in 2003.",
+   "disputed": "The final death count is usually given as 18. Some counts treat the later deaths separately.",
+   "claims": [
+    {
+     "t": "Flour dust caused the 1878 mill explosion.",
+     "a": 0,
+     "why": "Wikipedia: airborne flour dust ignited."
+    },
+    {
+     "t": "The Washburn A Mill was never rebuilt after 1878.",
+     "a": 2,
+     "why": "A new Washburn A Mill opened in 1880."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Mill City Museum",
+     "u": "https://en.wikipedia.org/wiki/Mill_City_Museum"
+    },
+    {
+     "t": "Wikipedia: Great Mill Disaster",
+     "u": "https://en.wikipedia.org/wiki/Great_Mill_Disaster"
+    }
+   ],
+   "card": {
+    "a": "1874",
+    "b": "2003",
+    "la": "Mill built",
+    "lb": "Museum opened"
+   }
+  },
+  {
+   "id": "spoonbridge",
+   "name": "Spoonbridge and Cherry",
+   "short": "Spoonbridge",
+   "badge": "Spoonbridge",
+   "tag": "Stop 3 of 4",
+   "teaser": "A giant spoon with a cherry that squirts water.",
+   "map": "Minneapolis Sculpture Garden, 725 Vineland Pl, Minneapolis, MN",
+   "clue": "Find the Minneapolis Sculpture Garden, across from the Walker Art Center, and look for the oversized spoon holding a bright cherry.",
+   "safety": "Stay on paths and off the sculpture. The garden is a public park, so keep an eye on small kids near the pond.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What color is the cherry on the spoon?",
+    "options": [
+     "Yellow",
+     "Green",
+     "Purple",
+     "Red"
+    ],
+    "answer": 3,
+    "hint": "Think of a cherry.",
+    "verify": "The cherry is painted. Confirm the color on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1988",
+    "label": "Installed",
+    "line": "The sculpture was placed by cranes on May 9, 1988.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The sculpture today",
+    "line": "The spoon and cherry sit in the middle of the garden."
+   },
+   "story": [
+    "Claes Oldenburg and Coosje van Bruggen made Spoonbridge and Cherry. It was placed by cranes on May 9, 1988, and the Sculpture Garden opened that fall with ceremonies September 9 to 11.",
+    "It measures about 30 by 13 by 52 feet. The spoon weighs about 5,800 pounds and the cherry about 1,200. It is stainless steel and aluminum with a polyurethane enamel coat. The cherry was repainted in 1995 and again in 2021 and 2022.",
+    "Water sprays from the tip and base of the cherry's stem. The spoon straddles a small pond shaped like a linden tree seed, matching the lindens around it."
+   ],
+   "fact": "The cherry was repainted in 1995 and again in 2021 and 2022.",
+   "disputed": "Many people assume it is a bridge. Wikipedia does not describe it that way, so the name is a joke.",
+   "claims": [
+    {
+     "t": "Spoonbridge and Cherry was installed in 1988.",
+     "a": 0,
+     "why": "Wikipedia: placed by cranes on May 9, 1988."
+    },
+    {
+     "t": "Spoonbridge and Cherry is made of wood.",
+     "a": 2,
+     "why": "It is stainless steel and aluminum."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Spoonbridge and Cherry",
+     "u": "https://en.wikipedia.org/wiki/Spoonbridge_and_Cherry"
+    },
+    {
+     "t": "Wikipedia: Minneapolis Sculpture Garden",
+     "u": "https://en.wikipedia.org/wiki/Minneapolis_Sculpture_Garden"
+    }
+   ],
+   "card": {
+    "a": "1988",
+    "b": "2022",
+    "la": "Installed",
+    "lb": "Repainted"
+   }
+  },
+  {
+   "id": "foshay",
+   "name": "Foshay Tower",
+   "short": "Foshay Tower",
+   "badge": "Foshay Tower",
+   "tag": "Stop 4 of 4",
+   "teaser": "A skyscraper copied from the Washington Monument, and a bounced check to John Philip Sousa.",
+   "map": "Foshay Tower, 821 Marquette Ave, Minneapolis, MN",
+   "clue": "Find the tall tower downtown with sides that slope slightly inward. It looks like the Washington Monument that grew up in the city.",
+   "safety": "Downtown is busy. Use crosswalks and keep clear of loading areas and transit lanes.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The tower is a hotel now. What does the name on the building say, besides Foshay?",
+    "options": [
+     "Ritz",
+     "W",
+     "Hyatt",
+     "Hilton"
+    ],
+    "answer": 1,
+    "hint": "One letter.",
+    "verify": "Wikipedia says it is now W Minneapolis - The Foshay. Check the entrance. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1929",
+    "label": "Opening year",
+    "line": "The tower opened in 1929.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The tower is a hotel with an observation deck."
+   },
+   "story": [
+    "Foshay Tower opened in November 1929. It is 447 feet tall, designed by Léon Eugène Arnal for Magney & Tusler, and modeled on the Washington Monument, with sides that slope slightly inward.",
+    "Wilbur Foshay was a businessman who built three utility empires. John Philip Sousa wrote the Foshay Tower-Washington Memorial March for the dedication. Foshay's check to Sousa bounced, so Sousa barred performances of the march until the debt was repaid in 1988.",
+    "Foshay's corporate empire entered receivership about six weeks after the building opened, and he never lived in it. The tower was renovated as the W Minneapolis - The Foshay hotel, which opened in 2008, with a 30th-floor observation deck."
+   ],
+   "fact": "The march was banned for decades.",
+   "disputed": "The date is written two ways. The infobox says August 30, 1929, and the text says November 2, 1929. Sources also disagree on whether the IDS Center passed it in 1972 or 1973.",
+   "claims": [
+    {
+     "t": "Foshay Tower was modeled on the Washington Monument.",
+     "a": 0,
+     "why": "Wikipedia: its design is modeled on the monument."
+    },
+    {
+     "t": "Wilbur Foshay lived in the tower for years.",
+     "a": 2,
+     "why": "He never lived in it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Foshay Tower",
+     "u": "https://en.wikipedia.org/wiki/Foshay_Tower"
+    },
+    {
+     "t": "Wikipedia: Washington Monument",
+     "u": "https://en.wikipedia.org/wiki/Washington_Monument"
+    }
+   ],
+   "card": {
+    "a": "1929",
+    "b": "2008",
+    "la": "Opened",
+    "lb": "Hotel opened"
+   }
+  }
+ ]
+}

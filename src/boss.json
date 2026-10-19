@@ -596,5 +596,235 @@
    "a": 0,
    "why": "Part of the space was dedicated as a market in 1791."
   }
+ ],
+ "detroit": [
+  {
+   "q": "What did Diego Rivera paint in the Rivera Court?",
+   "o": [
+    "Oil portraits",
+    "Fresco murals",
+    "Mosaics",
+    "Stained glass"
+   ],
+   "a": 1,
+   "why": "He painted the Detroit Industry murals in fresco, 1932 to 1933."
+  },
+  {
+   "q": "When was the Spirit of Detroit dedicated?",
+   "o": [
+    "1958",
+    "1927",
+    "1976",
+    "1945"
+   ],
+   "a": 0,
+   "why": "September 23, 1958."
+  },
+  {
+   "q": "About how many seats does the Fox Theatre have?",
+   "o": [
+    "1,200",
+    "2,500",
+    "3,000",
+    "5,000"
+   ],
+   "a": 3,
+   "why": "It has 5,048 seats."
+  },
+  {
+   "q": "When did Michigan Central Station reopen?",
+   "o": [
+    "1988",
+    "2018",
+    "2024",
+    "1913"
+   ],
+   "a": 2,
+   "why": "It reopened in June 2024."
+  }
+ ],
+ "minneapolis": [
+  {
+   "q": "What ignited in the 1878 Washburn A Mill explosion?",
+   "o": [
+    "Coal gas",
+    "Flour dust",
+    "Gunpowder",
+    "Lamp oil"
+   ],
+   "a": 1,
+   "why": "Airborne flour dust ignited."
+  },
+  {
+   "q": "What was the Stone Arch Bridge built for?",
+   "o": [
+    "Trains",
+    "Cars",
+    "Boats",
+    "Pedestrians"
+   ],
+   "a": 0,
+   "why": "It carried a railroad."
+  },
+  {
+   "q": "Who wrote a march for Foshay Tower's dedication?",
+   "o": [
+    "Irving Berlin",
+    "Duke Ellington",
+    "Aaron Copland",
+    "John Philip Sousa"
+   ],
+   "a": 3,
+   "why": "Sousa wrote it, and Foshay's check bounced."
+  },
+  {
+   "q": "Spoonbridge and Cherry was installed in which year?",
+   "o": [
+    "1976",
+    "1988",
+    "1995",
+    "2003"
+   ],
+   "a": 1,
+   "why": "It was placed by cranes on May 9, 1988."
+  }
+ ],
+ "atlanta": [
+  {
+   "q": "Who was co-pastor at Ebenezer with his father from 1960?",
+   "o": [
+    "Ralph Abernathy",
+    "Andrew Young",
+    "Jesse Jackson",
+    "Martin Luther King Jr."
+   ],
+   "a": 3,
+   "why": "King served as co-pastor until 1968."
+  },
+  {
+   "q": "Centennial Olympic Park was built for which Games?",
+   "o": [
+    "1984",
+    "1996",
+    "2000",
+    "1988"
+   ],
+   "a": 1,
+   "why": "The 1996 Summer Olympics."
+  },
+  {
+   "q": "What campaign saved the Atlanta Fox in 1974?",
+   "o": [
+    "Save the Fox",
+    "Rescue Peachtree",
+    "Fox Forever",
+    "Keep the Mosque"
+   ],
+   "a": 0,
+   "why": "Save the Fox formed after a demolition plan."
+  },
+  {
+   "q": "What year did Oakland Cemetery begin?",
+   "o": [
+    "1864",
+    "1872",
+    "1899",
+    "1850"
+   ],
+   "a": 3,
+   "why": "It began in 1850 as Atlanta Cemetery."
+  }
+ ],
+ "memphis": [
+  {
+   "q": "Who opened Sun Studio?",
+   "o": [
+    "Sam Phillips",
+    "Elvis Presley",
+    "Johnny Cash",
+    "W.C. Handy"
+   ],
+   "a": 0,
+   "why": "Sam Phillips, January 3, 1950."
+  },
+  {
+   "q": "What did Congress call Beale Street in 1977?",
+   "o": [
+    "The Jazz Mile",
+    "Music Row",
+    "Blues Avenue",
+    "The Home of the Blues"
+   ],
+   "a": 3,
+   "why": "December 15, 1977."
+  },
+  {
+   "q": "How much did Elvis pay for Graceland?",
+   "o": [
+    "$25,000",
+    "$102,500",
+    "$1 million",
+    "$500,000"
+   ],
+   "a": 1,
+   "why": "He paid $102,500 in 1957."
+  },
+  {
+   "q": "How many Mallards march at the Peabody?",
+   "o": [
+    "Five",
+    "Two",
+    "Eight",
+    "Twelve"
+   ],
+   "a": 0,
+   "why": "Five North American Mallards."
+  }
+ ],
+ "savannah": [
+  {
+   "q": "When was the Forsyth Park fountain installed?",
+   "o": [
+    "1776",
+    "1812",
+    "1858",
+    "1902"
+   ],
+   "a": 2,
+   "why": "It was installed in 1858."
+  },
+  {
+   "q": "The cathedral was rebuilt after a fire in which year?",
+   "o": [
+    "1876",
+    "1912",
+    "1865",
+    "1898"
+   ],
+   "a": 3,
+   "why": "Fire destroyed the interior on February 6, 1898."
+  },
+  {
+   "q": "Which Declaration signer is buried at Colonial Park?",
+   "o": [
+    "Button Gwinnett",
+    "John Hancock",
+    "Ben Franklin",
+    "Thomas Jefferson"
+   ],
+   "a": 0,
+   "why": "Button Gwinnett."
+  },
+  {
+   "q": "What trade built River Street's warehouses?",
+   "o": [
+    "Tobacco",
+    "Cotton",
+    "Coal",
+    "Steel"
+   ],
+   "a": 1,
+   "why": "Cotton brokers, called factors, worked there."
+  }
  ]
 }

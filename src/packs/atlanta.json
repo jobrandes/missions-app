@@ -1,0 +1,335 @@
+{
+ "id": "atlanta",
+ "name": "Atlanta",
+ "explorer": "Peach City Explorer",
+ "initials": "ATL",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Peachtree Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Atlanta Scholar"
+  ],
+  [
+   600,
+   "Atlanta Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around Atlanta. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Atlanta is waiting.",
+ "safetyNote": "<li>Atlanta is hot and humid in summer. Bring water, use crosswalks, and be respectful at churches and cemeteries.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "ebenezer",
+   "name": "Ebenezer Baptist Church",
+   "short": "Ebenezer",
+   "badge": "Ebenezer",
+   "tag": "Stop 1 of 4",
+   "teaser": "The church where Martin Luther King Jr. preached, and where his funeral was held.",
+   "map": "Ebenezer Baptist Church, 407 Auburn Ave NE, Atlanta, GA",
+   "clue": "Go to the Martin Luther King Jr. National Historical Park and find the red-brick church with the tall bell tower.",
+   "safety": "The church is an active place of worship and a national park site. Be quiet and respectful, and check visiting hours.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Read the park signs near the church. Who is the park named for?",
+    "options": [
+     "Ralph Abernathy",
+     "Andrew Young",
+     "Martin Luther King Jr.",
+     "John Lewis"
+    ],
+    "answer": 2,
+    "hint": "The pastor who preached here.",
+    "verify": "Wikipedia says the church is in the Martin Luther King Jr. National Historical Park. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1922",
+    "label": "Church dedicated",
+    "line": "The historic building was dedicated in 1922.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The church today",
+    "line": "The church sits inside the national historical park."
+   },
+   "story": [
+    "Ebenezer Baptist Church was founded in 1886 by Pastor John A. Parker and eight people on Airline Street.",
+    "The church building was dedicated in 1922. Martin Luther King Jr. served as co-pastor with his father from 1960 until his assassination in 1968, and his funeral was held at Ebenezer on April 9, 1968.",
+    "The newer Horizon Sanctuary was inaugurated in 1999 with 1,700 seats, in the Martin Luther King Jr. National Historical Park."
+   ],
+   "fact": "The church was founded with nine people.",
+   "disputed": "Wikipedia does not give the national park's founding year or the old sanctuary's style, so check the park's own history before repeating them.",
+   "claims": [
+    {
+     "t": "Ebenezer Baptist Church was founded in 1886.",
+     "a": 0,
+     "why": "Wikipedia: founded in 1886 by Pastor John A. Parker."
+    },
+    {
+     "t": "The church was founded in 1968.",
+     "a": 2,
+     "why": "1968 is the year of King's funeral. It was founded in 1886."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Ebenezer Baptist Church",
+     "u": "https://en.wikipedia.org/wiki/Ebenezer_Baptist_Church"
+    },
+    {
+     "t": "Wikipedia: Martin Luther King Jr. National Historical Park",
+     "u": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._National_Historical_Park"
+    }
+   ],
+   "card": {
+    "a": "1886",
+    "b": "1999",
+    "la": "Founded",
+    "lb": "Horizon Sanctuary"
+   }
+  },
+  {
+   "id": "centennial",
+   "name": "Centennial Olympic Park",
+   "short": "Olympic Park",
+   "badge": "Olympic Park",
+   "tag": "Stop 2 of 4",
+   "teaser": "A park built for the 1996 Games, with water that dances to music.",
+   "map": "Centennial Olympic Park, 265 Park Ave W NW, Atlanta, GA",
+   "clue": "Go downtown to the big park beside the aquarium. Find the fountain with the five rings.",
+   "safety": "The fountain shows are popular and the plaza gets wet. Watch your step on slippery bricks and keep an eye on small kids.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The fountain uses lights, water and what else, to put on its show?",
+    "options": [
+     "Music",
+     "Fire",
+     "Fog",
+     "Bells"
+    ],
+    "answer": 0,
+    "hint": "Think of a show you can hear.",
+    "verify": "Wikipedia says the lights and water are synchronized to music. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1996",
+    "label": "Park opens",
+    "line": "Phase I opened in July 1996 for the Games.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The park today",
+    "line": "The park is a downtown gathering spot."
+   },
+   "story": [
+    "Centennial Olympic Park was built for the 1996 Summer Olympics by the Atlanta Committee for the Olympic Games. Billy Payne, the chief executive, came up with it. Phase I opened in July 1996, and Phase II was finished in 1998.",
+    "The Fountain of Rings has 251 jets that shoot 12 to 35 feet high, with computer-controlled lights and water synchronized to music. Shows run four times a day.",
+    "Visitors could buy a brick for $35 with a message of up to 15 characters on two lines. About 800,000 bricks were used. The park replaced vacant lots and run-down industrial buildings, and the Georgia Aquarium and the World of Coca-Cola are on its north side."
+   ],
+   "fact": "The park's pavers are engraved with donor messages.",
+   "disputed": "Sources give the park as 21 or 22 acres. Wikipedia's article uses both.",
+   "claims": [
+    {
+     "t": "Centennial Olympic Park was built for the 1996 Games.",
+     "a": 0,
+     "why": "Wikipedia: built by ACOG for the 1996 Summer Olympics."
+    },
+    {
+     "t": "The brick pavers are blank.",
+     "a": 2,
+     "why": "Donors paid $35 for an engraved message on each brick."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Centennial Olympic Park",
+     "u": "https://en.wikipedia.org/wiki/Centennial_Olympic_Park"
+    },
+    {
+     "t": "Wikipedia: 1996 Summer Olympics",
+     "u": "https://en.wikipedia.org/wiki/1996_Summer_Olympics"
+    }
+   ],
+   "card": {
+    "a": "1996",
+    "b": "1998",
+    "la": "Phase I opened",
+    "lb": "Phase II"
+   }
+  },
+  {
+   "id": "foxatl",
+   "name": "Fox Theatre",
+   "short": "Fox Theatre",
+   "badge": "Fox Theatre",
+   "tag": "Stop 3 of 4",
+   "teaser": "A theater that was almost torn down, saved by the people of Atlanta.",
+   "map": "Fox Theatre, 660 Peachtree St NE, Atlanta, GA",
+   "clue": "Go to Peachtree Street in Midtown and find the grand theater with the striped towers and domes that look like a mosque.",
+   "safety": "Peachtree Street is a busy road. Use crosswalks and watch for event crowds.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Look at the big sign out front. How many letters are in the word FOX?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "answer": 1,
+    "hint": "Count the letters in the word.",
+    "verify": "Read the large sign on the building. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1929",
+    "label": "Opening day",
+    "line": "The Fox opened on Christmas Day 1929.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The theatre today",
+    "line": "The theater is a major live-performance venue."
+   },
+   "story": [
+    "The Fox was planned as the Yaarab Temple of the Shriners and shared with William Fox's theater. Construction ran from 1925 to 1929, and it opened on Christmas Day 1929. Marye, Alger and Vinour were the architects.",
+    "It uses Islamic and Egyptian decorative motifs. The auditorium was designed as an Arab-style courtyard under a night sky, with 96 bulbs and a projector that moved clouds across the ceiling. The Mighty Mo organ has 3,622 pipes.",
+    "In 1974 Southern Bell planned to tear down the closed theater. The Save the Fox campaign formed, Mayor Maynard Jackson imposed an eight-month moratorium on demolition, and the Fox was listed on the National Register that year."
+   ],
+   "fact": "The ceiling has moving clouds.",
+   "disputed": "Do not mix up the Fox in Atlanta with the Fox Theatre in Detroit. Both are old movie palaces with different histories.",
+   "claims": [
+    {
+     "t": "The Fox Theatre in Atlanta was saved from demolition in the 1970s.",
+     "a": 0,
+     "why": "Wikipedia: the Save the Fox campaign began in 1974."
+    },
+    {
+     "t": "The Fox opened in 1974.",
+     "a": 2,
+     "why": "It opened on Christmas Day 1929. 1974 is the year of the demolition threat."
+    }
+   ],
+   "sources": [
+    {
+     "t": "SAH Archipedia: Fox Theatre",
+     "u": "https://sah-archipedia.org/node/10683"
+    },
+    {
+     "t": "The Clio: Fox Theatre",
+     "u": "https://theclio.com/entry/1734"
+    }
+   ],
+   "card": {
+    "a": "1929",
+    "b": "1974",
+    "la": "Opened",
+    "lb": "Save the Fox"
+   }
+  },
+  {
+   "id": "oakland",
+   "name": "Oakland Cemetery",
+   "short": "Oakland",
+   "badge": "Oakland",
+   "tag": "Stop 4 of 4",
+   "teaser": "A garden cemetery that survived the Civil War, with a famous author's grave.",
+   "map": "Oakland Cemetery, 248 Oakland Ave SE, Atlanta, GA",
+   "clue": "Go to the Victorian cemetery just southeast of downtown. Find the brick Bell Tower near the entrance.",
+   "safety": "It is a place of rest. Stay on paths, do not touch or rub the markers, and be quiet.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The visitor center is in a tower. What is it called?",
+    "options": [
+     "Clock Tower",
+     "Water Tower",
+     "Bell Tower",
+     "Fire Tower"
+    ],
+    "answer": 2,
+    "hint": "It rings.",
+    "verify": "Wikipedia says the visitor center is in the Bell Tower. Confirm on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1850",
+    "label": "Founded",
+    "line": "The cemetery began as Atlanta Cemetery on six acres.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The cemetery today",
+    "line": "The Victorian cemetery covers 48 acres near downtown."
+   },
+   "story": [
+    "Oakland Cemetery started in 1850 as Atlanta Cemetery on six acres and was renamed in 1872 for its oaks and magnolias. It now covers 48 acres in the Victorian garden style.",
+    "Margaret Mitchell, author of Gone with the Wind, golfer Bobby Jones and former mayor Maynard Jackson are buried there. Many African American graves were marked with wood, which decayed, so a lot of graves are unidentified.",
+    "Most of Atlanta burned in 1864, but the original six acres survived. The Bell Tower was built in 1899 and now houses the visitor center. The Historic Oakland Foundation restores graves and offers tours."
+   ],
+   "fact": "General Hood watched the Battle of Atlanta from near the Bell Tower.",
+   "disputed": "The Confederate section holds about 6,900 burials, and roughly 3,000 are unknown. Read counts carefully, because they differ by section.",
+   "claims": [
+    {
+     "t": "Oakland Cemetery was established in 1850.",
+     "a": 0,
+     "why": "Wikipedia: established in 1850 as Atlanta Cemetery."
+    },
+    {
+     "t": "Oakland Cemetery was founded in 1864.",
+     "a": 2,
+     "why": "It began in 1850. 1864 is the year of the Battle of Atlanta."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Oakland Cemetery (Atlanta)",
+     "u": "https://en.wikipedia.org/wiki/Oakland_Cemetery_(Atlanta)"
+    },
+    {
+     "t": "Wikipedia: Battle of Atlanta",
+     "u": "https://en.wikipedia.org/wiki/Battle_of_Atlanta"
+    }
+   ],
+   "card": {
+    "a": "1850",
+    "b": "1899",
+    "la": "Founded",
+    "lb": "Bell Tower built"
+   }
+  }
+ ]
+}

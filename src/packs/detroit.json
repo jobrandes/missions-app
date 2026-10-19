@@ -1,0 +1,335 @@
+{
+ "id": "detroit",
+ "name": "Detroit",
+ "explorer": "Motor City Explorer",
+ "initials": "DET",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Woodward Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Motor City Scholar"
+  ],
+  [
+   600,
+   "Detroit Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around Detroit. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Detroit is waiting.",
+ "safetyNote": "<li>Downtown Detroit is spread out. Stay on busy, well-lit streets, watch for traffic and the QLine streetcar, and keep your belongings close.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "spirit",
+   "name": "The Spirit of Detroit",
+   "short": "Spirit",
+   "badge": "Spirit",
+   "tag": "Stop 1 of 4",
+   "teaser": "A bronze giant who gets dressed up in a jersey when the home team wins.",
+   "map": "Spirit of Detroit, 2 Woodward Ave, Detroit, MI",
+   "clue": "Go to the Coleman A. Young Municipal Center near the river. Out front sits a giant seated bronze figure on a marble base.",
+   "safety": "The plaza is by a busy street. Use crosswalks and do not climb on the base.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In the giant figure's other hand are small gold figures of a family. How many are there?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "answer": 1,
+    "hint": "Count the people in the family group.",
+    "verify": "Wikipedia says the small gold figures are a man, a woman and a child. Count on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1958",
+    "label": "Dedication",
+    "line": "The statue was dedicated on September 23, 1958.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The statue today",
+    "line": "The bronze figure sits outside the municipal center, sometimes in a jersey."
+   },
+   "story": [
+    "Marshall Fredericks made the bronze statue, cast in Oslo, Norway. It was dedicated on September 23, 1958 outside what is now the Coleman A. Young Municipal Center, on a 60-ton marble base.",
+    "In its left hand the figure holds a gilded sphere with rays, a symbol of God. In its right hand it holds smaller gold figures of a man, woman and child, a symbol of human relationships. The city commissioned it on August 2, 1955 for $58,000, and Fredericks waived his fee as a civic duty.",
+    "The statue often wears an oversized team jersey during big sports moments. A 2017 resolution limited this to championship wins, and since 2020 teams can dress it when they are in championship contention. A $25,000 fee covers restoration afterward."
+   ],
+   "fact": "The sculptor gave up his fee.",
+   "disputed": "Sources disagree on the exact height. Wikipedia says about 26 feet, so treat any number as approximate.",
+   "claims": [
+    {
+     "t": "The Spirit of Detroit was dedicated in 1958.",
+     "a": 0,
+     "why": "Wikipedia: dedicated September 23, 1958."
+    },
+    {
+     "t": "The sculptor was paid the full $58,000.",
+     "a": 2,
+     "why": "Fredericks waived his fee as a civic duty."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: The Spirit of Detroit",
+     "u": "https://en.wikipedia.org/wiki/The_Spirit_of_Detroit"
+    },
+    {
+     "t": "Wikipedia: Marshall Fredericks",
+     "u": "https://en.wikipedia.org/wiki/Marshall_Fredericks"
+    }
+   ],
+   "card": {
+    "a": "1955",
+    "b": "1958",
+    "la": "Commissioned",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "fox",
+   "name": "Fox Theatre",
+   "short": "Fox Theatre",
+   "badge": "Fox Theatre",
+   "tag": "Stop 2 of 4",
+   "teaser": "The biggest movie palace of the 1920s still standing, and it's covered in gold.",
+   "map": "Fox Theatre, 2211 Woodward Ave, Detroit, MI",
+   "clue": "Go to the Woodward Avenue facade, where the big theater stands in the entertainment district.",
+   "safety": "Woodward Avenue is busy and event nights are crowded. Use crosswalks and watch for the streetcar.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Check the street sign near the theatre entrance. Which avenue is it on?",
+    "options": [
+     "Michigan Avenue",
+     "Jefferson Avenue",
+     "Gratiot Avenue",
+     "Woodward Avenue"
+    ],
+    "answer": 3,
+    "hint": "It is also the street the QLine runs along.",
+    "verify": "Wikipedia describes the Woodward facade with Asian motifs. Read the sign on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1928",
+    "label": "Opening year",
+    "line": "The Fox opened with a gala on September 21, 1928.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The theatre today",
+    "line": "The restored theatre is a major venue on Woodward Avenue."
+   },
+   "story": [
+    "The Fox opened on September 21, 1928. C. Howard Crane designed it. It has 5,048 seats, or 5,174 with removable seats in the orchestra pit.",
+    "The style is Art Deco with Burmese, Chinese, Indian and Persian motifs inside. A four-manual Wurlitzer organ with 36 ranks was built for the theater and is still in its original installation.",
+    "Mike and Marian Ilitch bought the theater in 1988 and restored it for $12 million. It is the largest surviving movie palace of the 1920s and a National Historic Landmark since 1989."
+   ],
+   "fact": "The marquee was rebuilt in 1987 based on the original from the 1950s.",
+   "disputed": "\"Largest\" is measured among surviving 1920s movie palaces. Other theaters were larger once, but they are gone.",
+   "claims": [
+    {
+     "t": "The Fox Theatre opened in 1928.",
+     "a": 0,
+     "why": "Wikipedia: gala opening September 21, 1928."
+    },
+    {
+     "t": "The Fox Theatre has fewer than 1,000 seats.",
+     "a": 2,
+     "why": "It has over 5,000 seats."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fox Theatre (Detroit)",
+     "u": "https://en.wikipedia.org/wiki/Fox_Theatre_(Detroit)"
+    },
+    {
+     "t": "Wikipedia: C. Howard Crane",
+     "u": "https://en.wikipedia.org/wiki/C._Howard_Crane"
+    }
+   ],
+   "card": {
+    "a": "1928",
+    "b": "1988",
+    "la": "Opened",
+    "lb": "Ilitch purchase"
+   }
+  },
+  {
+   "id": "dia",
+   "name": "Detroit Institute of Arts",
+   "short": "DIA",
+   "badge": "DIA",
+   "tag": "Stop 3 of 4",
+   "teaser": "A whole room painted by a famous muralist, and a priest-approved scandal.",
+   "map": "Detroit Institute of Arts, 5200 Woodward Ave, Detroit, MI",
+   "clue": "Go to the museum on Woodward Avenue. Inside, ask for the Rivera Court, the room covered in giant industrial murals.",
+   "safety": "Museum rules apply: do not touch the walls, and check hours and admission before you go.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In the Rivera Court, the murals cover the walls of the room. How many walls have painted panels?",
+    "options": [
+     "4",
+     "1",
+     "2",
+     "3"
+    ],
+    "answer": 0,
+    "hint": "Look all around the room.",
+    "verify": "Wikipedia says the 27 panels surround the room on all four walls. Count the walls on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1932",
+    "label": "Rivera arrives",
+    "line": "Rivera began the murals in 1932 and finished in 1933.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The court today",
+    "line": "The painted court is open to visitors inside the museum."
+   },
+   "story": [
+    "Diego Rivera, the Mexican muralist, painted the Detroit Industry murals in fresco in 1932 and 1933. They cover 27 panels on four walls of the Rivera Court at the Detroit Institute of Arts.",
+    "The museum director, Wilhelm Valentiner, brought Rivera in, and Edsel Ford contributed $20,000 to make the commission possible. Rivera was a controversial choice because he followed Marxist philosophy.",
+    "In 1933 some clergy and newspapers attacked the murals. The target was a panel showing a Christ-like child being vaccinated. Some demanded its destruction, but Edsel Ford and Valentiner refused. The murals became a National Historic Landmark in April 2014."
+   ],
+   "fact": "The murals took painters about a year to finish.",
+   "disputed": "Many people say Edsel Ford commissioned the murals. Wikipedia says the museum director commissioned them and Ford helped pay.",
+   "claims": [
+    {
+     "t": "Diego Rivera painted the Detroit Industry murals in 1932 and 1933.",
+     "a": 0,
+     "why": "Wikipedia gives the dates 1932 to 1933."
+    },
+    {
+     "t": "The murals were destroyed after the 1933 complaints.",
+     "a": 2,
+     "why": "Ford and Valentiner refused to destroy the panel, and the murals are still there."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Detroit Industry Murals",
+     "u": "https://en.wikipedia.org/wiki/Detroit_Industry_Murals"
+    },
+    {
+     "t": "Wikipedia: Detroit Institute of Arts",
+     "u": "https://en.wikipedia.org/wiki/Detroit_Institute_of_Arts"
+    }
+   ],
+   "card": {
+    "a": "1932",
+    "b": "2014",
+    "la": "Painted",
+    "lb": "Landmark status"
+   }
+  },
+  {
+   "id": "michigancentral",
+   "name": "Michigan Central Station",
+   "short": "Central Station",
+   "badge": "Central Station",
+   "tag": "Stop 4 of 4",
+   "teaser": "A skyscraper train station that sat empty for 30 years, then came back.",
+   "map": "Michigan Central Station, 2001 15th St, Detroit, MI",
+   "clue": "Go to Corktown, southwest of downtown, and look for the tall tower with rows of big windows beside the old rail yard.",
+   "safety": "Be respectful of the active campus. View from public sidewalks, watch traffic and do not enter closed areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The station has a tower of offices above the main hall. About how many stories is it?",
+    "options": [
+     "10",
+     "14",
+     "30",
+     "18"
+    ],
+    "answer": 3,
+    "hint": "More than a dozen, fewer than twenty.",
+    "verify": "The tower is 18 stories according to Bridge Michigan. Estimate from the street. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1913",
+    "label": "Opening year",
+    "line": "The station opened in December 1913.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The restored station and tower reopened in June 2024."
+   },
+   "story": [
+    "Michigan Central Station opened in December 1913. Warren & Wetmore and Reed & Stem designed it. Allen Stem of Reed & Stem also helped design New York's Grand Central. The tower is 18 stories with more than 500 offices.",
+    "The last train left in 1988. After that the building sat vacant for about 30 years.",
+    "Ford bought it from the Moroun family in 2018 and reopened the station in June 2024 as part of a campus project that cost $950 million."
+   ],
+   "fact": "Allen Stem also designed Grand Central.",
+   "disputed": "Some stories call it a sad ruin forever. It was reopened, so be careful with old photos that show the empty building.",
+   "claims": [
+    {
+     "t": "Michigan Central Station reopened in 2024.",
+     "a": 0,
+     "why": "Bridge Michigan: reopened in June 2024."
+    },
+    {
+     "t": "The station has been in continuous use since 1913.",
+     "a": 2,
+     "why": "The last train left in 1988 and the building sat vacant for about 30 years."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Bridge Michigan: Michigan Central Station",
+     "u": "https://bridgemi.com/business-watch/after-photos-show-transformation-michigan-central-station-detroit/"
+    },
+    {
+     "t": "Atlas Obscura: Michigan Central Station",
+     "u": "https://www.atlasobscura.com/places/michigan-central-station"
+    }
+   ],
+   "card": {
+    "a": "1913",
+    "b": "2024",
+    "la": "Opened",
+    "lb": "Reopened"
+   }
+  }
+ ]
+}

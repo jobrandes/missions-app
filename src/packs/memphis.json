@@ -1,0 +1,335 @@
+{
+ "id": "memphis",
+ "name": "Memphis",
+ "explorer": "Bluff City Explorer",
+ "initials": "MEM",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Beale Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Blues Scholar"
+  ],
+  [
+   600,
+   "Memphis Historian"
+  ]
+ ],
+ "heroAlt": "",
+ "heroLi": "",
+ "heroCredit": "Photos pending: only free-to-use photos go in this app, and none have been added for this town yet.",
+ "mission": "Find four landmarks around Memphis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Memphis is waiting.",
+ "safetyNote": "<li>Memphis summers are hot. Bring water, stay in busy areas at night, and respect that Graceland and Sun Studio are tour sites with tickets.</li>",
+ "badgeMap": {},
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "sun",
+   "name": "Sun Studio",
+   "short": "Sun Studio",
+   "badge": "Sun Studio",
+   "tag": "Stop 1 of 4",
+   "teaser": "A tiny studio where Elvis, Johnny Cash and others got their start.",
+   "map": "Sun Studio, 706 Union Ave, Memphis, TN",
+   "clue": "Find the small corner building on Union Avenue with the bright yellow-and-black sign.",
+   "safety": "Union Avenue is a busy road. Use crosswalks. Tours need tickets, and the studio is still in use.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is the street address number on the Sun Studio sign?",
+    "options": [
+     "701",
+     "710",
+     "706",
+     "714"
+    ],
+    "answer": 2,
+    "hint": "Between 700 and 710.",
+    "verify": "Sun Studio is at 706 Union Avenue. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1950",
+    "label": "Opened",
+    "line": "Sam Phillips opened the studio in 1950.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The studio today",
+    "line": "The studio gives tours and still makes records."
+   },
+   "story": [
+    "Sam Phillips opened Sun Studio on January 3, 1950, as the Memphis Recording Service, at 706 Union Avenue.",
+    "Elvis Presley recorded there in 1953 and 1954. Johnny Cash, Carl Perkins, Jerry Lee Lewis, Howlin' Wolf and B.B. King also recorded there. Jackie Brenston and his Delta Cats recorded Rocket 88 there in 1951, often cited as the first rock and roll single.",
+    "On December 4, 1956, Presley, Lewis, Perkins and Cash had an impromptu session that was later called the Million Dollar Quartet. Sun Studio became a National Historic Landmark on July 31, 2003 and is still used by recording artists."
+   ],
+   "fact": "Sam Phillips opened the studio on January 3, 1950.",
+   "disputed": "\"First rock and roll record\" is an old argument. Wikipedia calls the Rocket 88 claim reputed.",
+   "claims": [
+    {
+     "t": "Sam Phillips opened Sun Studio in 1950.",
+     "a": 0,
+     "why": "Wikipedia: opened January 3, 1950."
+    },
+    {
+     "t": "Rocket 88 is certainly the first rock and roll record.",
+     "a": 1,
+     "why": "It is often cited as the first, but that claim is disputed."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Sun Studio",
+     "u": "https://en.wikipedia.org/wiki/Sun_Studio"
+    },
+    {
+     "t": "Wikipedia: Sam Phillips",
+     "u": "https://en.wikipedia.org/wiki/Sam_Phillips"
+    }
+   ],
+   "card": {
+    "a": "1950",
+    "b": "2003",
+    "la": "Opened",
+    "lb": "Landmark"
+   }
+  },
+  {
+   "id": "beale",
+   "name": "Beale Street",
+   "short": "Beale Street",
+   "badge": "Beale Street",
+   "tag": "Stop 2 of 4",
+   "teaser": "A street the U.S. Congress officially named the Home of the Blues.",
+   "map": "Beale Street, Memphis, TN",
+   "clue": "Go downtown and walk the pedestrian blocks of Beale Street, lit with neon signs.",
+   "safety": "The street is crowded at night. Keep your belongings close, stay in a group and use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Find B.B. King's Blues Club. What is its street number?",
+    "options": [
+     "143",
+     "127",
+     "201",
+     "119"
+    ],
+    "answer": 0,
+    "hint": "It is on the same block as the neon.",
+    "verify": "Wikipedia lists B.B. King's Blues Club at 143 Beale. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1841",
+    "label": "Laid out",
+    "line": "Robertson Topp laid out the street in 1841.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The street today",
+    "line": "Neon-lit clubs line the pedestrian blocks."
+   },
+   "story": [
+    "Developer Robertson Topp laid out Beale Street in 1841. It was first called Beale Avenue and was later renamed for Edward Fitzgerald Beale.",
+    "W.C. Handy came to Memphis around 1903. He wrote Mr. Crump in 1909 as a campaign song, and it was later renamed The Memphis Blues.",
+    "The street declined in the 1960s as urban renewal tore down buildings. Beale Street became a National Historic Landmark in May 1966, and on December 15, 1977, Congress declared it the Home of the Blues."
+   ],
+   "fact": "B.B. King was billed as the Beale Street Blues Boy.",
+   "disputed": "The Wikipedia article does not use the title Father of the Blues for Handy. Check that nickname before repeating it.",
+   "claims": [
+    {
+     "t": "Congress declared Beale Street the Home of the Blues in 1977.",
+     "a": 0,
+     "why": "Wikipedia: December 15, 1977."
+    },
+    {
+     "t": "Beale Street was built in the 1960s.",
+     "a": 2,
+     "why": "It was laid out in 1841. The 1960s was a period of decline."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Beale Street",
+     "u": "https://en.wikipedia.org/wiki/Beale_Street"
+    },
+    {
+     "t": "Wikipedia: W. C. Handy",
+     "u": "https://en.wikipedia.org/wiki/W._C._Handy"
+    }
+   ],
+   "card": {
+    "a": "1841",
+    "b": "1977",
+    "la": "Laid out",
+    "lb": "Home of the Blues"
+   }
+  },
+  {
+   "id": "graceland",
+   "name": "Graceland",
+   "short": "Graceland",
+   "badge": "Graceland",
+   "tag": "Stop 3 of 4",
+   "teaser": "The mansion Elvis bought for $102,500 when he was 22.",
+   "map": "Graceland, 3764 Elvis Presley Blvd, Memphis, TN",
+   "clue": "Go south of downtown on Elvis Presley Boulevard and look for the white mansion behind a wrought-iron gate.",
+   "safety": "Elvis Presley Boulevard is a busy road. Tours need tickets. Do not climb the wall or write on it without permission.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The front gate is shaped like what?",
+    "options": [
+     "A guitar",
+     "A book of sheet music",
+     "A star",
+     "A horseshoe"
+    ],
+    "answer": 1,
+    "hint": "Think of music on paper.",
+    "verify": "Wikipedia says the gate is shaped like a book of sheet music. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1957",
+    "label": "Elvis moves in",
+    "line": "Elvis bought the house in March 1957.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The mansion is a museum and National Historic Landmark."
+   },
+   "story": [
+    "Ruth and Thomas Moore built the house in 1939 and named it for Grace Toof, a family relative. Elvis Presley bought it on March 19, 1957 for $102,500.",
+    "Elvis died at Graceland on August 16, 1977. His grave is in the Meditation Garden next to the mansion. The Jungle Room has an indoor waterfall and was a recording studio in 1976.",
+    "Graceland opened to the public on June 7, 1982. It was listed on the National Register on November 7, 1991 and became a National Historic Landmark on March 27, 2006. The house has 17,552 square feet."
+   ],
+   "fact": "The wrought-iron gate was designed by Abe Sauer.",
+   "disputed": "The house name comes from Grace Toof, daughter of the founder of a family business, not from the Moores themselves.",
+   "claims": [
+    {
+     "t": "Elvis bought Graceland in 1957.",
+     "a": 0,
+     "why": "Wikipedia: March 19, 1957."
+    },
+    {
+     "t": "Graceland opened to the public in 1960.",
+     "a": 2,
+     "why": "It opened June 7, 1982."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Graceland",
+     "u": "https://en.wikipedia.org/wiki/Graceland"
+    },
+    {
+     "t": "Wikipedia: Elvis Presley",
+     "u": "https://en.wikipedia.org/wiki/Elvis_Presley"
+    }
+   ],
+   "card": {
+    "a": "1957",
+    "b": "1982",
+    "la": "Elvis buys it",
+    "lb": "Public opening"
+   }
+  },
+  {
+   "id": "peabody",
+   "name": "The Peabody Hotel",
+   "short": "Peabody",
+   "badge": "Peabody",
+   "tag": "Stop 4 of 4",
+   "teaser": "Five ducks march to a fountain every day, and have since the 1930s.",
+   "map": "The Peabody Memphis, 149 Union Ave, Memphis, TN",
+   "clue": "Go to the grand hotel on Union Avenue. Head into the lobby, where the marble fountain sits.",
+   "safety": "The lobby is crowded at 11 a.m. and 5 p.m. Keep back from the red carpet and do not touch the ducks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many ducks march down the red carpet?",
+    "options": [
+     "Five",
+     "Two",
+     "Eight",
+     "Twelve"
+    ],
+    "answer": 0,
+    "hint": "Count the Mallards.",
+    "verify": "The Peabody says five Mallards. Check during the march. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1933",
+    "label": "Ducks arrive",
+    "line": "The ducks first splashed in the lobby fountain in 1933.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The march today",
+    "line": "The ducks march at 11 a.m. and 5 p.m."
+   },
+   "story": [
+    "In 1933, after a fruitless hunting trip, the Peabody's general manager released his English call ducks, which he used as live bait, into the Grand Lobby fountain. Guests loved them, so the hotel got five North American Mallards.",
+    "In 1940, Edward Pembroke, a former circus trainer and bellman, taught the ducks to march. He served as the first Duckmaster for about 50 years.",
+    "The ducks march down a red carpet at 11 a.m. and rest in the fountain until 5 p.m., when they march back to their rooftop Royal Duck Palace, which cost $200,000. They spend about three months at the hotel before returning to a farm pond."
+   ],
+   "fact": "The ducks live on the roof.",
+   "disputed": "Some tales say the ducks have lived there forever. They stay a few months each and then go back to a farm.",
+   "claims": [
+    {
+     "t": "The Peabody ducks have marched since the 1930s.",
+     "a": 0,
+     "why": "The tradition began in 1933 and the march was trained in 1940."
+    },
+    {
+     "t": "The same five ducks have lived there for decades.",
+     "a": 2,
+     "why": "They stay about three months, then return to a farm pond."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Audubon: The duck tradition",
+     "u": "https://www.audubon.org/magazine/tennessees-most-historic-hotel-also-home-greatest-duck-tradition"
+    },
+    {
+     "t": "Historic Hotels: The Peabody Memphis",
+     "u": "https://www.historichotels.org/us/hotels-resorts/the-peabody-memphis/history"
+    }
+   ],
+   "card": {
+    "a": "1933",
+    "b": "1940",
+    "la": "Ducks arrive",
+    "lb": "Ducks trained"
+   }
+  }
+ ]
+}
