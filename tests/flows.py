@@ -79,6 +79,17 @@ with sync_playwright() as p:
         need(pg.locator('.bfb.bad').count()==1,'wrong answer shows a bad line')
         pg.click('[data-a=bnext]')
     need(pg.locator('.boss-res .seal').count()==0,'zero correct earns no seal')
+    # report a problem: dialog opens, needs text, sends with where-context, and fails gracefully
+    pg=new(); pg.click('[data-a=report]'); need(pg.locator('#report').count()==1,'report dialog opens from Home')
+    pg.click('[data-a=repsend]'); need('sentence' in pg.inner_text('#repMsgOut').lower(),'empty report asks for text')
+    pg.fill('#repMsg','The plaque says 1987'); pg.click('[data-a=repsend]'); pg.wait_for_timeout(300)
+    need(pg.locator('#report').count()==1 and 'could not send' in pg.inner_text('#repMsgOut').lower(),'failed send stays open with a clear message')
+    pg.evaluate("()=>{window.fetch=function(u,o){window.__sent=o.body;return Promise.resolve({ok:true})}}")
+    pg.click('[data-a=repsend]'); pg.wait_for_timeout(200)
+    need(pg.locator('#report').count()==0 and 'form-name=report' in pg.evaluate('window.__sent') and 'plaque+says' in pg.evaluate('window.__sent'),'successful send posts the report and closes')
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[0,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    pg.click('.stop >> nth=0'); pg.click('[data-a=report]'); need('reno / ' in pg.evaluate("document.getElementById('report').dataset.where").lower(),'report carries the stop context')
+    pg.keyboard.press('Escape'); need(pg.locator('#report').count()==0,'Escape closes the report dialog')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')

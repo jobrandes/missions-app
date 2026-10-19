@@ -27,7 +27,7 @@ print('built index.html',len(out)//1024,'KB;',len(photos),'photos;',len(packs),'
 os.makedirs(R+'site',exist_ok=True)
 reset='<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>'
 full=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0e1d33"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Then &amp; Now">'
-  +rd('src/head.html')+reset+'<style>\n'+rd('src/styles.css')+'</style></head><body>'+rd('src/body.html')+'<script>\n'+js+'</script></body></html>')
+  +rd('src/head.html')+reset+'<style>\n'+rd('src/styles.css')+'</style></head><body>'+rd('src/body.html')+'<form name="report" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="form-name" value="report"><input name="bot-field"><input name="where"><input name="message"><input name="contact"></form><script>\n'+js+'</script></body></html>')
 open(R+'site/index.html','w').write(full)
 open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex\n')
 

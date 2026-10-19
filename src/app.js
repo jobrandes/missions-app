@@ -200,7 +200,7 @@
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West and the East so far. More regions on the way.</p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West and the East so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
     return h;
   }
   function homeAnswer(k){
@@ -239,9 +239,9 @@
   }
   function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
   document.addEventListener('keydown',function(e){
-    if(e.key==='Tab'){ var dlg=document.getElementById('tour')||document.getElementById('celeb'); if(dlg&&dlg.offsetParent!==null||dlg&&getComputedStyle(dlg).display!=='none'){ var f=dlg.querySelectorAll('button'); if(f.length){ var first=f[0], last=f[f.length-1]; if(!dlg.contains(document.activeElement)){ first.focus(); e.preventDefault(); } else if(e.shiftKey&&document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey&&document.activeElement===last){ first.focus(); e.preventDefault(); } } } }
+    if(e.key==='Tab'){ var dlg=document.getElementById('report')||document.getElementById('tour')||document.getElementById('celeb'); if(dlg&&dlg.offsetParent!==null||dlg&&getComputedStyle(dlg).display!=='none'){ var f=dlg.querySelectorAll('button'); if(f.length){ var first=f[0], last=f[f.length-1]; if(!dlg.contains(document.activeElement)){ first.focus(); e.preventDefault(); } else if(e.shiftKey&&document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey&&document.activeElement===last){ first.focus(); e.preventDefault(); } } } }
   });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeCeleb(); if(document.getElementById('tour')) endTour(); } });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeReport(); closeCeleb(); if(document.getElementById('tour')) endTour(); } });
   /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
   try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
   window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
@@ -252,6 +252,29 @@
     var v=st.verified;
     if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
     return '<div class="vbadge"><b>Not verified on site yet</b><span>'+st.field.replace(/^Field notes pending:\s*/i,'')+'</span></div>';
+  }
+  /* ---------- report a problem ---------- */
+  function whereAmI(){
+    if(cur) return city().name+' / '+STOPS[cur.i].name+' / step '+(cur.step+1);
+    if(boss) return city().name+' / final challenge / question '+(boss.i+1);
+    return atHome?'Home':city().name+' / '+tab;
+  }
+  function showReport(){
+    var old=document.getElementById('report'); if(old) old.remove();
+    var d=document.createElement('div'); d.id='report'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','repT'); d.dataset.where=whereAmI();
+    d.innerHTML='<div class="celeb-card tour-card rep-card"><h2 id="repT">Something wrong?</h2><p>Wrong answer, confusing screen, broken photo, or a plaque that says something else. Tell us in a sentence or two.</p><label class="mono" for="repMsg">What happened</label><textarea id="repMsg" maxlength="600" rows="4"></textarea><label class="mono" for="repWho">Your email (optional, only if you want a reply)</label><input id="repWho" type="email" maxlength="120" autocomplete="off"><p class="why">Please do not include personal details. We send along only where in the app you were: <em>'+d.dataset.where+'</em>.</p><p id="repMsgOut" class="feedback" aria-live="polite"></p><div class="celeb-btns"><button class="btn" data-a="repsend">Send</button><button class="btn ghost" data-a="repclose">Cancel</button></div></div>';
+    document.body.appendChild(d); var f=document.getElementById('repMsg'); if(f) f.focus();
+  }
+  function closeReport(){ var e=document.getElementById('report'); if(e) e.remove(); }
+  function sendReport(){
+    var d=document.getElementById('report'); if(!d) return;
+    var msg=document.getElementById('repMsg').value.trim(), out=document.getElementById('repMsgOut');
+    if(!msg){ out.className='feedback bad'; out.textContent='Write a sentence first.'; return; }
+    var body=new URLSearchParams({'form-name':'report','bot-field':'','where':d.dataset.where,'message':msg,'contact':document.getElementById('repWho').value.trim()}).toString();
+    out.className='feedback'; out.textContent='Sending...';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
+      if(!r.ok) throw new Error('bad'); closeReport(); toast('Thanks. Sent.');
+    }).catch(function(){ out.className='feedback bad'; out.textContent='Could not send from here. Try the test site, or check your connection.'; });
   }
   /* ---------- first-run tour ---------- */
   var TOUR=[
@@ -410,6 +433,7 @@
       h+='<button class="btn" data-a="step" data-n="3">Next: sort fact from fiction (up to 50 XP)</button>';
     }
     if(cur.step===3 && d){ h+=factGame(st); }
+    h+='<p class="repline"><button class="link" data-a="report">Something wrong here? Tell us</button></p>';
     return h;
   }
 
@@ -512,6 +536,9 @@
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
     if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a){ boss.score++; boss.streak=(boss.streak||0)+1; } else boss.streak=0; render(); } return; }
     if(a==='bnext'){ if(boss){ boss.i++; boss.pick=null; if(boss.i>=__DATA__.boss[boss.pid].length) bossSave(boss.pid,boss.score); render(); window.scrollTo(0,0); } return; }
+    if(a==='report'){ showReport(); return; }
+    if(a==='repclose'){ closeReport(); return; }
+    if(a==='repsend'){ sendReport(); return; }
     if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }

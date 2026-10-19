@@ -424,3 +424,8 @@ details.reg[open]>summary.region::after{content:"–"}
 .sealwrap.pop .seal{animation:sealin .5s cubic-bezier(.2,1.4,.4,1)}
 @keyframes sealin{0%{transform:scale(.3) rotate(-25deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}
 }
+
+.repline{margin:18px 0 6px;text-align:center;font-size:13px}
+.rep-card{text-align:left}
+.rep-card textarea,.rep-card input{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);margin:4px 0 10px}
+.rep-card label{display:block}
