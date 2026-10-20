@@ -1148,5 +1148,97 @@
    "a": 1,
    "why": "Local architect Edmund George Lind designed it, and it opened in 1878."
   }
+ ],
+ "cleveland": [
+  {
+   "q": "Who designed the Soldiers' and Sailors' Monument?",
+   "o": [
+    "Levi Scofield",
+    "John Eisenmann",
+    "Charles Heard",
+    "Louis Sullivan"
+   ],
+   "a": 0,
+   "why": "Levi T. Scofield, a Civil War veteran, designed it and made its sculptures."
+  },
+  {
+   "q": "In what year did the Cleveland Arcade open?",
+   "o": [
+    "1927",
+    "1894",
+    "1890",
+    "1975"
+   ],
+   "a": 2,
+   "why": "It opened on May 30, 1890."
+  },
+  {
+   "q": "When was the replica steeple added to the Old Stone Church?",
+   "o": [
+    "1857",
+    "1884",
+    "1927",
+    "1999"
+   ],
+   "a": 3,
+   "why": "The replica was added in 1999."
+  },
+  {
+   "q": "The Terminal Tower was planned as 14 stories. How many did it end up with?",
+   "o": [
+    "28",
+    "52",
+    "40",
+    "100"
+   ],
+   "a": 1,
+   "why": "It was expanded to 52 floors."
+  }
+ ],
+ "stlouis": [
+  {
+   "q": "Who designed the Gateway Arch?",
+   "o": [
+    "Louis Sullivan",
+    "Eero Saarinen",
+    "James Eads",
+    "Theodore Link"
+   ],
+   "a": 1,
+   "why": "Eero Saarinen designed it in 1947."
+  },
+  {
+   "q": "How long is the Eads Bridge's center arch?",
+   "o": [
+    "220 feet",
+    "520 feet",
+    "1,020 feet",
+    "52 feet"
+   ],
+   "a": 1,
+   "why": "It is 520 feet, the longest rigid span at the time."
+  },
+  {
+   "q": "In what year did St. Louis Union Station open?",
+   "o": [
+    "1894",
+    "1904",
+    "1926",
+    "1978"
+   ],
+   "a": 0,
+   "why": "It opened on September 1, 1894."
+  },
+  {
+   "q": "Who called the Wainwright Building the first human expression of a tall steel office building as architecture?",
+   "o": [
+    "Louis Sullivan",
+    "Eero Saarinen",
+    "Frank Lloyd Wright",
+    "Ellis Wainwright"
+   ],
+   "a": 2,
+   "why": "Frank Lloyd Wright said it."
+  }
  ]
 }

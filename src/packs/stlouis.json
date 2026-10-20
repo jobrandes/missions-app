@@ -1,0 +1,417 @@
+{
+ "id": "stlouis",
+ "name": "St. Louis",
+ "explorer": "Gateway Explorer",
+ "initials": "STL",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Riverfront Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "St. Louis Scholar"
+  ],
+  [
+   600,
+   "St. Louis Historian"
+  ]
+ ],
+ "heroAlt": "The Gateway Arch in St. Louis",
+ "heroLi": "<li>Header: Warren LeMay · CC BY-SA 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Gateway_Arch,_Gateway_Arch_National_Park,_St._Louis,_MO.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Warren LeMay · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Gateway_Arch,_Gateway_Arch_National_Park,_St._Louis,_MO.jpg\">Source</a>",
+ "mission": "Find four landmarks around St. Louis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of St. Louis is waiting.",
+ "safetyNote": "<li>Downtown St. Louis has busy streets and a riverfront with steep steps and wet stones. Use crosswalks, stay off the Eads Bridge roadway, and check opening hours before you plan to go inside anywhere.</li>",
+ "badgeMap": {
+  "arch": [
+   "sl_ga_now",
+   "50% 45%"
+  ],
+  "bridge": [
+   "sl_eb_now",
+   "50% 45%"
+  ],
+  "station": [
+   "sl_us_now",
+   "50% 45%"
+  ],
+  "wainwright": [
+   "sl_wb_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "arch",
+   "name": "Gateway Arch",
+   "short": "The Arch",
+   "badge": "The Arch",
+   "tag": "Stop 1 of 4",
+   "teaser": "A stainless-steel arch that took more than two years to build, and nobody has been able to out-tall it.",
+   "map": "Gateway Arch National Park, 11 N 4th St, St. Louis, MO",
+   "clue": "Go to the Mississippi riverfront downtown. Look for a huge shiny arch with its legs on the grass, high above the park.",
+   "safety": "The park has a lot of steps and open lawns. Stay on paths, mind the traffic near the park roads, and check the tram and tower schedule if you plan to go up.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "About how tall is the Gateway Arch?",
+    "options": [
+     "63 feet",
+     "630 feet",
+     "1,630 feet",
+     "300 feet"
+    ],
+    "answer": 1,
+    "hint": "It is more than 600 feet, and under 1,000.",
+    "verify": "Wikipedia says the Arch is 630 feet tall. Look at the sign or the height on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "September 1965",
+    "label": "The Arch then",
+    "line": "The two legs of the Arch nearly joined, with construction cranes on top, in September 1965.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sl_ga_then",
+     "by": "Rwietlake",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Arch_Construction_September_1965.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2023",
+    "head": "Today",
+    "label": "The Arch today",
+    "line": "The Arch seen from the long lawn of the park, between rows of bare trees.",
+    "ph": {
+     "k": "sl_ga_now",
+     "by": "Warren LeMay",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Gateway_Arch,_Gateway_Arch_National_Park,_St._Louis,_MO.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Finnish-American architect Eero Saarinen designed the Arch in 1947. The idea came from civic leader Luther Ely Smith, who proposed a memorial on the riverfront in 1933. Construction began on February 12, 1963, and was finished on October 28, 1965.",
+    "The Arch is 630 feet tall, clad in stainless steel and shaped as a weighted catenary arch. It is the world's tallest arch. It cost $13 million and opened to the public on June 10, 1967.",
+    "It stands at the 1764 site of the founding of St. Louis, and honors the westward expansion of the United States. It is nicknamed the Gateway to the West."
+   ],
+   "fact": "The finished Arch opened to visitors in 1967.",
+   "disputed": "Many people think the Arch opened when its last piece went in. Wikipedia says it was completed on October 28, 1965, and opened to the public on June 10, 1967.",
+   "claims": [
+    {
+     "t": "The Gateway Arch is the world's tallest arch.",
+     "a": 0,
+     "why": "Wikipedia: it is the world's tallest arch."
+    },
+    {
+     "t": "The Arch was designed in 1963.",
+     "a": 2,
+     "why": "Saarinen designed it in 1947. Construction began in 1963."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Gateway Arch",
+     "u": "https://en.wikipedia.org/wiki/Gateway_Arch"
+    },
+    {
+     "t": "Wikipedia: Eero Saarinen",
+     "u": "https://en.wikipedia.org/wiki/Eero_Saarinen"
+    }
+   ],
+   "card": {
+    "a": "1963",
+    "b": "1965",
+    "la": "Construction begins",
+    "lb": "Completed"
+   }
+  },
+  {
+   "id": "bridge",
+   "name": "Eads Bridge",
+   "short": "Eads Bridge",
+   "badge": "Eads Bridge",
+   "tag": "Stop 2 of 4",
+   "teaser": "The oldest bridge on the Mississippi, and the first to lean on steel.",
+   "map": "Eads Bridge, St. Louis, MO",
+   "clue": "Go to the riverfront just north of the Arch. Look for a long bridge with three big arches over the water and a stone pier on the shore.",
+   "safety": "The roadway and rail lines share the bridge. Use the sidewalk, watch for trains and bikes, and stay behind the rail.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which material did the Eads Bridge pioneer on a large scale?",
+    "options": [
+     "Wood",
+     "Plastic",
+     "Steel",
+     "Rope"
+    ],
+    "answer": 2,
+    "hint": "Think of what skyscrapers and cars are made of.",
+    "verify": "Wikipedia says the bridge pioneered the large-scale use of steel as a structural material. Look at the arches on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The bridge then",
+    "line": "A colored postcard of the bridge, with steamboats at the levee in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sl_eb_then",
+     "by": "Detroit Photographic Company (credited on the card)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Eads_Bridge_(NBY_1245).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The bridge today",
+    "line": "A big steel arch from the shore, with another bridge behind it.",
+    "ph": {
+     "k": "sl_eb_now",
+     "by": "Chuck Morris",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Eads_Bridge_20100821.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The bridge is named for James Buchanan Eads, who designed and built it. Work began in 1867 and ended in 1874. Eads had no experience building bridges. It was the first bridge across the Mississippi south of the Missouri River, and it is the oldest bridge on the river.",
+    "The foundations went more than 100 feet below the water, deeper than anything built underwater before. They used pneumatic caissons, the largest ever built at the time. The center arch is 520 feet long, the longest rigid span in the world then.",
+    "The highway deck was closed to cars from 1991 to 2003 and now carries cars and people again. The old railroad deck carries the MetroLink light rail."
+   ],
+   "fact": "Its foundations are more than 100 feet below the river.",
+   "disputed": "Many people credit the Brooklyn Bridge with pioneering these methods. Wikipedia says the Eads Bridge pioneered them, and its work began in 1867, three years before the Brooklyn Bridge.",
+   "claims": [
+    {
+     "t": "The Eads Bridge was completed in 1874.",
+     "a": 0,
+     "why": "Wikipedia: work began in 1867 and ended in 1874."
+    },
+    {
+     "t": "James Eads had built many bridges before this one.",
+     "a": 2,
+     "why": "He had no experience building bridges."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Eads Bridge",
+     "u": "https://en.wikipedia.org/wiki/Eads_Bridge"
+    },
+    {
+     "t": "Wikipedia: James B. Eads",
+     "u": "https://en.wikipedia.org/wiki/James_Buchanan_Eads"
+    }
+   ],
+   "card": {
+    "a": "1867",
+    "b": "1874",
+    "la": "Work begins",
+    "lb": "Completed"
+   }
+  },
+  {
+   "id": "station",
+   "name": "St. Louis Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 3 of 4",
+   "teaser": "A train station that was once the busiest in the world, and now is a hotel.",
+   "map": "St. Louis Union Station, 1820 Market St, St. Louis, MO",
+   "clue": "Go to Market Street west of downtown. Look for a huge stone building with a tall clock tower and a big arched entrance.",
+   "safety": "Market Street has traffic and light rail. Use crosswalks, and remember that it is now a hotel and entertainment center, so check the hours for what you want to see.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How tall is the station's clock tower?",
+    "options": [
+     "30 feet",
+     "130 feet",
+     "330 feet",
+     "230 feet"
+    ],
+    "answer": 3,
+    "hint": "It is more than 200 feet, and under 300.",
+    "verify": "Wikipedia says the clock tower is 230 feet high. Look at it from the street on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1906",
+    "label": "The station then",
+    "line": "A 1906 view from above of the station, with its clock tower and rail yard stretching out beside it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sl_us_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Union_Station_(St._Louis)_(from_a_book_published_in_1906).png",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2023",
+    "head": "Today",
+    "label": "The Grand Hall today",
+    "line": "The curved ceiling of the Grand Hall, now part of a hotel and shops.",
+    "ph": {
+     "k": "sl_us_now",
+     "by": "Warren LeMay",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Grand_Hall,_St._Louis_Union_Station,_Market_Street,_St._Louis,_MO.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The station opened on September 1, 1894. Theodore Link designed it, and George Pegram designed its 11.5-acre train shed. It was the world's largest and busiest railroad station when it opened, and its shed had the largest roof span in the world.",
+    "The Grand Hall has gold leaf, Romanesque arches and a barrel-vaulted ceiling 65 feet high. It was enlarged in 1903 for the 1904 World's Fair. At its peak in the 1940s, it handled 100,000 passengers a day.",
+    "The last Amtrak passenger train left in 1978. In the 1980s the building was renovated as a hotel, shopping center and entertainment complex."
+   ],
+   "fact": "It once served 22 different railroads.",
+   "disputed": "Many people do not know where the famous photo of Truman holding the wrong \"Dewey Defeats Truman\" headline was taken. Wikipedia says it was shot at this station in 1948.",
+   "claims": [
+    {
+     "t": "Union Station opened in 1894.",
+     "a": 0,
+     "why": "Wikipedia: opened September 1, 1894."
+    },
+    {
+     "t": "Amtrak trains still use Union Station today.",
+     "a": 2,
+     "why": "The last Amtrak passenger train left in 1978."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: St. Louis Union Station",
+     "u": "https://en.wikipedia.org/wiki/St._Louis_Union_Station"
+    },
+    {
+     "t": "Wikipedia: Dewey Defeats Truman",
+     "u": "https://en.wikipedia.org/wiki/Dewey_Defeats_Truman"
+    }
+   ],
+   "card": {
+    "a": "1894",
+    "b": "1978",
+    "la": "Opened",
+    "lb": "Last Amtrak train"
+   }
+  },
+  {
+   "id": "wainwright",
+   "name": "Wainwright Building",
+   "short": "Wainwright",
+   "badge": "Wainwright",
+   "tag": "Stop 4 of 4",
+   "teaser": "One of the first skyscrapers that looked like a skyscraper.",
+   "map": "Wainwright Building, 709 Chestnut St, St. Louis, MO",
+   "clue": "Go to Chestnut Street downtown, near the Arch. Look for a dark red building, 10 stories tall, with tall vertical lines and decorated edges.",
+   "safety": "Chestnut Street has traffic and parking garages nearby. Use crosswalks, and note it is a state office building with security at the door.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What material covers the Wainwright Building's decorated walls?",
+    "options": [
+     "Glass",
+     "Terra cotta",
+     "Marble",
+     "Wood"
+    ],
+    "answer": 1,
+    "hint": "Think of a flowerpot's color and material, but fancier.",
+    "verify": "Wikipedia calls it a terra cotta office building. Look at the walls up close on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1907",
+    "label": "The building then",
+    "line": "A 1907 photograph of the building at a street corner, with a tall tower beyond.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sl_wb_then",
+     "by": "Emil Boehl",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Wainwright_Building,_709_Chestnut_Street._Adler,_Sullivan,_and_Ramsey,_Architects.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The red building seen from the street, with newer towers behind it.",
+    "ph": {
+     "k": "sl_wb_now",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Wainwright_building_st_louis_USA.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Brewer Ellis Wainwright commissioned the building because he needed offices for the St. Louis Brewers Association. Dankmar Adler and Louis Sullivan designed it, and it was built from 1890 to 1891. It is 10 stories and 135 feet tall.",
+    "Architect Frank Lloyd Wright called it \"the very first human expression of a tall steel office-building as Architecture.\" In 2013 it was named one of the \"10 Buildings That Changed America\" in a PBS series. Sullivan is sometimes called the Father of Skyscrapers.",
+    "The building became a National Historic Landmark in 1968. The National Trust for Historic Preservation rescued it from demolition, and Missouri later bought it as part of a state office complex."
+   ],
+   "fact": "A brewer paid for it.",
+   "disputed": "Many people assume the building was always a state office building. Wikipedia says it was built for Ellis Wainwright, a brewer, to house the St. Louis Brewers Association.",
+   "claims": [
+    {
+     "t": "The Wainwright Building was designed by Adler and Sullivan.",
+     "a": 0,
+     "why": "Wikipedia: designed by Dankmar Adler and Louis Sullivan."
+    },
+    {
+     "t": "The Wainwright Building was built in the 1920s.",
+     "a": 2,
+     "why": "It was built between 1890 and 1891."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Wainwright Building",
+     "u": "https://en.wikipedia.org/wiki/Wainwright_Building"
+    },
+    {
+     "t": "Wikipedia: Louis Sullivan",
+     "u": "https://en.wikipedia.org/wiki/Louis_Sullivan"
+    }
+   ],
+   "card": {
+    "a": "1890",
+    "b": "1968",
+    "la": "Construction begins",
+    "lb": "National Historic Landmark"
+   }
+  }
+ ],
+ "heroKey": "sl_ga_now"
+}

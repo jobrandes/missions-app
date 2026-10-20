@@ -1,0 +1,417 @@
+{
+ "id": "cleveland",
+ "name": "Cleveland",
+ "explorer": "Forest City Explorer",
+ "initials": "CLE",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Public Square Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Cleveland Scholar"
+  ],
+  [
+   600,
+   "Cleveland Historian"
+  ]
+ ],
+ "heroAlt": "Soldiers' and Sailors' Monument on Cleveland's Public Square",
+ "heroLi": "<li>Header: Warren LeMay · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Public_Square,_Cleveland,_OH_(27732118517).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Warren LeMay · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Public_Square,_Cleveland,_OH_(27732118517).jpg\">Source</a>",
+ "mission": "Find four landmarks around Cleveland. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Cleveland is waiting.",
+ "safetyNote": "<li>Downtown Cleveland has busy streets and rail lines. Use crosswalks, watch for buses on Public Square, and check opening hours before you plan to go inside anywhere.</li>",
+ "badgeMap": {
+  "tower": [
+   "cl_tt_now",
+   "50% 45%"
+  ],
+  "monument": [
+   "cl_ss_now",
+   "50% 45%"
+  ],
+  "church": [
+   "cl_os_now",
+   "50% 45%"
+  ],
+  "arcade": [
+   "cl_ar_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "tower",
+   "name": "Terminal Tower",
+   "short": "Terminal Tower",
+   "badge": "Terminal Tower",
+   "tag": "Stop 1 of 4",
+   "teaser": "A skyscraper that grew from 14 floors to 52 and was once the second tallest building in the world.",
+   "map": "Terminal Tower, 50 Public Square, Cleveland, OH",
+   "clue": "Go to Public Square in the middle of downtown. Look for the tall tower with a pointed top that rises above everything else.",
+   "safety": "Public Square is crossed by buses and busy streets. Use crosswalks, and keep out of the bus lanes while you look up.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many stories does the Terminal Tower have?",
+    "options": [
+     "12",
+     "52",
+     "25",
+     "100"
+    ],
+    "answer": 1,
+    "hint": "It is a little over half of a hundred.",
+    "verify": "Wikipedia calls it a 52-story landmark skyscraper. Count the windows or read a sign on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1932",
+    "label": "The tower then",
+    "line": "A 1932 postcard of the Municipal Water Works, with the Terminal Tower far away in the background.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cl_tt_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Municipal_Water_Works_and_Terminal_Tower_From_Edgewater_Park_(NBY_673).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2021",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The tower rising above the Tower City buildings at its base.",
+    "ph": {
+     "k": "cl_tt_now",
+     "by": "Erik Drost (derivative: LakeCityCle)",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Terminal_Tower_from_Cuyahoga_River_Cropped.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Van Sweringen brothers built the tower for $179 million as an office building on top of Cleveland's new rail station, the Cleveland Union Terminal. It was originally planned as 14 stories, and then expanded to 52 floors and 708 feet.",
+    "It was completed in 1927 and opened for tenants in 1928, though the whole Union Terminal complex was not dedicated until 1930. It rests on caissons 280 feet deep.",
+    "When it was finished it was the second-tallest building in the world, and it stayed the tallest in North America outside New York City until 1964. In 2016 a new owner turned 11 of the lower floors into 293 apartments."
+   ],
+   "fact": "It was planned as a 14-story building.",
+   "disputed": "Many people say the tower was the tallest building in the world. Wikipedia says it was the second-tallest in the world when completed in 1927.",
+   "claims": [
+    {
+     "t": "The Terminal Tower was completed in 1927.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1927 and opened for tenants in 1928."
+    },
+    {
+     "t": "The Terminal Tower was the tallest building in the world when it was finished.",
+     "a": 2,
+     "why": "Wikipedia says it was the second-tallest in the world."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Terminal Tower",
+     "u": "https://en.wikipedia.org/wiki/Terminal_Tower"
+    },
+    {
+     "t": "Wikipedia: Van Sweringen brothers",
+     "u": "https://en.wikipedia.org/wiki/Van_Sweringen_brothers"
+    }
+   ],
+   "card": {
+    "a": "1927",
+    "b": "1930",
+    "la": "Tower completed",
+    "lb": "Terminal dedicated"
+   }
+  },
+  {
+   "id": "monument",
+   "name": "Soldiers' and Sailors' Monument",
+   "short": "Monument",
+   "badge": "Monument",
+   "tag": "Stop 2 of 4",
+   "teaser": "A monument with a tall column and a room inside for memorial tablets.",
+   "map": "Soldiers' and Sailors' Monument, Public Square, Cleveland, OH",
+   "clue": "Stay on Public Square and look at the southeast corner, at the end of Euclid Avenue. Look for a big stone memorial with a tall column and statues around its base.",
+   "safety": "The monument sits in a busy plaza. Use crosswalks, check hours before going inside, and stay off the statues and steps when they are slippery.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which war does the monument honor?",
+    "options": [
+     "Civil War",
+     "Revolutionary War",
+     "World War I",
+     "Korean War"
+    ],
+    "answer": 0,
+    "hint": "The war ended in 1865.",
+    "verify": "Wikipedia says it honors more than 9,000 Union soldiers and sailors from Cuyahoga County. Look for the dates on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The monument then",
+    "line": "A color print from about 1900 of the monument and its gardens, with Public Square around it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cl_ss_then",
+     "by": "Detroit Publishing Company (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Cleveland-LCCN2008679520.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The monument today",
+    "line": "The stone base and the column, with sculptures and city towers around it.",
+    "ph": {
+     "k": "cl_ss_now",
+     "by": "Warren LeMay",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Public_Square,_Cleveland,_OH_(27732118517).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The idea began at a meeting of Civil War veterans on October 22, 1879. Ohio's legislature allowed a countywide tax for a monument in 1880. Levi T. Scofield, a local veteran and architect, designed a combination of a tablet room and an obelisk, and made the sculptures too.",
+    "The monument was dedicated on July 4, 1894, on the southeast quadrant of Public Square. It honors the more than 9,000 people from Cuyahoga County who served the Union during the Civil War.",
+    "It is open to the public free of charge, and the original plan to put a statue in the center of the square lost out to the railroad companies, who claimed the busy intersection for streetcar lines."
+   ],
+   "fact": "A streetcar fight moved the monument.",
+   "disputed": "Many people think the monument stands in the center of Public Square. Wikipedia says it was built in the southeast quadrant, because streetcar companies claimed the center intersection.",
+   "claims": [
+    {
+     "t": "The monument was dedicated in 1894.",
+     "a": 0,
+     "why": "Wikipedia: dedicated July 4, 1894."
+    },
+    {
+     "t": "The monument honors soldiers from the Revolutionary War.",
+     "a": 2,
+     "why": "It honors Union soldiers and sailors of the Civil War."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Soldiers' and Sailors' Monument (Cleveland)",
+     "u": "https://en.wikipedia.org/wiki/Soldiers%27_and_Sailors%27_Monument_(Cleveland)"
+    },
+    {
+     "t": "Wikipedia: Public Square (Cleveland)",
+     "u": "https://en.wikipedia.org/wiki/Public_Square_(Cleveland)"
+    }
+   ],
+   "card": {
+    "a": "1879",
+    "b": "1894",
+    "la": "First meeting",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "church",
+   "name": "Old Stone Church",
+   "short": "Stone Church",
+   "badge": "Stone Church",
+   "tag": "Stop 3 of 4",
+   "teaser": "The oldest building on Public Square, which has lost its steeple and gotten it back.",
+   "map": "Old Stone Church, 91 Public Square, Cleveland, OH",
+   "clue": "Stay on Public Square. Look for a dark stone church with a pointed steeple, squeezed between modern office buildings.",
+   "safety": "The church is a working congregation, so check visiting hours before going in. Keep off the steps during services and use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What kind of stone is the church built from?",
+    "options": [
+     "Marble",
+     "Granite",
+     "Sandstone",
+     "Limestone"
+    ],
+    "answer": 2,
+    "hint": "The stone turned black from air pollution before it was cleaned.",
+    "verify": "Wikipedia says the church is built of local sandstone, and the black Berea sandstone was cleaned in 1999. Look at the walls on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Before 1923",
+    "label": "The church then",
+    "line": "A postcard of the church from before 1923, with no steeple, beside the old courthouse and other buildings.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cl_os_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cleveland_OH_Old_Stone_Church_PHS857.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The church today",
+    "line": "The dark stone church with its spire among the modern towers.",
+    "ph": {
+     "k": "cl_os_now",
+     "by": "Eli Pousson",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Stone_Church,_Downtown_Cleveland.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The first church on this spot was built in 1834 from gray sandstone, and people started calling it the Old Stone Church. By 1853 it was too small, so it was torn down. The larger Romanesque Revival church was dedicated on August 12, 1855.",
+    "On March 7, 1857, a fire struck, and the 250-foot steeple crashed onto Ontario Street. Another fire gutted the interior on January 5, 1884. The congregation decided to rebuild on the same spot, and the church was dedicated again on October 19, 1884.",
+    "The only big change since is the steeple. A copy of the original was added in 1999, as part of a $2.4 million renovation that also cleaned the sandstone. It is the oldest building on Public Square."
+   ],
+   "fact": "The steeple you see now was added in 1999.",
+   "disputed": "Many people think the steeple has always been there. Wikipedia says the original came down in a fire in 1857, and a replica was added in 1999.",
+   "claims": [
+    {
+     "t": "The Old Stone Church is the oldest building on Public Square.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The church's steeple has stood since 1855 without a break.",
+     "a": 2,
+     "why": "The steeple fell in 1857, and a replica was added in 1999."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old Stone Church (Cleveland)",
+     "u": "https://en.wikipedia.org/wiki/Old_Stone_Church_(Cleveland)"
+    },
+    {
+     "t": "Wikipedia: Public Square (Cleveland)",
+     "u": "https://en.wikipedia.org/wiki/Public_Square_(Cleveland)"
+    }
+   ],
+   "card": {
+    "a": "1855",
+    "b": "1999",
+    "la": "Church dedicated",
+    "lb": "New steeple"
+   }
+  },
+  {
+   "id": "arcade",
+   "name": "Cleveland Arcade",
+   "short": "Arcade",
+   "badge": "Arcade",
+   "tag": "Stop 4 of 4",
+   "teaser": "A glass-roofed shopping street from 1890 that was in a Superman movie.",
+   "map": "Cleveland Arcade, 401 Euclid Ave, Cleveland, OH",
+   "clue": "Go to Euclid Avenue downtown. Look for a big entrance with a hotel sign that leads into a long hall with a glass roof.",
+   "safety": "Euclid Avenue has buses and a lot of foot traffic. Use crosswalks, and remember that the upper floors are a hotel, so be quiet inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What lets light into the Arcade from above?",
+    "options": [
+     "A glass skylight",
+     "A wooden roof",
+     "A tent",
+     "An open hole"
+    ],
+    "answer": 0,
+    "hint": "Look up when you step inside.",
+    "verify": "Wikipedia says a glass skylight spans more than 300 feet over the balconies. Look up on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1906",
+    "label": "The Arcade then",
+    "line": "A postcard of the Arcade's interior in 1906, with its balconies and glass roof.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cl_ar_then",
+     "by": "Unknown author (via DPLA)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Interior_of_Euclid_Arcade,_Cleveland,_Ohio._-_DPLA_-_9aa0bcd1489c1b10cee0fa5ad471969c_(page_1).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The Arcade today",
+    "line": "The atrium, with its balconies and a glass skylight overhead.",
+    "ph": {
+     "k": "cl_ar_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cleveland_August_2015_16_(The_Arcade).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Arcade opened on Memorial Day, May 30, 1890, and it cost $867,000. It is one of the earliest indoor shopping arcades in the United States. Wealthy Clevelanders including John D. Rockefeller helped pay for it.",
+    "It was modeled after the Galleria Vittorio Emanuele II in Milan. Two nine-story buildings face Euclid and Superior Avenues, joined by a five-story glass-roofed court more than 300 feet long and ringed with four levels of balconies. The skylight has 1,800 panes of glass.",
+    "It became a National Historic Landmark in 1975. In 2001 it was redeveloped into a Hyatt Regency hotel, and the skylight was replaced. In 2024 a scene in the movie Superman was filmed inside it."
+   ],
+   "fact": "It copied a famous arcade in Milan.",
+   "disputed": "Many people think the Arcade is still a shopping mall. Wikipedia says the towers are now a hotel, and only the two lower floors hold shops and a food court.",
+   "claims": [
+    {
+     "t": "The Arcade opened in 1890.",
+     "a": 0,
+     "why": "Wikipedia: opened on May 30, 1890."
+    },
+    {
+     "t": "The Arcade was built in the 1920s.",
+     "a": 2,
+     "why": "It was erected in 1890."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cleveland Arcade",
+     "u": "https://en.wikipedia.org/wiki/Cleveland_Arcade"
+    },
+    {
+     "t": "Wikipedia: Galleria Vittorio Emanuele II",
+     "u": "https://en.wikipedia.org/wiki/Galleria_Vittorio_Emanuele_II"
+    }
+   ],
+   "card": {
+    "a": "1890",
+    "b": "2001",
+    "la": "Opened",
+    "lb": "Hotel opens"
+   }
+  }
+ ],
+ "heroKey": "cl_ss_now"
+}

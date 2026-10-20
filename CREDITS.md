@@ -329,3 +329,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | bl_pl_now | https://commons.wikimedia.org/wiki/File:George-peabody-library.jpg | Matthew Petroff | CC BY-SA 3.0 | 2013 |
 | bl_mc_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_E.H._Pickering,_Photographer_August_1936_THIS_BUILDING_ERECTED_1830_IS_THE_FIRST_PASSENGER_AND_FREIGHT_STATION_IN_AMERICA_AND_THE_OLDEST_IN_THE_HABS_MD,4-BALT,51-1.tif | E. H. Pickering (Historic American Buildings Survey) | Public domain | August 1936 |
 | bl_mc_now | https://commons.wikimedia.org/wiki/File:Baltimore_&_Ohio_Railroad_Museum_-_Baltimore_(2643287108).jpg | Reading Tom | CC BY 2.0 | 2006 |
+
+### Cleveland and St. Louis (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| cl_tt_then | https://commons.wikimedia.org/wiki/File:Municipal_Water_Works_and_Terminal_Tower_From_Edgewater_Park_(NBY_673).jpg | Unknown author | Public domain | 1932 |
+| cl_tt_now | https://commons.wikimedia.org/wiki/File:Terminal_Tower_from_Cuyahoga_River_Cropped.jpg | Erik Drost (derivative: LakeCityCle) | CC BY 2.0 | 2021 |
+| cl_ss_then | https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Cleveland-LCCN2008679520.jpg | Detroit Publishing Company (Library of Congress) | Public domain | about 1900 |
+| cl_ss_now | https://commons.wikimedia.org/wiki/File:Soldiers'_and_Sailors'_Monument,_Public_Square,_Cleveland,_OH_(27732118517).jpg | Warren LeMay | CC0 | 2018 |
+| cl_os_then | https://commons.wikimedia.org/wiki/File:Cleveland_OH_Old_Stone_Church_PHS857.jpg | Unknown author | Public domain | before 1923 |
+| cl_os_now | https://commons.wikimedia.org/wiki/File:Old_Stone_Church,_Downtown_Cleveland.jpg | Eli Pousson | CC BY-SA 2.0 | 2010 |
+| cl_ar_then | https://commons.wikimedia.org/wiki/File:Interior_of_Euclid_Arcade,_Cleveland,_Ohio._-_DPLA_-_9aa0bcd1489c1b10cee0fa5ad471969c_(page_1).jpg | Unknown author (via DPLA) | Public domain | 1906 |
+| cl_ar_now | https://commons.wikimedia.org/wiki/File:Cleveland_August_2015_16_(The_Arcade).jpg | Michael Barera | CC BY-SA 4.0 | 2015 |
+| sl_ga_then | https://commons.wikimedia.org/wiki/File:Arch_Construction_September_1965.jpg | Rwietlake | CC BY-SA 4.0 | 1965 |
+| sl_ga_now | https://commons.wikimedia.org/wiki/File:Gateway_Arch,_Gateway_Arch_National_Park,_St._Louis,_MO.jpg | Warren LeMay | CC BY-SA 2.0 | 2023 |
+| sl_eb_then | https://commons.wikimedia.org/wiki/File:Eads_Bridge_(NBY_1245).jpg | Detroit Photographic Company (credited on the card) | Public domain | about 1900 |
+| sl_eb_now | https://commons.wikimedia.org/wiki/File:Eads_Bridge_20100821.JPG | Chuck Morris | CC BY-SA 3.0 | 2010 |
+| sl_us_then | https://commons.wikimedia.org/wiki/File:Union_Station_(St._Louis)_(from_a_book_published_in_1906).png | Unknown author | Public domain | 1906 |
+| sl_us_now | https://commons.wikimedia.org/wiki/File:Grand_Hall,_St._Louis_Union_Station,_Market_Street,_St._Louis,_MO.jpg | Warren LeMay | CC BY-SA 2.0 | 2023 |
+| sl_wb_then | https://commons.wikimedia.org/wiki/File:Wainwright_Building,_709_Chestnut_Street._Adler,_Sullivan,_and_Ramsey,_Architects.jpg | Emil Boehl | Public domain | 1907 |
+| sl_wb_now | https://commons.wikimedia.org/wiki/File:Wainwright_building_st_louis_USA.jpg | Unknown author | Public domain | undated |
