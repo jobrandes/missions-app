@@ -1,0 +1,417 @@
+{
+ "id": "portland",
+ "name": "Portland",
+ "explorer": "Rose City Explorer",
+ "initials": "PDX",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Willamette Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Portland Scholar"
+  ],
+  [
+   600,
+   "Portland Historian"
+  ]
+ ],
+ "heroAlt": "Pioneer Courthouse in Portland",
+ "heroLi": "<li>Header: M.O. Stevens · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_Portland.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: M.O. Stevens · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_Portland.JPG\">Source</a>",
+ "mission": "Find four landmarks around Portland. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Portland is waiting.",
+ "safetyNote": "<li>Downtown Portland has busy streets, light rail and streetcars. Use crosswalks, watch for trains and bikes, and visit in daylight.</li>",
+ "badgeMap": {
+  "courthouse": [
+   "pd_pc_now",
+   "50% 45%"
+  ],
+  "cityhall": [
+   "pd_ch_now",
+   "50% 45%"
+  ],
+  "fountain": [
+   "pd_sf_now",
+   "50% 45%"
+  ],
+  "station": [
+   "pd_us_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "courthouse",
+   "name": "Pioneer Courthouse",
+   "short": "Pioneer Courthouse",
+   "badge": "Pioneer Courthouse",
+   "tag": "Stop 1 of 4",
+   "teaser": "The oldest federal building in the Pacific Northwest, nearly torn down for parking.",
+   "map": "Pioneer Courthouse, 700 SW Sixth Avenue, Portland, OR",
+   "clue": "Go to Pioneer Courthouse Square in the middle of downtown. Look for the stone building with a small cupola on top, facing the square.",
+   "safety": "The square is busy and light rail runs beside it. Use crosswalks, and remember this is a working courthouse, so stay outside unless you have business there.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1933 a city engineer proposed tearing the building down to make room for what?",
+    "options": [
+     "A zoo",
+     "A bus station",
+     "A football field",
+     "A parking garage"
+    ],
+    "answer": 3,
+    "hint": "Think of what downtown never has enough of.",
+    "verify": "Wikipedia says city engineer Olaf Laurgaard proposed tearing it down for a parking garage in 1933. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The courthouse then",
+    "line": "A wide black-and-white view of the courthouse standing among bare trees.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pd_pc_then",
+     "by": "Arthur C. Pillsbury",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_on_700_block_of_SW_5th_Ave._in_Portland,_ca._1900_-_DPLA_-_efa45ffa2230ef5688fea17d9e17fa10.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The courthouse today",
+    "line": "The stone building with its small cupola, seen across a busy brick square under a blue sky.",
+    "ph": {
+     "k": "pd_pc_now",
+     "by": "M.O. Stevens",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_Portland.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Pioneer Courthouse is a federal courthouse in Portland. Construction began in 1869, and it is the oldest federal building in the Pacific Northwest and the second-oldest west of the Mississippi River. It was built in stages between 1869 and 1903. Judge Matthew Deady first used it in 1875, when it was called the United States Building.",
+    "People also call it the Pioneer Post Office, because a popular downtown post office was inside until 2005. It was added to the National Register of Historic Places in 1973 and became a National Historic Landmark in 1977.",
+    "It has survived several attempts to demolish it. In March 1933 city engineer Olaf Laurgaard proposed tearing it down for a parking garage. Architect A. E. Doyle and other local groups sharply opposed the idea, and the building stayed. Today it is one of four main places where the Ninth Circuit Court of Appeals hears oral arguments."
+   ],
+   "fact": "The post office inside stayed open until 2005.",
+   "disputed": "Many people think old buildings are protected automatically. Wikipedia says this one survived several attempts to demolish it.",
+   "claims": [
+    {
+     "t": "Pioneer Courthouse is the oldest federal building in the Pacific Northwest.",
+     "a": 0,
+     "why": "Wikipedia: it is the oldest federal building in the Pacific Northwest."
+    },
+    {
+     "t": "Nobody ever tried to tear the courthouse down.",
+     "a": 2,
+     "why": "Wikipedia says it survived several demolition attempts, including a 1933 proposal."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Pioneer Courthouse",
+     "u": "https://en.wikipedia.org/wiki/Pioneer_Courthouse"
+    },
+    {
+     "t": "Wikipedia: Portland, Oregon",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    }
+   ],
+   "card": {
+    "a": "1869",
+    "b": "1903",
+    "la": "Construction begins",
+    "lb": "Final stage built"
+   }
+  },
+  {
+   "id": "cityhall",
+   "name": "Portland City Hall",
+   "short": "City Hall",
+   "badge": "City Hall",
+   "tag": "Stop 2 of 4",
+   "teaser": "A city hall that had its first design thrown out and its basement torn up.",
+   "map": "Portland City Hall, 1221 SW 4th Avenue, Portland, OR",
+   "clue": "Go to the block between Fourth and Fifth Avenues at Madison and Jefferson Streets. Look for a four-story stone building with a rounded front.",
+   "safety": "Downtown streets are busy. Use crosswalks, and view the building from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "A first design for City Hall was scrapped. What was it said to be modeled on?",
+    "options": [
+     "A lighthouse",
+     "The Kremlin",
+     "A Scottish castle",
+     "A Greek temple"
+    ],
+    "answer": 1,
+    "hint": "A famous walled government complex in a faraway capital.",
+    "verify": "Wikipedia says the first design appeared to be modeled on the Kremlin. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "City Hall then",
+    "line": "A tinted postcard of the building on a corner, with a dirt road and a tree.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pd_ch_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:City_Hall,_Portland,_Ore_(NYPL_b12647398-68887).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "City Hall today",
+    "line": "The curved front and tall windows of the stone building across the street.",
+    "ph": {
+     "k": "pd_ch_now",
+     "by": "M.O. Stevens",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:City_Hall_front_pan_-_Portland,_Oregon.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Portland City Hall is the home of the city's government, and the Italian Renaissance-style building was completed in 1895. It sits on a whole city block along Fourth and Fifth Avenues. The original building cost $600,000. A big renovation in 1996 to 1998 cost $29 million.",
+    "The city bought the block in 1890. Henry J. Hefty designed a huge, showy building that looked like the Kremlin, and construction began in 1892. People did not like it, so the new City Hall Commission cancelled the contract and tore out the basement and first floor at a cost of $125,000.",
+    "The city then hired the firm of Whidden and Lewis, who were in town for the Portland Hotel project. Their design is the City Hall you see today. It was added to the National Register of Historic Places in 1974."
+   ],
+   "fact": "The first basement was torn out and redone.",
+   "disputed": "Many people think the first design is always the one that gets built. Wikipedia says this one was thrown out after the foundation was built.",
+   "claims": [
+    {
+     "t": "Portland City Hall was completed in 1895.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1895."
+    },
+    {
+     "t": "The first design was built exactly as planned.",
+     "a": 2,
+     "why": "Wikipedia says the contract was cancelled and the work torn out."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Portland City Hall (Oregon)",
+     "u": "https://en.wikipedia.org/wiki/Portland_City_Hall_(Oregon)"
+    },
+    {
+     "t": "Wikipedia: Portland, Oregon",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    }
+   ],
+   "card": {
+    "a": "1892",
+    "b": "1895",
+    "la": "Construction first begins",
+    "lb": "Completed"
+   }
+  },
+  {
+   "id": "fountain",
+   "name": "Skidmore Fountain",
+   "short": "Skidmore Fountain",
+   "badge": "Skidmore Fountain",
+   "tag": "Stop 3 of 4",
+   "teaser": "A fountain meant for horses, men and dogs to drink from.",
+   "map": "Skidmore Fountain, SW First Avenue and Ankeny Street, Portland, OR",
+   "clue": "Go to the west end of the Burnside Bridge in Old Town, at First and Ankeny. Look for a big stone fountain with a bronze figure, next to an open plaza.",
+   "safety": "This area can be busy and rough at night. Visit in daylight, stay on the sidewalks and stay with your group. Do not climb on the fountain.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The fountain was made for horses, men and which animal to drink from?",
+    "options": [
+     "Dogs",
+     "Cats",
+     "Goats",
+     "Chickens"
+    ],
+    "answer": 0,
+    "hint": "A very common pet.",
+    "verify": "Wikipedia says it was intended for \"horses, men and dogs\" to drink from. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1890",
+    "label": "The fountain then",
+    "line": "A sepia photo of the fountain standing in floodwater, with two men beside it and tall stone buildings behind.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pd_sf_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Skidmore_Fountain_with_flooded_street.JPG",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The fountain today",
+    "line": "The stone fountain in a sunny plaza, with a pillared arch and trees beside it.",
+    "ph": {
+     "k": "pd_sf_now",
+     "by": "Steve Morgan",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Skidmore_Fountain_in_2015.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Skidmore Fountain was dedicated on September 22, 1888. It honors Stephen G. Skidmore, a wealthy Portland druggist who died in 1883. His will helped pay for it. Sculptor Olin Levi Warner designed it for $18,000, all of which was donated.",
+    "It was styled after fountains Skidmore saw at Versailles during his visit to the 1878 Paris Exposition, and it was meant for horses, men and dogs to drink from. At the dedication, Henry Weinhard offered to pump beer into it.",
+    "It is Portland's oldest piece of public art, and it gives its name to the Skidmore/Old Town Historic District. It was restored in 2005."
+   ],
+   "fact": "A brewer offered to pump beer into it.",
+   "disputed": "Many people think a fountain is only for looks. Wikipedia says this one was built for drinking, for horses, men and dogs.",
+   "claims": [
+    {
+     "t": "Skidmore Fountain was dedicated in 1888.",
+     "a": 0,
+     "why": "Wikipedia: dedicated September 22, 1888."
+    },
+    {
+     "t": "The fountain was meant only for people to drink from.",
+     "a": 2,
+     "why": "Wikipedia says it was meant for horses, men and dogs."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Skidmore Fountain",
+     "u": "https://en.wikipedia.org/wiki/Skidmore_Fountain"
+    },
+    {
+     "t": "Wikipedia: Portland, Oregon",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    }
+   ],
+   "card": {
+    "a": "1888",
+    "b": "2005",
+    "la": "Dedicated",
+    "lb": "Restored"
+   }
+  },
+  {
+   "id": "station",
+   "name": "Portland Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 4 of 4",
+   "teaser": "A train station with a 150-foot clock tower wound by hand every week.",
+   "map": "Union Station, 800 NW 6th Avenue, Portland, OR",
+   "clue": "Go to Union Station near the west bank of the Willamette River in Old Town Chinatown. Look for a red-roofed brick station with a tall clock tower.",
+   "safety": "The station and its streets are busy. Use crosswalks, stay out of the tracks and driveways, and be careful around buses.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How tall is the station's clock tower?",
+    "options": [
+     "400 feet",
+     "1,000 feet",
+     "150 feet",
+     "50 feet"
+    ],
+    "answer": 2,
+    "hint": "Taller than most trees, shorter than a skyscraper.",
+    "verify": "Wikipedia says the Romanesque Revival clock tower is 150 feet tall. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Mid-1900s",
+    "label": "The station then",
+    "line": "A colorized postcard of the red station with its tall clock tower, with cars parked in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pd_us_then",
+     "by": "Angelus Commercial Studio",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Union_Station,_Portland,_Oregon_(74160).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The red brick wall and tiled roof of the station, with green awnings over the windows.",
+    "ph": {
+     "k": "pd_us_now",
+     "by": "Another Believer",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Union_Station,_Portland,_OR_2012_-_exterior.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Portland Union Station opened on February 14, 1896. The first design, from McKim, Mead & White in 1882, would have been the largest train station in the world. A smaller plan by Van Brunt & Howe was accepted in 1885, and construction began in 1890. It cost $300,000.",
+    "The station has bright red metal roof tiles, red pressed brick and gray sandstone trim. Its signature piece is the 150-foot Romanesque Revival clock tower. The four-sided Seth Thomas clock dates to 1898. Each face is 12 feet across, and the clock has a 14-foot pendulum and a counterweight of about 1,000 pounds that drops almost 50 feet in a week.",
+    "The clock is wound every seven days. Neon signs reading Go by Train were added to the tower in 1948. The station joined the National Register of Historic Places in 1975, and Amtrak trains still stop there."
+   ],
+   "fact": "The clock is wound by hand every seven days.",
+   "disputed": "Many people think big station clocks run on electricity. Wikipedia says this one has a pendulum and a counterweight that has to be wound every seven days.",
+   "claims": [
+    {
+     "t": "Portland Union Station opened in 1896.",
+     "a": 0,
+     "why": "Wikipedia: opened February 14, 1896."
+    },
+    {
+     "t": "The tower clock runs on batteries.",
+     "a": 2,
+     "why": "Wikipedia says it has a pendulum and a weight, and it is wound every seven days."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Portland Union Station",
+     "u": "https://en.wikipedia.org/wiki/Union_Station_(Portland,_Oregon)"
+    },
+    {
+     "t": "Wikipedia: Portland, Oregon",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+    }
+   ],
+   "card": {
+    "a": "1890",
+    "b": "1896",
+    "la": "Construction begins",
+    "lb": "Station opens"
+   }
+  }
+ ],
+ "heroKey": "pd_pc_now"
+}

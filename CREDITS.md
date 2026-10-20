@@ -445,3 +445,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sd_bp_now | https://commons.wikimedia.org/wiki/File:Balboa_Park_Botanical_Building_and_Lily_Pond.jpg | Intrepid88 | CC BY-SA 4.0 | 2019 |
 | sd_ce_then | https://commons.wikimedia.org/wiki/File:Ramona's_Marriage_Place,_San_Diego,_Calif_(NYPL_b12647398-62179).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
 | sd_ce_now | https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_01.jpg | Joe Mabel | CC BY-SA 3.0 | 2010 |
+
+### Portland and Milwaukee (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| pd_pc_then | https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_on_700_block_of_SW_5th_Ave._in_Portland,_ca._1900_-_DPLA_-_efa45ffa2230ef5688fea17d9e17fa10.jpg | Arthur C. Pillsbury | Public domain | about 1900 |
+| pd_pc_now | https://commons.wikimedia.org/wiki/File:Pioneer_Courthouse_Portland.JPG | M.O. Stevens | CC BY-SA 3.0 | 2008 |
+| pd_ch_then | https://commons.wikimedia.org/wiki/File:City_Hall,_Portland,_Ore_(NYPL_b12647398-68887).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| pd_ch_now | https://commons.wikimedia.org/wiki/File:City_Hall_front_pan_-_Portland,_Oregon.JPG | M.O. Stevens | CC BY-SA 3.0 | 2010 |
+| pd_sf_then | https://commons.wikimedia.org/wiki/File:Skidmore_Fountain_with_flooded_street.JPG | Unknown author | Public domain | 1890 |
+| pd_sf_now | https://commons.wikimedia.org/wiki/File:Skidmore_Fountain_in_2015.jpg | Steve Morgan | CC BY-SA 3.0 | 2015 |
+| pd_us_then | https://commons.wikimedia.org/wiki/File:The_Union_Station,_Portland,_Oregon_(74160).jpg | Angelus Commercial Studio | Public domain | mid-1900s |
+| pd_us_now | https://commons.wikimedia.org/wiki/File:Union_Station,_Portland,_OR_2012_-_exterior.JPG | Another Believer | CC BY-SA 3.0 | 2012 |
+| mk_ch_then | https://commons.wikimedia.org/wiki/File:Milwaukee_City_Hall_Old_Public_Domain_Photo.jpg | Unknown author | Public domain | undated |
+| mk_ch_now | https://commons.wikimedia.org/wiki/File:Milwaukee_June_2022_19_(Milwaukee_City_Hall).jpg | Michael Barera | CC BY-SA 4.0 | 2022 |
+| mk_mb_then | https://commons.wikimedia.org/wiki/File:Milwaukee_Mitchell_Building.jpg | W. H. Sherman (file by James Steakley) | Public domain | undated |
+| mk_mb_now | https://commons.wikimedia.org/wiki/File:Mitchell_Building_Milwaukee.jpg | James Steakley | CC BY-SA 3.0 | 2009 |
+| mk_sh_then | https://commons.wikimedia.org/wiki/File:Milwaukee_Soldiers_Home.jpeg | James E. Heg (1885 Wisconsin Blue Book) | Public domain | 1885 |
+| mk_sh_now | https://commons.wikimedia.org/wiki/File:Soldiers_Home_Milwaukee.jpg | James Steakley | CC BY-SA 3.0 | 2009 |
+| mk_au_then | https://commons.wikimedia.org/wiki/File:The_new_auditorium,_Milwaukee_LCCN2013646928.jpg | Library of Congress (Miscellaneous Items in High Demand) | Public domain | 1908 |
+| mk_au_now | https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg | Royalbroil | CC BY-SA 3.0 | 2012 |

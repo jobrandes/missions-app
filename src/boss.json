@@ -1700,5 +1700,97 @@
    "a": 0,
    "why": "It was built in 1827."
   }
+ ],
+ "portland": [
+  {
+   "q": "Pioneer Courthouse is called the oldest federal building where?",
+   "o": [
+    "The Midwest",
+    "The Gulf Coast",
+    "The Pacific Northwest",
+    "Alaska"
+   ],
+   "a": 2,
+   "why": "It is the oldest federal building in the Pacific Northwest."
+  },
+  {
+   "q": "Who designed the City Hall that was built after the first design was thrown out?",
+   "o": [
+    "Whidden and Lewis",
+    "Henry J. Hefty",
+    "Olin Levi Warner",
+    "Van Brunt & Howe"
+   ],
+   "a": 0,
+   "why": "Whidden and Lewis designed the current building."
+  },
+  {
+   "q": "Skidmore Fountain was dedicated in what year?",
+   "o": [
+    "1925",
+    "1888",
+    "1776",
+    "1895"
+   ],
+   "a": 1,
+   "why": "It was dedicated September 22, 1888."
+  },
+  {
+   "q": "How often is the Union Station clock wound?",
+   "o": [
+    "Every day",
+    "Once a year",
+    "Never",
+    "Every seven days"
+   ],
+   "a": 3,
+   "why": "It is wound every seven days."
+  }
+ ],
+ "milwaukee": [
+  {
+   "q": "City Hall's bell is named after which person?",
+   "o": [
+    "Alexander Mitchell",
+    "Henry Koch",
+    "Frederick Pabst",
+    "Solomon Juneau"
+   ],
+   "a": 3,
+   "why": "It is named after Solomon Juneau."
+  },
+  {
+   "q": "The Mitchell Building was designed by which architect?",
+   "o": [
+    "Pietro Belluschi",
+    "A. E. Doyle",
+    "E. Townsend Mix",
+    "Henry C. Koch"
+   ],
+   "a": 2,
+   "why": "E. Townsend Mix designed it."
+  },
+  {
+   "q": "Old Main was unoccupied starting in which year?",
+   "o": [
+    "1989",
+    "1867",
+    "1909",
+    "2011"
+   ],
+   "a": 0,
+   "why": "It was unoccupied starting in 1989."
+  },
+  {
+   "q": "The Milwaukee Auditorium was dedicated in which year?",
+   "o": [
+    "1867",
+    "1909",
+    "1895",
+    "1989"
+   ],
+   "a": 1,
+   "why": "It was dedicated on September 21, 1909."
+  }
  ]
 }

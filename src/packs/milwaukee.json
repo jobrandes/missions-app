@@ -1,0 +1,417 @@
+{
+ "id": "milwaukee",
+ "name": "Milwaukee",
+ "explorer": "Brew City Explorer",
+ "initials": "MKE",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Lakefront Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Milwaukee Scholar"
+  ],
+  [
+   600,
+   "Milwaukee Historian"
+  ]
+ ],
+ "heroAlt": "The Milwaukee Theatre",
+ "heroLi": "<li>Header: Royalbroil · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Royalbroil · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg\">Source</a>",
+ "mission": "Find four landmarks around Milwaukee. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Milwaukee is waiting.",
+ "safetyNote": "<li>Downtown Milwaukee has busy streets, bridges and streetcars. Use crosswalks, watch for the streetcar and bikes, and dress for the wind.</li>",
+ "badgeMap": {
+  "cityhall": [
+   "mk_ch_now",
+   "50% 45%"
+  ],
+  "mitchell": [
+   "mk_mb_now",
+   "50% 45%"
+  ],
+  "soldiers": [
+   "mk_sh_now",
+   "50% 45%"
+  ],
+  "auditorium": [
+   "mk_au_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "cityhall",
+   "name": "Milwaukee City Hall",
+   "short": "City Hall",
+   "badge": "City Hall",
+   "tag": "Stop 1 of 4",
+   "teaser": "A tower with four beer-stein turrets that once was the symbol of the city.",
+   "map": "Milwaukee City Hall, 200 E Wells Street, Milwaukee, WI",
+   "clue": "Go to Wells Street near Water Street downtown. Look for a brick-and-stone building with a tall clock tower and a copper spire.",
+   "safety": "Downtown streets are busy and the streetcar runs nearby. Use crosswalks and view the tower from the sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What do the four turrets around the clock tower look like?",
+    "options": [
+     "Bells",
+     "Beer steins",
+     "Cannons",
+     "Candles"
+    ],
+    "answer": 1,
+    "hint": "Think of the drink Milwaukee is famous for.",
+    "verify": "Wikipedia says the clock faces are flanked by four beer stein turrets. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Undated",
+    "label": "City Hall then",
+    "line": "A black-and-white photo of the tall tower on a street with trolley wires and a muddy road.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mk_ch_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_City_Hall_Old_Public_Domain_Photo.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2022",
+    "head": "Today",
+    "label": "City Hall today",
+    "line": "The brick clock tower and spire against a blue sky with clouds.",
+    "ph": {
+     "k": "mk_ch_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_June_2022_19_(Milwaukee_City_Hall).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Milwaukee City Hall was finished in 1895 and was the city's tallest building until 1973. Henry C. Koch designed it in the Flemish Renaissance Revival style, based on city halls in Germany and on local buildings. It became a National Historic Landmark in 2005.",
+    "It stands on 2,584 white pine piles driven into marshy ground. The main block rises eight stories, and the tower reaches 350 feet, with clock faces flanked by four beer stein turrets. A fire in October 1929 damaged the upper tower, which was rebuilt.",
+    "The tower holds a 22,500-pound bell named for Solomon Juneau, Milwaukee's first mayor, which was hoisted up in 1896. The tower's lighted marquee appeared in the opening of the TV show Laverne & Shirley, and it was removed in 1988."
+   ],
+   "fact": "It stands on 2,584 wooden piles.",
+   "disputed": "Many people think a tall old building must sit on solid rock. Wikipedia says this one stands on thousands of wooden piles in marshy ground.",
+   "claims": [
+    {
+     "t": "Milwaukee City Hall was finished in 1895.",
+     "a": 0,
+     "why": "Wikipedia: finished in 1895."
+    },
+    {
+     "t": "The tower has never been damaged by fire.",
+     "a": 2,
+     "why": "Wikipedia says a fire in October 1929 damaged the upper tower, which was rebuilt."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Milwaukee City Hall",
+     "u": "https://en.wikipedia.org/wiki/Milwaukee_City_Hall"
+    },
+    {
+     "t": "Wikipedia: Milwaukee",
+     "u": "https://en.wikipedia.org/wiki/Milwaukee"
+    }
+   ],
+   "card": {
+    "a": "1895",
+    "b": "2005",
+    "la": "Finished",
+    "lb": "National Historic Landmark"
+   }
+  },
+  {
+   "id": "mitchell",
+   "name": "Mitchell Building",
+   "short": "Mitchell Building",
+   "badge": "Mitchell Building",
+   "tag": "Stop 2 of 4",
+   "teaser": "A fancy bank and insurance building on the spot of a founder's house.",
+   "map": "Mitchell Building, 207 E Michigan Street, Milwaukee, WI",
+   "clue": "Go to East Michigan Street downtown. Look for an ornate stone building with a mansard roof and a decorated tower in the middle.",
+   "safety": "Downtown streets are busy. Use crosswalks, and look at the building from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Whose home is the Mitchell Building believed to sit on?",
+    "options": [
+     "Joseph Schlitz",
+     "Henry Koch",
+     "Solomon Juneau",
+     "Frederick Pabst"
+    ],
+    "answer": 2,
+    "hint": "He is considered the founder of Milwaukee.",
+    "verify": "Wikipedia says the building is believed to sit on the site of the home of Solomon Juneau, who founded Milwaukee. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Undated",
+    "label": "The building then",
+    "line": "A sepia photo of the five-story building with its mansard roof and railroad tracks in the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mk_mb_then",
+     "by": "W. H. Sherman (file by James Steakley)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_Mitchell_Building.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The carved stone front with its many windows and a fancy roof.",
+    "ph": {
+     "k": "mk_mb_now",
+     "by": "James Steakley",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mitchell_Building_Milwaukee.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Mitchell Building is a five-story bank and insurance building in the Second Empire style. It was built in 1876 and was added to the National Register of Historic Places in 1973.",
+    "Alexander Mitchell was a Scottish immigrant who came to the United States in 1839. He led an insurance company, a railroad and a bank, and he served two terms in the U.S. House. He hired architect E. Townsend Mix to design the building. Its first-floor walls are gray Minnesota granite and the upper walls are limestone, with a mansard roof and an ornate central tower.",
+    "It is believed to stand on the site of the home of Solomon Juneau, who founded Milwaukee in the 1830s. Mitchell's bank stayed there until 1930. The exterior remains highly intact, though much of the fancy interior has disappeared with remodeling."
+   ],
+   "fact": "Its first-floor walls are Minnesota granite.",
+   "disputed": "Many people think fancy old banks were rebuilt long ago. Wikipedia says the exterior of this one remains highly intact.",
+   "claims": [
+    {
+     "t": "The Mitchell Building was built in 1876.",
+     "a": 0,
+     "why": "Wikipedia: built in 1876."
+    },
+    {
+     "t": "The Mitchell Building was always a hotel.",
+     "a": 2,
+     "why": "It was built as a bank and insurance building."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Mitchell Building",
+     "u": "https://en.wikipedia.org/wiki/Mitchell_Building"
+    },
+    {
+     "t": "Wikipedia: Milwaukee",
+     "u": "https://en.wikipedia.org/wiki/Milwaukee"
+    }
+   ],
+   "card": {
+    "a": "1839",
+    "b": "1930",
+    "la": "Mitchell comes to America",
+    "lb": "Bank leaves the building"
+   }
+  },
+  {
+   "id": "soldiers",
+   "name": "Soldiers Home (Old Main)",
+   "short": "Old Main",
+   "badge": "Old Main",
+   "tag": "Stop 3 of 4",
+   "teaser": "A Civil War soldiers' home that was nearly torn down.",
+   "map": "Milwaukee Soldiers Home (Old Main), Milwaukee, WI",
+   "clue": "Look for the old soldiers' home grounds in Milwaukee. Find a big yellow-brick Gothic building with a tall tower and steep roofs.",
+   "safety": "The building is being restored and may be fenced. View it from public paths and do not go inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Old Main was built to help soldiers from which war?",
+    "options": [
+     "The Revolutionary War",
+     "The War of 1812",
+     "The Spanish-American War",
+     "The Civil War"
+    ],
+    "answer": 3,
+    "hint": "It was completed in 1867.",
+    "verify": "Wikipedia says it was built for the rehabilitation of Civil War soldiers. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1885",
+    "label": "The home then",
+    "line": "An 1885 engraving of the whole soldiers' home, with its buildings, paths and trees.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mk_sh_then",
+     "by": "James E. Heg (1885 Wisconsin Blue Book)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_Soldiers_Home.jpeg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The home today",
+    "line": "The yellow-brick Gothic building with its tall tower and steep roofs under a blue sky.",
+    "ph": {
+     "k": "mk_sh_now",
+     "by": "James Steakley",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Soldiers_Home_Milwaukee.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Milwaukee Soldiers Home, known as Old Main, is one of three soldiers homes that have survived in the United States. It was built to help Civil War soldiers recover. It was completed in 1867 and went by several names, including National Asylum for Disabled Soldiers.",
+    "There are 24 other buildings on the grounds, and together they form the Northwestern Branch, National Home for Disabled Volunteer Soldiers Historic District. Old Main was unoccupied from 1989, fell into disrepair and was scheduled for demolition.",
+    "A 2011 campaign succeeded in getting it designated a National Historic Landmark. In 2019 a company was hired to update the building, and the Wisconsin Housing and Economic Development Authority helped finance the restoration."
+   ],
+   "fact": "It was scheduled for demolition, then saved.",
+   "disputed": "Many people think old landmarks are always preserved. Wikipedia says this one was scheduled to be demolished until a campaign saved it.",
+   "claims": [
+    {
+     "t": "Old Main was completed in 1867.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1867."
+    },
+    {
+     "t": "Old Main has been in use ever since it was built.",
+     "a": 2,
+     "why": "Wikipedia says it was unoccupied from 1989."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Milwaukee Soldiers Home (Old Main)",
+     "u": "https://en.wikipedia.org/wiki/Milwaukee_Soldiers_Home_(Old_Main)"
+    },
+    {
+     "t": "Wikipedia: Old soldiers' home",
+     "u": "https://en.wikipedia.org/wiki/Old_soldiers%27_home"
+    }
+   ],
+   "card": {
+    "a": "1867",
+    "b": "2011",
+    "la": "Completed",
+    "lb": "Named a National Historic Landmark"
+   }
+  },
+  {
+   "id": "auditorium",
+   "name": "Milwaukee Auditorium",
+   "short": "Auditorium",
+   "badge": "Auditorium",
+   "tag": "Stop 4 of 4",
+   "teaser": "A giant hall built on the ashes of an exposition building.",
+   "map": "Milwaukee Theatre (Milwaukee Auditorium), 500 W Kilbourn Avenue, Milwaukee, WI",
+   "clue": "Go to West Kilbourn Avenue downtown. Look for a long brick building with big arched windows and a sign that says Milwaukee Theatre.",
+   "safety": "Downtown streets are busy. Use crosswalks, and view the building from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What building stood on this spot before it was destroyed by fire in 1905?",
+    "options": [
+     "The Milwaukee Industrial Exposition Building",
+     "The old City Hall",
+     "A brewery",
+     "A railroad station"
+    ],
+    "answer": 0,
+    "hint": "It was a big hall for showing off new products.",
+    "verify": "Wikipedia says the auditorium replaced the Milwaukee Industrial Exposition Building, destroyed by fire in 1905. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1908",
+    "label": "The auditorium then",
+    "line": "A colorized print of the new hall with a long front and horse carriages and early cars out front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "mk_au_then",
+     "by": "Library of Congress (Miscellaneous Items in High Demand)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_new_auditorium,_Milwaukee_LCCN2013646928.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The auditorium today",
+    "line": "The long brick front with its big windows and the Milwaukee Theatre sign.",
+    "ph": {
+     "k": "mk_au_now",
+     "by": "Royalbroil",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Milwaukee Auditorium was built in 1909 where the Milwaukee Industrial Exposition Building had stood before a fire destroyed it in 1905. The cornerstone was laid on August 1, 1908, and the building was dedicated on September 21, 1909.",
+    "It held 13,520 people and had almost 105,000 square feet of exhibition space. Elizabeth Plankinton donated a pipe organ. It hosted concerts, circuses, political rallies and sports events, from John Philip Sousa and Enrico Caruso to modern stars, and sitting presidents from Taft to Clinton gave speeches there.",
+    "A renovation from 2001 to 2003 changed its name to the Milwaukee Theatre. A naming rights deal changed it to the Miller High Life Theatre in 2017. Today it seats 4,086 people."
+   ],
+   "fact": "Presidents from Taft to Clinton spoke here.",
+   "disputed": "Many people think the Milwaukee Theatre has always had that name. Wikipedia says it was originally the Milwaukee Auditorium.",
+   "claims": [
+    {
+     "t": "The Milwaukee Auditorium was dedicated in 1909.",
+     "a": 0,
+     "why": "Wikipedia: dedicated on September 21, 1909."
+    },
+    {
+     "t": "The building has always been called the Milwaukee Theatre.",
+     "a": 2,
+     "why": "It was originally the Milwaukee Auditorium."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Miller High Life Theatre",
+     "u": "https://en.wikipedia.org/wiki/Miller_High_Life_Theatre"
+    },
+    {
+     "t": "Wikipedia: Milwaukee",
+     "u": "https://en.wikipedia.org/wiki/Milwaukee"
+    }
+   ],
+   "card": {
+    "a": "1908",
+    "b": "2003",
+    "la": "Cornerstone laid",
+    "lb": "Renovation finishes"
+   }
+  }
+ ],
+ "heroKey": "mk_au_now"
+}
