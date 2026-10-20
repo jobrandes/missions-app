@@ -1102,5 +1102,51 @@
    "a": 1,
    "why": "The Daughters refused his $25,000 offer, and the court backed them."
   }
+ ],
+ "baltimore": [
+  {
+   "q": "What famous message was first sent to Mount Clare by telegraph in 1844?",
+   "o": [
+    "Hello, world",
+    "What hath God wrought?",
+    "The war is over",
+    "Come at once"
+   ],
+   "a": 1,
+   "why": "Samuel Morse's telegraph carried \"What hath God wrought?\" on May 24, 1844."
+  },
+  {
+   "q": "Who designed Baltimore's Washington Monument?",
+   "o": [
+    "Robert Mills",
+    "Edmund Lind",
+    "Jean Foncin",
+    "George Peabody"
+   ],
+   "a": 0,
+   "why": "Robert Mills won the 1814 design competition."
+  },
+  {
+   "q": "For how many hours did the British bombard Fort McHenry in 1814?",
+   "o": [
+    "8",
+    "12",
+    "25",
+    "100"
+   ],
+   "a": 2,
+   "why": "The bombardment lasted 25 hours."
+  },
+  {
+   "q": "Who designed the George Peabody Library?",
+   "o": [
+    "Robert Mills",
+    "Edmund George Lind",
+    "Jean Foncin",
+    "John Chislett"
+   ],
+   "a": 1,
+   "why": "Local architect Edmund George Lind designed it, and it opened in 1878."
+  }
  ]
 }

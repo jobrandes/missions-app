@@ -317,3 +317,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | pg_cc_now | https://commons.wikimedia.org/wiki/File:Allegheny_County_Courthouse,_Grant_Street,_Pittsburgh,_PA.jpg | w_lemay | CC BY-SA 2.0 | 2023 |
 | pg_bh_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_April,_1963_SOUTHEAST_(FRONT)_ELEVATION._-_Fort_Pitt_Blockhouse,_25_Penn_Avenue,_Point_State_Historic_Park,_Pittsburgh,_Allegheny_County,_PA_HABS_PA,2-PITBU,20-1.tif | Jack Boucher (Historic American Buildings Survey) | Public domain | 1963 |
 | pg_bh_now | https://commons.wikimedia.org/wiki/File:Fort_Pitt_Blockhouse,_11_October_2014.jpg | Own work (Wikimedia Commons user) | Public domain | 2014 |
+
+### Baltimore (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| bl_wm_then | https://commons.wikimedia.org/wiki/File:Mount_Vernon_Place_and_Washington_Monument,_Baltimore,_Maryland,_circa_1907-1914.jpg | National Trust Library Historic Postcard Collection | Public domain | about 1907 to 1914 |
+| bl_wm_now | https://commons.wikimedia.org/wiki/File:Washington_Monument_Mount_Vernon,_Baltimore.jpg | R. Corbet | CC BY-SA 4.0 | 2016 |
+| bl_fm_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Charles_E._Peterson,_Photographer_c._1936_VIEW_OF_PASSAGE_BETWEEN_DEMILUNE_AND_FORT_-_Fort_McHenry_National_Monument_and_Historic_Shrine,_East_HABS_MD,4-BALT,5-6.tif | Charles E. Peterson (Historic American Buildings Survey) | Public domain | about 1936 |
+| bl_fm_now | https://commons.wikimedia.org/wiki/File:Fort_McHenry,_Baltimore_Maryland.jpg | m01229 | CC BY 2.0 | 2012 |
+| bl_pl_then | https://commons.wikimedia.org/wiki/File:Peabody_Institute,_Baltimore,_Md_(NYPL_b12647398-62700).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| bl_pl_now | https://commons.wikimedia.org/wiki/File:George-peabody-library.jpg | Matthew Petroff | CC BY-SA 3.0 | 2013 |
+| bl_mc_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_E.H._Pickering,_Photographer_August_1936_THIS_BUILDING_ERECTED_1830_IS_THE_FIRST_PASSENGER_AND_FREIGHT_STATION_IN_AMERICA_AND_THE_OLDEST_IN_THE_HABS_MD,4-BALT,51-1.tif | E. H. Pickering (Historic American Buildings Survey) | Public domain | August 1936 |
+| bl_mc_now | https://commons.wikimedia.org/wiki/File:Baltimore_&_Ohio_Railroad_Museum_-_Baltimore_(2643287108).jpg | Reading Tom | CC BY 2.0 | 2006 |

@@ -1,0 +1,417 @@
+{
+ "id": "baltimore",
+ "name": "Baltimore",
+ "explorer": "Charm City Explorer",
+ "initials": "BAL",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Harbor Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Baltimore Scholar"
+  ],
+  [
+   600,
+   "Baltimore Historian"
+  ]
+ ],
+ "heroAlt": "The Washington Monument in Baltimore",
+ "heroLi": "<li>Header: R. Corbet · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Washington_Monument_Mount_Vernon,_Baltimore.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: R. Corbet · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Washington_Monument_Mount_Vernon,_Baltimore.jpg\">Source</a>",
+ "mission": "Find four landmarks around Baltimore. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Baltimore is waiting.",
+ "safetyNote": "<li>Baltimore has busy downtown streets and a lot of brick sidewalks. Use crosswalks, watch for light rail and buses, and check opening hours before you plan to go inside anywhere.</li>",
+ "badgeMap": {
+  "mountclare": [
+   "bl_mc_now",
+   "50% 45%"
+  ],
+  "monument": [
+   "bl_wm_now",
+   "50% 45%"
+  ],
+  "fort": [
+   "bl_fm_now",
+   "50% 45%"
+  ],
+  "library": [
+   "bl_pl_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "mountclare",
+   "name": "Mount Clare Station",
+   "short": "Mount Clare",
+   "badge": "Mount Clare",
+   "tag": "Stop 1 of 4",
+   "teaser": "Where America's first regular passenger railroad service began in 1830.",
+   "map": "B&O Railroad Museum, 901 W Pratt St, Baltimore, MD",
+   "clue": "Go to West Pratt Street, west of downtown. Look for a brick railroad station beside a huge round building with a little dome on top.",
+   "safety": "Pratt Street is busy. Use crosswalks, check the museum's hours and ticket rules, and stay behind the barriers near tracks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What shape is the big domed building next to the station?",
+    "options": [
+     "Round",
+     "Square",
+     "Triangle",
+     "Star"
+    ],
+    "answer": 0,
+    "hint": "Think of a plate, not a box.",
+    "verify": "Wikipedia says the museum sits in the old Mount Clare Station and its adjacent roundhouse. Look at the shape on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "August 1936",
+    "label": "The station then",
+    "line": "A survey photograph from 1936 of the old station building, with a round-roofed building behind it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bl_mc_then",
+     "by": "E. H. Pickering (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_E.H._Pickering,_Photographer_August_1936_THIS_BUILDING_ERECTED_1830_IS_THE_FIRST_PASSENGER_AND_FREIGHT_STATION_IN_AMERICA_AND_THE_OLDEST_IN_THE_HABS_MD,4-BALT,51-1.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2006",
+    "head": "Today",
+    "label": "The roundhouse today",
+    "line": "The museum's round building with its dome, next to the old station.",
+    "ph": {
+     "k": "bl_mc_now",
+     "by": "Reading Tom",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Baltimore_&_Ohio_Railroad_Museum_-_Baltimore_(2643287108).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Baltimore and Ohio Railroad began America's first railroad here in 1829. The first regular passenger service started on May 22, 1830, when a horse-drawn train traveled 13 miles to Ellicott Mills, now Ellicott City.",
+    "On May 24, 1844, Samuel Morse's telegraph carried the first message, \"What hath God wrought?\", from Washington, D.C. to this site. The museum opened in 1953 and now has the largest collection of 19th-century locomotives in the country.",
+    "The station and the museum were named a National Historic Landmark in 1961. In 2021, the National Park Service added the Mount Clare Station building to its Underground Railroad Network to Freedom, because freedom seekers used the B&O Railroad on their journeys."
+   ],
+   "fact": "The first regular passenger train here was pulled by horses.",
+   "disputed": "Old survey notes call the building \"erected 1830\", but Wikipedia says the brick Mount Clare Station standing today was constructed in 1851.",
+   "claims": [
+    {
+     "t": "Regular passenger service began at Mount Clare in 1830.",
+     "a": 0,
+     "why": "Wikipedia: the first regular passenger service started May 22, 1830."
+    },
+    {
+     "t": "The brick station standing today was built in 1830.",
+     "a": 2,
+     "why": "Wikipedia says it was constructed in 1851."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: National Museum of Railroad History & Innovation",
+     "u": "https://en.wikipedia.org/wiki/National_Museum_of_Railroad_History_%26_Innovation"
+    },
+    {
+     "t": "Wikipedia: Baltimore and Ohio Railroad",
+     "u": "https://en.wikipedia.org/wiki/Baltimore_and_Ohio_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1830",
+    "b": "1851",
+    "la": "First passenger trains",
+    "lb": "Station built"
+   }
+  },
+  {
+   "id": "monument",
+   "name": "Washington Monument",
+   "short": "Monument",
+   "badge": "Monument",
+   "tag": "Stop 2 of 4",
+   "teaser": "A tall stone column honoring Washington, started years before the one in D.C.",
+   "map": "Washington Monument, 699 N Charles St, Baltimore, MD",
+   "clue": "Go to Mount Vernon Place, a park square in the middle of the neighborhood north of downtown. Look for a tall white stone column in the middle.",
+   "safety": "Mount Vernon Place has streets on all sides. Use crosswalks, and check the monument's hours before you plan to climb.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many steps lead to the top of the column?",
+    "options": [
+     "127",
+     "327",
+     "227",
+     "27"
+    ],
+    "answer": 2,
+    "hint": "It is more than two hundred, but fewer than three hundred.",
+    "verify": "Wikipedia says visitors climb 227 steps to the top. If it is open, count them on the way up. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1907 to 1914",
+    "label": "The square then",
+    "line": "A colorized postcard of the column and the church beside it, with Mount Vernon Place spread out below.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bl_wm_then",
+     "by": "National Trust Library Historic Postcard Collection",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mount_Vernon_Place_and_Washington_Monument,_Baltimore,_Maryland,_circa_1907-1914.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2016",
+    "head": "Today",
+    "label": "The monument today",
+    "line": "The white column rising behind a street lamp and bare branches.",
+    "ph": {
+     "k": "bl_wm_now",
+     "by": "R. Corbet",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Washington_Monument_Mount_Vernon,_Baltimore.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Architect Robert Mills, who later designed the Washington Monument in Washington, D.C., won the design competition in 1814. The cornerstone was laid on July 4, 1815, on land from Colonel John Eager Howard's estate. The masonry was finished in 1829.",
+    "The column stands 178 feet 8 inches tall, and visitors climb 227 steps to the top. Its ground floor holds a gallery with exhibits about building the monument and the neighborhood around it.",
+    "Baltimore's monument was the first major monument to honor George Washington. Mills's first design had a statue of Washington in a four-horse chariot on top, but the plan changed because of concerns about cost and height."
+   ],
+   "fact": "Maryland held its first state-approved lottery in 1810 for the monument.",
+   "disputed": "Many people think the monument in Washington, D.C. was first. Wikipedia says Baltimore's was the first major monument to honor Washington.",
+   "claims": [
+    {
+     "t": "Robert Mills designed the monument in Baltimore.",
+     "a": 0,
+     "why": "Wikipedia: Mills won the competition in 1814."
+    },
+    {
+     "t": "The monument was completed in 1815.",
+     "a": 2,
+     "why": "The cornerstone was laid in 1815, and the masonry was finished in 1829."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Washington Monument (Baltimore)",
+     "u": "https://en.wikipedia.org/wiki/Washington_Monument_(Baltimore)"
+    },
+    {
+     "t": "Wikipedia: Robert Mills",
+     "u": "https://en.wikipedia.org/wiki/Robert_Mills_(architect)"
+    }
+   ],
+   "card": {
+    "a": "1815",
+    "b": "1829",
+    "la": "Cornerstone",
+    "lb": "Masonry finished"
+   }
+  },
+  {
+   "id": "fort",
+   "name": "Fort McHenry",
+   "short": "Fort McHenry",
+   "badge": "Fort McHenry",
+   "tag": "Stop 3 of 4",
+   "teaser": "The fort whose flag inspired the national anthem.",
+   "map": "Fort McHenry National Monument, 2400 E Fort Ave, Baltimore, MD",
+   "clue": "Go to Locust Point, on the south side of the harbor. Look for a star-shaped fort with brick buildings inside and a huge flag on a tall pole.",
+   "safety": "The fort is a national park site with its own entry rules. Stay on paths and off the earthen walls, watch the edges of the moat, and bring water on hot days.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many points does the fort's star shape have?",
+    "options": [
+     "Three",
+     "Four",
+     "Six",
+     "Five"
+    ],
+    "answer": 3,
+    "hint": "Think of the name of a famous US Defense building.",
+    "verify": "Wikipedia calls it a pentagonal bastion fort. Count the points on a map or sign on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1936",
+    "label": "The fort then",
+    "line": "A survey photograph from about 1936 of a grassy earthwork and the passage beside it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bl_fm_then",
+     "by": "Charles E. Peterson (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Charles_E._Peterson,_Photographer_c._1936_VIEW_OF_PASSAGE_BETWEEN_DEMILUNE_AND_FORT_-_Fort_McHenry_National_Monument_and_Historic_Shrine,_East_HABS_MD,4-BALT,5-6.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The fort today",
+    "line": "The parade ground, brick buildings and walls of the fort under a big sky.",
+    "ph": {
+     "k": "bl_fm_now",
+     "by": "m01229",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fort_McHenry,_Baltimore_Maryland.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Jean Foncin, a Frenchman, designed the fort in 1798, and it was built between 1798 and 1800 on the site of the older Fort Whetstone. It was named for James McHenry, a signer of the Constitution and the Secretary of War at the time.",
+    "On September 13 and 14, 1814, British warships bombarded the fort for 25 hours during the War of 1812. A chain of 22 sunken ships and the fort's cannons kept the ships from entering the harbor.",
+    "A huge flag, 30 by 42 feet, was raised on the morning of September 14. Francis Scott Key saw it and wrote a poem that was set to music and became \"The Star-Spangled Banner\". The fort became a national park in 1925 and a national monument in 1939."
+   ],
+   "fact": "The flag was bigger than a house wall.",
+   "disputed": "Many people think the fort was built for the War of 1812. Wikipedia says it was built between 1798 and 1800, well before that war.",
+   "claims": [
+    {
+     "t": "Fort McHenry was built before the War of 1812.",
+     "a": 0,
+     "why": "Wikipedia: built between 1798 and 1800."
+    },
+    {
+     "t": "The British captured Fort McHenry in 1814.",
+     "a": 2,
+     "why": "The fort held, and the British withdrew."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fort McHenry",
+     "u": "https://en.wikipedia.org/wiki/Fort_McHenry"
+    },
+    {
+     "t": "Wikipedia: The Star-Spangled Banner",
+     "u": "https://en.wikipedia.org/wiki/The_Star-Spangled_Banner"
+    }
+   ],
+   "card": {
+    "a": "1798",
+    "b": "1814",
+    "la": "Designed",
+    "lb": "Bombardment"
+   }
+  },
+  {
+   "id": "library",
+   "name": "George Peabody Library",
+   "short": "Peabody Library",
+   "badge": "Peabody Library",
+   "tag": "Stop 4 of 4",
+   "teaser": "A library so grand that people call it a cathedral of books.",
+   "map": "George Peabody Library, 17 E Mount Vernon Pl, Baltimore, MD",
+   "clue": "Go to Mount Vernon Place and find the Peabody Institute, a grand building a block from the Washington Monument. The library is part of it.",
+   "safety": "The library is run by Johns Hopkins University, so check public hours and visitor rules before you go. Keep voices low and photos polite.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What fills the walls of the library's great hall?",
+    "options": [
+     "Paintings",
+     "Mirrors",
+     "Books",
+     "Flags"
+    ],
+    "answer": 2,
+    "hint": "It is a library, after all.",
+    "verify": "Wikipedia says the collection holds about 300,000 volumes. Look at the walls on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The building then",
+    "line": "A postcard of the Peabody Institute's front, from soon after 1898.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bl_pl_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Peabody_Institute,_Baltimore,_Md_(NYPL_b12647398-62700).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The library today",
+    "line": "The great hall, with rows of iron balconies full of books under a skylight.",
+    "ph": {
+     "k": "bl_pl_now",
+     "by": "Matthew Petroff",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:George-peabody-library.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "George Peabody, a Baltimore merchant, gave $300,000 to start the Peabody Institute in 1857. The library was meant for the \"free use of all persons who desire to consult it\".",
+    "The Civil War delayed the plans, and the institute was not established until 1866. Local architect Edmund George Lind designed the library in the East Wing, and it opened to the public in 1878.",
+    "The library stayed part of the Peabody Institute until 1967, when it passed to the city and then, in 1982, to Johns Hopkins University. Its collection of about 300,000 volumes focuses on the 19th century and includes first editions by Poe, Hawthorne and Melville."
+   ],
+   "fact": "It was built to be free for everyone.",
+   "disputed": "Many people think the library opened in 1860 as first planned. Wikipedia says the Civil War delayed the institute, and the library building opened in 1878.",
+   "claims": [
+    {
+     "t": "The Peabody Library building opened in 1878.",
+     "a": 0,
+     "why": "Wikipedia: the East Wing library opened to the public in 1878."
+    },
+    {
+     "t": "The library was designed to charge a fee.",
+     "a": 2,
+     "why": "It was meant for the free use of all persons."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: George Peabody Library",
+     "u": "https://en.wikipedia.org/wiki/George_Peabody_Library"
+    },
+    {
+     "t": "Wikipedia: Peabody Institute",
+     "u": "https://en.wikipedia.org/wiki/Peabody_Institute"
+    }
+   ],
+   "card": {
+    "a": "1857",
+    "b": "1878",
+    "la": "Gift",
+    "lb": "Library opens"
+   }
+  }
+ ],
+ "heroKey": "bl_wm_now"
+}

@@ -45,9 +45,9 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 - Download: navigate a tab to the upload.wikimedia.org 960px thumbnail, fetch same-origin, save via `<a download>`. Files land in `~/Downloads` as hidden temp files; rename by byte size, then `device_stage_files`, view a contact sheet to confirm each photo matches its stop, then resize and wire in.
 
 ## Status (Oct 20, 2026)
-24 towns, 96 stops, 195 photos. **Every stop now has a free-licensed "then" and "now" photo.** Stops were swapped for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia Capitol, Atlanta Flatiron, Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall (Oct 19), then Reno Train Depot (replaced Original Arch), Cave Rock (replaced Sand Harbor) and Commons Beach (replaced Fanny Bridge) (Oct 20).
+25 towns, 100 stops, 203 photos. **Every stop now has a free-licensed "then" and "now" photo.** Stops were swapped for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia Capitol, Atlanta Flatiron, Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall (Oct 19), then Reno Train Depot (replaced Original Arch), Cave Rock (replaced Sand Harbor) and Commons Beach (replaced Fanny Bridge) (Oct 20).
 - West: Reno, Virginia City, Lake Tahoe (two packs), San Francisco, Los Angeles, Seattle
-- East: Boston, Washington DC, New York, Philadelphia, Pittsburgh
+- East: Boston, Washington DC, New York, Philadelphia, Pittsburgh, Baltimore
 - Midwest: Chicago, Detroit, Minneapolis
 - South: New Orleans, Atlanta, Memphis, Savannah
 - Southwest (new, Oct 20): Denver, Santa Fe, Phoenix, Albuquerque, Tucson
