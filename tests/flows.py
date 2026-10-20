@@ -4,8 +4,8 @@ import sys,os,json
 from playwright.sync_api import sync_playwright
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/'
 src=open(R+'index.html').read()
-open('/tmp/_flow.html','w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
-U='file:///tmp/_flow.html'
+open(R+'src/_flow.html','w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
+U='file://'+R+'src/_flow.html'
 bad=[];errs=[]
 def need(c,m):
     if not c: bad.append(m)

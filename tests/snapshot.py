@@ -1,9 +1,10 @@
 """Regression snapshot: walks every town, stop and step and hashes what is rendered.
 Usage: python3 tests/snapshot.py <index.html> <out.json>"""
-import sys,json,hashlib
+import sys,json,hashlib,os
+R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/'
 from playwright.sync_api import sync_playwright
 src=open(sys.argv[1]).read()
-wrap='/tmp/_snap.html'
+wrap=R+'src/_snap.html'
 open(wrap,'w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
 def h(x): return hashlib.sha1(x.encode()).hexdigest()[:12]
 out={};errs=[]

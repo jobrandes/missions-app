@@ -2,3 +2,5 @@
 node_modules/
 *.log
 .netlify
+_*.html
+src/_*.html

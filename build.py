@@ -6,7 +6,8 @@ import json,base64,os
 R=os.path.dirname(os.path.abspath(__file__))+'/'
 def rd(p,mode='r'): return open(R+p,mode).read() if mode=='r' else open(R+p,'rb').read()
 keys=json.loads(rd('src/photos/manifest.json'))
-photos={k:'data:image/jpeg;base64,'+base64.b64encode(rd(f'src/photos/{k}.jpg','rb')).decode() for k in keys}
+for k in keys: assert os.path.exists(R+f'src/photos/{k}.jpg'), f'photo file missing: {k}'
+photos={k:f'photos/{k}.jpg' for k in keys}  # loaded on demand as files, not embedded
 order=json.loads(rd('src/packs/index.json'))['order']
 packs={k:json.loads(rd(f'src/packs/{k}.json')) for k in order}
 # every photo a pack references must exist
@@ -34,7 +35,9 @@ open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Refe
 import shutil
 for pg in ('privacy.html','support.html'):
     shutil.copy(R+'src/pages/'+pg,R+'site/'+pg)
-print('copied pages')
+shutil.rmtree(R+'site/photos',ignore_errors=True); os.makedirs(R+'site/photos')
+for k in keys: shutil.copy(R+f'src/photos/{k}.jpg',R+f'site/photos/{k}.jpg')
+print('copied pages and',len(keys),'photos')
 
 # --- offline support for the static site ---
 import hashlib

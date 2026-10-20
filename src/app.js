@@ -1,6 +1,7 @@
 (function(){
+  var DATA=__DATA__;
   /* ---------- scene + badge drawing ---------- */
-  var BMAPS={}; Object.keys(__DATA__.packs).forEach(function(k){ BMAPS[k]=__DATA__.packs[k].badgeMap||{}; });
+  var BMAPS={}; Object.keys(DATA.packs).forEach(function(k){ BMAPS[k]=DATA.packs[k].badgeMap||{}; });
   function mono(id,pid){
     pid=pid||cityId; var c=CITIES[pid];
     if(id==='master') return c.initials;
@@ -10,10 +11,11 @@
   function badge(id,on,pid){
     pid=pid||cityId; var c=CITIES[pid];
     var m=(id==='master')?(c.heroKey&&PHOTOS[c.heroKey]?[c.heroKey,'50% 60%']:null):(BMAPS[pid]||{})[id];
-    if(m&&PHOTOS[m[0]]) return '<span class="bimg'+(on?' on':'')+'"><img src="'+PHOTOS[m[0]]+'" alt="" style="object-position:'+m[1]+'"></span>';
+    if(m&&PHOTOS[m[0]]) return '<span class="bimg'+(on?' on':'')+'"><img loading="lazy" src="'+PHOTOS[m[0]]+'" alt="" style="object-position:'+m[1]+'"></span>';
     return '<span class="bimg plain'+(on?' on':'')+'"><b>'+mono(id,pid)+'</b></span>';
   }
   var PHOTOS=__PHOTOS__;
+  function preloadTown(k){ try{ var c=CITIES[k]; if(!c||c._pre) return; c._pre=1; var seen={}; c.stops.forEach(function(st){ ['then','now'].forEach(function(e){ var p=st[e].ph&&st[e].ph.k; if(p&&PHOTOS[p]&&!seen[p]){ seen[p]=1; var im=new Image(); im.src=PHOTOS[p]; } }); }); }catch(e){} }
   function hasPh(st,era){return !!(st[era].ph && PHOTOS[st[era].ph.k]);}
   function visual(st,era,label,extra){
     if(hasPh(st,era)) return '<div class="scene ph'+(extra||'')+'"><img src="'+PHOTOS[st[era].ph.k]+'" alt="'+label+'"></div>';
@@ -52,13 +54,13 @@
   }
 
   /* ---------- content ---------- */
-  var RIGHT = __DATA__.right;
-  var RENO_STOPS = __DATA__.packs.reno.stops, VC_STOPS = __DATA__.packs.vc.stops;
-  var RENO_RANKS = __DATA__.packs.reno.ranks, VC_RANKS = __DATA__.packs.vc.ranks;
-  var CITIES = __DATA__.packs;
+  var RIGHT = DATA.right;
+  var RENO_STOPS = DATA.packs.reno.stops, VC_STOPS = DATA.packs.vc.stops;
+  var RENO_RANKS = DATA.packs.reno.ranks, VC_RANKS = DATA.packs.vc.ranks;
+  var CITIES = DATA.packs;
   var RANKS=RENO_RANKS;
   var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
-  var railRegion=null, ORDER=__DATA__.order, SOON=__DATA__.soon||[], atHome=true;
+  var railRegion=null, ORDER=DATA.order, SOON=DATA.soon||[], atHome=true;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
   var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
   var cityId='reno';
@@ -124,7 +126,7 @@
 
   /* ---------- header ---------- */
   function applyCity(){
-    var c=city();
+    var c=city(); preloadTown(cityId);
     var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>12?'long xl':(c.name.length>8?'long':'');
     var hero=document.getElementById('hero'), img=document.getElementById('heroImg');
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
@@ -251,7 +253,7 @@
     var h='';
     if(allDone()){
       h+='<section class="done-banner pop" aria-label="Mission complete"><div class="bbox lg">'+badge('master',true)+'</div><div><h2>'+city().explorer+'</h2><p>'+city().afterDone+'</p></div></section>';
-      if(((__DATA__.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
+      if(((DATA.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
     } else {
       h+='<section class="card"><h3>Your mission</h3><p>'+city().mission+'</p></section>';
     }
@@ -351,7 +353,7 @@
   var OKL=['Stamped.','Nailed it.','Clean.','Plaque reader.'], BADL=['Ouch. The plaque disagrees.','Nope. Historians winced.','Close, the way a bird is close to a plane.','Not this time. The answer is in green.'];
   function bossSave(pid,n){ var b=bossBest(); boss.prev=b[pid]; boss.gain=ptsOf(Math.max(n,b[pid]===undefined?0:b[pid]))-ptsOf(b[pid]); if(b[pid]===undefined||n>b[pid]){ b[pid]=n; try{ localStorage.setItem('then-now-boss',JSON.stringify(b)); }catch(e){} } }
   function viewBoss(){
-    var Q=(__DATA__.boss||{})[boss.pid]||[], n=Q.length;
+    var Q=(DATA.boss||{})[boss.pid]||[], n=Q.length;
     var h='<div class="stophead"><button class="link" data-a="bossexit">‹ Trail</button><span class="mono">Final challenge</span></div>';
     if(boss.i>=n){
       var perfect=boss.score===n, best=bossBest()[boss.pid];
@@ -390,7 +392,7 @@
       h+='<p>Stop done. Now go to <strong>'+STOPS[j].name+'</strong>, then check in there.</p><button class="btn" data-a="nextstop" data-i="'+j+'">Next stop: '+STOPS[j].name+'</button><button class="btn ghost" data-a="exit">Back to the trail</button>';
     } else {
       h+='<p>That is every stop in '+city().name+'. Nicely done.</p>';
-      if(((__DATA__.boss||{})[cityId]||[]).length) h+='<button class="btn" data-a="bossgo">Take the final challenge</button>';
+      if(((DATA.boss||{})[cityId]||[]).length) h+='<button class="btn" data-a="bossgo">Take the final challenge</button>';
       h+='<button class="btn ghost" data-a="tab" data-t="rewards">See my passport</button><button class="btn ghost" data-a="exit">Back to the trail</button>';
     }
     return h+'</section>';
@@ -573,8 +575,8 @@
     if(a==='bossgo'){ leave(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='boss'||a==='bossagain'){ boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
-    if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=__DATA__.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a){ boss.score++; boss.streak=(boss.streak||0)+1; } else boss.streak=0; render(); } return; }
-    if(a==='bnext'){ if(boss){ boss.i++; boss.pick=null; if(boss.i>=__DATA__.boss[boss.pid].length) bossSave(boss.pid,boss.score); render(); window.scrollTo(0,0); } return; }
+    if(a==='bpick'){ if(boss&&boss.pick===null){ var qq=DATA.boss[boss.pid][boss.i], kk=+b.getAttribute('data-k'); boss.pick=kk; if(kk===qq.a){ boss.score++; boss.streak=(boss.streak||0)+1; } else boss.streak=0; render(); } return; }
+    if(a==='bnext'){ if(boss){ boss.i++; boss.pick=null; if(boss.i>=DATA.boss[boss.pid].length) bossSave(boss.pid,boss.score); render(); window.scrollTo(0,0); } return; }
     if(a==='report'){ showReport(); return; }
     if(a==='repclose'){ closeReport(); return; }
     if(a==='repsend'){ sendReport(); return; }

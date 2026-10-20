@@ -5,7 +5,7 @@ import sys,os
 from playwright.sync_api import sync_playwright
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/'
 src=open(R+'index.html').read()
-open('/tmp/_chk.html','w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
+open(R+'src/_chk.html','w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
 bad=[];errs=[]
 def need(c,m):
     if not c: bad.append(m)
@@ -14,7 +14,7 @@ with sync_playwright() as p:
     for w,h,cs in [(360,740,'light'),(390,844,'dark'),(768,1024,'light'),(1280,900,'light'),(1280,900,'dark')]:
         cx=b.new_context(viewport={'width':w,'height':h},color_scheme=cs,reduced_motion='reduce'); cx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}"); pg=cx.new_page()
         pg.on('pageerror',lambda e:errs.append(str(e)))
-        pg.goto('file:///tmp/_chk.html'); tag=f'{w}px/{cs}'
+        pg.goto('file://'+R+'src/_chk.html'); tag=f'{w}px/{cs}'
         for city in ('Reno','Virginia City'):
             pg.click('.city >> text='+city)
             for step in range(4):
