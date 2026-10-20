@@ -482,3 +482,17 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
 .pstats div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .pstats b{display:block;font:800 30px/1 var(--font-display)}
 .pstats span{color:var(--muted);font-size:13px}
+/* passport = navy and gold, like a real passport cover */
+#cities .rail1 .city[data-a="mypass"]{position:static;background:#0F1F33;color:#E9A91A;border:1.5px solid #E9A91A;border-radius:999px;margin:4px 6px;padding:6px 14px;min-height:36px}
+#cities .rail1 .city[data-a="mypass"]::before{content:"★ ";font-size:.9em}
+#cities .rail1 .city[data-a="mypass"][aria-pressed="true"]{background:#E9A91A;color:#0F1F33}
+.passhead{background:#0F1F33;color:#F3EFE6;border:2px solid #E9A91A;border-radius:16px;padding:20px 16px;margin:8px 0 16px;box-shadow:inset 0 0 0 4px #0F1F33,inset 0 0 0 5px rgba(233,169,26,.55)}
+.passhead .mono{color:#E9A91A}
+.passhead .hh2{color:#F3EFE6;margin:4px 0 6px}
+.passhead .pstats div{background:rgba(255,255,255,.07);border:1px solid rgba(233,169,26,.45)}
+.passhead .pstats b{color:#E9A91A}
+.passhead .pstats span{color:#F3EFE6;opacity:.85}
+.passport .rcard{background:#0F1F33;border-color:#E9A91A;color:#F3EFE6}
+.passport .rcard strong{color:#E9A91A}
+.passport .rcard .rsub{color:#F3EFE6;opacity:.85}
+.passport .rcard .go{color:#E9A91A}
