@@ -476,14 +476,17 @@
       h+='</section>';
     }
     if(cur.step===2 && d){
+      h+='<div class="stopcols"><div class="sc-l">';
       h+=compare(st);
       h+='<div class="pair"><div class="then">'+visual(st,'then',st.then.label+', '+st.then.yr)+'<div class="cap"><strong>Then, '+st.then.yr+': '+st.then.label+'</strong><br>'+st.then.line+'</div>'+credit(st,'then')+'<a target="_blank" rel="noopener" href="'+st.then.link.u+'">'+st.then.link.t+'</a></div>'
         +'<div class="now">'+visual(st,'now',st.now.label)+'<span class="mono">'+(st.now.head||'Now')+'</span><b class="yr">'+st.now.yr+'</b><div class="cap"><strong>'+st.now.label+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
+      h+='</div><div class="sc-r">';
       h+='<section class="card story">'+st.story.map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
       if(st.disputed) h+='<aside class="argue" aria-label="Historians argue about this"><div class="argue-h"><span class="argue-ic" aria-hidden="true">?</span><span><b>Historians argue about this</b><em>Not everything here is settled.</em></span></div><p>'+st.disputed+'</p><p class="argue-go">Think you can tell solid from shaky? The Source check is next.</p></aside>';
       h+='<div class="fact"><span class="mono">Did you know</span><span>'+st.fact+'</span></div>';
       h+='<details class="card"><summary>Sources</summary><ul class="srcs">'+st.sources.map(function(s){return '<li><a target="_blank" rel="noopener" href="'+s.u+'">'+s.t+'</a></li>';}).join('')+'</ul></details>';
       h+='<button class="btn" data-a="step" data-n="3">Next: sort fact from fiction (up to 50 XP)</button>';
+      h+='</div></div>';
     }
     if(cur.step===3 && d){ h+=factGame(st); }
     h+='<p class="repline"><button class="link" data-a="report">Something wrong here? Tell us</button></p>';
@@ -527,6 +530,7 @@
   function render(focusTitle){
     updateHeader();
     document.body.classList.toggle('ishome',atHome);
+    document.body.classList.toggle('instop',!!cur&&!boss);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
     if(boss&&(atHome||boss.pid!==cityId)) boss=null;
