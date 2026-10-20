@@ -475,3 +475,10 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
 .hsec{margin:34px 0}
 .hh2{font-size:clamp(24px,6vw,32px)}
 .grown{margin:30px 0 20px}
+/* passport page */
+.passhead{margin:6px 0 14px}
+.pstats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+@media (min-width:700px){.pstats{grid-template-columns:repeat(4,1fr)}}
+.pstats div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.pstats b{display:block;font:800 30px/1 var(--font-display)}
+.pstats span{color:var(--muted);font-size:13px}

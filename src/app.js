@@ -60,7 +60,7 @@
   var CITIES = DATA.packs;
   var RANKS=RENO_RANKS;
   var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
-  var railRegion=null, ORDER=DATA.order, SOON=DATA.soon||[], atHome=true;
+  var railRegion=null, ORDER=DATA.order, SOON=DATA.soon||[], atHome=true, onPass=false;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
   var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
   var cityId='reno';
@@ -134,17 +134,18 @@
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
     var regsR=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regsR.indexOf(r)<0) regsR.push(r); });
     var curR=railRegion||c.region||'More places';
-    document.getElementById('cities').innerHTML='<div class="rail1"><button class="city home" data-a="home" aria-pressed="'+atHome+'">Home</button>'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
+    document.getElementById('cities').innerHTML='<div class="rail1"><button class="city home" data-a="home" aria-pressed="'+(atHome&&!onPass)+'">Home</button><button class="city home" data-a="mypass" aria-pressed="'+(atHome&&onPass)+'">Passport</button>'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
     }).join('')+'</div>';
     var act=document.querySelector('#cities .rail2 .city[aria-pressed="true"]'); if(act){ try{ var bx=act.parentNode; bx.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
   }
   function setCity(id){
     if(!CITIES[id]||(id===cityId&&!atHome)) return;
-    leave(); atHome=false; cityId=id; S=ALL[id]; STOPS=CITIES[id].stops; RANKS=CITIES[id].ranks;
+    leave(); atHome=false; onPass=false; cityId=id; S=ALL[id]; STOPS=CITIES[id].stops; RANKS=CITIES[id].ranks;
     tab='trail'; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0);
   }
-  function goHome(){ leave(); atHome=true; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
+  function openPass(){ leave(); atHome=true; onPass=true; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
+  function goHome(){ leave(); atHome=true; onPass=false; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
   function updateHeader(){
     var x=xp(), r=rank(x);
     document.getElementById('rankName').textContent=r.name;
@@ -229,11 +230,7 @@
       var open=(CITIES[cityId]&&(CITIES[cityId].region||'More places')===r)||(regs[0]===r&&!(CITIES[cityId]&&(ALL[cityId]&&sum(ALL[cityId].done)>0)));
       return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
-    var passportHtml;
-    passportHtml='<section class="passport" id="passport"><details class="ppwrap"'+(got>0?' open':'')+'><summary><span><span class="mono">Your passport</span><strong class="pptitle">'+got+' of '+total+' stamps earned</strong></span></summary>'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.map(function(k){
-      var c=CITIES[k], d=sum(ALL[k].done);
-      return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
-    }).join('')+'</details>'; }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</details></section>';
+    var passportHtml='<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>';
     var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
@@ -241,6 +238,18 @@
     h+=passportHtml;
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
+    return h;
+  }
+  function viewPass(){
+    var got=0,total=0,full=0,seals=0,b=bossBest();
+    ORDER.forEach(function(k){ total+=CITIES[k].stops.length; var d=sum(ALL[k].done); got+=d; if(d===CITIES[k].stops.length) full++; if(sealTier(b[k])) seals++; });
+    var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
+    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div></section>';
+    h+='<section class="passport" id="passport">'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.map(function(k){
+      var c=CITIES[k], d=sum(ALL[k].done);
+      return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
+    }).join('')+'</details>'; }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</section>';
+    h+='<section class="card"><h3>Keep your passport safe</h3><p>Your stamps are saved on this phone. If you get a new phone, copy this code there and paste it below. No account needed.</p><div class="code"><input id="codeOut" readonly value="'+code()+'" aria-label="Progress code"><button class="btn small" data-a="copy">Copy</button></div><div class="code"><input id="codeIn" placeholder="Paste a code" aria-label="Paste a progress code" autocomplete="off" autocapitalize="characters" spellcheck="false"><button class="btn small ghost" data-a="restore">Restore</button></div><p id="codeMsg" class="why" aria-live="polite"></p></section>';
     return h;
   }
   function homeAnswer(k){
@@ -297,7 +306,7 @@
   function whereAmI(){
     if(cur) return city().name+' / '+STOPS[cur.i].name+' / step '+(cur.step+1);
     if(boss) return city().name+' / final challenge / question '+(boss.i+1);
-    return atHome?'Home':city().name+' / '+tab;
+    return atHome?(onPass?'Passport':'Home'):city().name+' / '+tab;
   }
   function showReport(){
     var old=document.getElementById('report'); if(old) old.remove();
@@ -520,7 +529,7 @@
     m.setAttribute('aria-labelledby','tab-'+tab);
     if(boss&&(atHome||boss.pid!==cityId)) boss=null;
     if(boss) m.innerHTML=viewBoss();
-    else if(atHome&&!cur) m.innerHTML=viewHome();
+    else if(atHome&&!cur) m.innerHTML=onPass?viewPass():viewHome();
     else if(cur) m.innerHTML=viewStop();
     else if(tab==='trail') m.innerHTML=viewTrail();
     else if(tab==='cards') m.innerHTML=viewCards();
@@ -585,7 +594,7 @@
     if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
-    if(a==='passport'){ closeCeleb(); goHome(); setTimeout(function(){ var p=document.getElementById('passport'); if(p&&p.scrollIntoView) p.scrollIntoView({behavior:'smooth',block:'start'}); },60); return; }
+    if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
