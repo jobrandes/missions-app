@@ -59,7 +59,7 @@ Also done: demo mode, dynamic Home hero, region-grouped passport, offline suppor
 ## Still to do
 1. ~~Page size~~ done Oct 20: photos load as files on demand and the data is embedded once (index.html 0.4 MB, was 13.9 MB). Artifact publish needs `files` (limit 255 per publish, 511 per version, so about 500 photos total; then split or move to a CDN).
 2. **Southwest** done except Las Vegas (Denver, Santa Fe, Phoenix, Albuquerque, Tucson; written from sources, not yet checked on site). Las Vegas has free then photos for only 3 stops (Hoover Dam 1934/35, El Cortez postcard, Fifth Street School 1936), so it is on hold until a 4th is found. Then Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
-3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
+3. ~~App icon~~ done Oct 20 (rubber-stamp postmark with a columned landmark). Desktop two-pane layout for town and stop screens.
 4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.
 5. Later: wrap for the App Store, pricing/monetization decision, more towns each month.
 
