@@ -6,7 +6,7 @@ Read this first in every session. Keep it current: update it whenever scope, rul
 **Stamp the Past** is a phone-first history scavenger-hunt app about real landmarks. Tagline: "Go there. Prove it. Stamp the past."
 Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and idea source). Public credit: "made by a mom and her teenage son". Never name the son publicly.
 
-- Repo: `jobrandes/missions-app` (private). Test site: `missions-app-test.netlify.app` (Netlify auto-deploys on push to GitHub).
+- Repo: `jobrandes/missions-app` (private). Test site: `stamp-the-past.netlify.app` (renamed from missions-app-test on Oct 20; auto-deploys on push to GitHub).
 - Claude Artifact copy: https://claude.ai/artifact/4jha39rpChXp1cMVXRYkBs (republish after every build; the page must stay under 16 MB).
 - The App Store is the eventual destination. Netlify is only for testing.
 
