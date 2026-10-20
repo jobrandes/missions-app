@@ -240,3 +240,20 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | se_ps_then | File:1st Ave S, Pioneer Square district, Seattle, 1901 (CURTIS 2044).jpeg | Asahel Curtis | Public domain | 1901 |
 | ph_ch_now | File:Carpenters' Hall, Philadelphia, U.S., May 2015.jpg | Pbjamesphoto | CC BY-SA 4.0 | 2015 |
 | ph_ch_then | File:Carpenter's Hall, Phil (NYPL NYPG94-F149-419968).jpg | New York Public Library (scan) | Public domain | undated |
+
+### Reno and Tahoe swap, Ebenezer, Sun Studio (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| re_dp_now | https://commons.wikimedia.org/wiki/File:SP_Railroad_Depot.jpg | Jon Roanhaus | CC BY-SA 3.0 | 2014 |
+| re_dp_then | https://commons.wikimedia.org/wiki/File:Reno,_Nevada,_railroad_station,_1931.jpg | Relative of John Atherton | CC BY-SA 2.0 | 1931 |
+| ti_cv_now | https://commons.wikimedia.org/wiki/File:Caverock.JPG | Davemeistermoab | CC BY-SA 4.0 | 2008 |
+| ti_cv_then | https://commons.wikimedia.org/wiki/File:Cave_Rock,_Eastern_shore_of_Lake_Tahoe,_by_Thomas_Houseworth_&_Co..jpg | Thomas Houseworth & Co. | Public domain | c. 1870 |
+| ta_gt_then | https://commons.wikimedia.org/wiki/File:Tahoe_City_landing_in_Lake_Tahoe,_ca.1910_(CHS-1846).jpg | C. C. Pierce | Public domain | c. 1910 |
+| ta_cb_now | https://commons.wikimedia.org/wiki/File:Tahoe_City_-_panoramio.jpg | Bohao Zhao | CC BY 3.0 | 2014 |
+| ta_ws_then | https://commons.wikimedia.org/wiki/File:The_Embarcadero,_Tahoe_City,_Lake_Tahoe,_by_Watkins,_Carleton_E.,_1829-1916.jpg | Carleton E. Watkins | Public domain | c. 1875 |
+| ta_dm_then | https://commons.wikimedia.org/wiki/File:The_shore_of_Lake_Tahoe,_near_Tahoe_City,_by_Muybridge,_Eadweard,_1830-1904.png | Eadweard Muybridge | Public domain | c. 1868-75 |
+| ta_wt_then | https://commons.wikimedia.org/wiki/File:Tahoe_City_from_the_Lake,_by_Watkins,_Carleton_E.,_1829-1916.jpg | Carleton E. Watkins | Public domain | c. 1875 |
+| ti_em_then | https://commons.wikimedia.org/wiki/File:Emerald_Bay,_Lake_Tahoe,_steamer_at_pier_LCCN2007660509.tif | Unknown | Public domain | c. 1910 |
+| ti_cr_then | https://www.loc.gov/pictures/item/ca2192.photos.182550p/ | Historic American Buildings Survey (U.S. government) | Public domain | undated survey photo |
+| at_eb_then | https://www.loc.gov/pictures/item/ga0474.photos.057134p/ | Historic American Buildings Survey (U.S. government) | Public domain | 1979 |
+| me_su_then | https://www.loc.gov/pictures/item/2017770211/ | U.S. Farm Security Administration | Public domain | 1937 |

@@ -106,96 +106,93 @@
    }
   },
   {
-   "id": "oldarch",
-   "name": "The Original Arch",
-   "short": "Old Arch",
-   "badge": "Original Arch",
+   "id": "depot",
+   "name": "Reno Train Depot",
+   "short": "Train Depot",
+   "badge": "Train Depot",
    "tag": "Stop 2 of 4",
-   "teaser": "The first arch survived. Find it.",
-   "map": "Original Reno Arch, 1 Lake St, Reno NV",
-   "clue": "The very first arch did not disappear. It was moved, stored, and even starred in a movie. It now stands a few blocks south of the new arch. Find the old sign and see what a 1920s arch looked like.",
-   "safety": "Stay on public sidewalks and cross only at crosswalks. Look from the sidewalk and do not climb on or lean against the sign.",
-   "field": "Field notes pending: the viewing spot and walking route have not been checked on foot yet.",
+   "teaser": "The reason Reno exists: the railroad reached here in 1868.",
+   "map": "Amtrak Station, 280 N Center St, Reno, NV",
+   "clue": "Walk to the downtown Reno train station, the tan Spanish-style building beside the tracks, a few blocks from the arch.",
+   "safety": "Stay on public sidewalks and away from the tracks. Trains pass here, so keep behind the fences and cross streets only at crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Read the marker at the base of this arch. What was the arch built in 1926 to promote?",
+    "prompt": "Look at the building's style and the tracks. In what year did Southern Pacific build the current depot?",
     "options": [
-     "An exposition celebrating the Lincoln and Victory highways",
-     "The opening of the Truckee River dam",
-     "A railroad centennial",
-     "A divorce-ranch contest"
+     "1926",
+     "1868",
+     "1931",
+     "2006"
     ],
     "answer": 0,
-    "hint": "It was built for a 1926 celebration of two famous highways.",
-    "verify": "From an HMDB summary; full wording not seen. Confirm on site."
+    "hint": "The same decade as Reno's first arch.",
+    "verify": "Wikipedia and a historical marker say the current depot was built in 1926. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1926",
-    "label": "Over Virginia Street",
-    "line": "The original steel arch greeted visitors for 37 years.",
+    "yr": "1931",
+    "label": "Passengers then",
+    "line": "Travelers beside the station on September 7, 1931.",
     "link": {
-     "t": "See the 1926 arch at Reno Historical",
-     "u": "https://www.renohistorical.org/items/show/106"
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "re_dp_then",
+     "by": "Relative of John Atherton",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Reno,_Nevada,_railroad_station,_1931.jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "2011",
-    "label": "On Lake Street",
-    "line": "After years in parks and storage, the restored arch got a permanent home on Lake Street in the mid-1990s. Photo taken in 2011.",
+    "yr": "2014",
+    "head": "Today",
+    "label": "The depot today",
+    "line": "The Southern Pacific depot, now used by Amtrak.",
     "ph": {
-     "k": "oldarch_b",
-     "by": "Ken Lund",
-     "lic": "CC BY-SA 2.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Original_Reno_Arch,_Reno,_Nevada_(6320278997).jpg",
+     "k": "re_dp_now",
+     "by": "Jon Roanhaus",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:SP_Railroad_Depot.jpg",
      "note": "resized"
     }
    },
    "story": [
-    "When the larger arch replaced it in 1963, the original was taken down. It bounced between Idlewild Park, other city parks, and storage yards.",
-    "A film crew needed the old sign as a prop for a 1994 movie. The restored arch was such a hit that the city gave it a permanent home on Lake Street.",
-    "It is the same steel sign people walked under in the 1920s, which makes this the closest thing to a time machine on the trail."
+    "Reno began as a railroad town. When the first transcontinental railroad reached the Truckee Meadows in 1868, a depot stood at this site. Myron Lake, who owned a toll bridge nearby, gave the Central Pacific Railroad land for it, and lots in the new town were auctioned on May 9.",
+    "A bigger Depot Hotel replaced the first wooden depot, burned in the Great Fire of 1879, was rebuilt, and burned again in May 1889. After that the railroad built a one-story brick station with a slate roof, and a new depot opened that December.",
+    "The current stucco depot was built by the Southern Pacific in 1926 in a Mission and Spanish Revival style. In the 2007 ReTRAC project the tracks were lowered below ground through downtown. The depot was added to the National Register of Historic Places on November 12, 2012, and Amtrak's California Zephyr stops here."
    ],
-   "fact": "The movie was Cobb, a baseball biopic starring Tommy Lee Jones. The arch was reassembled as a prop.",
-   "disputed": "Sources give the year the arch settled on Lake Street as 1994 or 1995.",
+   "fact": "Reno's street railway ran to the depot from 1908 to 1925.",
+   "disputed": "Wikipedia lists the station as opened in 1868, but the building you see dates from 1926. Amtrak's move into it is dated January 2006 on a marker, and 2007 for the renovation in Wikipedia.",
    "claims": [
     {
-     "t": "The original arch was used as a movie prop in 1994.",
+     "t": "A depot has stood on this spot since 1868.",
      "a": 0,
-     "why": "Travel Nevada and Governing both report this."
+     "why": "Wikipedia and a historical marker: the first depot arrived with the railroad in 1868."
     },
     {
-     "t": "The original arch has always stood on Lake Street.",
+     "t": "The train tracks still run at street level through downtown Reno.",
      "a": 2,
-     "why": "It stood over Virginia Street until 1963 and then moved several times."
+     "why": "They were lowered below ground in the 2007 ReTRAC project."
     }
    ],
    "sources": [
     {
-     "t": "KUNR: The evolution of the Reno Arch",
-     "u": "https://www.kunr.org/post/evolution-famous-reno-arch"
+     "t": "Wikipedia: Reno station",
+     "u": "https://en.wikipedia.org/wiki/Reno_station"
     },
     {
-     "t": "Governing: Reno's Sign of the Times",
-     "u": "https://www.governing.com/topics/urban/gov-last-look-october.html"
-    },
-    {
-     "t": "Travel Nevada: Reno Arch",
-     "u": "https://travelnevada.com/historical-interests/reno-arch/"
-    },
-    {
-     "t": "Reno Historical: the arch",
-     "u": "https://www.renohistorical.org/items/show/106"
-    },
-    {
-     "t": "UNLV Northern Nevada Neon: old arch record",
-     "u": "https://special.library.unlv.edu/node/547537"
+     "t": "Historical Marker Database: Reno depots",
+     "u": "https://www.hmdb.org/m.asp?m=167822"
     }
    ],
    "card": {
-    "a": "1926",
-    "b": "1990s",
-    "la": "Over Virginia Street",
-    "lb": "Restored on Lake Street"
+    "a": "1868",
+    "b": "1926",
+    "la": "First depot",
+    "lb": "Current depot built"
    }
   },
   {
@@ -415,10 +412,6 @@
    "arch_now",
    "50% 28%"
   ],
-  "oldarch": [
-   "oldarch_b",
-   "50% 40%"
-  ],
   "bridge": [
    "bridge_1910",
    "55% 70%"
@@ -426,6 +419,10 @@
   "park": [
    "park_a",
    "50% 62%"
+  ],
+  "depot": [
+   "re_dp_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",

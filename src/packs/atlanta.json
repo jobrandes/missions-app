@@ -76,12 +76,20 @@
     "verify": "Wikipedia says the church is in the Martin Luther King Jr. National Historical Park. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1922",
-    "label": "Church dedicated",
-    "line": "The historic building was dedicated in 1922.",
+    "yr": "1979",
+    "label": "The sanctuary then",
+    "line": "The church interior in 1979, looking toward the pulpit and organ.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "at_eb_then",
+     "by": "Historic American Buildings Survey (U.S. government)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://www.loc.gov/pictures/item/ga0474.photos.057134p/",
+     "note": "resized"
     }
    },
    "now": {

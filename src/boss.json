@@ -115,15 +115,15 @@
    "why": "Fannette Island sits in Emerald Bay."
   },
   {
-   "q": "In what year did the Sand Harbor park have its grand opening?",
+   "q": "In which year did the first Cave Rock highway tunnel open?",
    "o": [
-    "1892",
-    "1958",
-    "1971",
+    "1905",
+    "1931",
+    "1957",
     "1994"
    ],
-   "a": 2,
-   "why": "Lake Tahoe Nevada State Park held its grand opening in 1971."
+   "a": 1,
+   "why": "The first tunnel opened in 1931."
   },
   {
    "q": "Camp Richardson is named after whom?",
@@ -139,15 +139,15 @@
  ],
  "tahoe": [
   {
-   "q": "Which river leaves Lake Tahoe at Fanny Bridge?",
+   "q": "What was built to carry guests to the Tahoe Tavern by 1902?",
    "o": [
-    "Carson River",
-    "Truckee River",
-    "Walker River",
-    "American River"
+    "A cable car line",
+    "A monorail",
+    "A narrow gauge railway from Truckee",
+    "A streetcar line"
    ],
-   "a": 1,
-   "why": "The Truckee River is the lake's only outlet."
+   "a": 2,
+   "why": "A narrow gauge railway ran 15 miles from Truckee to a pier at Tahoe City."
   },
   {
    "q": "In what year was the present concrete Lake Tahoe Dam finished?",

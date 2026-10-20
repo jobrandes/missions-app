@@ -76,12 +76,20 @@
     "verify": "Sun Studio is at 706 Union Avenue. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1950",
-    "label": "Opened",
-    "line": "Sam Phillips opened the studio in 1950.",
+    "yr": "1937",
+    "label": "Union Avenue then",
+    "line": "Union Avenue in June 1937, thirteen years before Sun Studio opened on this street.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "me_su_then",
+     "by": "U.S. Farm Security Administration",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://www.loc.gov/pictures/item/2017770211/",
+     "note": "resized"
     }
    },
    "now": {

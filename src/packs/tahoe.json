@@ -5,77 +5,93 @@
  "initials": "TC",
  "stops": [
   {
-   "id": "fanny",
-   "name": "Fanny Bridge",
-   "short": "Fanny Bridge",
-   "badge": "Fanny Bridge",
+   "id": "commons",
+   "name": "Commons Beach",
+   "short": "Commons Beach",
+   "badge": "Commons Beach",
    "tag": "Stop 1 of 4",
-   "teaser": "Where the Truckee River leaves Lake Tahoe.",
-   "map": "Fanny Bridge, Tahoe City, CA",
-   "clue": "Find the bridge where Highway 89 crosses the water leaving Lake Tahoe. People have lined up along its rail for generations to look down at the fish.",
-   "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
-   "field": "Field notes pending: sidewalks and crossings near the bridge have not been checked on foot yet.",
+   "teaser": "The pier where a lumber baron's railroad met the lake.",
+   "map": "Commons Beach Park, 400 North Lake Blvd, Tahoe City, CA",
+   "clue": "Walk to the lakefront park in Tahoe City. Look for the historical markers near the bike path and the old pier area.",
+   "safety": "Tahoe City sidewalks and North Lake Boulevard are busy. Cross only at marked crossings. Keep off the water's edge when waves or ice are present, and watch for bikes on the path.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Look at the river under the new bridge. How many support piers stand in the water?",
+    "prompt": "Read the Trains and Tourists marker. What kind of railway ran from Truckee to the pier at Tahoe City by 1902?",
     "options": [
-     "One",
-     "Two",
-     "Four",
-     "None"
+     "Cable car",
+     "Monorail",
+     "Streetcar",
+     "Narrow gauge"
     ],
     "answer": 3,
-    "hint": "The new bridge was built to cross in one span.",
-    "verify": "From Placer County's reopening notice (single span, no piers in the river). Confirm on site."
+    "hint": "Look for the word gauge on the sign.",
+    "verify": "From a historical marker's text. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "Before 2025",
-    "label": "The old Fanny Bridge",
-    "line": "The old bridge was more than a century old. It closed to traffic on August 11, 2025, and was replaced. No free photo of it has been added yet.",
+    "yr": "1910",
+    "label": "The landing then",
+    "line": "The Tahoe City landing about 1910.",
     "link": {
-     "t": "Look for old Tahoe City photos at the North Lake Tahoe Historical Society",
-     "u": "https://northtahoemuseums.org/"
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ta_gt_then",
+     "by": "C. C. Pierce",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tahoe_City_landing_in_Lake_Tahoe,_ca.1910_(CHS-1846).jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "2026",
+    "yr": "2014",
     "head": "Today",
-    "label": "The new Fanny Bridge",
-    "line": "A single-span bridge that looks like the old one but has no piers in the river. It reopened to traffic on February 10, 2026, with sidewalks and bike lanes on both sides. No free photo yet."
+    "label": "The waterfront today",
+    "line": "The Tahoe City waterfront, with its marina and pier.",
+    "ph": {
+     "k": "ta_cb_now",
+     "by": "Bohao Zhao",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tahoe_City_-_panoramio.jpg",
+     "note": "resized"
+    }
    },
    "story": [
-    "Fanny Bridge crosses the Truckee River right where it leaves Lake Tahoe. The county calls it the lake's only outlet, so every drop that flows out passes under it.",
-    "The old bridge was more than a century old. A $10.6 million replacement, a single span with no piers in the river, opened on February 10, 2026, after a full closure that began August 11, 2025.",
-    "A historical marker in Tahoe City tells two stories about the name. Read both and decide which one you believe."
+    "After the Comstock mines declined in the 1890s, lumber baron Duane L. Bliss turned from timber to tourism. He took his Glenbrook operation apart and shipped its buildings across the lake by barge. At Tahoe City he built a railroad line to the pier at Commons Beach, began the grand Tahoe Tavern hotel and built the two-story Tahoe Mercantile on the pier.",
+    "He formed the Lake Tahoe Railway and Transportation Company. By 1902 passenger cars ran along 15 miles of narrow gauge track from Truckee to a trestle pier at Tahoe City. About 25 years later the Linnard Steamship Company and Southern Pacific replaced it with standard gauge track, and Snowball Specials carried visitors to winter sports. During World War II the tracks were taken up and the rails recycled.",
+    "Not everyone liked it. Many people opposed the use of public lands, and lumberman Walter Bickford won a lawsuit against Bliss, but it did not stop the development. Bliss died in 1907 and his son William took over. A mysterious fire in 1937 destroyed the Mercantile, the post office and the Cedar Log Saloon. The Tahoe Tavern was torn down in 1964."
    ],
-   "fact": "The Truckee River starts here. It carries Lake Tahoe's water over the Sierra and on toward Reno.",
-   "disputed": "One columnist wrote that a road crew foreman named the bridge in 1928 after his maiden aunt, Fanny McGillicuddy Wilkerson. The marker also records a folk story: people leaned over the rail to watch rainbow trout at the outlet. Neither has been proven.",
+   "fact": "Snowball Specials carried winter sports fans on this railway.",
+   "disputed": "The marker says the standard gauge change came about 25 years after 1902, so the exact year is not given.",
    "claims": [
     {
-     "t": "The new Fanny Bridge has no piers standing in the river.",
+     "t": "A narrow gauge railway reached the Tahoe City pier by 1902.",
      "a": 0,
-     "why": "Placer County describes it as a single-span bridge with no piers in the river."
+     "why": "A historical marker says passenger cars ran 15 miles from Truckee by 1902."
     },
     {
-     "t": "Fanny Bridge was named after a real woman, Fanny McGillicuddy Wilkerson.",
-     "a": 1,
-     "why": "One columnist told that story, and the marker also records a trout-watching story. It is not proven either way."
+     "t": "The Truckee-to-Tahoe City railway still runs today.",
+     "a": 2,
+     "why": "The tracks were dismantled during World War II."
     }
    ],
    "sources": [
     {
-     "t": "Placer County: Fanny Bridge reopens",
-     "u": "https://www.placer.ca.gov/10691/Fanny-Bridge-Reopens"
+     "t": "Historical Marker Database: Trains and Tourists",
+     "u": "https://www.hmdb.org/m.asp?m=112972"
     },
     {
-     "t": "HMDB: Roads and Bridges marker, Tahoe City",
-     "u": "https://www.hmdb.org/m.asp?m=112967"
+     "t": "Historical Marker Database: Development and Conflict",
+     "u": "https://www.hmdb.org/m.asp?m=112973"
     }
    ],
    "card": {
-    "a": "2025",
-    "b": "2026",
-    "la": "Old bridge closes",
-    "lb": "New bridge opens"
+    "a": "1902",
+    "b": "1964",
+    "la": "Railway to the pier",
+    "lb": "Tahoe Tavern torn down"
    }
   },
   {
@@ -102,12 +118,20 @@
     "verify": "Wikipedia lists a gated spillway with 17 bays. Count on site before shipping."
    },
    "then": {
-    "yr": "1870 and 1913",
-    "label": "The first outlet dam",
-    "line": "A small dam of timber and rock went up here in 1870. The present concrete dam was finished in 1913. No free photo of either has been added yet.",
+    "yr": "1875",
+    "label": "The wharf then",
+    "line": "A stereoview of the Tahoe City wharf, about 1875, near the lake's outlet.",
     "link": {
      "t": "Look for historic photos at the North Lake Tahoe Historical Society",
      "u": "https://northtahoemuseums.org/"
+    },
+    "ph": {
+     "k": "ta_ws_then",
+     "by": "Carleton E. Watkins",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Embarcadero,_Tahoe_City,_Lake_Tahoe,_by_Watkins,_Carleton_E.,_1829-1916.jpg",
+     "note": "resized, cropped to one frame of a stereoview"
     }
    },
    "now": {
@@ -184,12 +208,20 @@
     "verify": "HMDB lists California Registered Historical Landmark No. 797 at the flagpole. Confirm on site."
    },
    "then": {
-    "yr": "1910",
-    "label": "The first gatekeeper's cabin",
-    "line": "A cabin was built in 1910 to house the gatekeeper. The original burned down in 1978. No free photo of it has been added yet.",
+    "yr": "1870",
+    "label": "The shore then",
+    "line": "A stereoview of the lake shore near Tahoe City, about 1870.",
     "link": {
      "t": "Look for old photos at the North Lake Tahoe Historical Society",
      "u": "https://northtahoemuseums.org/"
+    },
+    "ph": {
+     "k": "ta_dm_then",
+     "by": "Eadweard Muybridge",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_shore_of_Lake_Tahoe,_near_Tahoe_City,_by_Muybridge,_Eadweard,_1830-1904.png",
+     "note": "resized, cropped to one frame of a stereoview"
     }
    },
    "now": {
@@ -265,12 +297,20 @@
     "verify": "Built 1908 per Wikipedia and Tahoe Magazine. Not yet confirmed that a sign shows the year. Replace with something visible if not."
    },
    "then": {
-    "yr": "1908",
-    "label": "A wedding present",
-    "line": "Robert Montgomery Watson built the cabin in 1908 as a wedding gift for his son Robert and his bride, Stella Tong. No free photo from that time has been added yet.",
+    "yr": "1875",
+    "label": "Tahoe City then",
+    "line": "A stereoview of Tahoe City from the lake, about 1875, three decades before the cabin was built.",
     "link": {
      "t": "Look for old photos at the North Lake Tahoe Historical Society",
      "u": "https://northtahoemuseums.org/"
+    },
+    "ph": {
+     "k": "ta_wt_then",
+     "by": "Carleton E. Watkins",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tahoe_City_from_the_Lake,_by_Watkins,_Carleton_E.,_1829-1916.jpg",
+     "note": "resized, cropped to one frame of a stereoview"
     }
    },
    "now": {
@@ -365,6 +405,10 @@
   "watson": [
    "tahoe_watson_now",
    "55% 55%"
+  ],
+  "commons": [
+   "ta_cb_now",
+   "50% 45%"
   ]
  },
  "level": "Hidden Gems",

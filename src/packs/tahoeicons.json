@@ -28,12 +28,20 @@
     "verify": "Wikipedia: Fannette Island is the only island in Lake Tahoe. Count on site."
    },
    "then": {
-    "yr": "1929",
-    "label": "Before the mansion",
-    "line": "Vikingsholm was built in 1929. The bay itself has been a landmark far longer. No free historic photo has been added yet.",
+    "yr": "1910",
+    "label": "The bay then",
+    "line": "A steamer at the pier in Emerald Bay, about 1910.",
     "link": {
      "t": "Look for historic photos at the Lake Tahoe Historical Society",
      "u": "https://www.laketahoemuseum.org/"
+    },
+    "ph": {
+     "k": "ti_em_then",
+     "by": "Unknown",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Emerald_Bay,_Lake_Tahoe,_steamer_at_pier_LCCN2007660509.tif",
+     "note": "resized"
     }
    },
    "now": {
@@ -91,85 +99,93 @@
    }
   },
   {
-   "id": "sandharbor",
-   "name": "Sand Harbor",
-   "short": "Sand Harbor",
-   "badge": "Sand Harbor",
+   "id": "caverock",
+   "name": "Cave Rock",
+   "short": "Cave Rock",
+   "badge": "Cave Rock",
    "tag": "Stop 2 of 4",
-   "teaser": "Giant smooth boulders and clear water on the east shore.",
-   "map": "Sand Harbor, Lake Tahoe Nevada State Park, NV",
-   "clue": "Head to the Nevada side of the lake, on the east shore along Highway 28. A state park has sandy coves, huge smooth boulders and very clear water.",
-   "safety": "The water is cold even in summer, and the boulders are slippery. Do not climb or jump from them. The parking lot and Highway 28 are busy, so watch for cars and bikes, and follow the park rules and signs.",
+   "teaser": "A sacred rock with a highway tunnel drilled through it.",
+   "map": "Cave Rock Lake Tahoe Nevada State Park, US-50, NV",
+   "clue": "Drive to the Nevada side of the lake on Highway 50 and find the big volcanic rock that the road goes through, near the boat launch.",
+   "safety": "Park only at the boat launch lot and keep off Highway 50, which has tunnels and narrow shoulders. Do not climb the rock. Climbing is banned, and the Washoe consider it sacred.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "Stand on the beach and face the water. Which direction are you looking?",
+    "prompt": "Look at how Highway 50 gets past the rock. What does it do?",
     "options": [
-     "North",
-     "South",
-     "East",
-     "West"
+     "Goes over the top",
+     "Goes through tunnels",
+     "Crosses on a ferry",
+     "Hangs on a bridge above the water"
     ],
-    "answer": 3,
-    "hint": "Sand Harbor is on the lake's east shore. Use your phone's compass.",
-    "verify": "Sand Harbor is on the east shore, so facing the lake means facing west. Confirm with a compass on site."
+    "answer": 1,
+    "hint": "Look for the dark openings in the rock face.",
+    "verify": "The state park and Wikipedia both say US 50 passes through tunnels. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1892",
-    "label": "The Hobart summer resort",
-    "line": "In 1892 Walter Scott Hobart Jr. built a summer resort here. No free historic photo has been added yet.",
+    "yr": "1870",
+    "label": "The rock then",
+    "line": "Cave Rock in a photograph from about 1870, before any tunnel.",
     "link": {
-     "t": "Look for historic photos at the North Lake Tahoe Historical Society",
-     "u": "https://northtahoemuseums.org/"
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ti_cv_then",
+     "by": "Thomas Houseworth & Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cave_Rock,_Eastern_shore_of_Lake_Tahoe,_by_Thomas_Houseworth_&_Co..jpg",
+     "note": "resized, cropped to one frame of a stereoview"
     }
    },
    "now": {
-    "yr": "2022",
+    "yr": "2008",
     "head": "Today",
-    "label": "The boulders today",
-    "line": "Boulders and clear water at Sand Harbor. Photo taken on May 14, 2022.",
+    "label": "The rock today",
+    "line": "Highway 50 passes through the rock in a tunnel.",
     "ph": {
-     "k": "ti_sh_now",
-     "by": "Blake Everett Carroll",
+     "k": "ti_cv_now",
+     "by": "Davemeistermoab",
      "lic": "CC BY-SA 4.0",
      "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Sand_Harbor,_Lake_Tahoe,_Nevada,_20220514,_06.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:Caverock.JPG",
      "note": "resized"
     }
    },
    "story": [
-    "The Washoe people spent summers here fishing, hunting and gathering long before Europeans reached the lake in the 1840s. In the 1870s, logs were towed to the harbor and sent by rail to a sawmill in Incline.",
-    "In 1892 Walter Scott Hobart Jr. inherited the family land and built a summer resort. In the early 1930s George Whittell Jr. bought most of the lake's east side, including Sand Harbor, and planned a casino here that was never built.",
-    "In 1958 Whittell agreed to lease part of the beach to the State of Nevada. About 1968 a court action forced him to sell 5,300 acres, which became Lake Tahoe Nevada State Park. The park had its grand opening in 1971."
+    "Cave Rock is sacred to the Washoe people. Wikipedia says tribal leaders were not consulted about the highway tunnels. The old Washoe trail and Johnson's Cut-Off Road went over the rock, while the Lake Tahoe Wagon Road and the Lincoln Highway went around it.",
+    "The first tunnel opened in 1931 and carries traffic through the rock. Construction of the second tunnel began in 1957. The westbound tunnel is 153 feet long and the eastbound one is 410 feet. The tunnels sit at about 6,360 feet above sea level, about 80 feet above the lake.",
+    "In 1967 the Nevada Legislature gave the boat launch and parking area to the state park system. The U.S. Forest Service banned rock climbing equipment on February 9, 1997, and the state says climbing has been prohibited under all circumstances since September 2, 2003."
    ],
-   "fact": "The park says it gets more than one million visitors a year.",
-   "disputed": "We could not confirm from our sources how the boulders formed or when the park's famous summer festival began, so this app does not claim either.",
+   "fact": "The second tunnel cost just over $450,000.",
+   "disputed": "Sources differ on the climbing ban: the state park history says September 2, 2003, and Wikipedia mentions a 2007 federal ruling. Both agree that climbing is not allowed.",
    "claims": [
     {
-     "t": "Sand Harbor became part of a Nevada state park in 1971.",
+     "t": "Cave Rock is a sacred place to the Washoe people.",
      "a": 0,
-     "why": "The Nevada State Parks history says the park had its grand opening in 1971."
+     "why": "Wikipedia: the Washoe Tribe considers Cave Rock sacred."
     },
     {
-     "t": "George Whittell Jr. built a casino at Sand Harbor.",
+     "t": "Visitors may climb Cave Rock if they bring the right gear.",
      "a": 2,
-     "why": "He planned one in the early 1930s. It was never built."
+     "why": "Climbing has been prohibited under all circumstances since 2003."
     }
    ],
    "sources": [
     {
-     "t": "Nevada State Parks: History of Sand Harbor",
-     "u": "https://parks.nv.gov/learn/park-histories/sand-harbor-history"
+     "t": "Wikipedia: Cave Rock Tunnel",
+     "u": "https://en.wikipedia.org/wiki/Cave_Rock_Tunnel"
     },
     {
-     "t": "Wikipedia: Lake Tahoe",
-     "u": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+     "t": "Nevada State Parks: History of Cave Rock",
+     "u": "https://parks.nv.gov/learn/park-histories/cave-rock-history"
     }
    ],
    "card": {
-    "a": "1892",
-    "b": "1971",
-    "la": "Hobart resort",
-    "lb": "Park opens"
+    "a": "1931",
+    "b": "1957",
+    "la": "First tunnel",
+    "lb": "Second tunnel begun"
    }
   },
   {
@@ -286,12 +302,20 @@
     "verify": "Camp Richardson is on the south shore, so facing the lake means facing north. Confirm with a compass on site."
    },
    "then": {
-    "yr": "1921",
-    "label": "The first stage service",
-    "line": "In 1921 Captain Alonzo Richardson started a stage service from Placerville to South Lake Tahoe. No free historic photo has been added yet.",
+    "yr": "Survey photo",
+    "label": "The resort entrance",
+    "line": "A survey photo of the entrance to Camp Richardson Resort and Highway 89.",
     "link": {
      "t": "Look for historic photos at the Lake Tahoe Historical Society",
      "u": "https://www.laketahoemuseum.org/"
+    },
+    "ph": {
+     "k": "ti_cr_then",
+     "by": "Historic American Buildings Survey (U.S. government)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://www.loc.gov/pictures/item/ca2192.photos.182550p/",
+     "note": "resized"
     }
    },
    "now": {
@@ -379,10 +403,6 @@
    "ti_em_now",
    "55% 55%"
   ],
-  "sandharbor": [
-   "ti_sh_now",
-   "50% 50%"
-  ],
   "kingsbeach": [
    "ti_kb_now",
    "50% 60%"
@@ -390,6 +410,10 @@
   "richardson": [
    "ti_cr_now",
    "50% 40%"
+  ],
+  "caverock": [
+   "ti_cv_now",
+   "50% 45%"
   ]
  },
  "level": "Classics",

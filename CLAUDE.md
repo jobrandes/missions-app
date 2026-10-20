@@ -38,23 +38,25 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 - Commit trailers: `Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>` and the session link.
 
 ## Photo pipeline (what works)
+- LoC images: navigate the pane to the cdn.loc.gov URL (it redirects to tile.loc.gov; both need site access), then same-origin fetch of location.href and download via canvas. Commons categories can be listed cross-origin from en.wikipedia with origin=*.
 - Wikimedia/LoC downloads run in the Claude app's built-in browser (Chrome JS from Apple Events is unreliable). Request site access for commons.wikimedia.org, upload.wikimedia.org, en.wikipedia.org, loc.gov.
 - Search the Commons API; filter licenses to Public domain, CC0, CC BY, CC BY-SA; width at least 1000 for "now", at least 600 for old PD.
 - For "then" photos the Commons keyword search is poor. Best method: on an en.wikipedia.org page, call /w/api.php with generator=images (article) or generator=categorymembers (Commons category, from a commons.wikimedia.org page) plus prop=imageinfo&iiurlwidth=960, filter license and date, fetch the thumbnail cross-origin (upload.wikimedia.org allows it), shrink on a canvas to 720 px and trigger an <a download>. Also try LoC HABS/HAER surveys and DPLA postcards.
 - Download: navigate a tab to the upload.wikimedia.org 960px thumbnail, fetch same-origin, save via `<a download>`. Files land in `~/Downloads` as hidden temp files; rename by byte size, then `device_stage_files`, view a contact sheet to confirm each photo matches its stop, then resize and wire in.
 
-## Status (Oct 19, 2026)
-18 towns, 72 stops, 136 photos. 16 stops were swapped Oct 19 for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia State Capitol, Flatiron (Atlanta), Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall.
+## Status (Oct 20, 2026)
+18 towns, 72 stops, 147 photos. **Every stop now has a free-licensed "then" and "now" photo.** Stops were swapped for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia Capitol, Atlanta Flatiron, Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall (Oct 19), then Reno Train Depot (replaced Original Arch), Cave Rock (replaced Sand Harbor) and Commons Beach (replaced Fanny Bridge) (Oct 20).
 - West: Reno, Virginia City, Lake Tahoe (two packs), San Francisco, Los Angeles, Seattle
 - East: Boston, Washington DC, New York, Philadelphia
 - Midwest: Chicago, Detroit, Minneapolis
 - South: New Orleans, Atlanta, Memphis, Savannah
 - "Coming soon": Paris.
+Some "then" photos are looser matches (labelled honestly): Carpenters' Hall (old plans), Pioneer Square (the street), Olvera Street (the old Plaza), Camp Richardson (survey photo), Tahoe stereoviews (Tahoe City, c. 1870s).
 Also done: demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
-Page size is 15.4 MB of the 16 MB Artifact limit; keep photos at 720 px q66 and watch the budget when adding towns.
+
 
 ## Still to do
-1. **Missing "then" photos (blocks going live)**: Ebenezer Baptist (LoC HABS ga0474.photos.057134p identified, not yet wired), Sun Studio (LoC FSA 2017770211, Union Avenue 1937, not yet wired), Reno Old Arch, and 7 Tahoe stops (Fanny Bridge, Lake Tahoe Dam, Gate, Watson Cabin, Emerald Bay, Sand Harbor, Richardson's), plus a "now" for Fanny Bridge. Decision with Jo-Anne pending: swap them too, or ship an honest "no free photo" state.
+1. **Page size**: index.html is 15.7 MB of the 16 MB Artifact limit. Before adding the Southwest, shrink photos (e.g. 640 px, q60) or the Artifact publish will be refused.
 2. **Southwest/Mountain region**: Denver, Santa Fe or Phoenix, 4 stops each. Then maybe Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
 3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
 4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.
