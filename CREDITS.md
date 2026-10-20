@@ -349,3 +349,31 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sl_us_now | https://commons.wikimedia.org/wiki/File:Grand_Hall,_St._Louis_Union_Station,_Market_Street,_St._Louis,_MO.jpg | Warren LeMay | CC BY-SA 2.0 | 2023 |
 | sl_wb_then | https://commons.wikimedia.org/wiki/File:Wainwright_Building,_709_Chestnut_Street._Adler,_Sullivan,_and_Ramsey,_Architects.jpg | Emil Boehl | Public domain | 1907 |
 | sl_wb_now | https://commons.wikimedia.org/wiki/File:Wainwright_building_st_louis_USA.jpg | Unknown author | Public domain | undated |
+
+### Cincinnati, Indianapolis and Buffalo (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| ci_rb_then | https://commons.wikimedia.org/wiki/File:Suspension_Bridge,_Cincinnati,_Ohio_(NYPL_b12647398-62905).tiff | Detroit Publishing Company | Public domain | after 1898 |
+| ci_rb_now | https://commons.wikimedia.org/wiki/File:Cincinnati-roebling-suspension-bridge.jpg | Derek Jensen (Tysto) | Public domain | 2005 |
+| ci_fs_then | https://commons.wikimedia.org/wiki/File:Fountain_Square_and_Tyler-Davidson_Fountain_(NBY_8113).jpg | Unknown author | Public domain | undated |
+| ci_fs_now | https://commons.wikimedia.org/wiki/File:Cincinnati_Tyler_Davidson_Fountain_2.jpg | Niagara66 | CC BY-SA 4.0 | 2011 |
+| ci_mh_then | https://commons.wikimedia.org/wiki/File:Music_Hall,_Cincinnati,_Ohio_(NYPL_b12647398-62900).tiff | Detroit Publishing Company | Public domain | after 1898 |
+| ci_mh_now | https://commons.wikimedia.org/wiki/File:Cincinnati-Music_Hall_(OHPTC).jpg | Ohio Redevelopment Projects - ODSA | CC BY 2.0 | 2013 |
+| ci_ct_then | https://commons.wikimedia.org/wiki/File:Carew_Tower_excavation_1930.jpg | Unknown author | Public domain | 1930 |
+| ci_ct_now | https://commons.wikimedia.org/wiki/File:Carew_Tower_Cincinnati.JPG | Keith Lanser | Public domain | 2007 |
+| in_sm_then | https://commons.wikimedia.org/wiki/File:Monument_Circle,_Indianapolis,_1907.jpg | Detroit Photographic Company | Public domain | about 1907 |
+| in_sm_now | https://commons.wikimedia.org/wiki/File:Soldiers_and_Sailors_Monument_at_Monument_Circle.jpg | vxla | CC BY 2.0 | 2009 |
+| in_sh_then | https://commons.wikimedia.org/wiki/File:Indiana_State_House_-_DPLA_-_7009868dee11b5c8ae1e048ec16a3103.jpg | Unknown author (via DPLA) | Public domain | 1901 |
+| in_sh_now | https://commons.wikimedia.org/wiki/File:StateCapitolIndiana.jpg | Daniel Schwen (derivative: Massimo Catarinella) | CC BY-SA 3.0 | 2008 |
+| in_us_then | https://commons.wikimedia.org/wiki/File:August_1970_GENERAL_VIEW_OF_BUILDING_FROM_NORTHEAST_-_Union_Station,_Jackson_Place_and_Illinois_Street,_Indianapolis,_Marion_County,_IN_HABS_IND,49-IND,20-3.tif | Jack E. Boucher (HABS, Library of Congress) | Public domain | 1970 |
+| in_us_now | https://commons.wikimedia.org/wiki/File:Head_House,_Indianapolis_Union_Station,_Louisiana_Street_and_Illinois_Street,_Indianapolis,_IN.jpg | Warren LeMay | CC BY-SA 2.0 | 2024 |
+| in_wm_then | https://commons.wikimedia.org/wiki/File:Indiana_World_War_Memorial,_Indianapolis,_Indiana_(63612).jpg | Tichnor Brothers | Public domain | 1930s to 1940s |
+| in_wm_now | https://commons.wikimedia.org/wiki/File:Indiana_World_War_Memorial.jpg | Daniel Schwen | CC BY-SA 4.0 | 2008 |
+| bf_ch_then | https://commons.wikimedia.org/wiki/File:Buffalo_City_Hall_-_Judges_and_Police_Executives_Conference.jpg | Unknown author | Public domain | about 1937 |
+| bf_ch_now | https://commons.wikimedia.org/wiki/File:Buffalo_December_2024_47_(Buffalo_City_Hall).jpg | Michael Barera | CC BY-SA 4.0 | 2024 |
+| bf_es_then | https://commons.wikimedia.org/wiki/File:Ellicott_Square_Building,_Buffalo,_N._Y_(NYPL_b12647398-62751).tiff | Detroit Publishing Company | Public domain | after 1898 |
+| bf_es_now | https://commons.wikimedia.org/wiki/File:Ellicott_Square_Building.JPG | TonyTheTiger | CC BY-SA 3.0 | 2008 |
+| bf_po_then | https://commons.wikimedia.org/wiki/File:Old_Post_Office_Building_Buffalo.jpg | Detroit Publishing Company | Public domain | 1900 to 1906 |
+| bf_po_now | https://commons.wikimedia.org/wiki/File:Old_Post_Office_Buffalo_NY_Full_View_Dec_09.JPG | Pubdog | Public domain | 2009 |
+| bf_hm_then | https://commons.wikimedia.org/wiki/File:Pan-American_Exposition_-_New_York_State_Building.jpg | C. D. Arnold | Public domain | 1901 |
+| bf_hm_now | https://commons.wikimedia.org/wiki/File:Buffalo_and_Erie_County_Historical_Society.jpg | Dave Pape | Public domain | 2006 |

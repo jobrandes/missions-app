@@ -1,0 +1,417 @@
+{
+ "id": "cincinnati",
+ "name": "Cincinnati",
+ "explorer": "Queen City Explorer",
+ "initials": "CIN",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Cincinnati Scholar"
+  ],
+  [
+   600,
+   "Cincinnati Historian"
+  ]
+ ],
+ "heroAlt": "The Roebling Suspension Bridge at night in Cincinnati",
+ "heroLi": "<li>Header: Derek Jensen (Tysto) · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Cincinnati-roebling-suspension-bridge.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Derek Jensen (Tysto) · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Cincinnati-roebling-suspension-bridge.jpg\">Source</a>",
+ "mission": "Find four landmarks around Cincinnati. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Cincinnati is waiting.",
+ "safetyNote": "<li>Downtown Cincinnati has busy streets, streetcar tracks and a riverfront with steep drops. Use crosswalks, watch for the streetcar, and stay on the paths by the river.</li>",
+ "badgeMap": {
+  "bridge": [
+   "ci_rb_now",
+   "50% 45%"
+  ],
+  "fountain": [
+   "ci_fs_now",
+   "50% 45%"
+  ],
+  "music": [
+   "ci_mh_now",
+   "50% 45%"
+  ],
+  "carew": [
+   "ci_ct_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "bridge",
+   "name": "Roebling Suspension Bridge",
+   "short": "Roebling Bridge",
+   "badge": "Roebling Bridge",
+   "tag": "Stop 1 of 4",
+   "teaser": "A bridge that was the longest in the world, built by the man who later did Brooklyn.",
+   "map": "John A. Roebling Suspension Bridge, Cincinnati, OH",
+   "clue": "Go to the Ohio River waterfront in downtown Cincinnati. Look for the long suspension bridge with two tall stone towers and cables that swoop down to the deck.",
+   "safety": "Stay on the waterfront paths and keep back from the edge of the river. Walk on the bridge's sidewalk only, and stay out of the traffic lanes.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "When the bridge opened in 1867, what record did it hold?",
+    "options": [
+     "Tallest bridge in America",
+     "First bridge ever built over a river",
+     "Widest bridge in Ohio",
+     "Longest suspension bridge in the world"
+    ],
+    "answer": 3,
+    "hint": "The main span was 1,057 feet.",
+    "verify": "Wikipedia says that when it opened on January 1, 1867, it was the longest suspension bridge in the world. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The bridge then",
+    "line": "A colorized postcard from after 1898, looking across the Ohio River at the stone towers and cables.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ci_rb_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Suspension_Bridge,_Cincinnati,_Ohio_(NYPL_b12647398-62905).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2005",
+    "head": "Today",
+    "label": "The bridge today",
+    "line": "The bridge lit up at night, with the towers glowing over the river.",
+    "ph": {
+     "k": "ci_rb_now",
+     "by": "Derek Jensen (Tysto)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cincinnati-roebling-suspension-bridge.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The bridge crosses the Ohio River between Cincinnati, Ohio, and Covington, Kentucky. It opened to traffic on January 1, 1867, with a main span of 1,057 feet. That made it the longest suspension bridge in the world at the time.",
+    "John A. Roebling designed it. The planning took years: Steamboat and ferry owners lobbied against the bridge, and the Ohio legislature refused a charter at first. The bridge was built almost entirely in Kentucky, because the state line follows the north bank of the river.",
+    "The tower foundations on the Covington side went smoothly. On the Cincinnati side, Roebling got stuck with water in the pit, so he designed his own wooden pumps from three-inch pine planks and built them in about forty-eight hours. His most famous design, the Brooklyn Bridge, opened in 1883."
+   ],
+   "fact": "He built his own pumps from pine planks.",
+   "disputed": "Many people say the Brooklyn Bridge came first. Wikipedia says the Cincinnati bridge opened in 1867, sixteen years before Brooklyn in 1883.",
+   "claims": [
+    {
+     "t": "The Roebling bridge opened on January 1, 1867.",
+     "a": 0,
+     "why": "Wikipedia: opened to traffic on January 1, 1867."
+    },
+    {
+     "t": "The bridge was finished after the Brooklyn Bridge.",
+     "a": 2,
+     "why": "Brooklyn opened in 1883, sixteen years later."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: John A. Roebling Suspension Bridge",
+     "u": "https://en.wikipedia.org/wiki/John_A._Roebling_Suspension_Bridge"
+    },
+    {
+     "t": "Wikipedia: John A. Roebling",
+     "u": "https://en.wikipedia.org/wiki/John_A._Roebling"
+    }
+   ],
+   "card": {
+    "a": "1867",
+    "b": "1883",
+    "la": "Cincinnati bridge opens",
+    "lb": "Brooklyn Bridge opens"
+   }
+  },
+  {
+   "id": "fountain",
+   "name": "Tyler Davidson Fountain",
+   "short": "Fountain Square",
+   "badge": "Fountain Square",
+   "tag": "Stop 2 of 4",
+   "teaser": "A bronze fountain with a lady who pours rain from her fingertips.",
+   "map": "Fountain Square, 520 Vine St, Cincinnati, OH",
+   "clue": "Go to Fifth and Vine Streets in downtown Cincinnati. Look for the big bronze fountain on a green granite base, with a tall woman at the top holding her arms out.",
+   "safety": "Fountain Square is a busy plaza. Stay out of the water and off the fountain's base, and use crosswalks at Fifth and Vine.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What do the words on the fountain's base say?",
+    "options": [
+     "To the People of Cincinnati",
+     "Welcome to the Queen City",
+     "Drink and Be Merry",
+     "In Memory of the River"
+    ],
+    "answer": 0,
+    "hint": "The inscription is a gift message, aimed at the whole city.",
+    "verify": "Wikipedia says the inscription on the base reads \"To the People of Cincinnati\". Read it on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Early 1900s",
+    "label": "The fountain then",
+    "line": "A postcard of the fountain in the middle of the street, with horse-era buildings around it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ci_fs_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fountain_Square_and_Tyler-Davidson_Fountain_(NBY_8113).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The fountain today",
+    "line": "The fountain on its plaza, with downtown towers rising behind it.",
+    "ph": {
+     "k": "ci_fs_now",
+     "by": "Niagara66",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cincinnati_Tyler_Davidson_Fountain_2.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Tyler Davidson Fountain, also called The Genius of Water, was dedicated in 1871. It is the centerpiece of Fountain Square, at the corner of Fifth and Vine Streets, and the city's symbol.",
+    "The fountain is 43 feet tall and cast in bronze on a green granite base. The central figure, the Genius of Water, is nine feet high and weighs two tons. She pours water from hundreds of jets pierced in her outstretched fingers. The panels at the bottom show four uses of water: steam, water-power, navigation and the fisheries.",
+    "For more than 130 years it stood in the middle of Fifth Street. In 2006, during a renovation of the square, it was taken away and later put back in a wider space near the north end of the plaza, away from the traffic."
+   ],
+   "fact": "It moved in 2006.",
+   "disputed": "Some people think it has always stood where it does today. Wikipedia says that for more than 130 years it stood in the middle of Fifth Street, and it was moved in the 2006 renovation.",
+   "claims": [
+    {
+     "t": "The fountain was dedicated in 1871.",
+     "a": 0,
+     "why": "Wikipedia: dedicated in 1871."
+    },
+    {
+     "t": "The fountain is made of stone.",
+     "a": 2,
+     "why": "It is cast in bronze, on a granite base."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Tyler Davidson Fountain",
+     "u": "https://en.wikipedia.org/wiki/Tyler_Davidson_Fountain"
+    },
+    {
+     "t": "Wikipedia: Fountain Square (Cincinnati)",
+     "u": "https://en.wikipedia.org/wiki/Fountain_Square_(Cincinnati)"
+    }
+   ],
+   "card": {
+    "a": "1871",
+    "b": "2006",
+    "la": "Dedicated",
+    "lb": "Moved and reinstalled"
+   }
+  },
+  {
+   "id": "music",
+   "name": "Cincinnati Music Hall",
+   "short": "Music Hall",
+   "badge": "Music Hall",
+   "tag": "Stop 3 of 4",
+   "teaser": "A red-brick concert hall that is said to be built on top of a cemetery.",
+   "map": "Music Hall, 1241 Elm St, Cincinnati, OH",
+   "clue": "Go to Elm Street in Over-the-Rhine, across from Washington Park. Look for the huge red-brick building with pointed towers and a big round window.",
+   "safety": "Elm Street has streetcar tracks and traffic. Use crosswalks, check performance times before going in, and be quiet around the doors during shows.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Wikipedia says Music Hall was built over what?",
+    "options": [
+     "A castle",
+     "A pauper's cemetery",
+     "A swamp",
+     "A railroad yard"
+    ],
+    "answer": 1,
+    "hint": "That fact is why it has a reputation as one of the most haunted places in America.",
+    "verify": "Wikipedia says Music Hall was built over a pauper's cemetery. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The hall then",
+    "line": "A postcard of the red-brick hall across the park, with trees in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ci_mh_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Music_Hall,_Cincinnati,_Ohio_(NYPL_b12647398-62900).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The hall today",
+    "line": "The brick facade and towers of the hall seen from Elm Street.",
+    "ph": {
+     "k": "ci_mh_now",
+     "by": "Ohio Redevelopment Projects - ODSA",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cincinnati-Music_Hall_(OHPTC).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Music Hall was completed in 1878. It was designed for two jobs: music in the central auditorium and industrial exhibitions in the side wings. It sits across from Washington Park in Over-the-Rhine.",
+    "The building is in the Venetian Gothic style, and it became a National Historic Landmark in January 1975. It is home to the Cincinnati Symphony Orchestra, the Pops, the Ballet and the Opera.",
+    "Springer Auditorium has a Czechoslovak chandelier that weighs about 1,500 pounds, is 21 feet wide and has 96 candles. After more than a year closed for a $143 million renovation, the hall reopened in 2017."
+   ],
+   "fact": "The chandelier has 96 candles.",
+   "disputed": "Many people think a famous hall like this was built on empty land. Wikipedia says it was built over a pauper's cemetery.",
+   "claims": [
+    {
+     "t": "Music Hall was completed in 1878.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1878."
+    },
+    {
+     "t": "Music Hall is built in a plain, modern style.",
+     "a": 2,
+     "why": "Wikipedia calls it Venetian Gothic."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cincinnati Music Hall",
+     "u": "https://en.wikipedia.org/wiki/Cincinnati_Music_Hall"
+    },
+    {
+     "t": "Wikipedia: Over-the-Rhine",
+     "u": "https://en.wikipedia.org/wiki/Over-the-Rhine"
+    }
+   ],
+   "card": {
+    "a": "1878",
+    "b": "2017",
+    "la": "Completed",
+    "lb": "Reopened after renovation"
+   }
+  },
+  {
+   "id": "carew",
+   "name": "Carew Tower",
+   "short": "Carew Tower",
+   "badge": "Carew Tower",
+   "tag": "Stop 4 of 4",
+   "teaser": "A 49-story Art Deco tower that was the tallest in the city for over 80 years.",
+   "map": "Carew Tower, 441 Vine St, Cincinnati, OH",
+   "clue": "Go to Fifth and Vine, right beside Fountain Square. Look up for the tall stepped tower with straight vertical lines and a pointed top.",
+   "safety": "The sidewalks around the tower are busy. Use crosswalks, check hours if you want to go into the arcade, and look up only when you are standing still.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many stories does the Carew Tower have?",
+    "options": [
+     "72",
+     "100",
+     "29",
+     "49"
+    ],
+    "answer": 3,
+    "hint": "It is a little less than fifty.",
+    "verify": "Wikipedia calls it a 49-story Art Deco skyscraper. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1930",
+    "label": "The tower then",
+    "line": "A newspaper photo from January 1930 looking across the excavation for the tower's foundation.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ci_ct_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Carew_Tower_excavation_1930.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The finished tower and its neighbor rising over the downtown buildings.",
+    "ph": {
+     "k": "ci_ct_now",
+     "by": "Keith Lanser",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Carew_Tower_Cincinnati.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Carew Tower is a 49-story, 574-foot Art Deco skyscraper in downtown Cincinnati. It was the tallest building in the city from 1930 until 2011.",
+    "Industrialist John J. Emery wanted a \"city within a city\" with offices, shops, a hotel and a parking garage. It was announced shortly before the Great Depression began, but work kept going. The office tower topped out in July 1930, and the entire complex was done by early 1931 at a cost of $33 million.",
+    "The hotel opened as the St. Nicholas Plaza in 1931. The tower was named a National Historic Landmark in 1994. The National Park Service called it one of the finest examples of skyscraper modernism in America."
+   ],
+   "fact": "It was built during the Great Depression.",
+   "disputed": "Many people think the tower was built after the Depression. Wikipedia says work continued through the poor economy, with the tower topped out in July 1930.",
+   "claims": [
+    {
+     "t": "The Carew Tower was the tallest building in Cincinnati until 2011.",
+     "a": 0,
+     "why": "Wikipedia: tallest from 1930 until 2011."
+    },
+    {
+     "t": "The Carew Tower has 29 floors.",
+     "a": 2,
+     "why": "It has 49 stories."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Carew Tower",
+     "u": "https://en.wikipedia.org/wiki/Carew_Tower"
+    },
+    {
+     "t": "Wikipedia: Art Deco",
+     "u": "https://en.wikipedia.org/wiki/Art_Deco"
+    }
+   ],
+   "card": {
+    "a": "1930",
+    "b": "1994",
+    "la": "Topped out",
+    "lb": "National Historic Landmark"
+   }
+  }
+ ],
+ "heroKey": "ci_rb_now"
+}

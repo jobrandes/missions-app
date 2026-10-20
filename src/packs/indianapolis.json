@@ -1,0 +1,417 @@
+{
+ "id": "indianapolis",
+ "name": "Indianapolis",
+ "explorer": "Hoosier Explorer",
+ "initials": "IND",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Circle Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Indy Scholar"
+  ],
+  [
+   600,
+   "Indy Historian"
+  ]
+ ],
+ "heroAlt": "The Indiana Statehouse in Indianapolis",
+ "heroLi": "<li>Header: Daniel Schwen (derivative: Massimo Catarinella) · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:StateCapitolIndiana.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Daniel Schwen (derivative: Massimo Catarinella) · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:StateCapitolIndiana.jpg\">Source</a>",
+ "mission": "Find four landmarks around Indianapolis. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Indianapolis is waiting.",
+ "safetyNote": "<li>Downtown Indianapolis has busy streets, rail lines and a lot of events. Use crosswalks, watch for traffic around the circle, and stay out of the fountains.</li>",
+ "badgeMap": {
+  "monument": [
+   "in_sm_now",
+   "50% 45%"
+  ],
+  "statehouse": [
+   "in_sh_now",
+   "50% 45%"
+  ],
+  "union": [
+   "in_us_now",
+   "50% 45%"
+  ],
+  "memorial": [
+   "in_wm_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Midwest",
+ "stops": [
+  {
+   "id": "monument",
+   "name": "Soldiers' and Sailors' Monument",
+   "short": "Monument Circle",
+   "badge": "Monument Circle",
+   "tag": "Stop 1 of 4",
+   "teaser": "A giant limestone monument in the middle of a traffic circle.",
+   "map": "Soldiers' and Sailors' Monument, Monument Circle, Indianapolis, IN",
+   "clue": "Go to the center of downtown Indianapolis. Look for the huge limestone obelisk rising from a circular, brick-paved street.",
+   "safety": "Cars circle the monument, so stay on the sidewalks and use crosswalks. The pools and fountains are wet and slippery, so keep out.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What do the words above the doors say about Indiana's soldiers?",
+    "options": [
+     "In God We Trust",
+     "Forever Indiana",
+     "To Indiana's Silent Victors",
+     "Remember the Alamo"
+    ],
+    "answer": 2,
+    "hint": "The words honor people who did not make speeches or pose for statues.",
+    "verify": "Wikipedia says the inscription reads \"To Indiana's Silent Victors\". Read it on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1907",
+    "label": "The monument then",
+    "line": "A black-and-white view of Monument Circle about 1907, with the tall column in the middle.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "in_sm_then",
+     "by": "Detroit Photographic Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Monument_Circle,_Indianapolis,_1907.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The monument today",
+    "line": "The monument lit up at night, with new towers around it.",
+    "ph": {
+     "k": "in_sm_now",
+     "by": "vxla",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Soldiers_and_Sailors_Monument_at_Monument_Circle.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The monument is 284 feet, 6 inches tall and stands on Monument Circle, a circular, brick-paved street. It was built from 1888 to 1901 and dedicated on May 15, 1902. German architect Bruno Schmitz designed it.",
+    "It was meant to honor Hoosiers who were Civil War veterans, but it also honors soldiers from earlier wars. It was the first monument in the United States dedicated to the common soldier. It is built of oolitic limestone from Owen County, Indiana.",
+    "When it was dedicated it cost $598,318. Wikipedia says a similar structure would cost more than $500 million today. It has an observation deck reached by stairs or an elevator."
+   ],
+   "fact": "It was the first in the US for the common soldier.",
+   "disputed": "Many people think a monument is only for famous generals. Wikipedia says this was the first in the United States dedicated to the common soldier.",
+   "claims": [
+    {
+     "t": "The monument was dedicated in 1902.",
+     "a": 0,
+     "why": "Wikipedia: dedicated on May 15, 1902."
+    },
+    {
+     "t": "The monument is made of marble from Italy.",
+     "a": 2,
+     "why": "It is built of oolitic limestone from Owen County, Indiana."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Soldiers' and Sailors' Monument (Indianapolis)",
+     "u": "https://en.wikipedia.org/wiki/Soldiers%27_and_Sailors%27_Monument_(Indianapolis)"
+    },
+    {
+     "t": "Wikipedia: Monument Circle",
+     "u": "https://en.wikipedia.org/wiki/Monument_Circle"
+    }
+   ],
+   "card": {
+    "a": "1888",
+    "b": "1902",
+    "la": "Construction begins",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "statehouse",
+   "name": "Indiana Statehouse",
+   "short": "Statehouse",
+   "badge": "Statehouse",
+   "tag": "Stop 2 of 4",
+   "teaser": "A domed capitol that replaced one copied from the Parthenon.",
+   "map": "Indiana Statehouse, 200 W Washington St, Indianapolis, IN",
+   "clue": "Go to Washington Street, a few blocks west of the monument. Look for the big stone capitol building with a green dome in the middle.",
+   "safety": "Washington Street is busy. Use crosswalks, and remember this is a working government building, so check visiting hours and security rules before going in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The statehouse before this one was inspired by which ancient building?",
+    "options": [
+     "The Colosseum",
+     "The Great Pyramid",
+     "The Pantheon",
+     "The Parthenon"
+    ],
+    "answer": 3,
+    "hint": "It is a famous temple in Athens, Greece.",
+    "verify": "Wikipedia says the earlier building was inspired by the ancient Greek Parthenon. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1901",
+    "label": "The statehouse then",
+    "line": "A framed print marked 1901, showing the capitol with its dome from across the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "in_sh_then",
+     "by": "Unknown author (via DPLA)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Indiana_State_House_-_DPLA_-_7009868dee11b5c8ae1e048ec16a3103.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The statehouse today",
+    "line": "The Statehouse from above, with its green dome and tall columns.",
+    "ph": {
+     "k": "in_sh_now",
+     "by": "Daniel Schwen (derivative: Massimo Catarinella)",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:StateCapitolIndiana.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Indiana Statehouse was built in 1888 and is the fourth building to house state government. The first, in Corydon, still stands as a state historic site.",
+    "In 1824 the whole state government moved to Indianapolis. It took more than a month, and a caravan had to cut a path through the winter forest, carrying the state treasury, library and records. The first meeting of the General Assembly there was in January 1825.",
+    "A later statehouse, designed by Ithiel Town and Alexander Jackson Davis, was inspired by the Parthenon, but with a large central dome. It was condemned in 1877 because of structural defects, and torn down so the current building could take its place."
+   ],
+   "fact": "A caravan hauled the government north.",
+   "disputed": "Many people think the capitol was always in the same place. Wikipedia says the first was in Corydon, and the government moved to Indianapolis in 1824.",
+   "claims": [
+    {
+     "t": "The current Indiana Statehouse was built in 1888.",
+     "a": 0,
+     "why": "Wikipedia: built in 1888."
+    },
+    {
+     "t": "The Statehouse is the first building to hold Indiana's government.",
+     "a": 2,
+     "why": "It is the fourth. The first stands in Corydon."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Indiana Statehouse",
+     "u": "https://en.wikipedia.org/wiki/Indiana_Statehouse"
+    },
+    {
+     "t": "Wikipedia: Corydon Capitol State Historic Site",
+     "u": "https://en.wikipedia.org/wiki/Corydon_Capitol_State_Historic_Site"
+    }
+   ],
+   "card": {
+    "a": "1824",
+    "b": "1888",
+    "la": "Government moves to Indianapolis",
+    "lb": "Current building"
+   }
+  },
+  {
+   "id": "union",
+   "name": "Indianapolis Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 3 of 4",
+   "teaser": "The first union station in the world, with a clock tower and a giant round window.",
+   "map": "Indianapolis Union Station, 39 W Jackson Pl, Indianapolis, IN",
+   "clue": "Go to the south end of downtown, near Illinois Street and Jackson Place. Look for the red-brown station with a tall clock tower and a big round window.",
+   "safety": "Rail tracks and busy streets are close by. Use crosswalks, do not step onto the tracks or platforms, and check hours before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What style is the 1888 station, named after a famous architect?",
+    "options": [
+     "Richardsonian Romanesque",
+     "Greek Revival",
+     "Art Deco",
+     "Modern"
+    ],
+    "answer": 0,
+    "hint": "It is named for Henry Hobson Richardson.",
+    "verify": "Wikipedia says Thomas Rodd's design shows the influence of Henry Hobson Richardson. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1970",
+    "label": "The station then",
+    "line": "A survey photograph from August 1970 looking at the clock tower and arched windows from the northeast.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "in_us_then",
+     "by": "Jack E. Boucher (HABS, Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:August_1970_GENERAL_VIEW_OF_BUILDING_FROM_NORTHEAST_-_Union_Station,_Jackson_Place_and_Illinois_Street,_Indianapolis,_Marion_County,_IN_HABS_IND,49-IND,20-3.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The head house with its clock tower, rose window and fir trees out front.",
+    "ph": {
+     "k": "in_us_now",
+     "by": "Warren LeMay",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Head_House,_Indianapolis_Union_Station,_Louisiana_Street_and_Illinois_Street,_Indianapolis,_IN.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Wikipedia says Indianapolis created the world's first union station in 1848. That means one shared station for several railroads instead of one for each. The station building opened on September 20, 1853.",
+    "The larger station you see today opened in September 1888. Pittsburgh architect Thomas Rodd designed it in the Richardsonian Romanesque style. It is built of granite and brick, trimmed with Hummelstown brownstone, and it has an enormous rose window and a soaring 185-foot clock tower.",
+    "The head house and clock tower of this second station still stand. Amtrak's Cardinal line serves the station today, from a waiting area beneath the train shed."
+   ],
+   "fact": "The tower is 185 feet tall.",
+   "disputed": "Many people think the 1853 building is the one standing. Wikipedia says the larger station replaced it and opened in 1888.",
+   "claims": [
+    {
+     "t": "The current station opened in 1888.",
+     "a": 0,
+     "why": "Wikipedia: opened in September 1888."
+    },
+    {
+     "t": "The station was designed by Louis Sullivan.",
+     "a": 2,
+     "why": "Thomas Rodd of Pittsburgh designed it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Indianapolis Union Station",
+     "u": "https://en.wikipedia.org/wiki/Indianapolis_Union_Station"
+    },
+    {
+     "t": "Wikipedia: Henry Hobson Richardson",
+     "u": "https://en.wikipedia.org/wiki/Henry_Hobson_Richardson"
+    }
+   ],
+   "card": {
+    "a": "1853",
+    "b": "1888",
+    "la": "First station building",
+    "lb": "Current station"
+   }
+  },
+  {
+   "id": "memorial",
+   "name": "Indiana World War Memorial",
+   "short": "War Memorial",
+   "badge": "War Memorial",
+   "tag": "Stop 4 of 4",
+   "teaser": "A giant temple that was copied from a tomb in ancient Turkey.",
+   "map": "Indiana World War Memorial, 431 N Meridian St, Indianapolis, IN",
+   "clue": "Go to the north end of downtown, along Meridian Street. Look for a huge limestone building shaped like a stepped pyramid on top of a temple.",
+   "safety": "Meridian Street is busy. Use crosswalks, stay off the steps if they are wet, and check hours before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The memorial is modeled after the Mausoleum at where?",
+    "options": [
+     "Babylon",
+     "Halicarnassus",
+     "Alexandria",
+     "Rome"
+    ],
+    "answer": 1,
+    "hint": "It is one of the Seven Wonders of the Ancient World.",
+    "verify": "Wikipedia says it is modeled after the Mausoleum of Halicarnassus. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1930s to 1940s",
+    "label": "The memorial then",
+    "line": "A colorful postcard of the memorial's pyramid roof over a stone base.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "in_wm_then",
+     "by": "Tichnor Brothers",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Indiana_World_War_Memorial,_Indianapolis,_Indiana_(63612).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The memorial today",
+    "line": "The memorial's tall stone columns and steps, seen from the corner.",
+    "ph": {
+     "k": "in_wm_now",
+     "by": "Daniel Schwen",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Indiana_World_War_Memorial.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The memorial came from a 1919 attempt by Indianapolis to lure the new American Legion, which was then in New York City, to base its national headquarters in the city.",
+    "The original plaza is five blocks long. The focal point, the Indiana World War Memorial, sits on the fourth block and is modeled after the Mausoleum of Halicarnassus. It houses a military museum and an auditorium.",
+    "In 1994 the plaza became a National Historic Landmark District. In 2016 the district was expanded to include the Soldiers' and Sailors' Monument. Together it covers 24 acres, which Wikipedia says makes it the largest war memorial project in the United States."
+   ],
+   "fact": "It was built to lure the Legion to town.",
+   "disputed": "Many people think the plaza was always a monument. Wikipedia says it started as a plan to attract the American Legion's headquarters.",
+   "claims": [
+    {
+     "t": "The plaza was designated a National Historic Landmark District in 1994.",
+     "a": 0,
+     "why": "Wikipedia: designated on October 11, 1994."
+    },
+    {
+     "t": "The memorial was built to honor Civil War veterans.",
+     "a": 2,
+     "why": "It was built to honor World War I veterans."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Indiana World War Memorial Plaza",
+     "u": "https://en.wikipedia.org/wiki/Indiana_World_War_Memorial_Plaza"
+    },
+    {
+     "t": "Wikipedia: Mausoleum at Halicarnassus",
+     "u": "https://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus"
+    }
+   ],
+   "card": {
+    "a": "1919",
+    "b": "1994",
+    "la": "Plan begins",
+    "lb": "National Historic Landmark District"
+   }
+  }
+ ],
+ "heroKey": "in_sh_now"
+}

@@ -1240,5 +1240,143 @@
    "a": 2,
    "why": "Frank Lloyd Wright said it."
   }
+ ],
+ "cincinnati": [
+  {
+   "q": "What was the Roebling bridge's main span when it opened in 1867?",
+   "o": [
+    "1,595 feet",
+    "1,057 feet",
+    "500 feet",
+    "2,000 feet"
+   ],
+   "a": 1,
+   "why": "Wikipedia says the main span was 1,057 feet."
+  },
+  {
+   "q": "The Tyler Davidson Fountain is also called what?",
+   "o": [
+    "The River Queen",
+    "The Queen City Fountain",
+    "The Silver Rain",
+    "The Genius of Water"
+   ],
+   "a": 3,
+   "why": "It is also called The Genius of Water."
+  },
+  {
+   "q": "Music Hall is in which neighborhood?",
+   "o": [
+    "Mount Adams",
+    "Over-the-Rhine",
+    "Downtown Kentucky",
+    "Roebling Point"
+   ],
+   "a": 1,
+   "why": "It sits in Over-the-Rhine across from Washington Park."
+  },
+  {
+   "q": "How tall is the Carew Tower?",
+   "o": [
+    "200 feet",
+    "1,000 feet",
+    "398 feet",
+    "574 feet"
+   ],
+   "a": 3,
+   "why": "It is 574 feet tall."
+  }
+ ],
+ "indianapolis": [
+  {
+   "q": "Who designed the Soldiers' and Sailors' Monument?",
+   "o": [
+    "Bruno Schmitz",
+    "Thomas Rodd",
+    "Eero Saarinen",
+    "Daniel Burnham"
+   ],
+   "a": 0,
+   "why": "German architect Bruno Schmitz designed it."
+  },
+  {
+   "q": "In what year was the current Indiana Statehouse built?",
+   "o": [
+    "1916",
+    "1902",
+    "1888",
+    "1824"
+   ],
+   "a": 2,
+   "why": "It was built in 1888."
+  },
+  {
+   "q": "Who designed the 1888 Union Station?",
+   "o": [
+    "Thomas Rodd",
+    "Bruno Schmitz",
+    "Louis Sullivan",
+    "George Cary"
+   ],
+   "a": 0,
+   "why": "Thomas Rodd of Pittsburgh designed it."
+  },
+  {
+   "q": "The Indiana World War Memorial Plaza started as a plan to lure which group's headquarters?",
+   "o": [
+    "The Red Cross",
+    "The Olympic Committee",
+    "The American Legion",
+    "The Boy Scouts"
+   ],
+   "a": 2,
+   "why": "It started in 1919 to attract the American Legion."
+  }
+ ],
+ "buffalo": [
+  {
+   "q": "How many stories does Buffalo City Hall have?",
+   "o": [
+    "49",
+    "10",
+    "52",
+    "32"
+   ],
+   "a": 3,
+   "why": "It has 32 stories."
+  },
+  {
+   "q": "Ellicott Square was the world's largest office building by floor area until what year?",
+   "o": [
+    "1975",
+    "1908",
+    "1896",
+    "1931"
+   ],
+   "a": 1,
+   "why": "It held the record until 1908."
+  },
+  {
+   "q": "How tall is the Old Post Office's tower?",
+   "o": [
+    "74 feet",
+    "398 feet",
+    "574 feet",
+    "244 feet"
+   ],
+   "a": 3,
+   "why": "Wikipedia gives 244 feet."
+  },
+  {
+   "q": "The History Museum's building was built for which event?",
+   "o": [
+    "The Olympic Games",
+    "The Pan-American Exposition",
+    "The 1932 Centennial",
+    "The Erie Canal opening"
+   ],
+   "a": 1,
+   "why": "It was the New York State pavilion at the 1901 Pan-American Exposition."
+  }
  ]
 }

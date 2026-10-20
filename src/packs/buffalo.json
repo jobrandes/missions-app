@@ -1,0 +1,417 @@
+{
+ "id": "buffalo",
+ "name": "Buffalo",
+ "explorer": "Good Neighbor Explorer",
+ "initials": "BUF",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Niagara Square Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Buffalo Scholar"
+  ],
+  [
+   600,
+   "Buffalo Historian"
+  ]
+ ],
+ "heroAlt": "The Old Post Office in Buffalo",
+ "heroLi": "<li>Header: Pubdog · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Old_Post_Office_Buffalo_NY_Full_View_Dec_09.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Pubdog · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Old_Post_Office_Buffalo_NY_Full_View_Dec_09.JPG\">Source</a>",
+ "mission": "Find four landmarks around Buffalo. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Buffalo is waiting.",
+ "safetyNote": "<li>Downtown Buffalo has busy streets, lake winds and, in winter, snow and ice. Use crosswalks, dress warmly in cold months, and watch for slippery sidewalks.</li>",
+ "badgeMap": {
+  "cityhall": [
+   "bf_ch_now",
+   "50% 45%"
+  ],
+  "ellicott": [
+   "bf_es_now",
+   "50% 45%"
+  ],
+  "postoffice": [
+   "bf_po_now",
+   "50% 45%"
+  ],
+  "museum": [
+   "bf_hm_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "cityhall",
+   "name": "Buffalo City Hall",
+   "short": "City Hall",
+   "badge": "City Hall",
+   "tag": "Stop 1 of 4",
+   "teaser": "A 32-story Art Deco tower where every window opens inward.",
+   "map": "Buffalo City Hall, 65 Niagara Square, Buffalo, NY",
+   "clue": "Go to Niagara Square in downtown Buffalo. Look for a very tall stone tower with stepped sides and colorful patterns near the top.",
+   "safety": "Niagara Square is a busy traffic circle. Use crosswalks, and check opening hours if you want to visit the lobby, since it is a working government building.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which way do all the windows on City Hall open?",
+    "options": [
+     "They do not open",
+     "Inward",
+     "Outward",
+     "Sideways"
+    ],
+    "answer": 1,
+    "hint": "That means the window washers can stay inside.",
+    "verify": "Wikipedia says all the windows open inward, making window washers unnecessary. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1937",
+    "label": "The tower then",
+    "line": "A floodlit night photo of the tower from about 1937, glowing against the dark.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bf_ch_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Buffalo_City_Hall_-_Judges_and_Police_Executives_Conference.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The stepped tower seen in daylight across the Niagara Square streets.",
+    "ph": {
+     "k": "bf_ch_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Buffalo_December_2024_47_(Buffalo_City_Hall).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Buffalo City Hall is a 32-story Art Deco skyscraper at 65 Niagara Square. It is 398 feet tall and was completed on November 10, 1931. It was dedicated on July 1, 1932, to mark the city's Centennial.",
+    "The building cost $6,851,546.85 including the architect's fees, which made it one of the costliest city halls in the country. It has 1,520 windows on the first 25 floors, and all of them open inward, so there is no need for window washers outside.",
+    "The architects were Dietel, Wade & Jones. The friezes were sculpted by Albert Stewart and carried out by Rene Paul Chambellan. Near the top are polychrome terra cotta chevrons, and the walls are covered in Ohio sandstone and gray Minnesota limestone."
+   ],
+   "fact": "The architect called the style \"Americanesque.\"",
+   "disputed": "Many people think the style is simply Art Deco. Wikipedia says architect John Wade called it \"Americanesque\" and sometimes Babylonian.",
+   "claims": [
+    {
+     "t": "City Hall was completed in 1931.",
+     "a": 0,
+     "why": "Wikipedia: completed November 10, 1931."
+    },
+    {
+     "t": "City Hall's windows open outward.",
+     "a": 2,
+     "why": "All of them open inward."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Buffalo City Hall",
+     "u": "https://en.wikipedia.org/wiki/Buffalo_City_Hall"
+    },
+    {
+     "t": "Wikipedia: Art Deco",
+     "u": "https://en.wikipedia.org/wiki/Art_Deco"
+    }
+   ],
+   "card": {
+    "a": "1931",
+    "b": "1932",
+    "la": "Completed",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "ellicott",
+   "name": "Ellicott Square Building",
+   "short": "Ellicott Square",
+   "badge": "Ellicott Square",
+   "tag": "Stop 2 of 4",
+   "teaser": "Once the largest office building in the world, with a movie theater inside.",
+   "map": "Ellicott Square Building, 295 Main St, Buffalo, NY",
+   "clue": "Go to Main Street in downtown Buffalo. Look for a huge gray-brick building that fills a whole block with rows and rows of windows.",
+   "safety": "Main Street has traffic and light rail. Use crosswalks, and check opening hours before you go into the lobby court.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1896 and 1897, the building held what, believed to be the first of its kind?",
+    "options": [
+     "A train station",
+     "A skating rink",
+     "A dedicated movie theater",
+     "A zoo"
+    ],
+    "answer": 2,
+    "hint": "It showed moving pictures on a Vitascope.",
+    "verify": "Wikipedia says it was the site of the Vitascope Theater, the earliest known dedicated motion picture theater in the world. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The building then",
+    "line": "A colorized postcard of the long gray building, with older brick shops next to it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bf_es_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Ellicott_Square_Building,_Buffalo,_N._Y_(NYPL_b12647398-62751).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The same gray facade seen from above, with newer towers behind.",
+    "ph": {
+     "k": "bf_es_now",
+     "by": "TonyTheTiger",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Ellicott_Square_Building.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Ellicott Square Building was designed by Charles Atwood of D. H. Burnham & Company, and finished in May 1896. It was built in less than a year for $3.5 million.",
+    "It had 10 stories and 447,000 square feet, which made it the largest office building in the world by floor area until 1908. Daniel Burnham's mantra was \"make no little plans.\" The building is named after Joseph Ellicott, who laid out Buffalo.",
+    "Inside is a courtyard with a glass roof and a marble mosaic floor with 23 million pieces of marble, showing sun symbols from civilizations around the world. In 1896 and 1897 the building also housed the Vitascope Theater."
+   ],
+   "fact": "The floor has 23 million pieces.",
+   "disputed": "Many people think a movie theater of this age was in New York or Paris. Wikipedia says the earliest known dedicated motion picture theater in the world was here in Buffalo.",
+   "claims": [
+    {
+     "t": "Ellicott Square was completed in 1896.",
+     "a": 0,
+     "why": "Wikipedia: completed in May 1896."
+    },
+    {
+     "t": "It was the tallest building in the world.",
+     "a": 2,
+     "why": "It was the largest by floor area, not the tallest."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Ellicott Square Building",
+     "u": "https://en.wikipedia.org/wiki/Ellicott_Square_Building"
+    },
+    {
+     "t": "Wikipedia: Joseph Ellicott",
+     "u": "https://en.wikipedia.org/wiki/Joseph_Ellicott"
+    }
+   ],
+   "card": {
+    "a": "1896",
+    "b": "1908",
+    "la": "Completed",
+    "lb": "Overtaken as largest"
+   }
+  },
+  {
+   "id": "postoffice",
+   "name": "Old Post Office",
+   "short": "Old Post Office",
+   "badge": "Old Post Office",
+   "tag": "Stop 3 of 4",
+   "teaser": "A Gothic castle-like post office with a 244-foot tower that is now a college.",
+   "map": "Old Post Office, 121 Ellicott St, Buffalo, NY",
+   "clue": "Go to Ellicott Street near Church Street. Look for a stone building with a tall corner tower and steep roofs, like a castle.",
+   "safety": "Ellicott Street is a busy road. Use crosswalks, and remember this is a working college campus, so stay on the sidewalks outside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Since 1981, the Old Post Office has been home to what?",
+    "options": [
+     "A hospital",
+     "A brewery",
+     "A hotel",
+     "A college campus"
+    ],
+    "answer": 3,
+    "hint": "Students walk through it every day.",
+    "verify": "Wikipedia says it has housed the city campus of Erie Community College since 1981. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1900 to 1906",
+    "label": "The post office then",
+    "line": "A black-and-white photo of the building from a corner, shot from high above the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bf_po_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Post_Office_Building_Buffalo.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The post office today",
+    "line": "The building and tower across a wide street in winter.",
+    "ph": {
+     "k": "bf_po_now",
+     "by": "Pubdog",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Post_Office_Buffalo_NY_Full_View_Dec_09.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Old Post Office is at 121 Ellicott Street. The Office of the Supervising Architect, with Jeremiah O'Rourke, designed it, and construction started in 1897. It opened in 1901 and cost $1.5 million.",
+    "It was Buffalo's central post office until 1963, and it was the tallest building in the city from 1901 to 1912. Wikipedia describes it as a four-story Gothic Revival building with a 244-foot tower over the central entrance and a roofed courtyard.",
+    "After the post office moved out, federal offices used the building. Since 1981 it has been home to the city campus of Erie Community College."
+   ],
+   "fact": "The tower is 244 feet tall.",
+   "disputed": "Many people think a post office is a small building. Wikipedia says this one was the tallest in the city for 11 years.",
+   "claims": [
+    {
+     "t": "The Old Post Office opened in 1901.",
+     "a": 0,
+     "why": "Wikipedia: opened in 1901."
+    },
+    {
+     "t": "It has been a college since the 1930s.",
+     "a": 2,
+     "why": "Wikipedia: it has housed Erie Community College since 1981."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old Post Office (Buffalo, New York)",
+     "u": "https://en.wikipedia.org/wiki/Old_Post_Office_(Buffalo,_New_York)"
+    },
+    {
+     "t": "Wikipedia: Architecture of Buffalo, New York",
+     "u": "https://en.wikipedia.org/wiki/Architecture_of_Buffalo,_New_York"
+    }
+   ],
+   "card": {
+    "a": "1901",
+    "b": "1981",
+    "la": "Opens",
+    "lb": "Becomes a college"
+   }
+  },
+  {
+   "id": "museum",
+   "name": "Buffalo History Museum",
+   "short": "History Museum",
+   "badge": "History Museum",
+   "tag": "Stop 4 of 4",
+   "teaser": "The only building left from a world's fair, with columns like the Parthenon.",
+   "map": "Buffalo History Museum, 1 Museum Ct, Buffalo, NY",
+   "clue": "Go to Delaware Park in northwest Buffalo, east of Elmwood Avenue. Look for a white marble building with a row of columns facing the lake.",
+   "safety": "Stay on the park paths and keep back from the water's edge. Check opening hours if you want to go inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who was the first president of the Buffalo Historical Society?",
+    "options": [
+     "Millard Fillmore",
+     "Grover Cleveland",
+     "Abraham Lincoln",
+     "Theodore Roosevelt"
+    ],
+    "answer": 0,
+    "hint": "He was the 13th president of the United States.",
+    "verify": "Wikipedia says the society's first president was Millard Fillmore. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1901",
+    "label": "The building then",
+    "line": "A dark 1901 photo of the pavilion across the water, with flags on top.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bf_hm_then",
+     "by": "C. D. Arnold",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pan-American_Exposition_-_New_York_State_Building.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2006",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The white building and its columns seen from the park.",
+    "ph": {
+     "k": "bf_hm_now",
+     "by": "Dave Pape",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Buffalo_and_Erie_County_Historical_Society.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Buffalo History Museum building was built in 1901 as the New York State pavilion for the Pan-American Exposition. It is the only permanent structure from the Exposition that still stands. George Cary, a Buffalo architect, designed it.",
+    "Its south portico is meant to evoke the Parthenon in Athens. It was listed on the National Register of Historic Places in 1980 and designated a National Historic Landmark in 1987.",
+    "The society was founded in 1862, and its first president was Millard Fillmore. It has hosted observances of Lincoln's Birthday for over a century. In 1960 the name changed to the Buffalo and Erie County Historical Society, and it is now the Buffalo History Museum."
+   ],
+   "fact": "It is the Expo's only survivor.",
+   "disputed": "Many people think the whole Pan-American Exposition is long gone. Wikipedia says this building is the one permanent structure that survives.",
+   "claims": [
+    {
+     "t": "The museum building was built in 1901.",
+     "a": 0,
+     "why": "Wikipedia: constructed in 1901 for the Pan-American Exposition."
+    },
+    {
+     "t": "Many Exposition buildings still stand in Delaware Park.",
+     "a": 2,
+     "why": "This is the sole surviving permanent structure."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Buffalo History Museum",
+     "u": "https://en.wikipedia.org/wiki/Buffalo_History_Museum"
+    },
+    {
+     "t": "Wikipedia: Pan-American Exposition",
+     "u": "https://en.wikipedia.org/wiki/Pan-American_Exposition"
+    }
+   ],
+   "card": {
+    "a": "1862",
+    "b": "1901",
+    "la": "Society founded",
+    "lb": "Building constructed"
+   }
+  }
+ ],
+ "heroKey": "bf_po_now"
+}
