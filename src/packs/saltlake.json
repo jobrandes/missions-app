@@ -1,0 +1,417 @@
+{
+ "id": "saltlake",
+ "name": "Salt Lake City",
+ "explorer": "Beehive State Explorer",
+ "initials": "SLC",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Temple Square Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Salt Lake Scholar"
+  ],
+  [
+   600,
+   "Salt Lake Historian"
+  ]
+ ],
+ "heroAlt": "The Salt Lake Temple",
+ "heroLi": "<li>Header: Acroterion · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple_UT1.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Acroterion · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple_UT1.jpg\">Source</a>",
+ "mission": "Find four landmarks around Salt Lake City. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Salt Lake City is waiting.",
+ "safetyNote": "<li>Downtown Salt Lake City has wide streets, long blocks and light rail. Use crosswalks, watch for trains and cars, and bring water in summer.</li>",
+ "badgeMap": {
+  "temple": [
+   "sk_tp_now",
+   "50% 45%"
+  ],
+  "beehive": [
+   "sk_bh_now",
+   "50% 45%"
+  ],
+  "lion": [
+   "sk_lh_now",
+   "50% 45%"
+  ],
+  "eagle": [
+   "sk_eg_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "temple",
+   "name": "Salt Lake Temple",
+   "short": "Temple",
+   "badge": "Temple",
+   "tag": "Stop 1 of 4",
+   "teaser": "A temple that took 40 years to build and has been closed for fixing.",
+   "map": "Salt Lake Temple, Temple Square, Salt Lake City, UT",
+   "clue": "Go to Temple Square in downtown Salt Lake City. Look for a huge granite building with six tall spires.",
+   "safety": "Temple Square is a busy downtown block. Use crosswalks. The temple is closed for renovation, so check what is open before you go and stay on public sidewalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "About how many years did it take to build the Salt Lake Temple?",
+    "options": [
+     "14",
+     "400",
+     "40",
+     "4"
+    ],
+    "answer": 2,
+    "hint": "More than a few decades, but less than a century.",
+    "verify": "Wikipedia says it was constructed over a period of 40 years and dedicated in 1893. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1899",
+    "label": "The temple then",
+    "line": "A colorized view from above of the temple, the round-roofed hall beside it and tree-lined paths.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sk_tp_then",
+     "by": "William Henry Jackson",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Temple_Square,_Salt_Lake_City,_1899.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The temple today",
+    "line": "The tall white spires against a clear blue sky.",
+    "ph": {
+     "k": "sk_tp_now",
+     "by": "Acroterion",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple_UT1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Salt Lake Temple is a temple of the Church of Jesus Christ of Latter-day Saints, on Temple Square in Salt Lake City. It was dedicated in 1893 after being constructed over a period of 40 years. At 382,207 square feet, it is the largest Latter-day Saint temple by floor area.",
+    "The center pinnacle rises 210 feet to the base of the angel Moroni statue. The large baptismal font is mounted on the backs of twelve oxen, like the Molten Sea in Solomon's Temple. Latter-day Saints consider the temple sacred, and a temple recommend is required to enter, so there are no public tours inside.",
+    "The first public photographs of the interior were published in 1912. The temple closed in 2019 for remodeling, including a seismic retrofit. The church plans public open house tours in 2027, after which it will be re-dedicated."
+   ],
+   "fact": "The font rests on the backs of twelve oxen.",
+   "disputed": "Many people think any famous landmark can be toured inside. Wikipedia says a temple recommend is required, so there are no public tours of the interior.",
+   "claims": [
+    {
+     "t": "The Salt Lake Temple was dedicated in 1893.",
+     "a": 0,
+     "why": "Wikipedia: dedicated in 1893."
+    },
+    {
+     "t": "Anyone can take a tour inside the temple.",
+     "a": 2,
+     "why": "A temple recommend is required, so there are no public tours inside."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Salt Lake Temple",
+     "u": "https://en.wikipedia.org/wiki/Salt_Lake_Temple"
+    },
+    {
+     "t": "Wikipedia: Temple Square",
+     "u": "https://en.wikipedia.org/wiki/Temple_Square"
+    }
+   ],
+   "card": {
+    "a": "1893",
+    "b": "2027",
+    "la": "Dedicated",
+    "lb": "Open house planned"
+   }
+  },
+  {
+   "id": "beehive",
+   "name": "Beehive House",
+   "short": "Beehive House",
+   "badge": "Beehive House",
+   "tag": "Stop 2 of 4",
+   "teaser": "A pioneer mansion named for a sculpture of bees' home on its roof.",
+   "map": "Beehive House, 67 East South Temple, Salt Lake City, UT",
+   "clue": "Go to South Temple Street, one block east of Temple Square. Look for a pale house with green shutters and a small tower on the roof.",
+   "safety": "South Temple is a busy street. Use crosswalks. The house is closed for renovation, so view it from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Why is it called the Beehive House?",
+    "options": [
+     "Bees lived in the attic",
+     "A beekeeper built it",
+     "The roof is shaped like a hive",
+     "A beehive sculpture sits on top"
+    ],
+    "answer": 3,
+    "hint": "Early settlers liked what bees stood for: hard work together.",
+    "verify": "Wikipedia says the name comes from the beehive sculpture atop the house. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1894",
+    "label": "The house then",
+    "line": "A black-and-white print of the house and Eagle Gate, with a bare yard and a tall tree.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sk_bh_then",
+     "by": "Probably Pavel Albieri",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Eagle_Gate_and_Beehive_House_SLC_1894_Albieri.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2020",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The pale house with its columned porch and a small tower, behind a street lamp and trees.",
+    "ph": {
+     "k": "sk_bh_now",
+     "by": "Beneathtimp",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Beehive_House_-_Salt_Lake_City,_Utah_-_2_May_2020.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Beehive House was built in 1854 and was one of the residences of Brigham Young, the second president of the Church of Jesus Christ of Latter-day Saints. Its name comes from the beehive sculpture on top. Early Mormons used honeybees to symbolize industry and cooperation.",
+    "Truman O. Angell, Young's brother-in-law and the architect of the Salt Lake Temple, designed it. It is built of adobe and sandstone. It served as the executive mansion of Utah Territory. A suite of rooms connects it to the neighboring Lion House, and Young died in his bedroom there in 1877.",
+    "After Young's death it passed through disputes among his heirs and later served as a boarding house for women. It is normally a historic house museum, but it has been closed for renovation since 2023, with a reopening expected in 2027."
+   ],
+   "fact": "Young died in the house in 1877.",
+   "disputed": "Many people think the name means real bees lived here. Wikipedia says the name comes from the sculpture on the roof.",
+   "claims": [
+    {
+     "t": "The Beehive House was built in 1854.",
+     "a": 0,
+     "why": "Wikipedia: constructed in 1854."
+    },
+    {
+     "t": "The Beehive House is built of brick and was never used for anything but a museum.",
+     "a": 2,
+     "why": "It is adobe and sandstone, and it was also a women's boarding house."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Beehive House",
+     "u": "https://en.wikipedia.org/wiki/Beehive_House"
+    },
+    {
+     "t": "Wikipedia: Brigham Young",
+     "u": "https://en.wikipedia.org/wiki/Brigham_Young"
+    }
+   ],
+   "card": {
+    "a": "1854",
+    "b": "2027",
+    "la": "Built",
+    "lb": "Reopening expected"
+   }
+  },
+  {
+   "id": "lion",
+   "name": "Lion House",
+   "short": "Lion House",
+   "badge": "Lion House",
+   "tag": "Stop 3 of 4",
+   "teaser": "A house with 20 gables and a stone lion over the door.",
+   "map": "Lion House, 63 East South Temple, Salt Lake City, UT",
+   "clue": "Go to South Temple Street, one block east of Temple Square, next to the Beehive House. Look for a Gothic-looking house with many pointed roof peaks and a statue of a lion over the front door.",
+   "safety": "South Temple is a busy street. Use crosswalks. The house is closed for restoration, so view it from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many gables does the Lion House have?",
+    "options": [
+     "20",
+     "4",
+     "12",
+     "50"
+    ],
+    "answer": 0,
+    "hint": "Count the pointed roof peaks along the front.",
+    "verify": "Wikipedia says it is a Gothic Revival mansion with 20 gables for 20 small bedrooms. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1900",
+    "label": "The house then",
+    "line": "A colorized view down the sidewalk toward the pink house with its pointed gables and a fence in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sk_lh_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Lion_House,_Salt_Lake_City-LCCN2008678282.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The front porch with its stone lion above the door and tall buildings behind.",
+    "ph": {
+     "k": "sk_lh_now",
+     "by": "Bobjgalindo",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lion_House_Brigham_Young.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Brigham Young built the Lion House in 1856, two years after the Beehive House. Truman Osborn Angell was involved in the design. It is a Gothic Revival mansion with 20 gables for 20 small bedrooms.",
+    "It is named for a statue of a lion, sculpted by William Ward III, above the front entrance. Lion of the Lord was a nickname for Young. It is joined to the Beehive House by a series of rooms that Young used as offices, and it housed many of his wives and children.",
+    "Later it held the domestic science department of LDS University in the 1920s and became a social center in the 1930s. It closed in 2020 and is being restored, with reopening expected in spring 2027."
+   ],
+   "fact": "It has one gable for each small bedroom.",
+   "disputed": "Many people think the house is named for a real lion. Wikipedia says it is named for a statue above the entrance.",
+   "claims": [
+    {
+     "t": "The Lion House was built in 1856.",
+     "a": 0,
+     "why": "Wikipedia: built in 1856."
+    },
+    {
+     "t": "The Lion House is named for a live lion kept in the yard.",
+     "a": 2,
+     "why": "It is named for a lion statue above the front entrance."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Lion House (Salt Lake City)",
+     "u": "https://en.wikipedia.org/wiki/Lion_House_(Salt_Lake_City)"
+    },
+    {
+     "t": "Wikipedia: Truman O. Angell",
+     "u": "https://en.wikipedia.org/wiki/Truman_O._Angell"
+    }
+   ],
+   "card": {
+    "a": "1856",
+    "b": "2027",
+    "la": "Built",
+    "lb": "Reopening expected"
+   }
+  },
+  {
+   "id": "eagle",
+   "name": "Eagle Gate",
+   "short": "Eagle Gate",
+   "badge": "Eagle Gate",
+   "tag": "Stop 4 of 4",
+   "teaser": "An arch over a street, topped with an eagle sitting on a beehive.",
+   "map": "Eagle Gate, State Street at South Temple, Salt Lake City, UT",
+   "clue": "Go to the corner of State Street and South Temple. Look for a big arch over the street with a bird on top.",
+   "safety": "The gate spans a busy street. Use crosswalks and view it from the sidewalk. Never stand in the road.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What sits on top of the Eagle Gate arch?",
+    "options": [
+     "A golden angel",
+     "An eagle perched on a beehive",
+     "A lion on a rock",
+     "A bell"
+    ],
+    "answer": 1,
+    "hint": "Think of Utah's nickname.",
+    "verify": "Wikipedia says the monument is topped by a sculpture of an eagle perched on a beehive. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The gate then",
+    "line": "A colorized view of the arch with its eagle, down a dusty street lined with tall trees.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sk_eg_then",
+     "by": "Detroit Photographic Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0820)_-_Eagle_Gate,_Salt_Lake_City.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2016",
+    "head": "Today",
+    "label": "The gate today",
+    "line": "The steel arch and its eagle over State Street, with tall buildings behind.",
+    "ph": {
+     "k": "sk_eg_now",
+     "by": "Beneathtimp",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Eagle_Gate,_north_side_-_Salt_Lake_City,_Utah_-_5_September_2016.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Eagle Gate is an arch across State Street at its intersection with South Temple. It honors Brigham Young's 1859 gate, which was an entrance to his property and the City Creek Canyon road. The tolls for hauling wood from the canyon could be paid by giving Young every fifth load.",
+    "After the road was opened to the public and the gates removed, the arch with its eagle and beehive stayed. The structure has been rebuilt twice, in the 1890s and the 1960s.",
+    "The current bronze eagle was made in the early 1960s and has a wingspan of 20 feet. It weighs 4,000 pounds. The arches and pillars are a steel frame covered in metal panels, and Wikipedia calls the design one of the city's finest examples of mid-century modern."
+   ],
+   "fact": "The eagle weighs 4,000 pounds.",
+   "disputed": "Many people think the gate is the original wooden one. Wikipedia says it has been rebuilt twice.",
+   "claims": [
+    {
+     "t": "The Eagle Gate has been rebuilt twice.",
+     "a": 0,
+     "why": "Wikipedia: rebuilt in the 1890s and again in the 1960s."
+    },
+    {
+     "t": "The Eagle Gate today is made of carved wood.",
+     "a": 2,
+     "why": "The arches are steel covered in metal panels, and the eagle is bronze alloy."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Eagle Gate",
+     "u": "https://en.wikipedia.org/wiki/Eagle_Gate"
+    },
+    {
+     "t": "Wikipedia: Salt Lake City",
+     "u": "https://en.wikipedia.org/wiki/Salt_Lake_City"
+    }
+   ],
+   "card": {
+    "a": "1859",
+    "b": "1960s",
+    "la": "First gate",
+    "lb": "Current eagle made"
+   }
+  }
+ ],
+ "heroKey": "sk_tp_now"
+}

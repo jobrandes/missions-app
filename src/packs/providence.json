@@ -1,0 +1,417 @@
+{
+ "id": "providence",
+ "name": "Providence",
+ "explorer": "Rhode Island Explorer",
+ "initials": "PVD",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "College Hill Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Providence Scholar"
+  ],
+  [
+   600,
+   "Providence Historian"
+  ]
+ ],
+ "heroAlt": "The Rhode Island State House in Providence",
+ "heroLi": "<li>Header: Kumar Appaiah · CC BY-SA 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rhode_Island_State_House_2.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Kumar Appaiah · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC BY-SA 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rhode_Island_State_House_2.jpg\">Source</a>",
+ "mission": "Find four landmarks around Providence. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Providence is waiting.",
+ "safetyNote": "<li>Downtown Providence has busy streets, hills and brick sidewalks. Use crosswalks, watch for cars and bikes, and take College Hill slowly.</li>",
+ "badgeMap": {
+  "statehouse": [
+   "pv_sh_now",
+   "50% 45%"
+  ],
+  "cathedral": [
+   "pv_cs_now",
+   "50% 45%"
+  ],
+  "gates": [
+   "pv_vw_now",
+   "50% 45%"
+  ],
+  "arcade": [
+   "pv_ar_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "statehouse",
+   "name": "Rhode Island State House",
+   "short": "State House",
+   "badge": "State House",
+   "tag": "Stop 1 of 4",
+   "teaser": "A marble capitol with a golden statue on top that was first named Hope.",
+   "map": "Rhode Island State House, 82 Smith Street, Providence, RI",
+   "clue": "Go to Smith Hill, just north of downtown. Look for a white marble building with a huge dome and a small golden figure at the very top.",
+   "safety": "This is a working government building. Check visiting hours and security rules, stay on the paths and lawn edges, and use crosswalks on Smith Street.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What stands on top of the State House dome?",
+    "options": [
+     "A gilded statue called The Independent Man",
+     "A bronze eagle",
+     "A copper weather vane",
+     "A large flag pole only"
+    ],
+    "answer": 0,
+    "hint": "Look up, way up. It is shiny and shaped like a person.",
+    "verify": "Wikipedia says a gold-covered bronze statue known as The Independent Man stands on the dome. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The State House then",
+    "line": "A tinted postcard of the white-domed State House with a lawn and bare trees in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pv_sh_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:State_House,_Providence,_R._I_(NYPL_b12647398-66797).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The State House today",
+    "line": "The marble front with its columns and dome under a clear sky.",
+    "ph": {
+     "k": "pv_sh_now",
+     "by": "Kumar Appaiah",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rhode_Island_State_House_2.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Rhode Island State House stands at 82 Smith Street, just below the crest of Smith Hill. It is Rhode Island's seventh state house and the second in Providence. McKim, Mead & White, a well-known New York firm, designed it, and it was built from 1891 to 1901.",
+    "The building uses 327,000 cubic feet of white Georgia marble, 15 million bricks and about 1,309 short tons of iron floor beams. Its dome is described as the fourth largest self-supported marble dome in the world. It was also one of the first public buildings to use electricity.",
+    "On top of the dome stands a gold-covered bronze statue, The Independent Man. It was first named Hope. George Brewster designed it, the Gorham Manufacturing Company cast it, and it was installed in 1899. It weighs more than 500 pounds. Inside, the State Room holds a full-length portrait of George Washington by Gilbert Stuart."
+   ],
+   "fact": "The statue on top was first named Hope.",
+   "disputed": "Many people think the dome is the biggest marble dome in the world. Wikipedia calls it the fourth largest self-supported marble dome.",
+   "claims": [
+    {
+     "t": "The State House was built between 1891 and 1901.",
+     "a": 0,
+     "why": "Wikipedia: constructed from 1891 to 1901."
+    },
+    {
+     "t": "The State House dome is the largest marble dome in the world.",
+     "a": 2,
+     "why": "Wikipedia calls it the fourth largest self-supported marble dome in the world."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Rhode Island State House",
+     "u": "https://en.wikipedia.org/wiki/Rhode_Island_State_House"
+    },
+    {
+     "t": "Wikipedia: McKim, Mead & White",
+     "u": "https://en.wikipedia.org/wiki/McKim,_Mead_%26_White"
+    }
+   ],
+   "card": {
+    "a": "1891",
+    "b": "1901",
+    "la": "Construction begins",
+    "lb": "Construction ends"
+   }
+  },
+  {
+   "id": "cathedral",
+   "name": "Cathedral of Saints Peter and Paul",
+   "short": "Cathedral",
+   "badge": "Cathedral",
+   "tag": "Stop 2 of 4",
+   "teaser": "A big stone church paid for one $10,000 chunk at a time.",
+   "map": "Cathedral of Saints Peter and Paul, Cathedral Square, Providence, RI",
+   "clue": "Go to Cathedral Square in Providence. Look for a large brown stone church with two tall square towers and a round window in the middle.",
+   "safety": "This is an active church. Be quiet and respectful, stay on the public sidewalk, and use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who designed the cathedral in 1873?",
+    "options": [
+     "Russell Warren",
+     "Patrick Keely",
+     "William Strickland",
+     "Richard Montfort"
+    ],
+    "answer": 1,
+    "hint": "He was an architect known for Catholic churches.",
+    "verify": "Wikipedia says Bishop Hendricken selected church architect Patrick Keely in 1873. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The cathedral then",
+    "line": "A tinted postcard of the church with its two towers and a statue on the corner.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pv_cs_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Saints_Peter_and_Paul_Cathedral,_Providence,_R._I_(NYPL_b12647398-63175).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The cathedral today",
+    "line": "The brown stone towers and round window against a blue sky with a few clouds.",
+    "ph": {
+     "k": "pv_cs_now",
+     "by": "Farragutful",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Saints_Peter_and_Paul_-_Providence_01.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Cathedral of Saints Peter and Paul is the mother church of the Diocese of Providence. Pope Pius IX created the diocese in 1872, and its first bishop, Thomas Francis Hendricken, decided to build a new cathedral because the first one was too small.",
+    "In 1873 Hendricken chose church architect Patrick Keely to draw the plans. The cornerstone was laid in 1878. Hendricken refused to borrow money for the project, so he set aside $10,000 each year and ran fundraising campaigns to keep construction going.",
+    "By 1882 the contractors had finished the roof and began the interior. Hendricken died in 1886. The Neo-Romanesque church was added to the National Register of Historic Places in 1975."
+   ],
+   "fact": "The bishop refused to borrow money.",
+   "disputed": "Many people think big cathedrals are built with big loans. Wikipedia says the bishop refused to borrow.",
+   "claims": [
+    {
+     "t": "The cathedral's cornerstone was laid in 1878.",
+     "a": 0,
+     "why": "Wikipedia: the cornerstone was laid in 1878."
+    },
+    {
+     "t": "The bishop paid for the cathedral with a huge bank loan.",
+     "a": 2,
+     "why": "Wikipedia says he refused to borrow money."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cathedral of Saints Peter and Paul (Providence)",
+     "u": "https://en.wikipedia.org/wiki/Cathedral_of_Saints_Peter_and_Paul_(Providence,_Rhode_Island)"
+    },
+    {
+     "t": "Wikipedia: Patrick Keely",
+     "u": "https://en.wikipedia.org/wiki/Patrick_Keely"
+    }
+   ],
+   "card": {
+    "a": "1873",
+    "b": "1882",
+    "la": "Keely chosen",
+    "lb": "Roof finished"
+   }
+  },
+  {
+   "id": "gates",
+   "name": "Van Wickle Gates",
+   "short": "Van Wickle Gates",
+   "badge": "Van Wickle Gates",
+   "tag": "Stop 3 of 4",
+   "teaser": "Iron gates with a spooky rule: walk through the middle twice and you may not graduate.",
+   "map": "Van Wickle Gates, College Street at Prospect Street, Providence, RI",
+   "clue": "Go to the top of College Hill, where College Street meets Prospect Street. Look for tall iron gates between brick and stone posts.",
+   "safety": "This is a college campus entrance. Stay on the sidewalk, do not climb the gates or posts, and watch for people and bikes.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What does campus superstition say about passing through the center gate more than twice?",
+    "options": [
+     "You will win a prize",
+     "You will hear the bell",
+     "You will not graduate",
+     "You will get lost"
+    ],
+    "answer": 2,
+    "hint": "Band members hop on one foot and walk in backwards to dodge it.",
+    "verify": "Wikipedia says campus superstition holds that students who pass through the center gate more than twice will not graduate. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1900",
+    "label": "The gates then",
+    "line": "A black-and-white print of the iron gates with brick buildings and bare trees behind.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pv_vw_then",
+     "by": "L.H. Nelson Company (Views of Providence)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Van_Wickle_Gates_from_Views_of_Providence_(1900).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The gates today",
+    "line": "The tall iron center gate between brick posts, with a campus building behind.",
+    "ph": {
+     "k": "pv_vw_now",
+     "by": "John W. Schulze",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Van_Wickle_Gates,_Brown_University.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Van Wickle Gates are the ornamental entrance to Brown University's main campus, at the crest of College Hill. They were paid for by the bequest of Augustus Stout Van Wickle, Class of 1876, a bank president who died in 1898. He also paid for a set of gates at Princeton University.",
+    "Hoppin & Ely and Hoppin & Koen designed them in wrought iron with brick and stone piers. The Brown coat of arms crowns the gate, and the piers carry the seals of Rhode Island and Providence. The sides carry inscriptions by Cicero. They were dedicated on June 18, 1901.",
+    "The two small side gates stay open all year. The big center gates open only on special days: inward at the start of the school year and the start of spring semester, and outward for the Commencement procession."
+   ],
+   "fact": "The center gates open only on three days a year.",
+   "disputed": "Many people think the big gates are always open. Wikipedia says only the side gates are, and the center opens on three annual occasions.",
+   "claims": [
+    {
+     "t": "The Van Wickle Gates were dedicated in 1901.",
+     "a": 0,
+     "why": "Wikipedia: dedicated on June 18, 1901."
+    },
+    {
+     "t": "The big center gates stay open all year.",
+     "a": 2,
+     "why": "Only the smaller side gates stay open all year."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Van Wickle Gates",
+     "u": "https://en.wikipedia.org/wiki/Van_Wickle_Gates"
+    },
+    {
+     "t": "Wikipedia: Brown University",
+     "u": "https://en.wikipedia.org/wiki/Brown_University"
+    }
+   ],
+   "card": {
+    "a": "1898",
+    "b": "1901",
+    "la": "Van Wickle dies and leaves the money",
+    "lb": "Gates dedicated"
+   }
+  },
+  {
+   "id": "arcade",
+   "name": "The Arcade",
+   "short": "The Arcade",
+   "badge": "The Arcade",
+   "tag": "Stop 4 of 4",
+   "teaser": "The first enclosed shopping mall in America, nicknamed a folly.",
+   "map": "The Arcade (Westminster Arcade), 130 Westminster Street, Providence, RI",
+   "clue": "Go to Westminster Street downtown. Look for a stone building with tall columns on the front and a long hall with a glass roof inside.",
+   "safety": "Downtown streets are busy. Use crosswalks, and be polite inside, since people live and work here.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What nickname did people give the Arcade because it was slow to attract customers?",
+    "options": [
+     "The Glass Palace",
+     "Cheapside Castle",
+     "The Empty Hall",
+     "Butler's Folly"
+    ],
+    "answer": 3,
+    "hint": "People thought it was a silly idea at first.",
+    "verify": "Wikipedia says it was known as Butler's Folly for many years. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1958",
+    "label": "The Arcade then",
+    "line": "A black-and-white survey photo of the stone front with tall columns, taken in April 1958.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pv_ar_then",
+     "by": "Laurence E. Tilley (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_Laurence_E._Tilley,_Photographer_April,_1958_SOUTHEAST_FRONT_ON_WEYBOSSET_STREET._-_The_Arcade,_130_Westminster_Street,_Providence,_Providence_HABS_RI,4-PROV,106-1.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The Arcade today",
+    "line": "The long glass-roofed hall inside, with shops on both sides.",
+    "ph": {
+     "k": "pv_ar_now",
+     "by": "Karlunun",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Providence_The_Arcade_110_Westminster_NW_9403_20190428.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Westminster Arcade was erected in 1828 at 130 Westminster Street and 65 Weybosset Street. It is notable as the first enclosed shopping mall in the United States, and it is a fine example of commercial Greek Revival architecture. It became a National Historic Landmark in 1976.",
+    "Cyrus Butler developed it, and Russell Warren and Tallman & Bucklin designed it, with a lane of shops lit by skylights, like similar buildings in Europe. At first it was far from the shopping areas, so few customers came and it was known as Butler's Folly for many years. In June 1843 President John Tyler toured it and reportedly shook 5,000 hands.",
+    "It declined late in the twentieth century and was rehabilitated and reopened in 1980. It closed again in 2008 and reopened in October 2013 as shops plus small apartments called micro-lofts."
+   ],
+   "fact": "It was first called a folly.",
+   "disputed": "Many people think the first mall must be a modern idea. Wikipedia says this one was erected in 1828.",
+   "claims": [
+    {
+     "t": "The Arcade was erected in 1828.",
+     "a": 0,
+     "why": "Wikipedia: erected in 1828."
+    },
+    {
+     "t": "The Arcade was busy with shoppers from its first day.",
+     "a": 2,
+     "why": "Wikipedia says it was slow to attract customers and known as Butler's Folly."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Westminster Arcade",
+     "u": "https://en.wikipedia.org/wiki/Westminster_Arcade"
+    },
+    {
+     "t": "Wikipedia: Providence, Rhode Island",
+     "u": "https://en.wikipedia.org/wiki/Providence,_Rhode_Island"
+    }
+   ],
+   "card": {
+    "a": "1828",
+    "b": "2013",
+    "la": "Erected",
+    "lb": "Reopens with apartments"
+   }
+  }
+ ],
+ "heroKey": "pv_sh_now"
+}

@@ -1562,5 +1562,143 @@
    "a": 0,
    "why": "It was plaster, wood and brick in 1897."
   }
+ ],
+ "providence": [
+  {
+   "q": "Who designed the Rhode Island State House?",
+   "o": [
+    "Russell Warren",
+    "McKim, Mead & White",
+    "Patrick Keely",
+    "Hoppin & Ely"
+   ],
+   "a": 1,
+   "why": "A New York firm, McKim, Mead & White, designed it."
+  },
+  {
+   "q": "What was the cathedral bishop's rule about money?",
+   "o": [
+    "He took a big loan",
+    "He sold the land",
+    "He charged tickets",
+    "He refused to borrow"
+   ],
+   "a": 3,
+   "why": "Hendricken refused to borrow and saved $10,000 a year."
+  },
+  {
+   "q": "When were the Van Wickle Gates dedicated?",
+   "o": [
+    "1901",
+    "1828",
+    "1773",
+    "1950"
+   ],
+   "a": 0,
+   "why": "They were dedicated on June 18, 1901."
+  },
+  {
+   "q": "The Arcade is called the first what in the United States?",
+   "o": [
+    "Subway",
+    "Public library",
+    "Enclosed shopping mall",
+    "Skyscraper"
+   ],
+   "a": 2,
+   "why": "It is the first enclosed shopping mall."
+  }
+ ],
+ "saltlake": [
+  {
+   "q": "What stands on top of the Eagle Gate?",
+   "o": [
+    "A lion",
+    "A clock",
+    "An eagle on a beehive",
+    "A golden angel"
+   ],
+   "a": 2,
+   "why": "A sculpture of an eagle perched on a beehive."
+  },
+  {
+   "q": "Who designed both the Beehive House and the Lion House?",
+   "o": [
+    "Truman O. Angell",
+    "Brigham Young",
+    "William Ward III",
+    "Pavel Albieri"
+   ],
+   "a": 0,
+   "why": "Truman O. Angell was involved in both."
+  },
+  {
+   "q": "What does the Lion House's name come from?",
+   "o": [
+    "A live lion",
+    "A zoo",
+    "A sports team",
+    "A statue of a lion"
+   ],
+   "a": 3,
+   "why": "A lion statue above the front entrance."
+  },
+  {
+   "q": "The Salt Lake Temple's large font rests on what?",
+   "o": [
+    "Six bees",
+    "Twelve oxen",
+    "Four lions",
+    "Eight eagles"
+   ],
+   "a": 1,
+   "why": "It rests on the backs of twelve oxen."
+  }
+ ],
+ "sandiego": [
+  {
+   "q": "In what year did the Hotel del Coronado open?",
+   "o": [
+    "1769",
+    "1915",
+    "1827",
+    "1888"
+   ],
+   "a": 3,
+   "why": "It opened in 1888."
+  },
+  {
+   "q": "How many churches have stood at the mission site, counting today's?",
+   "o": [
+    "Nine",
+    "Five",
+    "One",
+    "Two"
+   ],
+   "a": 1,
+   "why": "Today's church is the fifth to stand there."
+  },
+  {
+   "q": "The Botanical Building was built for what event?",
+   "o": [
+    "The 1849 Gold Rush",
+    "The 1984 Olympics",
+    "The 1915 Panama-California Exposition",
+    "The 1893 World's Fair"
+   ],
+   "a": 2,
+   "why": "It was built for the 1915-16 exposition."
+  },
+  {
+   "q": "In what year was the Casa de Estudillo built?",
+   "o": [
+    "1827",
+    "1884",
+    "1915",
+    "1769"
+   ],
+   "a": 0,
+   "why": "It was built in 1827."
+  }
  ]
 }

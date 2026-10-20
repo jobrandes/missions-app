@@ -1,0 +1,417 @@
+{
+ "id": "sandiego",
+ "name": "San Diego",
+ "explorer": "Sunshine Explorer",
+ "initials": "SAN",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Bay Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "San Diego Scholar"
+  ],
+  [
+   600,
+   "San Diego Historian"
+  ]
+ ],
+ "heroAlt": "The Hotel del Coronado",
+ "heroLi": "<li>Header: Ctorbann · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Hotel_Del_Coronado_01.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Ctorbann · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Hotel_Del_Coronado_01.JPG\">Source</a>",
+ "mission": "Find four landmarks around San Diego. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of San Diego is waiting.",
+ "safetyNote": "<li>These places are spread across town, with beach, park and city streets. Use crosswalks, watch for cars and bikes, and bring water and sun protection.</li>",
+ "badgeMap": {
+  "hotel": [
+   "sd_hd_now",
+   "50% 45%"
+  ],
+  "mission": [
+   "sd_mi_now",
+   "50% 45%"
+  ],
+  "botanical": [
+   "sd_bp_now",
+   "50% 45%"
+  ],
+  "estudillo": [
+   "sd_ce_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "hotel",
+   "name": "Hotel del Coronado",
+   "short": "Hotel del Coronado",
+   "badge": "Hotel del Coronado",
+   "tag": "Stop 1 of 4",
+   "teaser": "A giant wooden hotel by the beach, built in a land boom.",
+   "map": "Hotel del Coronado, Coronado, CA",
+   "clue": "Go to Coronado, across San Diego Bay from downtown. Look for a huge white hotel with red roofs and a tall red tower, right by the beach.",
+   "safety": "This is a working resort. Stay on public paths, respect guests, and be careful of soft sand, waves and traffic.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is the Hotel del Coronado mostly built from?",
+    "options": [
+     "Steel",
+     "Wood",
+     "Brick",
+     "Adobe"
+    ],
+    "answer": 1,
+    "hint": "It is the second-largest structure of its kind in the United States.",
+    "verify": "Wikipedia says it is a wooden Victorian beach resort and the second-largest wooden structure in the United States. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The hotel then",
+    "line": "A colorized photograph of the red-roofed hotel across a tennis court and lawn.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sd_hd_then",
+     "by": "William Henry Jackson",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hotel_Del_c1900b.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The red roofs and tower rising above palm trees and sand.",
+    "ph": {
+     "k": "sd_hd_now",
+     "by": "Ctorbann",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hotel_Del_Coronado_01.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Hotel del Coronado, also called The Del, is a beachfront hotel in Coronado, across San Diego Bay from San Diego. It is a rare surviving wooden Victorian beach resort. It became a California Historical Landmark in 1970 and a National Historic Landmark in 1977.",
+    "In November 1885 five investors bought Coronado and North Island, about 4,000 acres, for $110,000. E. S. Babcock and Hampton L. Story created the Coronado Beach Company and hired architect James W. Reid. When the hotel opened in 1888, it was the largest resort hotel in the world.",
+    "The company also ran ferries, piped fresh water under the bay and built a railroad. The hotel had one of the state's largest electrical power plants, which served the whole town until the 1920s."
+   ],
+   "fact": "It once powered the whole town.",
+   "disputed": "Many people think a huge old hotel must be brick or stone. Wikipedia says it is wood, the second-largest wooden building in the country.",
+   "claims": [
+    {
+     "t": "The Hotel del Coronado opened in 1888.",
+     "a": 0,
+     "why": "Wikipedia: opened in 1888."
+    },
+    {
+     "t": "The hotel is made of brick.",
+     "a": 2,
+     "why": "It is a wooden Victorian beach resort."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Hotel del Coronado",
+     "u": "https://en.wikipedia.org/wiki/Hotel_del_Coronado"
+    },
+    {
+     "t": "Wikipedia: Coronado, California",
+     "u": "https://en.wikipedia.org/wiki/Coronado,_California"
+    }
+   ],
+   "card": {
+    "a": "1885",
+    "b": "1888",
+    "la": "Investors buy the land",
+    "lb": "Hotel opens"
+   }
+  },
+  {
+   "id": "mission",
+   "name": "Mission Basilica San Diego de Alcalá",
+   "short": "Mission",
+   "badge": "Mission",
+   "tag": "Stop 2 of 4",
+   "teaser": "California's first mission, burned once and rebuilt five times.",
+   "map": "Mission Basilica San Diego de Alcalá, San Diego, CA",
+   "clue": "Go to the mission in Mission Valley, in San Diego. Look for a white church with a tall wall of bells in front.",
+   "safety": "The mission is an active parish and museum. Check hours, be quiet and respectful, and be careful of the busy road.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who founded the mission in 1769?",
+    "options": [
+     "Junípero Serra",
+     "Juan Rodríguez Cabrillo",
+     "Sebastián Vizcaíno",
+     "Luis Jayme"
+    ],
+    "answer": 0,
+    "hint": "He was a Franciscan friar from Spain.",
+    "verify": "Wikipedia says Spanish friar Junípero Serra founded it on July 16, 1769. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The mission then",
+    "line": "A postcard of the mission church on a dry hillside with trees and agave plants.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sd_mi_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mission_San_Diego,_San_Diego,_Calif_(NYPL_b12647398-62097).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The mission today",
+    "line": "The white church front with its bell wall beside a tall tree.",
+    "ph": {
+     "k": "sd_mi_now",
+     "by": "Bernard Gagnon",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mission_San_Diego_de_Alcal%C3%A1_-_church.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Mission Basilica San Diego de Alcalá was the second Franciscan-founded mission in the Californias. Spanish friar Junípero Serra founded it on July 16, 1769, in an area that the Kumeyaay people had long inhabited. It is named for Saint Didacus of Alcalá, known in Spanish as San Diego.",
+    "It was the site of the first Christian burial in Alta California. The first mission burned in 1775 during an uprising by local people. Father Luis Jayme, killed in that uprising, lies beneath the chancel floor.",
+    "The church standing today was built in the early nineteenth century and is the fifth to stand on this location. The mission site is a National Historic Landmark."
+   ],
+   "fact": "The church today is the fifth on this spot.",
+   "disputed": "Many people think the old church we see is the first. Wikipedia says it is the fifth to stand here.",
+   "claims": [
+    {
+     "t": "Mission San Diego de Alcalá was founded in 1769.",
+     "a": 0,
+     "why": "Wikipedia: founded on July 16, 1769."
+    },
+    {
+     "t": "The church standing today is the first one built here.",
+     "a": 2,
+     "why": "It is the fifth church on this location."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Mission San Diego de Alcalá",
+     "u": "https://en.wikipedia.org/wiki/Mission_San_Diego_de_Alcal%C3%A1"
+    },
+    {
+     "t": "Wikipedia: Junípero Serra",
+     "u": "https://en.wikipedia.org/wiki/Jun%C3%ADpero_Serra"
+    }
+   ],
+   "card": {
+    "a": "1769",
+    "b": "1775",
+    "la": "Mission founded",
+    "lb": "First mission burns"
+   }
+  },
+  {
+   "id": "botanical",
+   "name": "Botanical Building",
+   "short": "Botanical Building",
+   "badge": "Botanical Building",
+   "tag": "Stop 3 of 4",
+   "teaser": "A giant garden house made of strips of wood, built for a fair.",
+   "map": "Botanical Building, Balboa Park, San Diego, CA",
+   "clue": "Go to the Prado in Balboa Park. Look for a long arched building made of thin strips, with a lily pond in front.",
+   "safety": "Balboa Park is big and has traffic. Stay on paths, do not wade into or lean over the pond, and check hours.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What kind of structure is the Botanical Building, one of the largest in the world?",
+    "options": [
+     "A glass greenhouse",
+     "A stone castle",
+     "A steel bridge",
+     "A lath structure"
+    ],
+    "answer": 3,
+    "hint": "Think thin wooden strips with gaps between them.",
+    "verify": "Wikipedia says it remains one of the largest lath structures in the world. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1915",
+    "label": "The garden house then",
+    "line": "A colorized postcard looking across a long pond to the arched building, with people strolling on a path.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sd_bp_then",
+     "by": "I. L. Eno",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Lagoon,_Botanical_Building_in_background,_Panama-California_Exposition,_San_Diego,_Cal._1915.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The garden house today",
+    "line": "The lily pond and the arched building behind flowers and a palm.",
+    "ph": {
+     "k": "sd_bp_now",
+     "by": "Intrepid88",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Balboa_Park_Botanical_Building_and_Lily_Pond.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Balboa Park is a 1,200-acre historic park in San Diego. It hosted the 1915 to 1916 Panama-California Exposition and the 1935 to 1936 California Pacific International Exposition, and both left landmark buildings behind. The park was named a National Historic Landmark District in 1977.",
+    "The Botanical Building was built for the first exposition and remains one of the largest lath structures in the world. Alfred D. Robinson, founder of the San Diego Floral Society, suggested a lath house for the fair. A garden and lily pond were built in front of it in 1915.",
+    "During World War I and World War II the navy used the pond for swimming lessons. The building closed in 2021 for renovations and reopened in December 2024."
+   ],
+   "fact": "The navy used the lily pond for swim lessons.",
+   "disputed": "Many people think an exposition building must be torn down afterward. Wikipedia says this one was built in 1915 and is still standing.",
+   "claims": [
+    {
+     "t": "The Botanical Building was built for the 1915 exposition.",
+     "a": 0,
+     "why": "Wikipedia: built for the 1915-16 Panama-California Exposition."
+    },
+    {
+     "t": "The lily pond has only ever been for looking at.",
+     "a": 2,
+     "why": "The navy used it for swimming lessons during both world wars."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Botanical Building",
+     "u": "https://en.wikipedia.org/wiki/Botanical_Building"
+    },
+    {
+     "t": "Wikipedia: Balboa Park (San Diego)",
+     "u": "https://en.wikipedia.org/wiki/Balboa_Park_(San_Diego)"
+    }
+   ],
+   "card": {
+    "a": "1915",
+    "b": "2024",
+    "la": "Built for the exposition",
+    "lb": "Reopens after renovation"
+   }
+  },
+  {
+   "id": "estudillo",
+   "name": "Casa de Estudillo",
+   "short": "Casa de Estudillo",
+   "badge": "Casa de Estudillo",
+   "tag": "Stop 4 of 4",
+   "teaser": "An adobe house that a novel made famous 57 years after it was built.",
+   "map": "Casa de Estudillo, Old Town San Diego State Historic Park, San Diego, CA",
+   "clue": "Go to Old Town San Diego State Historic Park. Look for a long, low whitewashed adobe house shaped like a U, with a courtyard.",
+   "safety": "The park has walkways and visitors. Stay on the paths, do not touch the old walls, and use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which famous novel made the house popular with visitors?",
+    "options": [
+     "Tom Sawyer",
+     "Moby-Dick",
+     "Ramona",
+     "Treasure Island"
+    ],
+    "answer": 2,
+    "hint": "A popular 1884 novel by Helen Hunt Jackson.",
+    "verify": "Wikipedia says the house gained prominence by association with Helen Hunt Jackson's 1884 novel Ramona. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The house then",
+    "line": "A tinted postcard of the long, low adobe house with a tree beside a dirt road.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sd_ce_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Ramona's_Marriage_Place,_San_Diego,_Calif_(NYPL_b12647398-62179).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The whitewashed walls, a courtyard and big trees.",
+    "ph": {
+     "k": "sd_ce_now",
+     "by": "Joe Mabel",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_01.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Casa de Estudillo was built in 1827 by José María Estudillo and his son José Antonio Estudillo, early settlers of San Diego. It was considered one of the finest houses in Mexican California. It stands in Old Town San Diego State Historic Park and is a National and California Historical Landmark.",
+    "The Spanish Colonial house is U-shaped, 113 feet across the front and 98 feet along each wing. Its 13 rooms connect only through a covered outdoor walkway, not inside halls. A cupola on top gave a view of the plaza for bullfights and festivals.",
+    "José Antonio died in 1852, and the family stayed until 1887. Helen Hunt Jackson's 1884 novel Ramona made Californio life famous nationwide, and the house became linked with the story. Old postcards called it Ramona's Marriage Place. A restoration in 1910 removed some walls to enlarge the chapel and schoolroom."
+   ],
+   "fact": "The rooms connect only through an outdoor walkway.",
+   "disputed": "Many people think the house was built for the novel. Wikipedia says it was built in 1827, and the novel came out in 1884.",
+   "claims": [
+    {
+     "t": "The Casa de Estudillo was built in 1827.",
+     "a": 0,
+     "why": "Wikipedia: constructed in 1827."
+    },
+    {
+     "t": "The house was built for the novel Ramona.",
+     "a": 2,
+     "why": "The house dates to 1827. The novel was published in 1884."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Casa de Estudillo",
+     "u": "https://en.wikipedia.org/wiki/Casa_de_Estudillo"
+    },
+    {
+     "t": "Wikipedia: Ramona (novel)",
+     "u": "https://en.wikipedia.org/wiki/Ramona_(novel)"
+    }
+   ],
+   "card": {
+    "a": "1827",
+    "b": "1884",
+    "la": "Built",
+    "lb": "Ramona published"
+   }
+  }
+ ],
+ "heroKey": "sd_hd_now"
+}

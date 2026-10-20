@@ -417,3 +417,31 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | na_fn_now | https://commons.wikimedia.org/wiki/File:Fort_Nashborough_History_Center_2022.jpg | Antony-22 | CC BY-SA 4.0 | 2022 |
 | na_pa_then | https://commons.wikimedia.org/wiki/File:Centennial_Park_1921.jpg | 105th Observation Squadron | Public domain | 1921 |
 | na_pa_now | https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg | Aaron Archuleta | CC BY-SA 3.0 | 2012 |
+
+### Providence, Salt Lake City and San Diego (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| pv_sh_then | https://commons.wikimedia.org/wiki/File:State_House,_Providence,_R._I_(NYPL_b12647398-66797).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| pv_sh_now | https://commons.wikimedia.org/wiki/File:Rhode_Island_State_House_2.jpg | Kumar Appaiah | CC BY-SA 2.0 | 2013 |
+| pv_cs_then | https://commons.wikimedia.org/wiki/File:Saints_Peter_and_Paul_Cathedral,_Providence,_R._I_(NYPL_b12647398-63175).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| pv_cs_now | https://commons.wikimedia.org/wiki/File:Cathedral_of_Saints_Peter_and_Paul_-_Providence_01.jpg | Farragutful | CC BY-SA 4.0 | 2019 |
+| pv_vw_then | https://commons.wikimedia.org/wiki/File:Van_Wickle_Gates_from_Views_of_Providence_(1900).jpg | L.H. Nelson Company (Views of Providence) | Public domain | 1900 |
+| pv_vw_now | https://commons.wikimedia.org/wiki/File:Van_Wickle_Gates,_Brown_University.jpg | John W. Schulze | CC BY 2.0 | 2012 |
+| pv_ar_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_Laurence_E._Tilley,_Photographer_April,_1958_SOUTHEAST_FRONT_ON_WEYBOSSET_STREET._-_The_Arcade,_130_Westminster_Street,_Providence,_Providence_HABS_RI,4-PROV,106-1.tif | Laurence E. Tilley (Historic American Buildings Survey) | Public domain | 1958 |
+| pv_ar_now | https://commons.wikimedia.org/wiki/File:Providence_The_Arcade_110_Westminster_NW_9403_20190428.jpg | Karlunun | CC BY-SA 4.0 | 2019 |
+| sk_tp_then | https://commons.wikimedia.org/wiki/File:Temple_Square,_Salt_Lake_City,_1899.jpg | William Henry Jackson | Public domain | 1899 |
+| sk_tp_now | https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple_UT1.jpg | Acroterion | CC BY-SA 4.0 | 2010 |
+| sk_bh_then | https://commons.wikimedia.org/wiki/File:Eagle_Gate_and_Beehive_House_SLC_1894_Albieri.jpg | Probably Pavel Albieri | Public domain | 1894 |
+| sk_bh_now | https://commons.wikimedia.org/wiki/File:Beehive_House_-_Salt_Lake_City,_Utah_-_2_May_2020.jpg | Beneathtimp | CC0 | 2020 |
+| sk_lh_then | https://commons.wikimedia.org/wiki/File:The_Lion_House,_Salt_Lake_City-LCCN2008678282.jpg | Detroit Publishing Company | Public domain | about 1900 |
+| sk_lh_now | https://commons.wikimedia.org/wiki/File:Lion_House_Brigham_Young.jpg | Bobjgalindo | CC BY-SA 4.0 | 2009 |
+| sk_eg_then | https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0820)_-_Eagle_Gate,_Salt_Lake_City.jpg | Detroit Photographic Company | Public domain | about 1900 |
+| sk_eg_now | https://commons.wikimedia.org/wiki/File:Eagle_Gate,_north_side_-_Salt_Lake_City,_Utah_-_5_September_2016.jpg | Beneathtimp | CC0 | 2016 |
+| sd_hd_then | https://commons.wikimedia.org/wiki/File:Hotel_Del_c1900b.jpg | William Henry Jackson | Public domain | about 1900 |
+| sd_hd_now | https://commons.wikimedia.org/wiki/File:Hotel_Del_Coronado_01.JPG | Ctorbann | CC BY-SA 3.0 | 2007 |
+| sd_mi_then | https://commons.wikimedia.org/wiki/File:Mission_San_Diego,_San_Diego,_Calif_(NYPL_b12647398-62097).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| sd_mi_now | https://commons.wikimedia.org/wiki/File:Mission_San_Diego_de_Alcal%C3%A1_-_church.jpg | Bernard Gagnon | CC BY-SA 3.0 | 2013 |
+| sd_bp_then | https://commons.wikimedia.org/wiki/File:Lagoon,_Botanical_Building_in_background,_Panama-California_Exposition,_San_Diego,_Cal._1915.jpg | I. L. Eno | Public domain | 1915 |
+| sd_bp_now | https://commons.wikimedia.org/wiki/File:Balboa_Park_Botanical_Building_and_Lily_Pond.jpg | Intrepid88 | CC BY-SA 4.0 | 2019 |
+| sd_ce_then | https://commons.wikimedia.org/wiki/File:Ramona's_Marriage_Place,_San_Diego,_Calif_(NYPL_b12647398-62179).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| sd_ce_now | https://commons.wikimedia.org/wiki/File:Casa_de_Estudillo_01.jpg | Joe Mabel | CC BY-SA 3.0 | 2010 |
