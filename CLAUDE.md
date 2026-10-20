@@ -29,7 +29,7 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 
 ## How the code works
 - `build.py` builds `index.html` (the Artifact fragment) and `site/` (index, `_headers`, `sw.js`, manifest, icons, privacy, support, hidden Netlify form) from `src/`. `netlify.toml` publishes `site/`.
-- Packs: `src/packs/<id>.json`. Order and "coming soon" list: `src/packs/index.json`. Boss questions: `src/boss.json` (4 per pack). Photos: `src/photos/<key>.jpg` (max 720 px, q66) plus `manifest.json`.
+- Packs: `src/packs/<id>.json`. Order and "coming soon" list: `src/packs/index.json`. Boss questions: `src/boss.json` (4 per pack). Photos: `src/photos/<key>.jpg` (max 640 px, q60) plus `manifest.json`.
 - Pack schema: id, name, explorer, initials, ranks, heroKey, heroAlt, heroLi, heroCredit, mission, afterDone, safetyNote, badgeMap {stopId:[photoKey,"x% y%"]}, level, region, stops. Exactly 4 stops per town. Each stop has id, name, short, badge, tag, teaser, map, clue, safety, field, q{prompt,options,answer,hint,verify}, then{yr,label,line,ph?,link{t,u}} (link is REQUIRED), now{...,ph?}, story[], fact, disputed, claims[] (2, a: 0 solid, 1 disputed, 2 not true), sources[] (2+ https), card.
 - XP: 100 per stop, 25 per claim, 600 max per town. Save code is `TN3-` plus one 12-char group per town, so the dash count equals the town count. When adding towns, bump the counts in `tests/flows.py` (town count, `code.count('-')`, and the "too many towns" test with N+1 groups).
 - Validator rules: 3+ distinct correct-answer positions per pack, hint must not give the answer, boss answers not all in one slot, 4 distinct boss options.
@@ -56,7 +56,7 @@ Also done: demo mode, dynamic Home hero, region-grouped passport, offline suppor
 
 
 ## Still to do
-1. **Page size**: index.html is 15.7 MB of the 16 MB Artifact limit. Before adding the Southwest, shrink photos (e.g. 640 px, q60) or the Artifact publish will be refused.
+1. **Page size**: index.html is 12.2 MB of the 16 MB Artifact limit (photos now 640 px, q60 progressive). Real fix still to do before ~25 towns or App Store: load each town's photos on demand instead of one giant file.
 2. **Southwest/Mountain region**: Denver, Santa Fe or Phoenix, 4 stops each. Then maybe Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
 3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
 4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.
