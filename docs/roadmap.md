@@ -39,3 +39,6 @@ Celebration + passport, offline mode, verified-on-site badge, "historians argue"
 - Photos added for the new towns (18 free-licensed images). Still pending: a few "then" photos (see CREDITS.md).
 - "Try it from home (preview)" on unstamped stops: unlocks the story without saving a stamp or points.
 - Home "How it works" now shows the current mission's stop badges.
+
+## Progress persistence (decided Oct 20)
+No accounts. Web: localStorage plus TN3 save code. App Store wrapper: store progress in native app storage (survives updates, included in iCloud device backup), keep the save code as manual backup. Sign in with Apple only if sync or leaderboards are needed later.
