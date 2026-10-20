@@ -1,0 +1,417 @@
+{
+ "id": "albuquerque",
+ "name": "Albuquerque",
+ "explorer": "Duke City Explorer",
+ "initials": "ABQ",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Old Town Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Albuquerque Scholar"
+  ],
+  [
+   600,
+   "Albuquerque Historian"
+  ]
+ ],
+ "heroAlt": "The San Felipe de Neri Church in Albuquerque Old Town",
+ "heroLi": "<li>Header: Don McCulley · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Felipe_de_Neri_Church_IMG_5545.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Don McCulley · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Felipe_de_Neri_Church_IMG_5545.jpg\">Source</a>",
+ "mission": "Find four landmarks around Albuquerque. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Albuquerque is waiting.",
+ "safetyNote": "<li>Albuquerque is high and dry. Bring water, wear sunscreen, use crosswalks on busy Central Avenue, and stay out of fenced-off rail yard areas.</li>",
+ "badgeMap": {
+  "felipe": [
+   "ab_sf_now",
+   "50% 45%"
+  ],
+  "alvarado": [
+   "ab_av_now",
+   "50% 45%"
+  ],
+  "kimo": [
+   "ab_km_now",
+   "50% 45%"
+  ],
+  "shops": [
+   "ab_ry_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "felipe",
+   "name": "San Felipe de Neri Church",
+   "short": "San Felipe",
+   "badge": "San Felipe",
+   "tag": "Stop 1 of 4",
+   "teaser": "A church that collapsed, got rebuilt in 1793, and has been in use ever since.",
+   "map": "San Felipe de Neri Church, 2005 N Plaza St NW, Albuquerque, NM",
+   "clue": "Go to Old Town and find the Plaza. On its north side, look for a church with a pair of pointed towers.",
+   "safety": "Old Town has narrow streets and lots of foot traffic. Use crosswalks, and be quiet if you step inside, since it is a place of worship.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many bell towers does the front of the church have?",
+    "options": [
+     "3",
+     "2",
+     "4",
+     "1"
+    ],
+    "answer": 1,
+    "hint": "Look at the front from across the Plaza.",
+    "verify": "Wikipedia says Victorian-era changes added bell towers. Count them on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The church then",
+    "line": "A postcard of the church with its two towers, soon after 1898.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ab_sf_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Church_of_San_Felipo,_Albuquerque,_N._M_(NYPL_b12647398-62496).tiff",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The church today",
+    "line": "The church on the Plaza, with Old Town shops around it.",
+    "ph": {
+     "k": "ab_sf_now",
+     "by": "Don McCulley",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Felipe_de_Neri_Church_IMG_5545.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The church was founded in 1706 by Fray Manuel Moreno, one of the original settlers of Albuquerque. It was first dedicated to Saint Francis Xavier, but the Viceroy changed the patron saint to Saint Philip Neri in July 1706 to honor King Philip V.",
+    "The first church fell down in the winter of 1792 to 1793. The governor called the collapse a disgrace and ordered everyone nearby to help build a new one. Construction on the second church began in 1793.",
+    "Under Bishop Jean-Baptiste Lamy in the Victorian era, the church was remodeled with Gothic Revival bell towers and a pitched roof. It is the only building in Old Town proven to date to the Spanish colonial period, and it has been in use for over 200 years."
+   ],
+   "fact": "The first church fell down, and the town rebuilt it.",
+   "disputed": "Many people think the whole church is a single colonial building. Wikipedia says the Gothic bell towers and roof were added later, in the Victorian era.",
+   "claims": [
+    {
+     "t": "The current church was begun in 1793.",
+     "a": 0,
+     "why": "Wikipedia: the new church was begun in 1793."
+    },
+    {
+     "t": "The first church from 1706 is the one still standing.",
+     "a": 2,
+     "why": "The first church collapsed in the winter of 1792 to 1793."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: San Felipe de Neri Church",
+     "u": "https://en.wikipedia.org/wiki/San_Felipe_de_Neri_Church"
+    },
+    {
+     "t": "Wikipedia: Old Town Albuquerque",
+     "u": "https://en.wikipedia.org/wiki/Old_Town_Albuquerque"
+    }
+   ],
+   "card": {
+    "a": "1706",
+    "b": "1793",
+    "la": "First church",
+    "lb": "Second church"
+   }
+  },
+  {
+   "id": "alvarado",
+   "name": "Alvarado Hotel site",
+   "short": "Alvarado",
+   "badge": "Alvarado",
+   "tag": "Stop 2 of 4",
+   "teaser": "The biggest Harvey House hotel ever, torn down in 1970.",
+   "map": "Alvarado Transportation Center, 100 1st St SW, Albuquerque, NM",
+   "clue": "Go to First Street downtown, by the train platforms. Look for the red-roofed station building with a tall tower.",
+   "safety": "This is a working train and bus center. Stay on public walkways, keep clear of the tracks, and watch for buses.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What kind of vehicles use the center that stands on the hotel's old site?",
+    "options": [
+     "Ferries",
+     "Cable cars",
+     "Trains",
+     "Airplanes"
+    ],
+    "answer": 2,
+    "hint": "Look beside the building and notice the rails.",
+    "verify": "Wikipedia says the Alvarado Transportation Center opened in 2002 on the hotel site. Look at the platforms on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Survey photo",
+    "label": "The arcade then",
+    "line": "A survey photograph of the covered arcade that led from the train platform to the hotel.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ab_av_then",
+     "by": "Fred Mang (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:EAST_FRONT,_ENTRANCE_FROM_STATION_PLATFORM_TO_ARCADE_WHICH_LEADS_AROUND_CENTRAL_PATIO_TO_HOTEL_-_Alvarado_Hotel,_First_Street,_Albuquerque,_Bernalillo_County,_NM_HABS_NM,1-ALBU,5-4.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The site today",
+    "line": "The Alvarado Transportation Center, built where the hotel stood.",
+    "ph": {
+     "k": "ab_av_now",
+     "by": "Asaavedra32",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Albuquerque_NM_Alvarado_Transportation_Center.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Alvarado Hotel was built in 1901 and 1902 by the Santa Fe Railway and opened on May 10, 1902. The Fred Harvey Company ran it. Charles Frederick Whittlesey designed it in the Mission Revival style, and he also designed El Tovar at the Grand Canyon.",
+    "In 1922 it was remodeled and expanded to 120 rooms, with interiors redone by architect Mary Colter. It was then the largest of all the Harvey hotels, and for many travelers it was their first look at the American Southwest.",
+    "The railroad tore it down in 1970. A preservationist called it the most serious loss of a landmark the city had suffered, and it helped rally support for saving old buildings. The Alvarado Transportation Center opened on the site in 2002."
+   ],
+   "fact": "It was the biggest Harvey House ever built.",
+   "disputed": "The Alvarado Transportation Center is named for the lost hotel, but the hotel itself is gone. Wikipedia says the center stands on its site.",
+   "claims": [
+    {
+     "t": "The Alvarado Hotel opened in 1902.",
+     "a": 0,
+     "why": "Wikipedia: it opened on May 10, 1902."
+    },
+    {
+     "t": "The Alvarado Hotel is still standing.",
+     "a": 2,
+     "why": "The railroad demolished it in 1970."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Alvarado Hotel",
+     "u": "https://en.wikipedia.org/wiki/Alvarado_Hotel"
+    },
+    {
+     "t": "Wikipedia: Fred Harvey Company",
+     "u": "https://en.wikipedia.org/wiki/Fred_Harvey_Company"
+    }
+   ],
+   "card": {
+    "a": "1902",
+    "b": "1970",
+    "la": "Opened",
+    "lb": "Demolished"
+   }
+  },
+  {
+   "id": "kimo",
+   "name": "KiMo Theatre",
+   "short": "KiMo",
+   "badge": "KiMo",
+   "tag": "Stop 3 of 4",
+   "teaser": "A movie palace named in a contest, and designed to look like a pueblo.",
+   "map": "KiMo Theatre, 423 Central Ave NW, Albuquerque, NM",
+   "clue": "Go to Central Avenue at 5th Street downtown. Look for the cream-colored building with colorful decorations and a tall red neon sign.",
+   "safety": "Central Avenue is busy. Use crosswalks, check box office hours, and keep off the street when taking photos.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "A row of decorated terra cotta shields sits above the windows of which floor?",
+    "options": [
+     "Third",
+     "First",
+     "Second",
+     "Fourth"
+    ],
+    "answer": 0,
+    "hint": "Look at the very top row of windows.",
+    "verify": "Wikipedia says a row of terra cotta shields runs above the third-floor windows. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1979",
+    "label": "The theater in 1979",
+    "line": "The KiMo in 1979, with its marquee, before the later restoration.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ab_km_then",
+     "by": "John Margolies",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Kimo_Theater,_Albuquerque,_New_Mexico_LCCN2017708024.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The theater today",
+    "line": "The restored front, with its neon sign and blue windows.",
+    "ph": {
+     "k": "ab_km_now",
+     "by": "Asaavedra32",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Facade_of_KIMO_2012.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The KiMo opened on September 19, 1927, in a style called Pueblo Deco, a blend of Pueblo Revival and Art Deco. The Boller Brothers architecture firm designed it, after studying Southwest cultures and building styles.",
+    "The Albuquerque Journal held a naming contest with a $50 prize. The name had to be Indian and could not have more than six letters. Pablo Abeita, a former governor of Isleta Pueblo, won with \"Kimo\", which means mountain lion.",
+    "The theater closed in 1970 and a fire damaged it by 1977. The family sold it to the city, which saved it and restored it. A replica of the original neon sign, 24 feet tall, went up in June 2011."
+   ],
+   "fact": "The theater's name came from a contest.",
+   "disputed": "Some people say Kimo means \"king of the beasts\". Wikipedia says it means mountain lion, sometimes loosely translated that way.",
+   "claims": [
+    {
+     "t": "The KiMo opened in 1927.",
+     "a": 0,
+     "why": "Wikipedia: opened September 19, 1927."
+    },
+    {
+     "t": "The architect named the theater himself.",
+     "a": 2,
+     "why": "Pablo Abeita won a newspaper naming contest."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: KiMo Theater",
+     "u": "https://en.wikipedia.org/wiki/KiMo_Theater"
+    },
+    {
+     "t": "Wikipedia: Boller Brothers",
+     "u": "https://en.wikipedia.org/wiki/Boller_Brothers"
+    }
+   ],
+   "card": {
+    "a": "1927",
+    "b": "2011",
+    "la": "Opened",
+    "lb": "Neon sign replica"
+   }
+  },
+  {
+   "id": "shops",
+   "name": "Santa Fe Railway Shops",
+   "short": "Rail Shops",
+   "badge": "Rail Shops",
+   "tag": "Stop 4 of 4",
+   "teaser": "A railroad workshop so big that it was Albuquerque's biggest employer.",
+   "map": "Albuquerque Rail Yards, 777 1st St SW, Albuquerque, NM",
+   "clue": "Go south of downtown to the Barelas neighborhood. Look for a huge old industrial building with tall glass walls.",
+   "safety": "Much of the rail yard is private or closed. View from public streets, and do not enter fenced areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The huge machine shop's long north and south faces are mostly made of what?",
+    "options": [
+     "Brick",
+     "Wood",
+     "Adobe",
+     "Glass"
+    ],
+    "answer": 3,
+    "hint": "Light poured in from all sides for the workers.",
+    "verify": "Wikipedia says the shop has uninterrupted glass walls on its north and south faces. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1943",
+    "label": "The railyard then",
+    "line": "Jack Delano photographed the Santa Fe Railway's tie plant in Albuquerque in March 1943.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ab_ry_then",
+     "by": "Jack Delano (Farm Security Administration)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:At_the_Santa_Fe_R.R._tie_plant,_Albuquerque1a34734v.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2005",
+    "head": "Today",
+    "label": "The shop today",
+    "line": "A 2005 survey photo of the transfer table and machine shop.",
+    "ph": {
+     "k": "ab_ry_now",
+     "by": "Jet Lowe (Historic American Engineering Record)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Looking_southwest_at_dual-track_transfer_table,_with_Machine_Shop_(Bldg._163)_in_background_-_Atchison,_Topeka,_Santa_Fe_Railroad,_Albuquerque_Shops,_908_Second_Street,_Southwest,_HAER_NM-12-5.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "story": [
+    "The Santa Fe Railway built shops in Albuquerque in the 1880s. The buildings that remain were put up between 1915 and 1925, and the shops became the city's biggest employer, with 970 workers in 1919 and a peak of 1,500 in the 1940s.",
+    "The main job was steam locomotive maintenance. Each locomotive needed a full rebuild every 12 to 18 months, and the shops finished about 40 overhauls a month at their peak.",
+    "The huge erection and machine shop was designed in 1920 and built in eight months, starting in February 1921. It covers about 165,000 square feet, with a main bay 604 feet long, 57 feet high and a crane that can lift 250 tons. Work declined in the 1950s as the railroad switched to diesel, and the shops later sat empty."
+   ],
+   "fact": "The main bay is 604 feet long.",
+   "disputed": "Many people think railroad shops like these built diesel locomotives. Wikipedia says the Santa Fe moved diesel repair to other yards.",
+   "claims": [
+    {
+     "t": "The shops were once Albuquerque's largest employer.",
+     "a": 0,
+     "why": "Wikipedia: they were the largest employer in the city in their heyday."
+    },
+    {
+     "t": "The shops mostly serviced diesel engines.",
+     "a": 2,
+     "why": "Their core work was steam locomotive maintenance."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Santa Fe Railway Shops (Albuquerque)",
+     "u": "https://en.wikipedia.org/wiki/Santa_Fe_Railway_Shops_(Albuquerque)"
+    },
+    {
+     "t": "Wikipedia: Atchison, Topeka and Santa Fe Railway",
+     "u": "https://en.wikipedia.org/wiki/Atchison,_Topeka_and_Santa_Fe_Railway"
+    }
+   ],
+   "card": {
+    "a": "1921",
+    "b": "1950s",
+    "la": "Machine shop built",
+    "lb": "Diesels arrive"
+   }
+  }
+ ],
+ "heroKey": "ab_sf_now"
+}

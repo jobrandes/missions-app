@@ -127,7 +127,7 @@
   /* ---------- header ---------- */
   function applyCity(){
     var c=city(); preloadTown(cityId);
-    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>12?'long xl':(c.name.length>8?'long':'');
+    var h1=document.getElementById('cityName'); h1.textContent=c.name; h1.className=c.name.length>10?'long xl':(c.name.length>8?'long':'');
     var hero=document.getElementById('hero'), img=document.getElementById('heroImg');
     if(c.heroKey && PHOTOS[c.heroKey]){ img.src=PHOTOS[c.heroKey]; img.alt=c.heroAlt; hero.classList.remove('nophoto'); }
     else { img.removeAttribute('src'); img.alt=''; hero.classList.add('nophoto'); }

@@ -1,0 +1,417 @@
+{
+ "id": "tucson",
+ "name": "Tucson",
+ "explorer": "Old Pueblo Explorer",
+ "initials": "TUC",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Desert Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Tucson Scholar"
+  ],
+  [
+   600,
+   "Tucson Historian"
+  ]
+ ],
+ "heroAlt": "Mission San Xavier del Bac near Tucson",
+ "heroLi": "<li>Header: Philcomanforterie · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Mission_San_Xavier_del_Bac,_Tucson_AZ.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Philcomanforterie · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Mission_San_Xavier_del_Bac,_Tucson_AZ.jpg\">Source</a>",
+ "mission": "Find four landmarks around Tucson. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Tucson is waiting.",
+ "safetyNote": "<li>Tucson gets very hot. Go early or late in the day, bring water, wear sunscreen, and use crosswalks. The San Xavier mission is a working church, so be quiet and respectful.</li>",
+ "badgeMap": {
+  "xavier": [
+   "tu_sx_now",
+   "50% 45%"
+  ],
+  "depot": [
+   "tu_dp_now",
+   "50% 45%"
+  ],
+  "courthouse": [
+   "tu_cc_now",
+   "50% 45%"
+  ],
+  "oldmain": [
+   "tu_om_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "xavier",
+   "name": "Mission San Xavier del Bac",
+   "short": "San Xavier",
+   "badge": "San Xavier",
+   "tag": "Stop 1 of 4",
+   "teaser": "A bright white church in the desert, about 230 years old.",
+   "map": "Mission San Xavier del Bac, 1950 W San Xavier Rd, Tucson, AZ",
+   "clue": "Go about 10 miles south of downtown to the San Xavier Indian Reservation. Look for a bright church with two bell towers, standing alone in the desert.",
+   "safety": "The mission is an active church and place of pilgrimage. Check visiting hours, dress respectfully, be quiet, and ask before taking photos inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What color is the mission's main building?",
+    "options": [
+     "White",
+     "Red",
+     "Blue",
+     "Black"
+    ],
+    "answer": 0,
+    "hint": "Think of a desert bird that is also a symbol of peace.",
+    "verify": "Wikipedia calls it an outstanding example of Spanish Colonial architecture. Check the color on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1902",
+    "label": "The mission then",
+    "line": "A color photochrom of the mission from about 1902.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "tu_sx_then",
+     "by": "Detroit Photographic Company (Smithsonian American Art Museum)",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Xavier_Mission,_Tucson,_Arizona-saam_2004.29.38.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The mission today",
+    "line": "The white church with its two towers.",
+    "ph": {
+     "k": "tu_sx_now",
+     "by": "Philcomanforterie",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mission_San_Xavier_del_Bac,_Tucson_AZ.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Father Eusebio Kino, a Jesuit of Italian descent, founded the mission in 1692. It was named for Francis Xavier. The first church was built about two miles from today's site, and construction began on April 28, 1700. An Apache raid in 1770 destroyed the earlier church.",
+    "The present church was built between 1783 and 1797, which makes it the oldest European structure in Arizona. The O'odham people provided the labor.",
+    "The mission sits on the San Xavier Indian Reservation, in a settlement of the Sobaipuri O'odham. It is a pilgrimage site, with thousands visiting every year on foot and on horseback, and about 200,000 visitors a year in all."
+   ],
+   "fact": "O'odham workers built the church.",
+   "disputed": "The mission is often called the oldest church in Arizona, but Wikipedia only says it is the oldest European structure in Arizona, and it was built between 1783 and 1797.",
+   "claims": [
+    {
+     "t": "Mission San Xavier del Bac was founded in 1692.",
+     "a": 0,
+     "why": "Wikipedia: founded in 1692 by Eusebio Kino."
+    },
+    {
+     "t": "The present church was built in the 1900s.",
+     "a": 2,
+     "why": "It was built between 1783 and 1797."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Mission San Xavier del Bac",
+     "u": "https://en.wikipedia.org/wiki/Mission_San_Xavier_del_Bac"
+    },
+    {
+     "t": "Wikipedia: Eusebio Kino",
+     "u": "https://en.wikipedia.org/wiki/Eusebio_Kino"
+    }
+   ],
+   "card": {
+    "a": "1692",
+    "b": "1797",
+    "la": "Founded",
+    "lb": "Church finished"
+   }
+  },
+  {
+   "id": "depot",
+   "name": "Tucson Depot",
+   "short": "Depot",
+   "badge": "Depot",
+   "tag": "Stop 2 of 4",
+   "teaser": "A train depot that was restored to look like it did in 1941.",
+   "map": "Tucson Amtrak Station, 400 N Toole Ave, Tucson, AZ",
+   "clue": "Go to the downtown rail area at Toole Avenue. Look for a long, tan station building with a red tile roof.",
+   "safety": "Keep clear of the tracks, and watch for trains and the streetcar. Use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What color are the roof tiles on the depot?",
+    "options": [
+     "Green",
+     "Blue",
+     "Gray",
+     "Red"
+    ],
+    "answer": 3,
+    "hint": "Look at the roof and think of clay.",
+    "verify": "Wikipedia says the restored depot has red clay roof tiles. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1930s to 1940s",
+    "label": "The depot then",
+    "line": "A postcard of the depot, described as a beautiful Spanish-type depot.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "tu_dp_then",
+     "by": "Tichnor Brothers (Boston Public Library)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Beautiful_Spanish_type_Southern_Pacific_Depot,_Tucson,_Arizona_(73692).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The depot today",
+    "line": "A restored building beside the tracks at the depot.",
+    "ph": {
+     "k": "tu_dp_now",
+     "by": "Tony the Marine",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tucson-Amtrak_Station-1907-1922-1.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Southern Pacific Railroad built the depot in 1907. Its architect, Daniel J. Patterson, also designed other depots in the era, including the station in San Antonio.",
+    "In 1998 the city bought the whole depot property from the Union Pacific Railroad, which had absorbed the Southern Pacific. Restoration was finished in 2004, bringing the main building and three others back to their 1941 Spanish Colonial Revival look.",
+    "The restored station has stuccoed brick walls, red clay roof tiles and colorful decorative tilework in the waiting room. The Southern Arizona Transportation Museum is in the old records vault, and the Old Pueblo Trolley reached the depot in 2009."
+   ],
+   "fact": "It was restored to its 1941 look, not its 1907 look.",
+   "disputed": "Many people assume the depot looks the way it did when it was built. Wikipedia says it was restored to its 1941 modernized style.",
+   "claims": [
+    {
+     "t": "The Tucson depot was built in 1907.",
+     "a": 0,
+     "why": "Wikipedia: built in 1907 by the Southern Pacific."
+    },
+    {
+     "t": "The Union Pacific built the depot.",
+     "a": 2,
+     "why": "The Southern Pacific built it. The Union Pacific absorbed the Southern Pacific later."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Tucson station",
+     "u": "https://en.wikipedia.org/wiki/Tucson_station"
+    },
+    {
+     "t": "Wikipedia: Southern Pacific Railroad",
+     "u": "https://en.wikipedia.org/wiki/Southern_Pacific_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1907",
+    "b": "2004",
+    "la": "Built",
+    "lb": "Restored"
+   }
+  },
+  {
+   "id": "courthouse",
+   "name": "Pima County Courthouse",
+   "short": "Courthouse",
+   "badge": "Courthouse",
+   "tag": "Stop 3 of 4",
+   "teaser": "A courthouse with a tiled dome, now a visitor center.",
+   "map": "Pima County Courthouse, 115 N Church Ave, Tucson, AZ",
+   "clue": "Go downtown to the Presidio area on Church Avenue. Look for a big building with a round dome and arched walkways.",
+   "safety": "Downtown streets have light rail and traffic. Use crosswalks, and check hours before going in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The courthouse's big dome is covered in what?",
+    "options": [
+     "Plain concrete",
+     "Wood shingles",
+     "Colorful tiles",
+     "Grass"
+    ],
+    "answer": 2,
+    "hint": "Look at the dome in the sunlight and notice how it shines.",
+    "verify": "The photos show a patterned dome. Check what it is made of on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1930s to 1940s",
+    "label": "The courthouse then",
+    "line": "A postcard of the courthouse, with the Santa Catalina Mountains in the background.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "tu_cc_then",
+     "by": "Tichnor Brothers (Boston Public Library)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pima_County_Court_House,_Tucson,_Arizona,_Santa_Catalina_Mountains_in_background-_portion_of_Old_City_of_Tucson_wall_in_foreground_(65323).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2003",
+    "head": "Today",
+    "label": "The courthouse today",
+    "line": "The domed courthouse, framed by palm trees.",
+    "ph": {
+     "k": "tu_cc_now",
+     "by": "Gillfoto",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pima_County_Courthouse_10.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Architect Roy Place designed the courthouse in 1928, in a blend of Mission Revival and Spanish Colonial Revival styles. It is listed on the National Register of Historic Places.",
+    "It housed the Pima County Superior Court from 1930 to 1977, and then the Pima County Consolidated Justice Court until 2015.",
+    "After the courts moved to newer buildings, the county planned to turn it into museum space. The University of Arizona Mineral Museum began moving in during 2020, and the building now holds the Southern Arizona Heritage and Visitor Center."
+   ],
+   "fact": "It was a working courthouse for decades.",
+   "disputed": "Many people still call it the county courthouse. Wikipedia says the courts have moved out, and the building is now a visitor center.",
+   "claims": [
+    {
+     "t": "Roy Place designed the courthouse in 1928.",
+     "a": 0,
+     "why": "Wikipedia: designed by Roy Place in 1928."
+    },
+    {
+     "t": "The courthouse still hosts trials today.",
+     "a": 2,
+     "why": "The courts moved out by 2015."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Pima County Courthouse",
+     "u": "https://en.wikipedia.org/wiki/Pima_County_Courthouse"
+    },
+    {
+     "t": "Wikipedia: Roy Place",
+     "u": "https://en.wikipedia.org/wiki/Roy_Place"
+    }
+   ],
+   "card": {
+    "a": "1928",
+    "b": "2015",
+    "la": "Designed",
+    "lb": "Courts move out"
+   }
+  },
+  {
+   "id": "oldmain",
+   "name": "Old Main, University of Arizona",
+   "short": "Old Main",
+   "badge": "Old Main",
+   "tag": "Stop 4 of 4",
+   "teaser": "The first building at a university that started with 32 students.",
+   "map": "Old Main, 1200 E University Blvd, Tucson, AZ",
+   "clue": "Go to the University of Arizona campus. Look for the brick building with two-story porches near the mall.",
+   "safety": "The campus has bikes and scooters. Stay on walkways, and check whether the building is open before you go in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is Old Main mostly built from?",
+    "options": [
+     "Brick",
+     "Glass",
+     "Adobe",
+     "Logs"
+    ],
+    "answer": 0,
+    "hint": "Look at the walls up close and think of fired clay.",
+    "verify": "The photos show a brick building. Check the walls on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1938",
+    "label": "Old Main then",
+    "line": "A survey photo from January 1938, the year the city condemned the building.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "tu_om_then",
+     "by": "Frederick D. Nichols (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Frederick_D._Nichols,_Photographer_January_1938_DETAIL_OF_WING._-_University_of_Arizona,_Old_Main,_University_of_Arizona_Campus,_Tucson,_HABS_ARIZ,10-TUCSO,14A-3.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "Old Main today",
+    "line": "The restored brick building with its two-story porches.",
+    "ph": {
+     "k": "tu_om_now",
+     "by": "Tony the Marine",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tucson-Old_Main_University_of_Arizona_Building-1875.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Construction began on October 27, 1887, and the money ran out before the roof was finished. Officials then discovered that federal loans were available for agricultural schools, so the building was renamed the School of Agriculture instead of the School of Mines.",
+    "Old Main opened for the first class on October 1, 1891. It held classrooms, a library, offices and dorms, and was the only building on campus. Six teachers taught 32 students.",
+    "The city condemned the building in 1938 because of neglect. The US Navy repaired it in 1942 for World War II, and it came back to campus use in 1945. A full renovation reopened it in 2014."
+   ],
+   "fact": "The budget ran out before the roof was done.",
+   "disputed": "Many people assume Old Main was always meant to be a university hall. Wikipedia says it was planned as a School of Mines and renamed to get federal money.",
+   "claims": [
+    {
+     "t": "Old Main opened for classes in 1891.",
+     "a": 0,
+     "why": "Wikipedia: first class on October 1, 1891."
+    },
+    {
+     "t": "Old Main was condemned in 1887.",
+     "a": 2,
+     "why": "Construction began in 1887. It was condemned in 1938."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old Main, University of Arizona",
+     "u": "https://en.wikipedia.org/wiki/Old_Main,_University_of_Arizona"
+    },
+    {
+     "t": "Wikipedia: University of Arizona",
+     "u": "https://en.wikipedia.org/wiki/University_of_Arizona"
+    }
+   ],
+   "card": {
+    "a": "1887",
+    "b": "1891",
+    "la": "Construction begins",
+    "lb": "First class"
+   }
+  }
+ ],
+ "heroKey": "tu_sx_now"
+}

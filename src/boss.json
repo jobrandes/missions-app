@@ -964,5 +964,97 @@
    "a": 3,
    "why": "The man-made Arizona Canal crossed a natural 20-foot drop."
   }
+ ],
+ "albuquerque": [
+  {
+   "q": "In which year did the Alvarado Hotel open?",
+   "o": [
+    "1887",
+    "1927",
+    "1902",
+    "1970"
+   ],
+   "a": 2,
+   "why": "It opened on May 10, 1902."
+  },
+  {
+   "q": "What was the KiMo's name chosen through?",
+   "o": [
+    "A school vote",
+    "A newspaper contest",
+    "A coin toss",
+    "The mayor's decision"
+   ],
+   "a": 1,
+   "why": "A newspaper naming contest, won by Pablo Abeita."
+  },
+  {
+   "q": "What was the main job at the Santa Fe Railway Shops?",
+   "o": [
+    "Steam locomotive maintenance",
+    "Building passenger cars",
+    "Printing tickets",
+    "Making rails"
+   ],
+   "a": 0,
+   "why": "They overhauled steam locomotives."
+  },
+  {
+   "q": "In which year did construction on the current San Felipe de Neri Church begin?",
+   "o": [
+    "1706",
+    "1793",
+    "1850",
+    "1902"
+   ],
+   "a": 1,
+   "why": "Construction began in 1793 after the first church collapsed."
+  }
+ ],
+ "tucson": [
+  {
+   "q": "Who founded Mission San Xavier del Bac in 1692?",
+   "o": [
+    "Coronado",
+    "Junipero Serra",
+    "Eusebio Kino",
+    "Diego de Vargas"
+   ],
+   "a": 2,
+   "why": "Eusebio Kino, a Jesuit, founded it."
+  },
+  {
+   "q": "The Tucson depot was restored to the look it had in which year?",
+   "o": [
+    "1907",
+    "1941",
+    "1970",
+    "2004"
+   ],
+   "a": 1,
+   "why": "Restoration returned it to its 1941 Spanish Colonial Revival look."
+  },
+  {
+   "q": "Who designed the Pima County Courthouse?",
+   "o": [
+    "Roy Place",
+    "Frank Lloyd Wright",
+    "Mary Colter",
+    "Daniel Patterson"
+   ],
+   "a": 0,
+   "why": "Roy Place designed it in 1928."
+  },
+  {
+   "q": "Why was Old Main renamed the School of Agriculture?",
+   "o": [
+    "It was moved",
+    "Federal loans for agricultural schools",
+    "A fire",
+    "The state demanded it"
+   ],
+   "a": 1,
+   "why": "Officials found federal loans for agricultural schools were available."
+  }
  ]
 }

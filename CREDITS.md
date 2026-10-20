@@ -285,3 +285,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | px_bi_now | https://commons.wikimedia.org/wiki/File:Azbiltmore.jpg | Aufaber | Public domain | 2005 |
 | px_af_then | https://commons.wikimedia.org/wiki/File:VIEW_OF_ARIZONA_FALLS_POWER_PLANT,_LOOKING_EAST_Photographer-_unknown._No_date_-_Arizona_Canal,_North_of_Salt_River,_Phoenix,_Maricopa_County,_AZ_HAER_ARIZ,7-PHEN.V,1-12.tif | Historic American Engineering Record (U.S. government) | Public domain | undated survey photo |
 | px_af_now | https://commons.wikimedia.org/wiki/File:Arizona_Falls,_Phoenix,_AZ.jpg | Patrick Finnegan | CC BY 2.0 | 2013 |
+
+### Albuquerque and Tucson (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| ab_sf_then | https://commons.wikimedia.org/wiki/File:Church_of_San_Felipo,_Albuquerque,_N._M_(NYPL_b12647398-62496).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| ab_sf_now | https://commons.wikimedia.org/wiki/File:San_Felipe_de_Neri_Church_IMG_5545.jpg | Don McCulley | CC0 | 2018 |
+| ab_av_then | https://commons.wikimedia.org/wiki/File:EAST_FRONT,_ENTRANCE_FROM_STATION_PLATFORM_TO_ARCADE_WHICH_LEADS_AROUND_CENTRAL_PATIO_TO_HOTEL_-_Alvarado_Hotel,_First_Street,_Albuquerque,_Bernalillo_County,_NM_HABS_NM,1-ALBU,5-4.tif | Fred Mang (Historic American Buildings Survey) | Public domain | undated survey photo |
+| ab_av_now | https://commons.wikimedia.org/wiki/File:Albuquerque_NM_Alvarado_Transportation_Center.jpg | Asaavedra32 | CC BY-SA 3.0 | 2007 |
+| ab_km_then | https://commons.wikimedia.org/wiki/File:Kimo_Theater,_Albuquerque,_New_Mexico_LCCN2017708024.tif | John Margolies | Public domain | 1979 |
+| ab_km_now | https://commons.wikimedia.org/wiki/File:Facade_of_KIMO_2012.JPG | Asaavedra32 | CC BY-SA 3.0 | 2012 |
+| ab_ry_then | https://commons.wikimedia.org/wiki/File:At_the_Santa_Fe_R.R._tie_plant,_Albuquerque1a34734v.jpg | Jack Delano (Farm Security Administration) | Public domain | 1943 |
+| ab_ry_now | https://commons.wikimedia.org/wiki/File:Looking_southwest_at_dual-track_transfer_table,_with_Machine_Shop_(Bldg._163)_in_background_-_Atchison,_Topeka,_Santa_Fe_Railroad,_Albuquerque_Shops,_908_Second_Street,_Southwest,_HAER_NM-12-5.tif | Jet Lowe (Historic American Engineering Record) | Public domain | 2005 |
+| tu_sx_then | https://commons.wikimedia.org/wiki/File:San_Xavier_Mission,_Tucson,_Arizona-saam_2004.29.38.jpg | Detroit Photographic Company (Smithsonian American Art Museum) | CC0 | about 1902 |
+| tu_sx_now | https://commons.wikimedia.org/wiki/File:Mission_San_Xavier_del_Bac,_Tucson_AZ.jpg | Philcomanforterie | CC BY-SA 4.0 | 2018 |
+| tu_dp_then | https://commons.wikimedia.org/wiki/File:Beautiful_Spanish_type_Southern_Pacific_Depot,_Tucson,_Arizona_(73692).jpg | Tichnor Brothers (Boston Public Library) | Public domain | about 1930 to 1945 |
+| tu_dp_now | https://commons.wikimedia.org/wiki/File:Tucson-Amtrak_Station-1907-1922-1.JPG | Tony the Marine | CC BY-SA 3.0 | 2015 |
+| tu_cc_then | https://commons.wikimedia.org/wiki/File:Pima_County_Court_House,_Tucson,_Arizona,_Santa_Catalina_Mountains_in_background-_portion_of_Old_City_of_Tucson_wall_in_foreground_(65323).jpg | Tichnor Brothers (Boston Public Library) | Public domain | about 1930 to 1945 |
+| tu_cc_now | https://commons.wikimedia.org/wiki/File:Pima_County_Courthouse_10.JPG | Gillfoto | CC BY-SA 3.0 | 2003 |
+| tu_om_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Frederick_D._Nichols,_Photographer_January_1938_DETAIL_OF_WING._-_University_of_Arizona,_Old_Main,_University_of_Arizona_Campus,_Tucson,_HABS_ARIZ,10-TUCSO,14A-3.tif | Frederick D. Nichols (Historic American Buildings Survey) | Public domain | 1938 |
+| tu_om_now | https://commons.wikimedia.org/wiki/File:Tucson-Old_Main_University_of_Arizona_Building-1875.JPG | Tony the Marine | CC BY-SA 3.0 | 2015 |
