@@ -1056,5 +1056,51 @@
    "a": 1,
    "why": "Officials found federal loans for agricultural schools were available."
   }
+ ],
+ "pittsburgh": [
+  {
+   "q": "On which date did the Monongahela Incline open?",
+   "o": [
+    "May 28, 1870",
+    "July 4, 1776",
+    "March 19, 1883",
+    "October 13, 1884"
+   ],
+   "a": 0,
+   "why": "It opened on May 28, 1870."
+  },
+  {
+   "q": "Who designed the Smithfield Street Bridge that stands today?",
+   "o": [
+    "John Roebling",
+    "Louis Wernwag",
+    "Henry Bouquet",
+    "Gustav Lindenthal"
+   ],
+   "a": 3,
+   "why": "Gustav Lindenthal designed the present bridge."
+  },
+  {
+   "q": "What happened to Pittsburgh's old courthouse on May 7, 1882?",
+   "o": [
+    "It was torn down",
+    "It was moved",
+    "It burned",
+    "It was sold"
+   ],
+   "a": 2,
+   "why": "A fire destroyed it, and Richardson's design replaced it."
+  },
+  {
+   "q": "Who refused Henry Clay Frick's offer to move the Block House?",
+   "o": [
+    "The city council",
+    "The Daughters of the American Revolution",
+    "The army",
+    "The governor"
+   ],
+   "a": 1,
+   "why": "The Daughters refused his $25,000 offer, and the court backed them."
+  }
  ]
 }

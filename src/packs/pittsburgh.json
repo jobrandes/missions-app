@@ -1,0 +1,417 @@
+{
+ "id": "pittsburgh",
+ "name": "Pittsburgh",
+ "explorer": "Steel City Explorer",
+ "initials": "PIT",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Pittsburgh Scholar"
+  ],
+  [
+   600,
+   "Pittsburgh Historian"
+  ]
+ ],
+ "heroAlt": "The Monongahela Incline climbing Mount Washington in Pittsburgh",
+ "heroLi": "<li>Header: Cbaile19 · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Monongahela_Incline,_2024-12-15.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Cbaile19 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Monongahela_Incline,_2024-12-15.jpg\">Source</a>",
+ "mission": "Find four landmarks around Pittsburgh. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Pittsburgh is waiting.",
+ "safetyNote": "<li>Pittsburgh is hilly and full of bridges and one-way streets. Use crosswalks, keep off bridge roadways, and mind the steep steps near the inclines.</li>",
+ "badgeMap": {
+  "incline": [
+   "pg_mi_now",
+   "50% 45%"
+  ],
+  "bridge": [
+   "pg_sb_now",
+   "50% 45%"
+  ],
+  "courthouse": [
+   "pg_cc_now",
+   "50% 45%"
+  ],
+  "blockhouse": [
+   "pg_bh_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "incline",
+   "name": "Monongahela Incline",
+   "short": "Mon Incline",
+   "badge": "Mon Incline",
+   "tag": "Stop 1 of 4",
+   "teaser": "A tiny cable car that has hauled people up a cliff since 1870.",
+   "map": "Monongahela Incline lower station, Station Square, Pittsburgh, PA",
+   "clue": "Go to Station Square on the south bank of the Monongahela River, across from downtown. Look for a small brick station at the foot of the hillside, with tracks climbing steeply up it.",
+   "safety": "Cars run on a fixed schedule and fares apply. Stay on the platform, watch your step boarding, and use crosswalks near Carson Street.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which hill does the incline climb?",
+    "options": [
+     "Mount Olive",
+     "Mount Vernon",
+     "Mount Washington",
+     "Mount Hood"
+    ],
+    "answer": 2,
+    "hint": "The hill was once nicknamed Coal Hill.",
+    "verify": "Wikipedia says the incline climbs Mount Washington. Look up at the hillside on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1897",
+    "label": "The incline then",
+    "line": "The lower station and tracks of the Monongahela Incline, with the freight incline beside it, photographed in 1897.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pg_mi_then",
+     "by": "Cassier's Magazine",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Monongahela_incline_and_freight_incline.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The incline today",
+    "line": "The red brick lower station, with the tracks running up the hillside.",
+    "ph": {
+     "k": "pg_mi_now",
+     "by": "Cbaile19",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Monongahela_Incline,_2024-12-15.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Monongahela Incline opened on May 28, 1870, and it was the first incline built for carrying passengers. German immigrants had crowded into Pittsburgh for factory jobs, and the only space left was on the steep hills. Prussian-born engineer John Endres designed it, with help from his daughter Caroline, one of the first women engineers in the United States.",
+    "On opening day, 944 fares were collected. On the second day, 4,174 people rode it. Each car carries 23 passengers up a track 635 feet long, climbing about 369 feet at a grade of roughly 35 degrees.",
+    "Steam power gave way to electricity in 1935. It is the oldest continuously operating funicular in the United States, and one of only two survivors of the 17 passenger inclines Pittsburgh once had. The other is the nearby Duquesne Incline."
+   ],
+   "fact": "It was the first passenger incline in the city.",
+   "disputed": "Many people say the Duquesne Incline is the oldest. Wikipedia says the Monongahela Incline, from 1870, is the oldest continuously operating funicular in the US.",
+   "claims": [
+    {
+     "t": "The Monongahela Incline opened in 1870.",
+     "a": 0,
+     "why": "Wikipedia: opened May 28, 1870."
+    },
+    {
+     "t": "Pittsburgh still has all 17 of its original passenger inclines.",
+     "a": 2,
+     "why": "Only two survive: the Monongahela and the Duquesne."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Monongahela Incline",
+     "u": "https://en.wikipedia.org/wiki/Monongahela_Incline"
+    },
+    {
+     "t": "Wikipedia: Duquesne Incline",
+     "u": "https://en.wikipedia.org/wiki/Duquesne_Incline"
+    }
+   ],
+   "card": {
+    "a": "1870",
+    "b": "1935",
+    "la": "Opened",
+    "lb": "Electric power"
+   }
+  },
+  {
+   "id": "bridge",
+   "name": "Smithfield Street Bridge",
+   "short": "Bridge",
+   "badge": "Bridge",
+   "tag": "Stop 2 of 4",
+   "teaser": "A bridge with lens-shaped steel arches that has carried traffic since 1883.",
+   "map": "Smithfield Street Bridge, Smithfield St at Fort Pitt Blvd, Pittsburgh, PA",
+   "clue": "Go to the Monongahela River at the bottom of Smithfield Street. Look for a long steel bridge with great curved arches.",
+   "safety": "The roadway is busy with cars and buses. Stay on the sidewalk, use crosswalks, and keep your phone away from the rail.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What shape are the bridge's big steel trusses?",
+    "options": [
+     "Lens-shaped",
+     "Triangles",
+     "Squares",
+     "Spirals"
+    ],
+    "answer": 0,
+    "hint": "Think of the glass in a magnifying glass.",
+    "verify": "Wikipedia calls it a lenticular truss bridge. Look at the curves from the riverbank on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1907",
+    "label": "The bridge then",
+    "line": "A stereoview of the bridge from the river, with a train and smoke behind it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pg_sb_then",
+     "by": "William H. Wolf",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Smithfield_Street_Bridge_(200413.013B.WF).png",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The bridge today",
+    "line": "One of the bridge's end portals, lit up at night with streaks of traffic light.",
+    "ph": {
+     "k": "pg_sb_now",
+     "by": "Jmblough",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Smithfield_Street_Bridge_at_Night.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The present bridge opened on March 19, 1883, and it was designed by Gustav Lindenthal, who later designed the Hell Gate Bridge in New York City. It is the third bridge on this spot. A wooden bridge from 1818 burned in the Great Fire of 1845, and a wire-rope suspension bridge by John Roebling came next.",
+    "The Lindenthal bridge reused the stone piers from Roebling's bridge. It was widened in 1889 and again in 1911, and it is the second-oldest steel bridge in the United States.",
+    "Streetcars crossed it until July 1985. It became a National Historic Landmark in 1976, after officials considered replacing it with a modern bridge."
+   ],
+   "fact": "It is built on the piers of an earlier bridge.",
+   "disputed": "Many people think the first Pittsburgh bridges were steel. Wikipedia says the first bridge here was wooden, from 1818.",
+   "claims": [
+    {
+     "t": "The Smithfield Street Bridge opened in 1883.",
+     "a": 0,
+     "why": "Wikipedia: opened March 19, 1883."
+    },
+    {
+     "t": "John Roebling designed the bridge that stands today.",
+     "a": 2,
+     "why": "Roebling built the earlier suspension bridge. Gustav Lindenthal designed the present one."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Smithfield Street Bridge",
+     "u": "https://en.wikipedia.org/wiki/Smithfield_Street_Bridge"
+    },
+    {
+     "t": "Wikipedia: Gustav Lindenthal",
+     "u": "https://en.wikipedia.org/wiki/Gustav_Lindenthal"
+    }
+   ],
+   "card": {
+    "a": "1883",
+    "b": "1976",
+    "la": "Opened",
+    "lb": "National Historic Landmark"
+   }
+  },
+  {
+   "id": "courthouse",
+   "name": "Allegheny County Courthouse",
+   "short": "Courthouse",
+   "badge": "Courthouse",
+   "tag": "Stop 3 of 4",
+   "teaser": "A stone castle of a courthouse that its architect called his greatest achievement.",
+   "map": "Allegheny County Courthouse, 436 Grant St, Pittsburgh, PA",
+   "clue": "Go downtown to Grant Street. Look for a huge dark stone building with round arches, a tall tower and a steep tiled roof.",
+   "safety": "Grant Street is busy with traffic and visitors. Use crosswalks, and note that this is a working courthouse with security at the door.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What covers the courthouse's steep roof?",
+    "options": [
+     "Copper sheets",
+     "Clay tiles",
+     "Slate shingles",
+     "Straw"
+    ],
+    "answer": 1,
+    "hint": "Think of what flowerpots are made from.",
+    "verify": "Wikipedia says the roof is covered in Ludowici clay tiles. Look up at the roof on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Survey photo",
+    "label": "The courthouse then",
+    "line": "A survey photograph of the Grant Street front, looking from the north.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pg_cc_then",
+     "by": "Historic American Buildings Survey",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:COURTHOUSE,_GRANT_STREET_FACADE,_FROM_THE_NORTH_-_Allegheny_County_Courthouse_and_Jail,_436_Grant_Street_(Courthouse),_420_Ross_Street_(Jail),_Pittsburgh,_Allegheny_County,_PA_HABS_PA,2-PITBU,29-1.tif",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2023",
+    "head": "Today",
+    "label": "The courthouse today",
+    "line": "The tower and tiled roof, seen from Grant Street with tall towers behind.",
+    "ph": {
+     "k": "pg_cc_now",
+     "by": "w_lemay",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Allegheny_County_Courthouse,_Grant_Street,_Pittsburgh,_PA.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The earlier courthouse, a Greek Revival building finished in 1841, burned on May 7, 1882. The county held a design competition, and Boston architect Henry Hobson Richardson won it. The Norcross Brothers began construction, and the cornerstone was laid on October 13, 1884.",
+    "The building was completed in 1888. It is arranged around an open courtyard that lets light and air reach most of the building, with a five-story tower rising from the courtyard's open side. A covered walkway known as the Bridge of Sighs links it to the old jail.",
+    "It is one of the finest examples of Romanesque Revival architecture. Richardson called it his \"great achievement\", and it became a National Historic Landmark in 1976."
+   ],
+   "fact": "The county held a contest to design it.",
+   "disputed": "Many people think the courthouse was always on Grant Street. Wikipedia says the first Allegheny County courthouse was a wooden building at Market Square, first used in 1794.",
+   "claims": [
+    {
+     "t": "Henry Hobson Richardson designed the courthouse.",
+     "a": 0,
+     "why": "Wikipedia: he won the design competition."
+    },
+    {
+     "t": "The courthouse was built in the 1700s.",
+     "a": 2,
+     "why": "The current building was completed in 1888."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Allegheny County Courthouse and Jail",
+     "u": "https://en.wikipedia.org/wiki/Allegheny_County_Courthouse_and_Jail"
+    },
+    {
+     "t": "Wikipedia: Henry Hobson Richardson",
+     "u": "https://en.wikipedia.org/wiki/Henry_Hobson_Richardson"
+    }
+   ],
+   "card": {
+    "a": "1884",
+    "b": "1888",
+    "la": "Cornerstone",
+    "lb": "Completed"
+   }
+  },
+  {
+   "id": "blockhouse",
+   "name": "Fort Pitt Block House",
+   "short": "Block House",
+   "badge": "Block House",
+   "tag": "Stop 4 of 4",
+   "teaser": "A small fort building from 1764, the oldest standing structure in western Pennsylvania.",
+   "map": "Fort Pitt Block House, Point State Park, Pittsburgh, PA",
+   "clue": "Go to Point State Park at the tip of downtown, where the rivers meet. Look for a small old stone and brick building sitting alone on the grass.",
+   "safety": "The park is open and busy, with paths shared by walkers and bikes. Check opening hours before you go, and stay off the building's walls.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In which park does the Block House stand?",
+    "options": [
+     "Schenley Park",
+     "Frick Park",
+     "Highland Park",
+     "Point State Park"
+    ],
+    "answer": 3,
+    "hint": "Look for the place where the rivers meet.",
+    "verify": "Wikipedia says the Block House stands in Point State Park. Check the park signs on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1963",
+    "label": "The Block House then",
+    "line": "A survey photograph from April 1963 of the front of the Block House, seen through a fence and a tree.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pg_bh_then",
+     "by": "Jack Boucher (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_April,_1963_SOUTHEAST_(FRONT)_ELEVATION._-_Fort_Pitt_Blockhouse,_25_Penn_Avenue,_Point_State_Historic_Park,_Pittsburgh,_Allegheny_County,_PA_HABS_PA,2-PITBU,20-1.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "The Block House today",
+    "line": "The small building on the lawn of Point State Park, with a flag behind it.",
+    "ph": {
+     "k": "pg_bh_now",
+     "by": "Own work (Wikimedia Commons user)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fort_Pitt_Blockhouse,_11_October_2014.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Block House was built in 1764 as a redoubt, a small defensive fort, for Fort Pitt. Henry Bouquet started building a few of them around the fort's outer walls, and this is the only one that survives.",
+    "After the army left, Isaac Craig turned it into a house in 1785. That saved it when Fort Pitt itself was torn down in 1792. In 1894, Mary Schenley gave the deed to the Daughters of the American Revolution.",
+    "In 1902, industrialist Henry Clay Frick bought all the land around it and offered the Daughters $25,000 to move it. They refused, and after a long court fight the Pennsylvania Supreme Court sided with them and the Block House stayed put."
+   ],
+   "fact": "It survived because someone turned it into a house.",
+   "disputed": "Many people think the Block House is part of the original fort walls. Wikipedia says it was a separate redoubt built outside them in 1764.",
+   "claims": [
+    {
+     "t": "The Block House was built in 1764.",
+     "a": 0,
+     "why": "Wikipedia: constructed in 1764 as a redoubt of Fort Pitt."
+    },
+    {
+     "t": "Henry Clay Frick moved the Block House to Schenley Park.",
+     "a": 2,
+     "why": "The Daughters refused his offer, and the court let the building stay."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fort Pitt Block House",
+     "u": "https://en.wikipedia.org/wiki/Fort_Pitt_Block_House"
+    },
+    {
+     "t": "Wikipedia: Point State Park",
+     "u": "https://en.wikipedia.org/wiki/Point_State_Park"
+    }
+   ],
+   "card": {
+    "a": "1764",
+    "b": "1894",
+    "la": "Built",
+    "lb": "Given to the DAR"
+   }
+  }
+ ],
+ "heroKey": "pg_mi_now"
+}

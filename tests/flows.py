@@ -5,6 +5,7 @@ from playwright.sync_api import sync_playwright
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/'
 src=open(R+'index.html').read()
 open(R+'src/_flow.html','w').write('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>'+src+'</body></html>')
+NT=len(json.load(open(R+'src/packs/index.json'))['order'])
 U='file://'+R+'src/_flow.html'
 bad=[];errs=[]
 def need(c,m):
@@ -28,7 +29,7 @@ with sync_playwright() as p:
     pg=new()
     need('go there' in pg.inner_text('#main').lower(),'first launch should show Home')
     need(not pg.locator('.hero').is_visible(),'hero should be hidden on Home')
-    need(pg.locator('.town:not(.soon)').count()==23 and pg.locator('.town.soon').count()==1,'Home should list 23 towns + 1 coming soon')
+    need(pg.locator('.town:not(.soon)').count()==NT and pg.locator('.town.soon').count()==1,f'Home should list {NT} towns + 1 coming soon')
     pg.click('.town >> nth=0'); need(pg.locator('.hero').is_visible() and pg.inner_text('#cityName').lower()=='reno','Start Reno from Home')
     pg.click('.city.home'); need('pick a mission' in pg.inner_text('#main').lower(),'Home chip returns Home')
     pg.reload(); need('pick a mission' in pg.inner_text('#main').lower(),'Home persists across reload')
@@ -103,7 +104,7 @@ with sync_playwright() as p:
     pg=new({'then-now-v2':{'city':'vc','reno':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]},'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}})
     need(pg.inner_text('#cityName').lower()=='virginia city','v2 save keeps last town and skips Home')
     pg.click('#tab-rewards'); code=pg.input_value('#codeOut')
-    need(code.startswith('TN3-') and code.count('-')==23,f'v2 migrates to a TN3 code, got {code}')
+    need(code.startswith('TN3-') and code.count('-')==NT,f'v2 migrates to a TN3 code, got {code}')
     pg.click('.city >> text=Reno'); pg.click('#tab-rewards'); need(pg.input_value('#codeOut')==code,'code is the same from either town')
     # v1 save migrates
     pg=new({'then-now-reno-v1':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]}})
@@ -114,7 +115,7 @@ with sync_playwright() as p:
         need(exp in pg.inner_text('#xpText'),f'restore {good[:3]} gives {exp}, got {pg.inner_text("#xpText")}')
     pg=new(); pg.click('.town >> nth=0'); pg.click('#tab-rewards'); pg.fill('#codeIn','TN3-1100'); pg.click('text=Restore')
     need('does not look right' in pg.inner_text('#codeMsg').lower(),'bad code is rejected')
-    pg.fill('#codeIn','TN3-'+'-'.join(['000000000000']*24)); pg.click('text=Restore'); need('more towns' in pg.inner_text('#codeMsg').lower(),'code with too many towns is rejected with a clear message')
+    pg.fill('#codeIn','TN3-'+'-'.join(['000000000000']*(NT+1))); pg.click('text=Restore'); need('more towns' in pg.inner_text('#codeMsg').lower(),'code with too many towns is rejected with a clear message')
     # try it from home: preview unlocks the story but saves nothing
     pg=new(); pg.click('.town >> nth=0'); pg.click('.stoplist button >> nth=0') if pg.locator('.stoplist button').count() else pg.click('[data-a=open] >> nth=0')
     need(pg.locator('[data-a=demo]').count()==1,'unstamped stop offers Try it from home')

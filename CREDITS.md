@@ -305,3 +305,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | tu_cc_now | https://commons.wikimedia.org/wiki/File:Pima_County_Courthouse_10.JPG | Gillfoto | CC BY-SA 3.0 | 2003 |
 | tu_om_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Frederick_D._Nichols,_Photographer_January_1938_DETAIL_OF_WING._-_University_of_Arizona,_Old_Main,_University_of_Arizona_Campus,_Tucson,_HABS_ARIZ,10-TUCSO,14A-3.tif | Frederick D. Nichols (Historic American Buildings Survey) | Public domain | 1938 |
 | tu_om_now | https://commons.wikimedia.org/wiki/File:Tucson-Old_Main_University_of_Arizona_Building-1875.JPG | Tony the Marine | CC BY-SA 3.0 | 2015 |
+
+### Pittsburgh (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| pg_mi_then | https://commons.wikimedia.org/wiki/File:Monongahela_incline_and_freight_incline.jpg | Cassier's Magazine | Public domain | 1897 |
+| pg_mi_now | https://commons.wikimedia.org/wiki/File:Monongahela_Incline,_2024-12-15.jpg | Cbaile19 | CC0 | 2024 |
+| pg_sb_then | https://commons.wikimedia.org/wiki/File:Smithfield_Street_Bridge_(200413.013B.WF).png | William H. Wolf | Public domain | about 1907 |
+| pg_sb_now | https://commons.wikimedia.org/wiki/File:Smithfield_Street_Bridge_at_Night.jpg | Jmblough | CC BY-SA 4.0 | 2011 |
+| pg_cc_then | https://commons.wikimedia.org/wiki/File:COURTHOUSE,_GRANT_STREET_FACADE,_FROM_THE_NORTH_-_Allegheny_County_Courthouse_and_Jail,_436_Grant_Street_(Courthouse),_420_Ross_Street_(Jail),_Pittsburgh,_Allegheny_County,_PA_HABS_PA,2-PITBU,29-1.tif | Historic American Buildings Survey | Public domain | undated survey photo |
+| pg_cc_now | https://commons.wikimedia.org/wiki/File:Allegheny_County_Courthouse,_Grant_Street,_Pittsburgh,_PA.jpg | w_lemay | CC BY-SA 2.0 | 2023 |
+| pg_bh_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_April,_1963_SOUTHEAST_(FRONT)_ELEVATION._-_Fort_Pitt_Blockhouse,_25_Penn_Avenue,_Point_State_Historic_Park,_Pittsburgh,_Allegheny_County,_PA_HABS_PA,2-PITBU,20-1.tif | Jack Boucher (Historic American Buildings Survey) | Public domain | 1963 |
+| pg_bh_now | https://commons.wikimedia.org/wiki/File:Fort_Pitt_Blockhouse,_11_October_2014.jpg | Own work (Wikimedia Commons user) | Public domain | 2014 |
