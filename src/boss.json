@@ -826,5 +826,143 @@
    "a": 1,
    "why": "Cotton brokers, called factors, worked there."
   }
+ ],
+ "denver": [
+  {
+   "q": "In what year was the Mizpah arch in front of Union Station dedicated?",
+   "o": [
+    "1881",
+    "1894",
+    "1906",
+    "1931"
+   ],
+   "a": 2,
+   "why": "It was dedicated on July 4, 1906 and torn down in 1931."
+  },
+  {
+   "q": "Which president was the first sitting president to visit the Brown Palace?",
+   "o": [
+    "Theodore Roosevelt",
+    "Abraham Lincoln",
+    "Harry Truman",
+    "Herbert Hoover"
+   ],
+   "a": 0,
+   "why": "Theodore Roosevelt visited on May 8, 1905."
+  },
+  {
+   "q": "The Denver Mint's building is based on a palace in which city?",
+   "o": [
+    "Paris",
+    "Madrid",
+    "Vienna",
+    "Florence"
+   ],
+   "a": 3,
+   "why": "It is based on the Palazzo Medici-Riccardi in Florence."
+  },
+  {
+   "q": "What was the land under Cheesman Park before it became a park?",
+   "o": [
+    "A farm",
+    "A cemetery",
+    "A railyard",
+    "A mine"
+   ],
+   "a": 1,
+   "why": "It was Prospect Hill Cemetery."
+  }
+ ],
+ "santafe": [
+  {
+   "q": "The Santa Fe Trail connected the Plaza with which state?",
+   "o": [
+    "Texas",
+    "Kansas",
+    "Missouri",
+    "Ohio"
+   ],
+   "a": 2,
+   "why": "It linked New Mexico with Missouri."
+  },
+  {
+   "q": "La Fonda simply means what in Spanish?",
+   "o": [
+    "The fountain",
+    "The inn",
+    "The plaza",
+    "The fire"
+   ],
+   "a": 1,
+   "why": "Wikipedia says it means the inn."
+  },
+  {
+   "q": "In which year was San Miguel Chapel rebuilt after the Pueblo Revolt?",
+   "o": [
+    "1610",
+    "1680",
+    "1798",
+    "1710"
+   ],
+   "a": 3,
+   "why": "It was rebuilt in 1710."
+  },
+  {
+   "q": "Which governor finished writing Ben-Hur in the Palace of the Governors?",
+   "o": [
+    "Lew Wallace",
+    "Pedro de Peralta",
+    "Diego de Vargas",
+    "Kit Carson"
+   ],
+   "a": 0,
+   "why": "Lew Wallace wrote the final parts there in the late 1870s."
+  }
+ ],
+ "phoenix": [
+  {
+   "q": "In which year did the Arizona territorial legislature move to Phoenix?",
+   "o": [
+    "1889",
+    "1864",
+    "1900",
+    "1912"
+   ],
+   "a": 0,
+   "why": "It voted to move to Phoenix on January 29, 1889."
+  },
+  {
+   "q": "Why did Dr. Rosson resign as mayor?",
+   "o": [
+    "He moved to California",
+    "He got sick",
+    "Trouble with the city council",
+    "He lost a lawsuit"
+   ],
+   "a": 2,
+   "why": "He resigned after difficulties with the city council."
+  },
+  {
+   "q": "Who is the architect of record of the Arizona Biltmore?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Albert Chase McArthur",
+    "Mary Colter",
+    "James Riely Gordon"
+   ],
+   "a": 1,
+   "why": "Albert Chase McArthur designed it. Wright only consulted."
+  },
+  {
+   "q": "What formed the Arizona Falls waterfall?",
+   "o": [
+    "A river",
+    "An earthquake",
+    "A glacier",
+    "A canal over a rock ledge"
+   ],
+   "a": 3,
+   "why": "The man-made Arizona Canal crossed a natural 20-foot drop."
+  }
  ]
 }

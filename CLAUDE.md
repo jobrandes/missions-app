@@ -45,19 +45,20 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 - Download: navigate a tab to the upload.wikimedia.org 960px thumbnail, fetch same-origin, save via `<a download>`. Files land in `~/Downloads` as hidden temp files; rename by byte size, then `device_stage_files`, view a contact sheet to confirm each photo matches its stop, then resize and wire in.
 
 ## Status (Oct 20, 2026)
-18 towns, 72 stops, 147 photos. **Every stop now has a free-licensed "then" and "now" photo.** Stops were swapped for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia Capitol, Atlanta Flatiron, Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall (Oct 19), then Reno Train Depot (replaced Original Arch), Cave Rock (replaced Sand Harbor) and Commons Beach (replaced Fanny Bridge) (Oct 20).
+21 towns, 84 stops, 171 photos. **Every stop now has a free-licensed "then" and "now" photo.** Stops were swapped for landmarks that have free "then" photos: Fisher Building, Campus Martius, Saint Anthony Falls, Basilica of Saint Mary, Georgia Capitol, Atlanta Flatiron, Piedmont Park, Memphis Cotton Exchange, Fort Pulaski, Rookery, Lincoln Park Conservatory, Bradbury Building, Angels Flight, Olvera Street, Pioneer Square, Carpenters' Hall (Oct 19), then Reno Train Depot (replaced Original Arch), Cave Rock (replaced Sand Harbor) and Commons Beach (replaced Fanny Bridge) (Oct 20).
 - West: Reno, Virginia City, Lake Tahoe (two packs), San Francisco, Los Angeles, Seattle
 - East: Boston, Washington DC, New York, Philadelphia
 - Midwest: Chicago, Detroit, Minneapolis
 - South: New Orleans, Atlanta, Memphis, Savannah
+- Southwest (new, Oct 20): Denver, Santa Fe, Phoenix
 - "Coming soon": Paris.
 Some "then" photos are looser matches (labelled honestly): Carpenters' Hall (old plans), Pioneer Square (the street), Olvera Street (the old Plaza), Camp Richardson (survey photo), Tahoe stereoviews (Tahoe City, c. 1870s).
 Also done: demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
 
 
 ## Still to do
-1. **Page size**: index.html is 12.2 MB of the 16 MB Artifact limit (photos now 640 px, q60 progressive). Real fix still to do before ~25 towns or App Store: load each town's photos on demand instead of one giant file.
-2. **Southwest/Mountain region**: Denver, Santa Fe or Phoenix, 4 stops each. Then maybe Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
+1. **Page size**: index.html is 13.9 MB of the 16 MB Artifact limit (photos now 640 px, q60 progressive). Real fix still to do before ~25 towns or App Store: load each town's photos on demand instead of one giant file.
+2. **Southwest** done (Denver, Santa Fe, Phoenix; written from sources, not yet checked on site). Next maybe Albuquerque/Tucson/Las Vegas, then Pittsburgh/Baltimore, St. Louis/Cleveland. Later South America (Buenos Aires or Lima) and Paris.
 3. App icon (rubber-stamp motif). Desktop two-pane layout for town and stop screens.
 4. Jo-Anne-owned: Reno on-site walk (`docs/verification-checklist.md`), confirm stampthepast.com and run the USPTO search, support email, Apple Developer account, posting for testers.
 5. Later: wrap for the App Store, pricing/monetization decision, more towns each month.

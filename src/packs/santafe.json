@@ -1,0 +1,417 @@
+{
+ "id": "santafe",
+ "name": "Santa Fe",
+ "explorer": "City Different Explorer",
+ "initials": "SFE",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Plaza Stroller"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Santa Fe Scholar"
+  ],
+  [
+   600,
+   "Santa Fe Historian"
+  ]
+ ],
+ "heroAlt": "Shaded porches and shops around the Santa Fe Plaza",
+ "heroLi": "<li>Header: Asaavedra32 · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Santa_Fe_plaza.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Asaavedra32 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Santa_Fe_plaza.JPG\">Source</a>",
+ "mission": "Find four landmarks around Santa Fe. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Santa Fe is waiting.",
+ "safetyNote": "<li>Santa Fe is high and dry, so drink water and use sunscreen. Sidewalks are narrow and uneven in places, and the Plaza streets are shared with cars.</li>",
+ "badgeMap": {
+  "plaza": [
+   "sa_pl_now",
+   "50% 45%"
+  ],
+  "fonda": [
+   "sa_lf_now",
+   "50% 45%"
+  ],
+  "miguel": [
+   "sa_sm_now",
+   "50% 45%"
+  ],
+  "palace": [
+   "sa_pg_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "plaza",
+   "name": "Santa Fe Plaza",
+   "short": "Plaza",
+   "badge": "Plaza",
+   "tag": "Stop 1 of 4",
+   "teaser": "The end of the Santa Fe Trail, and the town square for four centuries.",
+   "map": "Santa Fe Plaza, 100 Old Santa Fe Trail, Santa Fe, NM",
+   "clue": "Go to the middle of downtown. Look for the grassy square with trees, benches and a bandstand, ringed by low buildings.",
+   "safety": "Streets around the Plaza have cars and tour carts. Use crosswalks and keep to the sidewalks and paths.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Most buildings around the Plaza are built in a pueblo style. What material are they made of?",
+    "options": [
+     "Glass",
+     "Steel",
+     "Adobe",
+     "Brick"
+    ],
+    "answer": 2,
+    "hint": "It is sun-dried earth, shaped into blocks and plastered over.",
+    "verify": "Wikipedia says the Plaza architecture is traditional adobe. Check the walls on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1885",
+    "label": "The Plaza then",
+    "line": "The Plaza in 1885, with a white picket fence around the park.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_pl_then",
+     "by": "D. B. Chase",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Santa_Fe_Plaza_in_1885.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The Plaza today",
+    "line": "Shaded porches and shops around the Plaza.",
+    "ph": {
+     "k": "sa_pl_now",
+     "by": "Asaavedra32",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Santa_Fe_plaza.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Plaza dates to the early 1600s, when Santa Fe was settled by the Spanish. As in other colonial towns, it was where soldiers gathered and where the governor's palace stood.",
+    "When Mexico won independence from Spain in 1821, the Santa Fe Trail opened between Missouri and New Mexico. Its western end was this Plaza, where wagon caravans camped and unloaded goods.",
+    "After New Mexico became a US territory, a fence was built around the Plaza to keep out animals, and trees and paths were added. New Mexico became the 47th state in 1912. Today the Plaza is a National Historic Landmark."
+   ],
+   "fact": "Wagons from Missouri ended their trip here.",
+   "disputed": "Many people say the Plaza is the oldest in the country. Wikipedia only says it dates to the early 17th century.",
+   "claims": [
+    {
+     "t": "The Santa Fe Trail ended at the Plaza.",
+     "a": 0,
+     "why": "Wikipedia: its western terminus was the Santa Fe Plaza."
+    },
+    {
+     "t": "New Mexico became a state in 1821.",
+     "a": 2,
+     "why": "1821 was Mexico's independence. New Mexico became the 47th state in 1912."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Santa Fe Plaza",
+     "u": "https://en.wikipedia.org/wiki/Santa_Fe_Plaza"
+    },
+    {
+     "t": "Wikipedia: Santa Fe Trail",
+     "u": "https://en.wikipedia.org/wiki/Santa_Fe_Trail"
+    }
+   ],
+   "card": {
+    "a": "1821",
+    "b": "1912",
+    "la": "Trail opens",
+    "lb": "Statehood"
+   }
+  },
+  {
+   "id": "fonda",
+   "name": "La Fonda on the Plaza",
+   "short": "La Fonda",
+   "badge": "La Fonda",
+   "tag": "Stop 2 of 4",
+   "teaser": "An inn on the same corner for 400 years, and the last stop of a famous trail.",
+   "map": "La Fonda on the Plaza, 100 E San Francisco St, Santa Fe, NM",
+   "clue": "Go to the southeast corner of the Plaza, where San Francisco Street meets the Old Santa Fe Trail. Look for the stepped, earth-colored hotel.",
+   "safety": "The corner has traffic and people with luggage. Use crosswalks, and be polite in the lobby, since it is a working hotel.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What rises above the roof at the top of the hotel?",
+    "options": [
+     "A bell tower",
+     "A flagpole",
+     "A clock",
+     "A dome"
+    ],
+    "answer": 0,
+    "hint": "The roof has a tall, narrow part, with a bar named after it.",
+    "verify": "Wikipedia says the Bell Tower Bar is on the roof of the fifth floor. Look up on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Mid-1900s",
+    "label": "The hotel then",
+    "line": "A postcard of La Fonda, sold as \"at the end of the Santa Fe Trail\".",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_lf_then",
+     "by": "Boston Public Library (linen postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:La_Fonda_Hotel,_at_the_end_of_the_Santa_Fe_trail,_Santa_Fe,_New_Mexico.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The stepped adobe-style hotel at the corner of the Plaza.",
+    "ph": {
+     "k": "sa_lf_now",
+     "by": "Atakra",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:La_fonda_sw_view.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Wikipedia says an inn has stood on this site since 1609. It sits at the end of the Old Santa Fe Trail, which was the main trade route from Missouri until the railroad came in 1880.",
+    "An earlier hotel, the United States Hotel, burned down in 1912. A new hotel was designed by Isaac Hamilton Rapp in the Pueblo Revival style, inspired by the adobe buildings of the Pueblo peoples. In 1925 the Santa Fe Railway bought it.",
+    "Architect Mary Colter redesigned the inside with exposed wooden beams called vigas and Mexican tiles. The Fred Harvey Company ran it as a Harvey House until 1969, and offered \"Indian Detours\" tours starting in 1926."
+   ],
+   "fact": "The first inn on this spot dates to 1609.",
+   "disputed": "The name sounds like a place's name, but Wikipedia says \"La Fonda\" simply means \"the inn\" in Spanish.",
+   "claims": [
+    {
+     "t": "An inn has been on this site since 1609.",
+     "a": 0,
+     "why": "Wikipedia: various inns have stood here since 1609."
+    },
+    {
+     "t": "The hotel was built by railroad workers in 1880.",
+     "a": 2,
+     "why": "The current hotel was designed by Isaac Rapp in the 1920s and bought by the Santa Fe Railway in 1925."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: La Fonda on the Plaza",
+     "u": "https://en.wikipedia.org/wiki/La_Fonda_on_the_Plaza"
+    },
+    {
+     "t": "Wikipedia: Mary Colter",
+     "u": "https://en.wikipedia.org/wiki/Mary_Jane_Colter"
+    }
+   ],
+   "card": {
+    "a": "1609",
+    "b": "1925",
+    "la": "First inn",
+    "lb": "Railway buys it"
+   }
+  },
+  {
+   "id": "miguel",
+   "name": "San Miguel Chapel",
+   "short": "San Miguel",
+   "badge": "San Miguel",
+   "tag": "Stop 3 of 4",
+   "teaser": "A very old church that got rebuilt after a rebellion burned it.",
+   "map": "San Miguel Chapel, 401 Old Santa Fe Trail, Santa Fe, NM",
+   "clue": "Go south of the Plaza across the Santa Fe River, on Old Santa Fe Trail. Look for a small brown adobe church with a short front tower.",
+   "safety": "The chapel is on a busy street. Use crosswalks, check the visiting hours, and be quiet inside, since it is a place of worship.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What sits at the very top of the front of the chapel?",
+    "options": [
+     "A star",
+     "A weather vane",
+     "A bell",
+     "A cross"
+    ],
+    "answer": 3,
+    "hint": "It is a simple shape, found on top of many churches.",
+    "verify": "The photos show the chapel topped with a symbol. Check the very top of the front on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1873",
+    "label": "The chapel then",
+    "line": "Timothy O'Sullivan photographed the chapel in 1873.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_sm_then",
+     "by": "Timothy H. O'Sullivan",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Church_of_San_Miguel,_the_oldest_church_in_Santa_Fe,_N.M._-_T._H._O'Sullivan,_phot._LCCN2007684822.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The chapel today",
+    "line": "The adobe chapel on Old Santa Fe Trail.",
+    "ph": {
+     "k": "sa_sm_now",
+     "by": "Dorothy Harris",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Miguel_Mission_Church.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Wikipedia says the first church on this spot was probably built shortly after Santa Fe was founded in 1610, and was first mentioned in writing in 1628. It served the mostly Native and Tlaxcalan people living in the Barrio de Analco across the river.",
+    "The Pueblo Revolt of 1680 burned the mission. When Diego de Vargas led the Spanish back in 1692, he found it burned but fixable. The church was rebuilt in 1710.",
+    "The wooden altar screen, called a reredos, was added in 1798. It holds a statue of Saint Michael that dates to at least 1709. The chapel is often called the oldest church building in the continental United States."
+   ],
+   "fact": "The chapel was rebuilt after being burned in 1680.",
+   "disputed": "\"Oldest church\" is a popular claim. Wikipedia says it is often called that, and that the building was rebuilt, so the age depends on what counts.",
+   "claims": [
+    {
+     "t": "San Miguel Chapel was rebuilt in 1710.",
+     "a": 0,
+     "why": "Wikipedia: rebuilt in 1710 after the Pueblo Revolt."
+    },
+    {
+     "t": "It was built in 1880.",
+     "a": 2,
+     "why": "The first church dates to about 1610. 1880 is when the railroad arrived."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: San Miguel Chapel",
+     "u": "https://en.wikipedia.org/wiki/San_Miguel_Chapel"
+    },
+    {
+     "t": "Wikipedia: Pueblo Revolt",
+     "u": "https://en.wikipedia.org/wiki/Pueblo_Revolt"
+    }
+   ],
+   "card": {
+    "a": "1610",
+    "b": "1710",
+    "la": "First church",
+    "lb": "Rebuilt"
+   }
+  },
+  {
+   "id": "palace",
+   "name": "Palace of the Governors",
+   "short": "Palace",
+   "badge": "Palace",
+   "tag": "Stop 4 of 4",
+   "teaser": "A government building from the 1600s that is still standing on the Plaza.",
+   "map": "Palace of the Governors, 105 W Palace Ave, Santa Fe, NM",
+   "clue": "Go to the north side of the Plaza. Look for a long, low adobe building with a wooden porch running along the whole front.",
+   "safety": "Check hours before you go. Keep to the sidewalk, and be careful on the porch, where people walk and sell things.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What runs along the whole front of the Palace, shading the sidewalk?",
+    "options": [
+     "A stone wall",
+     "A covered porch",
+     "A moat",
+     "A fountain"
+    ],
+    "answer": 1,
+    "hint": "Look at the front and see what keeps the sun off people walking past.",
+    "verify": "The photos show a long covered porch with wooden posts. Check the front on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Mid-1900s",
+    "label": "The Palace then",
+    "line": "A postcard of the Palace, with a procession passing in front of the long porch.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_pg_then",
+     "by": "Boston Public Library (linen postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors,_erected_1605_A.D.,_Santa_Fe,_New_Mexico.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The Palace today",
+    "line": "The long adobe porch along the Plaza.",
+    "ph": {
+     "k": "sa_pg_now",
+     "by": "Dicklyon",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors_pano.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Pedro de Peralta, the new governor, began building the Palace of the Governors in 1610. Some recent research suggests construction started in 1618. It was the seat of government for the Spanish colony of Nuevo México, and later for Mexico and then the New Mexico Territory.",
+    "The Pueblo Revolt of 1680 hit Santa Fe, and the Spanish came back in 1693 and 1694. New Mexico stayed governed from the Palace until 1901, and it was the territory's first capitol.",
+    "Governor Lew Wallace finished writing his novel Ben-Hur here in the late 1870s. The Palace has been a museum since 1909, and it became a National Historic Landmark in 1960."
+   ],
+   "fact": "A governor wrote a famous novel here.",
+   "disputed": "The Palace is often called the oldest public building in the US. Wikipedia's Plaza article uses that title, and the Palace article says some research puts the start of construction later than 1610.",
+   "claims": [
+    {
+     "t": "Lew Wallace finished Ben-Hur in the Palace of the Governors.",
+     "a": 0,
+     "why": "Wikipedia: he wrote the final parts while territorial governor."
+    },
+    {
+     "t": "The Palace was built in the 1900s.",
+     "a": 2,
+     "why": "Construction began in 1610, or possibly 1618."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Palace of the Governors",
+     "u": "https://en.wikipedia.org/wiki/Palace_of_the_Governors"
+    },
+    {
+     "t": "Wikipedia: Lew Wallace",
+     "u": "https://en.wikipedia.org/wiki/Lew_Wallace"
+    }
+   ],
+   "card": {
+    "a": "1610",
+    "b": "1909",
+    "la": "Construction starts",
+    "lb": "Becomes a museum"
+   }
+  }
+ ],
+ "heroKey": "sa_pl_now"
+}

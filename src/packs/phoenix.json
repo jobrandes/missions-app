@@ -1,0 +1,417 @@
+{
+ "id": "phoenix",
+ "name": "Phoenix",
+ "explorer": "Valley Explorer",
+ "initials": "PHX",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Desert Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Phoenix Scholar"
+  ],
+  [
+   600,
+   "Phoenix Historian"
+  ]
+ ],
+ "heroAlt": "The Arizona State Capitol in Phoenix",
+ "heroLi": "<li>Header: David Jiang · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: David Jiang · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg\">Source</a>",
+ "mission": "Find four landmarks around Phoenix. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Phoenix is waiting.",
+ "safetyNote": "<li>Phoenix gets dangerously hot. Go in the morning or evening, bring plenty of water, wear sunscreen, and take breaks in the shade. Check traffic at crosswalks.</li>",
+ "badgeMap": {
+  "capitol": [
+   "px_cap_now",
+   "50% 45%"
+  ],
+  "rosson": [
+   "px_ro_now",
+   "50% 45%"
+  ],
+  "biltmore": [
+   "px_bi_now",
+   "50% 45%"
+  ],
+  "falls": [
+   "px_af_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "capitol",
+   "name": "Arizona State Capitol",
+   "short": "Capitol",
+   "badge": "Capitol",
+   "tag": "Stop 1 of 4",
+   "teaser": "A small capitol building that ended up smaller than its architect dreamed.",
+   "map": "Arizona State Capitol Museum, 1700 W Washington St, Phoenix, AZ",
+   "clue": "Go to West Washington Street near 17th Avenue. Look for the stone building with a small dome on top, set back behind a lawn.",
+   "safety": "Washington Street is busy. Use crosswalks, stay on the paths, and check museum hours before you go inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which kind of tree stands on the capitol grounds?",
+    "options": [
+     "Pine",
+     "Oak",
+     "Maple",
+     "Palm"
+    ],
+    "answer": 3,
+    "hint": "Think of a desert postcard, and a tree with a tall, bare trunk.",
+    "verify": "The photos show palm trees on the grounds. Check on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1908",
+    "label": "The capitol then",
+    "line": "A panorama of the capitol, with palms and a dirt road, in 1908.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "px_cap_then",
+     "by": "Haines Photo Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:CapitolBuilding.PhoenixAZ.1908.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The capitol today",
+    "line": "The old capitol, now a museum, with newer government buildings nearby.",
+    "ph": {
+     "k": "px_cap_now",
+     "by": "David Jiang",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Arizona Territory's capital moved around: Prescott, Tucson, Prescott again, and finally Phoenix in 1889. To show the territory was ready for statehood, voters approved a $100,000 bond to build a real capitol.",
+    "Architect James Riely Gordon won a design contest. His original plan had wings for the legislature and a big dome, but money was short, so the wings were dropped and a small metal top was used. The capitol was finished in 1900.",
+    "Arizona became a state in 1912, and the building became the state capitol. Today the 1900 building is the Arizona Capitol Museum, and newer buildings behind it hold the legislature and the governor's offices."
+   ],
+   "fact": "The capital moved around three times before landing here.",
+   "disputed": "Some people think Phoenix was always the capital. Wikipedia says the capital started in Prescott in 1864, then moved to Tucson, Prescott again, and Phoenix in 1889.",
+   "claims": [
+    {
+     "t": "The Arizona Territory's capital moved to Phoenix in 1889.",
+     "a": 0,
+     "why": "Wikipedia: the legislature voted on January 29, 1889."
+    },
+    {
+     "t": "The capitol was built after Arizona became a state in 1912.",
+     "a": 2,
+     "why": "It was built in 1900 as the territorial capitol."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Arizona State Capitol",
+     "u": "https://en.wikipedia.org/wiki/Arizona_State_Capitol"
+    },
+    {
+     "t": "Wikipedia: James Riely Gordon",
+     "u": "https://en.wikipedia.org/wiki/James_Riely_Gordon"
+    }
+   ],
+   "card": {
+    "a": "1889",
+    "b": "1900",
+    "la": "Capital moves",
+    "lb": "Building finished"
+   }
+  },
+  {
+   "id": "rosson",
+   "name": "Rosson House",
+   "short": "Rosson House",
+   "badge": "Rosson House",
+   "tag": "Stop 2 of 4",
+   "teaser": "A bright Victorian house in the middle of a desert city, built by a mayor who quit.",
+   "map": "Rosson House Museum, 113 N 6th St, Phoenix, AZ",
+   "clue": "Go to Heritage Square downtown, at 6th and Monroe Streets. Look for a red brick Victorian house with a pointed corner tower.",
+   "safety": "Heritage Square is downtown, near busy streets. Use crosswalks, check museum hours, and stay on the paths.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The house has a pointed tower on the corner. How many sides does the tower have?",
+    "options": [
+     "4",
+     "8",
+     "6",
+     "10"
+    ],
+    "answer": 1,
+    "hint": "Walk around it and count the flat faces that go all the way round.",
+    "verify": "Wikipedia describes the tower as French and octagonal. Count the sides on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1940",
+    "label": "The house then",
+    "line": "A survey photograph from 1940, taken from across the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "px_ro_then",
+     "by": "Delos H. Smith (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Delos_H._Smith,_photographer_1940_-_Rosson_House,_139_North_Sixth_Street,_Phoenix,_Maricopa_County,_AZ_HABS_ARIZ,7-PHEN,5-1.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The restored house, now a museum in Heritage Square.",
+    "ph": {
+     "k": "px_ro_now",
+     "by": "Greg O'Beirne",
+     "lic": "CC BY 2.5",
+     "lu": "https://creativecommons.org/licenses/by/2.5/",
+     "page": "https://commons.wikimedia.org/wiki/File:RossonHousePhoenix_gobeirne.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Dr. Roland Lee Rosson was a doctor and a politician who came to Phoenix in 1879. His house was built between 1894 and 1895 in the Stick-Eastlake Queen Anne style, designed by San Francisco architect A. P. Petit. Petit died in the month it was finished.",
+    "Rosson was elected mayor of Phoenix on May 7, 1895, but after trouble with the city council he resigned on April 6, 1896. The house changed hands many times before the City of Phoenix bought it and restored it.",
+    "The house mixes styles from different cultures, including a Chinese moon gate, Italian hooded windows and a French octagonal turret. It was added to the National Register of Historic Places in 1971."
+   ],
+   "fact": "Its architect died the month it was finished.",
+   "disputed": "Some sources say the design is unique. Wikipedia says nearly identical plans appear in an earlier house-plan book.",
+   "claims": [
+    {
+     "t": "Dr. Rosson was elected mayor of Phoenix in 1895.",
+     "a": 0,
+     "why": "Wikipedia: elected on May 7, 1895."
+    },
+    {
+     "t": "Rosson served as mayor for ten years.",
+     "a": 2,
+     "why": "He resigned on April 6, 1896, less than a year later."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Rosson House",
+     "u": "https://en.wikipedia.org/wiki/Rosson_House"
+    },
+    {
+     "t": "Wikipedia: Heritage Square (Phoenix)",
+     "u": "https://en.wikipedia.org/wiki/Heritage_and_Science_Park"
+    }
+   ],
+   "card": {
+    "a": "1895",
+    "b": "1971",
+    "la": "Mayor elected",
+    "lb": "National Register"
+   }
+  },
+  {
+   "id": "biltmore",
+   "name": "Arizona Biltmore",
+   "short": "Biltmore",
+   "badge": "Biltmore",
+   "tag": "Stop 3 of 4",
+   "teaser": "A fancy resort made of patterned blocks, and a famous architect who didn't design it.",
+   "map": "Arizona Biltmore, 2400 E Missouri Ave, Phoenix, AZ",
+   "clue": "Go to 24th Street and Missouri Avenue, north of downtown near Camelback Road. Look for a resort made of patterned golden blocks.",
+   "safety": "The resort is private property. Look from public areas, ask staff before wandering, and watch for cars on the entrance road.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The hotel's walls are made of patterned what?",
+    "options": [
+     "Concrete blocks",
+     "Wooden planks",
+     "Red brick",
+     "Glass panels"
+    ],
+    "answer": 0,
+    "hint": "Look closely at the walls: they are repeating squares with designs pressed into them.",
+    "verify": "Wikipedia says the hotel used \"textile block\" construction, a system of patterned blocks. Look at the walls on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Survey photo",
+    "label": "The pool then",
+    "line": "A survey photograph looking toward the main building from the pool area, with palms.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "px_bi_then",
+     "by": "Historic American Buildings Survey (U.S. government)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:View_to_main_hotel_building_from_pool_area_looking_west_-_Arizona_Biltmore,_Bathhouse_and_Cabanas,_Northeast_Corner,_Twenty-fourth_Street_and_Missouri_Avenue,_Phoenix,_Maricopa_HABS_ARIZ,7-PHEN,15-A-2.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The patterned block walls of the main building.",
+    "ph": {
+     "k": "px_bi_now",
+     "by": "Aufaber",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Azbiltmore.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Arizona Biltmore opened on February 23, 1929. Brothers Warren and Charles McArthur built it with hotelier John McEntee Bowman. Three crews worked around the clock to finish it.",
+    "Many people say Frank Lloyd Wright designed it. Wikipedia says the architect was Albert Chase McArthur, who had been a draftsman for Wright. Wright consulted for four months in 1928 on the patterned \"textile block\" system.",
+    "Clark Gable and Carole Lombard often stayed here, and the Tequila sunrise was invented here. In 1930 the McArthurs lost control of the hotel, and chewing gum magnate William Wrigley Jr. later became the full owner."
+   ],
+   "fact": "Three crews worked day and night to finish it.",
+   "disputed": "The big debate: Wright or McArthur. Wikipedia says McArthur is the architect, with original drawings and a 1929 article to prove it.",
+   "claims": [
+    {
+     "t": "The Arizona Biltmore opened in 1929.",
+     "a": 0,
+     "why": "Wikipedia: opened February 23, 1929."
+    },
+    {
+     "t": "Frank Lloyd Wright was the hotel's architect of record.",
+     "a": 2,
+     "why": "Albert Chase McArthur was; Wright only consulted."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Arizona Biltmore Hotel",
+     "u": "https://en.wikipedia.org/wiki/Arizona_Biltmore_Hotel"
+    },
+    {
+     "t": "Wikipedia: Albert Chase McArthur",
+     "u": "https://en.wikipedia.org/wiki/Albert_Chase_McArthur"
+    }
+   ],
+   "card": {
+    "a": "1928",
+    "b": "1929",
+    "la": "Wright consults",
+    "lb": "Hotel opens"
+   }
+  },
+  {
+   "id": "falls",
+   "name": "Arizona Falls",
+   "short": "Arizona Falls",
+   "badge": "Arizona Falls",
+   "tag": "Stop 4 of 4",
+   "teaser": "A waterfall that wasn't natural, in a desert, that lit up a city.",
+   "map": "Arizona Falls, 56th St and Indian School Rd, Phoenix, AZ",
+   "clue": "Go to the Arizona Canal near 56th Street in the Arcadia neighborhood. Follow the canal path to the little park where water drops over a ledge.",
+   "safety": "Stay on the canal path and park paths, and watch for bikes. Do not climb on the walls or into the water. It gets very hot, so bring water.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "About how far does the water drop at the falls?",
+    "options": [
+     "5 feet",
+     "10 feet",
+     "20 feet",
+     "50 feet"
+    ],
+    "answer": 2,
+    "hint": "It is taller than a person, but shorter than a tall tree.",
+    "verify": "Wikipedia says the canal crosses a natural 20-foot drop. Estimate on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Survey photo",
+    "label": "The power plant then",
+    "line": "A survey photo of the old power plant at Arizona Falls, looking east.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "px_af_then",
+     "by": "Historic American Engineering Record (U.S. government)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:VIEW_OF_ARIZONA_FALLS_POWER_PLANT,_LOOKING_EAST_Photographer-_unknown._No_date_-_Arizona_Canal,_North_of_Salt_River,_Phoenix,_Maricopa_County,_AZ_HAER_ARIZ,7-PHEN.V,1-12.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The falls today",
+    "line": "The rebuilt waterfall and park, photographed in 2013.",
+    "ph": {
+     "k": "px_af_now",
+     "by": "Patrick Finnegan",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Arizona_Falls,_Phoenix,_AZ.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "In 1883, workers began digging the Arizona Canal to bring water to farms in the Valley. In 1884 they hit hard rock at a natural drop of about 20 feet. They left it in place and let the water pour over it, making a waterfall in the desert.",
+    "The falls became a popular spot. The mist cooled the air, trees gave shade, and families from Phoenix and Tempe came for picnics. In 1901 and 1902 the Phoenix Light and Fuel Company built a power plant here to provide the first electricity to Phoenix.",
+    "After about 50 years of making power, the site was neglected. In the early 2000s it was rebuilt as a public-art project and a working power station that makes enough electricity for about 150 homes. The modern park opened in 2003."
+   ],
+   "fact": "The falls was made by a canal, not a river.",
+   "disputed": "Many people assume the falls is natural. Wikipedia says it formed when a man-made canal crossed a natural drop.",
+   "claims": [
+    {
+     "t": "The first power plant here opened around 1901 and 1902.",
+     "a": 0,
+     "why": "Wikipedia: built in 1901 and 1902."
+    },
+    {
+     "t": "The waterfall is on a natural river.",
+     "a": 2,
+     "why": "It formed where the man-made Arizona Canal crosses a natural drop."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Arizona Falls",
+     "u": "https://en.wikipedia.org/wiki/Arizona_Falls"
+    },
+    {
+     "t": "Wikipedia: Salt River Project",
+     "u": "https://en.wikipedia.org/wiki/Salt_River_Project"
+    }
+   ],
+   "card": {
+    "a": "1884",
+    "b": "2003",
+    "la": "Falls formed",
+    "lb": "Modern park opens"
+   }
+  }
+ ],
+ "heroKey": "px_cap_now"
+}

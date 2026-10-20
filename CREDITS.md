@@ -257,3 +257,31 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | ti_cr_then | https://www.loc.gov/pictures/item/ca2192.photos.182550p/ | Historic American Buildings Survey (U.S. government) | Public domain | undated survey photo |
 | at_eb_then | https://www.loc.gov/pictures/item/ga0474.photos.057134p/ | Historic American Buildings Survey (U.S. government) | Public domain | 1979 |
 | me_su_then | https://www.loc.gov/pictures/item/2017770211/ | U.S. Farm Security Administration | Public domain | 1937 |
+
+### Southwest: Denver, Santa Fe, Phoenix (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| dn_un_then | https://commons.wikimedia.org/wiki/File:Welcome_Arch_and_Union_Depot,_Denver,_Colo..jpg | Detroit Publishing Company | Public domain | about 1908 |
+| dn_un_now | https://commons.wikimedia.org/wiki/File:Denver_Union_Station_Panorama,_July_2014.jpg | Isaac Kim | CC BY-SA 4.0 | 2014 |
+| dn_br_then | https://commons.wikimedia.org/wiki/File:Brown_Palace_Hotel,_1898.JPG | Detroit Publishing Company (via Library of Congress) | Public domain | 1898 |
+| dn_br_now | https://commons.wikimedia.org/wiki/File:Brown_Palace_Hotel_Denver_CO.jpg | Hustvedt | CC BY-SA 3.0 | undated |
+| dn_mi_then | https://commons.wikimedia.org/wiki/File:U._S._Mint,_Denver,_Colo_(NYPL_b12647398-68693).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| dn_mi_now | https://commons.wikimedia.org/wiki/File:Denver_Mint_(40212263814).jpg | Paul Sableman | CC BY 2.0 | 2018 |
+| dn_ce_then | https://commons.wikimedia.org/wiki/File:CO_Cheesman_Memorial_Denver_1911.jpg | Mile High Photo Co. | Public domain | about 1911 |
+| dn_ce_now | https://commons.wikimedia.org/wiki/File:The_1908_pavilion_in_Denver,_Colorado's,_Cheesman_Park_LCCN2015633572.tif | Carol M. Highsmith | Public domain | undated |
+| sa_pl_then | https://commons.wikimedia.org/wiki/File:Santa_Fe_Plaza_in_1885.jpg | D. B. Chase | Public domain | 1885 |
+| sa_pl_now | https://commons.wikimedia.org/wiki/File:Santa_Fe_plaza.JPG | Asaavedra32 | CC BY-SA 3.0 | undated |
+| sa_lf_then | https://commons.wikimedia.org/wiki/File:La_Fonda_Hotel,_at_the_end_of_the_Santa_Fe_trail,_Santa_Fe,_New_Mexico.jpg | Boston Public Library (linen postcard) | Public domain | mid-1900s |
+| sa_lf_now | https://commons.wikimedia.org/wiki/File:La_fonda_sw_view.jpg | Atakra | CC0 | 2013 |
+| sa_sm_then | https://commons.wikimedia.org/wiki/File:The_Church_of_San_Miguel,_the_oldest_church_in_Santa_Fe,_N.M._-_T._H._O'Sullivan,_phot._LCCN2007684822.jpg | Timothy H. O'Sullivan | Public domain | 1873 |
+| sa_sm_now | https://commons.wikimedia.org/wiki/File:San_Miguel_Mission_Church.jpg | Dorothy Harris | CC BY 2.0 | 2012 |
+| sa_pg_then | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors,_erected_1605_A.D.,_Santa_Fe,_New_Mexico.jpg | Boston Public Library (linen postcard) | Public domain | mid-1900s |
+| sa_pg_now | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors_pano.jpg | Dicklyon | CC BY-SA 4.0 | 2021 |
+| px_cap_then | https://commons.wikimedia.org/wiki/File:CapitolBuilding.PhoenixAZ.1908.jpg | Haines Photo Co. | Public domain | 1908 |
+| px_cap_now | https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg | David Jiang | CC BY-SA 4.0 | 2021 |
+| px_ro_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Delos_H._Smith,_photographer_1940_-_Rosson_House,_139_North_Sixth_Street,_Phoenix,_Maricopa_County,_AZ_HABS_ARIZ,7-PHEN,5-1.tif | Delos H. Smith (Historic American Buildings Survey) | Public domain | 1940 |
+| px_ro_now | https://commons.wikimedia.org/wiki/File:RossonHousePhoenix_gobeirne.jpg | Greg O'Beirne | CC BY 2.5 | 2008 |
+| px_bi_then | https://commons.wikimedia.org/wiki/File:View_to_main_hotel_building_from_pool_area_looking_west_-_Arizona_Biltmore,_Bathhouse_and_Cabanas,_Northeast_Corner,_Twenty-fourth_Street_and_Missouri_Avenue,_Phoenix,_Maricopa_HABS_ARIZ,7-PHEN,15-A-2.tif | Historic American Buildings Survey (U.S. government) | Public domain | undated survey photo |
+| px_bi_now | https://commons.wikimedia.org/wiki/File:Azbiltmore.jpg | Aufaber | Public domain | 2005 |
+| px_af_then | https://commons.wikimedia.org/wiki/File:VIEW_OF_ARIZONA_FALLS_POWER_PLANT,_LOOKING_EAST_Photographer-_unknown._No_date_-_Arizona_Canal,_North_of_Salt_River,_Phoenix,_Maricopa_County,_AZ_HAER_ARIZ,7-PHEN.V,1-12.tif | Historic American Engineering Record (U.S. government) | Public domain | undated survey photo |
+| px_af_now | https://commons.wikimedia.org/wiki/File:Arizona_Falls,_Phoenix,_AZ.jpg | Patrick Finnegan | CC BY 2.0 | 2013 |

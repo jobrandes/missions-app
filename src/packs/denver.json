@@ -1,0 +1,417 @@
+{
+ "id": "denver",
+ "name": "Denver",
+ "explorer": "Mile High Explorer",
+ "initials": "DEN",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Mile Marker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Denver Scholar"
+  ],
+  [
+   600,
+   "Denver Historian"
+  ]
+ ],
+ "heroAlt": "The marble Cheesman Memorial pavilion in Denver",
+ "heroLi": "<li>Header: Carol M. Highsmith · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_1908_pavilion_in_Denver,_Colorado's,_Cheesman_Park_LCCN2015633572.tif\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Carol M. Highsmith · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/mark/1.0/\">Public domain</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_1908_pavilion_in_Denver,_Colorado's,_Cheesman_Park_LCCN2015633572.tif\">Source</a>",
+ "mission": "Find four landmarks around Denver. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Denver is waiting.",
+ "safetyNote": "<li>Downtown Denver has busy streets, light rail and bike lanes. Use crosswalks, and remember the city is a mile up, so drink water and go easy on the sun.</li>",
+ "badgeMap": {
+  "union": [
+   "dn_un_now",
+   "50% 45%"
+  ],
+  "brown": [
+   "dn_br_now",
+   "50% 45%"
+  ],
+  "mint": [
+   "dn_mi_now",
+   "50% 45%"
+  ],
+  "cheesman": [
+   "dn_ce_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "union",
+   "name": "Denver Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 1 of 4",
+   "teaser": "A train station with a welcome arch that was torn down for being in the way.",
+   "map": "Denver Union Station, 1701 Wynkoop St, Denver, CO",
+   "clue": "Go to the LoDo neighborhood at 17th and Wynkoop Streets. Look for the stone station hall with a tall central tower and big orange letters.",
+   "safety": "Trains, buses and light rail all meet here. Stay on the platforms' public side, use crosswalks and watch for traffic on Wynkoop Street.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The big orange sign on the station hall says \"Union Station\" and what else?",
+    "options": [
+     "Welcome to Denver",
+     "Travel by Train",
+     "Mile High City",
+     "Rocky Mountain Rail"
+    ],
+    "answer": 1,
+    "hint": "The sign advertises a way of getting around that does not involve a car or a plane.",
+    "verify": "Wikipedia says orange \"Union Station: Travel by Train\" signs were added in the late 1950s. Read the sign on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1908",
+    "label": "The arch then",
+    "line": "Looking down 17th Street, with the Mizpah arch in front of Union Depot, about 1908.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "dn_un_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Welcome_Arch_and_Union_Depot,_Denver,_Colo..jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The station and the new open-air train hall during the 2014 renovation.",
+    "ph": {
+     "k": "dn_un_now",
+     "by": "Isaac Kim",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Denver_Union_Station_Panorama,_July_2014.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "A station first opened on this spot on June 1, 1881, after four railroads agreed to share one \"union\" station. A fire in 1894 destroyed the middle of it, and a bigger one went up in the Romanesque Revival style.",
+    "On July 4, 1906, a huge arch was dedicated in front of the station. It cost $22,500, used 70 tons of steel and had more than 2,000 light bulbs. One side said \"Welcome\" and the other said \"Mizpah\", a farewell word. The arch was torn down in 1931 because it was considered a traffic hazard.",
+    "The current central building, in the Beaux-Arts style, opened in 1914. After a big renovation, the station house reopened in summer 2014 with the 112-room Crawford Hotel, shops and a modern open-air train hall."
+   ],
+   "fact": "The arch said \"Welcome\" on one side and \"Mizpah\" on the other.",
+   "disputed": "Many people call the whole building the 1881 station. Wikipedia says the central part was replaced after the 1894 fire and again in 1914.",
+   "claims": [
+    {
+     "t": "Denver's Mizpah Arch was dedicated in 1906.",
+     "a": 0,
+     "why": "Wikipedia: dedicated July 4, 1906."
+    },
+    {
+     "t": "The arch is still standing in front of the station.",
+     "a": 2,
+     "why": "It was torn down in 1931 as a traffic hazard."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Denver Union Station",
+     "u": "https://en.wikipedia.org/wiki/Denver_Union_Station"
+    },
+    {
+     "t": "Wikipedia: Union Pacific Railroad",
+     "u": "https://en.wikipedia.org/wiki/Union_Pacific_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1881",
+    "b": "1914",
+    "la": "First station",
+    "lb": "Current hall"
+   }
+  },
+  {
+   "id": "brown",
+   "name": "Brown Palace Hotel",
+   "short": "Brown Palace",
+   "badge": "Brown Palace",
+   "tag": "Stop 2 of 4",
+   "teaser": "A triangle-shaped hotel where presidents slept and a football league was dreamed up.",
+   "map": "Brown Palace Hotel, 321 17th St, Denver, CO",
+   "clue": "Go to 17th Street near Broadway. Look for the red-brown stone hotel that comes to a sharp point like a slice of pie.",
+   "safety": "17th Street is busy with cars and light rail. Use crosswalks, and be polite in the lobby, since it is a working hotel.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What shape is the hotel building, seen from above?",
+    "options": [
+     "A square",
+     "A circle",
+     "A star",
+     "A triangle"
+    ],
+    "answer": 3,
+    "hint": "Look at how the corners meet on the street side, then count them.",
+    "verify": "Wikipedia says the architect gave it a distinctive triangular shape. Check the corners on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1898",
+    "label": "The hotel then",
+    "line": "The Brown Palace in 1898, a few years after it opened.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "dn_br_then",
+     "by": "Detroit Publishing Company (via Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Brown_Palace_Hotel,_1898.JPG",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The triangular hotel stands among tall towers on 17th Street.",
+    "ph": {
+     "k": "dn_br_now",
+     "by": "Hustvedt",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Brown_Palace_Hotel_Denver_CO.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Brown Palace opened in 1892. Frank Edbrooke designed it in a triangle shape, and it was named for its owner, Henry C. Brown. When it was finished, it was the tallest building in Denver.",
+    "Wikipedia says an iron and steel frame covered in cement and sandstone made it one of America's first fireproof buildings. It is also one of the first atrium-style hotels ever built.",
+    "Theodore Roosevelt became the first sitting president to visit the hotel, on May 8, 1905. In 1959, Lamar Hunt and Bob Howsam met in the lobby to talk about a new football league, and Howsam agreed to own what became the Denver Broncos."
+   ],
+   "fact": "A plaque in the lobby marks the football meeting.",
+   "disputed": "Some stories say every president has stayed here. Wikipedia says nearly every one has visited, which is not the same thing.",
+   "claims": [
+    {
+     "t": "The Brown Palace opened in 1892.",
+     "a": 0,
+     "why": "Wikipedia: the hotel was built in 1892."
+    },
+    {
+     "t": "The hotel was the first in Denver, built before any other.",
+     "a": 2,
+     "why": "The Oxford Hotel was built a year earlier."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Brown Palace Hotel (Denver)",
+     "u": "https://en.wikipedia.org/wiki/Brown_Palace_Hotel_(Denver,_Colorado)"
+    },
+    {
+     "t": "Wikipedia: Frank Edbrooke",
+     "u": "https://en.wikipedia.org/wiki/Frank_E._Edbrooke"
+    }
+   ],
+   "card": {
+    "a": "1892",
+    "b": "1959",
+    "la": "Opened",
+    "lb": "Broncos meeting"
+   }
+  },
+  {
+   "id": "mint",
+   "name": "Denver Mint",
+   "short": "Denver Mint",
+   "badge": "Denver Mint",
+   "tag": "Stop 3 of 4",
+   "teaser": "The biggest coin factory in the world, behind a building copied from Florence.",
+   "map": "Denver Mint, 320 W Colfax Ave, Denver, CO",
+   "clue": "Go to Colfax Avenue near Cherokee Street in the Civic Center area. Look for the gray stone building that looks like an Italian palace.",
+   "safety": "Colfax Avenue is a busy road. Use crosswalks, view the building from the public sidewalk, and do not approach the secured areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The bottom level uses stone from Pikes Peak. What kind of stone is it?",
+    "options": [
+     "Granite",
+     "Marble",
+     "Limestone",
+     "Brick"
+    ],
+    "answer": 0,
+    "hint": "It is a hard, speckled rock, tough enough to take a lot of weather.",
+    "verify": "Wikipedia says the first level uses Pikes Peak granite. Look at the lowest floor on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Early 1900s",
+    "label": "The mint then",
+    "line": "A postcard of the mint soon after it opened, with a telegraph pole out front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "dn_mi_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:U._S._Mint,_Denver,_Colo_(NYPL_b12647398-68693).tiff",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The mint today",
+    "line": "The Italian-palace building on Colfax Avenue still makes coins.",
+    "ph": {
+     "k": "dn_mi_now",
+     "by": "Paul Sableman",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Denver_Mint_(40212263814).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Gold miners in the Colorado Gold Rush needed a place to turn gold dust into money. In 1860, a private firm, Clark, Gruber and Company, opened a mint at 16th and Market Streets that made gold coins.",
+    "The US government bought that building in 1863 and used it as an assay office. A new mint was planned in 1896, and construction on Colfax Avenue began in 1897. The first coins were struck on February 1, 1906.",
+    "The building is based on the Palazzo Medici-Riccardi in Florence, Italy. Today the Denver Mint is the single largest producer of coins in the world, with a D mint mark on its coins."
+   ],
+   "fact": "Coins from this mint carry a D.",
+   "disputed": "Many people think the mint has always sat on Colfax. Its first home was a two-story brick building at 16th and Market Streets.",
+   "claims": [
+    {
+     "t": "The Denver Mint struck its first coins in 1906.",
+     "a": 0,
+     "why": "Wikipedia: first coins struck on February 1, 1906."
+    },
+    {
+     "t": "The Denver Mint's building copies a palace in Paris.",
+     "a": 2,
+     "why": "It is based on the Palazzo Medici-Riccardi in Florence, Italy."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Denver Mint",
+     "u": "https://en.wikipedia.org/wiki/Denver_Mint"
+    },
+    {
+     "t": "Wikipedia: Pike's Peak gold rush",
+     "u": "https://en.wikipedia.org/wiki/Pike%27s_Peak_gold_rush"
+    }
+   ],
+   "card": {
+    "a": "1860",
+    "b": "1906",
+    "la": "Private mint",
+    "lb": "Coins from Colfax"
+   }
+  },
+  {
+   "id": "cheesman",
+   "name": "Cheesman Memorial Pavilion",
+   "short": "Cheesman Pavilion",
+   "badge": "Cheesman Pavilion",
+   "tag": "Stop 4 of 4",
+   "teaser": "A marble temple on a hill that used to be a cemetery.",
+   "map": "Cheesman Park Pavilion, E 8th Ave and N Humboldt St, Denver, CO",
+   "clue": "Go to Cheesman Park, southeast of downtown. On the east side, look for a white marble pavilion with a reflecting pool in front.",
+   "safety": "Stay on the paths, keep off the pavilion's steps if there is a fence or event, and watch for bikes and joggers.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "The marble pavilion in the park has a row of what, holding up its roof?",
+    "options": [
+     "Arches",
+     "Domes",
+     "Columns",
+     "Towers"
+    ],
+    "answer": 2,
+    "hint": "It is called neoclassical, a style copied from ancient Greece and Rome.",
+    "verify": "Wikipedia calls the memorial neoclassical. Check the roof supports on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1911",
+    "label": "The pavilion then",
+    "line": "The marble Cheesman Memorial about 1911, with a stone platform and steps.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "dn_ce_then",
+     "by": "Mile High Photo Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:CO_Cheesman_Memorial_Denver_1911.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The pavilion today",
+    "line": "The marble pavilion, with gardens and a reflecting pool in front.",
+    "ph": {
+     "k": "dn_ce_now",
+     "by": "Carol M. Highsmith",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_1908_pavilion_in_Denver,_Colorado's,_Cheesman_Park_LCCN2015633572.tif",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The land that is now Cheesman Park was once a cemetery, opened in 1858. After years of neglect, Congress let the city turn it into a park in 1890. The park finally opened in 1907.",
+    "The park was named for Denver pioneer Walter Cheesman, whose family paid for the pavilion in his honor. The Cheesman Memorial was built in 1908 from Colorado Yule marble in the neoclassical style.",
+    "German-born landscape architect Reinhard Schuetze did the first designs, with winding carriage paths, the pavilion and a reflecting pool. From 1934 to 1972, the Denver Post sponsored open-air musicals and operas at the pavilion."
+   ],
+   "fact": "The marble comes from Colorado.",
+   "disputed": "Some visitors assume the pavilion is much older. Wikipedia says it was built in 1908, after the park opened.",
+   "claims": [
+    {
+     "t": "The Cheesman Memorial was built in 1908.",
+     "a": 0,
+     "why": "Wikipedia: constructed in 1908 from Colorado Yule marble."
+    },
+    {
+     "t": "The pavilion is made of wood.",
+     "a": 2,
+     "why": "It is built from Colorado Yule marble."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cheesman Park",
+     "u": "https://en.wikipedia.org/wiki/Cheesman_Park,_Denver"
+    },
+    {
+     "t": "Wikipedia: Denver Botanic Gardens",
+     "u": "https://en.wikipedia.org/wiki/Denver_Botanic_Gardens"
+    }
+   ],
+   "card": {
+    "a": "1858",
+    "b": "1908",
+    "la": "Cemetery opened",
+    "lb": "Pavilion built"
+   }
+  }
+ ],
+ "heroKey": "dn_ce_now"
+}
