@@ -1,0 +1,417 @@
+{
+ "id": "houston",
+ "name": "Houston",
+ "explorer": "Space City Explorer",
+ "initials": "HOU",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Bayou Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Houston Scholar"
+  ],
+  [
+   600,
+   "Houston Historian"
+  ]
+ ],
+ "heroAlt": "The Rice Hotel building in downtown Houston",
+ "heroLi": "<li>Header: Ed Uthman · CC BY 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rice_Hotel_Downtown_Houston_(HDR).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Ed Uthman · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rice_Hotel_Downtown_Houston_(HDR).jpg\">Source</a>",
+ "mission": "Find four landmarks around Houston. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Houston is waiting.",
+ "safetyNote": "<li>Downtown Houston is hot, humid and full of traffic and light rail. Use crosswalks, watch for trains on the tracks, and drink water.</li>",
+ "badgeMap": {
+  "rice": [
+   "hx_ri_now",
+   "50% 45%"
+  ],
+  "square": [
+   "hx_sq_now",
+   "50% 45%"
+  ],
+  "station": [
+   "hx_us_now",
+   "50% 45%"
+  ],
+  "exchange": [
+   "hx_ce_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "rice",
+   "name": "The Rice (Rice Hotel)",
+   "short": "The Rice",
+   "badge": "The Rice",
+   "tag": "Stop 1 of 4",
+   "teaser": "A hotel built on the spot where Texas once had its capitol.",
+   "map": "The Rice, 909 Texas Ave, Houston, TX",
+   "clue": "Go to Texas Avenue between Travis and Main Streets. Look for the tall, tan building made of two tall wings, with a flat top.",
+   "safety": "Texas Avenue has traffic and light rail. Use crosswalks, and remember this is now an apartment building, so stay on the sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What stood on this spot before the hotels were built?",
+    "options": [
+     "A railroad station",
+     "A jail",
+     "A cotton mill",
+     "The Capitol of the Republic of Texas"
+    ],
+    "answer": 3,
+    "hint": "Texas used to be its own country, with its own capital.",
+    "verify": "Wikipedia says the building was completed in 1913 on the site of the former Capitol of the Republic of Texas. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1910s",
+    "label": "The hotel then",
+    "line": "A colorized postcard of the tall double-towered hotel at the street corner.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "hx_ri_then",
+     "by": "S. H. Kress & Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rice_Hotel,_Houston,_Texas.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The building from across the street, with its tall tan wings against a blue sky.",
+    "ph": {
+     "k": "hx_ri_now",
+     "by": "Ed Uthman",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rice_Hotel_Downtown_Houston_(HDR).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Rice stands at 909 Texas Avenue in downtown Houston, and it is the third building on its site. The Republic of Texas used the first building as its capitol from 1837 to 1839, and again from 1842 to 1845. It then became the Capitol Hotel.",
+    "In 1881 a five-story hotel replaced it. William Marsh Rice bought it in 1886, and after he died in 1900 it passed to the Rice Institute. Jesse H. Jones built the current seventeen-story, double-winged building in 1913 at a cost of about $3.5 million.",
+    "In 1922 the hotel's cafeteria became the first public room in Houston with air-conditioning. The hotel closed in 1977, stood empty for twenty-one years, and reopened in 1998 as apartments called the Post Rice Lofts. Since 2014 it has been called simply The Rice."
+   ],
+   "fact": "It had Houston's first air-conditioned public room.",
+   "disputed": "Many people think a hotel building is only ever a hotel. Wikipedia says this one began as a government capitol.",
+   "claims": [
+    {
+     "t": "The current Rice Hotel building was completed in 1913.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1913."
+    },
+    {
+     "t": "The hotel has always been a hotel and nothing else.",
+     "a": 2,
+     "why": "It was a capitol first, then a hotel, and today it is apartments."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: The Rice (Houston)",
+     "u": "https://en.wikipedia.org/wiki/The_Rice_(Houston)"
+    },
+    {
+     "t": "Wikipedia: William Marsh Rice",
+     "u": "https://en.wikipedia.org/wiki/William_Marsh_Rice"
+    }
+   ],
+   "card": {
+    "a": "1913",
+    "b": "1998",
+    "la": "Current building opens",
+    "lb": "Reopens as apartments"
+   }
+  },
+  {
+   "id": "square",
+   "name": "Market Square",
+   "short": "Market Square",
+   "badge": "Market Square",
+   "tag": "Stop 2 of 4",
+   "teaser": "A park where four different city halls and markets used to stand.",
+   "map": "Market Square Park, Congress Ave and Travis St, Houston, TX",
+   "clue": "Go to the park bounded by Travis and Milam Streets and Congress and Preston Avenues. Look for a green square with oak trees, a brick path and a tall metal sculpture.",
+   "safety": "Downtown streets are busy. Use crosswalks, stay on the paths, and watch for bikes and dogs.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many market house and city hall buildings did the city build on the square?",
+    "options": [
+     "Ten",
+     "One",
+     "Two",
+     "Four"
+    ],
+    "answer": 3,
+    "hint": "Fires destroyed several of them.",
+    "verify": "Wikipedia says the city built four different market house and city hall buildings here. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1895",
+    "label": "The square then",
+    "line": "A black-and-white photo of the city hall and market house on a snowy day in February 1895.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "hx_sq_then",
+     "by": "George Fuermann \"Texas and Houston\" Collection (University of Houston)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Houston_Market_Square_on_Valentine's_Day_1895.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The square today",
+    "line": "The park today, with oak trees, a brick path and a metal sculpture.",
+    "ph": {
+     "k": "hx_sq_now",
+     "by": "Ed Uthman",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Market_Square_Houston_(HDR).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The square was first called Congress Square in the original survey of Houston. It was renamed Market Square in 1837. The city commissioned its first market house and city hall here in 1840, and both were finished in 1841.",
+    "In 1854 Augustus Allen donated the square to the city, which used it as an open-air produce market. Several city halls rose and fell here, mostly because of fires. The fourth one, designed by George E. Dickey, was built in 1904 after a fire in 1901.",
+    "Today the square is a public park surrounded by nineteenth-century buildings and modern towers, with restaurants and bars. Market Square Tower, a 43-floor tower, opened in 2017."
+   ],
+   "fact": "Fires kept destroying the city halls.",
+   "disputed": "Many people think a city hall is built once. Wikipedia says four were built here, and several were destroyed by fire.",
+   "claims": [
+    {
+     "t": "The first market house on the square was finished in 1841.",
+     "a": 0,
+     "why": "Wikipedia: both buildings were completed the year after the 1840 commission, in 1841."
+    },
+    {
+     "t": "The square has always been a park.",
+     "a": 2,
+     "why": "It was a marketplace and the site of city halls."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Market Square Park",
+     "u": "https://en.wikipedia.org/wiki/Market_Square_Park"
+    },
+    {
+     "t": "Wikipedia: Houston City Hall",
+     "u": "https://en.wikipedia.org/wiki/Houston_City_Hall"
+    }
+   ],
+   "card": {
+    "a": "1840",
+    "b": "1904",
+    "la": "First market house",
+    "lb": "Fourth city hall"
+   }
+  },
+  {
+   "id": "station",
+   "name": "Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 3 of 4",
+   "teaser": "A grand 1911 train station that now sits inside a baseball park.",
+   "map": "Union Station, 501 Crawford St, Houston, TX",
+   "clue": "Go to the baseball park downtown, at Crawford and Texas Streets. Look for the old brick-and-stone station building attached to it.",
+   "safety": "This is a busy district, especially on game days. Use crosswalks, stay out of the traffic, and check hours before going in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which New York firm designed the station?",
+    "options": [
+     "Warren and Wetmore",
+     "McKim, Mead and White",
+     "Carrère and Hastings",
+     "Adler and Sullivan"
+    ],
+    "answer": 0,
+    "hint": "The firm was based in New York City and named for its two partners.",
+    "verify": "Wikipedia says the New York architects Warren and Wetmore were commissioned in 1909. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1911",
+    "label": "The station then",
+    "line": "A colorized postcard of the new station, with a car parked out front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "hx_us_then",
+     "by": "University of Houston Digital Library",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Union_Station,_Houston,_Texas.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The brick and stone station building seen from the corner, with trees in front.",
+    "ph": {
+     "k": "hx_us_now",
+     "by": "Ed Uthman",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Union_Station_Houston_Texas_(HDR).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "In 1909 the Houston Belt and Terminal Railway Company hired Warren and Wetmore to design a new union station. Several buildings had to be torn down to make room, including a house and a synagogue.",
+    "It was meant to cost $1 million, and it ended up costing about five times that. The outside is granite, limestone and terracotta, and the inside used a lot of marble. It was dedicated in March 1911, and two more floors were added the next year.",
+    "At the time Houston, with seventeen railways, was considered the main railroad hub of the southern United States. Today the building is a cornerstone of the baseball park, and Houston's Amtrak station has replaced it."
+   ],
+   "fact": "The station cost five times more than planned.",
+   "disputed": "Many people think the station is still used for trains. Wikipedia says it has been superseded by Houston's Amtrak station.",
+   "claims": [
+    {
+     "t": "Union Station was dedicated in 1911.",
+     "a": 0,
+     "why": "Wikipedia: dedicated on March 2, 1911."
+    },
+    {
+     "t": "Union Station was built to cost about $5 million.",
+     "a": 2,
+     "why": "The estimate was $1 million. The real cost was about five times that."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Union Station (Houston)",
+     "u": "https://en.wikipedia.org/wiki/Union_Station_(Houston)"
+    },
+    {
+     "t": "Wikipedia: Warren and Wetmore",
+     "u": "https://en.wikipedia.org/wiki/Warren_and_Wetmore"
+    }
+   ],
+   "card": {
+    "a": "1909",
+    "b": "1911",
+    "la": "Design commissioned",
+    "lb": "Dedicated"
+   }
+  },
+  {
+   "id": "exchange",
+   "name": "Cotton Exchange Building",
+   "short": "Cotton Exchange",
+   "badge": "Cotton Exchange",
+   "tag": "Stop 4 of 4",
+   "teaser": "A red-brick building where cotton prices were decided.",
+   "map": "Cotton Exchange Building, 202 Travis St, Houston, TX",
+   "clue": "Go to the corner of Travis and Franklin Streets. Look for an ornate red-brick building with lots of decorative brick and an arched entrance.",
+   "safety": "Downtown streets are busy. Use crosswalks, and view the building from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1907 the building was remodeled. What was added?",
+    "options": [
+     "A swimming pool",
+     "A dome",
+     "A fourth floor",
+     "A clock tower"
+    ],
+    "answer": 2,
+    "hint": "It was built with three stories in 1884.",
+    "verify": "Wikipedia says the building was remodeled in 1907 and a fourth floor was added. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1907",
+    "label": "The exchange then",
+    "line": "A hand-colored postcard of the building after its 1907 remodel, with a street and shops beside it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "hx_ce_then",
+     "by": "Rotograph Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cotton_Exchange_Building,_Houston,_Texas_(1907).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The exchange today",
+    "line": "The red-brick building with its decorative brick and big trees beside it.",
+    "ph": {
+     "k": "hx_ce_now",
+     "by": "Ed Uthman",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:1884_Houston_Cotton_Exchange.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Houston Cotton Exchange and Board of Trade hired local architect Eugene Heiner to design a three-story building at the corner of Travis and Franklin. It was built in 1884.",
+    "In 1907 the building was remodeled and a fourth floor was added. The Houston Cotton Exchange kept using it until 1924, when it moved to a new building at Prairie and Caroline.",
+    "In 1973 John Hannah and Jesse Edmundson III bought the building and restored it. They sold it in 1983. The building is listed on the National Register of Historic Places."
+   ],
+   "fact": "The exchange moved out in 1924.",
+   "disputed": "Many people think the building has always had four floors. Wikipedia says it began with three.",
+   "claims": [
+    {
+     "t": "The Cotton Exchange Building was built in 1884.",
+     "a": 0,
+     "why": "Wikipedia: built in 1884."
+    },
+    {
+     "t": "The building has always had four floors.",
+     "a": 2,
+     "why": "The fourth floor was added in 1907."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Houston Cotton Exchange Building",
+     "u": "https://en.wikipedia.org/wiki/Houston_Cotton_Exchange_Building"
+    },
+    {
+     "t": "Wikipedia: Eugene T. Heiner",
+     "u": "https://en.wikipedia.org/wiki/Eugene_T._Heiner"
+    }
+   ],
+   "card": {
+    "a": "1884",
+    "b": "1924",
+    "la": "Built",
+    "lb": "Exchange moves out"
+   }
+  }
+ ],
+ "heroKey": "hx_ri_now"
+}

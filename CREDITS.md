@@ -397,3 +397,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | ch_ga_now | https://commons.wikimedia.org/wiki/File:Charleston_-_Mansions_next_to_White_Point_Garden.jpg | P. Hughes | CC BY-SA 4.0 | 2022 |
 | ch_ch_then | https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_04.jpg | The American News Co., New York City | Public domain | about 1905 |
 | ch_ch_now | https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_(2022).jpg | P. Hughes | CC BY-SA 4.0 | 2022 |
+
+### Houston and Nashville (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| hx_ri_then | https://commons.wikimedia.org/wiki/File:Rice_Hotel,_Houston,_Texas.jpg | S. H. Kress & Co. | Public domain | 1910s |
+| hx_ri_now | https://commons.wikimedia.org/wiki/File:Rice_Hotel_Downtown_Houston_(HDR).jpg | Ed Uthman | CC BY 3.0 | 2010 |
+| hx_sq_then | https://commons.wikimedia.org/wiki/File:Houston_Market_Square_on_Valentine's_Day_1895.jpg | George Fuermann "Texas and Houston" Collection (University of Houston) | Public domain | 1895 |
+| hx_sq_now | https://commons.wikimedia.org/wiki/File:Market_Square_Houston_(HDR).jpg | Ed Uthman | CC BY 3.0 | 2010 |
+| hx_us_then | https://commons.wikimedia.org/wiki/File:Union_Station,_Houston,_Texas.jpg | University of Houston Digital Library | Public domain | 1911 |
+| hx_us_now | https://commons.wikimedia.org/wiki/File:Union_Station_Houston_Texas_(HDR).jpg | Ed Uthman | CC BY 3.0 | 2010 |
+| hx_ce_then | https://commons.wikimedia.org/wiki/File:Cotton_Exchange_Building,_Houston,_Texas_(1907).jpg | Rotograph Co. | Public domain | 1907 |
+| hx_ce_now | https://commons.wikimedia.org/wiki/File:1884_Houston_Cotton_Exchange.jpg | Ed Uthman | CC BY 3.0 | 2010 |
+| na_cp_then | https://commons.wikimedia.org/wiki/File:State_Capitol,_Nashville,_Tenn_(NYPL_b12647398-62431).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| na_cp_now | https://commons.wikimedia.org/wiki/File:Tennessee_State_Capitol_2009.jpg | Kaldari | Public domain | 2009 |
+| na_us_then | https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Nashville,_Tenn..jpg | Detroit Publishing Company | Public domain | about 1900 |
+| na_us_now | https://commons.wikimedia.org/wiki/File:Union_Station,_Nashville.JPG | Mayur Phadtare | CC BY-SA 3.0 | 2012 |
+| na_fn_then | https://commons.wikimedia.org/wiki/File:Fort_Nashborough,_First_Ave._and_Church_St.,_Nashville,_Tenn_(74048).jpg | Southern Latex Co. (published postcard) | Public domain | 1930s to 1940s |
+| na_fn_now | https://commons.wikimedia.org/wiki/File:Fort_Nashborough_History_Center_2022.jpg | Antony-22 | CC BY-SA 4.0 | 2022 |
+| na_pa_then | https://commons.wikimedia.org/wiki/File:Centennial_Park_1921.jpg | 105th Observation Squadron | Public domain | 1921 |
+| na_pa_now | https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg | Aaron Archuleta | CC BY-SA 3.0 | 2012 |

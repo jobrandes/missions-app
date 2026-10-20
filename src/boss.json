@@ -1470,5 +1470,97 @@
    "a": 1,
    "why": "George Washington visited in 1791."
   }
+ ],
+ "houston": [
+  {
+   "q": "Who built the current Rice Hotel in 1913?",
+   "o": [
+    "William Marsh Rice",
+    "Eugene Heiner",
+    "George Dickey",
+    "Jesse H. Jones"
+   ],
+   "a": 3,
+   "why": "Jesse H. Jones built it in 1913."
+  },
+  {
+   "q": "Market Square was originally named what?",
+   "o": [
+    "Congress Square",
+    "Bayou Square",
+    "Union Square",
+    "Rice Square"
+   ],
+   "a": 0,
+   "why": "It was named Congress Square in the original survey."
+  },
+  {
+   "q": "Houston's Union Station now sits beside what?",
+   "o": [
+    "A university",
+    "A baseball park",
+    "An airport",
+    "A prison"
+   ],
+   "a": 1,
+   "why": "It is a cornerstone of the baseball park."
+  },
+  {
+   "q": "In what year did the Houston Cotton Exchange move out of its building?",
+   "o": [
+    "1907",
+    "1973",
+    "1924",
+    "1884"
+   ],
+   "a": 2,
+   "why": "It moved to a new building in 1924."
+  }
+ ],
+ "nashville": [
+  {
+   "q": "The capitol's cupola is modeled on a monument to whom?",
+   "o": [
+    "Alexander",
+    "Lysicrates",
+    "Caesar",
+    "Pericles"
+   ],
+   "a": 1,
+   "why": "The Choragic Monument of Lysicrates."
+  },
+  {
+   "q": "Who designed Nashville's Union Station?",
+   "o": [
+    "Louis Sullivan",
+    "Warren and Wetmore",
+    "Henry Hobson Richardson and Richard Montfort",
+    "William Strickland"
+   ],
+   "a": 2,
+   "why": "Wikipedia credits Richardson and Montfort."
+  },
+  {
+   "q": "James Robertson and John Donelson are considered founders of what?",
+   "o": [
+    "Memphis",
+    "Knoxville",
+    "Houston",
+    "Nashville"
+   ],
+   "a": 3,
+   "why": "They are considered the founders of Nashville and Tennessee."
+  },
+  {
+   "q": "What was the Nashville Parthenon first built from?",
+   "o": [
+    "Plaster, wood and brick",
+    "Marble",
+    "Steel",
+    "Limestone"
+   ],
+   "a": 0,
+   "why": "It was plaster, wood and brick in 1897."
+  }
  ]
 }

@@ -1,0 +1,417 @@
+{
+ "id": "nashville",
+ "name": "Nashville",
+ "explorer": "Music City Explorer",
+ "initials": "NSH",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Broadway Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Nashville Scholar"
+  ],
+  [
+   600,
+   "Nashville Historian"
+  ]
+ ],
+ "heroAlt": "The Parthenon in Nashville",
+ "heroLi": "<li>Header: Aaron Archuleta · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Aaron Archuleta · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg\">Source</a>",
+ "mission": "Find four landmarks around Nashville. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Nashville is waiting.",
+ "safetyNote": "<li>Downtown Nashville has busy streets, hills and crowds. Use crosswalks, watch for scooters and traffic, and take the hills slowly.</li>",
+ "badgeMap": {
+  "capitol": [
+   "na_cp_now",
+   "50% 45%"
+  ],
+  "union": [
+   "na_us_now",
+   "50% 45%"
+  ],
+  "fort": [
+   "na_fn_now",
+   "50% 45%"
+  ],
+  "parthenon": [
+   "na_pa_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "capitol",
+   "name": "Tennessee State Capitol",
+   "short": "State Capitol",
+   "badge": "State Capitol",
+   "tag": "Stop 1 of 4",
+   "teaser": "A capitol with no dome, built partly with iron, and an architect buried in its walls.",
+   "map": "Tennessee State Capitol, 600 Dr Martin L King Jr Blvd, Nashville, TN",
+   "clue": "Go to the hill in downtown Nashville. Look for the limestone building shaped like a Greek temple, with a tall tower on top.",
+   "safety": "Stay on the paths on the hillside, use crosswalks on the streets around it, and check visiting hours and security rules before going in.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who is entombed within the capitol's walls?",
+    "options": [
+     "The architect William Strickland",
+     "Andrew Jackson",
+     "The first governor",
+     "A railroad engineer"
+    ],
+    "answer": 0,
+    "hint": "He did not live to see it finished.",
+    "verify": "Wikipedia says Strickland and Samuel Morgan are entombed within the building's walls. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The capitol then",
+    "line": "A colorized postcard of the capitol on its hill, with trees and a stone wall in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "na_cp_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:State_Capitol,_Nashville,_Tenn_(NYPL_b12647398-62431).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The capitol today",
+    "line": "The temple-style front and tower of the capitol under a bright sky.",
+    "ph": {
+     "k": "na_cp_now",
+     "by": "Kaldari",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tennessee_State_Capitol_2009.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Architect William Strickland of Philadelphia designed the capitol and thought it was his greatest achievement. It was built between 1845 and 1859 by skilled artisans and by convict and slave labor. It has been used continuously since 1853.",
+    "It was built mostly of limestone quarried nearby, and it was one of the first buildings in the United States to use iron as a structural element. It is one of eleven state capitols with no dome. When it was completed it was the tallest building in the southeastern United States. Its cupola is modeled on the Choragic Monument of Lysicrates.",
+    "During the Civil War the building was a camp for Union troops, a hospital and a lookout. Strickland, who died before it was finished, and Samuel Morgan, who oversaw construction, are entombed in its walls. The tombs of President James K. Polk and his wife are on the grounds."
+   ],
+   "fact": "It is one of eleven capitols with no dome.",
+   "disputed": "Many people think every statehouse has a dome. Wikipedia says eleven do not, including this one.",
+   "claims": [
+    {
+     "t": "The Tennessee State Capitol has been used continuously since 1853.",
+     "a": 0,
+     "why": "Wikipedia: used continuously since 1853."
+    },
+    {
+     "t": "The capitol has a large dome.",
+     "a": 2,
+     "why": "It is one of eleven state capitols with no dome."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Tennessee State Capitol",
+     "u": "https://en.wikipedia.org/wiki/Tennessee_State_Capitol"
+    },
+    {
+     "t": "Wikipedia: William Strickland",
+     "u": "https://en.wikipedia.org/wiki/William_Strickland_(architect)"
+    }
+   ],
+   "card": {
+    "a": "1845",
+    "b": "1859",
+    "la": "Construction begins",
+    "lb": "Construction ends"
+   }
+  },
+  {
+   "id": "union",
+   "name": "Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 2 of 4",
+   "teaser": "A train station shaped like a castle, which is now a hotel.",
+   "map": "Union Station Hotel, 1001 Broadway, Nashville, TN",
+   "clue": "Go to Broadway at 10th Avenue, just west of downtown. Look for a stone building with a tall clock tower and a steep roof, like a castle.",
+   "safety": "Broadway is a busy road. Use crosswalks, and be polite in the lobby, since it is a working hotel.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What does Union Station serve as today?",
+    "options": [
+     "A museum of trains",
+     "A bank",
+     "A hotel",
+     "A prison"
+    ],
+    "answer": 2,
+    "hint": "You can book a room there.",
+    "verify": "Wikipedia says it reopened as the Union Station Hotel in 1986. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The station then",
+    "line": "A black-and-white photo of the station with its clock tower, from down the street, with telegraph wires overhead.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "na_us_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Nashville,_Tenn..jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The clock tower and steep roofs against a blue sky, with a car passing in front.",
+    "ph": {
+     "k": "na_us_now",
+     "by": "Mayur Phadtare",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Union_Station,_Nashville.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Nashville's Union Station was built starting in 1898 and opened on October 9, 1900. Henry Hobson Richardson and Richard Montfort are credited with the design. Montfort was an engineer for the Louisville and Nashville Railroad and spent several years planning the building.",
+    "The building is Romanesque Revival, a look that stood out among train stations of the time. It was built west of downtown and next to a viaduct. Streetcars used it too, until streetcars ended in Nashville in 1941. It became a National Historic Landmark in 1975.",
+    "The last passenger trains left in the late 1970s. After it was abandoned for several years, the station reopened in 1986 as the Union Station Hotel. In 2012 it became a Marriott Autograph Collection hotel."
+   ],
+   "fact": "It reopened as a hotel in 1986.",
+   "disputed": "Many people think a station this old must be a ruin or a museum. Wikipedia says it is a working hotel.",
+   "claims": [
+    {
+     "t": "Union Station opened in 1900.",
+     "a": 0,
+     "why": "Wikipedia: opened October 9, 1900."
+    },
+    {
+     "t": "Union Station is still used for passenger trains.",
+     "a": 2,
+     "why": "The last passenger trains left in the late 1970s."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Union Station (Nashville)",
+     "u": "https://en.wikipedia.org/wiki/Union_Station_(Nashville)"
+    },
+    {
+     "t": "Wikipedia: Louisville and Nashville Railroad",
+     "u": "https://en.wikipedia.org/wiki/Louisville_and_Nashville_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1900",
+    "b": "1986",
+    "la": "Opens as a station",
+    "lb": "Reopens as a hotel"
+   }
+  },
+  {
+   "id": "fort",
+   "name": "Fort Nashborough",
+   "short": "Fort Nashborough",
+   "badge": "Fort Nashborough",
+   "tag": "Stop 3 of 4",
+   "teaser": "The log fort that started the city, rebuilt after being torn down.",
+   "map": "Fort Nashborough History Center, 170 First Ave N, Nashville, TN",
+   "clue": "Go to First Avenue North near Church Street, along the Cumberland River. Look for log cabins and a log wall in a small walkway.",
+   "safety": "First Avenue is busy. Use crosswalks, stay on the walkways, and do not climb on the logs.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many log cabins did the original fort contain?",
+    "options": [
+     "8",
+     "20",
+     "200",
+     "2"
+    ],
+    "answer": 1,
+    "hint": "It covered two acres and held a whole settlement.",
+    "verify": "Wikipedia says the stockade contained 20 log cabins. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1930s to 1940s",
+    "label": "The fort then",
+    "line": "A colorized postcard of the 1930s replica, with a flag, log cabins and a river behind it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "na_fn_then",
+     "by": "Southern Latex Co. (published postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fort_Nashborough,_First_Ave._and_Church_St.,_Nashville,_Tenn_(74048).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2022",
+    "head": "Today",
+    "label": "The fort today",
+    "line": "The new fort's log cabins on a brick walkway, with a tall chimney behind.",
+    "ph": {
+     "k": "na_fn_now",
+     "by": "Antony-22",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fort_Nashborough_History_Center_2022.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Fort Nashborough was a log stockade set up in early 1779 in the French Lick area of the Cumberland River valley. It was the forerunner of the settlement that became Nashville. James Robertson and John Donelson are considered the founders.",
+    "The fort was not a military garrison. It was square, covered two acres and had 20 log cabins to protect settlers from wild animals and attackers. It was abandoned in 1794.",
+    "A small replica of the fort was built in the 1930s, a few hundred meters from the original site. It fell apart and was demolished in 2015. A new Fort Nashborough History Center had its ribbon-cutting on July 13, 2017."
+   ],
+   "fact": "The replica was torn down in 2015.",
+   "disputed": "Many people think the log fort in town is the original. Wikipedia says the earlier replica was built in the 1930s and demolished in 2015.",
+   "claims": [
+    {
+     "t": "The original fort was set up in 1779.",
+     "a": 0,
+     "why": "Wikipedia: established in early 1779."
+    },
+    {
+     "t": "The fort was a big military base.",
+     "a": 2,
+     "why": "Wikipedia says it was not a military garrison."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fort Nashborough",
+     "u": "https://en.wikipedia.org/wiki/Fort_Nashborough"
+    },
+    {
+     "t": "Wikipedia: Nashville, Tennessee",
+     "u": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
+    }
+   ],
+   "card": {
+    "a": "1779",
+    "b": "2017",
+    "la": "Fort established",
+    "lb": "History Center ribbon-cutting"
+   }
+  },
+  {
+   "id": "parthenon",
+   "name": "The Parthenon",
+   "short": "Parthenon",
+   "badge": "Parthenon",
+   "tag": "Stop 4 of 4",
+   "teaser": "A full-size copy of the Parthenon in Athens, in the middle of Tennessee.",
+   "map": "The Parthenon, 2500 West End Ave, Nashville, TN",
+   "clue": "Go to Centennial Park, west of downtown. Look for a huge Greek temple with a double row of columns.",
+   "safety": "Stay on the park paths, watch for bikes, and check hours before going inside. Do not climb on the steps or columns.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which nickname for Nashville inspired the building?",
+    "options": [
+     "Windy City",
+     "Athens of the South",
+     "Gateway to the West",
+     "The Big Easy"
+    ],
+    "answer": 1,
+    "hint": "Nashville was known for its colleges and learning.",
+    "verify": "Wikipedia says the nickname \"Athens of the South\" influenced the choice. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1921",
+    "label": "The Parthenon then",
+    "line": "A 1921 photo from the air of Centennial Park, with the Parthenon small among the trees and paths.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "na_pa_then",
+     "by": "105th Observation Squadron",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Centennial_Park_1921.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The Parthenon today",
+    "line": "The columns and roof of the full-size replica, rising above the lawn.",
+    "ph": {
+     "k": "na_pa_now",
+     "by": "Aaron Archuleta",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Parthenon in Centennial Park is a full-scale replica of the Parthenon in Athens. William Crawford Smith designed it, and it was built in 1897 for the Tennessee Centennial Exposition. Nashville's nickname, the \"Athens of the South,\" influenced the choice.",
+    "Wikipedia says it was the only building at the Exposition that was an exact reproduction. It was built of plaster, wood and brick and was not meant to last, but it was so popular that it was left standing. After weather damaged it, it was rebuilt in concrete, with the exterior finished in 1925 and the interior in 1931.",
+    "Inside, Alan LeQuire's 1990 re-creation of the Athena Parthenos statue is the focus of the building. It is now an art museum."
+   ],
+   "fact": "The first one was made of plaster.",
+   "disputed": "Many people think the building is ancient or even made of marble. Wikipedia says the first was plaster, wood and brick, and the current one is concrete.",
+   "claims": [
+    {
+     "t": "The Parthenon was built in 1897.",
+     "a": 0,
+     "why": "Wikipedia: built in 1897 for the Centennial Exposition."
+    },
+    {
+     "t": "The Nashville Parthenon is a small model.",
+     "a": 2,
+     "why": "It is a full-scale replica."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Parthenon (Nashville)",
+     "u": "https://en.wikipedia.org/wiki/Parthenon_(Nashville)"
+    },
+    {
+     "t": "Wikipedia: Tennessee Centennial Exposition",
+     "u": "https://en.wikipedia.org/wiki/Tennessee_Centennial_and_International_Exposition"
+    }
+   ],
+   "card": {
+    "a": "1897",
+    "b": "1931",
+    "la": "Built for the Exposition",
+    "lb": "Rebuilt interior finished"
+   }
+  }
+ ],
+ "heroKey": "na_pa_now"
+}
