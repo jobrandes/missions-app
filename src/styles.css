@@ -496,3 +496,12 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
 .passport .rcard strong{color:#E9A91A}
 .passport .rcard .rsub{color:#F3EFE6;opacity:.85}
 .passport .rcard .go{color:#E9A91A}
+
+.heroGo{margin-top:16px;width:100%;max-width:340px}
+.pitch{margin:22px 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 14px}
+.pitch>summary{display:flex;flex-direction:column;gap:2px;min-height:64px;justify-content:center;cursor:pointer;list-style:none;position:relative;padding-right:28px}
+.pitch>summary::-webkit-details-marker{display:none}
+.pitch>summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font:600 20px var(--font-mono);color:var(--accent)}
+.pitch[open]>summary::after{content:"–"}
+.pitch>summary strong{font:800 18px var(--font-display);text-transform:uppercase}
+.pitch[open]{padding-bottom:6px}
