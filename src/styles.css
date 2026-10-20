@@ -444,3 +444,34 @@ details.reg[open]>summary.region::after{content:"–"}
 
 .hstamp{transition:opacity .17s ease}.hstamps.swap .hstamp,.hstamps.swap .hstamps-cap{opacity:0}
 @media (prefers-reduced-motion:reduce){.hstamp{transition:none}}
+
+/* home revamp Oct 20 */
+.towns{gap:8px}
+@media (min-width:760px){.towns{grid-template-columns:1fr 1fr;gap:10px}}
+@media (min-width:1100px){.towns{grid-template-columns:1fr 1fr 1fr}}
+.town{min-height:0;gap:12px;padding:8px 12px 8px 8px;border-radius:12px}
+.town .tph{width:56px;height:56px;border-radius:10px}
+.town h3{font-size:18px;line-height:1.1}
+.town .sub{font-size:13px;line-height:1.3}
+.town .lvl{margin:3px 0 2px;font-size:10px;padding:1px 7px}
+.town .go{font-size:12px}
+.hh{font-size:24px;margin:28px 0 8px}
+details.reg>summary.region{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 14px;margin:8px 0}
+details.reg[open]>summary.region{border-color:var(--accent)}
+details.reg>.towns{margin:8px 0 12px}
+details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0}
+.ppwrap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 14px}
+.ppwrap>summary{display:flex;justify-content:space-between;align-items:center;min-height:60px;cursor:pointer;list-style:none}
+.ppwrap>summary::-webkit-details-marker{display:none}
+.ppwrap>summary::after{content:"+";font:600 20px var(--font-mono);color:var(--accent)}
+.ppwrap[open]>summary::after{content:"–"}
+.ppwrap .pptitle{display:block;font:800 18px var(--font-display);text-transform:uppercase}
+.ppwrap[open]{padding-bottom:12px}
+.hsteps{grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:420px){.hsteps{grid-template-columns:1fr 1fr}.hstep{padding:12px}.hstep h3{font-size:17px}.hstep p{font-size:13px}.hstep p.mono{display:none}.hstep b{font-size:28px}}
+@media (min-width:900px){.hsteps{grid-template-columns:repeat(4,1fr)}}
+.navy{padding:20px 16px;margin:28px 0}
+.navy h2{font-size:clamp(26px,7vw,36px)}
+.hsec{margin:34px 0}
+.hh2{font-size:clamp(24px,6vw,32px)}
+.grown{margin:30px 0 20px}
