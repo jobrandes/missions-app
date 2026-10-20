@@ -1378,5 +1378,97 @@
    "a": 1,
    "why": "It was the New York State pavilion at the 1901 Pan-American Exposition."
   }
+ ],
+ "richmond": [
+  {
+   "q": "Who is credited with the overall design of the Virginia State Capitol?",
+   "o": [
+    "Patrick Henry",
+    "Lewis Ginter",
+    "Robert E. Lee",
+    "Thomas Jefferson"
+   ],
+   "a": 3,
+   "why": "Thomas Jefferson, together with Charles-Louis Clérisseau."
+  },
+  {
+   "q": "What neighborhood is named for St. John's Church?",
+   "o": [
+    "Church Hill",
+    "Shockoe Bottom",
+    "The Fan",
+    "Jackson Ward"
+   ],
+   "a": 0,
+   "why": "Wikipedia says the Church Hill district was named for it."
+  },
+  {
+   "q": "The architects of the Jefferson Hotel later designed which library?",
+   "o": [
+    "The Morgan Library",
+    "The New York Public Library",
+    "The Library of Congress",
+    "The Boston Public Library"
+   ],
+   "a": 1,
+   "why": "Carrère and Hastings designed the New York Public Library."
+  },
+  {
+   "q": "Main Street Station was built by Seaboard and which other railroad?",
+   "o": [
+    "Pennsylvania Railroad",
+    "Southern Pacific",
+    "Chesapeake and Ohio",
+    "Union Pacific"
+   ],
+   "a": 2,
+   "why": "The C&O and Seaboard built it together in 1901."
+  }
+ ],
+ "charleston": [
+  {
+   "q": "How many houses make up Rainbow Row?",
+   "o": [
+    "Thirty",
+    "Seven",
+    "Thirteen",
+    "Three"
+   ],
+   "a": 2,
+   "why": "There are thirteen buildings."
+  },
+  {
+   "q": "Which group preserves the Old Exchange?",
+   "o": [
+    "The National Guard",
+    "The Boy Scouts",
+    "The Coast Guard",
+    "Daughters of the American Revolution"
+   ],
+   "a": 3,
+   "why": "It was granted to the DAR in 1913."
+  },
+  {
+   "q": "White Point Garden is at the end of which seawall?",
+   "o": [
+    "The Battery",
+    "The Wharf",
+    "The Breakwater",
+    "The Levee"
+   ],
+   "a": 0,
+   "why": "It is the southern end of the Battery."
+  },
+  {
+   "q": "Which U.S. president worshipped in pew 43 at St. Michael's in 1791?",
+   "o": [
+    "James Madison",
+    "George Washington",
+    "Thomas Jefferson",
+    "Abraham Lincoln"
+   ],
+   "a": 1,
+   "why": "George Washington visited in 1791."
+  }
  ]
 }

@@ -377,3 +377,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | bf_po_now | https://commons.wikimedia.org/wiki/File:Old_Post_Office_Buffalo_NY_Full_View_Dec_09.JPG | Pubdog | Public domain | 2009 |
 | bf_hm_then | https://commons.wikimedia.org/wiki/File:Pan-American_Exposition_-_New_York_State_Building.jpg | C. D. Arnold | Public domain | 1901 |
 | bf_hm_now | https://commons.wikimedia.org/wiki/File:Buffalo_and_Erie_County_Historical_Society.jpg | Dave Pape | Public domain | 2006 |
+
+### Richmond and Charleston (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| rm_cap_then | https://commons.wikimedia.org/wiki/File:State_Capitol,_Richmond,_Va_(NYPL_b12647398-68100).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| rm_cap_now | https://commons.wikimedia.org/wiki/File:State_Capitol_of_the_Commonwealth_of_Virginia_(7358972234).jpg | Ron Cogswell | CC BY 2.0 | 2012 |
+| rm_ch_then | https://commons.wikimedia.org/wiki/File:St._John's_Church,_Richmond,_Virginia-LCCN2008679545.jpg | Detroit Publishing Company (Library of Congress) | Public domain | 1901 |
+| rm_ch_now | https://commons.wikimedia.org/wiki/File:St._John's_Church_in_Richmond,_VA_(2011)_IMG_4046.JPG | Billy Hathorn | CC BY-SA 3.0 | 2011 |
+| rm_ho_then | https://commons.wikimedia.org/wiki/File:Jefferson_Hotel,_Richmond,_Va_(NYPL_b12647398-73903).tiff | Detroit Publishing Company (scan by NYPL) | Public domain | after 1898 |
+| rm_ho_now | https://commons.wikimedia.org/wiki/File:Jefferson_Hotel,_Richmond,_VA_IMG_4050.JPG | Billy Hathorn | CC BY-SA 3.0 | 2011 |
+| rm_st_then | https://commons.wikimedia.org/wiki/File:C_and_O_Rly_Station,_Richmond,_Va._(16836345651).jpg | Unknown author (VCU Libraries Commons) | Public domain | undated |
+| rm_st_now | https://commons.wikimedia.org/wiki/File:Richmond_Main_Street_Station.jpg | Schützenpanzer | CC BY-SA 4.0 | 2025 |
+| ch_rb_then | https://commons.wikimedia.org/wiki/File:Rainbow_Row_(Apr_5_1902).jpg | Unknown author | Public domain | 1902 |
+| ch_rb_now | https://commons.wikimedia.org/wiki/File:Rainbow_Row_Charleston_July_2024_1.jpg | Thomson200 | CC0 | 2024 |
+| ch_ex_then | https://commons.wikimedia.org/wiki/File:Charleston_-_The_Old_Exchange.jpg | Unknown author | Public domain | about 1906 |
+| ch_ex_now | https://commons.wikimedia.org/wiki/File:Old_Exchange_Building,_French_Quarter,_Charleston,_SC_(49431763253).jpg | Warren LeMay | CC0 | 2019 |
+| ch_ga_then | https://commons.wikimedia.org/wiki/File:Charleston_-_South_Battery_showing_Jasper_Monument.jpg | Hugh C. Leighton Co. | Public domain | about 1905 |
+| ch_ga_now | https://commons.wikimedia.org/wiki/File:Charleston_-_Mansions_next_to_White_Point_Garden.jpg | P. Hughes | CC BY-SA 4.0 | 2022 |
+| ch_ch_then | https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_04.jpg | The American News Co., New York City | Public domain | about 1905 |
+| ch_ch_now | https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_(2022).jpg | P. Hughes | CC BY-SA 4.0 | 2022 |

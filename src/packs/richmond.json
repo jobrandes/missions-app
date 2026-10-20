@@ -1,0 +1,417 @@
+{
+ "id": "richmond",
+ "name": "Richmond",
+ "explorer": "River City Explorer",
+ "initials": "RVA",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River City Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Richmond Scholar"
+  ],
+  [
+   600,
+   "Richmond Historian"
+  ]
+ ],
+ "heroAlt": "The Virginia State Capitol in Richmond",
+ "heroLi": "<li>Header: Ron Cogswell · CC BY 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:State_Capitol_of_the_Commonwealth_of_Virginia_(7358972234).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Ron Cogswell · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/2.0/\">CC BY 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:State_Capitol_of_the_Commonwealth_of_Virginia_(7358972234).jpg\">Source</a>",
+ "mission": "Find four landmarks around Richmond. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Richmond is waiting.",
+ "safetyNote": "<li>Downtown Richmond has busy streets, steep hills and highway overpasses. Use crosswalks, watch for traffic near the train station, and take the hills slowly.</li>",
+ "badgeMap": {
+  "capitol": [
+   "rm_cap_now",
+   "50% 45%"
+  ],
+  "church": [
+   "rm_ch_now",
+   "50% 45%"
+  ],
+  "hotel": [
+   "rm_ho_now",
+   "50% 45%"
+  ],
+  "station": [
+   "rm_st_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "capitol",
+   "name": "Virginia State Capitol",
+   "short": "State Capitol",
+   "badge": "State Capitol",
+   "tag": "Stop 1 of 4",
+   "teaser": "A government building copied from a Roman temple in France, designed by Thomas Jefferson.",
+   "map": "Virginia State Capitol, 1000 Bank St, Richmond, VA",
+   "clue": "Go to Capitol Square in downtown Richmond. Look for the white building with a row of tall columns and a triangle-shaped roof over the front, like a temple.",
+   "safety": "Capitol Square is a working government site. Stay on the paths, use crosswalks, and check visiting hours and security rules before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "A Roman temple in France was the model for the Capitol. What is it called?",
+    "options": [
+     "The Pantheon",
+     "The Maison Carrée",
+     "The Parthenon",
+     "The Colosseum"
+    ],
+    "answer": 1,
+    "hint": "It is in the city of Nîmes.",
+    "verify": "Wikipedia says the design was modeled after the Maison Carrée at Nîmes in southern France. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The Capitol then",
+    "line": "A colorized postcard from after 1898 showing the temple front with its two side wings and people on the lawn.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "rm_cap_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:State_Capitol,_Richmond,_Va_(NYPL_b12647398-68100).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The Capitol today",
+    "line": "The columns and triangular roof seen from the front steps, with lamp posts and red flowers.",
+    "ph": {
+     "k": "rm_cap_now",
+     "by": "Ron Cogswell",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:State_Capitol_of_the_Commonwealth_of_Virginia_(7358972234).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Virginia State Capitol houses the General Assembly, which traces back to the House of Burgesses first meeting in 1619. Wikipedia calls it the oldest elected legislative body in North America.",
+    "Thomas Jefferson is credited with the overall design, together with French architect Charles-Louis Clérisseau. It is modeled after the Maison Carrée, an ancient Roman temple in Nîmes. Construction began in 1785 and was completed in 1788. This is the eighth building to serve as Virginia's statehouse, mostly because of fires.",
+    "From 1861 to 1865 the building was the capitol of the Confederate States of America. In the early 20th century two wings were added, which gave the building its present appearance. It became a National Historic Landmark in 1960."
+   ],
+   "fact": "It is the eighth Virginia statehouse.",
+   "disputed": "Many people think the Capitol has always had wings on each side. Wikipedia says the two wings were added in the early 20th century.",
+   "claims": [
+    {
+     "t": "Construction on the Capitol began in 1785.",
+     "a": 0,
+     "why": "Wikipedia: construction began in 1785 and was completed in 1788."
+    },
+    {
+     "t": "The Capitol was designed by a team of Roman architects.",
+     "a": 2,
+     "why": "Jefferson and French architect Clérisseau designed it, modeled on a Roman temple."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Virginia State Capitol",
+     "u": "https://en.wikipedia.org/wiki/Virginia_State_Capitol"
+    },
+    {
+     "t": "Wikipedia: Thomas Jefferson",
+     "u": "https://en.wikipedia.org/wiki/Thomas_Jefferson"
+    }
+   ],
+   "card": {
+    "a": "1785",
+    "b": "1788",
+    "la": "Construction begins",
+    "lb": "Completed"
+   }
+  },
+  {
+   "id": "church",
+   "name": "St. John's Church",
+   "short": "St. John's",
+   "badge": "St. John's",
+   "tag": "Stop 2 of 4",
+   "teaser": "The church where Patrick Henry gave a famous speech about liberty or death.",
+   "map": "St. John's Episcopal Church, 2401 E Broad St, Richmond, VA",
+   "clue": "Go to East Broad Street on Church Hill. Look for a white wooden church with a small tower and a graveyard around it.",
+   "safety": "The churchyard is a burial ground. Stay on the paths, be quiet and respectful, and check visiting hours before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What famous demand did Patrick Henry make in a speech here?",
+    "options": [
+     "\"Remember the Alamo!\"",
+     "\"Don't tread on me!\"",
+     "\"I have not yet begun to fight!\"",
+     "\"Give me liberty or give me death!\""
+    ],
+    "answer": 3,
+    "hint": "It is one of the most quoted lines of the American Revolution.",
+    "verify": "Wikipedia says Patrick Henry gave his speech here at the Second Virginia Convention, closing with \"Give me liberty or give me death!\" Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1901",
+    "label": "The church then",
+    "line": "A color print from 1901 of the white church among bare trees and graves.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "rm_ch_then",
+     "by": "Detroit Publishing Company (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:St._John's_Church,_Richmond,_Virginia-LCCN2008679545.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The church today",
+    "line": "The white church and its tower seen from the front, with trees all around.",
+    "ph": {
+     "k": "rm_ch_now",
+     "by": "Billy Hathorn",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:St._John's_Church_in_Richmond,_VA_(2011)_IMG_4046.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "St. John's is the oldest church in the city of Richmond. It was built in 1741 by Colonel Richard Randolph, and the Church Hill neighborhood was named for it. It stands at 2401 East Broad Street and is a National Historic Landmark.",
+    "The church was the site of two important conventions in the years before the American Revolution. It is famous as the place where Founding Father Patrick Henry gave his speech at the Second Virginia Convention.",
+    "The parish grew out of earlier ones. The first, Henrico Parish Church, was at Henricus in 1611. Henricus was destroyed in 1622 and was never rebuilt."
+   ],
+   "fact": "The hill is named for the church.",
+   "disputed": "Many people assume the church was built in the 1770s, when the speech was given. Wikipedia says it was built in 1741.",
+   "claims": [
+    {
+     "t": "St. John's Church was built in 1741.",
+     "a": 0,
+     "why": "Wikipedia: built in 1741 by Colonel Richard Randolph."
+    },
+    {
+     "t": "Church Hill was named before the church existed.",
+     "a": 2,
+     "why": "Wikipedia says the Church Hill district was named for the church."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: St. John's Episcopal Church (Richmond, Virginia)",
+     "u": "https://en.wikipedia.org/wiki/St._John%27s_Episcopal_Church_(Richmond,_Virginia)"
+    },
+    {
+     "t": "Wikipedia: Patrick Henry",
+     "u": "https://en.wikipedia.org/wiki/Patrick_Henry"
+    }
+   ],
+   "card": {
+    "a": "1741",
+    "b": "1775",
+    "la": "Church built",
+    "lb": "Patrick Henry's speech"
+   }
+  },
+  {
+   "id": "hotel",
+   "name": "Jefferson Hotel",
+   "short": "Jefferson Hotel",
+   "badge": "Jefferson Hotel",
+   "tag": "Stop 3 of 4",
+   "teaser": "A grand hotel that once had alligators swimming in the lobby.",
+   "map": "The Jefferson Hotel, 101 W Franklin St, Richmond, VA",
+   "clue": "Go to Franklin Street at Adams Street, in downtown Richmond. Look for the big hotel with a tall clock tower and a rich, cream-colored front.",
+   "safety": "Franklin Street has traffic. Use crosswalks, and be polite in the lobby, since it is a working hotel.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which animals once swam in the marble pools of the hotel's lobby?",
+    "options": [
+     "Goldfish",
+     "Alligators",
+     "Penguins",
+     "Turtles"
+    ],
+    "answer": 1,
+    "hint": "Actor David Niven noticed one when he was signing the guest book.",
+    "verify": "Wikipedia says alligators lived in the marble pools of the Palm Court. Look for the bronze alligators. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1898",
+    "label": "The hotel then",
+    "line": "A colorized postcard of the hotel with its clock tower and a street of horse-era traffic.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "rm_ho_then",
+     "by": "Detroit Publishing Company (scan by NYPL)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Jefferson_Hotel,_Richmond,_Va_(NYPL_b12647398-73903).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The clock tower rising over the hotel and a blue sky.",
+    "ph": {
+     "k": "rm_ho_now",
+     "by": "Billy Hathorn",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Jefferson_Hotel,_Richmond,_VA_IMG_4050.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Tobacco baron Lewis Ginter planned the hotel as a top property for the city. Carrère and Hastings, the New York architects who later designed the New York Public Library, designed it in the Spanish Baroque style. It opened on October 31, 1895.",
+    "On March 29, 1901, a fire destroyed three-fifths of the hotel. The marble statue of Thomas Jefferson was carried to safety, but its head broke off in the rescue. It was repaired later. The hotel reopened in 1907.",
+    "The actor David Niven wrote that he saw a full-sized alligator swimming in a pool near the reception desk. Old Pompey, the last alligator in the Palm Court pools, lived until 1948. Today bronze alligators decorate the hotel."
+   ],
+   "fact": "The last alligator was named Old Pompey.",
+   "disputed": "Many people think the alligators are still there. Wikipedia says the last one lived until 1948, and now there are bronze statues of them.",
+   "claims": [
+    {
+     "t": "The Jefferson Hotel opened in 1895.",
+     "a": 0,
+     "why": "Wikipedia: opened on October 31, 1895."
+    },
+    {
+     "t": "The hotel's lobby still has live alligators.",
+     "a": 2,
+     "why": "Old Pompey, the last one, lived until 1948."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Jefferson Hotel (Richmond, Virginia)",
+     "u": "https://en.wikipedia.org/wiki/Jefferson_Hotel_(Richmond,_Virginia)"
+    },
+    {
+     "t": "Wikipedia: Carrère and Hastings",
+     "u": "https://en.wikipedia.org/wiki/Carr%C3%A8re_and_Hastings"
+    }
+   ],
+   "card": {
+    "a": "1895",
+    "b": "1907",
+    "la": "Opened",
+    "lb": "Reopened after the fire"
+   }
+  },
+  {
+   "id": "station",
+   "name": "Main Street Station",
+   "short": "Main Street Station",
+   "badge": "Main Street Station",
+   "tag": "Stop 4 of 4",
+   "teaser": "A train station with a clock tower that was flooded, burned and brought back.",
+   "map": "Main Street Station, 1500 E Main St, Richmond, VA",
+   "clue": "Go to East Main Street at 15th Street, in the Shockoe Bottom neighborhood. Look for the red-brick station with a clock tower and a steep red-tile roof.",
+   "safety": "Trains and highway traffic are close by. Stay off the tracks and platforms unless you are boarding, and use crosswalks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which storm flooded the station in 1972?",
+    "options": [
+     "Hurricane Hazel",
+     "Hurricane Andrew",
+     "Hurricane Agnes",
+     "Hurricane Camille"
+    ],
+    "answer": 2,
+    "hint": "It was a hurricane that caused huge floods in 1972 along the James River.",
+    "verify": "Wikipedia says Hurricane Agnes caused the James River to flood the station in 1972. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Undated",
+    "label": "The station then",
+    "line": "An old brown-toned photograph of the station's arches and tower from the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "rm_st_then",
+     "by": "Unknown author (VCU Libraries Commons)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:C_and_O_Rly_Station,_Richmond,_Va._(16836345651).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2025",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The station's clock tower and red-tile roof, with a highway overpass beside it.",
+    "ph": {
+     "k": "rm_st_now",
+     "by": "Schützenpanzer",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Richmond_Main_Street_Station.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Main Street Station was built in 1901 by two railroads, the Seaboard Air Line and the Chesapeake and Ohio, which had each used separate stations before. The Philadelphia firm of Wilson, Harris, and Richards designed it in the Second Renaissance Revival style. The people of Richmond call it The Clock Tower.",
+    "It became a National Historic Landmark in 1976. In 1972, Hurricane Agnes flooded the station so badly that Amtrak moved most of its Richmond stops to a smaller station in the suburbs in 1975. Fires hit the building in 1976 and 1983.",
+    "After the 1983 fire it was renovated and reopened as a shopping mall in 1985, but the mall closed in 1986. Amtrak serves the station today, and it is also a stop on the GRTC Pulse bus line."
+   ],
+   "fact": "Locals call it The Clock Tower.",
+   "disputed": "Many people think a station this old must always have been used for trains. Wikipedia says it was a shopping mall for a short time in the 1980s.",
+   "claims": [
+    {
+     "t": "Main Street Station was built in 1901.",
+     "a": 0,
+     "why": "Wikipedia: built in 1901."
+    },
+    {
+     "t": "The station was a mall for more than thirty years.",
+     "a": 2,
+     "why": "The mall opened in 1985 and closed in 1986."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Richmond Main Street Station",
+     "u": "https://en.wikipedia.org/wiki/Richmond_Main_Street_Station"
+    },
+    {
+     "t": "Wikipedia: Hurricane Agnes",
+     "u": "https://en.wikipedia.org/wiki/Hurricane_Agnes"
+    }
+   ],
+   "card": {
+    "a": "1901",
+    "b": "1976",
+    "la": "Built",
+    "lb": "National Historic Landmark"
+   }
+  }
+ ],
+ "heroKey": "rm_cap_now"
+}

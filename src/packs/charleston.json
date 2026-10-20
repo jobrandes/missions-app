@@ -1,0 +1,417 @@
+{
+ "id": "charleston",
+ "name": "Charleston",
+ "explorer": "Holy City Explorer",
+ "initials": "CHS",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Battery Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Charleston Scholar"
+  ],
+  [
+   600,
+   "Charleston Historian"
+  ]
+ ],
+ "heroAlt": "Rainbow Row in Charleston",
+ "heroLi": "<li>Header: Thomson200 · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rainbow_Row_Charleston_July_2024_1.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Thomson200 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Rainbow_Row_Charleston_July_2024_1.jpg\">Source</a>",
+ "mission": "Find four landmarks around Charleston. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Charleston is waiting.",
+ "safetyNote": "<li>Downtown Charleston has narrow streets, horse carriages, uneven sidewalks and sudden rain. Use crosswalks, watch for carriages and bikes, and keep back from the water by the Battery.</li>",
+ "badgeMap": {
+  "rainbow": [
+   "ch_rb_now",
+   "50% 45%"
+  ],
+  "exchange": [
+   "ch_ex_now",
+   "50% 45%"
+  ],
+  "garden": [
+   "ch_ga_now",
+   "50% 45%"
+  ],
+  "church": [
+   "ch_ch_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "rainbow",
+   "name": "Rainbow Row",
+   "short": "Rainbow Row",
+   "badge": "Rainbow Row",
+   "tag": "Stop 1 of 4",
+   "teaser": "Thirteen houses painted in pastel colors that were once nearly a slum.",
+   "map": "Rainbow Row, 79-107 East Bay St, Charleston, SC",
+   "clue": "Go to East Bay Street, north of Tradd Street. Look for a long row of connected houses in pink, blue, green and yellow.",
+   "safety": "East Bay Street has traffic and parked cars. Use crosswalks and look from the sidewalk. These houses are private homes, so do not knock or step onto the porches.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In which decades were the pastel colors first painted on the houses?",
+    "options": [
+     "The 1730s and 1740s",
+     "The 1830s and 1840s",
+     "The 1930s and 1940s",
+     "The 1980s and 1990s"
+    ],
+    "answer": 2,
+    "hint": "It happened when the houses were being restored, long after the Civil War.",
+    "verify": "Wikipedia says the name came from the pastel colors painted as the houses were restored in the 1930s and 1940s. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1902",
+    "label": "The row then",
+    "line": "A faded photo of East Bay Street from April 1902, with a man standing in the road and a telegraph pole.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ch_rb_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rainbow_Row_(Apr_5_1902).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The row today",
+    "line": "The pink and pastel houses lined up along East Bay Street, with palm trees and parked cars.",
+    "ph": {
+     "k": "ch_rb_now",
+     "by": "Thomson200",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Rainbow_Row_Charleston_July_2024_1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Rainbow Row is a series of thirteen historic houses at 79 to 107 East Bay Street. It originally fronted the Cooper River, but the land was filled in later. Merchants built stores on the ground floor and homes above.",
+    "A fire in 1778 destroyed much of the neighborhood. After the Civil War the area slid into near slum conditions. In the 1920s, Susan Pringle Frost, who founded the Society for the Preservation of Old Dwellings, bought six of the buildings.",
+    "In 1931, Dorothy Haskell Porcher Legge bought 99 through 101 East Bay and painted them pink, based on a colonial Caribbean color scheme. Other owners followed. By 1945 most of the houses had been restored."
+   ],
+   "fact": "A pink house started the rainbow.",
+   "disputed": "Some stories say the colors helped drunk sailors find their house. Wikipedia lists that as a common myth.",
+   "claims": [
+    {
+     "t": "Rainbow Row has thirteen houses.",
+     "a": 0,
+     "why": "Wikipedia: thirteen colorful historic houses."
+    },
+    {
+     "t": "The pastel colors date from the 1700s.",
+     "a": 2,
+     "why": "They date from the 1930s and 1940s restorations."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Rainbow Row",
+     "u": "https://en.wikipedia.org/wiki/Rainbow_Row"
+    },
+    {
+     "t": "Wikipedia: Charleston, South Carolina",
+     "u": "https://en.wikipedia.org/wiki/Charleston,_South_Carolina"
+    }
+   ],
+   "card": {
+    "a": "1778",
+    "b": "1931",
+    "la": "Fire destroys the area",
+    "lb": "First house painted pink"
+   }
+  },
+  {
+   "id": "exchange",
+   "name": "Old Exchange",
+   "short": "Old Exchange",
+   "badge": "Old Exchange",
+   "tag": "Stop 2 of 4",
+   "teaser": "A colonial building that was a prison, a post office and a tea warehouse.",
+   "map": "Old Exchange & Provost Dungeon, 122 E Bay St, Charleston, SC",
+   "clue": "Go to the corner of East Bay and Broad Streets. Look for a two-story building with three round arches at the bottom and a little cupola on the roof.",
+   "safety": "East Bay and Broad Streets are busy. Use crosswalks, and check the museum's hours before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1913, who was granted the Old Exchange and has preserved it ever since?",
+    "options": [
+     "The Boy Scouts",
+     "The Daughters of the American Revolution",
+     "The U.S. Navy",
+     "The Charleston Fire Department"
+    ],
+    "answer": 1,
+    "hint": "The group's name is about the American Revolution.",
+    "verify": "Wikipedia says the building was granted to the Daughters of the American Revolution in 1913. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1906",
+    "label": "The Exchange then",
+    "line": "A hand-colored postcard of the Exchange with telegraph poles and wires in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ch_ex_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Charleston_-_The_Old_Exchange.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The Exchange today",
+    "line": "The building with its round arches and cupola, with traffic on the street.",
+    "ph": {
+     "k": "ch_ex_now",
+     "by": "Warren LeMay",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Exchange_Building,_French_Quarter,_Charleston,_SC_(49431763253).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Old Exchange was built between 1767 and 1771 by South Carolina's provincial government. It served as a custom house, a public market, a meeting place and a jail. In 1774, confiscated tea was stored here.",
+    "After the British captured the city in 1780, they used it as a barracks and put prisoners in the basement. A 2012 study documented at least 120 prisoners held there. In 1788 the building hosted the South Carolina convention that voted to ratify the United States Constitution.",
+    "It later served as a post office. Wikipedia also notes that enslaved people were sold in front of and north of the building for many years. The building became a National Historic Landmark in 1973 and is now a museum."
+   ],
+   "fact": "George Washington greeted a crowd from its balcony.",
+   "disputed": "Many people think the dungeon was only for rebels. Wikipedia says some British soldiers were held there too.",
+   "claims": [
+    {
+     "t": "The Old Exchange was built between 1767 and 1771.",
+     "a": 0,
+     "why": "Wikipedia: built from 1767 to 1771."
+    },
+    {
+     "t": "The Old Exchange was only ever a museum.",
+     "a": 2,
+     "why": "It was also a custom house, market, jail, barracks and post office."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Exchange and Provost",
+     "u": "https://en.wikipedia.org/wiki/Exchange_and_Provost"
+    },
+    {
+     "t": "Wikipedia: Charleston, South Carolina",
+     "u": "https://en.wikipedia.org/wiki/Charleston,_South_Carolina"
+    }
+   ],
+   "card": {
+    "a": "1771",
+    "b": "1913",
+    "la": "Built",
+    "lb": "Daughters of the American Revolution take over"
+   }
+  },
+  {
+   "id": "garden",
+   "name": "White Point Garden",
+   "short": "White Point Garden",
+   "badge": "White Point Garden",
+   "tag": "Stop 3 of 4",
+   "teaser": "A seaside park full of cannons and mortars at the tip of the city.",
+   "map": "White Point Garden, Murray Blvd, Charleston, SC",
+   "clue": "Go to the very southern tip of Charleston, where East Battery meets South Battery. Look for a big green park with oak trees, old cannons and a monument.",
+   "safety": "Stay back from the seawall and the water. Watch for horse carriages and bikes, and do not climb on the cannons or the monuments.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How much does each of the 13-inch Union mortars in the park weigh?",
+    "options": [
+     "170 pounds",
+     "1,700 pounds",
+     "17,000 pounds",
+     "170,000 pounds"
+    ],
+    "answer": 2,
+    "hint": "It is as heavy as several cars.",
+    "verify": "Wikipedia says the four 13-inch Union mortars weigh 17,000 pounds each. Look for the plaques on site. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1905",
+    "label": "The garden then",
+    "line": "A postcard of a stone monument on a pedestal under big oak trees, labeled South Battery.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ch_ga_then",
+     "by": "Hugh C. Leighton Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Charleston_-_South_Battery_showing_Jasper_Monument.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2022",
+    "head": "Today",
+    "label": "The garden today",
+    "line": "Tall wooden homes with porches beside the garden, under palm trees.",
+    "ph": {
+     "k": "ch_ga_now",
+     "by": "P. Hughes",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Charleston_-_Mansions_next_to_White_Point_Garden.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "White Point Garden is a 5.7-acre park at the tip of the Charleston peninsula. It is the southern end of the Battery, a defensive seawall and promenade. The tip used to be called Oyster Point, and landfill later shaped the sharp point.",
+    "From about 1840 to 1881 a public bathing house stood at the end of King Street, with a cake and ice cream parlor on the top floor. It was removed in 1881 as the garden and waterfront were filled in.",
+    "The garden has a largely military theme. Two guns from the USS Keokuk were installed in 1900. Keokuk was sunk by Charleston's forts in April 1863. Along East Battery is an 11-inch Dahlgren gun from the Keokuk that fired shells at Fort Sumter in 1863."
+   ],
+   "fact": "It used to have a bathing house with an ice cream parlor.",
+   "disputed": "Many people think the park has always been on solid land. Wikipedia says the tip of the peninsula was shaped by landfill.",
+   "claims": [
+    {
+     "t": "White Point Garden is about 5.7 acres.",
+     "a": 0,
+     "why": "Wikipedia: a 5.7 acre public park."
+    },
+    {
+     "t": "A bathing house stood here until 1981.",
+     "a": 2,
+     "why": "It was removed in 1881."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: White Point Garden",
+     "u": "https://en.wikipedia.org/wiki/White_Point_Garden"
+    },
+    {
+     "t": "Wikipedia: USS Keokuk (1862)",
+     "u": "https://en.wikipedia.org/wiki/USS_Keokuk_(1862)"
+    }
+   ],
+   "card": {
+    "a": "1840",
+    "b": "1881",
+    "la": "Bathing house built",
+    "lb": "Bathing house removed"
+   }
+  },
+  {
+   "id": "church",
+   "name": "St. Michael's Church",
+   "short": "St. Michael's",
+   "badge": "St. Michael's",
+   "tag": "Stop 4 of 4",
+   "teaser": "The oldest surviving church in Charleston, with a steeple that guided sailors.",
+   "map": "St. Michael's Church, 80 Meeting St, Charleston, SC",
+   "clue": "Go to the corner of Broad and Meeting Streets. Look for a white church with a columned front porch and a tall, tiered steeple.",
+   "safety": "Broad and Meeting Streets are busy. Use crosswalks, be respectful because it is an active church, and check the hours before going inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "St. Michael's is the oldest what in Charleston?",
+    "options": [
+     "Surviving religious structure",
+     "Library",
+     "Lighthouse",
+     "School"
+    ],
+    "answer": 0,
+    "hint": "Wikipedia says it was built between 1751 and 1761.",
+    "verify": "Wikipedia calls it the oldest surviving religious structure in Charleston. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1905",
+    "label": "The church then",
+    "line": "A colorized postcard of the steeple rising above Meeting Street, with a bare tree out front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ch_ch_then",
+     "by": "The American News Co., New York City",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_04.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "Today",
+    "head": "Today",
+    "label": "The church today",
+    "line": "The white steeple and columned front, in a black-and-white photo.",
+    "ph": {
+     "k": "ch_ch_now",
+     "by": "P. Hughes",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Charleston_-_St._Michael's_Church_(2022).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "St. Michael's was built between 1751 and 1761 at the corner of Broad and Meeting Streets, by order of the South Carolina Assembly. It stands on the site of an original wooden church from 1681. It is the oldest surviving religious structure in Charleston.",
+    "It sits on one of the Four Corners of Law and represents ecclesiastical law. Its two-story porch was the first of its size in colonial America, and has Tuscan columns. No one knows who designed it, but it shows the influence of St Martin-in-the-Fields in London.",
+    "George Washington worshipped in pew number 43 during his 1791 visit. The church has a window made by Tiffany Studios in 1898. In 1865 shells from the Civil War damaged the wall. It became a National Historic Landmark in 1961."
+   ],
+   "fact": "Washington sat in pew 43.",
+   "disputed": "Many people think the designer is well known. Wikipedia says it is not known who designed St. Michael's.",
+   "claims": [
+    {
+     "t": "St. Michael's was built in the 1750s and 1760s.",
+     "a": 0,
+     "why": "Wikipedia: built between 1751 and 1761."
+    },
+    {
+     "t": "The architect of St. Michael's is well documented.",
+     "a": 2,
+     "why": "Wikipedia: it is not known who designed it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: St. Michael's Anglican Church (Charleston, South Carolina)",
+     "u": "https://en.wikipedia.org/wiki/St._Michael%27s_Anglican_Church_(Charleston,_South_Carolina)"
+    },
+    {
+     "t": "Wikipedia: Charleston, South Carolina",
+     "u": "https://en.wikipedia.org/wiki/Charleston,_South_Carolina"
+    }
+   ],
+   "card": {
+    "a": "1751",
+    "b": "1961",
+    "la": "Construction begins",
+    "lb": "National Historic Landmark"
+   }
+  }
+ ],
+ "heroKey": "ch_rb_now"
+}
