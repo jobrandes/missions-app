@@ -441,3 +441,6 @@ details.reg[open]>summary.region::after{content:"–"}
 .demo-banner{margin:8px 0 12px;padding:10px 12px;border:2px dashed var(--accent,#b8501f);border-radius:10px;font-size:.92rem;line-height:1.4}
 .hstep .bbox{display:inline-flex;margin-bottom:6px}
 .hstamps-cap{position:absolute;left:0;right:0;bottom:-22px;text-align:center;margin:0;font-size:.72rem;opacity:.75}
+
+.hstamp{transition:opacity .17s ease}.hstamps.swap .hstamp,.hstamps.swap .hstamps-cap{opacity:0}
+@media (prefers-reduced-motion:reduce){.hstamp{transition:none}}

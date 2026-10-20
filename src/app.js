@@ -174,13 +174,38 @@
     if(!atHome||sum(ALL[hk].done)===0){ ORDER.forEach(function(k){ if(sum(ALL[k].done)>0&&(sum(ALL[hk].done)===0)) hk=k; }); }
     return hk;
   }
+  var heroFocus=null;
+  function townKeys(k){ var out=[]; CITIES[k].stops.forEach(function(st){ var p=((BMAPS[k]||{})[st.id]||[])[0]; if(!(p&&PHOTOS[p])) p=(st.now.ph&&st.now.ph.k)||''; if(p&&PHOTOS[p]&&out.indexOf(p)<0) out.push(p); }); return out; }
+  function stampsHtml(){
+    var keys=[], cap='';
+    if(heroFocus&&heroFocus.r){
+      var towns=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===heroFocus.r; }), lists=towns.map(townKeys), i=0;
+      while(keys.length<4&&lists.some(function(l){ return l.length>i; })){ lists.forEach(function(l){ if(keys.length<4&&l[i]&&keys.indexOf(l[i])<0) keys.push(l[i]); }); i++; }
+      cap=heroFocus.r;
+    } else {
+      var hk=(heroFocus&&CITIES[heroFocus.c])?heroFocus.c:homeTown(); keys=townKeys(hk); cap=CITIES[hk].name;
+    }
+    return keys.slice(0,4).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('')+'<p class="hstamps-cap mono">'+cap+'</p>';
+  }
+  function setHeroFocus(f){
+    if(JSON.stringify(f)===JSON.stringify(heroFocus)) return;
+    heroFocus=f; var el=document.querySelector('.hstamps'); if(!el) return;
+    el.classList.add('swap'); setTimeout(function(){ el.innerHTML=stampsHtml(); el.classList.remove('swap'); },170);
+  }
+  document.addEventListener('click',function(e){
+    var sm=e.target.closest&&e.target.closest('.home-regions summary.region, details.reg:not(.ppreg) > summary.region'); if(!sm) return;
+    var r=sm.firstElementChild&&sm.firstElementChild.textContent; if(r) setHeroFocus({r:r});
+  });
+  document.addEventListener('mouseover',function(e){
+    var t=e.target.closest&&e.target.closest('button.town[data-c], #cities button.city[data-c]'); if(t&&t.getAttribute('data-c')&&atHome) setHeroFocus({c:t.getAttribute('data-c')});
+  });
+  document.addEventListener('focusin',function(e){
+    var t=e.target.closest&&e.target.closest('button.town[data-c]'); if(t&&t.getAttribute('data-c')) setHeroFocus({c:t.getAttribute('data-c')});
+  });
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
-    var hk=homeTown(), hkeys=[];
-    CITIES[hk].stops.forEach(function(st){ var k=((BMAPS[hk]||{})[st.id]||[])[0]; if(!(k&&PHOTOS[k])) k=(st.now.ph&&st.now.ph.k)||''; if(k&&PHOTOS[k]&&hkeys.indexOf(k)<0) hkeys.push(k); });
-    ['arch_now','vc_pip_now','vc_cs_now','vc_sch_now'].forEach(function(k){ if(hkeys.length<4&&PHOTOS[k]&&hkeys.indexOf(k)<0) hkeys.push(k); });
-    var stamps=hkeys.slice(0,4).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('')+'<p class="hstamps-cap mono">'+CITIES[hk].name+'</p>';
+    var hk=homeTown(), stamps=stampsHtml();
     var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
@@ -557,7 +582,7 @@
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
     if(a==='passport'){ closeCeleb(); goHome(); setTimeout(function(){ var p=document.getElementById('passport'); if(p&&p.scrollIntoView) p.scrollIntoView({behavior:'smooth',block:'start'}); },60); return; }
-    if(a==='rregion'){ railRegion=b.getAttribute('data-r'); applyCity(); return; }
+    if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
