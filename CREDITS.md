@@ -194,7 +194,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 |---|---|---|---|---|
 | mn_mc_then | File:Washburnamill.jpg | Unknown photographer (stereoview of the 1878 mill) | Public domain | 1878 |
 | sv_ca_then | File:Cathedral_of_St._John_the_Baptist,_Savannah,_Georgia.jpg | Unknown (print published before 1914) | Public domain | before 1914 |
-| sv_rs_then | File:City_and_Harbor_of_Savannah,_Georgia.jpg | J. O. Davidson (illustrator) | Public domain | 1883 |
 | me_gl_then | File:Graceland_1989.jpg | Bruce Andersen | CC BY 3.0 | 1989 |
 
 ### "Then" photos added Oct 19 (third pass)
@@ -609,3 +608,4 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | lv_wt_now | https://commons.wikimedia.org/wiki/File:Louisville_Water_Tower,_Zorn_Avenue,_The_Point,_Louisville,_KY.jpg | w_lemay | CC BY-SA 2.0 | 2024 |
 | na_ps_then | https://commons.wikimedia.org/wiki/File:Courthouse_and_Market_-_Public_Square,_Nashville,_Tenn._LCCN2003675166.jpg | Miscellaneous Items in High Demand (Library of Congress) | Public domain | 1892 |
 | na_ps_now | https://commons.wikimedia.org/wiki/File:Davidson_County_Courthouse_(Southwest_corner).JPG | Michael Rivera | CC BY-SA 4.0 | 2015 |
+| sv_rs_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Branan_Sanders,_Photographer_March_1934_FRONT_VIEW_-_Factor%27s_Warehouse,_River_Street_West,_Savannah,_Chatham_County,_GA_HABS_GA,26-SAV,51-1.tif | Branan Sanders (HABS) | Public domain | 1934 |
