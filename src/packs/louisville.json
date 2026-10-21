@@ -1,0 +1,417 @@
+{
+ "id": "louisville",
+ "name": "Louisville",
+ "explorer": "Derby City Explorer",
+ "initials": "SDF",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Louisville Scholar"
+  ],
+  [
+   600,
+   "Louisville Historian"
+  ]
+ ],
+ "heroAlt": "The twin spires of Churchill Downs",
+ "heroLi": "<li>Header: JazzyJoeyD · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Twin_Spires_at_Churchill_Downs.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: JazzyJoeyD · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Twin_Spires_at_Churchill_Downs.jpg\">Source</a>",
+ "mission": "Find four landmarks around Louisville. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Louisville is waiting.",
+ "safetyNote": "<li>Downtown Louisville has busy one-way streets and bike lanes. Use crosswalks, stay clear of the riverbank, and be extra careful around Churchill Downs on race days.</li>",
+ "badgeMap": {
+  "churchill": [
+   "lv_cd_now",
+   "50% 45%"
+  ],
+  "seelbach": [
+   "lv_sb_now",
+   "50% 45%"
+  ],
+  "union": [
+   "lv_us_now",
+   "50% 45%"
+  ],
+  "galt": [
+   "lv_gh_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "churchill",
+   "name": "Churchill Downs",
+   "short": "Churchill Downs",
+   "badge": "Churchill Downs",
+   "tag": "Stop 1 of 4",
+   "teaser": "The racetrack with two spires that crowns the Kentucky Derby winner in roses.",
+   "map": "Churchill Downs, Louisville, KY",
+   "clue": "Go to Churchill Downs, the racetrack south of downtown. Look for the huge grandstand with two pointed spires on top.",
+   "safety": "Race days are very crowded and traffic is heavy. Use crosswalks, stay on public sidewalks, and do not enter the track or stable areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1896, Derby winners began getting what draped over them?",
+    "options": [
+     "A silver horseshoe",
+     "A garland of roses",
+     "A gold cup",
+     "A blanket of tulips"
+    ],
+    "answer": 1,
+    "hint": "It is a flower, and the Derby is known by it.",
+    "verify": "Wikipedia says adorning the winner with a garland of roses began in 1896. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1901",
+    "label": "The track then",
+    "line": "A black-and-white view of the long grandstand with two spires, beside the empty dirt track.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lv_cd_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Churchill_Downs_1901.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The spires today",
+    "line": "One of the two spires up close, with the roof and grandstand behind it under a cloudy sky.",
+    "ph": {
+     "k": "lv_cd_now",
+     "by": "JazzyJoeyD",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Twin_Spires_at_Churchill_Downs.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Churchill Downs has hosted the Kentucky Derby every year since it opened in 1875. It is named for the Churchill family, who leased 80 acres to their nephew, Colonel Meriwether Lewis Clark Jr., a grandson of the explorer William Clark. He wanted a fancy track like Epsom Downs in England.",
+    "In 1894 a new group bought the track. It commissioned the twin spire grandstand in 1895, cut the Derby down to its modern length of 1 and a quarter miles in 1896, and began giving the winner a garland of roses that same year. The twin spires, designed by D.X. Murphy & Bro., are now the symbol of the track.",
+    "Churchill Downs was designated a National Historic Landmark in 1986. With the infield open on Derby day, it can hold roughly 170,000 people."
+   ],
+   "fact": "The Derby was shortened to its modern length in 1896.",
+   "disputed": "Many people think the Derby has always been the same race. Wikipedia says it was shortened to 1 and a quarter miles in 1896.",
+   "claims": [
+    {
+     "t": "The twin spire grandstand was commissioned in 1895.",
+     "a": 0,
+     "why": "Wikipedia: commissioned in 1895."
+    },
+    {
+     "t": "The Derby has always been 1 and a quarter miles long.",
+     "a": 2,
+     "why": "Wikipedia says it was shortened to that length in 1896."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Churchill Downs",
+     "u": "https://en.wikipedia.org/wiki/Churchill_Downs"
+    },
+    {
+     "t": "Wikipedia: Kentucky Derby",
+     "u": "https://en.wikipedia.org/wiki/Kentucky_Derby"
+    }
+   ],
+   "card": {
+    "a": "1875",
+    "b": "1896",
+    "la": "Track opens",
+    "lb": "Roses and a shorter Derby"
+   }
+  },
+  {
+   "id": "seelbach",
+   "name": "Seelbach Hotel",
+   "short": "Seelbach Hotel",
+   "badge": "Seelbach Hotel",
+   "tag": "Stop 2 of 4",
+   "teaser": "A hotel with nine U.S. presidents on its guest list and a spot in a famous novel.",
+   "map": "Seelbach Hotel, 4th Street and Muhammad Ali Boulevard, Louisville, KY",
+   "clue": "Go to the corner of Fourth Street and Muhammad Ali Boulevard, which used to be called Walnut Street. Look for the tall, stone-and-brick hotel with a curved awning at the door.",
+   "safety": "Downtown streets are busy. Use crosswalks, and be polite in the lobby, since it is a working hotel.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which writer took inspiration from the Seelbach for a hotel in The Great Gatsby?",
+    "options": [
+     "Ernest Hemingway",
+     "Mark Twain",
+     "Charles Dickens",
+     "F. Scott Fitzgerald"
+    ],
+    "answer": 3,
+    "hint": "He wrote about the Jazz Age in the 1920s.",
+    "verify": "Wikipedia says F. Scott Fitzgerald took inspiration from the Seelbach for a hotel in The Great Gatsby. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1905",
+    "label": "The hotel then",
+    "line": "A black-and-white photo of the tall hotel on a street corner with trolley wires overhead and people crossing.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lv_sb_then",
+     "by": "Detroit Publishing Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seelbach_circa_1905.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The stone arches and curved awning over the hotel's front door, with flags above.",
+    "ph": {
+     "k": "lv_sb_now",
+     "by": "local louisville",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seelbach_Hotel,_Louisville.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Louis and Otto Seelbach were brothers from Bavaria who wanted Louisville's first grand hotel, modeled on old-world hotels in cities like Vienna and Paris. They broke ground in December 1903, and the Seelbach opened on May 1, 1905, just in time for the Kentucky Derby. More than 25,000 people visited on opening day.",
+    "It was built in a French Renaissance style, with marble from Italy, Germany and France and wood from the West Indies and Europe. A second phase opened on January 1, 1907 and raised the number of rooms from 150 to 500.",
+    "When the brothers proposed the site, the mayor said, \"No one will come to a hotel so far away.\" He was wrong: the hotel became the center of a busy shopping district. Nine U.S. presidents have stayed here, from William Howard Taft in 1911 to George W. Bush in 2002."
+   ],
+   "fact": "On opening day, every one of the 150 rooms had a dinner party.",
+   "disputed": "Many people assume leaders always back a big project. Wikipedia says the mayor told the brothers no one would come to a hotel so far away.",
+   "claims": [
+    {
+     "t": "The Seelbach opened in 1905.",
+     "a": 0,
+     "why": "Wikipedia: opened May 1, 1905."
+    },
+    {
+     "t": "The mayor of Louisville said the hotel would be a huge success.",
+     "a": 2,
+     "why": "Wikipedia says he said no one would come to a hotel so far away."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Seelbach Hotel",
+     "u": "https://en.wikipedia.org/wiki/Seelbach_Hotel"
+    },
+    {
+     "t": "Wikipedia: Louisville",
+     "u": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"
+    }
+   ],
+   "card": {
+    "a": "1905",
+    "b": "1907",
+    "la": "Opens with 150 rooms",
+    "lb": "Grows to 500"
+   }
+  },
+  {
+   "id": "union",
+   "name": "Louisville Union Station",
+   "short": "Union Station",
+   "badge": "Union Station",
+   "tag": "Stop 3 of 4",
+   "teaser": "A castle-style train station that once handled 58 trains a day.",
+   "map": "Union Station, 1000 W Broadway, Louisville, KY",
+   "clue": "Go to West Broadway, west of downtown. Look for the pale stone station with a tall clock tower, pointed turrets and a big round window.",
+   "safety": "Broadway is a busy road. Use crosswalks, and view the building from the public sidewalk. It is now a working office, so do not enter unless it is open.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What kind of stone is the outside of the station made of?",
+    "options": [
+     "Limestone",
+     "Red brick",
+     "Marble",
+     "Granite"
+    ],
+    "answer": 0,
+    "hint": "The stone came from quarries in Kentucky and Indiana.",
+    "verify": "Wikipedia says the exterior was limestone ashlar, mostly from Bowling Green, Kentucky. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1906",
+    "label": "The station then",
+    "line": "A black-and-white view of the stone station with its tall clock tower and cobblestones and trolley wires in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lv_us_then",
+     "by": "Detroit Publishing Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Louisville,_Ky..jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The same castle-like front in warm light, with the clock tower and turrets against a blue sky.",
+    "ph": {
+     "k": "lv_us_now",
+     "by": "Nyttend",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Louisville_Union_Station.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Louisville's Union Station was formally opened on September 7, 1891 by the Louisville and Nashville Railroad. At the time it was said to be the largest railroad station in the southern United States. Construction began in 1880 but ran over budget and was not finished until 1889 to 1891.",
+    "Architect Henry C. Wolters designed it in the Richardsonian Romanesque style, with a clock tower, smaller towers and turrets, and barrel-vaulted ceilings. Inside, the walls used marble from Georgia, plus oak and southern pine. A fire in July 1905 closed it until that December, and an 84-paneled stained glass skylight replaced the old rose-colored windows.",
+    "In the 1920s it served 58 trains a day, and special trains brought fans to the Kentucky Derby. Today it is no longer a train station. Since 1980 it has been offices for the city's transit agency, TARC."
+   ],
+   "fact": "Derby fans took special trains straight to this station.",
+   "disputed": "Many people think old stations always stay train stations. Wikipedia says this one has been transit agency offices since 1980.",
+   "claims": [
+    {
+     "t": "Union Station opened in 1891.",
+     "a": 0,
+     "why": "Wikipedia: formally opened on September 7, 1891."
+    },
+    {
+     "t": "Union Station is still Louisville's main passenger train station.",
+     "a": 2,
+     "why": "Wikipedia says it has served as TARC offices since 1980."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Union Station (Louisville, Kentucky)",
+     "u": "https://en.wikipedia.org/wiki/Union_Station_(Louisville,_Kentucky)"
+    },
+    {
+     "t": "Wikipedia: Louisville and Nashville Railroad",
+     "u": "https://en.wikipedia.org/wiki/Louisville_and_Nashville_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1891",
+    "b": "1980",
+    "la": "Station opens",
+    "lb": "Becomes offices"
+   }
+  },
+  {
+   "id": "galt",
+   "name": "Galt House",
+   "short": "Galt House",
+   "badge": "Galt House",
+   "tag": "Stop 4 of 4",
+   "teaser": "A hotel name passed down through three buildings and one disputed meeting.",
+   "map": "Galt House Hotel, 140 N 4th Street, Louisville, KY",
+   "clue": "Go to the riverfront on Fourth Street, next to the Ohio River. Look for the two tall towers with a glass walkway between them and a big GALT sign.",
+   "safety": "The riverfront is busy with cars and walkers. Use crosswalks and stay back from the river's edge.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which famous novelist called the original Galt House a splendid hotel?",
+    "options": [
+     "Jane Austen",
+     "Herman Melville",
+     "Charles Dickens",
+     "Mark Twain"
+    ],
+    "answer": 2,
+    "hint": "He wrote A Christmas Carol and Oliver Twist.",
+    "verify": "Wikipedia says Charles Dickens called the Galt House \"a splendid hotel\". Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1891",
+    "label": "The old Galt House then",
+    "line": "An 1891 printed drawing of the large corner hotel with rows of windows. This is the second Galt House, which is no longer standing.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lv_gh_then",
+     "by": "Unknown artist (1891 print)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:US-KY(1891)_p288_LOUISVILLE,_GALT_HOUSE.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2023",
+    "head": "Today",
+    "label": "The Galt House today",
+    "line": "The tall dark tower with GALT on top, rising beside a glass walkway and other riverfront buildings.",
+    "ph": {
+     "k": "lv_gh_now",
+     "by": "Jeremy Thompson",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Galt_House_2023.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Three hotels have carried the Galt House name. The first opened in 1835 with 60 rooms and burned down in 1865. A larger second Galt House, designed by Henry Whitestone, opened in 1869 on First and Main and was the center of social life in Louisville. It closed in 1919 and was torn down in 1921.",
+    "Guests of the earlier hotels included Charles Dickens, who called it \"a splendid hotel\", and presidents Ulysses S. Grant and Theodore Roosevelt. The current Galt House was built in 1972 as part of the riverfront urban renewal project. It has a 25-story tower, an East Tower added in 1984 and 1,310 rooms, the most of any hotel in Kentucky.",
+    "A historical marker says that in March 1864, generals Grant and Sherman met at the original Galt House to plan a big campaign. Wikipedia says that as of 2014, that claim has fallen into dispute."
+   ],
+   "fact": "The current Galt House is the only hotel in the city that sits on the Ohio River.",
+   "disputed": "Many people trust a historical marker as the final word. Wikipedia says the claim about Grant and Sherman meeting here has fallen into dispute.",
+   "claims": [
+    {
+     "t": "Charles Dickens stayed at the original Galt House.",
+     "a": 0,
+     "why": "Wikipedia: he was a noted guest of the original Galt House."
+    },
+    {
+     "t": "The 1869 Galt House is still standing.",
+     "a": 2,
+     "why": "It was demolished in 1921."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Galt House",
+     "u": "https://en.wikipedia.org/wiki/Galt_House"
+    },
+    {
+     "t": "Wikipedia: Louisville",
+     "u": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"
+    }
+   ],
+   "card": {
+    "a": "1835",
+    "b": "1972",
+    "la": "First Galt House opens",
+    "lb": "Current hotel opens"
+   }
+  }
+ ],
+ "heroKey": "lv_cd_now"
+}

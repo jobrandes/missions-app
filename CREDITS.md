@@ -485,3 +485,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | gb_sm_now | https://commons.wikimedia.org/wiki/File:Soldiers'_National_Monument_-_Gettysburg_National_Cemetery.jpg | Farragutful | CC BY-SA 4.0 | 2017 |
 | gb_nc_then | https://commons.wikimedia.org/wiki/File:Lincoln's_Gettysburg_Address,_Gettysburg.jpg | David Bachrach | Public domain | 1863 |
 | gb_nc_now | https://commons.wikimedia.org/wiki/File:Gettysburg_National_Cemetery_(2019).jpg | P. Hughes | CC BY-SA 4.0 | 2019 |
+
+### Louisville (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| lv_cd_then | https://commons.wikimedia.org/wiki/File:Churchill_Downs_1901.jpg | Unknown author | Public domain | 1901 |
+| lv_cd_now | https://commons.wikimedia.org/wiki/File:Twin_Spires_at_Churchill_Downs.jpg | JazzyJoeyD | CC BY-SA 4.0 | 2024 |
+| lv_sb_then | https://commons.wikimedia.org/wiki/File:Seelbach_circa_1905.jpg | Detroit Publishing Co. | Public domain | about 1905 |
+| lv_sb_now | https://commons.wikimedia.org/wiki/File:Seelbach_Hotel,_Louisville.jpg | local louisville | CC BY 2.0 | 2010 |
+| lv_us_then | https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Louisville,_Ky..jpg | Detroit Publishing Co. | Public domain | about 1906 |
+| lv_us_now | https://commons.wikimedia.org/wiki/File:Louisville_Union_Station.jpg | Nyttend | Public domain | 2012 |
+| lv_gh_then | https://commons.wikimedia.org/wiki/File:US-KY(1891)_p288_LOUISVILLE,_GALT_HOUSE.jpg | Unknown artist (1891 print) | Public domain | 1891 |
+| lv_gh_now | https://commons.wikimedia.org/wiki/File:Galt_House_2023.jpg | Jeremy Thompson | CC BY 2.0 | 2023 |

@@ -1884,5 +1884,51 @@
    "a": 1,
    "why": "It has only 271 words."
   }
+ ],
+ "louisville": [
+  {
+   "q": "Winners of the Kentucky Derby began receiving a garland of what in 1896?",
+   "o": [
+    "Gold coins",
+    "Ribbons",
+    "Roses",
+    "Tulips"
+   ],
+   "a": 2,
+   "why": "The garland of roses began in 1896."
+  },
+  {
+   "q": "The Seelbach Hotel inspired a hotel in which famous novel?",
+   "o": [
+    "Moby-Dick",
+    "Little Women",
+    "Huckleberry Finn",
+    "The Great Gatsby"
+   ],
+   "a": 3,
+   "why": "F. Scott Fitzgerald took inspiration from it for The Great Gatsby."
+  },
+  {
+   "q": "Who works in the old Union Station today?",
+   "o": [
+    "The post office",
+    "The city transit agency",
+    "A railroad",
+    "A bank"
+   ],
+   "a": 1,
+   "why": "It has been TARC's offices since 1980."
+  },
+  {
+   "q": "What happened to the 1869 Galt House?",
+   "o": [
+    "It was demolished in 1921",
+    "It is still standing",
+    "It became a station",
+    "It was moved"
+   ],
+   "a": 0,
+   "why": "It closed in 1919 and was demolished in 1921."
+  }
  ]
 }
