@@ -1,15 +1,15 @@
 # Tester post drafts (edit before posting; read each community's self-promotion rules first)
 
 ## Short (Reddit, local groups)
-Title: Looking for Reno-area testers: a free history scavenger hunt you play on your phone
+Title: Looking for testers: a free history scavenger hunt you play on your phone
 
 Body:
-A mom and her teenage son are building a free phone game about real Reno landmarks. You walk to a spot, answer a question you can only get by standing there, earn a stamp, swipe an old photo into today, then sort claims into solid, disputed, or not true.
+A mom and her teenage son are building a free phone game about real landmarks (Reno, Virginia City and Lake Tahoe are walked first; 50 more towns are written from sources and marked as not yet verified). You walk to a spot, answer a question you can only get by standing there, earn a stamp, swipe an old photo into today, then sort claims into solid, disputed, or not true.
 
 It is a test version, so some check-in answers are still being confirmed on site. If something is wrong, confusing or broken, there is a "Something wrong? Tell us" button on every stop. That is exactly what we want.
 
-Link: [test site link goes here]
-No sign-up, no ads, nothing collected beyond what you choose to send in a report.
+Link: https://stamp-the-past.netlify.app (works on any phone browser; add it to your home screen if you like)
+No sign-up, no ads, nothing collected beyond what you choose to send in a report. Your stamps live on your phone, so use "Back up your passport" on the passport page to save a code.
 
 ## What we most want to know
 1. Did you ever not know what to do next?

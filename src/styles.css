@@ -598,3 +598,10 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
   .hstamps{max-width:260px}
   .app{max-width:720px}
 }
+
+/* backup nudge */
+.nudge{border-color:var(--accent);background:var(--surface)}
+.nudge h3{margin:0 0 6px}
+.row2{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.row2 .btn{flex:1 1 140px}
+.bklink{display:block;margin:2px 0 0;padding:6px 4px}
