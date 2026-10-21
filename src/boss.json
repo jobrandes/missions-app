@@ -2298,5 +2298,51 @@
    "a": 3,
    "why": "They lived there about 1100 to 1250 AD."
   }
+ ],
+ "elpaso": [
+  {
+   "q": "Who designed El Paso's Union Depot?",
+   "o": [
+    "Henry Hobson Richardson",
+    "Daniel Burnham",
+    "Frank Lloyd Wright",
+    "Julia Morgan"
+   ],
+   "a": 1,
+   "why": "He also designed Washington Union Station."
+  },
+  {
+   "q": "Which animals lived in San Jacinto Plaza's pond?",
+   "o": [
+    "Flamingos",
+    "Beavers",
+    "Alligators",
+    "Penguins"
+   ],
+   "a": 2,
+   "why": "A sculpture honors them."
+  },
+  {
+   "q": "When did the Hotel Paso del Norte open?",
+   "o": [
+    "Thanksgiving Day 1912",
+    "Christmas Day 1850",
+    "July 4, 1776",
+    "New Year's Day 1990"
+   ],
+   "a": 0,
+   "why": "Trost & Trost designed it."
+  },
+  {
+   "q": "What started the 1907 fire at Ysleta Mission?",
+   "o": [
+    "A lightning bolt",
+    "A campfire",
+    "A train spark",
+    "Chemicals stored to repel bats"
+   ],
+   "a": 3,
+   "why": "The chemicals were stored in the bell tower."
+  }
  ]
 }

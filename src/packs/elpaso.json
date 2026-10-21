@@ -1,0 +1,417 @@
+{
+ "id": "elpaso",
+ "name": "El Paso",
+ "explorer": "Sun City Explorer",
+ "initials": "ELP",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Plaza Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "El Paso Scholar"
+  ],
+  [
+   600,
+   "El Paso Historian"
+  ]
+ ],
+ "heroAlt": "Union Depot in El Paso",
+ "heroLi": "<li>Header: David Wilson · CC BY 2.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_September_2014.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: David Wilson · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/2.0/\">CC BY 2.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_September_2014.jpg\">Source</a>",
+ "mission": "Find four landmarks around El Paso. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of El Paso is waiting.",
+ "safetyNote": "<li>El Paso is hot and sunny, so bring water and a hat. Downtown streets are busy, so use crosswalks. Trains and buses run near the depot and plaza, so stay behind gates and curbs. The Ysleta Mission is a working church in a living community, so be quiet and respectful.</li>",
+ "badgeMap": {
+  "depot": [
+   "ep_ud_now",
+   "50% 45%"
+  ],
+  "plaza": [
+   "ep_sj_now",
+   "50% 45%"
+  ],
+  "pasodelnorte": [
+   "ep_pn_now",
+   "50% 45%"
+  ],
+  "ysleta": [
+   "ep_ym_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "depot",
+   "name": "Union Depot",
+   "short": "Union Depot",
+   "badge": "Union Depot",
+   "tag": "Stop 1 of 4",
+   "teaser": "A 1906 railroad station that was once painted white and has been red again since the 1980s.",
+   "map": "Union Depot, 700 W San Francisco Street, El Paso, TX",
+   "clue": "Go to the corner of San Francisco Street and Coldwell, near the tracks downtown. Look for the red brick station with a tall tower topped by a green spire.",
+   "safety": "Trains still stop here. Stay behind the rails and gates, never cross the tracks, and use the sidewalk and crosswalks on the busy streets nearby.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What material covered the depot's red brick in the 1940s remodel?",
+    "options": [
+     "Ivy",
+     "Wood boards",
+     "Stucco",
+     "Wallpaper"
+    ],
+    "answer": 2,
+    "hint": "It is a coating common on Southwestern-style walls.",
+    "verify": "Great American Stations says that in the 1940s the brick was covered with stucco and the bell tower's steeple was removed. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1972",
+    "label": "The depot then",
+    "line": "A faded color photo of the depot painted pale white, with a tall square tower, a sign reading EL PASO, and two people on the sidewalk.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ep_ud_then",
+     "by": "Hikki Nagasaki",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_March_1972.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "The depot today",
+    "line": "The depot's red brick walls and a tall tower topped by a green spire, with cars parked in front under a blue sky.",
+    "ph": {
+     "k": "ep_ud_now",
+     "by": "David Wilson",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_September_2014.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "By 1902, seven railroad companies each ran their own separate station in El Paso, and passengers struggled to change trains. That led to calls for one shared union station. The depot was built in 1905 and 1906 and was designed by architect Daniel Burnham, who also designed Washington Union Station.",
+    "Opening night in February 1906 drew more than 10,000 visitors. The building was red brick with a tall bell tower. The second floor held a Harvey House restaurant tied to the Santa Fe railroad, and trains from Mexico crossed the Rio Grande to reach it.",
+    "In the 1940s the depot was remodeled in a Southwestern style, and the steeple was taken off. The depot closed in 1974. Restoration began in 1982 and removed paint from the brick and rebuilt the tower's spire. Amtrak's Texas Eagle and Sunset Limited stop here today."
+   ],
+   "fact": "Opening night in February 1906 drew more than 10,000 visitors.",
+   "disputed": "Sources disagree on when the depot joined the National Register of Historic Places. One page gives 1971 in its text and April 3, 1975 in its infobox, and Great American Stations says 1975.",
+   "claims": [
+    {
+     "t": "The depot was designed by Daniel Burnham.",
+     "a": 0,
+     "why": "Both Wikipedia and Great American Stations say so."
+    },
+    {
+     "t": "The depot was designed by Frank Lloyd Wright.",
+     "a": 2,
+     "why": "Sources name architect Daniel Burnham."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Union Depot (El Paso)",
+     "u": "https://en.wikipedia.org/wiki/Union_Depot_(El_Paso)"
+    },
+    {
+     "t": "Great American Stations: El Paso",
+     "u": "https://www.greatamericanstations.com/stations/ELP"
+    }
+   ],
+   "card": {
+    "a": "1906",
+    "b": "1982",
+    "la": "Depot opens",
+    "lb": "Restoration begins"
+   }
+  },
+  {
+   "id": "plaza",
+   "name": "San Jacinto Plaza",
+   "short": "San Jacinto Plaza",
+   "badge": "San Jacinto Plaza",
+   "tag": "Stop 2 of 4",
+   "teaser": "The downtown park that was once home to live alligators.",
+   "map": "San Jacinto Plaza, Oregon and Mills streets, El Paso, TX",
+   "clue": "Go to the park downtown where Oregon Street meets Mills Street. Look for shady trees, paths, a pavilion and a big sculpture in the middle.",
+   "safety": "Downtown streets are busy and buses stop around the plaza. Use crosswalks, stay on the paths, and keep back from the curbs.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which animals lived in the plaza's pond for many years?",
+    "options": [
+     "Alligators",
+     "Penguins",
+     "Flamingos",
+     "Beavers"
+    ],
+    "answer": 0,
+    "hint": "Look at the big sculpture in the middle of the plaza.",
+    "verify": "Wikipedia says alligators lived in the plaza's pond, and a Luis Jimenez sculpture honors them. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1902",
+    "label": "The plaza then",
+    "line": "A colored postcard of a park full of trees with brick buildings around it and a mountain far behind.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ep_sj_then",
+     "by": "Detroit Publishing Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Plaza,_El_Paso,_Texas.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2016",
+    "head": "Today",
+    "label": "The plaza today",
+    "line": "The same plaza seen from above, with a pavilion, paths, trees and tall downtown buildings around it.",
+    "ph": {
+     "k": "ep_sj_now",
+     "by": "Visit El Paso",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:El_Paso_San_Jacinto_Plaza.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The city bought the land in 1881 from William T. Smith, who had bought it from the heirs of Juan Maria Ponce de Leon, the owner since 1827. By 1883 the park had a fence, a walled pond, a gazebo and 75 Chinese elm trees. In 1903 the City Council named it for the Battle of San Jacinto, where Texas won its independence.",
+    "The plaza was a busy transit hub. Horse-drawn carriages lined up here in 1907, trolleys stopped here, and in the 1950s it became a major bus stop. Decorative cannons from the park were stolen for use in the Mexican Revolution in the 1910s.",
+    "Three alligators were put in the pond, and at one point there were as many as seven. They moved to the El Paso Zoo in 1965, came back in 1972, and were removed again in 1974. The park was rebuilt and reopened on April 16, 2016, and many people still call it La Plaza de los Lagartos, the Plaza of the Alligators."
+   ],
+   "fact": "The plaza was named in 1903 for the Battle of San Jacinto.",
+   "disputed": "Many people think the plaza was named for something local. Wikipedia says the City Council named it in 1903 for the Battle of San Jacinto in the Texas independence story.",
+   "claims": [
+    {
+     "t": "The city acquired the plaza land in 1881.",
+     "a": 0,
+     "why": "Wikipedia says the city acquired it in 1881."
+    },
+    {
+     "t": "The plaza was named in 1903 for a Mexican Revolution battle.",
+     "a": 2,
+     "why": "Wikipedia says it was named for the Battle of San Jacinto."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: San Jacinto Plaza",
+     "u": "https://en.wikipedia.org/wiki/San_Jacinto_Plaza"
+    },
+    {
+     "t": "TRAPS: San Jacinto Plaza",
+     "u": "https://traps.org/lone-star-legacy-parks/san-jacinto-plaza-el-paso/"
+    }
+   ],
+   "card": {
+    "a": "1881",
+    "b": "2016",
+    "la": "City buys the land",
+    "lb": "Park reopens"
+   }
+  },
+  {
+   "id": "pasodelnorte",
+   "name": "Hotel Paso del Norte",
+   "short": "Hotel Paso del Norte",
+   "badge": "Hotel Paso del Norte",
+   "tag": "Stop 3 of 4",
+   "teaser": "A grand hotel from 1912 whose guests once watched a battle from the roof.",
+   "map": "Hotel Paso del Norte, 10 Henry Trost Court, El Paso, TX",
+   "clue": "Go downtown to Henry Trost Court, a short walk from San Jacinto Plaza. Look for the tall brick tower with a big hotel sign on the roof.",
+   "safety": "It is a working hotel, so look from the sidewalk and be polite in the lobby. Use crosswalks and watch for cars at the hotel entrance.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which architecture firm designed the Hotel Paso del Norte?",
+    "options": [
+     "Burnham & Root",
+     "Julia Morgan",
+     "Frank Lloyd Wright",
+     "Trost & Trost"
+    ],
+    "answer": 3,
+    "hint": "The street beside the hotel is named for one of the partners.",
+    "verify": "Wikipedia says Trost & Trost designed the hotel, and its address is on Henry Trost Court. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1913",
+    "label": "The hotel then",
+    "line": "A colored postcard of the red brick hotel with a flag on the roof and an old car on the street in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ep_pn_then",
+     "by": "Curt Teich & Co.",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Paso_Del_Norte,_El_Paso,_Texas.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The hotel seen from the street, with pale lower floors, a tall brown brick tower and a big sign on the roof.",
+    "ph": {
+     "k": "ep_pn_now",
+     "by": "Unknown photographer",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hotel_Paso_del_Norte,_El_Paso,_Texas.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The hotel opened on Thanksgiving Day, 1912. It was designed by Trost & Trost, built by J. E. Lewis and paid for by Zack T. White. Its lobby has a stained glass dome over forty-five feet across, styled after Tiffany glass.",
+    "During the 1914 Mexican Revolution, guests watched firefights from the roof terraces. Presidents who stayed here include Taft, Hoover, Franklin D. Roosevelt, Johnson, Nixon and both Bushes. The hotel joined the National Register of Historic Places on January 5, 1979.",
+    "A 17-story addition was built on the north side in 1986, and the hotel has 351 rooms. It closed in 2018 for a major renovation and reopened on October 8, 2020, as part of Marriott's Autograph Collection."
+   ],
+   "fact": "The lobby's stained glass dome is over forty-five feet across.",
+   "disputed": "Many people call the lobby dome a Tiffany dome. Wikipedia says it is styled after Tiffany glass, and it does not call it real Tiffany work.",
+   "claims": [
+    {
+     "t": "The hotel reopened in 2020 after a renovation.",
+     "a": 0,
+     "why": "Wikipedia says it reopened October 8, 2020."
+    },
+    {
+     "t": "The hotel's lobby dome is about ten feet wide.",
+     "a": 2,
+     "why": "Wikipedia says it is over forty-five feet across."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Hotel Paso del Norte",
+     "u": "https://en.wikipedia.org/wiki/Hotel_Paso_del_Norte"
+    },
+    {
+     "t": "Henry Trost: Hotel Paso del Norte",
+     "u": "https://henrytrost.org/buildings/hotel-paso-del-norte"
+    }
+   ],
+   "card": {
+    "a": "1912",
+    "b": "2020",
+    "la": "Hotel opens",
+    "lb": "Hotel reopens"
+   }
+  },
+  {
+   "id": "ysleta",
+   "name": "Ysleta Mission",
+   "short": "Ysleta Mission",
+   "badge": "Ysleta Mission",
+   "tag": "Stop 4 of 4",
+   "teaser": "A church that has been a parish since the 1600s and was rebuilt after a fire.",
+   "map": "Ysleta Mission, 131 S Zaragoza Rd, El Paso, TX",
+   "clue": "This is a drive from downtown, in the Ysleta del Sur Pueblo community. Look for the small pale church with a round-topped bell tower and a cross.",
+   "safety": "This is a working church in a living community, so be quiet and respectful, view from outside unless visiting, and watch for traffic on Zaragoza Road.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What did workers store in the bell tower that started the 1907 fire?",
+    "options": [
+     "Gunpowder",
+     "Chemicals to keep bats away",
+     "Fireworks",
+     "Candles for Christmas"
+    ],
+    "answer": 1,
+    "hint": "They were trying to solve a pest problem.",
+    "verify": "Wikipedia says a 1907 fire was started by chemicals stored in the bell tower to repel bats. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1936",
+    "label": "The mission then",
+    "line": "A black-and-white photo of the plain adobe side wall with a small white dome on the tower, seen from the street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "ep_ym_then",
+     "by": "Marvin Eickenroht",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Ysleta_Mission_South_view_May_26_1936.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The mission today",
+    "line": "The front of the pale church with a cross on top and a round gray-blue dome on the bell tower, under a cloudy sky.",
+    "ph": {
+     "k": "ep_ym_now",
+     "by": "James Reyes",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:YsletaMission.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Tigua people were forced from Isleta Pueblo after the 1680 Pueblo Revolt. In 1682 they built a permanent adobe building here, and it was dedicated that October. The mission is recognized as the oldest continuously operated parish in Texas.",
+    "A flood in 1829 washed the structure away, and the Rio Grande's new course put the site in the Republic of Texas. A remodel in 1897 added the beehive-shaped bell tower.",
+    "The 1907 fire caused huge damage and the church was rebuilt in 1908. It became a Recorded Texas Historic Landmark in 1962 and joined the National Register of Historic Places on July 31, 1972."
+   ],
+   "fact": "The church was rebuilt in 1908 after a fire in 1907.",
+   "disputed": "Many people assume the building is the original one from 1682. Wikipedia says an 1829 flood washed the structure away and a 1907 fire caused massive damage, so the church was rebuilt in 1908.",
+   "claims": [
+    {
+     "t": "The mission is the oldest continuously operated parish in Texas.",
+     "a": 0,
+     "why": "Wikipedia says it is recognized as such."
+    },
+    {
+     "t": "The church building has never been damaged since 1682.",
+     "a": 2,
+     "why": "Wikipedia says an 1829 flood and a 1907 fire both hit it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Ysleta Mission",
+     "u": "https://en.wikipedia.org/wiki/Ysleta_Mission"
+    },
+    {
+     "t": "Wikipedia: Union Depot (El Paso)",
+     "u": "https://en.wikipedia.org/wiki/Union_Depot_(El_Paso)"
+    }
+   ],
+   "card": {
+    "a": "1682",
+    "b": "1908",
+    "la": "Mission built",
+    "lb": "Church rebuilt"
+   }
+  }
+ ],
+ "heroKey": "ep_ud_now"
+}

@@ -585,3 +585,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | fg_wf_now | https://commons.wikimedia.org/wiki/File:Flagstaff-Weatherford-Hotel.jpg | Steven C. Price | CC BY-SA 4.0 | 2015 |
 | fg_wc_then | https://commons.wikimedia.org/wiki/File:Cliff_dwellings_in_Walnut_Canyon,_near_Flagstaff,_Arizona,_ca.1900_(CHS-2584).jpg | C. C. Pierce | Public domain | about 1900 |
 | fg_wc_now | https://commons.wikimedia.org/wiki/File:Walnut_canyon_cliff_dwellings.jpg | Daniel Schwen | CC BY-SA 3.0 | 2004 |
+
+### El Paso (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| ep_ud_then | https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_March_1972.jpg | Hikki Nagasaki | Public domain | 1972 |
+| ep_ud_now | https://commons.wikimedia.org/wiki/File:El_Paso_Union_Depot,_September_2014.jpg | David Wilson | CC BY 2.0 | 2014 |
+| ep_sj_then | https://commons.wikimedia.org/wiki/File:The_Plaza,_El_Paso,_Texas.jpg | Detroit Publishing Co. | Public domain | 1902 |
+| ep_sj_now | https://commons.wikimedia.org/wiki/File:El_Paso_San_Jacinto_Plaza.jpg | Visit El Paso | CC BY 2.0 | 2016 |
+| ep_pn_then | https://commons.wikimedia.org/wiki/File:Paso_Del_Norte,_El_Paso,_Texas.jpg | Curt Teich & Co. | Public domain | 1913 |
+| ep_pn_now | https://commons.wikimedia.org/wiki/File:Hotel_Paso_del_Norte,_El_Paso,_Texas.jpg | Unknown photographer | Public domain | 2012 |
+| ep_ym_then | https://commons.wikimedia.org/wiki/File:Ysleta_Mission_South_view_May_26_1936.jpg | Marvin Eickenroht | Public domain | 1936 |
+| ep_ym_now | https://commons.wikimedia.org/wiki/File:YsletaMission.JPG | James Reyes | CC BY 3.0 | 2010 |
