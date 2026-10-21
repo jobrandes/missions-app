@@ -561,3 +561,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | cs_ga_now | https://commons.wikimedia.org/wiki/File:Gateway_Rock.jpg | BenjaminASanders | CC BY-SA 4.0 | 2014 |
 | cs_pk_then | https://commons.wikimedia.org/wiki/File:Pikes_Peak,_alt._14,100_ft._from_Pikes_Peak_Avenue,_Colorado_Springs,_Colorado_(7725173756).jpg | Tichnor Brothers (Boston Public Library) | Public domain | about 1953 |
 | cs_pk_now | https://commons.wikimedia.org/wiki/File:Pikes_Peak_from_Colorado_Springs_by_David_Shankbone.jpg | David Shankbone | CC BY-SA 3.0 | 2008 |
+
+### Las Vegas (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| lw_fr_then | https://commons.wikimedia.org/wiki/File:Fremont_Street_1952.JPG | Edward N. Edstrom | Public domain | 1952 |
+| lw_fr_now | https://commons.wikimedia.org/wiki/File:Las_Vegas_Freemont_Street.jpg | Allie_Caulfield | CC BY 2.0 | 2011 |
+| lw_ec_then | https://commons.wikimedia.org/wiki/File:Hotel_Cortez,_cost_USD_180,000,_Las_Vegas,_Nevada_(74671).jpg | Smith & Chandler (Tichnor Brothers postcard) | Public domain | 1940s |
+| lw_ec_now | https://commons.wikimedia.org/wiki/File:El_Cortez_Las_vegas_6th_and_Fremont.jpg | Mike Russell | CC BY-SA 3.0 | 2007 |
+| lw_sc_then | https://commons.wikimedia.org/wiki/File:Children_in_front_of_the_Fifth_Street_Grammar_School,_Las_Vegas_(Nev.),_1936.tif | Walter R. Bracken | Public domain | 1936 |
+| lw_sc_now | https://commons.wikimedia.org/wiki/File:Historic_Fifth_Street_School,_September_2018.jpg | Ron Mader | CC BY-SA 4.0 | 2018 |
+| lw_dm_then | https://commons.wikimedia.org/wiki/File:Damupstream.jpg | Bureau of Reclamation photographer | Public domain | 1935 |
+| lw_dm_now | https://commons.wikimedia.org/wiki/File:Water_intake_towers_and_Hoover_Dam.jpg | APK | CC BY-SA 4.0 | 2021 |

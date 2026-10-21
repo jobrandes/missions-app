@@ -1,0 +1,417 @@
+{
+ "id": "lasvegas",
+ "name": "Las Vegas",
+ "explorer": "Desert Explorer",
+ "initials": "LAS",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Neon Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Las Vegas Scholar"
+  ],
+  [
+   600,
+   "Las Vegas Historian"
+  ]
+ ],
+ "heroAlt": "El Cortez on Fremont Street",
+ "heroLi": "<li>Header: Mike Russell · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:El_Cortez_Las_vegas_6th_and_Fremont.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Mike Russell · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:El_Cortez_Las_vegas_6th_and_Fremont.jpg\">Source</a>",
+ "mission": "Find four landmarks around Las Vegas. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Las Vegas is waiting.",
+ "safetyNote": "<li>It is very hot in summer, so bring water and shade. Downtown streets are busy day and night. Casino floors are 21 and over, so view the buildings from the sidewalk, and use crosswalks.</li>",
+ "badgeMap": {
+  "fremont": [
+   "lw_fr_now",
+   "50% 45%"
+  ],
+  "cortez": [
+   "lw_ec_now",
+   "50% 45%"
+  ],
+  "school": [
+   "lw_sc_now",
+   "50% 45%"
+  ],
+  "dam": [
+   "lw_dm_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "fremont",
+   "name": "Fremont Street",
+   "short": "Fremont Street",
+   "badge": "Fremont Street",
+   "tag": "Stop 1 of 4",
+   "teaser": "The street that lit up with neon and then shut out the cars.",
+   "map": "Fremont Street, Downtown Las Vegas, NV",
+   "clue": "Go to Fremont Street in downtown Las Vegas. Look for the huge lit-up canopy overhead and walls of bright signs on both sides.",
+   "safety": "The area is crowded, loud and open late. Stay on the walking area, stick with your group, and do not enter casinos, which are for adults 21 and over.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In which year was Fremont Street closed to car traffic to build the Fremont Street Experience?",
+    "options": [
+     "1952",
+     "1994",
+     "1905",
+     "1931"
+    ],
+    "answer": 1,
+    "hint": "It was the same decade that the web took off.",
+    "verify": "Wikipedia says it was closed to vehicle traffic in September 1994 to begin construction of the Fremont Street Experience. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1952",
+    "label": "The street then",
+    "line": "A night photo of the street glowing with neon signs, including a big yellow gold nugget sign and a Shell sign, with cars parked along the curb.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lw_fr_then",
+     "by": "Edward N. Edstrom",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Fremont_Street_1952.JPG",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The street today",
+    "line": "A wall of orange and red lights under the arched canopy, with people strolling below and palm trees at the edge.",
+    "ph": {
+     "k": "lw_fr_now",
+     "by": "Allie_Caulfield",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Las_Vegas_Freemont_Street.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Fremont Street dates back to 1905, the year Las Vegas itself was founded. It was named for explorer and politician John C. Frémont. It was the first paved street in Las Vegas, in 1925, and it got the city's first traffic light in 1931.",
+    "In 1931 the Northern Club received one of the first six gambling licenses issued in Nevada, and the first for Fremont Street. The street became known as 'Glitter Gulch' for its many neon signs, like the cowboy Vegas Vic.",
+    "Fremont Street once carried several national highways, including U.S. 93, 95 and 466. In September 1994, it was closed to vehicles to begin construction of the Fremont Street Experience."
+   ],
+   "fact": "Fremont Street got the city's first traffic light in 1931.",
+   "disputed": "Many people call the Las Vegas Strip the original main street. Wikipedia says Fremont Street, the 'Old Vegas Strip', was the heart of the city's casinos first.",
+   "claims": [
+    {
+     "t": "Fremont Street was the first paved street in Las Vegas.",
+     "a": 0,
+     "why": "Wikipedia: paved in 1925."
+    },
+    {
+     "t": "Fremont Street has always been closed to cars.",
+     "a": 2,
+     "why": "Wikipedia says it was closed to vehicles in September 1994."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Fremont Street",
+     "u": "https://en.wikipedia.org/wiki/Fremont_Street"
+    },
+    {
+     "t": "Wikipedia: Las Vegas",
+     "u": "https://en.wikipedia.org/wiki/Las_Vegas"
+    }
+   ],
+   "card": {
+    "a": "1925",
+    "b": "1994",
+    "la": "First paved street",
+    "lb": "Closed to cars"
+   }
+  },
+  {
+   "id": "cortez",
+   "name": "El Cortez",
+   "short": "El Cortez",
+   "badge": "El Cortez",
+   "tag": "Stop 2 of 4",
+   "teaser": "A Spanish-style hotel that opened out in what was then the sticks.",
+   "map": "El Cortez, 600 E Fremont Street, Las Vegas, NV",
+   "clue": "Go to the corner of Sixth Street and Fremont Street, a block east of the walking area. Look for the cream and orange building with arched walkways and a tall EL CORTEZ sign.",
+   "safety": "Fremont Street has busy traffic. Use crosswalks and view the building from the sidewalk. Casino areas are 21 and over.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "When El Cortez opened, why did some people doubt it?",
+    "options": [
+     "It had no electricity",
+     "It was too small to matter",
+     "It was built on a lake",
+     "It was considered too far from downtown"
+    ],
+    "answer": 3,
+    "hint": "Think about its location compared with the casinos near the center.",
+    "verify": "Wikipedia says the location at 6th and Fremont was originally considered too far from downtown. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1940s",
+    "label": "The hotel then",
+    "line": "A colored postcard of the pink and orange hotel, with arches along the ground floor, a tall sign on the roof and a quiet street.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lw_ec_then",
+     "by": "Smith & Chandler (Tichnor Brothers postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Hotel_Cortez,_cost_USD_180,000,_Las_Vegas,_Nevada_(74671).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2007",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The same corner in bright sun, with the cream building, arches, EL CORTEZ signs and a traffic light in front.",
+    "ph": {
+     "k": "lw_ec_now",
+     "by": "Mike Russell",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:El_Cortez_Las_vegas_6th_and_Fremont.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "El Cortez opened on Fremont Street on November 7, 1941. It is one of the oldest casino-hotel properties in Las Vegas and was downtown's first major resort. It is mostly Spanish Colonial Revival in style, though a 1952 remodel modernized the front.",
+    "The location at 6th Street and Fremont was originally considered too far from downtown, but the hotel quickly became very profitable. The first hotel had 59 rooms. A tower addition opened in 1984, and the hotel now has 364 rooms.",
+    "El Cortez was added to the National Register of Historic Places on February 22, 2013. Wikipedia says it is one of the few Las Vegas casinos that has never changed its exterior facade, keeping the same signage and ranch-themed look for over seventy years."
+   ],
+   "fact": "The original hotel had just 59 rooms.",
+   "disputed": "Many people assume Las Vegas hotels are always rebuilt. Wikipedia says El Cortez has kept its signage and ranch-themed look for over seventy years, though the front was remodeled in 1952.",
+   "claims": [
+    {
+     "t": "El Cortez opened on November 7, 1941.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "El Cortez was added to the National Register of Historic Places in 1941.",
+     "a": 2,
+     "why": "Wikipedia says that was February 22, 2013."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: El Cortez (Las Vegas)",
+     "u": "https://en.wikipedia.org/wiki/El_Cortez_(Las_Vegas)"
+    },
+    {
+     "t": "Wikipedia: Las Vegas",
+     "u": "https://en.wikipedia.org/wiki/Las_Vegas"
+    }
+   ],
+   "card": {
+    "a": "1941",
+    "b": "2013",
+    "la": "Hotel opens",
+    "lb": "National Register listing"
+   }
+  },
+  {
+   "id": "school",
+   "name": "Fifth Street School",
+   "short": "Fifth Street School",
+   "badge": "Fifth Street School",
+   "tag": "Stop 3 of 4",
+   "teaser": "A mission-style school built after the city's high school burned down.",
+   "map": "Historic Fifth Street School, 401 S 4th Street, Las Vegas, NV",
+   "clue": "Go to 401 South Fourth Street, just off Las Vegas Boulevard. Look for the white Spanish-style building with a red tile roof and rounded arches.",
+   "safety": "Use crosswalks around the busy downtown streets. It is a working building with offices and classes, so view it from the sidewalk and enter only when it is open.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is the school also known as, and why?",
+    "options": [
+     "Fifth Street School, because Las Vegas Boulevard was once called Fifth Street",
+     "Hoover School, because it is near the dam",
+     "Nugget School, because of gold",
+     "Desert School, because of the heat"
+    ],
+    "answer": 0,
+    "hint": "Look at the old name of the big road nearby.",
+    "verify": "Wikipedia says it came to be informally known as Fifth Street School when Las Vegas Boulevard was still called Fifth Street. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1936",
+    "label": "The school then",
+    "line": "A black-and-white photo of children playing in a dusty yard in front of the new school building.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lw_sc_then",
+     "by": "Walter R. Bracken",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Children_in_front_of_the_Fifth_Street_Grammar_School,_Las_Vegas_(Nev.),_1936.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The school today",
+    "line": "The white arched gymnasium wing of the building with a red tile roof under a clear blue sky.",
+    "ph": {
+     "k": "lw_sc_now",
+     "by": "Ron Mader",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_Fifth_Street_School,_September_2018.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Las Vegas Grammar School, also called the Historic Fifth Street School, was built in 1936. It replaced Clark County High School, which operated from 1917 to 1934 and was destroyed by fire. The school sits on a 20-acre site at 401 South Fourth Street.",
+    "People came to call it the Fifth Street School because Las Vegas Boulevard was still called Fifth Street. The school was used until 1966. It was added to the National Register of Historic Places on May 20, 1988.",
+    "The building has been through a $9.5 million renovation. Today it is home to the city's Office of Cultural Affairs, the Nevada School of Arts and the UNLV School of Architecture's Downtown Design Center."
+   ],
+   "fact": "The school replaced a high school that burned down.",
+   "disputed": "Many people assume this was always called Fifth Street School. Wikipedia says that was an informal nickname for the Las Vegas Grammar School.",
+   "claims": [
+    {
+     "t": "The school was built in 1936.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The school closed in 1936.",
+     "a": 2,
+     "why": "Wikipedia says it was used until 1966."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Las Vegas Grammar School (Las Vegas Boulevard, Las Vegas, Nevada)",
+     "u": "https://en.wikipedia.org/wiki/Las_Vegas_Grammar_School_(Las_Vegas_Boulevard,_Las_Vegas,_Nevada)"
+    },
+    {
+     "t": "Wikipedia: Las Vegas",
+     "u": "https://en.wikipedia.org/wiki/Las_Vegas"
+    }
+   ],
+   "card": {
+    "a": "1936",
+    "b": "1988",
+    "la": "School is built",
+    "lb": "National Register listing"
+   }
+  },
+  {
+   "id": "dam",
+   "name": "Hoover Dam",
+   "short": "Hoover Dam",
+   "badge": "Hoover Dam",
+   "tag": "Stop 4 of 4",
+   "teaser": "A huge concrete dam about 30 miles from the city.",
+   "map": "Hoover Dam, Black Canyon, NV/AZ border",
+   "clue": "This is an optional day trip about 30 miles southeast of Las Vegas. At the dam, look for the four round intake towers standing beside the curved concrete wall.",
+   "safety": "The road to the dam has traffic, heat and a security checkpoint. Go with an adult, bring water, stay behind the railings and on marked walkways, and follow staff directions.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "On what date was Hoover Dam dedicated by President Franklin D. Roosevelt?",
+    "options": [
+     "January 1, 1931",
+     "March 1, 1936",
+     "September 30, 1935",
+     "July 4, 1776"
+    ],
+    "answer": 2,
+    "hint": "It was dedicated before it was officially handed over to the government.",
+    "verify": "Wikipedia says it was dedicated on September 30, 1935, and turned over to the federal government on March 1, 1936. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "May 1935",
+    "label": "The dam then",
+    "line": "A black-and-white photo of the curved concrete wall with four tall intake towers, with rocky canyon walls on both sides.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "lw_dm_then",
+     "by": "Bureau of Reclamation photographer",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Damupstream.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2021",
+    "head": "Today",
+    "label": "The dam today",
+    "line": "The intake towers on a walkway beside the curved wall, with Lake Mead and brown desert hills behind them.",
+    "ph": {
+     "k": "lw_dm_now",
+     "by": "APK",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Water_intake_towers_and_Hoover_Dam.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Hoover Dam is a concrete arch-gravity dam in the Black Canyon of the Colorado River, on the border between Nevada and Arizona. It was built between 1931 and 1936 during the Great Depression, and dedicated on September 30, 1935 by President Franklin D. Roosevelt.",
+    "Thousands of workers built it, and more than 96 lost their lives. The consortium Six Companies, Inc. began construction in early 1931, and the dam was turned over to the federal government on March 1, 1936, more than two years ahead of schedule.",
+    "The dam impounds Lake Mead. It is near Boulder City, Nevada, about 30 miles (48 km) southeast of Las Vegas, and about 7 million tourists visit each year."
+   ],
+   "fact": "The dam was finished more than two years ahead of schedule.",
+   "disputed": "Many people think it has always been called Hoover Dam. Wikipedia says the Roosevelt administration named it Boulder Dam, and Congress restored the name Hoover Dam in 1947.",
+   "claims": [
+    {
+     "t": "Hoover Dam was turned over to the federal government on March 1, 1936.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "Hoover Dam was built in only one year.",
+     "a": 2,
+     "why": "Wikipedia says construction ran from 1931 to 1936."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Hoover Dam",
+     "u": "https://en.wikipedia.org/wiki/Hoover_Dam"
+    },
+    {
+     "t": "Wikipedia: Las Vegas",
+     "u": "https://en.wikipedia.org/wiki/Las_Vegas"
+    }
+   ],
+   "card": {
+    "a": "1935",
+    "b": "1947",
+    "la": "Dam is dedicated",
+    "lb": "Name Hoover Dam restored"
+   }
+  }
+ ],
+ "heroKey": "lw_ec_now"
+}

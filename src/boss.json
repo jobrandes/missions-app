@@ -2206,5 +2206,51 @@
    "a": 1,
    "why": "Katharine Lee Bates, 1893."
   }
+ ],
+ "lasvegas": [
+  {
+   "q": "Fremont Street was closed to cars in which year?",
+   "o": [
+    "1905",
+    "1931",
+    "1952",
+    "1994"
+   ],
+   "a": 3,
+   "why": "To build the Fremont Street Experience."
+  },
+  {
+   "q": "Why did people doubt El Cortez at first?",
+   "o": [
+    "On a lake",
+    "Too far from downtown",
+    "No power",
+    "Too small"
+   ],
+   "a": 1,
+   "why": "6th and Fremont was thought too far out."
+  },
+  {
+   "q": "The Fifth Street School got its name because Las Vegas Boulevard was once called what?",
+   "o": [
+    "Fifth Street",
+    "Main Street",
+    "Hoover Road",
+    "Nugget Lane"
+   ],
+   "a": 0,
+   "why": "An informal name from the old street name."
+  },
+  {
+   "q": "Who dedicated Hoover Dam in 1935?",
+   "o": [
+    "President Lincoln",
+    "President Taft",
+    "President Franklin D. Roosevelt",
+    "President Herbert Hoover"
+   ],
+   "a": 2,
+   "why": "Roosevelt dedicated it on September 30, 1935."
+  }
  ]
 }
