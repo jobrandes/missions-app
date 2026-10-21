@@ -497,3 +497,35 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | lv_us_now | https://commons.wikimedia.org/wiki/File:Louisville_Union_Station.jpg | Nyttend | Public domain | 2012 |
 | lv_gh_then | https://commons.wikimedia.org/wiki/File:US-KY(1891)_p288_LOUISVILLE,_GALT_HOUSE.jpg | Unknown artist (1891 print) | Public domain | 1891 |
 | lv_gh_now | https://commons.wikimedia.org/wiki/File:Galt_House_2023.jpg | Jeremy Thompson | CC BY 2.0 | 2023 |
+
+### Newport Knoxville Portland ME (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| nw_br_then | https://commons.wikimedia.org/wiki/File:Breakers,_Vanderbilt_Residence,_Newport,_R._I_(NYPL_b12647398-67507).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1900 |
+| nw_br_now | https://commons.wikimedia.org/wiki/File:The_Breakers_Newport.jpg | UpstateNYer | CC BY-SA 3.0 | 2009 |
+| nw_fs_then | https://commons.wikimedia.org/wiki/File:Forty_Steps,_Cliff_Walk,_Newport,_R._I_(NYPL_b12647398-66771).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1900 |
+| nw_fs_now | https://commons.wikimedia.org/wiki/File:Newport_Forty_Steps.jpg | Darkshaed | CC BY-SA 4.0 | 2011 |
+| nw_ca_then | https://commons.wikimedia.org/wiki/File:Court_of_the_Casino,_Newport,_R._I_(NYPL_b12647398-68122).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1900 |
+| nw_ca_now | https://commons.wikimedia.org/wiki/File:Newport_Casino.jpg | Daniel Case | CC BY-SA 3.0 | 2008 |
+| nw_sm_then | https://commons.wikimedia.org/wiki/File:Newport-Tower-RI-1894.jpg | Unknown author | Public domain | 1895 |
+| nw_sm_now | https://commons.wikimedia.org/wiki/File:The_Old_Stone_Mill.jpg | Kacey Victoria | CC BY-SA 4.0 | 2017 |
+| kx_st_then | https://commons.wikimedia.org/wiki/File:Knoxville-southern-railway-terminal-tn1906.jpg | Detroit Publishing Company | Public domain | about 1906 |
+| kx_st_now | https://commons.wikimedia.org/wiki/File:Southern-terminal-ne-tn1.jpg | Brian Stansberry | CC BY 3.0 | 2010 |
+| kx_gy_then | https://commons.wikimedia.org/wiki/File:Gay-street-knoxville-1903-tn1.jpg | Detroit Publishing Company | Public domain | about 1903 |
+| kx_gy_now | https://commons.wikimedia.org/wiki/File:South-gay-street-knoxville-tn1.jpg | Brian Stansberry | CC BY 3.0 | 2010 |
+| kx_bm_then | https://commons.wikimedia.org/wiki/File:Blount-mansion-1934-habs-tn1.jpg | R. J. Crisco (HABS) | Public domain | 1934 |
+| kx_bm_now | https://commons.wikimedia.org/wiki/File:Blount-mansion-knoxville-tn1.jpg | Brian Stansberry | CC BY 3.0 | 2008 |
+| kx_ch_then | https://commons.wikimedia.org/wiki/File:Customs-house-knoxville-tn1906.jpg | Detroit Publishing Company | Public domain | about 1906 |
+| kx_ch_now | https://commons.wikimedia.org/wiki/File:Old-knoxville-post-office-custom-house-tn1.jpg | Brian Stansberry | CC BY 3.0 | 2010 |
+| pm_lm_then | https://commons.wikimedia.org/wiki/File:Longfellow_Square,_Portland,_ME.jpg | Hugh C. Leighton | Public domain | 1906 |
+| pm_lm_now | https://commons.wikimedia.org/wiki/File:LongfellowMonument1.jpg | Namiba | CC BY-SA 3.0 | 2010 |
+| pm_ob_then | https://commons.wikimedia.org/wiki/File:Observatory,_Portland,_ME.jpg | Unknown photographer | Public domain | about 1910 |
+| pm_ob_now | https://commons.wikimedia.org/wiki/File:PortlandME_MunjoyHillFireStation_and_Observatory.jpg | Magicpiano | CC BY-SA 4.0 | 2013 |
+| pm_wh_then | https://commons.wikimedia.org/wiki/File:Wadsworth_Longfellow_House,_Portland,_Me_(NYPL_b12647398-69938).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1905 |
+| pm_wh_now | https://commons.wikimedia.org/wiki/File:Wadsworth-Longfellow_House_-_Portland,_Maine_-_DSC03903.jpg | Daderot | CC0 | 2018 |
+| pm_ch_then | https://commons.wikimedia.org/wiki/File:City_Hall,_Portland,_Me_(NYPL_b12647398-67679).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1905 |
+| pm_ch_now | https://commons.wikimedia.org/wiki/File:City_Hall_-_Portland,_Maine_-_DSC03876.jpg | Daderot | CC0 | 2018 |
+
+### Newport Knoxville Portland ME (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|

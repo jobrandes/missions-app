@@ -1,0 +1,417 @@
+{
+ "id": "portlandme",
+ "name": "Portland, Maine",
+ "explorer": "Casco Bay Explorer",
+ "initials": "PWM",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Harbor Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Portland Scholar"
+  ],
+  [
+   600,
+   "Portland Historian"
+  ]
+ ],
+ "heroAlt": "The Portland Observatory",
+ "heroLi": "<li>Header: Magicpiano · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:PortlandME_MunjoyHillFireStation_and_Observatory.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Magicpiano · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:PortlandME_MunjoyHillFireStation_and_Observatory.jpg\">Source</a>",
+ "mission": "Find four landmarks around Portland, Maine. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Portland, Maine is waiting.",
+ "safetyNote": "<li>Downtown Portland has busy streets and steep hills. Use crosswalks, watch for cars on Congress Street, and be careful on slippery brick and cobblestones.</li>",
+ "badgeMap": {
+  "longfellow": [
+   "pm_lm_now",
+   "50% 45%"
+  ],
+  "observatory": [
+   "pm_ob_now",
+   "50% 45%"
+  ],
+  "house": [
+   "pm_wh_now",
+   "50% 45%"
+  ],
+  "cityhall": [
+   "pm_ch_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "longfellow",
+   "name": "Longfellow Monument",
+   "short": "Longfellow Monument",
+   "badge": "Longfellow Monument",
+   "tag": "Stop 1 of 4",
+   "teaser": "A bronze poet watching a busy square.",
+   "map": "Longfellow Square, Congress and State Streets, Portland, ME",
+   "clue": "Go to Longfellow Square, where Congress Street meets State Street. Look for the bronze statue of a seated man on a tall granite base.",
+   "safety": "The square is a busy intersection. Use crosswalks and stay on the sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who made the bronze statue of Longfellow?",
+    "options": [
+     "Daniel Chester French",
+     "Augustus Saint-Gaudens",
+     "Gutzon Borglum",
+     "Franklin Simmons"
+    ],
+    "answer": 3,
+    "hint": "He started the design in 1885, three years after the poet died.",
+    "verify": "Wikipedia says Franklin Simmons began the design in 1885. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1906",
+    "label": "The square then",
+    "line": "A colored postcard of the statue at the left, with a church tower and trees across a dusty square.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pm_lm_then",
+     "by": "Hugh C. Leighton",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Longfellow_Square,_Portland,_ME.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The statue today",
+    "line": "The seated bronze statue on its granite base, seen from below against a blue sky.",
+    "ph": {
+     "k": "pm_lm_now",
+     "by": "Namiba",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:LongfellowMonument1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Henry Wadsworth Longfellow Monument stands on a triangular plaza at Congress and State Streets, in Portland's West End. The intersection is called Longfellow Square.",
+    "Sculptor Franklin Simmons began the design in 1885, three years after Longfellow's death, and the pedestal was designed by Francis H. Fassett. The monument was unveiled on September 29, 1888.",
+    "The bronze statue is about 7 feet (2.1 m) tall. It shows the poet late in life, seated in a chair with lion-head arms and a stack of books beneath it. It was added to the National Register of Historic Places in 1990."
+   ],
+   "fact": "The Longfellow statue shows the poet late in life, seated with a stack of books under his chair.",
+   "disputed": "Many people picture a famous poet as young. Wikipedia says the statue shows him as he looked late in life.",
+   "claims": [
+    {
+     "t": "The monument was unveiled in 1888.",
+     "a": 0,
+     "why": "Wikipedia: unveiled on September 29, 1888."
+    },
+    {
+     "t": "The statue shows Longfellow as a young boy.",
+     "a": 2,
+     "why": "Wikipedia says it shows him late in life."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Henry Wadsworth Longfellow Monument",
+     "u": "https://en.wikipedia.org/wiki/Henry_Wadsworth_Longfellow_Monument"
+    },
+    {
+     "t": "Wikipedia: Portland, Maine",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Maine"
+    }
+   ],
+   "card": {
+    "a": "1885",
+    "b": "1888",
+    "la": "Design begins",
+    "lb": "Monument unveiled"
+   }
+  },
+  {
+   "id": "observatory",
+   "name": "Portland Observatory",
+   "short": "Portland Observatory",
+   "badge": "Portland Observatory",
+   "tag": "Stop 2 of 4",
+   "teaser": "A seven-story wooden tower that helped ships talk to shore.",
+   "map": "Portland Observatory, 138 Congress Street, Portland, ME",
+   "clue": "Go to Munjoy Hill at the top of Congress Street. Look for the tall red eight-sided tower with a small cupola on top.",
+   "safety": "Congress Street has traffic. Use crosswalks, stay on the sidewalk, and enter only when it is open as a museum.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was the tower used for when it was built in 1807?",
+    "options": [
+     "Lighting a lighthouse beam",
+     "Spotting ships from the harbor",
+     "Sending mail",
+     "Storing grain"
+    ],
+    "answer": 1,
+    "hint": "The harbor's ships were not visible from the wharfs.",
+    "verify": "Wikipedia says it let merchants see incoming ships with a telescope and signal flags. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1910",
+    "label": "The tower then",
+    "line": "A black-and-white postcard view of the tall tower rising behind bare trees and houses.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pm_ob_then",
+     "by": "Unknown photographer",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Observatory,_Portland,_ME.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The red tower beside a brick fire station, seen down a wide street.",
+    "ph": {
+     "k": "pm_ob_now",
+     "by": "Magicpiano",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:PortlandME_MunjoyHillFireStation_and_Observatory.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Ships entering Portland's harbor could not be seen directly from the wharfs, which made it hard for merchants to prepare for cargoes. In 1807, Captain Lemuel Moody organized the construction of an observatory on Munjoy Hill.",
+    "The tower is 86 feet (26 m) tall, has seven stories, and is octagonal to lessen wind pressure. Using a telescope and signal flags, people could talk to ships hours before they reached the docks. It is the only known surviving tower of its type in the United States.",
+    "It was designated a National Historic Landmark in 2006 and is now managed by Greater Portland Landmarks as a museum."
+   ],
+   "fact": "The Portland Observatory is the only known surviving tower of its type in the United States.",
+   "disputed": "Many people assume an 'observatory' watches the sky. Wikipedia says this one watched ships.",
+   "claims": [
+    {
+     "t": "The Portland Observatory was built in 1807.",
+     "a": 0,
+     "why": "Wikipedia: built in 1807."
+    },
+    {
+     "t": "The Observatory was built for studying stars.",
+     "a": 2,
+     "why": "Wikipedia calls it a maritime signal tower."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Portland Observatory",
+     "u": "https://en.wikipedia.org/wiki/Portland_Observatory"
+    },
+    {
+     "t": "Wikipedia: Portland, Maine",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Maine"
+    }
+   ],
+   "card": {
+    "a": "1807",
+    "b": "2006",
+    "la": "Tower is built",
+    "lb": "National Historic Landmark"
+   }
+  },
+  {
+   "id": "house",
+   "name": "Wadsworth-Longfellow House",
+   "short": "Wadsworth-Longfellow House",
+   "badge": "Wadsworth-Longfellow House",
+   "tag": "Stop 3 of 4",
+   "teaser": "The oldest standing building on the peninsula, and a poet's childhood home.",
+   "map": "Wadsworth-Longfellow House, 489 Congress Street, Portland, ME",
+   "clue": "Go to 489 Congress Street. Look for the brick house with green shutters and a small columned porch, set close to the street.",
+   "safety": "Congress Street has traffic and a narrow sidewalk. Use crosswalks, and enter only when it is open as a museum.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was the house the first of in Portland?",
+    "options": [
+     "Wooden fort",
+     "Steel bridge",
+     "Wholly brick dwelling",
+     "Stone church"
+    ],
+    "answer": 2,
+    "hint": "It was built by Peleg Wadsworth in 1785 and 1786.",
+    "verify": "Wikipedia says it was the first wholly brick dwelling in Portland. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1905",
+    "label": "The house then",
+    "line": "A colored postcard of the red brick house among trees, with a round portrait of the poet in the corner.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pm_wh_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Wadsworth_Longfellow_House,_Portland,_Me_(NYPL_b12647398-69938).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The front of the brick house with its columned porch, rows of windows and green shutters.",
+    "ph": {
+     "k": "pm_wh_now",
+     "by": "Daderot",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Wadsworth-Longfellow_House_-_Portland,_Maine_-_DSC03903.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Wadsworth-Longfellow House was built by Revolutionary War General Peleg Wadsworth between 1785 and 1786. It was the first wholly brick dwelling in Portland and is the oldest standing structure on the Portland peninsula.",
+    "Henry Wadsworth Longfellow was born in 1807 at his aunt's house nearby. He moved into this house at eight months old and spent the next 35 years there. The Longfellows added the third story in 1815.",
+    "Anne Longfellow Pierce, the last family member to live in the house, kept it much as it was. When she died in 1901, her will gave it to the Maine Historical Society, which opened it to the public the next year."
+   ],
+   "fact": "The Wadsworth-Longfellow House is the oldest standing structure on the Portland peninsula.",
+   "disputed": "Many people assume a poet was born at the museum's address. Wikipedia says he was born at his aunt's house nearby.",
+   "claims": [
+    {
+     "t": "The house was built between 1785 and 1786.",
+     "a": 0,
+     "why": "Wikipedia: built by Peleg Wadsworth in those years."
+    },
+    {
+     "t": "Longfellow was born in this house.",
+     "a": 2,
+     "why": "Wikipedia says he was born nearby at his aunt's house."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Wadsworth-Longfellow House",
+     "u": "https://en.wikipedia.org/wiki/Wadsworth-Longfellow_House"
+    },
+    {
+     "t": "Wikipedia: Henry Wadsworth Longfellow",
+     "u": "https://en.wikipedia.org/wiki/Henry_Wadsworth_Longfellow"
+    }
+   ],
+   "card": {
+    "a": "1785",
+    "b": "1902",
+    "la": "House is built",
+    "lb": "Opens to the public"
+   }
+  },
+  {
+   "id": "cityhall",
+   "name": "Portland City Hall",
+   "short": "City Hall",
+   "badge": "City Hall",
+   "tag": "Stop 4 of 4",
+   "teaser": "The fourth city hall, after the first three burned or were replaced.",
+   "map": "Portland City Hall, 389 Congress Street, Portland, ME",
+   "clue": "Go to 389 Congress Street, at the head of Exchange Street. Look for the granite building with a tall tower in the middle and two long wings.",
+   "safety": "Congress Street has traffic. Use crosswalks and enjoy the building from the public steps and sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which famous organ is in the auditorium behind City Hall?",
+    "options": [
+     "Kotzschmar Memorial Organ",
+     "Wanamaker Organ",
+     "Mormon Tabernacle Organ",
+     "Spreckels Organ"
+    ],
+    "answer": 0,
+    "hint": "It was the second-largest in the world in 1912.",
+    "verify": "Wikipedia says the Kotzschmar Memorial Organ was the second-largest in the world when it was built in 1912. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1905",
+    "label": "The old hall then",
+    "line": "A colored postcard of the earlier City Hall, which burned in 1908, with a domed tower and a brick and stone front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "pm_ch_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:City_Hall,_Portland,_Me_(NYPL_b12647398-67679).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2018",
+    "head": "Today",
+    "label": "The hall today",
+    "line": "The granite hall with a tall tower and round-arched ground floor windows, seen from the front steps.",
+    "ph": {
+     "k": "pm_ch_now",
+     "by": "Daderot",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:City_Hall_-_Portland,_Maine_-_DSC03876.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Portland City Hall is the fourth city hall built in Portland. It was built between 1909 and 1912 and was listed on the National Register of Historic Places in 1973.",
+    "The earlier hall, designed by Francis H. Fassett and built in 1867, burned in 1908. The one before that, built in 1862, burned in the Great Fire of 1866. The new building was designed by New York firm Carrère & Hastings, with local help from John Calvin Stevens and John Howard Stevens.",
+    "Its granite tower is 200 feet (61 m) tall. John M. Carrère, who was inspired by New York City Hall, considered it one of his finest works. The addition on Myrtle Street includes Merrill Auditorium, home of the Kotzschmar Memorial Organ."
+   ],
+   "fact": "Portland City Hall is the fourth city hall built in Portland.",
+   "disputed": "Many people assume a city hall is built once. Wikipedia says this is the fourth, after earlier ones burned.",
+   "claims": [
+    {
+     "t": "The current City Hall was built between 1909 and 1912.",
+     "a": 0,
+     "why": "Wikipedia: built between 1909 and 1912."
+    },
+    {
+     "t": "The 1867 City Hall is the one standing today.",
+     "a": 2,
+     "why": "Wikipedia says it burned in 1908."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Portland City Hall (Maine)",
+     "u": "https://en.wikipedia.org/wiki/Portland_City_Hall_(Maine)"
+    },
+    {
+     "t": "Wikipedia: Portland, Maine",
+     "u": "https://en.wikipedia.org/wiki/Portland,_Maine"
+    }
+   ],
+   "card": {
+    "a": "1867",
+    "b": "1912",
+    "la": "Earlier hall is built",
+    "lb": "Current hall is finished"
+   }
+  }
+ ],
+ "heroKey": "pm_ob_now"
+}

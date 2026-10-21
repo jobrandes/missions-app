@@ -1,0 +1,417 @@
+{
+ "id": "newport",
+ "name": "Newport",
+ "explorer": "Seaside Explorer",
+ "initials": "NPT",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Harbor Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Newport Scholar"
+  ],
+  [
+   600,
+   "Newport Historian"
+  ]
+ ],
+ "heroAlt": "The Breakers mansion",
+ "heroLi": "<li>Header: UpstateNYer · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Breakers_Newport.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: UpstateNYer · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:The_Breakers_Newport.jpg\">Source</a>",
+ "mission": "Find four landmarks around Newport. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Newport is waiting.",
+ "safetyNote": "<li>Newport has narrow streets, summer traffic and a cliff path beside the sea. Stay on the marked path, keep well back from edges and wet rock, and skip the walk in rough weather.</li>",
+ "badgeMap": {
+  "breakers": [
+   "nw_br_now",
+   "50% 45%"
+  ],
+  "cliff": [
+   "nw_fs_now",
+   "50% 45%"
+  ],
+  "casino": [
+   "nw_ca_now",
+   "50% 45%"
+  ],
+  "mill": [
+   "nw_sm_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "breakers",
+   "name": "The Breakers",
+   "short": "The Breakers",
+   "badge": "The Breakers",
+   "tag": "Stop 1 of 4",
+   "teaser": "A Gilded Age summer 'cottage' with a fireproof frame.",
+   "map": "The Breakers, Ochre Point Avenue, Newport, RI",
+   "clue": "Go to Ochre Point Avenue. Look for the huge stone mansion with red tile roofs and rows of arches facing a wide green lawn.",
+   "safety": "Ochre Point Avenue has traffic and no wide sidewalk in places. Use the public sidewalk, and do not go past the gates unless you have a ticket.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was the new mansion built to resist, after the old one burned down?",
+    "options": [
+     "Termites",
+     "Fire",
+     "Floods",
+     "Earthquakes"
+    ],
+    "answer": 1,
+    "hint": "Think about what happened to the first house in 1892.",
+    "verify": "Wikipedia says the earlier mansion burned in November 1892 and the new one was built fireproof, with masonry and steel. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The mansion then",
+    "line": "A colored postcard view of the broad stone mansion with a long green lawn in front of it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "nw_br_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Breakers,_Vanderbilt_Residence,_Newport,_R._I_(NYPL_b12647398-67507).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The mansion today",
+    "line": "The same stone mansion with red roofs and chimneys, in bright sun over a clipped lawn.",
+    "ph": {
+     "k": "nw_br_now",
+     "by": "UpstateNYer",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Breakers_Newport.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Breakers was built between 1893 and 1895 for Cornelius Vanderbilt II. Richard Morris Hunt designed it, and the family used it as a summer home.",
+    "The Vanderbilts had an earlier mansion on the site, but it burned on November 25, 1892. So the new house was built to be fireproof, using masonry and steel.",
+    "Today the house is owned by the Preservation Society of Newport County. It was listed on the National Register of Historic Places in 1971 and became a National Historic Landmark in 1994."
+   ],
+   "fact": "The Breakers was built after the first mansion on the site burned in November 1892.",
+   "disputed": "Many people picture the mansion as a century-old cottage that was always here. Wikipedia says the first house on the site burned in 1892.",
+   "claims": [
+    {
+     "t": "The Breakers was designed by Richard Morris Hunt.",
+     "a": 0,
+     "why": "Wikipedia: designed by Richard Morris Hunt."
+    },
+    {
+     "t": "The first mansion on the site is the one standing today.",
+     "a": 2,
+     "why": "Wikipedia says the earlier mansion burned on November 25, 1892."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: The Breakers",
+     "u": "https://en.wikipedia.org/wiki/The_Breakers"
+    },
+    {
+     "t": "Wikipedia: Newport, Rhode Island",
+     "u": "https://en.wikipedia.org/wiki/Newport,_Rhode_Island"
+    }
+   ],
+   "card": {
+    "a": "1892",
+    "b": "1895",
+    "la": "The first house burns",
+    "lb": "The new Breakers is built"
+   }
+  },
+  {
+   "id": "cliff",
+   "name": "Cliff Walk",
+   "short": "Cliff Walk",
+   "badge": "Cliff Walk",
+   "tag": "Stop 2 of 4",
+   "teaser": "A public path along the sea that the mansion owners kept trying to block.",
+   "map": "Cliff Walk, Newport, RI",
+   "clue": "Go to the Forty Steps, a stone stairway that leads down toward the water from the Cliff Walk, near Narragansett Avenue. Look for the path along the cliff edge with the ocean on one side.",
+   "safety": "Parts of the path are rough, narrow and uneven, and sections have collapsed in storms. Stay on the marked path, keep back from the edge, and do not climb on the rocks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How long is the Cliff Walk?",
+    "options": [
+     "12 miles",
+     "40 feet",
+     "About 100 miles",
+     "3.5 miles"
+    ],
+    "answer": 3,
+    "hint": "It is a walk, not a hike.",
+    "verify": "Wikipedia says the Cliff Walk is a 3.5-mile (5.6 km) public access walkway. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The shore then",
+    "line": "A colored postcard of grassy cliffs and rocks beside calm water, with a path running along the edge.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "nw_fs_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Forty_Steps,_Cliff_Walk,_Newport,_R._I_(NYPL_b12647398-66771).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The steps today",
+    "line": "A stone stairway running toward the water, with FORTY STEPS carved into the walkway.",
+    "ph": {
+     "k": "nw_fs_now",
+     "by": "Darkshaed",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Newport_Forty_Steps.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Newport Cliff Walk is a 3.5-mile (5.6 km) public path along the shore. It is a National Recreation Trail, the first in New England, and it gives views of mansions such as The Breakers and Marble House.",
+    "The right to walk the shore goes back to 1663, when the charter from King Charles II promised Rhode Island colonists the right to fish along the shoreline. Around 1880, mansion owners began building a simple path in sections.",
+    "Over the years, wealthy owners sometimes put up fences, boulders or walls to block the path. Storms have also damaged it: in October 2012, Hurricane Sandy washed away large sections, and it did not reopen until June 2014."
+   ],
+   "fact": "The Cliff Walk was the first National Recreation Trail in New England.",
+   "disputed": "Many people think the mansion owners built the walk to welcome the public. Wikipedia says they sometimes put up fences, boulders and walls to block it.",
+   "claims": [
+    {
+     "t": "The Cliff Walk is a National Recreation Trail.",
+     "a": 0,
+     "why": "Wikipedia: the first in New England."
+    },
+    {
+     "t": "Hurricane Sandy did no damage to the Cliff Walk.",
+     "a": 2,
+     "why": "Wikipedia says it washed away large sections in October 2012."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Newport Cliff Walk",
+     "u": "https://en.wikipedia.org/wiki/Newport_Cliff_Walk"
+    },
+    {
+     "t": "Wikipedia: Newport, Rhode Island",
+     "u": "https://en.wikipedia.org/wiki/Newport,_Rhode_Island"
+    }
+   ],
+   "card": {
+    "a": "1663",
+    "b": "2014",
+    "la": "Shore access promised",
+    "lb": "Walk reopens after Sandy"
+   }
+  },
+  {
+   "id": "casino",
+   "name": "Newport Casino",
+   "short": "Newport Casino",
+   "badge": "Newport Casino",
+   "tag": "Stop 3 of 4",
+   "teaser": "A shingled social club that hosted the first U.S. lawn tennis championships.",
+   "map": "Newport Casino, 180-200 Bellevue Avenue, Newport, RI",
+   "clue": "Go to Bellevue Avenue in the center of town. Look for the green and brown shingled building with striped awnings and a row of small shops at street level.",
+   "safety": "Bellevue Avenue is busy with cars and walkers. Use crosswalks, and view the building from the public sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which sport's first U.S. championships were played at the Newport Casino?",
+    "options": [
+     "Lawn tennis",
+     "Baseball",
+     "Golf",
+     "Croquet"
+    ],
+    "answer": 0,
+    "hint": "Today the site is home to a hall of fame for this sport.",
+    "verify": "Wikipedia says the Casino was the site of the first U.S. lawn tennis championships and is home to the International Tennis Hall of Fame. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The Casino then",
+    "line": "A colored postcard of a grassy court surrounded by shingled buildings with balconies.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "nw_ca_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Court_of_the_Casino,_Newport,_R._I_(NYPL_b12647398-68122).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The Casino today",
+    "line": "The shingled front with green trim, striped awnings and small shops, seen from across the street.",
+    "ph": {
+     "k": "nw_ca_now",
+     "by": "Daniel Case",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Newport_Casino.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "James Gordon Bennett Jr. had the Newport Casino built between 1879 and 1881 as a social club. The architects were McKim, Mead & White, and it opened in July 1880. It is a leading example of the Shingle style.",
+    "It was the site of the first U.S. lawn tennis championships, and the Tennis Hall of Fame has been here since 1954.",
+    "The Casino was designated a National Historic Landmark in 1987."
+   ],
+   "fact": "The Newport Casino hosted the first U.S. lawn tennis championships.",
+   "disputed": "Many people hear 'casino' and picture slot machines. Wikipedia says this was a social club that opened in 1880.",
+   "claims": [
+    {
+     "t": "The Newport Casino opened in 1880.",
+     "a": 0,
+     "why": "Wikipedia: opened in July 1880."
+    },
+    {
+     "t": "The Newport Casino was built as a gambling hall.",
+     "a": 2,
+     "why": "Wikipedia describes it as a social club for Newport's summer crowd."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Newport Casino",
+     "u": "https://en.wikipedia.org/wiki/Newport_Casino"
+    },
+    {
+     "t": "Wikipedia: Newport, Rhode Island",
+     "u": "https://en.wikipedia.org/wiki/Newport,_Rhode_Island"
+    }
+   ],
+   "card": {
+    "a": "1880",
+    "b": "1954",
+    "la": "Casino opens",
+    "lb": "Tennis Hall of Fame arrives"
+   }
+  },
+  {
+   "id": "mill",
+   "name": "Old Stone Mill",
+   "short": "Old Stone Mill",
+   "badge": "Old Stone Mill",
+   "tag": "Stop 4 of 4",
+   "teaser": "A round stone tower in a park that people have argued about for centuries.",
+   "map": "Touro Park, Newport, RI",
+   "clue": "Go to Touro Park, near Bellevue Avenue. Look for the round stone tower standing on arches in the middle of the park.",
+   "safety": "The tower is fenced, so look from the path. Do not climb on it or the fence.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What is the best-supported explanation for what the tower was?",
+    "options": [
+     "A fort",
+     "A church",
+     "A windmill",
+     "A lighthouse"
+    ],
+    "answer": 2,
+    "hint": "Look at the name people call it, then look at its shape.",
+    "verify": "Wikipedia says carbon-14 testing points to a 17th-century windmill. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1895",
+    "label": "The tower then",
+    "line": "A black-and-white photo of the round stone tower on arches, behind an iron fence, with bare trees nearby.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "nw_sm_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Newport-Tower-RI-1894.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2017",
+    "head": "Today",
+    "label": "The tower today",
+    "line": "The same round tower seen from below its arches, with a small building visible through the opening.",
+    "ph": {
+     "k": "nw_sm_now",
+     "by": "Kacey Victoria",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Old_Stone_Mill.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Old Stone Mill, also called the Newport Tower, stands in Touro Park. It is about 28 feet (8.5 m) tall and about 22 to 23 feet across.",
+    "For a long time people argued about who built it, and some guessed it was Viking. Wikipedia says carbon-14 testing indicates it is the remains of a 17th-century windmill.",
+    "A document from 1741 already calls it 'the old stone mill'. It is a good example of an old mystery with a well-tested answer."
+   ],
+   "fact": "A document from 1741 already called the tower 'the old stone mill'.",
+   "disputed": "Many people repeat the Viking story. Wikipedia says carbon-14 testing indicates a 17th-century windmill.",
+   "claims": [
+    {
+     "t": "The tower stands in Touro Park.",
+     "a": 0,
+     "why": "Wikipedia: located in Touro Park."
+    },
+    {
+     "t": "Scientific testing proved the tower was built by Vikings.",
+     "a": 2,
+     "why": "Wikipedia says carbon-14 testing points to a 17th-century windmill."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Newport Tower (Rhode Island)",
+     "u": "https://en.wikipedia.org/wiki/Newport_Tower_(Rhode_Island)"
+    },
+    {
+     "t": "Wikipedia: Newport, Rhode Island",
+     "u": "https://en.wikipedia.org/wiki/Newport,_Rhode_Island"
+    }
+   ],
+   "card": {
+    "a": "1741",
+    "b": "1895",
+    "la": "Called 'the old stone mill'",
+    "lb": "Photographed with an iron fence"
+   }
+  }
+ ],
+ "heroKey": "nw_br_now"
+}

@@ -1,0 +1,417 @@
+{
+ "id": "knoxville",
+ "name": "Knoxville",
+ "explorer": "Holston Explorer",
+ "initials": "TYS",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Street Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Knoxville Scholar"
+  ],
+  [
+   600,
+   "Knoxville Historian"
+  ]
+ ],
+ "heroAlt": "Gay Street",
+ "heroLi": "<li>Header: Brian Stansberry · CC BY 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:South-gay-street-knoxville-tn1.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Brian Stansberry · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:South-gay-street-knoxville-tn1.jpg\">Source</a>",
+ "mission": "Find four landmarks around Knoxville. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Knoxville is waiting.",
+ "safetyNote": "<li>Downtown Knoxville has busy streets, rail crossings and a viaduct. Use crosswalks and sidewalks, and stay off the railroad tracks.</li>",
+ "badgeMap": {
+  "station": [
+   "kx_st_now",
+   "50% 45%"
+  ],
+  "gay": [
+   "kx_gy_now",
+   "50% 45%"
+  ],
+  "blount": [
+   "kx_bm_now",
+   "50% 45%"
+  ],
+  "customs": [
+   "kx_ch_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The South",
+ "stops": [
+  {
+   "id": "station",
+   "name": "Southern Terminal",
+   "short": "Southern Terminal",
+   "badge": "Southern Terminal",
+   "tag": "Stop 1 of 4",
+   "teaser": "A railroad station that sits 15 feet below the street.",
+   "map": "Southern Terminal, 306 W Depot Avenue, Knoxville, TN",
+   "clue": "Go to the corner of Gay Street and Depot Avenue. Look for the old station with stepped gables and a low roof, set below street level beside the tracks.",
+   "safety": "Active railroad tracks run beside the station. Stay on the sidewalk, never cross or walk on the tracks, and obey the crossing signals.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who built the Southern Terminal in 1903?",
+    "options": [
+     "A hotel chain",
+     "The federal government",
+     "Southern Railway",
+     "The city"
+    ],
+    "answer": 2,
+    "hint": "The name of the railroad is part of the building's name.",
+    "verify": "Wikipedia says the complex was built in 1903 by the Southern Railway. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1906",
+    "label": "The station then",
+    "line": "A black-and-white view of the station with a clock tower, a railing and the street's utility poles in the foreground.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "kx_st_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Knoxville-southern-railway-terminal-tn1906.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The same station seen from the street, with stepped gables over its tan walls.",
+    "ph": {
+     "k": "kx_st_now",
+     "by": "Brian Stansberry",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Southern-terminal-ne-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Southern Terminal is a former railway complex at 306 West Depot Avenue. Southern Railway built it in 1903, and architect Frank Pierce Milburn designed both the terminal and the express depot.",
+    "It sits in a natural declivity about 15 feet (4.6 m) below the street levels. The railroad changed Knoxville: in the 1850s it helped turn a river town of just over 2,000 people into a major wholesale center.",
+    "In 1985 the terminal complex and dozens of nearby warehouses and storefronts were listed on the National Register of Historic Places."
+   ],
+   "fact": "The Southern Terminal sits about 15 feet below the street levels around it.",
+   "disputed": "Many people think railroads only moved passengers. Wikipedia says they helped turn Knoxville into a wholesaling center.",
+   "claims": [
+    {
+     "t": "The Southern Terminal was designed by Frank Pierce Milburn.",
+     "a": 0,
+     "why": "Wikipedia: designed by noted station architect Frank Pierce Milburn."
+    },
+    {
+     "t": "The railroad had no effect on Knoxville's growth.",
+     "a": 2,
+     "why": "Wikipedia says it transformed Knoxville from a small river town into a wholesaling center."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Southern Terminal (Knoxville, Tennessee)",
+     "u": "https://en.wikipedia.org/wiki/Southern_Terminal_(Knoxville,_Tennessee)"
+    },
+    {
+     "t": "Wikipedia: Knoxville, Tennessee",
+     "u": "https://en.wikipedia.org/wiki/Knoxville,_Tennessee"
+    }
+   ],
+   "card": {
+    "a": "1903",
+    "b": "1985",
+    "la": "Terminal is built",
+    "lb": "Historic district is listed"
+   }
+  },
+  {
+   "id": "gay",
+   "name": "Gay Street",
+   "short": "Gay Street",
+   "badge": "Gay Street",
+   "tag": "Stop 2 of 4",
+   "teaser": "The main street Knoxville has used since the 1790s.",
+   "map": "South Gay Street, Knoxville, TN",
+   "clue": "Go to South Gay Street, south of the railroad tracks. Look for rows of old brick buildings on both sides and the river valley beyond.",
+   "safety": "Gay Street is busy with cars and walkers. Use crosswalks and stay on the sidewalk.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1854, what did Gay Street become in Knoxville?",
+    "options": [
+     "The first paved road",
+     "The first railroad",
+     "The first canal",
+     "The first bridge"
+    ],
+    "answer": 0,
+    "hint": "Think about the street surface under a carriage.",
+    "verify": "Wikipedia says that in 1854 Gay Street became Knoxville's first paved road. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1903",
+    "label": "The street then",
+    "line": "A black-and-white view down the street with tall brick storefronts on the left and poles with wires on the right.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "kx_gy_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Gay-street-knoxville-1903-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The street today",
+    "line": "The same street lined with brick buildings, with a modern glass tower and green hills at the far end.",
+    "ph": {
+     "k": "kx_gy_now",
+     "by": "Brian Stansberry",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:South-gay-street-knoxville-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Gay Street was part of Charles McClung's original 1791 plat of Knoxville. It has served as the city's main financial and commercial street since the 1790s.",
+    "By 1850 it held three-fourths of the city's commercial activity, and in 1854 it became Knoxville's first paved road. On the eve of the Civil War, both Union and Confederate recruiting rallies were held on it at the same time.",
+    "After the war the railroad brought an industrial boom. Buildings along the street include the Bijou Theatre (1909), the Riviera Theatre (1920) and the Tennessee Theatre (1928)."
+   ],
+   "fact": "In 1854, Gay Street became Knoxville's first paved road.",
+   "disputed": "Many people think a street's name tells its story. Wikipedia lists this street's real milestones, like paving in 1854.",
+   "claims": [
+    {
+     "t": "Gay Street was part of the original 1791 plat of Knoxville.",
+     "a": 0,
+     "why": "Wikipedia: part of Charles McClung's 1791 plat."
+    },
+    {
+     "t": "Gay Street was paved before 1800.",
+     "a": 2,
+     "why": "Wikipedia says paving came in 1854."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Gay Street (Knoxville)",
+     "u": "https://en.wikipedia.org/wiki/Gay_Street_(Knoxville)"
+    },
+    {
+     "t": "Wikipedia: Knoxville, Tennessee",
+     "u": "https://en.wikipedia.org/wiki/Knoxville,_Tennessee"
+    }
+   ],
+   "card": {
+    "a": "1791",
+    "b": "1854",
+    "la": "Original plat",
+    "lb": "First paved road"
+   }
+  },
+  {
+   "id": "blount",
+   "name": "Blount Mansion",
+   "short": "Blount Mansion",
+   "badge": "Blount Mansion",
+   "tag": "Stop 3 of 4",
+   "teaser": "A wooden house once slated to become a parking lot.",
+   "map": "Blount Mansion, 200 W Hill Avenue, Knoxville, TN",
+   "clue": "Go to West Hill Avenue, between Gay Street and State Street. Look for the white wooden house with a big brick chimney, set back on a lawn.",
+   "safety": "Hill Avenue has traffic. Use crosswalks, and enter only during museum hours.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which important document was largely drafted at the mansion in 1796?",
+    "options": [
+     "The Declaration of Independence",
+     "The Bill of Rights",
+     "The Emancipation Proclamation",
+     "The Tennessee Constitution"
+    ],
+    "answer": 3,
+    "hint": "William Blount lived here as governor of a territory.",
+    "verify": "Wikipedia says much of the Tennessee Constitution was drafted in Governor Blount's office at the mansion. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1934",
+    "label": "The house then",
+    "line": "A black-and-white survey photo of the white wooden house with a tall chimney and a bare yard.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "kx_bm_then",
+     "by": "R. J. Crisco (HABS)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Blount-mansion-1934-habs-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The house today",
+    "line": "The white house and chimney behind a garden path and bench, with red shutters on the windows.",
+    "ph": {
+     "k": "kx_bm_now",
+     "by": "Brian Stansberry",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Blount-mansion-knoxville-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Blount Mansion was the home of William Blount, the only territorial governor of the Southwest Territory, a signer of the U.S. Constitution and a U.S. senator from Tennessee. It served as the de facto capitol of the territory, and much of the Tennessee Constitution was drafted in his office here in 1796.",
+    "The house is a wood-frame home with wood siding, built with materials brought from North Carolina, in a time when most homes in Tennessee were log cabins. Blount lived there with his family and ten enslaved African-American people.",
+    "By 1925 the house had deteriorated, and a developer planned to demolish it for a parking lot for the new Andrew Johnson Hotel. A publicity campaign saved it, and the Blount Mansion Association bought it in 1930 and still runs it as a museum."
+   ],
+   "fact": "Blount Mansion was built with materials brought from North Carolina, when most Tennessee homes were log cabins.",
+   "disputed": "Many people assume old landmarks were always protected. Wikipedia says this one was nearly demolished for a hotel parking lot in 1925.",
+   "claims": [
+    {
+     "t": "Blount Mansion was built with materials brought from North Carolina.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The mansion was always protected from demolition.",
+     "a": 2,
+     "why": "Wikipedia says a developer planned to demolish it in 1925."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: William Blount Mansion",
+     "u": "https://en.wikipedia.org/wiki/William_Blount_Mansion"
+    },
+    {
+     "t": "Wikipedia: William Blount",
+     "u": "https://en.wikipedia.org/wiki/William_Blount"
+    }
+   ],
+   "card": {
+    "a": "1796",
+    "b": "1930",
+    "la": "Constitution drafted here",
+    "lb": "Association buys the house"
+   }
+  },
+  {
+   "id": "customs",
+   "name": "Old Customs House",
+   "short": "Old Customs House",
+   "badge": "Old Customs House",
+   "tag": "Stop 4 of 4",
+   "teaser": "The city's first federal building, now a history center.",
+   "map": "Old Customs House, corner of Clinch Avenue and Market Street, Knoxville, TN",
+   "clue": "Go to the corner of Clinch Avenue and Market Street. Look for the pale three-story marble building with rows of arched windows and rough stone corners.",
+   "safety": "Use crosswalks at the busy intersection and view the building from the sidewalk. It is a museum, so enter only during opening hours.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What kind of stone covers the outside of the Old Customs House?",
+    "options": [
+     "Concrete block",
+     "East Tennessee marble",
+     "Red brick",
+     "Wood siding"
+    ],
+    "answer": 1,
+    "hint": "The stone comes from the same region as the building.",
+    "verify": "Wikipedia says the Italianate building is sheathed in East Tennessee marble. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1906",
+    "label": "The building then",
+    "line": "A black-and-white photo of the three-story building with arched windows, with utility poles on both sides.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "kx_ch_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Customs-house-knoxville-tn1906.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The same marble building with a rounded entrance, seen on a sunny corner with tall buildings behind.",
+    "ph": {
+     "k": "kx_ch_now",
+     "by": "Brian Stansberry",
+     "lic": "CC BY 3.0",
+     "lu": "https://creativecommons.org/licenses/by/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old-knoxville-post-office-custom-house-tn1.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Old Customs House, also called the Old Post Office, was completed in 1874 and was Knoxville's first federal building. It held federal courts, excise offices and the post office until 1933.",
+    "It is a three-story Italianate building sheathed in East Tennessee marble, designed by U.S. government chief architect Alfred B. Mullett. As the city's population quadrupled, the building became crowded and was enlarged in 1910.",
+    "From 1936 to 1976 it housed Tennessee Valley Authority offices. Since its 2004 expansion it has been home to the East Tennessee History Center."
+   ],
+   "fact": "Knoxville's population quadrupled in the late 19th century, which is why the Customs House was enlarged in 1910.",
+   "disputed": "Many people picture a quiet small town. Wikipedia says Knoxville's population quadrupled in the late 19th century.",
+   "claims": [
+    {
+     "t": "The Old Customs House was completed in 1874.",
+     "a": 0,
+     "why": "Wikipedia: completed in 1874."
+    },
+    {
+     "t": "It has always been a history center.",
+     "a": 2,
+     "why": "Wikipedia says it held courts and a post office, then TVA offices, before the history center."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old Customs House (Knoxville, Tennessee)",
+     "u": "https://en.wikipedia.org/wiki/Old_Customs_House_(Knoxville,_Tennessee)"
+    },
+    {
+     "t": "Wikipedia: Knoxville, Tennessee",
+     "u": "https://en.wikipedia.org/wiki/Knoxville,_Tennessee"
+    }
+   ],
+   "card": {
+    "a": "1874",
+    "b": "2004",
+    "la": "Building completed",
+    "lb": "History center expansion"
+   }
+  }
+ ],
+ "heroKey": "kx_gy_now"
+}

@@ -1930,5 +1930,143 @@
    "a": 0,
    "why": "It closed in 1919 and was demolished in 1921."
   }
+ ],
+ "newport": [
+  {
+   "q": "The Breakers was built to resist what, after the first house burned?",
+   "o": [
+    "Earthquakes",
+    "Fire",
+    "Floods",
+    "Termites"
+   ],
+   "a": 1,
+   "why": "Masonry and steel after the 1892 fire."
+  },
+  {
+   "q": "The Cliff Walk is about how long?",
+   "o": [
+    "350 feet",
+    "12 miles",
+    "3.5 miles",
+    "35 miles"
+   ],
+   "a": 2,
+   "why": "A 3.5-mile public path."
+  },
+  {
+   "q": "Which sport's first U.S. championships were played at the Casino?",
+   "o": [
+    "Golf",
+    "Baseball",
+    "Polo",
+    "Lawn tennis"
+   ],
+   "a": 3,
+   "why": "The Tennis Hall of Fame is there."
+  },
+  {
+   "q": "What does carbon-14 testing say the Old Stone Mill was?",
+   "o": [
+    "A 17th-century windmill",
+    "A Viking church",
+    "A fort",
+    "A lighthouse"
+   ],
+   "a": 0,
+   "why": "Testing points to a windmill."
+  }
+ ],
+ "knoxville": [
+  {
+   "q": "Who built the Southern Terminal in 1903?",
+   "o": [
+    "The city",
+    "The TVA",
+    "A bank",
+    "Southern Railway"
+   ],
+   "a": 3,
+   "why": "Southern Railway built it."
+  },
+  {
+   "q": "What did Gay Street become in 1854?",
+   "o": [
+    "The first canal",
+    "The first paved road",
+    "The first railroad",
+    "The first bridge"
+   ],
+   "a": 1,
+   "why": "Knoxville's first paved road."
+  },
+  {
+   "q": "What was Blount Mansion nearly turned into in 1925?",
+   "o": [
+    "A parking lot",
+    "A school",
+    "A fort",
+    "A stadium"
+   ],
+   "a": 0,
+   "why": "A developer planned a hotel parking lot."
+  },
+  {
+   "q": "What stone covers the Old Customs House?",
+   "o": [
+    "Wood siding",
+    "Concrete",
+    "East Tennessee marble",
+    "Red brick"
+   ],
+   "a": 2,
+   "why": "It is sheathed in East Tennessee marble."
+  }
+ ],
+ "portlandme": [
+  {
+   "q": "Who made the Longfellow statue?",
+   "o": [
+    "Gutzon Borglum",
+    "Saint-Gaudens",
+    "Franklin Simmons",
+    "Daniel Chester French"
+   ],
+   "a": 2,
+   "why": "Franklin Simmons."
+  },
+  {
+   "q": "The Portland Observatory was built to watch what?",
+   "o": [
+    "Ships",
+    "Stars",
+    "Storms",
+    "Fires"
+   ],
+   "a": 0,
+   "why": "A maritime signal tower."
+  },
+  {
+   "q": "Where was Longfellow born?",
+   "o": [
+    "Boston",
+    "His aunt's house nearby",
+    "The Wadsworth house",
+    "A ship"
+   ],
+   "a": 1,
+   "why": "He was born nearby, then moved in at eight months."
+  },
+  {
+   "q": "How many City Halls has Portland had at this site, counting the current one?",
+   "o": [
+    "Only one",
+    "None",
+    "Exactly ten",
+    "More than one"
+   ],
+   "a": 3,
+   "why": "The current one is the fourth city hall, after earlier ones burned."
+  }
  ]
 }
