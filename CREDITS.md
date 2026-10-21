@@ -573,3 +573,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | lw_sc_now | https://commons.wikimedia.org/wiki/File:Historic_Fifth_Street_School,_September_2018.jpg | Ron Mader | CC BY-SA 4.0 | 2018 |
 | lw_dm_then | https://commons.wikimedia.org/wiki/File:Damupstream.jpg | Bureau of Reclamation photographer | Public domain | 1935 |
 | lw_dm_now | https://commons.wikimedia.org/wiki/File:Water_intake_towers_and_Hoover_Dam.jpg | APK | CC BY-SA 4.0 | 2021 |
+
+### Flagstaff (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| fg_ob_then | https://commons.wikimedia.org/wiki/File:Group_at_Clark_Telescope_in_1905.jpg | Unknown photographer (Lowell Observatory) | Public domain | 1905 |
+| fg_ob_now | https://commons.wikimedia.org/wiki/File:Alvan_Clark_Telescope_Lowell_Observatory.jpg | LittlefieldEmery | CC BY-SA 4.0 | 2015 |
+| fg_dp_then | https://commons.wikimedia.org/wiki/File:New_Santa_Fe_Depot_(NBY_7832).jpg | Unknown publisher (postcard) | Public domain | 1926 |
+| fg_dp_now | https://commons.wikimedia.org/wiki/File:Flagstaff-1926-depot.jpg | Steven C. Price | CC BY-SA 4.0 | 2015 |
+| fg_wf_then | https://commons.wikimedia.org/wiki/File:Weatherford_Hotel_(NBY_425620).jpg | Unknown publisher (postcard) | Public domain | after 1929 |
+| fg_wf_now | https://commons.wikimedia.org/wiki/File:Flagstaff-Weatherford-Hotel.jpg | Steven C. Price | CC BY-SA 4.0 | 2015 |
+| fg_wc_then | https://commons.wikimedia.org/wiki/File:Cliff_dwellings_in_Walnut_Canyon,_near_Flagstaff,_Arizona,_ca.1900_(CHS-2584).jpg | C. C. Pierce | Public domain | about 1900 |
+| fg_wc_now | https://commons.wikimedia.org/wiki/File:Walnut_canyon_cliff_dwellings.jpg | Daniel Schwen | CC BY-SA 3.0 | 2004 |

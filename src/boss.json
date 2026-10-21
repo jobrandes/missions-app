@@ -2252,5 +2252,51 @@
    "a": 2,
    "why": "Roosevelt dedicated it on September 30, 1935."
   }
+ ],
+ "flagstaff": [
+  {
+   "q": "Who discovered Pluto at Lowell Observatory?",
+   "o": [
+    "Carl Sagan",
+    "Clyde Tombaugh",
+    "Percival Lowell",
+    "Galileo"
+   ],
+   "a": 1,
+   "why": "Tombaugh, in 1930."
+  },
+  {
+   "q": "About how high is the Flagstaff station above sea level?",
+   "o": [
+    "16,902 feet",
+    "2,000 feet",
+    "6,902 feet",
+    "902 feet"
+   ],
+   "a": 2,
+   "why": "One of the highest Amtrak stations."
+  },
+  {
+   "q": "What was removed from the Weatherford Hotel in 1929?",
+   "o": [
+    "Its balcony and cupola",
+    "Its kitchen",
+    "Its basement",
+    "Its sign"
+   ],
+   "a": 0,
+   "why": "Fire damage led to their removal."
+  },
+  {
+   "q": "Which people built the Walnut Canyon cliff dwellings?",
+   "o": [
+    "The Vikings",
+    "The Romans",
+    "The Spanish",
+    "The Sinagua"
+   ],
+   "a": 3,
+   "why": "They lived there about 1100 to 1250 AD."
+  }
  ]
 }

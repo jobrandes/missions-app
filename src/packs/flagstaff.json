@@ -1,0 +1,417 @@
+{
+ "id": "flagstaff",
+ "name": "Flagstaff",
+ "explorer": "Peaks Explorer",
+ "initials": "FLG",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Pine Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Flagstaff Scholar"
+  ],
+  [
+   600,
+   "Flagstaff Historian"
+  ]
+ ],
+ "heroAlt": "The Clark Telescope at Lowell Observatory",
+ "heroLi": "<li>Header: LittlefieldEmery · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Alvan_Clark_Telescope_Lowell_Observatory.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: LittlefieldEmery · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Alvan_Clark_Telescope_Lowell_Observatory.jpg\">Source</a>",
+ "mission": "Find four landmarks around Flagstaff. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Flagstaff is waiting.",
+ "safetyNote": "<li>Flagstaff sits at about 7,000 feet, so drink water and take it slow. Streets near the tracks have trains, so stay behind crossing gates. On the canyon trail, stay on the path and keep back from the edge.</li>",
+ "badgeMap": {
+  "observatory": [
+   "fg_ob_now",
+   "50% 45%"
+  ],
+  "depot": [
+   "fg_dp_now",
+   "50% 45%"
+  ],
+  "weatherford": [
+   "fg_wf_now",
+   "50% 45%"
+  ],
+  "canyon": [
+   "fg_wc_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "observatory",
+   "name": "Lowell Observatory",
+   "short": "Lowell Observatory",
+   "badge": "Lowell Observatory",
+   "tag": "Stop 1 of 4",
+   "teaser": "The hilltop observatory where Pluto was found.",
+   "map": "Lowell Observatory, 1400 W Mars Hill Road, Flagstaff, AZ",
+   "clue": "Go to Mars Hill on the west side of downtown Flagstaff. Look for the observatory grounds with white domes among the pine trees.",
+   "safety": "Follow the public visitor areas and the staff's directions. Mars Hill Road has traffic and no wide shoulders, so use the visitor entrance and stay on the paths.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who discovered Pluto at Lowell Observatory in 1930?",
+    "options": [
+     "Galileo Galilei",
+     "Edwin Hubble",
+     "Clyde Tombaugh",
+     "Percival Lowell"
+    ],
+    "answer": 2,
+    "hint": "He was not the founder. He joined the staff years after the founder had died.",
+    "verify": "Wikipedia says Pluto was discovered at Lowell Observatory in 1930 by Clyde Tombaugh. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1905",
+    "label": "The Clark Telescope then",
+    "line": "A black-and-white photo of a group of men and a woman in a hat sitting at a table beside the big telescope, with a wooden wall behind them.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "fg_ob_then",
+     "by": "Unknown photographer (Lowell Observatory)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Group_at_Clark_Telescope_in_1905.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The telescope today",
+    "line": "The long Clark Telescope pointing up through the open wooden dome, lit from below.",
+    "ph": {
+     "k": "fg_ob_now",
+     "by": "LittlefieldEmery",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Alvan_Clark_Telescope_Lowell_Observatory.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Lowell Observatory was established in 1894, which places it among the oldest observatories in the United States. It was founded by astronomer Percival Lowell of Boston's Lowell family. It was designated a National Historic Landmark in 1965.",
+    "Lowell hired astronomer Andrew E. Douglass to find a location, and they chose Flagstaff for its elevation, dark night skies and nearness to the railroad. The materials were sourced locally, but the Clark Refracting Telescope was assembled in Boston.",
+    "The 24-inch Clark Refracting Telescope was built in 1896 and is still used for public observing. Astronomers in 1963 used the observatory while the Moon was being mapped for the Apollo Program, and many astronauts looked through the Clark Telescope."
+   ],
+   "fact": "The Clark Telescope from 1896 is still used for public observing.",
+   "disputed": "Many people think Percival Lowell found Pluto. Wikipedia says it was discovered in 1930 by Clyde Tombaugh, and Lowell died in 1916.",
+   "claims": [
+    {
+     "t": "Lowell Observatory was established in 1894.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "Percival Lowell discovered Pluto.",
+     "a": 2,
+     "why": "Wikipedia says Clyde Tombaugh discovered it in 1930."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Lowell Observatory",
+     "u": "https://en.wikipedia.org/wiki/Lowell_Observatory"
+    },
+    {
+     "t": "Wikipedia: Flagstaff, Arizona",
+     "u": "https://en.wikipedia.org/wiki/Flagstaff,_Arizona"
+    }
+   ],
+   "card": {
+    "a": "1894",
+    "b": "1930",
+    "la": "Observatory founded",
+    "lb": "Pluto discovered"
+   }
+  },
+  {
+   "id": "depot",
+   "name": "Flagstaff Depot",
+   "short": "Santa Fe Depot",
+   "badge": "Santa Fe Depot",
+   "tag": "Stop 2 of 4",
+   "teaser": "The 1926 station that replaced an 1889 stone depot across the street.",
+   "map": "Flagstaff Amtrak Station, 1 E Route 66, Flagstaff, AZ",
+   "clue": "Go to the corner of Route 66 and San Francisco Street, by the tracks. Look for the brick station with a steep green roof, a chimney and a visitor center sign.",
+   "safety": "Active trains pass by. Stay on the platform side behind any rails or gates, never cross the tracks, and wait for the all-clear at crossings.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How high above sea level is the station?",
+    "options": [
+     "6,902 feet",
+     "902 feet",
+     "16,902 feet",
+     "2,000 feet"
+    ],
+    "answer": 0,
+    "hint": "It is one of the highest stations in the Amtrak system.",
+    "verify": "Wikipedia says the station's elevation is 6,902 feet (2,104 m), one of the highest in the Amtrak system. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1926",
+    "label": "The depot then",
+    "line": "A colored postcard of the brick depot with a steep roof, and a steam train waiting on the tracks.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "fg_dp_then",
+     "by": "Unknown publisher (postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:New_Santa_Fe_Depot_(NBY_7832).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The depot today",
+    "line": "The same depot with its green roof, chimney and Amtrak sign, seen from the sidewalk on a cloudy day.",
+    "ph": {
+     "k": "fg_dp_now",
+     "by": "Steven C. Price",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Flagstaff-1926-depot.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The first rail station in Flagstaff was built in 1886 by the Atlantic and Pacific Railroad. That wooden depot burned down and was replaced in 1889 by a stone building that still stands. The Atchison, Topeka and Santa Fe built the present depot in 1925, and a public celebration was held on January 5, 1926.",
+    "The first trains used the new depot on January 6, 1926. Across San Francisco Street at 101 East Route 66 is the 1889 solid red sandstone depot that the 1926 one replaced. It became a freight depot afterward.",
+    "Amtrak took over passenger service on May 1, 1971 and runs the station from the 1926 depot, which also holds the Flagstaff Visitor Center. The Southwest Chief stops here daily."
+   ],
+   "fact": "The 1889 stone depot still stands across the street.",
+   "disputed": "Many people assume a new station tears down the old one. Wikipedia says the 1889 depot still stands across the street.",
+   "claims": [
+    {
+     "t": "The present Santa Fe depot opened in 1926.",
+     "a": 0,
+     "why": "Wikipedia: public opening on January 5, 1926."
+    },
+    {
+     "t": "The first Flagstaff depot, from 1886, was built of stone.",
+     "a": 2,
+     "why": "Wikipedia says that first depot was wood and burned down."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Flagstaff station",
+     "u": "https://en.wikipedia.org/wiki/Flagstaff_station"
+    },
+    {
+     "t": "Wikipedia: Flagstaff, Arizona",
+     "u": "https://en.wikipedia.org/wiki/Flagstaff,_Arizona"
+    }
+   ],
+   "card": {
+    "a": "1886",
+    "b": "1926",
+    "la": "First depot",
+    "lb": "New Santa Fe depot opens"
+   }
+  },
+  {
+   "id": "weatherford",
+   "name": "Weatherford Hotel",
+   "short": "Weatherford Hotel",
+   "badge": "Weatherford Hotel",
+   "tag": "Stop 3 of 4",
+   "teaser": "A downtown hotel that lost its balcony in 1929 and won it back later.",
+   "map": "Weatherford Hotel, 23 N Leroux Street, Flagstaff, AZ",
+   "clue": "Go to 23 North Leroux Street, one block north of Route 66. Look for the brick hotel on the corner with a pointed tower and wraparound porches on the upper floors.",
+   "safety": "Use crosswalks at downtown intersections. It is a working hotel, bar and restaurant, so view it from the sidewalk and be polite inside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which writer wrote The Call of the Canyon in the hotel's ballroom?",
+    "options": [
+     "Mark Twain",
+     "Jack London",
+     "Ernest Hemingway",
+     "Zane Grey"
+    ],
+    "answer": 3,
+    "hint": "He wrote many Western novels.",
+    "verify": "Wikipedia says Zane Grey wrote The Call of the Canyon in the Zane Grey Ballroom on the third floor. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "After 1929",
+    "label": "The hotel then",
+    "line": "A colored postcard of the plain brick hotel on a corner with a big HOTEL sign on the roof, after its balcony and cupola were removed.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "fg_wf_then",
+     "by": "Unknown publisher (postcard)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Weatherford_Hotel_(NBY_425620).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The hotel today",
+    "line": "The same corner with the wraparound porches and the pointed tower restored, under a cloudy sky.",
+    "ph": {
+     "k": "fg_wf_now",
+     "by": "Steven C. Price",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Flagstaff-Weatherford-Hotel.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Weatherford Hotel was established in 1897 by John W. Weatherford, a native of Weatherford, Texas. After bad fires in 1897, the city passed a rule that buildings in the business area had to be brick, stone or iron. Weatherford built a three-story brick hotel addition, which had its grand opening on New Year's Day 1900.",
+    "For years it was the most prominent hotel in Flagstaff. Guests included artist Thomas Moran, publisher William Randolph Hearst and writer Zane Grey. A three-sided balcony and the original cupola were damaged by fire and removed in 1929.",
+    "In 1975, Henry Taylor bought the hotel to keep it from being demolished when downtown was in decline. The wrap-around porches were rebuilt, and the first stage was finished in February 1999."
+   ],
+   "fact": "The hotel's balcony and cupola were removed in 1929.",
+   "disputed": "Many people think old buildings stay exactly as built. Wikipedia says the Weatherford lost its balcony and cupola in 1929 and had its porches rebuilt starting in the 1990s.",
+   "claims": [
+    {
+     "t": "The Weatherford Hotel was built by John W. Weatherford.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The Weatherford's original balcony is still there from 1900.",
+     "a": 2,
+     "why": "Wikipedia says it was removed in 1929 and rebuilt later."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Weatherford Hotel",
+     "u": "https://en.wikipedia.org/wiki/Weatherford_Hotel"
+    },
+    {
+     "t": "Wikipedia: Flagstaff, Arizona",
+     "u": "https://en.wikipedia.org/wiki/Flagstaff,_Arizona"
+    }
+   ],
+   "card": {
+    "a": "1900",
+    "b": "1999",
+    "la": "Grand opening",
+    "lb": "Porch rebuilding begins"
+   }
+  },
+  {
+   "id": "canyon",
+   "name": "Walnut Canyon",
+   "short": "Walnut Canyon",
+   "badge": "Walnut Canyon",
+   "tag": "Stop 4 of 4",
+   "teaser": "Cliff homes built under limestone ledges about 900 years ago.",
+   "map": "Walnut Canyon National Monument, near Flagstaff, AZ",
+   "clue": "This is a short drive about 10 miles southeast of Flagstaff. At the monument, look for stone rooms built under overhanging rock ledges on the canyon walls.",
+   "safety": "Stay on the marked trail, keep back from the edge and the stairs, and never touch or enter the dwellings. The trail has many stairs at high altitude, so go slowly.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which people built the cliff dwellings in Walnut Canyon?",
+    "options": [
+     "The Romans",
+     "The Sinagua",
+     "The Vikings",
+     "The Spanish"
+    ],
+    "answer": 1,
+    "hint": "Their name is Spanish for 'without water'.",
+    "verify": "Wikipedia says the Sinagua lived in Walnut Canyon from about 1100 to 1250 AD. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The dwellings then",
+    "line": "A black-and-white photo of stone walls tucked under a big rock overhang on a steep canyon wall.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "fg_wc_then",
+     "by": "C. C. Pierce",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Cliff_dwellings_in_Walnut_Canyon,_near_Flagstaff,_Arizona,_ca.1900_(CHS-2584).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2004",
+    "head": "Today",
+    "label": "The dwellings today",
+    "line": "A stone room under a curved rock ledge, with a visitor on the gravel trail beside it.",
+    "ph": {
+     "k": "fg_wc_now",
+     "by": "Daniel Schwen",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Walnut_canyon_cliff_dwellings.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Walnut Canyon National Monument is about 10 miles (16 km) southeast of downtown Flagstaff. The canyon floor is 350 feet below the rim. A 0.9-mile loop trail descends 185 feet into the canyon and passes 25 cliff dwelling rooms.",
+    "The Sinagua people lived here from about 1100 to 1250 AD. They built their homes under limestone ledges, using natural recesses in the cliff walls. A typical room might be the home of one family, about two meters high, six meters long and three meters deep. The Sinagua left more than 80 cliff dwellings, and why they left around 1250 is not certain.",
+    "President Woodrow Wilson proclaimed the monument on November 30, 1915, to preserve the ancient cliff dwellings. More than 387 plant species grow here."
+   ],
+   "fact": "The Sinagua left over 80 cliff dwellings behind.",
+   "disputed": "Many people say they know exactly why the Sinagua left. Wikipedia says they left mysteriously around 1250 and the reason is not certain.",
+   "claims": [
+    {
+     "t": "Walnut Canyon was proclaimed a national monument in 1915.",
+     "a": 0,
+     "why": "Wikipedia: November 30, 1915, by President Wilson."
+    },
+    {
+     "t": "Scientists know for certain why the Sinagua left.",
+     "a": 2,
+     "why": "Wikipedia says the reason is not certain."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Walnut Canyon National Monument",
+     "u": "https://en.wikipedia.org/wiki/Walnut_Canyon_National_Monument"
+    },
+    {
+     "t": "Wikipedia: Flagstaff, Arizona",
+     "u": "https://en.wikipedia.org/wiki/Flagstaff,_Arizona"
+    }
+   ],
+   "card": {
+    "a": "1125",
+    "b": "1915",
+    "la": "Dwellings are built",
+    "lb": "National monument proclaimed"
+   }
+  }
+ ],
+ "heroKey": "fg_ob_now"
+}
