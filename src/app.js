@@ -140,7 +140,7 @@
     document.getElementById('cities').innerHTML='<div class="rail1"><button class="city home" data-a="home" aria-pressed="'+(atHome&&!onPass)+'">Home</button><button class="city home" data-a="mypass" aria-pressed="'+(atHome&&onPass)+'">My Passport</button>'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
     }).join('')+'</div>';
-    var act=document.querySelector('#cities .rail2 .city[aria-pressed="true"]'); if(act){ try{ var bx=act.parentNode; bx.scrollLeft=Math.max(0,act.offsetLeft-16); }catch(_){} }
+    var act=document.querySelector('#cities .rail2 .city[aria-pressed="true"]'); if(act){ try{ var bx=act.parentNode; var ar=act.getBoundingClientRect(), br=bx.getBoundingClientRect(); if(ar.left<br.left+8||ar.right>br.right-8) bx.scrollLeft=Math.max(0,bx.scrollLeft+(ar.left-br.left)-16); }catch(_){} }
   }
   function setCity(id){
     if(!CITIES[id]||(id===cityId&&!atHome)) return;
@@ -495,7 +495,7 @@
       h+=compare(st);
       if(hasPh(st,'then')&&hasPh(st,'now')){
         h+='<div class="caps"><div class="then"><div class="cap"><strong>Then, '+st.then.yr+'</strong><br>'+st.then.line+'</div>'+credit(st,'then')+'<a target="_blank" rel="noopener" href="'+st.then.link.u+'">'+st.then.link.t+'</a></div>'
-          +'<div class="now"><div class="cap"><strong>Today, '+st.now.yr+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
+          +'<div class="now"><div class="cap"><strong>'+(/^\d/.test(st.now.yr)?'Today, '+st.now.yr:'Today')+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
       } else {
         h+='<div class="pair"><div class="then">'+visual(st,'then',st.then.label+', '+st.then.yr)+'<div class="cap"><strong>Then, '+st.then.yr+': '+st.then.label+'</strong><br>'+st.then.line+'</div>'+credit(st,'then')+'<a target="_blank" rel="noopener" href="'+st.then.link.u+'">'+st.then.link.t+'</a></div>'
         +'<div class="now">'+visual(st,'now',st.now.label)+'<span class="mono">'+(st.now.head||'Now')+'</span><b class="yr">'+st.now.yr+'</b><div class="cap"><strong>'+st.now.label+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';

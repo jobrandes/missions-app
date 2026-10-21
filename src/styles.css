@@ -590,3 +590,11 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 .rname{display:flex;align-items:center;gap:10px}
 .ring{width:22px;height:22px;border-radius:50%;flex:none;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--surface-2) 0);-webkit-mask:radial-gradient(circle,transparent 6px,#000 7px);mask:radial-gradient(circle,transparent 6px,#000 7px)}
 .region[hidden],details.reg[hidden],li[hidden]{display:none!important}
+
+/* UX batch 4: tablet pass */
+@media (min-width:561px) and (max-width:899px){
+  .home-hero h1{font-size:clamp(44px,8.5vw,68px)}
+  .wordmark{white-space:nowrap;font-size:clamp(28px,5vw,38px)}
+  .hstamps{max-width:260px}
+  .app{max-width:720px}
+}

@@ -73,3 +73,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 **UX batch 2 (Oct 21):** story screen shows one slider plus caption blocks (no repeated photos; old paired photos only when a photo is missing), tabs renamed Trail / Time Cards / Stamps, rail button 'My Passport', one combined 'N locked' tile in Time Cards, passport lists only started towns per region with a '"N not started"' line.
 
 **UX batch 3 (Oct 21):** home town search (#townSearch filters towns, opens regions), progress ring per region, stronger hero scrim, mission card lists the town's four stops (full boilerplate only before the first stamp), unverified note shortens to one line, tour cut from 7 to 4 steps, slider nudges once per session. UX review done; remaining ideas: move hero photo credit out of the hero, tablet layout pass.
+
+**UX batch 4 (Oct 21):** tablet pass (768px home headline/wordmark no longer wrap to 6 lines, app width 720px), fixed town rail scrolling off the active town at tablet widths, 'Today' caption no longer doubled. Hero photo credit stays in the hero (license wants it beside the photo).
