@@ -537,6 +537,36 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
   body.ishome .hsec>*:nth-child(n+4){grid-column:2;grid-row:1 / span 4;margin:0}
   body.ishome .hsec .cmp{max-width:none}
 }
+
+/* first-run guide illustrations */
+.tour-card{max-width:420px}
+.tour-card .ti{margin:10px 0 14px;pointer-events:none}
+.ti-hero{border-radius:14px;background:linear-gradient(150deg,#27415f,#14233a 60%,#5a3a1a);color:#fff;padding:14px;min-height:112px;display:flex;flex-direction:column;justify-content:flex-end}
+.ti-hero span{font:500 10px/1 var(--font-mono,monospace);letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-bottom:6px}
+.ti-hero b{font:800 34px/.95 var(--font-display);text-transform:uppercase}
+.ti-town{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;margin-bottom:6px}
+.ti-town.on{outline:3px solid var(--gold,#e9a825);outline-offset:2px}
+.ti-town i{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#8fa7bf,#51677f);flex:none}
+.ti-town b{display:block;font-size:14px}.ti-town small{color:var(--muted);font-size:12px}
+.ti-town em{margin-left:auto;font:600 10px var(--font-mono,monospace);color:var(--accent);font-style:normal;letter-spacing:.08em}
+.ti-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+.ti-card p{margin:6px 0 0;font-size:14px}
+.ti-btn{margin-top:10px;background:var(--accent);color:#fff;border-radius:10px;text-align:center;font-weight:600;font-size:14px;padding:10px}
+.ti-opt{border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:14px;margin-top:6px}
+.ti-opt.ok{border-color:var(--ok,#1f7a4d);box-shadow:inset 0 0 0 1px var(--ok,#1f7a4d)}
+.ti-cmp{position:relative;height:96px;border-radius:12px;overflow:hidden;background:linear-gradient(90deg,#c9b99a 50%,#7d98b4 50%)}
+.ti-cmp:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:#fff}
+.ti-cmp span{position:absolute;bottom:6px;font:500 10px var(--font-mono,monospace);color:#111;background:#ffffffcc;padding:3px 6px;border-radius:4px}
+.ti-sl{height:6px;background:var(--line);border-radius:6px;margin:14px 8px 4px;position:relative}
+.ti-sl:after{content:"";position:absolute;left:50%;top:-5px;width:16px;height:16px;border-radius:50%;background:var(--accent)}
+.ti-claim{font-weight:700;font-size:15px;background:#f4efe4;color:#14202e;border:2px solid #14202e;border-radius:12px;padding:12px}
+.ti-chips{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.ti-chips span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:500 10px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.05em}
+.ti-stamps{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:6px 4px}
+.ti-stamps i{aspect-ratio:1;border-radius:50%;border:2px dashed var(--line)}
+.ti-stamps i.f{border:3px solid #e9a825;background:radial-gradient(circle,#f6d98a,#d49b1d)}
+.tour-skip{display:block;margin:6px auto 0;color:var(--muted)}
+.tour-card .celeb-btns{flex-wrap:wrap}
 </style>
 
 <div class="app">
@@ -813,7 +843,7 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     if(got>0) h+='</details>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button><br><button class="link" data-a="replaytour">Replay the guide</button></p>';
     return h;
   }
   function viewPass(){
@@ -903,24 +933,38 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
   }
   /* ---------- first-run tour ---------- */
   var TOUR=[
-    {k:'Step 1',h:'Go there.',p:'Every mission sends you to a real place. Read the clue, find the spot, and bring your own two feet.'},
-    {k:'Step 2',h:'Prove it.',p:'Answer a question you can only get by standing there. Get it right and you earn the stamp and unlock the story.'},
-    {k:'Step 3',h:'Stamp it.',p:'Swipe a real old photo into today, then sort the claims: solid, disputed, or not true. Everything stays on this phone.'}
+    {h:'Go there. Prove it.',p:'A history game played on real streets. Sixty seconds to learn the moves, then you are on your own. Bring shoes.',ill:'hello',nx:'Show me'},
+    {h:'Pick a mission',p:'Every town is a mission with four real landmarks. Start with the one nearest you, or pick one you want to visit someday.',ill:'town'},
+    {h:'1. Find it',p:'A clue sends you to a real landmark. Stand in front of it, then tap "I am here". Looking at your phone from the couch does not count.',ill:'find'},
+    {h:'2. Prove it',p:'Answer a question you can only get by standing there. Get it right and the stamp is yours.',ill:'quiz'},
+    {h:'3. Travel back',p:'Every stamp unlocks a real old photo. Drag the slider to fade between then and now.',ill:'cmp'},
+    {h:'4. Fact or fiction',p:'Famous stories are often wrong. Sort each claim: documented, disputed, or not true. The sources show why.',ill:'fof'},
+    {h:'Collect your stamps',p:'Every stamp lands in your passport. Fill a town, earn the title. You can replay this guide any time from Home.',ill:'pass',nx:'Pick a mission',done:1}
   ], tourI=0;
+  var TILL={
+    hello:'<div class="ti ti-hero"><span>A history game</span><b>Stamp<br>the Past</b></div>',
+    town:'<div class="ti"><div class="ti-town on"><i></i><span><b>Reno</b><small>0 of 4 stamps</small></span><em>START ›</em></div><div class="ti-town"><i></i><span><b>Seattle</b><small>0 of 4 stamps</small></span><em>START ›</em></div></div>',
+    find:'<div class="ti"><div class="ti-card"><span class="mono">Find it</span><p>Go to the corner of Commercial Row and Lake Street. Look for the old brick depot.</p><div class="ti-btn">I am here</div></div></div>',
+    quiz:'<div class="ti"><div class="ti-card"><span class="mono">Check in</span><p><b>What is carved above the main door?</b></p><div class="ti-opt">A year</div><div class="ti-opt ok">A name</div></div></div>',
+    cmp:'<div class="ti"><div class="ti-cmp"><span style="left:8px">THEN</span><span style="right:8px">NOW</span></div><div class="ti-sl"></div></div>',
+    fof:'<div class="ti"><div class="ti-claim">The first depot burned down in 1905.</div><div class="ti-chips"><span>Well documented</span><span>Disputed</span><span>Not true</span></div></div>',
+    pass:'<div class="ti"><div class="ti-stamps"><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i></div></div>'
+  };
   function maybeTour(){
     var seen=null; try{ seen=localStorage.getItem('then-now-tour'); }catch(e){}
     if(seen) return;
     var anyProgress=false; ORDER.forEach(function(k){ if(sum(ALL[k].done)>0) anyProgress=true; });
     if(anyProgress){ try{ localStorage.setItem('then-now-tour','1'); }catch(e){} return; }
-    showTour();
+    tourI=0; showTour();
   }
   function showTour(){
     var old=document.getElementById('tour'); if(old) old.remove();
-    var t=TOUR[tourI], last=tourI===TOUR.length-1;
+    var t=TOUR[tourI], n=TOUR.length;
     var d=document.createElement('div'); d.id='tour'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','tourT');
-    d.innerHTML='<div class="celeb-card tour-card"><p class="mono">'+t.k+' of 3</p><h2 id="tourT">'+t.h+'</h2><p>'+t.p+'</p><div class="tour-dots" aria-hidden="true">'+TOUR.map(function(_,i){ return '<i'+(i===tourI?' class="on"':'')+'></i>'; }).join('')+'</div><div class="celeb-btns"><button class="btn" data-a="tournext">'+(last?'Let us go':'Next')+'</button>'+(last?'':'<button class="btn ghost" data-a="tourskip">Skip</button>')+'</div></div>';
+    d.innerHTML='<div class="celeb-card tour-card"><p class="mono">'+(tourI===0?'Quick tour':'Step '+(tourI+1)+' of '+n)+'</p>'+TILL[t.ill]+'<h2 id="tourT">'+t.h+'</h2><p>'+t.p+'</p><div class="tour-dots" aria-hidden="true">'+TOUR.map(function(_,i){ return '<i'+(i===tourI?' class="on"':'')+'></i>'; }).join('')+'</div><div class="celeb-btns"><button class="btn" data-a="tournext">'+(t.nx||'Next')+'</button>'+(tourI>0?'<button class="btn ghost" data-a="tourback">Back</button>':'')+(t.done?'':'<button class="link tour-skip" data-a="tourskip">Skip the tour</button>')+'</div></div>';
     document.body.appendChild(d); var f=d.querySelector('button'); if(f) f.focus();
   }
+  function replayTour(){ tourI=0; showTour(); }
   function endTour(){ var e=document.getElementById('tour'); if(e) e.remove(); try{ localStorage.setItem('then-now-tour','1'); }catch(x){} }
   /* ---------- final challenge (boss round) ---------- */
   var boss=null;
@@ -1171,7 +1215,9 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
     if(a==='report'){ showReport(); return; }
     if(a==='repclose'){ closeReport(); return; }
     if(a==='repsend'){ sendReport(); return; }
-    if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
+    if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); if(!atHome||onPass) goHome(); var mm0=document.getElementById('missions'); if(mm0&&mm0.scrollIntoView) mm0.scrollIntoView({behavior:'smooth',block:'start'}); } else { tourI++; showTour(); } return; }
+    if(a==='tourback'){ if(tourI>0){ tourI--; showTour(); } return; }
+    if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
     if(a==='gomissions'){ var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }

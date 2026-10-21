@@ -530,3 +530,33 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
   body.ishome .hsec>*:nth-child(n+4){grid-column:2;grid-row:1 / span 4;margin:0}
   body.ishome .hsec .cmp{max-width:none}
 }
+
+/* first-run guide illustrations */
+.tour-card{max-width:420px}
+.tour-card .ti{margin:10px 0 14px;pointer-events:none}
+.ti-hero{border-radius:14px;background:linear-gradient(150deg,#27415f,#14233a 60%,#5a3a1a);color:#fff;padding:14px;min-height:112px;display:flex;flex-direction:column;justify-content:flex-end}
+.ti-hero span{font:500 10px/1 var(--font-mono,monospace);letter-spacing:.12em;text-transform:uppercase;opacity:.8;margin-bottom:6px}
+.ti-hero b{font:800 34px/.95 var(--font-display);text-transform:uppercase}
+.ti-town{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;margin-bottom:6px}
+.ti-town.on{outline:3px solid var(--gold,#e9a825);outline-offset:2px}
+.ti-town i{width:34px;height:34px;border-radius:8px;background:linear-gradient(135deg,#8fa7bf,#51677f);flex:none}
+.ti-town b{display:block;font-size:14px}.ti-town small{color:var(--muted);font-size:12px}
+.ti-town em{margin-left:auto;font:600 10px var(--font-mono,monospace);color:var(--accent);font-style:normal;letter-spacing:.08em}
+.ti-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+.ti-card p{margin:6px 0 0;font-size:14px}
+.ti-btn{margin-top:10px;background:var(--accent);color:#fff;border-radius:10px;text-align:center;font-weight:600;font-size:14px;padding:10px}
+.ti-opt{border:1px solid var(--line);border-radius:10px;padding:9px 10px;font-size:14px;margin-top:6px}
+.ti-opt.ok{border-color:var(--ok,#1f7a4d);box-shadow:inset 0 0 0 1px var(--ok,#1f7a4d)}
+.ti-cmp{position:relative;height:96px;border-radius:12px;overflow:hidden;background:linear-gradient(90deg,#c9b99a 50%,#7d98b4 50%)}
+.ti-cmp:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;background:#fff}
+.ti-cmp span{position:absolute;bottom:6px;font:500 10px var(--font-mono,monospace);color:#111;background:#ffffffcc;padding:3px 6px;border-radius:4px}
+.ti-sl{height:6px;background:var(--line);border-radius:6px;margin:14px 8px 4px;position:relative}
+.ti-sl:after{content:"";position:absolute;left:50%;top:-5px;width:16px;height:16px;border-radius:50%;background:var(--accent)}
+.ti-claim{font-weight:700;font-size:15px;background:#f4efe4;color:#14202e;border:2px solid #14202e;border-radius:12px;padding:12px}
+.ti-chips{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.ti-chips span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:500 10px var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.05em}
+.ti-stamps{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:6px 4px}
+.ti-stamps i{aspect-ratio:1;border-radius:50%;border:2px dashed var(--line)}
+.ti-stamps i.f{border:3px solid #e9a825;background:radial-gradient(circle,#f6d98a,#d49b1d)}
+.tour-skip{display:block;margin:6px auto 0;color:var(--muted)}
+.tour-card .celeb-btns{flex-wrap:wrap}

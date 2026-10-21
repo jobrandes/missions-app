@@ -53,7 +53,7 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 - Southwest (new, Oct 20): Denver, Santa Fe, Phoenix, Albuquerque, Tucson
 - "Coming soon": Paris.
 Some "then" photos are looser matches (labelled honestly): Providence Arcade (1958 survey photo, exterior vs interior now), Milwaukee Soldiers Home (1885 engraving), Carpenters' Hall (old plans), Pioneer Square (the street), Olvera Street (the old Plaza), Camp Richardson (survey photo), Tahoe stereoviews (Tahoe City, c. 1870s).
-Also done: demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
+Also done: 7-step first-run guide (illustrated modal, Next/Back/Skip, ends by scrolling to the mission list; 'Replay the guide' link in the Home footer; seen flag `then-now-tour`), demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
 
 
 ## Still to do

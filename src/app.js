@@ -239,7 +239,7 @@
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     if(got>0) h+='</details>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button></p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button><br><button class="link" data-a="replaytour">Replay the guide</button></p>';
     return h;
   }
   function viewPass(){
@@ -329,24 +329,38 @@
   }
   /* ---------- first-run tour ---------- */
   var TOUR=[
-    {k:'Step 1',h:'Go there.',p:'Every mission sends you to a real place. Read the clue, find the spot, and bring your own two feet.'},
-    {k:'Step 2',h:'Prove it.',p:'Answer a question you can only get by standing there. Get it right and you earn the stamp and unlock the story.'},
-    {k:'Step 3',h:'Stamp it.',p:'Swipe a real old photo into today, then sort the claims: solid, disputed, or not true. Everything stays on this phone.'}
+    {h:'Go there. Prove it.',p:'A history game played on real streets. Sixty seconds to learn the moves, then you are on your own. Bring shoes.',ill:'hello',nx:'Show me'},
+    {h:'Pick a mission',p:'Every town is a mission with four real landmarks. Start with the one nearest you, or pick one you want to visit someday.',ill:'town'},
+    {h:'1. Find it',p:'A clue sends you to a real landmark. Stand in front of it, then tap "I am here". Looking at your phone from the couch does not count.',ill:'find'},
+    {h:'2. Prove it',p:'Answer a question you can only get by standing there. Get it right and the stamp is yours.',ill:'quiz'},
+    {h:'3. Travel back',p:'Every stamp unlocks a real old photo. Drag the slider to fade between then and now.',ill:'cmp'},
+    {h:'4. Fact or fiction',p:'Famous stories are often wrong. Sort each claim: documented, disputed, or not true. The sources show why.',ill:'fof'},
+    {h:'Collect your stamps',p:'Every stamp lands in your passport. Fill a town, earn the title. You can replay this guide any time from Home.',ill:'pass',nx:'Pick a mission',done:1}
   ], tourI=0;
+  var TILL={
+    hello:'<div class="ti ti-hero"><span>A history game</span><b>Stamp<br>the Past</b></div>',
+    town:'<div class="ti"><div class="ti-town on"><i></i><span><b>Reno</b><small>0 of 4 stamps</small></span><em>START ›</em></div><div class="ti-town"><i></i><span><b>Seattle</b><small>0 of 4 stamps</small></span><em>START ›</em></div></div>',
+    find:'<div class="ti"><div class="ti-card"><span class="mono">Find it</span><p>Go to the corner of Commercial Row and Lake Street. Look for the old brick depot.</p><div class="ti-btn">I am here</div></div></div>',
+    quiz:'<div class="ti"><div class="ti-card"><span class="mono">Check in</span><p><b>What is carved above the main door?</b></p><div class="ti-opt">A year</div><div class="ti-opt ok">A name</div></div></div>',
+    cmp:'<div class="ti"><div class="ti-cmp"><span style="left:8px">THEN</span><span style="right:8px">NOW</span></div><div class="ti-sl"></div></div>',
+    fof:'<div class="ti"><div class="ti-claim">The first depot burned down in 1905.</div><div class="ti-chips"><span>Well documented</span><span>Disputed</span><span>Not true</span></div></div>',
+    pass:'<div class="ti"><div class="ti-stamps"><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i></div></div>'
+  };
   function maybeTour(){
     var seen=null; try{ seen=localStorage.getItem('then-now-tour'); }catch(e){}
     if(seen) return;
     var anyProgress=false; ORDER.forEach(function(k){ if(sum(ALL[k].done)>0) anyProgress=true; });
     if(anyProgress){ try{ localStorage.setItem('then-now-tour','1'); }catch(e){} return; }
-    showTour();
+    tourI=0; showTour();
   }
   function showTour(){
     var old=document.getElementById('tour'); if(old) old.remove();
-    var t=TOUR[tourI], last=tourI===TOUR.length-1;
+    var t=TOUR[tourI], n=TOUR.length;
     var d=document.createElement('div'); d.id='tour'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','tourT');
-    d.innerHTML='<div class="celeb-card tour-card"><p class="mono">'+t.k+' of 3</p><h2 id="tourT">'+t.h+'</h2><p>'+t.p+'</p><div class="tour-dots" aria-hidden="true">'+TOUR.map(function(_,i){ return '<i'+(i===tourI?' class="on"':'')+'></i>'; }).join('')+'</div><div class="celeb-btns"><button class="btn" data-a="tournext">'+(last?'Let us go':'Next')+'</button>'+(last?'':'<button class="btn ghost" data-a="tourskip">Skip</button>')+'</div></div>';
+    d.innerHTML='<div class="celeb-card tour-card"><p class="mono">'+(tourI===0?'Quick tour':'Step '+(tourI+1)+' of '+n)+'</p>'+TILL[t.ill]+'<h2 id="tourT">'+t.h+'</h2><p>'+t.p+'</p><div class="tour-dots" aria-hidden="true">'+TOUR.map(function(_,i){ return '<i'+(i===tourI?' class="on"':'')+'></i>'; }).join('')+'</div><div class="celeb-btns"><button class="btn" data-a="tournext">'+(t.nx||'Next')+'</button>'+(tourI>0?'<button class="btn ghost" data-a="tourback">Back</button>':'')+(t.done?'':'<button class="link tour-skip" data-a="tourskip">Skip the tour</button>')+'</div></div>';
     document.body.appendChild(d); var f=d.querySelector('button'); if(f) f.focus();
   }
+  function replayTour(){ tourI=0; showTour(); }
   function endTour(){ var e=document.getElementById('tour'); if(e) e.remove(); try{ localStorage.setItem('then-now-tour','1'); }catch(x){} }
   /* ---------- final challenge (boss round) ---------- */
   var boss=null;
@@ -597,7 +611,9 @@
     if(a==='report'){ showReport(); return; }
     if(a==='repclose'){ closeReport(); return; }
     if(a==='repsend'){ sendReport(); return; }
-    if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); } else { tourI++; showTour(); } return; }
+    if(a==='tournext'){ if(tourI>=TOUR.length-1){ endTour(); if(!atHome||onPass) goHome(); var mm0=document.getElementById('missions'); if(mm0&&mm0.scrollIntoView) mm0.scrollIntoView({behavior:'smooth',block:'start'}); } else { tourI++; showTour(); } return; }
+    if(a==='tourback'){ if(tourI>0){ tourI--; showTour(); } return; }
+    if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
     if(a==='gomissions'){ var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }
