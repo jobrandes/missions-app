@@ -23,8 +23,8 @@ with sync_playwright() as p:
         return pg
     # first-run tour shows once, can be finished, and does not return
     pg=new(tour=True); need(pg.locator('#tour').count()==1,'first-run tour shows on a fresh phone')
-    pg.click('[data-a=tournext]'); pg.click('[data-a=tournext]'); pg.click('[data-a=tourback]'); need(pg.locator('#tourT').inner_text().lower().startswith('pick a mission'),'tour Back returns a step')
-    for _ in range(6): pg.click('[data-a=tournext]')
+    pg.click('[data-a=tournext]'); pg.click('[data-a=tournext]'); pg.click('[data-a=tourback]'); need(pg.locator('#tourT').inner_text().lower().startswith('find it'),'tour Back returns a step')
+    for _ in range(3): pg.click('[data-a=tournext]')
     need(pg.locator('#tour').count()==0,'tour closes after the last step'); pg.reload(); pg.wait_for_timeout(300); need(pg.locator('#tour').count()==0,'tour does not return after finishing')
     # first launch -> home
     pg=new()

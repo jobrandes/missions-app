@@ -53,7 +53,7 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 - Southwest (new, Oct 20): Denver, Santa Fe, Phoenix, Albuquerque, Tucson, Colorado Springs, Las Vegas, Flagstaff, El Paso, San Antonio
 - "Coming soon": Paris.
 Some "then" photos are looser matches (labelled honestly): Providence Arcade (1958 survey photo, exterior vs interior now), Milwaukee Soldiers Home (1885 engraving), Carpenters' Hall (old plans), Pioneer Square (the street), Olvera Street (the old Plaza), Camp Richardson (survey photo), Tahoe stereoviews (Tahoe City, c. 1870s).
-Also done: 7-step first-run guide (illustrated modal, Next/Back/Skip, ends by scrolling to the mission list; 'Replay the guide' link in the Home footer; seen flag `then-now-tour`), demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
+Also done: 4-step first-run guide (illustrated modal, Next/Back/Skip, ends by scrolling to the mission list; 'Replay the guide' link in the Home footer; seen flag `then-now-tour`), demo mode, dynamic Home hero, region-grouped passport, offline support, privacy and support pages, feedback form.
 
 
 ## Still to do
@@ -71,3 +71,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 **UX batch 1 (Oct 21):** compact slim header inside a stop (no tabs/city rail), one back control (top '‹ Trail'; bottom bar only appears after step 1 as '‹ Previous step'; #barExit hidden), 'Sources' step label, 12px labels, fade on scrolling rails, no duplicate badge toast. Tests now exit stops via `.stophead [data-a=exit]`. Next: UX batch 2 (one photo block on story screen, rename Cards/Rewards/Passport, collapse empty passport towns, single locked tile) and batch 3 (home search + region cards, hero contrast, per-town mission text, tour length, slider nudge).
 
 **UX batch 2 (Oct 21):** story screen shows one slider plus caption blocks (no repeated photos; old paired photos only when a photo is missing), tabs renamed Trail / Time Cards / Stamps, rail button 'My Passport', one combined 'N locked' tile in Time Cards, passport lists only started towns per region with a '"N not started"' line.
+
+**UX batch 3 (Oct 21):** home town search (#townSearch filters towns, opens regions), progress ring per region, stronger hero scrim, mission card lists the town's four stops (full boilerplate only before the first stamp), unverified note shortens to one line, tour cut from 7 to 4 steps, slider nudges once per session. UX review done; remaining ideas: move hero photo credit out of the hero, tablet layout pass.

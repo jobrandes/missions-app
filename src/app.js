@@ -26,6 +26,9 @@
     return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p></section>';
   }
   document.addEventListener('input',function(e){
+    var q=e.target; if(q&&q.id==='townSearch'){ var v=q.value.trim().toLowerCase(), any=false;
+      document.querySelectorAll('#missions details.reg').forEach(function(d){ var vis=0; d.querySelectorAll('li').forEach(function(li){ var m=!v||li.textContent.toLowerCase().indexOf(v)>-1; li.hidden=!m; if(m) vis++; }); d.hidden=!!v&&!vis; if(v) d.open=vis>0; if(vis) any=true; });
+      var nn=document.getElementById('townNone'); if(nn) nn.hidden=!v||any; return; }
     var t=e.target; if(!t||!t.getAttribute||!t.getAttribute('data-cmp')) return;
     var top=t.closest('.cmp').querySelector('.top'); if(top) top.style.opacity=(t.value/100);
   });
@@ -69,7 +72,7 @@
   var tab='trail';
   var cur=null;          /* {i, step, entry, wrong:[], picks:[], checked:false} */
   var confirmReset=false;
-  var toastTimer=null;
+  var toastTimer=null, nudged=false;
   var pushed=false, ignorePop=false;
 
   function norm(o){
@@ -226,11 +229,11 @@
     function soonLi(o){ var nm=(typeof o==='string')?o:o.name; return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
     SOON.forEach(function(o){ var r=(typeof o==='string')?'More places':(o.region||'More places'); if(regs.indexOf(r)<0) regs.push(r); });
-    h+='<section id="missions"><h2 class="hh">Pick a mission</h2>'+regs.map(function(r){
+    h+='<section id="missions"><h2 class="hh">Pick a mission</h2><label class="tsearch"><span class="sr">Search towns</span><input id="townSearch" type="search" placeholder="Search towns" autocomplete="off" autocapitalize="words" spellcheck="false" aria-controls="missions"></label><p class="tnone" id="townNone" hidden>No town matches. Try another spelling.</p>'+regs.map(function(r){
       var items=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }).map(townLi).join('')+SOON.filter(function(o){ return ((typeof o==='string')?'More places':(o.region||'More places'))===r; }).map(soonLi).join('');
       var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }), rg=0, rt=0; rk.forEach(function(k){ rg+=sum(ALL[k].done); rt+=CITIES[k].stops.length; });
       var open=(CITIES[cityId]&&(CITIES[cityId].region||'More places')===r)||(regs[0]===r&&!(CITIES[cityId]&&(ALL[cityId]&&sum(ALL[cityId].done)>0)));
-      return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
+      return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span class="rname"><i class="ring" style="--p:'+(rt?Math.round(rg/rt*100):0)+'" aria-hidden="true"></i>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
     if(got>0) h+='<details class="pitch"><summary><span class="mono">About</span><strong>How Stamp the Past works</strong></summary>';
     var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
@@ -268,7 +271,8 @@
       h+='<section class="done-banner pop" aria-label="Mission complete"><div class="bbox lg">'+badge('master',true)+'</div><div><h2>'+city().explorer+'</h2><p>'+city().afterDone+'</p></div></section>';
       if(((DATA.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
     } else {
-      h+='<section class="card"><h3>Your mission</h3><p>'+city().mission+'</p></section>';
+      var nm=STOPS.map(function(s){ return s.name; }); var lst=nm.slice(0,-1).join(', ')+' and '+nm[nm.length-1];
+      h+='<section class="card"><h3>Your mission</h3><p>'+(sum(S.done)===0?city().mission:'On your list: '+lst+'. Do them in any order.')+'</p>'+(sum(S.done)===0?'<p class="why" style="margin:8px 0 0">On your list: '+lst+'.</p>':'')+'</section>';
     }
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
@@ -302,7 +306,7 @@
   function vnote(st){
     var v=st.verified;
     if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
-    return '<div class="vbadge"><b>Not verified on site yet</b><span>'+st.field.replace(/^Field notes pending:\s*/i,'')+'</span></div>';
+    var fn=st.field.replace(/^Field notes pending:\s*/i,''); return '<div class="vbadge"><b>Not verified on site yet</b>'+(/nobody has walked/i.test(fn)?'':'<span>'+fn+'</span>')+'</div>';
   }
   /* ---------- report a problem ---------- */
   function whereAmI(){
@@ -330,12 +334,9 @@
   /* ---------- first-run tour ---------- */
   var TOUR=[
     {h:'Go there. Prove it.',p:'A history game played on real streets. Sixty seconds to learn the moves, then you are on your own. Bring shoes.',ill:'hello',nx:'Show me'},
-    {h:'Pick a mission',p:'Every town is a mission with four real landmarks. Start with the one nearest you, or pick one you want to visit someday.',ill:'town'},
-    {h:'1. Find it',p:'A clue sends you to a real landmark. Stand in front of it, then tap "I am here". Looking at your phone from the couch does not count.',ill:'find'},
-    {h:'2. Prove it',p:'Answer a question you can only get by standing there. Get it right and the stamp is yours.',ill:'quiz'},
-    {h:'3. Travel back',p:'Every stamp unlocks a real old photo. Drag the slider to fade between then and now.',ill:'cmp'},
-    {h:'4. Fact or fiction',p:'Famous stories are often wrong. Sort each claim: documented, disputed, or not true. The sources show why.',ill:'fof'},
-    {h:'Collect your stamps',p:'Every stamp lands in your passport. Fill a town, earn the title. You can replay this guide any time from Home.',ill:'pass',nx:'Pick a mission',done:1}
+    {h:'Find it. Prove it.',p:'Every town is four real landmarks. A clue sends you there. Stand in front of it, tap "I am here", and answer a question you can only get by standing there.',ill:'find'},
+    {h:'Travel back',p:'Every stamp unlocks a real old photo. Drag the slider to fade between then and now.',ill:'cmp'},
+    {h:'Fact or fiction',p:'Famous stories are often wrong. Sort each claim: documented, disputed, or not true. Every stamp lands in your passport, and you can replay this guide from Home.',ill:'fof',nx:'Pick a mission',done:1}
   ], tourI=0;
   var TILL={
     hello:'<div class="ti ti-hero"><span>A history game</span><b>Stamp<br>the Past</b></div>',
@@ -569,6 +570,12 @@
       document.getElementById('barBack').textContent='‹ Previous step';
       document.getElementById('barBack').setAttribute('aria-label',atRoot?('Back to '+(tab==='cards'?'Time Cards':'Trail')):'Back to previous step');
       document.getElementById('barExit').textContent=(tab==='cards'?'All cards':'All stops');
+    }
+    if(cur&&cur.step===2&&!nudged&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      var rg=document.querySelector('#main input[data-cmp]');
+      if(rg){ nudged=true; var t0=null, tp=document.querySelector('#main .cmp .top');
+        var go=function(ts){ if(!t0) t0=ts; var k=(ts-t0)/1100; if(k>=1){ rg.value=0; if(tp) tp.style.opacity=0; return; } var v=Math.sin(k*Math.PI)*45; rg.value=v; if(tp) tp.style.opacity=v/100; requestAnimationFrame(go); };
+        setTimeout(function(){ requestAnimationFrame(go); },500); }
     }
     if(focusTitle){
       var t=document.getElementById('stopTitle');
