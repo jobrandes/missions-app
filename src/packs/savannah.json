@@ -334,16 +334,16 @@
       "safety": "It is a national park site on an island. Watch for traffic on the highway, stay on trails and bring water and sun protection.",
       "field": "Field notes pending: nobody has walked this stop for the app yet.",
       "q": {
-        "prompt": "How thick are the fort's walls?",
+        "prompt": "In 1862, what new kind of weapon breached the fort's thick brick walls?",
         "options": [
-          "3 feet",
-          "7 feet",
-          "11 feet",
-          "20 feet"
+          "Wooden catapults",
+          "Floating mines",
+          "Hot-air balloons",
+          "Rifled cannons"
         ],
-        "answer": 2,
-        "hint": "A bit more than a basketball hoop is tall.",
-        "verify": "Wikipedia says the walls are 11 feet thick. Written from sources, not yet checked on site."
+        "answer": 3,
+        "hint": "Their barrels had spiral grooves inside.",
+        "verify": "Wikipedia and the Georgia Encyclopedia both say Union rifled cannon breached the wall. Written from sources, not yet checked on site."
       },
       "then": {
         "yr": "1862",
@@ -378,7 +378,7 @@
       },
       "story": [
         "Fort Pulaski was built from 1829 to 1847 on Cockspur Island at the mouth of the Savannah River. It was named in 1833 for Casimir Pulaski, a Polish-born soldier who fought in the American Revolution. About 25 million bricks went into it, supported by wooden pilings sunk up to 70 feet.",
-        "As a young second lieutenant, Robert E. Lee worked on its construction under Major Samuel Babcock. The walls are 11 feet thick.",
+        "As a young second lieutenant, Robert E. Lee worked on its construction under Major Samuel Babcock. Sources disagree on how thick the walls were, from about 7½ to 11 feet.",
         "In April 1862, Union forces used 36 guns, including James rifled cannons and Parrott rifles, to breach the corner wall within about 30 hours. Colonel Charles H. Olmstead surrendered reluctantly. Only two soldiers were killed. The success of rifled cannon rendered brick forts obsolete. It became a national monument on October 15, 1924."
       ],
       "fact": "Only two soldiers were killed in the siege.",
