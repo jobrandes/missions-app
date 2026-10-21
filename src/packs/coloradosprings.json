@@ -1,0 +1,417 @@
+{
+ "id": "coloradosprings",
+ "name": "Colorado Springs",
+ "explorer": "Front Range Explorer",
+ "initials": "COS",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Trail Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Pikes Peak Scholar"
+  ],
+  [
+   600,
+   "Colorado Springs Historian"
+  ]
+ ],
+ "heroAlt": "Pikes Peak above Colorado Springs",
+ "heroLi": "<li>Header: David Shankbone · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pikes_Peak_from_Colorado_Springs_by_David_Shankbone.jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: David Shankbone · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pikes_Peak_from_Colorado_Springs_by_David_Shankbone.jpg\">Source</a>",
+ "mission": "Find four landmarks around Colorado Springs. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Colorado Springs is waiting.",
+ "safetyNote": "<li>The altitude here is high, so drink water and take it slow. Stay on marked trails, keep back from cliff edges and waterfalls, and never climb on the rock formations.</li>",
+ "badgeMap": {
+  "museum": [
+   "cs_mu_now",
+   "50% 45%"
+  ],
+  "falls": [
+   "cs_fa_now",
+   "50% 45%"
+  ],
+  "garden": [
+   "cs_ga_now",
+   "50% 45%"
+  ],
+  "peak": [
+   "cs_pk_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "museum",
+   "name": "Pioneers Museum",
+   "short": "Pioneers Museum",
+   "badge": "Pioneers Museum",
+   "tag": "Stop 1 of 4",
+   "teaser": "A granite courthouse with a clock tower, now a free museum.",
+   "map": "Colorado Springs Pioneers Museum, 215 S Tejon Street, Colorado Springs, CO",
+   "clue": "Go to 215 S. Tejon Street. Look for the big granite building with a domed clock tower, set in a small park.",
+   "safety": "Tejon Street has traffic. Use crosswalks, stay on the park paths, and enter only during museum hours.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was this building before it became a museum?",
+    "options": [
+     "A school",
+     "The county courthouse",
+     "A train station",
+     "A hotel"
+    ],
+    "answer": 1,
+    "hint": "Think about where trials and county records belong.",
+    "verify": "Wikipedia says the granite building was the El Paso County Courthouse from 1903 to 1973. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "Early 1900s",
+    "label": "The courthouse then",
+    "line": "A tinted postcard of the pale stone courthouse with a domed clock tower and big trees around it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cs_mu_then",
+     "by": "Detroit Publishing Company",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:El_Paso_County_Court_House,_Colorado_Springs,_Colo_(NYPL_b12647398-69798).jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The museum today",
+    "line": "The same building with its red roof and clock tower, framed by autumn trees and a deep blue sky.",
+    "ph": {
+     "k": "cs_mu_now",
+     "by": "JAKeeran",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pioneers_Museum_-_former_El_Paso_Coounty_Courthouse.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Colorado Springs Pioneers Museum sits in a granite building with a domed clock tower. It was the El Paso County Courthouse from 1903 to 1973, and the museum moved in during 1979. The building is on the National Register of Historic Places, and was the second property in El Paso County to be listed, after Pikes Peak.",
+    "More than 60,000 objects fill the collection, from Arapaho, Cheyenne and Ute artifacts to Van Briggle pottery, quilts and items that belonged to writer Helen Hunt Jackson. The museum also holds papers of General William Jackson Palmer, the city's founder. Admission is free.",
+    "The museum sits within Alamo Square Park. A street clock from 1900 stands there too, saved from being destroyed during urban renewal in the 1960s."
+   ],
+   "fact": "The building was the county courthouse for 70 years.",
+   "disputed": "Many people assume a courthouse was always a courthouse. Wikipedia says this one has been a museum since 1979.",
+   "claims": [
+    {
+     "t": "The building was the El Paso County Courthouse from 1903 to 1973.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "Admission to the museum costs a lot of money.",
+     "a": 2,
+     "why": "Wikipedia says admission is free."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Colorado Springs Pioneers Museum",
+     "u": "https://en.wikipedia.org/wiki/Colorado_Springs_Pioneers_Museum"
+    },
+    {
+     "t": "Wikipedia: Colorado Springs, Colorado",
+     "u": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado"
+    }
+   ],
+   "card": {
+    "a": "1903",
+    "b": "1979",
+    "la": "Courthouse opens",
+    "lb": "Becomes a museum"
+   }
+  },
+  {
+   "id": "falls",
+   "name": "Seven Falls",
+   "short": "Seven Falls",
+   "badge": "Seven Falls",
+   "tag": "Stop 2 of 4",
+   "teaser": "Seven waterfalls in a granite canyon, with 224 steps beside them.",
+   "map": "Seven Falls, South Cheyenne Cañon, Colorado Springs, CO",
+   "clue": "Go to South Cheyenne Cañon, about 4.5 miles southwest of downtown. Look for a narrow granite canyon with a waterfall dropping in stages.",
+   "safety": "There is no parking at the falls, so use the shuttle. Stay on the stairs and trails, keep back from the water and wet rock, and watch for slippery steps.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many steps are on the staircase beside the falls?",
+    "options": [
+     "724",
+     "1,000",
+     "224",
+     "50"
+    ],
+    "answer": 2,
+    "hint": "The number is a few hundred, not a few thousand.",
+    "verify": "Wikipedia says there are a total of 224 steps on the staircase from the base of the falls to the peak. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The falls then",
+    "line": "A tinted postcard of narrow white falls running down a deep canyon between dark rock walls.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cs_fa_then",
+     "by": "Unknown photographer (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seven_Falls,_Cheyenne_Canyon,_Colorado-LCCN2008678056.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The falls today",
+    "line": "A waterfall tumbling down a steep canyon wall, with green trees along the edge.",
+    "ph": {
+     "k": "cs_fa_now",
+     "by": "John Fowler",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Seven_Falls_(3735777768).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Seven Falls is a series of seven waterfalls on South Cheyenne Creek, in a 1,000-foot (300 m) granite canyon in Colorado Springs. It has been a privately owned tourist attraction since it opened in the early 1880s. The canyon entrance is about 4.5 miles southwest of downtown.",
+    "The heights of the seven falls add up to 181 feet (55 m), and a staircase of 224 steps climbs from the base to the top. An elevator goes up to the Eagle's Nest viewing platform. Wikipedia says Seven Falls is Colorado's only waterfall on the National Geographic list of international waterfalls.",
+    "Two trails start at the top of the falls. One leads to Inspiration Point, a favorite spot of the writer Helen Hunt Jackson, who was originally buried there."
+   ],
+   "fact": "The seven falls are named in alphabetical order.",
+   "disputed": "Many people assume the falls are named from top to bottom. Wikipedia says they are named in alphabetical order, not top to bottom.",
+   "claims": [
+    {
+     "t": "The heights of the seven falls add up to 181 feet.",
+     "a": 0,
+     "why": "Wikipedia gives the sum as 181 feet."
+    },
+    {
+     "t": "You can park a car right at the falls.",
+     "a": 2,
+     "why": "Wikipedia says there is no parking, with shuttle service instead."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Seven Falls",
+     "u": "https://en.wikipedia.org/wiki/Seven_Falls"
+    },
+    {
+     "t": "Wikipedia: Colorado Springs, Colorado",
+     "u": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado"
+    }
+   ],
+   "card": {
+    "a": "1880s",
+    "b": "224 steps",
+    "la": "Opens as an attraction",
+    "lb": "Staircase today"
+   }
+  },
+  {
+   "id": "garden",
+   "name": "Garden of the Gods",
+   "short": "Garden of the Gods",
+   "badge": "Garden of the Gods",
+   "tag": "Stop 3 of 4",
+   "teaser": "Red rock towers named after a joke about a beer garden.",
+   "map": "Garden of the Gods, Colorado Springs, CO",
+   "clue": "Go to Garden of the Gods Park, on the west side of Colorado Springs. Look for the tall red sandstone towers that rise out of the ground.",
+   "safety": "Stay on the marked trails, keep off the rocks and do not climb them. The rock is crumbly and the park has closed climbing areas.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1859, what did surveyor Melancthon Beach say the place would be good for?",
+    "options": [
+     "A fort",
+     "A farm",
+     "A railroad yard",
+     "A beer garden"
+    ],
+    "answer": 3,
+    "hint": "His companion thought the rocks were far too grand for that.",
+    "verify": "Wikipedia says Beach suggested it would be a 'capital place for a beer garden'. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The garden then",
+    "line": "A tinted postcard of tall red rock spires in a row, with a green mountain behind them.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cs_ga_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0183).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "The garden today",
+    "line": "Tall red sandstone towers leaning together beside a dirt path, under a blue sky.",
+    "ph": {
+     "k": "cs_ga_now",
+     "by": "BenjaminASanders",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Gateway_Rock.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Garden of the Gods is a 1,341.3-acre (542.8 ha) public park in Colorado Springs. About 862 acres of it were designated a National Natural Landmark in 1971. Its red rock formations were created millions of years ago during the Laramide Orogeny.",
+    "The Europeans first called the area Red Rock Corral. Wikipedia says that in August 1859 two surveyors, Melancthon Beach and Rufus Cable, explored the site. Beach thought it was a capital place for a beer garden. Cable said it was a fit place for the gods to assemble, and the name stuck.",
+    "Archaeological evidence shows that prehistoric people visited about 1330 BC, and many native peoples report a connection to the place, including the Apache, Cheyenne, Comanche, Kiowa, Lakota, Pawnee, Shoshone and Ute."
+   ],
+   "fact": "The park has been used by people for over 3,000 years.",
+   "disputed": "Many people repeat one story of how the park got its name. Wikipedia says an 1893 newspaper credited Helen Hunt Jackson instead, so the story is disputed.",
+   "claims": [
+    {
+     "t": "The name 'Garden of the Gods' was suggested in 1859 by surveyor Rufus Cable.",
+     "a": 0,
+     "why": "Wikipedia gives that account of the naming."
+    },
+    {
+     "t": "The red rocks were created in the last century.",
+     "a": 2,
+     "why": "Wikipedia says they formed millions of years ago."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Garden of the Gods",
+     "u": "https://en.wikipedia.org/wiki/Garden_of_the_Gods"
+    },
+    {
+     "t": "Wikipedia: Colorado Springs, Colorado",
+     "u": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado"
+    }
+   ],
+   "card": {
+    "a": "1859",
+    "b": "1971",
+    "la": "Named by surveyors",
+    "lb": "National Natural Landmark"
+   }
+  },
+  {
+   "id": "peak",
+   "name": "Pikes Peak",
+   "short": "Pikes Peak",
+   "badge": "Pikes Peak",
+   "tag": "Stop 4 of 4",
+   "teaser": "America's Mountain, which inspired a song.",
+   "map": "Pikes Peak view, Colorado Springs, CO",
+   "clue": "Look west from downtown Colorado Springs on a clear day. Look for the huge snow-capped mountain that rises above everything else.",
+   "safety": "This is a viewpoint stop, so stay on sidewalks and crosswalks and do not stop on busy roads. The summit is a separate trip with weather and altitude risks.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which song was inspired by a climb of Pikes Peak in 1893?",
+    "options": [
+     "America the Beautiful",
+     "The Star-Spangled Banner",
+     "Home on the Range",
+     "Yankee Doodle"
+    ],
+    "answer": 0,
+    "hint": "The poet was a visiting professor teaching a summer course.",
+    "verify": "Wikipedia says Katharine Lee Bates was inspired to write 'America the Beautiful' after scaling the summit in 1893. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1953",
+    "label": "The street then",
+    "line": "A color postcard of a busy downtown street with old cars and a hotel with towers, and the snowy mountain behind.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "cs_pk_then",
+     "by": "Tichnor Brothers (Boston Public Library)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pikes_Peak,_alt._14,100_ft._from_Pikes_Peak_Avenue,_Colorado_Springs,_Colorado_(7725173756).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2008",
+    "head": "Today",
+    "label": "The mountain today",
+    "line": "The snow-capped mountain above a highway, with a wide blue sky.",
+    "ph": {
+     "k": "cs_pk_now",
+     "by": "David Shankbone",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pikes_Peak_from_Colorado_Springs_by_David_Shankbone.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Pikes Peak, also called America's Mountain, is a fourteener with a summit of 14,115 feet (4,302 m). It is the easternmost fourteener in the United States. The base is in Manitou Springs, 10 miles west of downtown Colorado Springs.",
+    "Zebulon Pike was ordered by Thomas Jefferson in 1806 to explore the Louisiana Purchase. He tried to climb the mountain that winter but gave up, possibly because of the cold. The first documented hike to the top was by Edwin James on July 15, 1820. The mountain was later named for Pike by newspapers during the gold rush.",
+    "In 1893, visiting professor and poet Katharine Lee Bates climbed to the summit and was inspired to write 'America the Beautiful'. Its first title was 'Pikes Peak'. The Ute people called the mountain Tava, meaning sun."
+   ],
+   "fact": "The mountain is the easternmost fourteener in the United States.",
+   "disputed": "Many people think Zebulon Pike reached the top. Wikipedia says he abandoned his climb, and the first documented hike was Edwin James in 1820.",
+   "claims": [
+    {
+     "t": "The first documented hike to the summit was in 1820.",
+     "a": 0,
+     "why": "Wikipedia: Edwin James on July 15, 1820."
+    },
+    {
+     "t": "Zebulon Pike reached the summit in 1806.",
+     "a": 2,
+     "why": "Wikipedia says he abandoned the climb."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Pikes Peak",
+     "u": "https://en.wikipedia.org/wiki/Pikes_Peak"
+    },
+    {
+     "t": "Wikipedia: Colorado Springs, Colorado",
+     "u": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado"
+    }
+   ],
+   "card": {
+    "a": "1820",
+    "b": "1893",
+    "la": "First documented climb",
+    "lb": "A song is inspired"
+   }
+  }
+ ],
+ "heroKey": "cs_pk_now"
+}

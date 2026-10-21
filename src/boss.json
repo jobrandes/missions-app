@@ -2160,5 +2160,51 @@
    "a": 1,
    "why": "Henry Hobson Richardson."
   }
+ ],
+ "coloradosprings": [
+  {
+   "q": "What was the Pioneers Museum building before 1979?",
+   "o": [
+    "A school",
+    "A depot",
+    "The county courthouse",
+    "A hotel"
+   ],
+   "a": 2,
+   "why": "It was the courthouse from 1903 to 1973."
+  },
+  {
+   "q": "How many steps climb beside Seven Falls?",
+   "o": [
+    "224",
+    "24",
+    "1,224",
+    "5,000"
+   ],
+   "a": 0,
+   "why": "A staircase of 224 steps."
+  },
+  {
+   "q": "What did surveyor Melancthon Beach suggest the place would suit in 1859?",
+   "o": [
+    "A fort",
+    "A farm",
+    "A school",
+    "A beer garden"
+   ],
+   "a": 3,
+   "why": "A capital place for a beer garden."
+  },
+  {
+   "q": "Which song was inspired by climbing Pikes Peak?",
+   "o": [
+    "Home on the Range",
+    "America the Beautiful",
+    "Yankee Doodle",
+    "Dixie"
+   ],
+   "a": 1,
+   "why": "Katharine Lee Bates, 1893."
+  }
  ]
 }

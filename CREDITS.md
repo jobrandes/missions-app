@@ -549,3 +549,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | bv_om_now | https://commons.wikimedia.org/wiki/File:Old_Mill_UVM_5.JPG | AlexiusHoratius | CC BY-SA 3.0 | 2012 |
 | bv_bl_then | https://commons.wikimedia.org/wiki/File:Billings_Library,_Burlington,_Vt_(77623).jpg | Tichnor Quality Views (Riverside Paper Co.) | Public domain | about 1940 |
 | bv_bl_now | https://commons.wikimedia.org/wiki/File:University_of_Vermont_Billings_Library.jpg | HeyTomek | CC0 | 2024 |
+
+### Colorado Springs (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| cs_mu_then | https://commons.wikimedia.org/wiki/File:El_Paso_County_Court_House,_Colorado_Springs,_Colo_(NYPL_b12647398-69798).jpg | Detroit Publishing Company | Public domain | early 1900s |
+| cs_mu_now | https://commons.wikimedia.org/wiki/File:Pioneers_Museum_-_former_El_Paso_Coounty_Courthouse.JPG | JAKeeran | CC BY-SA 3.0 | 2011 |
+| cs_fa_then | https://commons.wikimedia.org/wiki/File:Seven_Falls,_Cheyenne_Canyon,_Colorado-LCCN2008678056.jpg | Unknown photographer (Library of Congress) | Public domain | about 1900 |
+| cs_fa_now | https://commons.wikimedia.org/wiki/File:Seven_Falls_(3735777768).jpg | John Fowler | CC BY 2.0 | 2009 |
+| cs_ga_then | https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0183).jpg | Unknown author | Public domain | about 1900 |
+| cs_ga_now | https://commons.wikimedia.org/wiki/File:Gateway_Rock.jpg | BenjaminASanders | CC BY-SA 4.0 | 2014 |
+| cs_pk_then | https://commons.wikimedia.org/wiki/File:Pikes_Peak,_alt._14,100_ft._from_Pikes_Peak_Avenue,_Colorado_Springs,_Colorado_(7725173756).jpg | Tichnor Brothers (Boston Public Library) | Public domain | about 1953 |
+| cs_pk_now | https://commons.wikimedia.org/wiki/File:Pikes_Peak_from_Colorado_Springs_by_David_Shankbone.jpg | David Shankbone | CC BY-SA 3.0 | 2008 |
