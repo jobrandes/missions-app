@@ -1,0 +1,417 @@
+{
+ "id": "sanantonio",
+ "name": "San Antonio",
+ "explorer": "Mission City Explorer",
+ "initials": "SAT",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Plaza Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "San Antonio Scholar"
+  ],
+  [
+   600,
+   "San Antonio Historian"
+  ]
+ ],
+ "heroAlt": "The Alamo in San Antonio",
+ "heroLi": "<li>Header: Michael Barera · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Antonio_July_2017_05_(The_Alamo).jpg\">Source</a> · resized</li>",
+ "heroCredit": "Photo: Michael Barera · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:San_Antonio_July_2017_05_(The_Alamo).jpg\">Source</a>",
+ "mission": "Find four landmarks around San Antonio. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of San Antonio is waiting.",
+ "safetyNote": "<li>San Antonio is hot and sunny, so bring water and a hat. Downtown plazas are crowded and the streets are busy, so use crosswalks. The Alamo, the cathedral and the missions are places of worship or memory, so be quiet and respectful. Mission San Jose is a drive from downtown.</li>",
+ "badgeMap": {
+  "alamo": [
+   "sa_al_now",
+   "50% 45%"
+  ],
+  "cathedral": [
+   "sa_sf_now",
+   "50% 45%"
+  ],
+  "missionjose": [
+   "sa_mj_now",
+   "50% 45%"
+  ],
+  "sunset": [
+   "sa_sd_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The Southwest",
+ "stops": [
+  {
+   "id": "alamo",
+   "name": "The Alamo",
+   "short": "The Alamo",
+   "badge": "The Alamo",
+   "tag": "Stop 1 of 4",
+   "teaser": "The old mission chapel where a 13-day siege ended in 1836.",
+   "map": "The Alamo, 300 Alamo Plaza, San Antonio, TX",
+   "clue": "Go to Alamo Plaza in downtown San Antonio. Look for the old stone chapel with a curved top on its front, standing among modern buildings.",
+   "safety": "Alamo Plaza is crowded and the streets around it are busy. Use crosswalks, keep to the plaza paths, and be quiet and respectful near the shrine.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "How many days did the siege last before the final assault on March 6, 1836?",
+    "options": [
+     "30 days",
+     "13 days",
+     "3 days",
+     "13 weeks"
+    ],
+    "answer": 1,
+    "hint": "The siege began on February 23, 1836.",
+    "verify": "Wikipedia says Mexican forces besieged the Alamo for 13 days starting February 23, 1836, and the final assault came on March 6. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1922",
+    "label": "The Alamo then",
+    "line": "A black-and-white photo of the old stone chapel front seen through an iron gate, with a leafy plant beside it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_al_then",
+     "by": "Unknown photographer (Library of Congress)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_front_of_the_Alamo_through_the_compound_gate,_San_Antonio,_Texas_LCCN2002716229.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2017",
+    "head": "Today",
+    "label": "The Alamo today",
+    "line": "The chapel's stone front with a Texas flag, a stone path and green lawn, with visitors and a blue sky.",
+    "ph": {
+     "k": "sa_al_now",
+     "by": "Michael Barera",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Antonio_July_2017_05_(The_Alamo).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Alamo began in 1718 as Mission San Antonio de Valero. Governor Martin de Alarcon formally entrusted it to Father Antonio de San Buenaventura y Olivares on May 1. A hurricane destroyed the first buildings, so the mission moved to its present site in 1724. It was secularized in 1793 and soon abandoned.",
+    "Mexican forces besieged the Alamo for 13 days beginning February 23, 1836, and the final assault came on March 6. They stayed about two months, then left on May 24, tearing down many walls and leaving the chapel in ruins.",
+    "The U.S. Army used part of the compound as a supply depot from 1846 to 1876. The Catholic Church sold the chapel to the State of Texas for $20,000 in 1883, and in 1905 the legislature bought the rest and made the Daughters of the Republic of Texas its custodian. It became a UNESCO World Heritage Site on July 5, 2015."
+   ],
+   "fact": "The Alamo became a UNESCO World Heritage Site on July 5, 2015.",
+   "disputed": "Nobody is sure where the name Alamo came from. Wikipedia says it likely came from a Spanish army company that occupied the compound in 1803, and a nearby cottonwood grove is another proposed origin.",
+   "claims": [
+    {
+     "t": "The Alamo began in 1718 as Mission San Antonio de Valero.",
+     "a": 0,
+     "why": "Wikipedia says it was founded in 1718."
+    },
+    {
+     "t": "The Alamo became a UNESCO World Heritage Site in 1936.",
+     "a": 2,
+     "why": "Wikipedia says July 5, 2015."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Alamo Mission",
+     "u": "https://en.wikipedia.org/wiki/Alamo_Mission"
+    },
+    {
+     "t": "World History Encyclopedia: The Alamo",
+     "u": "https://www.worldhistory.org/article/2805/the-alamo/"
+    }
+   ],
+   "card": {
+    "a": "1718",
+    "b": "2015",
+    "la": "Mission founded",
+    "lb": "World Heritage Site"
+   }
+  },
+  {
+   "id": "cathedral",
+   "name": "San Fernando Cathedral",
+   "short": "San Fernando Cathedral",
+   "badge": "San Fernando Cathedral",
+   "tag": "Stop 2 of 4",
+   "teaser": "A church whose cornerstone was laid in 1738 and which was rebuilt with two tall towers.",
+   "map": "Cathedral of San Fernando, Main Plaza, San Antonio, TX",
+   "clue": "Go to Main Plaza downtown, a short walk from Alamo Plaza. Look for the pale stone church with two tall towers and pointed arches over the doors.",
+   "safety": "It is an active cathedral, so be quiet and respectful and look from the plaza unless you are visiting. Use crosswalks on the busy streets around Main Plaza.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which style was the cathedral rebuilt in between 1868 and 1873?",
+    "options": [
+     "Futuristic",
+     "Log cabin",
+     "Egyptian",
+     "Gothic Revival"
+    ],
+    "answer": 3,
+    "hint": "Look at the pointed arches over the doors.",
+    "verify": "Wikipedia says the church was rebuilt with twin bell towers and a Gothic Revival nave, consecrated in 1873. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1910",
+    "label": "The cathedral then",
+    "line": "A colored postcard of the cathedral's two tall towers with red tops, palm trees and city rooftops around it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_sf_then",
+     "by": "Nic Tengg",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Nic_Tengg_A-67957_-_San_Fernando_Cathedral,_San_Antonio,_Texas_front.jpg",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2009",
+    "head": "Today",
+    "label": "The cathedral today",
+    "line": "The pale stone front with two tall towers and arched doors under a blue sky with a few clouds.",
+    "ph": {
+     "k": "sa_sf_now",
+     "by": "Daniel Schwen",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Fernando_Cathedral.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "In 1731 the Spanish Crown sent 55 settlers from the Canary Islands to San Antonio. The cornerstone of the church was laid on May 11, 1738, and the church was dedicated in 1755. It is named for Ferdinand III of Castile and is described as one of the oldest active cathedrals in the United States.",
+    "James Bowie married Ursula de Veramendi at the church in 1831. During the Battle of the Alamo in 1836, Santa Anna reportedly hoisted a red no-quarter flag from the church tower.",
+    "Between 1868 and 1873 architect Francois P. Giraud had part of the nave and the bell tower torn down. The church was rebuilt with twin bell towers and a Gothic Revival nave and consecrated in 1873. Today a 24-minute light show called San Antonio: The Saga is projected on its front."
+   ],
+   "fact": "The cornerstone was laid on May 11, 1738.",
+   "disputed": "A popular story says Santa Anna raised a red no-quarter flag from the church tower in 1836. Wikipedia says he reportedly did, so treat it as a report, not a certainty.",
+   "claims": [
+    {
+     "t": "The cathedral's cornerstone was laid in 1738.",
+     "a": 0,
+     "why": "Wikipedia says May 11, 1738."
+    },
+    {
+     "t": "The cathedral was rebuilt in the Gothic Revival style in the 1960s.",
+     "a": 2,
+     "why": "Wikipedia says 1868 to 1873."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Cathedral of San Fernando",
+     "u": "https://en.wikipedia.org/wiki/Cathedral_of_San_Fernando_(San_Antonio)"
+    },
+    {
+     "t": "Aleteia: Oldest functioning cathedral",
+     "u": "https://aleteia.org/2023/09/28/the-oldest-functioning-cathedral-in-the-united-states"
+    }
+   ],
+   "card": {
+    "a": "1738",
+    "b": "1873",
+    "la": "Cornerstone laid",
+    "lb": "Rebuilt and consecrated"
+   }
+  },
+  {
+   "id": "missionjose",
+   "name": "Mission San Jose",
+   "short": "Mission San José",
+   "badge": "Mission San José",
+   "tag": "Stop 3 of 4",
+   "teaser": "The mission church nicknamed the Queen of the Missions.",
+   "map": "Mission San José, Mission Road, San Antonio, TX",
+   "clue": "This is a drive south of downtown, part of the San Antonio Missions park. Look for the limestone church with a tall bell tower and a round dome beside it.",
+   "safety": "It is a park and a church, so be quiet and respectful. Stay on the paths, keep off the old walls, and watch for traffic when crossing the road.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What nickname did Father Morfi give the church after visiting in 1777?",
+    "options": [
+     "Queen of the Missions",
+     "King of the Alamo",
+     "Princess of the Plains",
+     "Jewel of the River"
+    ],
+    "answer": 0,
+    "hint": "It is a royal title.",
+    "verify": "The National Park Service brochure says that after visiting in 1777 Father Morfi called the church the Queen of the Missions. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1936",
+    "label": "The mission then",
+    "line": "A black-and-white survey photo of the church's tall tower and dome rising over old stone walls, with trees in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_mj_then",
+     "by": "Arthur W. Stewart (Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_Arthur_W._Stewart,_Photographer,_September_23,_1936_SOUTHWEST_ELEVATION._-_Mission_San_Jose_y_San_Miguel_de_Aguayo,_Mission_Road,_San_Antonio_HABS_TEX,15-SANT.V,5-1.tif",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The mission today",
+    "line": "The limestone church with its tall bell tower and domed roof beside it, under a blue sky with white clouds.",
+    "ph": {
+     "k": "sa_mj_now",
+     "by": "Liveon001 (Travis Witt)",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Mission_San_Jos%C3%A9_San_Antonio.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Mission San Jose was founded in 1720 at the urging of Father Margil de Jesus, with the approval of the Marques de Aguayo. Over 104 years as a mission, more than 2,000 Native people were baptized here. It was fully secularized on February 29, 1824.",
+    "Construction of the limestone church began in 1768, when about 350 Native residents lived in 84 two-room apartments. After visiting in 1777, Father Morfi called it the Queen of the Missions, and the church was finished around 1782.",
+    "The Rose Window is called an outstanding example of Spanish Colonial decoration, but no one knows who carved it. The granary was finished around 1755, and the grist mill ran from 1794 to 1809 and was restored in 2001. The missions became a UNESCO World Heritage Site in 2015."
+   ],
+   "fact": "The mission's grist mill ran from 1794 to 1809 and was restored in 2001.",
+   "disputed": "Folklore says the Rose Window was carved by Pedro Huizar for his lost sweetheart, Rosa. The National Park Service says the sculptor is unknown, and a less romantic theory says the window is named for Saint Rose of Lima.",
+   "claims": [
+    {
+     "t": "Mission San Jose was founded in 1720.",
+     "a": 0,
+     "why": "The National Park Service brochure says so."
+    },
+    {
+     "t": "The Rose Window's sculptor is known for certain.",
+     "a": 2,
+     "why": "The National Park Service says the sculptor is unknown."
+    }
+   ],
+   "sources": [
+    {
+     "t": "National Park Service: Mission San Jose brochure",
+     "u": "https://npshistory.com/publications/saan/brochures/mission-san-jose-2017.pdf"
+    },
+    {
+     "t": "Nomadic Niko: Mission San Jose",
+     "u": "https://nomadicniko.com/2015/11/18/mission-san-jose/"
+    }
+   ],
+   "card": {
+    "a": "1720",
+    "b": "2015",
+    "la": "Mission founded",
+    "lb": "World Heritage Site"
+   }
+  },
+  {
+   "id": "sunset",
+   "name": "Sunset Station",
+   "short": "Sunset Depot",
+   "badge": "Sunset Depot",
+   "tag": "Stop 4 of 4",
+   "teaser": "A 1902 railroad station with a Spanish mission look.",
+   "map": "Sunset Station, 350 Hoefgen Street, San Antonio, TX",
+   "clue": "Go to Hoefgen Street on the east side of downtown. Look for the pink station with an arched front, a round clock and red tile roofs.",
+   "safety": "Trains still run nearby. Stay behind any rails or gates, never cross the tracks, and use sidewalks and crosswalks near the busy streets.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which style was Sunset Station built in?",
+    "options": [
+     "Art Deco",
+     "Brutalist",
+     "Spanish Mission Revival",
+     "Log cabin"
+    ],
+    "answer": 2,
+    "hint": "Look at the curved top in the middle and the arches.",
+    "verify": "Wikipedia says the station was built in 1902 by the Southern Pacific Railroad in the Spanish Mission Revival style. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "1903-24",
+    "label": "The station then",
+    "line": "A colored postcard of the station's arched front with a round clock, a flag on top and two children on the path in front.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "sa_sd_then",
+     "by": "Geo. M. Bearce",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Sunset_Depot,_San_Antonio,_Texas.jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2010",
+    "head": "Today",
+    "label": "The station today",
+    "line": "The pink front with its round clock and red tile roofs, with visitors walking past under a blue sky.",
+    "ph": {
+     "k": "sa_sd_now",
+     "by": "Tony Kent",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:San_Antonio_Train_Station.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Sunset Station was built in 1902 by the Southern Pacific Railroad. Its architect was the company's own architect, Daniel J. Patterson, who designed it in the Spanish Mission Revival style. It is also called the Southern Pacific depot.",
+    "The Sunset Limited and the Texas Eagle still serve San Antonio, but Amtrak moved to a smaller depot next door in 1998.",
+    "The station was added to the National Register of Historic Places on May 29, 1975. It was later restored by VIA Metropolitan Transit and now works as an entertainment complex."
+   ],
+   "fact": "Sunset Station was built in 1902 by the Southern Pacific Railroad.",
+   "disputed": "Many people think trains still stop at the grand old building. Wikipedia says Amtrak moved to a smaller adjacent depot in 1998, and Sunset Station became an entertainment complex.",
+   "claims": [
+    {
+     "t": "Sunset Station was built in 1902.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "Amtrak still uses the historic Sunset Station building.",
+     "a": 2,
+     "why": "Wikipedia says Amtrak moved next door in 1998."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: San Antonio station (Texas)",
+     "u": "https://en.wikipedia.org/wiki/San_Antonio_station_(Texas)"
+    },
+    {
+     "t": "The Clio: Sunset Station",
+     "u": "https://theclio.com/entry/17529"
+    }
+   ],
+   "card": {
+    "a": "1902",
+    "b": "1998",
+    "la": "Station opens",
+    "lb": "Amtrak moves next door"
+   }
+  }
+ ],
+ "heroKey": "sa_al_now"
+}

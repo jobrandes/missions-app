@@ -597,3 +597,15 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | ep_pn_now | https://commons.wikimedia.org/wiki/File:Hotel_Paso_del_Norte,_El_Paso,_Texas.jpg | Unknown photographer | Public domain | 2012 |
 | ep_ym_then | https://commons.wikimedia.org/wiki/File:Ysleta_Mission_South_view_May_26_1936.jpg | Marvin Eickenroht | Public domain | 1936 |
 | ep_ym_now | https://commons.wikimedia.org/wiki/File:YsletaMission.JPG | James Reyes | CC BY 3.0 | 2010 |
+
+### San Antonio (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| sa_al_then | https://commons.wikimedia.org/wiki/File:The_front_of_the_Alamo_through_the_compound_gate,_San_Antonio,_Texas_LCCN2002716229.jpg | Unknown photographer (Library of Congress) | Public domain | 1922 |
+| sa_al_now | https://commons.wikimedia.org/wiki/File:San_Antonio_July_2017_05_(The_Alamo).jpg | Michael Barera | CC BY-SA 4.0 | 2017 |
+| sa_sf_then | https://commons.wikimedia.org/wiki/File:Nic_Tengg_A-67957_-_San_Fernando_Cathedral,_San_Antonio,_Texas_front.jpg | Nic Tengg | Public domain | about 1910 |
+| sa_sf_now | https://commons.wikimedia.org/wiki/File:San_Fernando_Cathedral.jpg | Daniel Schwen | CC BY-SA 4.0 | 2009 |
+| sa_mj_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey,_Arthur_W._Stewart,_Photographer,_September_23,_1936_SOUTHWEST_ELEVATION._-_Mission_San_Jose_y_San_Miguel_de_Aguayo,_Mission_Road,_San_Antonio_HABS_TEX,15-SANT.V,5-1.tif | Arthur W. Stewart (Historic American Buildings Survey) | Public domain | 1936 |
+| sa_mj_now | https://commons.wikimedia.org/wiki/File:Mission_San_Jos%C3%A9_San_Antonio.JPG | Liveon001 (Travis Witt) | CC BY-SA 3.0 | 2010 |
+| sa_sd_then | https://commons.wikimedia.org/wiki/File:Sunset_Depot,_San_Antonio,_Texas.jpg | Geo. M. Bearce | Public domain | 1903-24 |
+| sa_sd_now | https://commons.wikimedia.org/wiki/File:San_Antonio_Train_Station.jpg | Tony Kent | CC BY-SA 2.0 | 2010 |

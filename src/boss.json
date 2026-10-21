@@ -2344,5 +2344,51 @@
    "a": 3,
    "why": "The chemicals were stored in the bell tower."
   }
+ ],
+ "sanantonio": [
+  {
+   "q": "What did the Alamo start out as?",
+   "o": [
+    "A hotel",
+    "A school",
+    "A mission",
+    "A bank"
+   ],
+   "a": 2,
+   "why": "It began as Mission San Antonio de Valero in 1718."
+  },
+  {
+   "q": "In what year was the cornerstone of San Fernando Cathedral laid?",
+   "o": [
+    "1738",
+    "1638",
+    "1838",
+    "1938"
+   ],
+   "a": 0,
+   "why": "It was laid on May 11, 1738."
+  },
+  {
+   "q": "In what year was Mission San Jose founded?",
+   "o": [
+    "1520",
+    "1820",
+    "1920",
+    "1720"
+   ],
+   "a": 3,
+   "why": "The National Park Service says 1720."
+  },
+  {
+   "q": "Which railroad built Sunset Station?",
+   "o": [
+    "Reading",
+    "Southern Pacific",
+    "Union Pacific",
+    "Santa Fe"
+   ],
+   "a": 1,
+   "why": "It opened in 1902."
+  }
  ]
 }
