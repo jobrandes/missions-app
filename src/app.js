@@ -398,7 +398,7 @@
     return h;
   }
   function stepper(){
-    var names=['Find it','Check in','Unlock','Source check'];
+    var names=['Find it','Check in','Unlock','Sources'];
     var d=S.done[cur.i];
     return '<div class="steps" role="group" aria-label="Stop steps">'+names.map(function(n,k){
       var locked=(k>=2&&!d);
@@ -555,11 +555,13 @@
     else if(tab==='cards') m.innerHTML=viewCards();
     else m.innerHTML=viewRewards();
     var bar=document.getElementById('bar');
-    bar.hidden=!cur;
-    document.body.classList.toggle('hasbar',!!cur);
+    var showBar=false;
+    if(cur) showBar=cur.step>cur.entry;
+    bar.hidden=!showBar;
+    document.body.classList.toggle('hasbar',showBar);
     if(cur){
       var atRoot=cur.step<=cur.entry;
-      document.getElementById('barBack').textContent='‹ Back';
+      document.getElementById('barBack').textContent='‹ Previous step';
       document.getElementById('barBack').setAttribute('aria-label',atRoot?('Back to '+(tab==='cards'?'Cards':'Trail')):'Back to previous step');
       document.getElementById('barExit').textContent=(tab==='cards'?'All cards':'All stops');
     }
@@ -630,7 +632,7 @@
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; save(); toast('Badge earned: '+st.badge+'. +100 XP'); if(allDone()) setTimeout(celebrate,450); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; save(); if(allDone()) setTimeout(celebrate,450); }
         cur.wrong=[]; render();
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);

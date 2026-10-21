@@ -30,7 +30,9 @@ with sync_playwright() as p:
                     if pg.locator('.fcard').count()==0: break
                     pg.locator('.fbtn').nth(k).click()
             out[f'{city}:{i}:fofdone']=h(pg.inner_html('#main'))
-            pg.click('#barExit')
+            pg.wait_for_timeout(600)
+            if pg.locator('#celeb').count(): pg.click('text=Keep exploring')
+            pg.click('.stophead [data-a=exit]')
         pg.wait_for_timeout(700); out[city+':celeb']=pg.locator('#celeb').count()
         if pg.locator('#celeb').count(): pg.click('text=Keep exploring')
         for t in ('cards','rewards','trail'):

@@ -560,3 +560,16 @@ details.reg.ppreg>summary.region{background:transparent;border:0;border-bottom:1
 .ti-stamps i.f{border:3px solid #e9a825;background:radial-gradient(circle,#f6d98a,#d49b1d)}
 .tour-skip{display:block;margin:6px auto 0;color:var(--muted)}
 .tour-card .celeb-btns{flex-wrap:wrap}
+
+/* UX batch 1 (Oct 21): compact stop header, single back control, legible labels, scroll cues */
+body.instop .hero{min-height:0;padding:12px 16px;gap:4px;justify-content:center}
+body.instop .hero h1,body.instop .hero h1.long,body.instop .hero h1.xl{font-size:28px;line-height:1.05}
+body.instop .hero > .mono,body.instop .hero .xp,body.instop .hero .bulbs,body.instop .hero .hero-credit{display:none}
+body.instop .tabs,body.instop #cities{display:none}
+body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgba(6,14,24,.55))}
+#barExit{display:none}
+.rail1,.rail2{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 28px),transparent 100%)}
+.step span,.bulb span,.hero-credit,.mono{font-size:12px}
+.city,.rtab{font-size:13px}
+.step span{letter-spacing:.04em}
+.hero-credit{color:rgba(255,255,255,.9)}
