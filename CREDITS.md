@@ -200,10 +200,8 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 ### "Then" photos added Oct 19 (third pass)
 | Key | File on Commons | Author | License | Year |
 |---|---|---|---|---|
-| chi_bf_then | File:Buckinghamfountain3g05158u.jpg | John Buczak, Federal Art Project | Public domain | 1939 |
 | sf_gg_then | File:GoldenGateBridge_openingday.jpg | Mr. Euler | CC BY-SA 3.0 | 1937 |
 | ph_lb_then | File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg | Abbie Rowe, National Park Service | Public domain | 1951 |
-| no_js_then | File:Jackson_Square,_New_Orleans.jpg | W. P. Snyder | Public domain | 1885 |
 
 ### Swap batch Oct 19 (16 replacement stops, now and then photos)
 | Key | File on Commons | Author | License | Year |
@@ -239,7 +237,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | se_ps_now | File:Pioneer Square Pergola 01.jpg | Joe Mabel | CC BY-SA 3.0 | 2007 |
 | se_ps_then | File:1st Ave S, Pioneer Square district, Seattle, 1901 (CURTIS 2044).jpeg | Asahel Curtis | Public domain | 1901 |
 | ph_ch_now | File:Carpenters' Hall, Philadelphia, U.S., May 2015.jpg | Pbjamesphoto | CC BY-SA 4.0 | 2015 |
-| ph_ch_then | File:Carpenter's Hall, Phil (NYPL NYPG94-F149-419968).jpg | New York Public Library (scan) | Public domain | undated |
 
 ### Reno and Tahoe swap, Ebenezer, Sun Studio (Oct 20)
 | Key | Source page | Author | License | Year |
@@ -413,8 +410,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | na_cp_now | https://commons.wikimedia.org/wiki/File:Tennessee_State_Capitol_2009.jpg | Kaldari | Public domain | 2009 |
 | na_us_then | https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Nashville,_Tenn..jpg | Detroit Publishing Company | Public domain | about 1900 |
 | na_us_now | https://commons.wikimedia.org/wiki/File:Union_Station,_Nashville.JPG | Mayur Phadtare | CC BY-SA 3.0 | 2012 |
-| na_fn_then | https://commons.wikimedia.org/wiki/File:Fort_Nashborough,_First_Ave._and_Church_St.,_Nashville,_Tenn_(74048).jpg | Southern Latex Co. (published postcard) | Public domain | 1930s to 1940s |
-| na_fn_now | https://commons.wikimedia.org/wiki/File:Fort_Nashborough_History_Center_2022.jpg | Antony-22 | CC BY-SA 4.0 | 2022 |
 | na_pa_then | https://commons.wikimedia.org/wiki/File:Centennial_Park_1921.jpg | 105th Observation Squadron | Public domain | 1921 |
 | na_pa_now | https://commons.wikimedia.org/wiki/File:The_Parthenon,_Nashville,_Tennessee.jpg | Aaron Archuleta | CC BY-SA 3.0 | 2012 |
 
@@ -481,7 +476,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | gb_wh_now | https://commons.wikimedia.org/wiki/File:The_David_Wills_House_Gettysburg_(PA)_2013_(9387972956).jpg | Ron Cogswell | CC BY 2.0 | 2013 |
 | gb_ph_then | https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall,_Gettysburg_College.jpg | Frederick Tilberg | Public domain | 1950 |
 | gb_ph_now | https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg | Smb51095 | CC BY-SA 4.0 | 2015 |
-| gb_sm_then | https://commons.wikimedia.org/wiki/File:Masonic_Conescecration_of_Solder_Monument_Gettysburg_PA.jpg | Harper's Weekly | Public domain | 1865 |
 | gb_sm_now | https://commons.wikimedia.org/wiki/File:Soldiers'_National_Monument_-_Gettysburg_National_Cemetery.jpg | Farragutful | CC BY-SA 4.0 | 2017 |
 | gb_nc_then | https://commons.wikimedia.org/wiki/File:Lincoln's_Gettysburg_Address,_Gettysburg.jpg | David Bachrach | Public domain | 1863 |
 | gb_nc_now | https://commons.wikimedia.org/wiki/File:Gettysburg_National_Cemetery_(2019).jpg | P. Hughes | CC BY-SA 4.0 | 2019 |
@@ -495,8 +489,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | lv_sb_now | https://commons.wikimedia.org/wiki/File:Seelbach_Hotel,_Louisville.jpg | local louisville | CC BY 2.0 | 2010 |
 | lv_us_then | https://commons.wikimedia.org/wiki/File:Detroit_Publishing_-_Union_Station,_Louisville,_Ky..jpg | Detroit Publishing Co. | Public domain | about 1906 |
 | lv_us_now | https://commons.wikimedia.org/wiki/File:Louisville_Union_Station.jpg | Nyttend | Public domain | 2012 |
-| lv_gh_then | https://commons.wikimedia.org/wiki/File:US-KY(1891)_p288_LOUISVILLE,_GALT_HOUSE.jpg | Unknown artist (1891 print) | Public domain | 1891 |
-| lv_gh_now | https://commons.wikimedia.org/wiki/File:Galt_House_2023.jpg | Jeremy Thompson | CC BY 2.0 | 2023 |
 
 ### Newport Knoxville Portland ME (Oct 20)
 | Key | Source page | Author | License | Year |
@@ -533,7 +525,6 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 ### New Haven Burlington (Oct 20)
 | Key | Source page | Author | License | Year |
 |---|---|---|---|---|
-| nh_gr_then | https://commons.wikimedia.org/wiki/File:New_Haven_Green.jpg | Thomas Prichard Rossiter (painting) | Public domain | about 1850 |
 | nh_gr_now | https://commons.wikimedia.org/wiki/File:New_Haven_Green_with_Center_Church.jpg | Dicklyon | CC BY-SA 4.0 | 2019 |
 | nh_oc_then | https://commons.wikimedia.org/wiki/File:Phelps_Hall_and_Lyceum,_Yale_College,_New_Haven,_Connecticut,_1901.jpg | Detroit Publishing Co. | Public domain | 1901 |
 | nh_oc_now | https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus_04.JPG | Ad Meskens | CC BY-SA 3.0 | 2012 |
@@ -609,3 +600,12 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sa_mj_now | https://commons.wikimedia.org/wiki/File:Mission_San_Jos%C3%A9_San_Antonio.JPG | Liveon001 (Travis Witt) | CC BY-SA 3.0 | 2010 |
 | sa_sd_then | https://commons.wikimedia.org/wiki/File:Sunset_Depot,_San_Antonio,_Texas.jpg | Geo. M. Bearce | Public domain | 1903-24 |
 | sa_sd_now | https://commons.wikimedia.org/wiki/File:San_Antonio_Train_Station.jpg | Tony Kent | CC BY-SA 2.0 | 2010 |
+| chi_bf_then | https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_in_Grant_Park,_Chicago,_1933_(NBY_3179).jpg | Kaufmann & Fabry Co. (Century of Progress official photographers) | Public domain | 1933 |
+| gb_sm_then | https://commons.wikimedia.org/wiki/File:National_Monument_in_National_Cemetery,_Gettysburg,_Pa_(NYPL_b12647398-66459).tiff | Detroit Photographic Co. | Public domain | 1905 |
+| ph_ch_then | https://commons.wikimedia.org/wiki/File:Carpenters_Hall,_Philadelphia,_Pa_(NYPL_b12647398-62189).tiff | Detroit Publishing Company | Public domain | About 1900 |
+| no_js_then | https://commons.wikimedia.org/wiki/File:Jackson_Square_%26_Cathedral_of_St._Louis,_New_Orleans_LCCN2017658694.jpg | Detroit Photographic Co. | Public domain | 1900 |
+| nh_gr_then | https://commons.wikimedia.org/wiki/File:PostcardNewHavenCTGreen1908.png | Unknown (postcard postmarked 1910) | Public domain | About 1910 |
+| lv_wt_then | https://commons.wikimedia.org/wiki/File:Louisville_Ky.,_after_the_tornado_of_1890-_ruins_of_water_works_tower_LCCN2016648171.jpg | Miscellaneous Items in High Demand (Library of Congress) | Public domain | 1890 |
+| lv_wt_now | https://commons.wikimedia.org/wiki/File:Louisville_Water_Tower,_Zorn_Avenue,_The_Point,_Louisville,_KY.jpg | w_lemay | CC BY-SA 2.0 | 2024 |
+| na_ps_then | https://commons.wikimedia.org/wiki/File:Courthouse_and_Market_-_Public_Square,_Nashville,_Tenn._LCCN2003675166.jpg | Miscellaneous Items in High Demand (Library of Congress) | Public domain | 1892 |
+| na_ps_now | https://commons.wikimedia.org/wiki/File:Davidson_County_Courthouse_(Southwest_corner).JPG | Michael Rivera | CC BY-SA 4.0 | 2015 |

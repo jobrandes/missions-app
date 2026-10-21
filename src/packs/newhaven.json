@@ -1,417 +1,417 @@
 {
- "id": "newhaven",
- "name": "New Haven",
- "explorer": "Elm City Explorer",
- "initials": "HVN",
- "ranks": [
-  [
-   0,
-   "Visitor"
-  ],
-  [
-   100,
-   "Green Walker"
-  ],
-  [
-   250,
-   "Landmark Hunter"
-  ],
-  [
-   450,
-   "New Haven Scholar"
-  ],
-  [
-   600,
-   "New Haven Historian"
-  ]
- ],
- "heroAlt": "Vanderbilt Hall at Yale",
- "heroLi": "<li>Header: Nick Allen · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG\">Source</a> · resized</li>",
- "heroCredit": "Photo: Nick Allen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG\">Source</a>",
- "mission": "Find four landmarks around New Haven. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. The rest of New Haven is waiting.",
- "safetyNote": "<li>Downtown New Haven has busy streets and a lot of students. Use crosswalks, stay on public paths, and do not enter dorms or other private buildings.</li>",
- "badgeMap": {
-  "green": [
-   "nh_gr_now",
-   "50% 45%"
-  ],
-  "campus": [
-   "nh_oc_now",
-   "50% 45%"
-  ],
-  "vanderbilt": [
-   "nh_vh_now",
-   "50% 45%"
-  ],
-  "dwight": [
-   "nh_dh_now",
-   "50% 45%"
-  ]
- },
- "level": "Classics",
- "region": "The East",
- "stops": [
-  {
-   "id": "green",
-   "name": "New Haven Green",
-   "short": "The Green",
-   "badge": "The Green",
-   "tag": "Stop 1 of 4",
-   "teaser": "A 16-acre park laid out in 1638 with thousands of people buried under it.",
-   "map": "New Haven Green, New Haven, CT",
-   "clue": "Go to the big park in the middle of downtown, bordered by College, Chapel, Church and Elm streets. Look for three old churches on one side and a lot of tall trees.",
-   "safety": "The Green is surrounded by busy streets. Use crosswalks, stay on the paths, and keep clear of events and crowds.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What lies under the soil of the New Haven Green?",
-    "options": [
-     "An underground lake",
-     "A subway line",
-     "Thousands of old graves",
-     "A buried fort"
+  "id": "newhaven",
+  "name": "New Haven",
+  "explorer": "Elm City Explorer",
+  "initials": "HVN",
+  "ranks": [
+    [
+      0,
+      "Visitor"
     ],
-    "answer": 2,
-    "hint": "The Green was used for a purpose that ended in 1821.",
-    "verify": "Wikipedia says the Green was the main burial ground for the first 150 years, and between 4,000 and 5,000 people are estimated to remain there. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "About 1850",
-    "label": "The Green then",
-    "line": "A painting from about 1850 of the Green seen from a raised path, with church spires and a tower in the warm light.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "nh_gr_then",
-     "by": "Thomas Prichard Rossiter (painting)",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:New_Haven_Green.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2019",
-    "head": "Today",
-    "label": "The Green today",
-    "line": "Tall trees casting shade on the grass, with a brick church just visible through the branches.",
-    "ph": {
-     "k": "nh_gr_now",
-     "by": "Dicklyon",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:New_Haven_Green_with_Center_Church.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The New Haven Green is a 16-acre park that was completed in 1638. It is the central square of the nine-square plan that colonist John Brockett designed and surveyed for the Puritan settlers. In its early years it was called 'the marketplace' and held a watch house, a prison and a school.",
-    "For its first 150 years, the Green was the main burial ground for New Haven. The practice ended by 1821 and many headstones were moved to Grove Street Cemetery, but the remains were not. Between 4,000 and 5,000 people are estimated to still lie beneath the soil.",
-    "Three early 19th-century churches stand on the upper Green. They are the reason the Green was designated a National Historic Landmark District in 1970."
-   ],
-   "fact": "The Puritans said to have sized the Green for 144,000 people.",
-   "disputed": "Many people say the Puritans designed the Green for the number they believed would be spared in the Second Coming of Christ. Wikipedia says they were 'said to' have done it, which is a legend, not a record.",
-   "claims": [
-    {
-     "t": "The Green was completed in 1638.",
-     "a": 0,
-     "why": "Wikipedia: completed in 1638."
-    },
-    {
-     "t": "All the graves were moved off the Green.",
-     "a": 2,
-     "why": "Wikipedia says the headstones were moved but the remains were not."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: New Haven Green",
-     "u": "https://en.wikipedia.org/wiki/New_Haven_Green"
-    },
-    {
-     "t": "Wikipedia: New Haven, Connecticut",
-     "u": "https://en.wikipedia.org/wiki/New_Haven,_Connecticut"
-    }
-   ],
-   "card": {
-    "a": "1638",
-    "b": "1970",
-    "la": "The Green is completed",
-    "lb": "Landmark district"
-   }
+    [
+      100,
+      "Green Walker"
+    ],
+    [
+      250,
+      "Landmark Hunter"
+    ],
+    [
+      450,
+      "New Haven Scholar"
+    ],
+    [
+      600,
+      "New Haven Historian"
+    ]
+  ],
+  "heroAlt": "Vanderbilt Hall at Yale",
+  "heroLi": "<li>Header: Nick Allen · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG\">Source</a> · resized</li>",
+  "heroCredit": "Photo: Nick Allen · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG\">Source</a>",
+  "mission": "Find four landmarks around New Haven. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of New Haven is waiting.",
+  "safetyNote": "<li>Downtown New Haven has busy streets and a lot of students. Use crosswalks, stay on public paths, and do not enter dorms or other private buildings.</li>",
+  "badgeMap": {
+    "green": [
+      "nh_gr_now",
+      "50% 45%"
+    ],
+    "campus": [
+      "nh_oc_now",
+      "50% 45%"
+    ],
+    "vanderbilt": [
+      "nh_vh_now",
+      "50% 45%"
+    ],
+    "dwight": [
+      "nh_dh_now",
+      "50% 45%"
+    ]
   },
-  {
-   "id": "campus",
-   "name": "Yale Old Campus",
-   "short": "Old Campus",
-   "badge": "Old Campus",
-   "tag": "Stop 2 of 4",
-   "teaser": "The oldest part of Yale, entered through a gate from the Green.",
-   "map": "Old Campus, Yale University, New Haven, CT",
-   "clue": "Go to the Yale Old Campus, a four-acre courtyard on the edge of the Green, entered through Phelps Gate on College Street. Look for the red-brick dormitories around a big grassy yard.",
-   "safety": "It is a working campus with students living in the dorms. Stay on public paths, keep your voice down and do not enter any building.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What was Yale's first building in New Haven, built in 1718?",
-    "options": [
-     "The College House",
-     "Connecticut Hall",
-     "Dwight Hall",
-     "Harkness Tower"
-    ],
-    "answer": 0,
-    "hint": "Its name says what it was: a house for the college.",
-    "verify": "Wikipedia says Yale's first building in New Haven, the College House, was erected in 1718. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1901",
-    "label": "The campus then",
-    "line": "A color-tinted photo of a brick dormitory with a small tower at the right, and a dirt path under big elm trees.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "nh_oc_then",
-     "by": "Detroit Publishing Co.",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Phelps_Hall_and_Lyceum,_Yale_College,_New_Haven,_Connecticut,_1901.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2012",
-    "head": "Today",
-    "label": "The campus today",
-    "line": "Red-brick dormitories at the edge of a grassy yard with bare trees, seen from the courtyard.",
-    "ph": {
-     "k": "nh_oc_now",
-     "by": "Ad Meskens",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus_04.JPG",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The Old Campus is the oldest part of the Yale University campus. It is a 4-acre (1.6 ha) courtyard with a main entrance from the New Haven Green known as Phelps Gate. Fourteen buildings surround it, including eight dormitories and two chapels.",
-    "Yale's first building here, the College House, went up in 1718. Connecticut Hall followed in 1750 and is Yale's only surviving building from the colonial era. A plan in 1792 called Old Brick Row was the first campus plan in the United States and became a template for many other American colleges.",
-    "After 1870, the Old Brick Row plan gave way to the current quadrangle. Architect Charles C. Haight finished Phelps Gate in 1895 and Phelps Hall in 1896."
-   ],
-   "fact": "The first U.S. campus plan was drawn up here in 1792.",
-   "disputed": "Many people think old colleges just grew without a plan. Wikipedia says the 1792 Old Brick Row plan was the first campus plan in the United States.",
-   "claims": [
+  "level": "Classics",
+  "region": "The East",
+  "stops": [
     {
-     "t": "Connecticut Hall is Yale's only surviving building from the colonial era.",
-     "a": 0,
-     "why": "Wikipedia says so."
-    },
-    {
-     "t": "The Old Brick Row plan from 1792 is still how the campus looks today.",
-     "a": 2,
-     "why": "Wikipedia says it gave way to the current quadrangle after 1870."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Old Campus",
-     "u": "https://en.wikipedia.org/wiki/Old_Campus"
-    },
-    {
-     "t": "Wikipedia: Yale University",
-     "u": "https://en.wikipedia.org/wiki/Yale_University"
-    }
-   ],
-   "card": {
-    "a": "1718",
-    "b": "1895",
-    "la": "College House built",
-    "lb": "Phelps Gate completed"
-   }
-  },
-  {
-   "id": "vanderbilt",
-   "name": "Vanderbilt Hall",
-   "short": "Vanderbilt Hall",
-   "badge": "Vanderbilt Hall",
-   "tag": "Stop 3 of 4",
-   "teaser": "A castle-like dorm at the corner of the Old Campus.",
-   "map": "Vanderbilt Hall, Yale Old Campus, New Haven, CT",
-   "clue": "Go to the corner of College Street and Chapel Street on the Old Campus. Look for the tall brick dormitory with turrets and an iron fence along the sidewalk.",
-   "safety": "Chapel Street is busy. Use crosswalks, view the building from the public sidewalk, and do not enter, since students live here.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Which architect designed Vanderbilt Hall, finished in 1894?",
-    "options": [
-     "James Gamble Rogers",
-     "Henry Austin",
-     "Richard Morris Hunt",
-     "Charles C. Haight"
-    ],
-    "answer": 3,
-    "hint": "He also designed most of the old Columbia College campus in New York.",
-    "verify": "Wikipedia lists Vanderbilt Hall among the Yale buildings by Charles C. Haight, completed in 1894. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1901",
-    "label": "The hall then",
-    "line": "A tinted photo of the long dormitory with turrets and a fence, with a wide street and cobbles in front.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "nh_vh_then",
-     "by": "Detroit Publishing Co.",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall,_Yale_College-LCCN2008679555.jpg",
-     "note": "resized, cropped"
-    }
-   },
-   "now": {
-    "yr": "2014",
-    "head": "Today",
-    "label": "The hall today",
-    "line": "The same castle-like dormitory with a street lamp and a stone gate post, under a bright blue sky.",
-    "ph": {
-     "k": "nh_vh_now",
-     "by": "Nick Allen",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Vanderbilt Hall on Yale's Old Campus was completed in 1894. It was designed by Charles Coolidge Haight, an architect from New York City who also designed most of the buildings at Columbia College's old campus on Madison Avenue.",
-    "Haight designed many buildings at Yale. Phelps Gate followed Vanderbilt Hall in 1895, and Phelps Hall in 1896. Yale's collegiate Gothic look is more often credited to the better-known James Gamble Rogers, but many of Haight's buildings survive.",
-    "This is a good place to see the contrast. The 1901 photo shows the tall dorm with a tinted sky and cobbles, and the modern photo shows a lamp post and a stone gate post where the old street scene was."
-   ],
-   "fact": "Haight finished Phelps Gate in 1895, one year after Vanderbilt Hall.",
-   "disputed": "Many people think Yale's Gothic look is all by one architect. Wikipedia says Rogers is better known, but Haight designed many of the survivors.",
-   "claims": [
-    {
-     "t": "Vanderbilt Hall was completed in 1894.",
-     "a": 0,
-     "why": "Wikipedia's list of Haight's works says so."
+      "id": "green",
+      "name": "New Haven Green",
+      "short": "The Green",
+      "badge": "The Green",
+      "tag": "Stop 1 of 4",
+      "teaser": "A 16-acre park laid out in 1638 with thousands of people buried under it.",
+      "map": "New Haven Green, New Haven, CT",
+      "clue": "Go to the big park in the middle of downtown, bordered by College, Chapel, Church and Elm streets. Look for three old churches on one side and a lot of tall trees.",
+      "safety": "The Green is surrounded by busy streets. Use crosswalks, stay on the paths, and keep clear of events and crowds.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What lies under the soil of the New Haven Green?",
+        "options": [
+          "An underground lake",
+          "A subway line",
+          "Thousands of old graves",
+          "A buried fort"
+        ],
+        "answer": 2,
+        "hint": "The Green was used for a purpose that ended in 1821.",
+        "verify": "Wikipedia says the Green was the main burial ground for the first 150 years, and between 4,000 and 5,000 people are estimated to remain there. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "About 1910",
+        "label": "The Green then",
+        "line": "A postcard photograph, postmarked 1910, of the Green with tall elms, a white church on the left and a man resting on a bench.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "nh_gr_then",
+          "by": "Unknown (postcard postmarked 1910)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:PostcardNewHavenCTGreen1908.png",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2019",
+        "head": "Today",
+        "label": "The Green today",
+        "line": "Tall trees casting shade on the grass, with a brick church just visible through the branches.",
+        "ph": {
+          "k": "nh_gr_now",
+          "by": "Dicklyon",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:New_Haven_Green_with_Center_Church.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The New Haven Green is a 16-acre park that was completed in 1638. It is the central square of the nine-square plan that colonist John Brockett designed and surveyed for the Puritan settlers. In its early years it was called 'the marketplace' and held a watch house, a prison and a school.",
+        "For its first 150 years, the Green was the main burial ground for New Haven. The practice ended by 1821 and many headstones were moved to Grove Street Cemetery, but the remains were not. Between 4,000 and 5,000 people are estimated to still lie beneath the soil.",
+        "Three early 19th-century churches stand on the upper Green. They are the reason the Green was designated a National Historic Landmark District in 1970."
+      ],
+      "fact": "The Puritans said to have sized the Green for 144,000 people.",
+      "disputed": "Many people say the Puritans designed the Green for the number they believed would be spared in the Second Coming of Christ. Wikipedia says they were 'said to' have done it, which is a legend, not a record.",
+      "claims": [
+        {
+          "t": "The Green was completed in 1638.",
+          "a": 0,
+          "why": "Wikipedia: completed in 1638."
+        },
+        {
+          "t": "All the graves were moved off the Green.",
+          "a": 2,
+          "why": "Wikipedia says the headstones were moved but the remains were not."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: New Haven Green",
+          "u": "https://en.wikipedia.org/wiki/New_Haven_Green"
+        },
+        {
+          "t": "Wikipedia: New Haven, Connecticut",
+          "u": "https://en.wikipedia.org/wiki/New_Haven,_Connecticut"
+        }
+      ],
+      "card": {
+        "a": "1638",
+        "b": "1970",
+        "la": "The Green is completed",
+        "lb": "Landmark district"
+      }
     },
     {
-     "t": "Yale's Gothic buildings were all designed by James Gamble Rogers.",
-     "a": 2,
-     "why": "Wikipedia says Haight designed numerous Yale buildings too."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Charles C. Haight",
-     "u": "https://en.wikipedia.org/wiki/Charles_C._Haight"
+      "id": "campus",
+      "name": "Yale Old Campus",
+      "short": "Old Campus",
+      "badge": "Old Campus",
+      "tag": "Stop 2 of 4",
+      "teaser": "The oldest part of Yale, entered through a gate from the Green.",
+      "map": "Old Campus, Yale University, New Haven, CT",
+      "clue": "Go to the Yale Old Campus, a four-acre courtyard on the edge of the Green, entered through Phelps Gate on College Street. Look for the red-brick dormitories around a big grassy yard.",
+      "safety": "It is a working campus with students living in the dorms. Stay on public paths, keep your voice down and do not enter any building.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What was Yale's first building in New Haven, built in 1718?",
+        "options": [
+          "The College House",
+          "Connecticut Hall",
+          "Dwight Hall",
+          "Harkness Tower"
+        ],
+        "answer": 0,
+        "hint": "Its name says what it was: a house for the college.",
+        "verify": "Wikipedia says Yale's first building in New Haven, the College House, was erected in 1718. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1901",
+        "label": "The campus then",
+        "line": "A color-tinted photo of a brick dormitory with a small tower at the right, and a dirt path under big elm trees.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "nh_oc_then",
+          "by": "Detroit Publishing Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Phelps_Hall_and_Lyceum,_Yale_College,_New_Haven,_Connecticut,_1901.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2012",
+        "head": "Today",
+        "label": "The campus today",
+        "line": "Red-brick dormitories at the edge of a grassy yard with bare trees, seen from the courtyard.",
+        "ph": {
+          "k": "nh_oc_now",
+          "by": "Ad Meskens",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus_04.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Old Campus is the oldest part of the Yale University campus. It is a 4-acre (1.6 ha) courtyard with a main entrance from the New Haven Green known as Phelps Gate. Fourteen buildings surround it, including eight dormitories and two chapels.",
+        "Yale's first building here, the College House, went up in 1718. Connecticut Hall followed in 1750 and is Yale's only surviving building from the colonial era. A plan in 1792 called Old Brick Row was the first campus plan in the United States and became a template for many other American colleges.",
+        "After 1870, the Old Brick Row plan gave way to the current quadrangle. Architect Charles C. Haight finished Phelps Gate in 1895 and Phelps Hall in 1896."
+      ],
+      "fact": "The first U.S. campus plan was drawn up here in 1792.",
+      "disputed": "Many people think old colleges just grew without a plan. Wikipedia says the 1792 Old Brick Row plan was the first campus plan in the United States.",
+      "claims": [
+        {
+          "t": "Connecticut Hall is Yale's only surviving building from the colonial era.",
+          "a": 0,
+          "why": "Wikipedia says so."
+        },
+        {
+          "t": "The Old Brick Row plan from 1792 is still how the campus looks today.",
+          "a": 2,
+          "why": "Wikipedia says it gave way to the current quadrangle after 1870."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Old Campus",
+          "u": "https://en.wikipedia.org/wiki/Old_Campus"
+        },
+        {
+          "t": "Wikipedia: Yale University",
+          "u": "https://en.wikipedia.org/wiki/Yale_University"
+        }
+      ],
+      "card": {
+        "a": "1718",
+        "b": "1895",
+        "la": "College House built",
+        "lb": "Phelps Gate completed"
+      }
     },
     {
-     "t": "Wikipedia: Old Campus",
-     "u": "https://en.wikipedia.org/wiki/Old_Campus"
-    }
-   ],
-   "card": {
-    "a": "1894",
-    "b": "1896",
-    "la": "Vanderbilt Hall done",
-    "lb": "Phelps Hall done"
-   }
-  },
-  {
-   "id": "dwight",
-   "name": "Dwight Hall",
-   "short": "Dwight Hall",
-   "badge": "Dwight Hall",
-   "tag": "Stop 4 of 4",
-   "teaser": "Yale's old library, which took the name of a different building.",
-   "map": "Dwight Hall, 67 High Street, New Haven, CT",
-   "clue": "Go to 67 High Street on the Old Campus. Look for the stone Gothic building with two pointed towers and a tall arched window.",
-   "safety": "It is a working campus building. View it from the public path and enter only if it is open to visitors.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What was Dwight Hall originally built as, in 1842?",
-    "options": [
-     "A train station",
-     "The Yale College Library",
-     "A church",
-     "A hotel"
-    ],
-    "answer": 1,
-    "hint": "Think of a building full of books.",
-    "verify": "Wikipedia says the building was built between 1842 and 1846 as the Yale College Library. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "About 1903",
-    "label": "The library then",
-    "line": "A black-and-white photo of the stone Gothic library behind a low fence and some trees.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
+      "id": "vanderbilt",
+      "name": "Vanderbilt Hall",
+      "short": "Vanderbilt Hall",
+      "badge": "Vanderbilt Hall",
+      "tag": "Stop 3 of 4",
+      "teaser": "A castle-like dorm at the corner of the Old Campus.",
+      "map": "Vanderbilt Hall, Yale Old Campus, New Haven, CT",
+      "clue": "Go to the corner of College Street and Chapel Street on the Old Campus. Look for the tall brick dormitory with turrets and an iron fence along the sidewalk.",
+      "safety": "Chapel Street is busy. Use crosswalks, view the building from the public sidewalk, and do not enter, since students live here.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Which architect designed Vanderbilt Hall, finished in 1894?",
+        "options": [
+          "James Gamble Rogers",
+          "Henry Austin",
+          "Richard Morris Hunt",
+          "Charles C. Haight"
+        ],
+        "answer": 3,
+        "hint": "He also designed most of the old Columbia College campus in New York.",
+        "verify": "Wikipedia lists Vanderbilt Hall among the Yale buildings by Charles C. Haight, completed in 1894. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1901",
+        "label": "The hall then",
+        "line": "A tinted photo of the long dormitory with turrets and a fence, with a wide street and cobbles in front.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "nh_vh_then",
+          "by": "Detroit Publishing Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall,_Yale_College-LCCN2008679555.jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2014",
+        "head": "Today",
+        "label": "The hall today",
+        "line": "The same castle-like dormitory with a street lamp and a stone gate post, under a bright blue sky.",
+        "ph": {
+          "k": "nh_vh_now",
+          "by": "Nick Allen",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Vanderbilt Hall on Yale's Old Campus was completed in 1894. It was designed by Charles Coolidge Haight, an architect from New York City who also designed most of the buildings at Columbia College's old campus on Madison Avenue.",
+        "Haight designed many buildings at Yale. Phelps Gate followed Vanderbilt Hall in 1895, and Phelps Hall in 1896. Yale's collegiate Gothic look is more often credited to the better-known James Gamble Rogers, but many of Haight's buildings survive.",
+        "This is a good place to see the contrast. The 1901 photo shows the tall dorm with a tinted sky and cobbles, and the modern photo shows a lamp post and a stone gate post where the old street scene was."
+      ],
+      "fact": "Haight finished Phelps Gate in 1895, one year after Vanderbilt Hall.",
+      "disputed": "Many people think Yale's Gothic look is all by one architect. Wikipedia says Rogers is better known, but Haight designed many of the survivors.",
+      "claims": [
+        {
+          "t": "Vanderbilt Hall was completed in 1894.",
+          "a": 0,
+          "why": "Wikipedia's list of Haight's works says so."
+        },
+        {
+          "t": "Yale's Gothic buildings were all designed by James Gamble Rogers.",
+          "a": 2,
+          "why": "Wikipedia says Haight designed numerous Yale buildings too."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Charles C. Haight",
+          "u": "https://en.wikipedia.org/wiki/Charles_C._Haight"
+        },
+        {
+          "t": "Wikipedia: Old Campus",
+          "u": "https://en.wikipedia.org/wiki/Old_Campus"
+        }
+      ],
+      "card": {
+        "a": "1894",
+        "b": "1896",
+        "la": "Vanderbilt Hall done",
+        "lb": "Phelps Hall done"
+      }
     },
-    "ph": {
-     "k": "nh_dh_then",
-     "by": "Detroit Publishing Co.",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Dwight_Hall,_Yale_College.jpg",
-     "note": "resized, cropped"
-    }
-   },
-   "now": {
-    "yr": "2008",
-    "head": "Today",
-    "label": "The towers today",
-    "line": "The two pointed stone towers and tall arched window of the building against a blue sky.",
-    "ph": {
-     "k": "nh_dh_now",
-     "by": "Jdf8",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:DwightHallYale.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The building at 67 High Street was built between 1842 and 1846 as the Yale College Library, the university's first freestanding library. Henry Austin designed it in the Gothic Revival style, with a two-story reading room under a hammer-beam ceiling.",
-    "A different Dwight Hall was built on the Old Campus in 1886 for the Yale YMCA. It was a brownstone building with a round tower, and it was torn down in 1926 so people could see the new Harkness Tower without anything in the way.",
-    "After that, the Dwight Hall organization moved into the old library and the name came with it. In 1930 and 1931 the reading room was turned into Dwight Chapel."
-   ],
-   "fact": "The original Dwight Hall was demolished in 1926 for a better view of Harkness Tower.",
-   "disputed": "Many people assume a building's name always goes with its first use. Wikipedia says the name moved here from a demolished building.",
-   "claims": [
     {
-     "t": "The building was Yale's first freestanding library.",
-     "a": 0,
-     "why": "Wikipedia: the university's first freestanding library building."
-    },
-    {
-     "t": "The current Dwight Hall is the 1886 building.",
-     "a": 2,
-     "why": "Wikipedia says the 1886 Dwight Hall was demolished in 1926."
+      "id": "dwight",
+      "name": "Dwight Hall",
+      "short": "Dwight Hall",
+      "badge": "Dwight Hall",
+      "tag": "Stop 4 of 4",
+      "teaser": "Yale's old library, which took the name of a different building.",
+      "map": "Dwight Hall, 67 High Street, New Haven, CT",
+      "clue": "Go to 67 High Street on the Old Campus. Look for the stone Gothic building with two pointed towers and a tall arched window.",
+      "safety": "It is a working campus building. View it from the public path and enter only if it is open to visitors.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What was Dwight Hall originally built as, in 1842?",
+        "options": [
+          "A train station",
+          "The Yale College Library",
+          "A church",
+          "A hotel"
+        ],
+        "answer": 1,
+        "hint": "Think of a building full of books.",
+        "verify": "Wikipedia says the building was built between 1842 and 1846 as the Yale College Library. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "About 1903",
+        "label": "The library then",
+        "line": "A black-and-white photo of the stone Gothic library behind a low fence and some trees.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "nh_dh_then",
+          "by": "Detroit Publishing Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Dwight_Hall,_Yale_College.jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2008",
+        "head": "Today",
+        "label": "The towers today",
+        "line": "The two pointed stone towers and tall arched window of the building against a blue sky.",
+        "ph": {
+          "k": "nh_dh_now",
+          "by": "Jdf8",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:DwightHallYale.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The building at 67 High Street was built between 1842 and 1846 as the Yale College Library, the university's first freestanding library. Henry Austin designed it in the Gothic Revival style, with a two-story reading room under a hammer-beam ceiling.",
+        "A different Dwight Hall was built on the Old Campus in 1886 for the Yale YMCA. It was a brownstone building with a round tower, and it was torn down in 1926 so people could see the new Harkness Tower without anything in the way.",
+        "After that, the Dwight Hall organization moved into the old library and the name came with it. In 1930 and 1931 the reading room was turned into Dwight Chapel."
+      ],
+      "fact": "The original Dwight Hall was demolished in 1926 for a better view of Harkness Tower.",
+      "disputed": "Many people assume a building's name always goes with its first use. Wikipedia says the name moved here from a demolished building.",
+      "claims": [
+        {
+          "t": "The building was Yale's first freestanding library.",
+          "a": 0,
+          "why": "Wikipedia: the university's first freestanding library building."
+        },
+        {
+          "t": "The current Dwight Hall is the 1886 building.",
+          "a": 2,
+          "why": "Wikipedia says the 1886 Dwight Hall was demolished in 1926."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Dwight Hall at Yale",
+          "u": "https://en.wikipedia.org/wiki/Dwight_Hall_at_Yale"
+        },
+        {
+          "t": "Wikipedia: Old Campus",
+          "u": "https://en.wikipedia.org/wiki/Old_Campus"
+        }
+      ],
+      "card": {
+        "a": "1842",
+        "b": "1931",
+        "la": "Library is built",
+        "lb": "Becomes Dwight Hall and Chapel"
+      }
     }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Dwight Hall at Yale",
-     "u": "https://en.wikipedia.org/wiki/Dwight_Hall_at_Yale"
-    },
-    {
-     "t": "Wikipedia: Old Campus",
-     "u": "https://en.wikipedia.org/wiki/Old_Campus"
-    }
-   ],
-   "card": {
-    "a": "1842",
-    "b": "1931",
-    "la": "Library is built",
-    "lb": "Becomes Dwight Hall and Chapel"
-   }
-  }
- ],
- "heroKey": "nh_vh_now"
+  ],
+  "heroKey": "nh_vh_now"
 }

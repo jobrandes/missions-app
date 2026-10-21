@@ -1,417 +1,417 @@
 {
- "id": "philly",
- "name": "Philadelphia",
- "explorer": "Old City Explorer",
- "initials": "PHL",
- "ranks": [
-  [
-   0,
-   "Visitor"
-  ],
-  [
-   100,
-   "Old City Walker"
-  ],
-  [
-   250,
-   "Landmark Hunter"
-  ],
-  [
-   450,
-   "Independence Scholar"
-  ],
-  [
-   600,
-   "Old City Historian"
-  ]
- ],
- "heroAlt": "Independence Hall and its clock tower seen across the park",
- "heroLi": "<li>Header: Kwdavids · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a> · resized</li>",
- "heroCredit": "Photo: Kwdavids · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a>",
- "mission": "Find four landmarks in Philadelphia's Old City. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. The rest of Philadelphia is waiting.",
- "safetyNote": "<li>Old City has uneven brick sidewalks and busy streets. Watch your footing, cross at crosswalks, and respect the people who live and work here.</li>",
- "badgeMap": {
-  "independence": [
-   "ph_ih_now",
-   "50% 50%"
-  ],
-  "libertybell": [
-   "ph_lb_now",
-   "50% 55%"
-  ],
-  "betsyross": [
-   "ph_br_now",
-   "50% 50%"
-  ],
-  "carpenters": [
-   "ph_ch_now",
-   "50% 45%"
-  ]
- },
- "level": "Classics",
- "region": "The East",
- "stops": [
-  {
-   "id": "independence",
-   "name": "Independence Hall",
-   "short": "Independence Hall",
-   "badge": "Independence Hall",
-   "tag": "Stop 1 of 4",
-   "teaser": "Where a country was argued into existence.",
-   "map": "Independence Hall, 520 Chestnut St, Philadelphia, PA",
-   "clue": "Find the red brick State House with a white steeple on Chestnut Street in Independence National Historical Park.",
-   "safety": "Interior visits may need timed tickets and security screening. Stay on the walkways and follow park ranger directions.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Look up at the central tower facing Chestnut Street. What is set into it?",
-    "options": [
-     "A cannon",
-     "A large clock",
-     "A statue of Washington",
-     "A giant eagle"
+  "id": "philly",
+  "name": "Philadelphia",
+  "explorer": "Old City Explorer",
+  "initials": "PHL",
+  "ranks": [
+    [
+      0,
+      "Visitor"
     ],
-    "answer": 1,
-    "hint": "Time is the clue.",
-    "verify": "The central tower has a clock facing the street. Check on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "about 1900",
-    "label": "A century later",
-    "line": "A color-tinted photo of Independence Hall from around 1900, held by the Library of Congress.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "ph_ih_then",
-     "by": "Library of Congress",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia-LCCN2008679522.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2013",
-    "head": "Today",
-    "label": "The hall today",
-    "line": "Independence Hall and its clock tower seen across the park. Photo from 2013.",
-    "ph": {
-     "k": "ph_ih_now",
-     "by": "Kwdavids",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The building was built from 1732 to 1753 as the Pennsylvania State House. Edmund Woolley and Andrew Hamilton designed it.",
-    "The Declaration of Independence was adopted here on July 4, 1776. The U.S. Constitution was drafted here at the Constitutional Convention from May 25 to September 17, 1787, in the Assembly Room.",
-    "The original wooden steeple rotted and was removed in 1781. A new, more elaborate steeple by William Strickland was added in 1828. The site became a UNESCO World Heritage Site in 1979."
-   ],
-   "fact": "Two of the country's founding documents were created in one room.",
-   "disputed": "Nothing big is disputed here. The common mistake is thinking the steeple is the original.",
-   "claims": [
-    {
-     "t": "The Declaration of Independence was adopted at Independence Hall in 1776.",
-     "a": 0,
-     "why": "Wikipedia: adopted there on July 4, 1776."
-    },
-    {
-     "t": "The steeple on Independence Hall today is the original from the 1700s.",
-     "a": 2,
-     "why": "The original wooden steeple was removed in 1781. A new one was added in 1828."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Independence Hall",
-     "u": "https://en.wikipedia.org/wiki/Independence_Hall"
-    },
-    {
-     "t": "National Park Service: Independence Hall",
-     "u": "https://www.nps.gov/articles/000/independence-hall-world-heritage-site.htm"
-    }
-   ],
-   "card": {
-    "a": "1776",
-    "b": "1787",
-    "la": "Declaration adopted",
-    "lb": "Constitution drafted"
-   }
+    [
+      100,
+      "Old City Walker"
+    ],
+    [
+      250,
+      "Landmark Hunter"
+    ],
+    [
+      450,
+      "Independence Scholar"
+    ],
+    [
+      600,
+      "Old City Historian"
+    ]
+  ],
+  "heroAlt": "Independence Hall and its clock tower seen across the park",
+  "heroLi": "<li>Header: Kwdavids · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a> · resized</li>",
+  "heroCredit": "Photo: Kwdavids · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG\">Source</a>",
+  "mission": "Find four landmarks in Philadelphia's Old City. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Philadelphia is waiting.",
+  "safetyNote": "<li>Old City has uneven brick sidewalks and busy streets. Watch your footing, cross at crosswalks, and respect the people who live and work here.</li>",
+  "badgeMap": {
+    "independence": [
+      "ph_ih_now",
+      "50% 50%"
+    ],
+    "libertybell": [
+      "ph_lb_now",
+      "50% 55%"
+    ],
+    "betsyross": [
+      "ph_br_now",
+      "50% 50%"
+    ],
+    "carpenters": [
+      "ph_ch_now",
+      "50% 45%"
+    ]
   },
-  {
-   "id": "libertybell",
-   "name": "Liberty Bell",
-   "short": "Liberty Bell",
-   "badge": "Liberty Bell",
-   "tag": "Stop 2 of 4",
-   "teaser": "A cracked bell with a myth bigger than its crack.",
-   "map": "Liberty Bell Center, 526 Market St, Philadelphia, PA",
-   "clue": "Look across from Independence Hall for the Liberty Bell Center. Inside is a large bell with a big crack.",
-   "safety": "Expect a security line and crowds. The exhibit is indoors and the bell is behind a barrier, so look but do not touch.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Read the lettering on the bell. Which word is in capital letters?",
-    "options": [
-     "PROCLAIM",
-     "JUSTICE",
-     "FREEDOM",
-     "LIBERTY"
-    ],
-    "answer": 3,
-    "hint": "The bell is named for it.",
-    "verify": "Wikipedia gives the inscription as \"Proclaim LIBERTY Throughout all the Land,\" from Leviticus 25:10. Check the lettering on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1951",
-    "label": "The bell in 1951",
-    "line": "A crowd gathered around the Liberty Bell on July 3, 1951.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "ph_lb_then",
-     "by": "Abbie Rowe, National Park Service",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2019",
-    "head": "Today",
-    "label": "The bell today",
-    "line": "The Liberty Bell in the Liberty Bell Center, with Independence Hall behind it. Photo from 2019.",
-    "ph": {
-     "k": "ph_lb_now",
-     "by": "Mys 721tx",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell,_Aug_2019.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The bell was cast in 1752 in London by Lester and Pack, later the Whitechapel Bell Foundry. It cracked on its first strike in Philadelphia. John Pass and John Stow recast it in 1752 and 1753, adding copper. The first recast sounded bad, so they did it again.",
-    "It weighs 2,080 pounds. The inscription comes from Leviticus 25:10. The famous crack formed between 1817 and 1846, most likely near the end of that span.",
-    "Abolitionists called it the Liberty Bell in the 1830s. It moved to the Liberty Bell Center in October 2003."
-   ],
-   "fact": "The \"Liberty Bell\" name came from abolitionists, not the Founders.",
-   "disputed": "The legend that the bell rang for the Declaration on July 4, 1776 lacks evidence. It most likely rang on July 8, when the Declaration was first read publicly, but no account from the time confirms it.",
-   "claims": [
+  "level": "Classics",
+  "region": "The East",
+  "stops": [
     {
-     "t": "The words on the Liberty Bell come from the Bible, from Leviticus.",
-     "a": 0,
-     "why": "Wikipedia: the inscription is from Leviticus 25:10."
-    },
-    {
-     "t": "The Liberty Bell cracked while tolling for Chief Justice John Marshall's death in 1835.",
-     "a": 1,
-     "why": "A common story, but the evidence is thin. The crack formed sometime between 1817 and 1846."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Liberty Bell",
-     "u": "https://en.wikipedia.org/wiki/Liberty_Bell"
-    },
-    {
-     "t": "National Park Service: The Liberty Bell",
-     "u": "https://www.nps.gov/inde/learn/historyculture/stories-libertybell.htm"
-    }
-   ],
-   "card": {
-    "a": "1752",
-    "b": "2003",
-    "la": "Cast in London",
-    "lb": "Moved to its current home"
-   }
-  },
-  {
-   "id": "betsyross",
-   "name": "Betsy Ross House",
-   "short": "Betsy Ross",
-   "badge": "Betsy Ross",
-   "tag": "Stop 3 of 4",
-   "teaser": "A small house with a famous story that historians argue about.",
-   "map": "Betsy Ross House, 239 Arch St, Philadelphia, PA",
-   "clue": "In Old City, find a small brick house on Arch Street with a flag out front.",
-   "safety": "Arch Street sidewalks are narrow and busy. Keep to the sidewalk, and note the house is a small museum with limited space.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What street is the house on?",
-    "options": [
-     "Market Street",
-     "Arch Street",
-     "Chestnut Street",
-     "Walnut Street"
-    ],
-    "answer": 1,
-    "hint": "Not the main shopping streets.",
-    "verify": "The house is at 239 Arch Street. Check the street sign on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1903",
-    "label": "Birthplace of Old Glory",
-    "line": "The house in 1903, when a sign on the front called it the \"Birthplace of Old Glory.\"",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "ph_br_then",
-     "by": "Not credited",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Birthplace_of_Old_Glory_Betsy_Ross_House_Philadelphia_Pa_1903.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2012",
-    "head": "Today",
-    "label": "The house today",
-    "line": "The Betsy Ross House on Arch Street. Photo from 2012.",
-    "ph": {
-     "k": "ph_br_now",
-     "by": "Beyond My Ken",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_239_Arch_Street.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The front of the house was built around 1740. The stair hall and back section were added 10 to 20 years later.",
-    "Betsy Ross may have lived here from 1776, after her first husband John Ross died, until about 1779. But her living here is disputed. The best archival evidence suggests she lived in the house next door, which was later torn down.",
-    "The story that she designed and sewed the first flag traces to her relatives, especially her grandsons William and George Canby, and to the 1876 Centennial. Historians call these claims controversial. The house was restored in 1937 and given to the city in 1941."
-   ],
-   "fact": "The famous story is mostly a family legend from after her death.",
-   "disputed": "Whether she lived here or sewed the first flag is disputed. The house is real. The story is the argument.",
-   "claims": [
-    {
-     "t": "The front of the Betsy Ross House was built around 1740.",
-     "a": 0,
-     "why": "Wikipedia: the front part dates to about 1740."
+      "id": "independence",
+      "name": "Independence Hall",
+      "short": "Independence Hall",
+      "badge": "Independence Hall",
+      "tag": "Stop 1 of 4",
+      "teaser": "Where a country was argued into existence.",
+      "map": "Independence Hall, 520 Chestnut St, Philadelphia, PA",
+      "clue": "Find the red brick State House with a white steeple on Chestnut Street in Independence National Historical Park.",
+      "safety": "Interior visits may need timed tickets and security screening. Stay on the walkways and follow park ranger directions.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Look up at the central tower facing Chestnut Street. What is set into it?",
+        "options": [
+          "A cannon",
+          "A large clock",
+          "A statue of Washington",
+          "A giant eagle"
+        ],
+        "answer": 1,
+        "hint": "Time is the clue.",
+        "verify": "The central tower has a clock facing the street. Check on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "about 1900",
+        "label": "A century later",
+        "line": "A color-tinted photo of Independence Hall from around 1900, held by the Library of Congress.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "ph_ih_then",
+          "by": "Library of Congress",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia-LCCN2008679522.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "The hall today",
+        "line": "Independence Hall and its clock tower seen across the park. Photo from 2013.",
+        "ph": {
+          "k": "ph_ih_now",
+          "by": "Kwdavids",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Independence_Hall,_Philadelphia_PA.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The building was built from 1732 to 1753 as the Pennsylvania State House. Edmund Woolley and Andrew Hamilton designed it.",
+        "The Declaration of Independence was adopted here on July 4, 1776. The U.S. Constitution was drafted here at the Constitutional Convention from May 25 to September 17, 1787, in the Assembly Room.",
+        "The original wooden steeple rotted and was removed in 1781. A new, more elaborate steeple by William Strickland was added in 1828. The site became a UNESCO World Heritage Site in 1979."
+      ],
+      "fact": "Two of the country's founding documents were created in one room.",
+      "disputed": "Nothing big is disputed here. The common mistake is thinking the steeple is the original.",
+      "claims": [
+        {
+          "t": "The Declaration of Independence was adopted at Independence Hall in 1776.",
+          "a": 0,
+          "why": "Wikipedia: adopted there on July 4, 1776."
+        },
+        {
+          "t": "The steeple on Independence Hall today is the original from the 1700s.",
+          "a": 2,
+          "why": "The original wooden steeple was removed in 1781. A new one was added in 1828."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Independence Hall",
+          "u": "https://en.wikipedia.org/wiki/Independence_Hall"
+        },
+        {
+          "t": "National Park Service: Independence Hall",
+          "u": "https://www.nps.gov/articles/000/independence-hall-world-heritage-site.htm"
+        }
+      ],
+      "card": {
+        "a": "1776",
+        "b": "1787",
+        "la": "Declaration adopted",
+        "lb": "Constitution drafted"
+      }
     },
     {
-     "t": "Betsy Ross sewed the first American flag in this house.",
-     "a": 1,
-     "why": "Historians call it controversial. The story comes from relatives, and she may have lived next door."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Betsy Ross House",
-     "u": "https://en.wikipedia.org/wiki/Betsy_Ross_House"
+      "id": "libertybell",
+      "name": "Liberty Bell",
+      "short": "Liberty Bell",
+      "badge": "Liberty Bell",
+      "tag": "Stop 2 of 4",
+      "teaser": "A cracked bell with a myth bigger than its crack.",
+      "map": "Liberty Bell Center, 526 Market St, Philadelphia, PA",
+      "clue": "Look across from Independence Hall for the Liberty Bell Center. Inside is a large bell with a big crack.",
+      "safety": "Expect a security line and crowds. The exhibit is indoors and the bell is behind a barrier, so look but do not touch.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Read the lettering on the bell. Which word is in capital letters?",
+        "options": [
+          "PROCLAIM",
+          "JUSTICE",
+          "FREEDOM",
+          "LIBERTY"
+        ],
+        "answer": 3,
+        "hint": "The bell is named for it.",
+        "verify": "Wikipedia gives the inscription as \"Proclaim LIBERTY Throughout all the Land,\" from Leviticus 25:10. Check the lettering on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1951",
+        "label": "The bell in 1951",
+        "line": "A crowd gathered around the Liberty Bell on July 3, 1951.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "ph_lb_then",
+          "by": "Abbie Rowe, National Park Service",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Crowd_around_the_Liberty_Bell,_1951_-_cropped.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2019",
+        "head": "Today",
+        "label": "The bell today",
+        "line": "The Liberty Bell in the Liberty Bell Center, with Independence Hall behind it. Photo from 2019.",
+        "ph": {
+          "k": "ph_lb_now",
+          "by": "Mys 721tx",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Liberty_Bell,_Aug_2019.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The bell was cast in 1752 in London by Lester and Pack, later the Whitechapel Bell Foundry. It cracked on its first strike in Philadelphia. John Pass and John Stow recast it in 1752 and 1753, adding copper. The first recast sounded bad, so they did it again.",
+        "It weighs 2,080 pounds. The inscription comes from Leviticus 25:10. The famous crack formed between 1817 and 1846, most likely near the end of that span.",
+        "Abolitionists called it the Liberty Bell in the 1830s. It moved to the Liberty Bell Center in October 2003."
+      ],
+      "fact": "The \"Liberty Bell\" name came from abolitionists, not the Founders.",
+      "disputed": "The legend that the bell rang for the Declaration on July 4, 1776 lacks evidence. It most likely rang on July 8, when the Declaration was first read publicly, but no account from the time confirms it.",
+      "claims": [
+        {
+          "t": "The words on the Liberty Bell come from the Bible, from Leviticus.",
+          "a": 0,
+          "why": "Wikipedia: the inscription is from Leviticus 25:10."
+        },
+        {
+          "t": "The Liberty Bell cracked while tolling for Chief Justice John Marshall's death in 1835.",
+          "a": 1,
+          "why": "A common story, but the evidence is thin. The crack formed sometime between 1817 and 1846."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Liberty Bell",
+          "u": "https://en.wikipedia.org/wiki/Liberty_Bell"
+        },
+        {
+          "t": "National Park Service: The Liberty Bell",
+          "u": "https://www.nps.gov/inde/learn/historyculture/stories-libertybell.htm"
+        }
+      ],
+      "card": {
+        "a": "1752",
+        "b": "2003",
+        "la": "Cast in London",
+        "lb": "Moved to its current home"
+      }
     },
     {
-     "t": "ushistory.org: Betsy Ross",
-     "u": "https://ushistory.org/betsy/flaghome.html"
-    }
-   ],
-   "card": {
-    "a": "1740",
-    "b": "1941",
-    "la": "Front built (about)",
-    "lb": "Given to the city"
-   }
-  },
-  {
-   "id": "carpenters",
-   "name": "Carpenters' Hall",
-   "short": "Carpenters' Hall",
-   "badge": "Carpenters' Hall",
-   "tag": "Stop 4 of 4",
-   "teaser": "Where the First Continental Congress met in 1774, in a guild's meeting hall.",
-   "map": "Carpenters' Hall, 320 Chestnut St, Philadelphia, PA",
-   "clue": "Walk to Independence National Historical Park and find the red-brick hall with a small cupola, tucked down a passage off Chestnut Street.",
-   "safety": "The street is busy. Use crosswalks. Check the hall's visiting hours, because it is a working guild building.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Which Congress met in Carpenters' Hall in September 1774?",
-    "options": [
-     "Second Continental Congress",
-     "Constitutional Convention",
-     "First Continental Congress",
-     "Confederation Congress"
-    ],
-    "answer": 2,
-    "hint": "The earliest one.",
-    "verify": "Wikipedia says the First Continental Congress met there from September 5 to October 26, 1774. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "Old plans",
-    "label": "The hall on paper",
-    "line": "An old measured drawing of the hall: front elevation and floor plan.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
+      "id": "betsyross",
+      "name": "Betsy Ross House",
+      "short": "Betsy Ross",
+      "badge": "Betsy Ross",
+      "tag": "Stop 3 of 4",
+      "teaser": "A small house with a famous story that historians argue about.",
+      "map": "Betsy Ross House, 239 Arch St, Philadelphia, PA",
+      "clue": "In Old City, find a small brick house on Arch Street with a flag out front.",
+      "safety": "Arch Street sidewalks are narrow and busy. Keep to the sidewalk, and note the house is a small museum with limited space.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What street is the house on?",
+        "options": [
+          "Market Street",
+          "Arch Street",
+          "Chestnut Street",
+          "Walnut Street"
+        ],
+        "answer": 1,
+        "hint": "Not the main shopping streets.",
+        "verify": "The house is at 239 Arch Street. Check the street sign on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1903",
+        "label": "Birthplace of Old Glory",
+        "line": "The house in 1903, when a sign on the front called it the \"Birthplace of Old Glory.\"",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "ph_br_then",
+          "by": "Not credited",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Birthplace_of_Old_Glory_Betsy_Ross_House_Philadelphia_Pa_1903.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2012",
+        "head": "Today",
+        "label": "The house today",
+        "line": "The Betsy Ross House on Arch Street. Photo from 2012.",
+        "ph": {
+          "k": "ph_br_now",
+          "by": "Beyond My Ken",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Betsy_Ross_House_239_Arch_Street.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The front of the house was built around 1740. The stair hall and back section were added 10 to 20 years later.",
+        "Betsy Ross may have lived here from 1776, after her first husband John Ross died, until about 1779. But her living here is disputed. The best archival evidence suggests she lived in the house next door, which was later torn down.",
+        "The story that she designed and sewed the first flag traces to her relatives, especially her grandsons William and George Canby, and to the 1876 Centennial. Historians call these claims controversial. The house was restored in 1937 and given to the city in 1941."
+      ],
+      "fact": "The famous story is mostly a family legend from after her death.",
+      "disputed": "Whether she lived here or sewed the first flag is disputed. The house is real. The story is the argument.",
+      "claims": [
+        {
+          "t": "The front of the Betsy Ross House was built around 1740.",
+          "a": 0,
+          "why": "Wikipedia: the front part dates to about 1740."
+        },
+        {
+          "t": "Betsy Ross sewed the first American flag in this house.",
+          "a": 1,
+          "why": "Historians call it controversial. The story comes from relatives, and she may have lived next door."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Betsy Ross House",
+          "u": "https://en.wikipedia.org/wiki/Betsy_Ross_House"
+        },
+        {
+          "t": "ushistory.org: Betsy Ross",
+          "u": "https://ushistory.org/betsy/flaghome.html"
+        }
+      ],
+      "card": {
+        "a": "1740",
+        "b": "1941",
+        "la": "Front built (about)",
+        "lb": "Given to the city"
+      }
     },
-    "ph": {
-     "k": "ph_ch_then",
-     "by": "New York Public Library (scan)",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Carpenter's_Hall,_Phil_(NYPL_NYPG94-F149-419968).jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "Today",
-    "head": "Today",
-    "label": "The hall today",
-    "line": "The red-brick hall stands in a courtyard off Chestnut Street.",
-    "ph": {
-     "k": "ph_ch_now",
-     "by": "Pbjamesphoto",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Carpenters'_Hall,_Philadelphia,_U.S.,_May_2015.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Carpenters' Hall is owned by the Carpenters' Company of the City and County of Philadelphia. The land was bought in 1768. The company decided to build on January 30, 1770, and construction was completed in August 1774. Robert Smith designed it, in Georgian style, but did not supervise construction.",
-    "The First Continental Congress met there from September 5 to October 26, 1774. The Pennsylvania Provincial Conference met there in June 1776. During the Revolution it served as a hospital for British and American troops.",
-    "It also housed the Library Company, the American Philosophical Society and the First and Second Banks of the United States. It was a Federal Custom House from 1802 to 1819. It is a National Historic Landmark and admission is free."
-   ],
-   "fact": "It is still owned by the carpenters' guild.",
-   "disputed": "Wikipedia gives two completion years, 1774 and 1775, and two descriptions of the British occupation of the hall. Check the hall's own timeline before repeating either.",
-   "claims": [
     {
-     "t": "The First Continental Congress met at Carpenters' Hall in 1774.",
-     "a": 0,
-     "why": "Wikipedia: September 5 to October 26, 1774."
-    },
-    {
-     "t": "The Declaration of Independence was signed at Carpenters' Hall.",
-     "a": 2,
-     "why": "It was signed at Independence Hall."
+      "id": "carpenters",
+      "name": "Carpenters' Hall",
+      "short": "Carpenters' Hall",
+      "badge": "Carpenters' Hall",
+      "tag": "Stop 4 of 4",
+      "teaser": "Where the First Continental Congress met in 1774, in a guild's meeting hall.",
+      "map": "Carpenters' Hall, 320 Chestnut St, Philadelphia, PA",
+      "clue": "Walk to Independence National Historical Park and find the red-brick hall with a small cupola, tucked down a passage off Chestnut Street.",
+      "safety": "The street is busy. Use crosswalks. Check the hall's visiting hours, because it is a working guild building.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Which Congress met in Carpenters' Hall in September 1774?",
+        "options": [
+          "Second Continental Congress",
+          "Constitutional Convention",
+          "First Continental Congress",
+          "Confederation Congress"
+        ],
+        "answer": 2,
+        "hint": "The earliest one.",
+        "verify": "Wikipedia says the First Continental Congress met there from September 5 to October 26, 1774. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "About 1900",
+        "label": "The hall then",
+        "line": "A colored postcard photograph of Carpenters' Hall at the end of its narrow brick courtyard, with two short posts in front.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "ph_ch_then",
+          "by": "Detroit Publishing Company",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Carpenters_Hall,_Philadelphia,_Pa_(NYPL_b12647398-62189).tiff",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "Today",
+        "head": "Today",
+        "label": "The hall today",
+        "line": "The red-brick hall stands in a courtyard off Chestnut Street.",
+        "ph": {
+          "k": "ph_ch_now",
+          "by": "Pbjamesphoto",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Carpenters'_Hall,_Philadelphia,_U.S.,_May_2015.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Carpenters' Hall is owned by the Carpenters' Company of the City and County of Philadelphia. The land was bought in 1768. The company decided to build on January 30, 1770, and construction was completed in August 1774. Robert Smith designed it, in Georgian style, but did not supervise construction.",
+        "The First Continental Congress met there from September 5 to October 26, 1774. The Pennsylvania Provincial Conference met there in June 1776. During the Revolution it served as a hospital for British and American troops.",
+        "It also housed the Library Company, the American Philosophical Society and the First and Second Banks of the United States. It was a Federal Custom House from 1802 to 1819. It is a National Historic Landmark and admission is free."
+      ],
+      "fact": "It is still owned by the carpenters' guild.",
+      "disputed": "Wikipedia gives two completion years, 1774 and 1775, and two descriptions of the British occupation of the hall. Check the hall's own timeline before repeating either.",
+      "claims": [
+        {
+          "t": "The First Continental Congress met at Carpenters' Hall in 1774.",
+          "a": 0,
+          "why": "Wikipedia: September 5 to October 26, 1774."
+        },
+        {
+          "t": "The Declaration of Independence was signed at Carpenters' Hall.",
+          "a": 2,
+          "why": "It was signed at Independence Hall."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Carpenters' Hall",
+          "u": "https://en.wikipedia.org/wiki/Carpenters%27_Hall"
+        },
+        {
+          "t": "Carpenters' Hall: Timeline",
+          "u": "https://www.carpentershall.org/timeline"
+        }
+      ],
+      "card": {
+        "a": "1774",
+        "b": "1970",
+        "la": "Congress met",
+        "lb": "Landmark status"
+      }
     }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Carpenters' Hall",
-     "u": "https://en.wikipedia.org/wiki/Carpenters%27_Hall"
-    },
-    {
-     "t": "Carpenters' Hall: Timeline",
-     "u": "https://www.carpentershall.org/timeline"
-    }
-   ],
-   "card": {
-    "a": "1774",
-    "b": "1970",
-    "la": "Congress met",
-    "lb": "Landmark status"
-   }
-  }
- ],
- "heroKey": "ph_ih_now"
+  ],
+  "heroKey": "ph_ih_now"
 }

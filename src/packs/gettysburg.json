@@ -1,417 +1,417 @@
 {
- "id": "gettysburg",
- "name": "Gettysburg",
- "explorer": "Remembrance Explorer",
- "initials": "GBG",
- "ranks": [
-  [
-   0,
-   "Visitor"
-  ],
-  [
-   100,
-   "Town Walker"
-  ],
-  [
-   250,
-   "Landmark Hunter"
-  ],
-  [
-   450,
-   "Gettysburg Scholar"
-  ],
-  [
-   600,
-   "Gettysburg Historian"
-  ]
- ],
- "heroAlt": "Pennsylvania Hall at Gettysburg College",
- "heroLi": "<li>Header: Smb51095 · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg\">Source</a> · resized</li>",
- "heroCredit": "Photo: Smb51095 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg\">Source</a>",
- "mission": "Find four landmarks around Gettysburg. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. The rest of Gettysburg is waiting.",
- "safetyNote": "<li>Gettysburg is a small town with busy roads and tour traffic. Use crosswalks, be quiet and respectful in the cemetery, and never climb on monuments or walls.</li>",
- "badgeMap": {
-  "wills": [
-   "gb_wh_now",
-   "50% 45%"
-  ],
-  "penn": [
-   "gb_ph_now",
-   "50% 45%"
-  ],
-  "monument": [
-   "gb_sm_now",
-   "50% 45%"
-  ],
-  "cemetery": [
-   "gb_nc_now",
-   "50% 45%"
-  ]
- },
- "level": "Classics",
- "region": "The East",
- "stops": [
-  {
-   "id": "wills",
-   "name": "David Wills House",
-   "short": "Wills House",
-   "badge": "Wills House",
-   "tag": "Stop 1 of 4",
-   "teaser": "The house where Lincoln finished the Gettysburg Address.",
-   "map": "David Wills House, Lincoln Square, Gettysburg, PA",
-   "clue": "Go to Lincoln Square, the town's central circle. Look for a three-story brick house with green shutters on the corner.",
-   "safety": "Lincoln Square is busy with cars and tour groups. Use crosswalks and view the house from the sidewalk.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Who was Lincoln's host in Gettysburg?",
-    "options": [
-     "David McConaughy",
-     "David Wills",
-     "Thaddeus Stevens",
-     "Andrew Curtin"
+  "id": "gettysburg",
+  "name": "Gettysburg",
+  "explorer": "Remembrance Explorer",
+  "initials": "GBG",
+  "ranks": [
+    [
+      0,
+      "Visitor"
     ],
-    "answer": 1,
-    "hint": "He was a local lawyer who suggested the soldiers' cemetery.",
-    "verify": "Wikipedia says Wills was Lincoln's host in Gettysburg. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "About 1930 to 1945",
-    "label": "The house then",
-    "line": "A colored postcard of the three-story brick house with green shutters, small trees and a horse and buggy out front.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "gb_wh_then",
-     "by": "L. E. Smith, Wholesale Distributor (postcard)",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:The_Will's_House,_where_Lincoln_wrote_his_Gettysburg_address,_Gettysburg,_Pa_(64226).jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2013",
-    "head": "Today",
-    "label": "The house today",
-    "line": "A restored upstairs bedroom inside the house museum, with a wooden bed, a washstand and a green armchair.",
-    "ph": {
-     "k": "gb_wh_now",
-     "by": "Ron Cogswell",
-     "lic": "CC BY 2.0",
-     "lu": "https://creativecommons.org/licenses/by/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:The_David_Wills_House_Gettysburg_(PA)_2013_(9387972956).jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "David Wills was a Gettysburg lawyer. After the Battle of Gettysburg he suggested a national cemetery for the soldiers to Governor Andrew Curtin, who then made him the state's agent to organize it. Because of his work, Abraham Lincoln came to Gettysburg to speak.",
-    "Wills invited Lincoln to stay at his house. On November 18, 1863, the night before the ceremony, Lincoln wrote the final draft of the Gettysburg Address in the large upstairs bedroom he was using. During the battle, local people had sheltered in Wills' cellar.",
-    "Today the Wills House is a historic house museum operated for visitors."
-   ],
-   "fact": "Lincoln finished the speech the night before he gave it.",
-   "disputed": "Many people picture Lincoln scribbling the speech in a rush. Wikipedia says he completed the final draft here, in the Wills House, on November 18.",
-   "claims": [
-    {
-     "t": "Lincoln wrote the final draft of the Gettysburg Address in the Wills House.",
-     "a": 0,
-     "why": "Wikipedia: the final draft was written in the Wills House on November 18, 1863."
-    },
-    {
-     "t": "Lincoln gave the speech from the steps of the Wills House.",
-     "a": 2,
-     "why": "He delivered it the next afternoon at the Soldiers' National Cemetery."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: David Wills (Gettysburg)",
-     "u": "https://en.wikipedia.org/wiki/David_Wills_(Gettysburg)"
-    },
-    {
-     "t": "Wikipedia: Gettysburg Address",
-     "u": "https://en.wikipedia.org/wiki/Gettysburg_Address"
-    }
-   ],
-   "card": {
-    "a": "1863",
-    "b": "2013",
-    "la": "Final draft written",
-    "lb": "Museum open"
-   }
+    [
+      100,
+      "Town Walker"
+    ],
+    [
+      250,
+      "Landmark Hunter"
+    ],
+    [
+      450,
+      "Gettysburg Scholar"
+    ],
+    [
+      600,
+      "Gettysburg Historian"
+    ]
+  ],
+  "heroAlt": "Pennsylvania Hall at Gettysburg College",
+  "heroLi": "<li>Header: Smb51095 · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg\">Source</a> · resized</li>",
+  "heroCredit": "Photo: Smb51095 · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg\">Source</a>",
+  "mission": "Find four landmarks around Gettysburg. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Gettysburg is waiting.",
+  "safetyNote": "<li>Gettysburg is a small town with busy roads and tour traffic. Use crosswalks, be quiet and respectful in the cemetery, and never climb on monuments or walls.</li>",
+  "badgeMap": {
+    "wills": [
+      "gb_wh_now",
+      "50% 45%"
+    ],
+    "penn": [
+      "gb_ph_now",
+      "50% 45%"
+    ],
+    "monument": [
+      "gb_sm_now",
+      "50% 45%"
+    ],
+    "cemetery": [
+      "gb_nc_now",
+      "50% 45%"
+    ]
   },
-  {
-   "id": "penn",
-   "name": "Pennsylvania Hall",
-   "short": "Old Dorm",
-   "badge": "Old Dorm",
-   "tag": "Stop 2 of 4",
-   "teaser": "A college building that became a hospital in 1863.",
-   "map": "Pennsylvania Hall, Gettysburg College, Gettysburg, PA",
-   "clue": "Go to the Gettysburg College campus, north of downtown. Look for the white building with four tall columns and a small cupola on top.",
-   "safety": "Stay on the campus paths and public lawns, use crosswalks to reach the campus, and be quiet around any classes.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What was Pennsylvania Hall used for after the Battle of Gettysburg began?",
-    "options": [
-     "A hotel",
-     "A courthouse",
-     "A train station",
-     "A hospital"
-    ],
-    "answer": 3,
-    "hint": "Many people needed care in the days after the fighting.",
-    "verify": "Wikipedia says it was used as a hospital for wounded troops of both armies. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1950",
-    "label": "The hall then",
-    "line": "A black-and-white view of the white building with its four columns, wide steps and a small cupola.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "gb_ph_then",
-     "by": "Frederick Tilberg",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall,_Gettysburg_College.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2015",
-    "head": "Today",
-    "label": "The hall today",
-    "line": "The columned white building on a sunny lawn, with banners hung between the columns and a path beside it.",
-    "ph": {
-     "k": "gb_ph_now",
-     "by": "Smb51095",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Pennsylvania Hall, also called Old Dorm, is the central administration building at Gettysburg College and the college's oldest building. John Cresson Trautwine designed it in 1835, and it was built in 1838 in a temple style with four columns in the portico. At first it held students' rooms, offices and classrooms.",
-    "When the battle came in July 1863, it was the largest building in town. Union signal officers used its cupola on June 30, and on July 1 a professor led officers up to look out over the area. Soldiers of both armies were treated in the building, nearly 700 of them, until about July 29.",
-    "Classes started again on September 24, 1863. The hall was renovated in 1869 and 1870, 1889, and 1928. It is still used for the college's opening and graduation traditions."
-   ],
-   "fact": "It was the largest building in town in 1863.",
-   "disputed": "Many people think the whole college was a battlefield only. Wikipedia says this building was used as a hospital for both armies.",
-   "claims": [
+  "level": "Classics",
+  "region": "The East",
+  "stops": [
     {
-     "t": "Pennsylvania Hall is the oldest building at Gettysburg College.",
-     "a": 0,
-     "why": "Wikipedia: it is the college's oldest building."
-    },
-    {
-     "t": "Only Union soldiers were treated in the building.",
-     "a": 2,
-     "why": "Soldiers of both armies were treated there."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Pennsylvania Hall (Gettysburg, Pennsylvania)",
-     "u": "https://en.wikipedia.org/wiki/Pennsylvania_Hall_(Gettysburg,_Pennsylvania)"
-    },
-    {
-     "t": "Wikipedia: Gettysburg College",
-     "u": "https://en.wikipedia.org/wiki/Gettysburg_College"
-    }
-   ],
-   "card": {
-    "a": "1838",
-    "b": "1863",
-    "la": "Built",
-    "lb": "Hospital"
-   }
-  },
-  {
-   "id": "monument",
-   "name": "Soldiers' National Monument",
-   "short": "Soldiers' Monument",
-   "badge": "Soldiers' Monument",
-   "tag": "Stop 3 of 4",
-   "teaser": "A 60-foot monument that people often think marks the spot of the speech.",
-   "map": "Soldiers' National Monument, Gettysburg National Cemetery, Gettysburg, PA",
-   "clue": "Go to Gettysburg National Cemetery on Cemetery Hill, just south of downtown. Look for the tall granite monument at the center, with graves in curved rows around it.",
-   "safety": "This is a cemetery. Be quiet and respectful, stay on the paths, and never climb on the monument or step on the graves.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What do the 18 bronze stars around the base stand for?",
-    "options": [
-     "The Union states with soldiers buried here",
-     "The generals in the battle",
-     "The years of the war",
-     "The regiments in the battle"
-    ],
-    "answer": 0,
-    "hint": "They stand for something that is also divided into sections in the cemetery.",
-    "verify": "Wikipedia says the stars represent the eighteen Union states with buried dead. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1865",
-    "label": "The cornerstone then",
-    "line": "An 1865 magazine print of men in sashes standing around the cornerstone in a crowd. This is the cornerstone ceremony, before the monument was built.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "gb_sm_then",
-     "by": "Harper's Weekly",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Masonic_Conescecration_of_Solder_Monument_Gettysburg_PA.jpg",
-     "note": "resized, cropped"
-    }
-   },
-   "now": {
-    "yr": "2017",
-    "head": "Today",
-    "label": "The monument today",
-    "line": "The tall white granite monument with its statues at the base, against a blue sky.",
-    "ph": {
-     "k": "gb_sm_now",
-     "by": "Farragutful",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Soldiers'_National_Monument_-_Gettysburg_National_Cemetery.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Soldiers' National Monument stands at the central point of Gettysburg National Cemetery. The monument is 60 feet tall, made of granite, and designed by sculptor Randolph Rogers and architect George Keller. The last four lines of the Gettysburg Address are written on it.",
-    "A statue of the Genius of Liberty stands on top, and eighteen bronze stars circle the pedestal, one for each Union state with buried dead. Four statues at the corners are War, History, Peace and Plenty, and together they tell a story of peace and plenty after a hard struggle.",
-    "The cornerstone was laid on July 4, 1865, and the monument was dedicated in 1869. Many people think it marks where Lincoln gave his speech. Wikipedia says it does not: scholars place the speech about 40 yards east of the monument."
-   ],
-   "fact": "The Genius of Liberty statue was carved in Rome.",
-   "disputed": "Many people think the monument stands on the exact spot of the Gettysburg Address. Wikipedia says it does not.",
-   "claims": [
-    {
-     "t": "The monument was dedicated in 1869.",
-     "a": 0,
-     "why": "Wikipedia: dedicated in 1869."
+      "id": "wills",
+      "name": "David Wills House",
+      "short": "Wills House",
+      "badge": "Wills House",
+      "tag": "Stop 1 of 4",
+      "teaser": "The house where Lincoln finished the Gettysburg Address.",
+      "map": "David Wills House, Lincoln Square, Gettysburg, PA",
+      "clue": "Go to Lincoln Square, the town's central circle. Look for a three-story brick house with green shutters on the corner.",
+      "safety": "Lincoln Square is busy with cars and tour groups. Use crosswalks and view the house from the sidewalk.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Who was Lincoln's host in Gettysburg?",
+        "options": [
+          "David McConaughy",
+          "David Wills",
+          "Thaddeus Stevens",
+          "Andrew Curtin"
+        ],
+        "answer": 1,
+        "hint": "He was a local lawyer who suggested the soldiers' cemetery.",
+        "verify": "Wikipedia says Wills was Lincoln's host in Gettysburg. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "About 1930 to 1945",
+        "label": "The house then",
+        "line": "A colored postcard of the three-story brick house with green shutters, small trees and a horse and buggy out front.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "gb_wh_then",
+          "by": "L. E. Smith, Wholesale Distributor (postcard)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:The_Will's_House,_where_Lincoln_wrote_his_Gettysburg_address,_Gettysburg,_Pa_(64226).jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "The house today",
+        "line": "A restored upstairs bedroom inside the house museum, with a wooden bed, a washstand and a green armchair.",
+        "ph": {
+          "k": "gb_wh_now",
+          "by": "Ron Cogswell",
+          "lic": "CC BY 2.0",
+          "lu": "https://creativecommons.org/licenses/by/2.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:The_David_Wills_House_Gettysburg_(PA)_2013_(9387972956).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "David Wills was a Gettysburg lawyer. After the Battle of Gettysburg he suggested a national cemetery for the soldiers to Governor Andrew Curtin, who then made him the state's agent to organize it. Because of his work, Abraham Lincoln came to Gettysburg to speak.",
+        "Wills invited Lincoln to stay at his house. On November 18, 1863, the night before the ceremony, Lincoln wrote the final draft of the Gettysburg Address in the large upstairs bedroom he was using. During the battle, local people had sheltered in Wills' cellar.",
+        "Today the Wills House is a historic house museum operated for visitors."
+      ],
+      "fact": "Lincoln finished the speech the night before he gave it.",
+      "disputed": "Many people picture Lincoln scribbling the speech in a rush. Wikipedia says he completed the final draft here, in the Wills House, on November 18.",
+      "claims": [
+        {
+          "t": "Lincoln wrote the final draft of the Gettysburg Address in the Wills House.",
+          "a": 0,
+          "why": "Wikipedia: the final draft was written in the Wills House on November 18, 1863."
+        },
+        {
+          "t": "Lincoln gave the speech from the steps of the Wills House.",
+          "a": 2,
+          "why": "He delivered it the next afternoon at the Soldiers' National Cemetery."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: David Wills (Gettysburg)",
+          "u": "https://en.wikipedia.org/wiki/David_Wills_(Gettysburg)"
+        },
+        {
+          "t": "Wikipedia: Gettysburg Address",
+          "u": "https://en.wikipedia.org/wiki/Gettysburg_Address"
+        }
+      ],
+      "card": {
+        "a": "1863",
+        "b": "2013",
+        "la": "Final draft written",
+        "lb": "Museum open"
+      }
     },
     {
-     "t": "The monument stands on the exact spot where Lincoln gave the Gettysburg Address.",
-     "a": 2,
-     "why": "Wikipedia says that is a popular belief but not true."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Soldiers' National Monument",
-     "u": "https://en.wikipedia.org/wiki/Soldiers%27_National_Monument"
+      "id": "penn",
+      "name": "Pennsylvania Hall",
+      "short": "Old Dorm",
+      "badge": "Old Dorm",
+      "tag": "Stop 2 of 4",
+      "teaser": "A college building that became a hospital in 1863.",
+      "map": "Pennsylvania Hall, Gettysburg College, Gettysburg, PA",
+      "clue": "Go to the Gettysburg College campus, north of downtown. Look for the white building with four tall columns and a small cupola on top.",
+      "safety": "Stay on the campus paths and public lawns, use crosswalks to reach the campus, and be quiet around any classes.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What was Pennsylvania Hall used for after the Battle of Gettysburg began?",
+        "options": [
+          "A hotel",
+          "A courthouse",
+          "A train station",
+          "A hospital"
+        ],
+        "answer": 3,
+        "hint": "Many people needed care in the days after the fighting.",
+        "verify": "Wikipedia says it was used as a hospital for wounded troops of both armies. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1950",
+        "label": "The hall then",
+        "line": "A black-and-white view of the white building with its four columns, wide steps and a small cupola.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "gb_ph_then",
+          "by": "Frederick Tilberg",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall,_Gettysburg_College.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2015",
+        "head": "Today",
+        "label": "The hall today",
+        "line": "The columned white building on a sunny lawn, with banners hung between the columns and a path beside it.",
+        "ph": {
+          "k": "gb_ph_now",
+          "by": "Smb51095",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Pennsylvania Hall, also called Old Dorm, is the central administration building at Gettysburg College and the college's oldest building. John Cresson Trautwine designed it in 1835, and it was built in 1838 in a temple style with four columns in the portico. At first it held students' rooms, offices and classrooms.",
+        "When the battle came in July 1863, it was the largest building in town. Union signal officers used its cupola on June 30, and on July 1 a professor led officers up to look out over the area. Soldiers of both armies were treated in the building, nearly 700 of them, until about July 29.",
+        "Classes started again on September 24, 1863. The hall was renovated in 1869 and 1870, 1889, and 1928. It is still used for the college's opening and graduation traditions."
+      ],
+      "fact": "It was the largest building in town in 1863.",
+      "disputed": "Many people think the whole college was a battlefield only. Wikipedia says this building was used as a hospital for both armies.",
+      "claims": [
+        {
+          "t": "Pennsylvania Hall is the oldest building at Gettysburg College.",
+          "a": 0,
+          "why": "Wikipedia: it is the college's oldest building."
+        },
+        {
+          "t": "Only Union soldiers were treated in the building.",
+          "a": 2,
+          "why": "Soldiers of both armies were treated there."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Pennsylvania Hall (Gettysburg, Pennsylvania)",
+          "u": "https://en.wikipedia.org/wiki/Pennsylvania_Hall_(Gettysburg,_Pennsylvania)"
+        },
+        {
+          "t": "Wikipedia: Gettysburg College",
+          "u": "https://en.wikipedia.org/wiki/Gettysburg_College"
+        }
+      ],
+      "card": {
+        "a": "1838",
+        "b": "1863",
+        "la": "Built",
+        "lb": "Hospital"
+      }
     },
     {
-     "t": "Wikipedia: Gettysburg National Cemetery",
-     "u": "https://en.wikipedia.org/wiki/Gettysburg_National_Cemetery"
-    }
-   ],
-   "card": {
-    "a": "1865",
-    "b": "1869",
-    "la": "Cornerstone laid",
-    "lb": "Dedicated"
-   }
-  },
-  {
-   "id": "cemetery",
-   "name": "Gettysburg National Cemetery",
-   "short": "National Cemetery",
-   "badge": "National Cemetery",
-   "tag": "Stop 4 of 4",
-   "teaser": "Where Lincoln gave a speech of 271 words in under two minutes.",
-   "map": "Gettysburg National Cemetery, Gettysburg, PA",
-   "clue": "Go to Cemetery Hill, just south of downtown. Look for the iron gate and the grassy hillside with curved rows of graves.",
-   "safety": "This is a cemetery. Be quiet and respectful, stay on the paths, and do not step on graves. Dress for weather, since the hill is open and windy.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "How many words is the Gettysburg Address?",
-    "options": [
-     "1,000",
-     "2,700",
-     "271",
-     "27"
-    ],
-    "answer": 2,
-    "hint": "It is famous for how short it is.",
-    "verify": "Wikipedia says the speech has only 271 words. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "November 19, 1863",
-    "label": "The dedication then",
-    "line": "A crowd of people in dark coats and hats, packed close together at the dedication.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
+      "id": "monument",
+      "name": "Soldiers' National Monument",
+      "short": "Soldiers' Monument",
+      "badge": "Soldiers' Monument",
+      "tag": "Stop 3 of 4",
+      "teaser": "A 60-foot monument that people often think marks the spot of the speech.",
+      "map": "Soldiers' National Monument, Gettysburg National Cemetery, Gettysburg, PA",
+      "clue": "Go to Gettysburg National Cemetery on Cemetery Hill, just south of downtown. Look for the tall granite monument at the center, with graves in curved rows around it.",
+      "safety": "This is a cemetery. Be quiet and respectful, stay on the paths, and never climb on the monument or step on the graves.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What do the 18 bronze stars around the base stand for?",
+        "options": [
+          "The Union states with soldiers buried here",
+          "The generals in the battle",
+          "The years of the war",
+          "The regiments in the battle"
+        ],
+        "answer": 0,
+        "hint": "They stand for something that is also divided into sections in the cemetery.",
+        "verify": "Wikipedia says the stars represent the eighteen Union states with buried dead. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1905",
+        "label": "The monument then",
+        "line": "A postcard photograph from 1905 of the monument, with an iron fence around its base and trees behind it.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "gb_sm_then",
+          "by": "Detroit Photographic Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:National_Monument_in_National_Cemetery,_Gettysburg,_Pa_(NYPL_b12647398-66459).tiff",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2017",
+        "head": "Today",
+        "label": "The monument today",
+        "line": "The tall white granite monument with its statues at the base, against a blue sky.",
+        "ph": {
+          "k": "gb_sm_now",
+          "by": "Farragutful",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Soldiers'_National_Monument_-_Gettysburg_National_Cemetery.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Soldiers' National Monument stands at the central point of Gettysburg National Cemetery. The monument is 60 feet tall, made of granite, and designed by sculptor Randolph Rogers and architect George Keller. The last four lines of the Gettysburg Address are written on it.",
+        "A statue of the Genius of Liberty stands on top, and eighteen bronze stars circle the pedestal, one for each Union state with buried dead. Four statues at the corners are War, History, Peace and Plenty, and together they tell a story of peace and plenty after a hard struggle.",
+        "The cornerstone was laid on July 4, 1865, and the monument was dedicated in 1869. Many people think it marks where Lincoln gave his speech. Wikipedia says it does not: scholars place the speech about 40 yards east of the monument."
+      ],
+      "fact": "The Genius of Liberty statue was carved in Rome.",
+      "disputed": "Many people think the monument stands on the exact spot of the Gettysburg Address. Wikipedia says it does not.",
+      "claims": [
+        {
+          "t": "The monument was dedicated in 1869.",
+          "a": 0,
+          "why": "Wikipedia: dedicated in 1869."
+        },
+        {
+          "t": "The monument stands on the exact spot where Lincoln gave the Gettysburg Address.",
+          "a": 2,
+          "why": "Wikipedia says that is a popular belief but not true."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Soldiers' National Monument",
+          "u": "https://en.wikipedia.org/wiki/Soldiers%27_National_Monument"
+        },
+        {
+          "t": "Wikipedia: Gettysburg National Cemetery",
+          "u": "https://en.wikipedia.org/wiki/Gettysburg_National_Cemetery"
+        }
+      ],
+      "card": {
+        "a": "1865",
+        "b": "1869",
+        "la": "Cornerstone laid",
+        "lb": "Dedicated"
+      }
     },
-    "ph": {
-     "k": "gb_nc_then",
-     "by": "David Bachrach",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Lincoln's_Gettysburg_Address,_Gettysburg.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2019",
-    "head": "Today",
-    "label": "The cemetery today",
-    "line": "Curved rows of graves on a green hill with the tall monument in the distance under a blue sky.",
-    "ph": {
-     "k": "gb_nc_now",
-     "by": "P. Hughes",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Gettysburg_National_Cemetery_(2019).jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Gettysburg National Cemetery was originally called Soldiers' National Cemetery. It was created for Union soldiers who died in the Battle of Gettysburg, which was fought July 1 to 3, 1863. It has 3,512 Civil War burials, including 979 unknowns, and later sections for veterans of other wars. In all it holds more than 6,000 burials.",
-    "On November 19, 1863, four and a half months after the battle, Abraham Lincoln came here to take part in the consecration of the cemetery. His speech has only 271 words, and he read it in less than two minutes to about 15,000 people.",
-    "Every year the day of the speech is marked in town as Remembrance Day, with a parade and ceremonies."
-   ],
-   "fact": "The speech was shorter than most of the day's other talks.",
-   "disputed": "Many people think a famous speech must have been long. Wikipedia says this one has only 271 words and took less than two minutes.",
-   "claims": [
     {
-     "t": "The Gettysburg Address has 271 words.",
-     "a": 0,
-     "why": "Wikipedia: only 271 words."
-    },
-    {
-     "t": "Lincoln spoke for more than an hour.",
-     "a": 2,
-     "why": "Wikipedia says it was read in less than two minutes."
+      "id": "cemetery",
+      "name": "Gettysburg National Cemetery",
+      "short": "National Cemetery",
+      "badge": "National Cemetery",
+      "tag": "Stop 4 of 4",
+      "teaser": "Where Lincoln gave a speech of 271 words in under two minutes.",
+      "map": "Gettysburg National Cemetery, Gettysburg, PA",
+      "clue": "Go to Cemetery Hill, just south of downtown. Look for the iron gate and the grassy hillside with curved rows of graves.",
+      "safety": "This is a cemetery. Be quiet and respectful, stay on the paths, and do not step on graves. Dress for weather, since the hill is open and windy.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "How many words is the Gettysburg Address?",
+        "options": [
+          "1,000",
+          "2,700",
+          "271",
+          "27"
+        ],
+        "answer": 2,
+        "hint": "It is famous for how short it is.",
+        "verify": "Wikipedia says the speech has only 271 words. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "November 19, 1863",
+        "label": "The dedication then",
+        "line": "A crowd of people in dark coats and hats, packed close together at the dedication.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "gb_nc_then",
+          "by": "David Bachrach",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Lincoln's_Gettysburg_Address,_Gettysburg.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2019",
+        "head": "Today",
+        "label": "The cemetery today",
+        "line": "Curved rows of graves on a green hill with the tall monument in the distance under a blue sky.",
+        "ph": {
+          "k": "gb_nc_now",
+          "by": "P. Hughes",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Gettysburg_National_Cemetery_(2019).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Gettysburg National Cemetery was originally called Soldiers' National Cemetery. It was created for Union soldiers who died in the Battle of Gettysburg, which was fought July 1 to 3, 1863. It has 3,512 Civil War burials, including 979 unknowns, and later sections for veterans of other wars. In all it holds more than 6,000 burials.",
+        "On November 19, 1863, four and a half months after the battle, Abraham Lincoln came here to take part in the consecration of the cemetery. His speech has only 271 words, and he read it in less than two minutes to about 15,000 people.",
+        "Every year the day of the speech is marked in town as Remembrance Day, with a parade and ceremonies."
+      ],
+      "fact": "The speech was shorter than most of the day's other talks.",
+      "disputed": "Many people think a famous speech must have been long. Wikipedia says this one has only 271 words and took less than two minutes.",
+      "claims": [
+        {
+          "t": "The Gettysburg Address has 271 words.",
+          "a": 0,
+          "why": "Wikipedia: only 271 words."
+        },
+        {
+          "t": "Lincoln spoke for more than an hour.",
+          "a": 2,
+          "why": "Wikipedia says it was read in less than two minutes."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Gettysburg National Cemetery",
+          "u": "https://en.wikipedia.org/wiki/Gettysburg_National_Cemetery"
+        },
+        {
+          "t": "Wikipedia: Gettysburg Address",
+          "u": "https://en.wikipedia.org/wiki/Gettysburg_Address"
+        }
+      ],
+      "card": {
+        "a": "1863",
+        "b": "1863",
+        "la": "Battle in July",
+        "lb": "Speech in November"
+      }
     }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Gettysburg National Cemetery",
-     "u": "https://en.wikipedia.org/wiki/Gettysburg_National_Cemetery"
-    },
-    {
-     "t": "Wikipedia: Gettysburg Address",
-     "u": "https://en.wikipedia.org/wiki/Gettysburg_Address"
-    }
-   ],
-   "card": {
-    "a": "1863",
-    "b": "1863",
-    "la": "Battle in July",
-    "lb": "Speech in November"
-   }
-  }
- ],
- "heroKey": "gb_ph_now"
+  ],
+  "heroKey": "gb_ph_now"
 }

@@ -1,417 +1,417 @@
 {
- "id": "chicago",
- "name": "Chicago",
- "explorer": "Loop Explorer",
- "initials": "CHI",
- "ranks": [
-  [
-   0,
-   "Visitor"
-  ],
-  [
-   100,
-   "Loop Walker"
-  ],
-  [
-   250,
-   "Landmark Hunter"
-  ],
-  [
-   450,
-   "Skyline Scholar"
-  ],
-  [
-   600,
-   "Chicago Historian"
-  ]
- ],
- "heroAlt": "Buckingham Fountain with the Chicago skyline behind it",
- "heroLi": "<li>Header: Cdurrani · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a> · resized</li>",
- "heroCredit": "Photo: Cdurrani · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a>",
- "mission": "Find four landmarks in and around the Loop. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. The rest of Chicago is waiting.",
- "safetyNote": "<li>Chicago weather swings fast and the lakefront wind is real. Dress for it, cross at crosswalks, and keep an eye on traffic and bikes near the park paths.</li>",
- "badgeMap": {
-  "cloudgate": [
-   "chi_cg_now",
-   "50% 40%"
-  ],
-  "buckingham": [
-   "chi_bf_now",
-   "50% 30%"
-  ],
-  "rookery": [
-   "chi_ro_now",
-   "50% 45%"
-  ],
-  "lpconservatory": [
-   "chi_lp_now",
-   "50% 45%"
-  ]
- },
- "level": "Classics",
- "region": "The Midwest",
- "stops": [
-  {
-   "id": "cloudgate",
-   "name": "Cloud Gate",
-   "short": "Cloud Gate",
-   "badge": "Cloud Gate",
-   "tag": "Stop 1 of 4",
-   "teaser": "A giant mirror bean. Everyone calls it something else.",
-   "map": "Cloud Gate, 201 E Randolph St, Chicago, IL",
-   "clue": "Head to AT&T Plaza in Millennium Park. Look for a huge polished steel sculpture shaped like a kidney bean, and walk into the arch underneath.",
-   "safety": "Millennium Park is crowded on summer weekends. Watch your step on the plaza, keep young kids close, and stay on the ground. The sculpture is for looking, not climbing.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Step into the arch underneath the sculpture and look up at your reflection. What does it do?",
-    "options": [
-     "It disappears",
-     "It splits into many warped copies",
-     "It turns green",
-     "It stays one normal copy"
+  "id": "chicago",
+  "name": "Chicago",
+  "explorer": "Loop Explorer",
+  "initials": "CHI",
+  "ranks": [
+    [
+      0,
+      "Visitor"
     ],
-    "answer": 1,
-    "hint": "Look straight up, not at the outside.",
-    "verify": "The arch underneath is called the omphalos. Its curved mirror multiplies and bends reflections (Wikipedia, Cloud Gate). Check on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "2004",
-    "label": "Under construction",
-    "line": "Cloud Gate under construction in 2004, with a crane and a large steel ring on the site.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "chi_cg_then",
-     "by": "Cmgiulini",
-     "lic": "CC BY 3.0",
-     "lu": "https://creativecommons.org/licenses/by/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Cloud_gate_construction.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2013",
-    "head": "Today",
-    "label": "From under Cloud Gate",
-    "line": "The Chicago skyline seen from underneath the sculpture. Photo from 2013.",
-    "ph": {
-     "k": "chi_cg_now",
-     "by": "Roman Boed",
-     "lic": "CC BY 2.0",
-     "lu": "https://creativecommons.org/licenses/by/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Chicago_from_under_the_Cloud_Gate_(9694666470).jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Artist Anish Kapoor designed it, and it was built from 2004 to 2006. It was partly unveiled at the Millennium Park opening on July 15, 2004, finished in August 2005, and formally dedicated on May 15, 2006.",
-    "It is made of 168 stainless steel plates, joined and polished so the seams are hard to find. It is about 33 feet tall, 66 feet long and 42 feet wide, and weighs about 110 short tons.",
-    "The public nicknamed it \"The Bean\" while it was under construction. Kapoor did not like the nickname at first but later accepted it. The arch underneath has its own name, the omphalos, Greek for navel."
-   ],
-   "fact": "Kapoor's official title is Cloud Gate. The Bean was the crowd's idea.",
-   "disputed": "Nothing big is disputed here. The thing people most often get wrong is who came up with the name.",
-   "claims": [
-    {
-     "t": "Cloud Gate is made of 168 stainless steel plates.",
-     "a": 0,
-     "why": "Wikipedia gives 168 plates, polished so the seams are hard to see."
-    },
-    {
-     "t": "Artist Anish Kapoor named the sculpture \"The Bean.\"",
-     "a": 2,
-     "why": "The public came up with the nickname during construction. Kapoor's title is Cloud Gate."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Cloud Gate",
-     "u": "https://en.wikipedia.org/wiki/Cloud_Gate"
-    },
-    {
-     "t": "Structurae: Cloud Gate",
-     "u": "https://structurae.net/en/structures/cloud-gate"
-    }
-   ],
-   "card": {
-    "a": "2004",
-    "b": "2006",
-    "la": "Partly unveiled",
-    "lb": "Dedicated"
-   }
+    [
+      100,
+      "Loop Walker"
+    ],
+    [
+      250,
+      "Landmark Hunter"
+    ],
+    [
+      450,
+      "Skyline Scholar"
+    ],
+    [
+      600,
+      "Chicago Historian"
+    ]
+  ],
+  "heroAlt": "Buckingham Fountain with the Chicago skyline behind it",
+  "heroLi": "<li>Header: Cdurrani · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a> · resized</li>",
+  "heroCredit": "Photo: Cdurrani · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG\">Source</a>",
+  "mission": "Find four landmarks in and around the Loop. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Chicago is waiting.",
+  "safetyNote": "<li>Chicago weather swings fast and the lakefront wind is real. Dress for it, cross at crosswalks, and keep an eye on traffic and bikes near the park paths.</li>",
+  "badgeMap": {
+    "cloudgate": [
+      "chi_cg_now",
+      "50% 40%"
+    ],
+    "buckingham": [
+      "chi_bf_now",
+      "50% 30%"
+    ],
+    "rookery": [
+      "chi_ro_now",
+      "50% 45%"
+    ],
+    "lpconservatory": [
+      "chi_lp_now",
+      "50% 45%"
+    ]
   },
-  {
-   "id": "rookery",
-   "name": "The Rookery",
-   "short": "The Rookery",
-   "badge": "The Rookery",
-   "tag": "Stop 2 of 4",
-   "teaser": "A building named for a pigeon-and-politician nest, with a Frank Lloyd Wright lobby.",
-   "map": "The Rookery Building, 209 S LaSalle St, Chicago, IL",
-   "clue": "Go to the Loop at LaSalle and Adams Streets and find the big red-brick building with a glowing glass court inside.",
-   "safety": "The Loop is busy on weekdays. Use crosswalks. The lobby is open to the public on business days only.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Look at the building from the street. About how many stories is the Rookery?",
-    "options": [
-     "8",
-     "12",
-     "20",
-     "30"
-    ],
-    "answer": 1,
-    "hint": "More than ten, fewer than twenty.",
-    "verify": "Wikipedia says 12 stories. Estimate from the street. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1891",
-    "label": "The Rookery then",
-    "line": "The Rookery in 1891, three years after it opened.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "chi_ro_then",
-     "by": "Unknown",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:1891_Rookery_building.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "Today",
-    "head": "Today",
-    "label": "The building today",
-    "line": "The red-brick building stands on LaSalle Street.",
-    "ph": {
-     "k": "chi_ro_now",
-     "by": "Marlene Calderon",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:The_Rookery,_Chicago,_IL.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The Rookery was completed in 1888 and designed by Burnham and Root. The name may refer to pigeons that nested on a reservoir previously on the site, or to the temporary city hall that later stood there. The old city hall was nicknamed a rookery for the crows and pigeons that flocked to it and for the corrupt politicians it housed.",
-    "It has 12 stories and stands 181 feet tall. The exterior walls carry load, and there is an interior steel frame. Frank Lloyd Wright redesigned the lobby between 1905 and 1907, and William Drummond remodeled the building in 1931.",
-    "A two-story light court in white terracotta brings daylight to inside offices. Its skylight has 5,000 glass panes. It was designated a National Historic Landmark on May 15, 1975."
-   ],
-   "fact": "The skylight has 5,000 glass panes.",
-   "disputed": "The name has two origin stories, and Wikipedia gives both without choosing one.",
-   "claims": [
+  "level": "Classics",
+  "region": "The Midwest",
+  "stops": [
     {
-     "t": "Frank Lloyd Wright remodeled the Rookery's lobby.",
-     "a": 0,
-     "why": "Wikipedia: he remodeled it from 1905 to 1907."
-    },
-    {
-     "t": "The Rookery was named for a flock of pigeons, and nothing else.",
-     "a": 1,
-     "why": "Wikipedia gives two accounts: pigeons on an old reservoir, or an old city hall nicknamed the rookery."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Rookery Building",
-     "u": "https://en.wikipedia.org/wiki/Rookery_Building"
-    },
-    {
-     "t": "Encyclopedia of Chicago: Rookery",
-     "u": "https://encyclopedia.chicagohistory.org/pages/10549.html"
-    }
-   ],
-   "card": {
-    "a": "1888",
-    "b": "1907",
-    "la": "Built",
-    "lb": "Wright's lobby"
-   }
-  },
-  {
-   "id": "buckingham",
-   "name": "Buckingham Fountain",
-   "short": "Fountain",
-   "badge": "Fountain",
-   "tag": "Stop 3 of 4",
-   "teaser": "A wedding cake for a lake.",
-   "map": "Buckingham Fountain, 301 S Columbus Dr, Chicago, IL",
-   "clue": "Cross into Grant Park and find a giant, many-layered fountain with stone sea horses around it.",
-   "safety": "The fountain runs only in warm months, usually early May to mid October. Stay off the basin walls and keep clear of the spray, which can soak the pavement.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Walk around the fountain and count the sea horse statues. How many are there?",
-    "options": [
-     "4",
-     "6",
-     "8",
-     "12"
-    ],
-    "answer": 2,
-    "hint": "They come in pairs.",
-    "verify": "Four pairs of sea horses stand for four states (Wikipedia, Buckingham Fountain). Count on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1939",
-    "label": "A 1939 poster",
-    "line": "A Federal Art Project poster advertising the fountain as free, in 1939.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "chi_bf_then",
-     "by": "John Buczak, Federal Art Project",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Buckinghamfountain3g05158u.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2012",
-    "head": "Today",
-    "label": "The fountain today",
-    "line": "Buckingham Fountain in front of the Chicago skyline. Photo from 2012.",
-    "ph": {
-     "k": "chi_bf_now",
-     "by": "Cdurrani",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The fountain was dedicated on August 26, 1927. Kate Sturges Buckingham gave it to the city in memory of her brother Clarence Buckingham.",
-    "Edward H. Bennett designed it, and French sculptor Marcel Loyau made the statues. It was inspired by the Latona Fountain at the Palace of Versailles.",
-    "The four pairs of sea horses stand for the four states that touch Lake Michigan: Illinois, Wisconsin, Michigan and Indiana. The whole fountain stands for the lake. The center jet can reach 150 feet."
-   ],
-   "fact": "The fountain holds about 1.5 million gallons and has 193 jets.",
-   "disputed": "Wikipedia calls it \"one of the largest fountains in the world.\" Whether it is the largest depends on how you measure, so treat that as a claim, not a record.",
-   "claims": [
-    {
-     "t": "The sea horses at Buckingham Fountain stand for the four states that touch Lake Michigan.",
-     "a": 0,
-     "why": "Wikipedia: four pairs of sea horses for Illinois, Wisconsin, Michigan and Indiana."
+      "id": "cloudgate",
+      "name": "Cloud Gate",
+      "short": "Cloud Gate",
+      "badge": "Cloud Gate",
+      "tag": "Stop 1 of 4",
+      "teaser": "A giant mirror bean. Everyone calls it something else.",
+      "map": "Cloud Gate, 201 E Randolph St, Chicago, IL",
+      "clue": "Head to AT&T Plaza in Millennium Park. Look for a huge polished steel sculpture shaped like a kidney bean, and walk into the arch underneath.",
+      "safety": "Millennium Park is crowded on summer weekends. Watch your step on the plaza, keep young kids close, and stay on the ground. The sculpture is for looking, not climbing.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Step into the arch underneath the sculpture and look up at your reflection. What does it do?",
+        "options": [
+          "It disappears",
+          "It splits into many warped copies",
+          "It turns green",
+          "It stays one normal copy"
+        ],
+        "answer": 1,
+        "hint": "Look straight up, not at the outside.",
+        "verify": "The arch underneath is called the omphalos. Its curved mirror multiplies and bends reflections (Wikipedia, Cloud Gate). Check on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "2004",
+        "label": "Under construction",
+        "line": "Cloud Gate under construction in 2004, with a crane and a large steel ring on the site.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "chi_cg_then",
+          "by": "Cmgiulini",
+          "lic": "CC BY 3.0",
+          "lu": "https://creativecommons.org/licenses/by/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Cloud_gate_construction.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "From under Cloud Gate",
+        "line": "The Chicago skyline seen from underneath the sculpture. Photo from 2013.",
+        "ph": {
+          "k": "chi_cg_now",
+          "by": "Roman Boed",
+          "lic": "CC BY 2.0",
+          "lu": "https://creativecommons.org/licenses/by/2.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Chicago_from_under_the_Cloud_Gate_(9694666470).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Artist Anish Kapoor designed it, and it was built from 2004 to 2006. It was partly unveiled at the Millennium Park opening on July 15, 2004, finished in August 2005, and formally dedicated on May 15, 2006.",
+        "It is made of 168 stainless steel plates, joined and polished so the seams are hard to find. It is about 33 feet tall, 66 feet long and 42 feet wide, and weighs about 110 short tons.",
+        "The public nicknamed it \"The Bean\" while it was under construction. Kapoor did not like the nickname at first but later accepted it. The arch underneath has its own name, the omphalos, Greek for navel."
+      ],
+      "fact": "Kapoor's official title is Cloud Gate. The Bean was the crowd's idea.",
+      "disputed": "Nothing big is disputed here. The thing people most often get wrong is who came up with the name.",
+      "claims": [
+        {
+          "t": "Cloud Gate is made of 168 stainless steel plates.",
+          "a": 0,
+          "why": "Wikipedia gives 168 plates, polished so the seams are hard to see."
+        },
+        {
+          "t": "Artist Anish Kapoor named the sculpture \"The Bean.\"",
+          "a": 2,
+          "why": "The public came up with the nickname during construction. Kapoor's title is Cloud Gate."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Cloud Gate",
+          "u": "https://en.wikipedia.org/wiki/Cloud_Gate"
+        },
+        {
+          "t": "Structurae: Cloud Gate",
+          "u": "https://structurae.net/en/structures/cloud-gate"
+        }
+      ],
+      "card": {
+        "a": "2004",
+        "b": "2006",
+        "la": "Partly unveiled",
+        "lb": "Dedicated"
+      }
     },
     {
-     "t": "Buckingham Fountain is the largest fountain in the world.",
-     "a": 1,
-     "why": "Wikipedia says \"one of the largest.\" Rankings depend on what is measured."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Buckingham Fountain",
-     "u": "https://en.wikipedia.org/wiki/Buckingham_Fountain"
+      "id": "rookery",
+      "name": "The Rookery",
+      "short": "The Rookery",
+      "badge": "The Rookery",
+      "tag": "Stop 2 of 4",
+      "teaser": "A building named for a pigeon-and-politician nest, with a Frank Lloyd Wright lobby.",
+      "map": "The Rookery Building, 209 S LaSalle St, Chicago, IL",
+      "clue": "Go to the Loop at LaSalle and Adams Streets and find the big red-brick building with a glowing glass court inside.",
+      "safety": "The Loop is busy on weekdays. Use crosswalks. The lobby is open to the public on business days only.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Look at the building from the street. About how many stories is the Rookery?",
+        "options": [
+          "8",
+          "12",
+          "20",
+          "30"
+        ],
+        "answer": 1,
+        "hint": "More than ten, fewer than twenty.",
+        "verify": "Wikipedia says 12 stories. Estimate from the street. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1891",
+        "label": "The Rookery then",
+        "line": "The Rookery in 1891, three years after it opened.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "chi_ro_then",
+          "by": "Unknown",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:1891_Rookery_building.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "Today",
+        "head": "Today",
+        "label": "The building today",
+        "line": "The red-brick building stands on LaSalle Street.",
+        "ph": {
+          "k": "chi_ro_now",
+          "by": "Marlene Calderon",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:The_Rookery,_Chicago,_IL.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Rookery was completed in 1888 and designed by Burnham and Root. The name may refer to pigeons that nested on a reservoir previously on the site, or to the temporary city hall that later stood there. The old city hall was nicknamed a rookery for the crows and pigeons that flocked to it and for the corrupt politicians it housed.",
+        "It has 12 stories and stands 181 feet tall. The exterior walls carry load, and there is an interior steel frame. Frank Lloyd Wright redesigned the lobby between 1905 and 1907, and William Drummond remodeled the building in 1931.",
+        "A two-story light court in white terracotta brings daylight to inside offices. Its skylight has 5,000 glass panes. It was designated a National Historic Landmark on May 15, 1975."
+      ],
+      "fact": "The skylight has 5,000 glass panes.",
+      "disputed": "The name has two origin stories, and Wikipedia gives both without choosing one.",
+      "claims": [
+        {
+          "t": "Frank Lloyd Wright remodeled the Rookery's lobby.",
+          "a": 0,
+          "why": "Wikipedia: he remodeled it from 1905 to 1907."
+        },
+        {
+          "t": "The Rookery was named for a flock of pigeons, and nothing else.",
+          "a": 1,
+          "why": "Wikipedia gives two accounts: pigeons on an old reservoir, or an old city hall nicknamed the rookery."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Rookery Building",
+          "u": "https://en.wikipedia.org/wiki/Rookery_Building"
+        },
+        {
+          "t": "Encyclopedia of Chicago: Rookery",
+          "u": "https://encyclopedia.chicagohistory.org/pages/10549.html"
+        }
+      ],
+      "card": {
+        "a": "1888",
+        "b": "1907",
+        "la": "Built",
+        "lb": "Wright's lobby"
+      }
     },
     {
-     "t": "The Clio: Buckingham Memorial Fountain",
-     "u": "https://theclio.com/tour/224/8"
-    }
-   ],
-   "card": {
-    "a": "1927",
-    "b": "150 ft",
-    "la": "Dedicated",
-    "lb": "Tallest jet"
-   }
-  },
-  {
-   "id": "lpconservatory",
-   "name": "Lincoln Park Conservatory",
-   "short": "Conservatory",
-   "badge": "Conservatory",
-   "tag": "Stop 4 of 4",
-   "teaser": "A glass-house jungle in the middle of winter.",
-   "map": "Lincoln Park Conservatory, 2391 N Stockton Dr, Chicago, IL",
-   "clue": "Go to Lincoln Park and find the big glass-house conservatory near the zoo.",
-   "safety": "Watch for bikes on park paths. Stay on walkways and do not pick or touch plants.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "One room sits about 5.5 feet below ground level, filled with ferns. What is it called?",
-    "options": [
-     "The Palm House",
-     "The Orchid Room",
-     "The Display House",
-     "The Fern Room"
-    ],
-    "answer": 3,
-    "hint": "It's named for what grows in it.",
-    "verify": "Wikipedia says the Fern Room sits about 5.5 feet below grade. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1914",
-    "label": "The conservatory then",
-    "line": "A postcard of the flower garden and conservatory, about 1914.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
+      "id": "buckingham",
+      "name": "Buckingham Fountain",
+      "short": "Fountain",
+      "badge": "Fountain",
+      "tag": "Stop 3 of 4",
+      "teaser": "A wedding cake for a lake.",
+      "map": "Buckingham Fountain, 301 S Columbus Dr, Chicago, IL",
+      "clue": "Cross into Grant Park and find a giant, many-layered fountain with stone sea horses around it.",
+      "safety": "The fountain runs only in warm months, usually early May to mid October. Stay off the basin walls and keep clear of the spray, which can soak the pavement.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Walk around the fountain and count the sea horse statues. How many are there?",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        "answer": 2,
+        "hint": "They come in pairs.",
+        "verify": "Four pairs of sea horses stand for four states (Wikipedia, Buckingham Fountain). Count on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1933",
+        "label": "The fountain in 1933",
+        "line": "A 1933 photograph of the fountain's jets in front of the downtown skyline, taken during the Century of Progress World's Fair year.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "chi_bf_then",
+          "by": "Kaufmann & Fabry Co. (Century of Progress official photographers)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_in_Grant_Park,_Chicago,_1933_(NBY_3179).jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2012",
+        "head": "Today",
+        "label": "The fountain today",
+        "line": "Buckingham Fountain in front of the Chicago skyline. Photo from 2012.",
+        "ph": {
+          "k": "chi_bf_now",
+          "by": "Cdurrani",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago,_IL.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The fountain was dedicated on August 26, 1927. Kate Sturges Buckingham gave it to the city in memory of her brother Clarence Buckingham.",
+        "Edward H. Bennett designed it, and French sculptor Marcel Loyau made the statues. It was inspired by the Latona Fountain at the Palace of Versailles.",
+        "The four pairs of sea horses stand for the four states that touch Lake Michigan: Illinois, Wisconsin, Michigan and Indiana. The whole fountain stands for the lake. The center jet can reach 150 feet."
+      ],
+      "fact": "The fountain holds about 1.5 million gallons and has 193 jets.",
+      "disputed": "Wikipedia calls it \"one of the largest fountains in the world.\" Whether it is the largest depends on how you measure, so treat that as a claim, not a record.",
+      "claims": [
+        {
+          "t": "The sea horses at Buckingham Fountain stand for the four states that touch Lake Michigan.",
+          "a": 0,
+          "why": "Wikipedia: four pairs of sea horses for Illinois, Wisconsin, Michigan and Indiana."
+        },
+        {
+          "t": "Buckingham Fountain is the largest fountain in the world.",
+          "a": 1,
+          "why": "Wikipedia says \"one of the largest.\" Rankings depend on what is measured."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Buckingham Fountain",
+          "u": "https://en.wikipedia.org/wiki/Buckingham_Fountain"
+        },
+        {
+          "t": "The Clio: Buckingham Memorial Fountain",
+          "u": "https://theclio.com/tour/224/8"
+        }
+      ],
+      "card": {
+        "a": "1927",
+        "b": "150 ft",
+        "la": "Dedicated",
+        "lb": "Tallest jet"
+      }
     },
-    "ph": {
-     "k": "chi_lp_then",
-     "by": "Unknown (Library of Congress / NYPL postcard)",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:392,_Flower_Garden,_Fountain,_and_Conservatory,_Lincoln_Park_(NBY_417804).jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "Today",
-    "head": "Today",
-    "label": "The conservatory today",
-    "line": "The glass house stands beside the flower garden.",
-    "ph": {
-     "k": "chi_lp_now",
-     "by": "Alanscottwalker",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:LPConserv.JPG",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The current Lincoln Park Conservatory was built between 1890 and 1895 by the Lincoln Park Commission. Joseph Lyman Silsbee designed it with Mifflin E. Bell. The style is Victorian and exotic, with trusses shaped as ogee arches.",
-    "The vestibule and Palm House opened in 1892. The Fern Room and the Tropical Room, now the Orchid Room, opened in 1895. The Display House shows seasonal flower shows.",
-    "The conservatory covers about 3 acres. It has four display halls, a vestibule and fifteen propagating and growing houses. A fiddle-leaf rubber tree in the Palm House was planted in 1891."
-   ],
-   "fact": "A rubber tree in the Palm House was planted in 1891.",
-   "disputed": "Wikipedia lists several different dates for the greenhouse and the present building, so use ranges.",
-   "claims": [
     {
-     "t": "The current conservatory was built in the early 1890s.",
-     "a": 0,
-     "why": "Wikipedia: built 1890 to 1895."
-    },
-    {
-     "t": "The conservatory is entirely outdoors.",
-     "a": 2,
-     "why": "It is a glass building with indoor display houses."
+      "id": "lpconservatory",
+      "name": "Lincoln Park Conservatory",
+      "short": "Conservatory",
+      "badge": "Conservatory",
+      "tag": "Stop 4 of 4",
+      "teaser": "A glass-house jungle in the middle of winter.",
+      "map": "Lincoln Park Conservatory, 2391 N Stockton Dr, Chicago, IL",
+      "clue": "Go to Lincoln Park and find the big glass-house conservatory near the zoo.",
+      "safety": "Watch for bikes on park paths. Stay on walkways and do not pick or touch plants.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "One room sits about 5.5 feet below ground level, filled with ferns. What is it called?",
+        "options": [
+          "The Palm House",
+          "The Orchid Room",
+          "The Display House",
+          "The Fern Room"
+        ],
+        "answer": 3,
+        "hint": "It's named for what grows in it.",
+        "verify": "Wikipedia says the Fern Room sits about 5.5 feet below grade. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1914",
+        "label": "The conservatory then",
+        "line": "A postcard of the flower garden and conservatory, about 1914.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "chi_lp_then",
+          "by": "Unknown (Library of Congress / NYPL postcard)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:392,_Flower_Garden,_Fountain,_and_Conservatory,_Lincoln_Park_(NBY_417804).jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "Today",
+        "head": "Today",
+        "label": "The conservatory today",
+        "line": "The glass house stands beside the flower garden.",
+        "ph": {
+          "k": "chi_lp_now",
+          "by": "Alanscottwalker",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:LPConserv.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The current Lincoln Park Conservatory was built between 1890 and 1895 by the Lincoln Park Commission. Joseph Lyman Silsbee designed it with Mifflin E. Bell. The style is Victorian and exotic, with trusses shaped as ogee arches.",
+        "The vestibule and Palm House opened in 1892. The Fern Room and the Tropical Room, now the Orchid Room, opened in 1895. The Display House shows seasonal flower shows.",
+        "The conservatory covers about 3 acres. It has four display halls, a vestibule and fifteen propagating and growing houses. A fiddle-leaf rubber tree in the Palm House was planted in 1891."
+      ],
+      "fact": "A rubber tree in the Palm House was planted in 1891.",
+      "disputed": "Wikipedia lists several different dates for the greenhouse and the present building, so use ranges.",
+      "claims": [
+        {
+          "t": "The current conservatory was built in the early 1890s.",
+          "a": 0,
+          "why": "Wikipedia: built 1890 to 1895."
+        },
+        {
+          "t": "The conservatory is entirely outdoors.",
+          "a": 2,
+          "why": "It is a glass building with indoor display houses."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Lincoln Park Conservatory",
+          "u": "https://en.wikipedia.org/wiki/Lincoln_Park_Conservatory"
+        },
+        {
+          "t": "TCLF: Lincoln Park Conservatory",
+          "u": "https://www.tclf.org/lincoln-park-conservatory"
+        }
+      ],
+      "card": {
+        "a": "1892",
+        "b": "1895",
+        "la": "Palm House",
+        "lb": "Fern Room"
+      }
     }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: Lincoln Park Conservatory",
-     "u": "https://en.wikipedia.org/wiki/Lincoln_Park_Conservatory"
-    },
-    {
-     "t": "TCLF: Lincoln Park Conservatory",
-     "u": "https://www.tclf.org/lincoln-park-conservatory"
-    }
-   ],
-   "card": {
-    "a": "1892",
-    "b": "1895",
-    "la": "Palm House",
-    "lb": "Fern Room"
-   }
-  }
- ],
- "heroKey": "chi_bf_now"
+  ],
+  "heroKey": "chi_bf_now"
 }

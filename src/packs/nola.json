@@ -1,417 +1,417 @@
 {
- "id": "nola",
- "name": "New Orleans",
- "explorer": "French Quarter Explorer",
- "initials": "NOLA",
- "ranks": [
-  [
-   0,
-   "Visitor"
-  ],
-  [
-   100,
-   "Quarter Walker"
-  ],
-  [
-   250,
-   "Landmark Hunter"
-  ],
-  [
-   450,
-   "Crescent Scholar"
-  ],
-  [
-   600,
-   "New Orleans Historian"
-  ]
- ],
- "heroAlt": "Jackson Square in the French Quarter",
- "heroLi": "<li>Header: Diego Delso · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg\">Source</a> · resized</li>",
- "heroCredit": "Photo: Diego Delso · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg\">Source</a>",
- "mission": "Find four landmarks in the French Quarter. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
- "afterDone": "All four badges earned. The rest of New Orleans is waiting.",
- "safetyNote": "<li>The French Quarter is hot, humid and crowded, with uneven sidewalks and traffic. Bring water, watch your step and stay aware of your surroundings.</li>",
- "badgeMap": {
-  "jacksonsq": [
-   "no_js_now",
-   "50% 50%"
-  ],
-  "cathedral": [
-   "no_ca_now",
-   "50% 40%"
-  ],
-  "cabildo": [
-   "no_cb_now",
-   "50% 50%"
-  ],
-  "frenchmarket": [
-   "no_fm_now",
-   "50% 50%"
-  ]
- },
- "level": "Classics",
- "region": "The South",
- "stops": [
-  {
-   "id": "jacksonsq",
-   "name": "Jackson Square",
-   "short": "Jackson Square",
-   "badge": "Jackson Square",
-   "tag": "Stop 1 of 4",
-   "teaser": "A parade ground with a man on a rearing horse.",
-   "map": "Jackson Square, 700 Decatur St, New Orleans, LA",
-   "clue": "In the French Quarter, find the park with a bronze statue of a rider on a rearing horse, in front of a big church.",
-   "safety": "The square is crowded with performers and tourists. Watch your belongings, the uneven sidewalks and the heat.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Whose statue stands in the center of the square?",
-    "options": [
-     "Robert E. Lee",
-     "George Washington",
-     "Andrew Jackson",
-     "Marquis de Lafayette"
+  "id": "nola",
+  "name": "New Orleans",
+  "explorer": "French Quarter Explorer",
+  "initials": "NOLA",
+  "ranks": [
+    [
+      0,
+      "Visitor"
     ],
-    "answer": 2,
-    "hint": "The square is named for him.",
-    "verify": "The square is named for Andrew Jackson, whose statue was erected in 1851 (National Park Service). Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "1885",
-    "label": "The square then",
-    "line": "A view of Jackson Square from above in 1885, with the statue at the center.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "no_js_then",
-     "by": "W. P. Snyder",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2008",
-    "head": "Today",
-    "label": "The square today",
-    "line": "Jackson Square in the French Quarter. Photo from 2008.",
-    "ph": {
-     "k": "no_js_now",
-     "by": "Diego Delso",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "In the 19th century the square was the Place d'Armes, the traditional site of important ceremonies and parades.",
-    "On December 18, 1814, Andrew Jackson reviewed about 6,000 troops there. His speech, translated by Edward Livingston, urged unity against a common enemy. The Americans then won the Battle of New Orleans.",
-    "The square kept the Place d'Armes name until 1851, when the current Andrew Jackson statue was erected and it became Jackson Square. It is a National Historic Landmark."
-   ],
-   "fact": "Jackson used the square to muster troops before the Battle of New Orleans.",
-   "disputed": "Nothing big is disputed here. The mistake is thinking the square always had Jackson's name.",
-   "claims": [
-    {
-     "t": "Jackson Square was originally called the Place d'Armes.",
-     "a": 0,
-     "why": "The National Park Service: it kept that name until 1851."
-    },
-    {
-     "t": "Jackson Square was named for Andrew Jackson from the day it was laid out.",
-     "a": 2,
-     "why": "It was the Place d'Armes until the statue was erected in 1851."
-    }
-   ],
-   "sources": [
-    {
-     "t": "National Park Service: Place d'Armes",
-     "u": "https://www.nps.gov/places/places-darmes.htm"
-    },
-    {
-     "t": "TCLF: Jackson Square",
-     "u": "https://www.tclf.org/landscapes/jackson-square"
-    }
-   ],
-   "card": {
-    "a": "1814",
-    "b": "1851",
-    "la": "Troops reviewed",
-    "lb": "Renamed"
-   }
+    [
+      100,
+      "Quarter Walker"
+    ],
+    [
+      250,
+      "Landmark Hunter"
+    ],
+    [
+      450,
+      "Crescent Scholar"
+    ],
+    [
+      600,
+      "New Orleans Historian"
+    ]
+  ],
+  "heroAlt": "Jackson Square in the French Quarter",
+  "heroLi": "<li>Header: Diego Delso · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg\">Source</a> · resized</li>",
+  "heroCredit": "Photo: Diego Delso · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg\">Source</a>",
+  "mission": "Find four landmarks in the French Quarter. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of New Orleans is waiting.",
+  "safetyNote": "<li>The French Quarter is hot, humid and crowded, with uneven sidewalks and traffic. Bring water, watch your step and stay aware of your surroundings.</li>",
+  "badgeMap": {
+    "jacksonsq": [
+      "no_js_now",
+      "50% 50%"
+    ],
+    "cathedral": [
+      "no_ca_now",
+      "50% 40%"
+    ],
+    "cabildo": [
+      "no_cb_now",
+      "50% 50%"
+    ],
+    "frenchmarket": [
+      "no_fm_now",
+      "50% 50%"
+    ]
   },
-  {
-   "id": "cathedral",
-   "name": "St. Louis Cathedral",
-   "short": "Cathedral",
-   "badge": "Cathedral",
-   "tag": "Stop 2 of 4",
-   "teaser": "A church rebuilt after a Good Friday fire.",
-   "map": "St. Louis Cathedral, 615 Pere Antoine Alley, New Orleans, LA",
-   "clue": "Stand in Jackson Square and face the big white church with tall spires.",
-   "safety": "Respect worship times and quiet inside. Watch for crowds and carriage traffic around the square.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Count the tall spires on the front of the cathedral. How many?",
-    "options": [
-     "2",
-     "3",
-     "4",
-     "5"
-    ],
-    "answer": 1,
-    "hint": "Count the pointed towers.",
-    "verify": "The cathedral has three spires (Wikipedia photo caption). Count on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "about 1900",
-    "label": "The cathedral then",
-    "line": "St. Louis Cathedral and the Jackson Square statue around 1900, in a Detroit Photographic Co. photo.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "no_ca_then",
-     "by": "Detroit Photographic Co.",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square_&_Cathedral_of_St._Louis,_New_Orleans_LCCN2017658694.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2022",
-    "head": "Today",
-    "label": "Inside the cathedral",
-    "line": "The nave, with flags hanging from the balconies. Photo from 2022.",
-    "ph": {
-     "k": "no_ca_now",
-     "by": "APK",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:St._Louis_Cathedral_(New_Orleans)_2.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The first church on the site, a crude wooden building, went up in 1718. A brick and timber church was completed in 1727. The Great New Orleans Fire destroyed it on Good Friday, March 21, 1788.",
-    "The third church was begun in 1789 and finished in 1794, and the church became a cathedral in 1793. The present building dates mostly to 1850. A central tower designed by Benjamin Henry Latrobe in 1819 collapsed in 1850 during rebuilding.",
-    "Pope Paul VI named it a minor basilica in 1964. Wikipedia calls it \"the oldest cathedral in continuous use in the United States,\" a title it shares with the Royal Presidio Chapel in Monterey, California."
-   ],
-   "fact": "The 1788 fire destroyed the earlier church and many other buildings.",
-   "disputed": "The \"oldest cathedral\" title is shared with a chapel in Monterey, California, so it depends on how you count.",
-   "claims": [
+  "level": "Classics",
+  "region": "The South",
+  "stops": [
     {
-     "t": "The Great New Orleans Fire of 1788 destroyed the earlier church on this site.",
-     "a": 0,
-     "why": "Wikipedia: it burned on Good Friday, March 21, 1788."
-    },
-    {
-     "t": "St. Louis Cathedral is the only oldest cathedral in continuous use in the United States.",
-     "a": 1,
-     "why": "Wikipedia says it shares the distinction with the Royal Presidio Chapel in Monterey, California."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: St. Louis Cathedral",
-     "u": "https://en.wikipedia.org/wiki/St._Louis_Cathedral_(New_Orleans)"
-    },
-    {
-     "t": "The Clio: St. Louis Cathedral",
-     "u": "https://theclio.com/tour/122/5"
-    }
-   ],
-   "card": {
-    "a": "1788",
-    "b": "1850",
-    "la": "Fire destroys church",
-    "lb": "Present building"
-   }
-  },
-  {
-   "id": "cabildo",
-   "name": "The Cabildo",
-   "short": "Cabildo",
-   "badge": "Cabildo",
-   "tag": "Stop 3 of 4",
-   "teaser": "The Spanish city hall where a country changed hands.",
-   "map": "The Cabildo, 701 Chartres St, New Orleans, LA",
-   "clue": "Next to the cathedral on Jackson Square, find the pale, arched building with a dark sloped roof.",
-   "safety": "Stay on the sidewalks, watch for street performers and carriages, and check hours if you want to go in.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "What kind of roof tops the Cabildo's top floor?",
-    "options": [
-     "Flat",
-     "Thatched",
-     "Dome",
-     "Mansard"
-    ],
-    "answer": 3,
-    "hint": "A French style.",
-    "verify": "Wikipedia says a third floor with a French-style mansard roof was added in 1847. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "about 1900",
-    "label": "The Cabildo then",
-    "line": "The Cabildo around 1900, when it was home to the Louisiana Supreme Court.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
-    },
-    "ph": {
-     "k": "no_cb_then",
-     "by": "Detroit Publishing Co.",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Cabildo_Supreme_Court_c_1900_New_Orleans.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2007",
-    "head": "Today",
-    "label": "The Cabildo today",
-    "line": "The Cabildo beside the cathedral. Photo from 2007.",
-    "ph": {
-     "k": "no_cb_now",
-     "by": "Infrogmation of New Orleans",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Cabildo9Jul07SousaphoneFront.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "The Cabildo was built between 1795 and 1799 as the home of Spanish municipal government in New Orleans. Gilberto Guillemard is listed as its architect. Spanish officials used its courtroom from 1799 to 1803.",
-    "Ceremonies marking the transfer of Louisiana took place at the Cabildo in late 1803. A third floor with a French-style mansard roof was added in 1847.",
-    "A fire on May 11, 1988 destroyed the cupola and the entire third floor. The building reopened in 1994 after restoration. Since 1911 it has housed the Louisiana State Museum."
-   ],
-   "fact": "The Sala Capitular hosted landmark court cases, including Plessy v. Ferguson.",
-   "disputed": "Nothing big is disputed here. The mistake is assuming the roof you see is original.",
-   "claims": [
-    {
-     "t": "The Cabildo was built in the 1790s as the home of Spanish city government.",
-     "a": 0,
-     "why": "Wikipedia: built between 1795 and 1799."
+      "id": "jacksonsq",
+      "name": "Jackson Square",
+      "short": "Jackson Square",
+      "badge": "Jackson Square",
+      "tag": "Stop 1 of 4",
+      "teaser": "A parade ground with a man on a rearing horse.",
+      "map": "Jackson Square, 700 Decatur St, New Orleans, LA",
+      "clue": "In the French Quarter, find the park with a bronze statue of a rider on a rearing horse, in front of a big church.",
+      "safety": "The square is crowded with performers and tourists. Watch your belongings, the uneven sidewalks and the heat.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Whose statue stands in the center of the square?",
+        "options": [
+          "Robert E. Lee",
+          "George Washington",
+          "Andrew Jackson",
+          "Marquis de Lafayette"
+        ],
+        "answer": 2,
+        "hint": "The square is named for him.",
+        "verify": "The square is named for Andrew Jackson, whose statue was erected in 1851 (National Park Service). Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1900",
+        "label": "The square then",
+        "line": "A colored photograph from about 1900 of Jackson Square, with the statue, St. Louis Cathedral and a few people walking.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "no_js_then",
+          "by": "Detroit Photographic Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square_%26_Cathedral_of_St._Louis,_New_Orleans_LCCN2017658694.jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2008",
+        "head": "Today",
+        "label": "The square today",
+        "line": "Jackson Square in the French Quarter. Photo from 2008.",
+        "ph": {
+          "k": "no_js_now",
+          "by": "Diego Delso",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square,_New_Orleans,_USA1.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "In the 19th century the square was the Place d'Armes, the traditional site of important ceremonies and parades.",
+        "On December 18, 1814, Andrew Jackson reviewed about 6,000 troops there. His speech, translated by Edward Livingston, urged unity against a common enemy. The Americans then won the Battle of New Orleans.",
+        "The square kept the Place d'Armes name until 1851, when the current Andrew Jackson statue was erected and it became Jackson Square. It is a National Historic Landmark."
+      ],
+      "fact": "Jackson used the square to muster troops before the Battle of New Orleans.",
+      "disputed": "Nothing big is disputed here. The mistake is thinking the square always had Jackson's name.",
+      "claims": [
+        {
+          "t": "Jackson Square was originally called the Place d'Armes.",
+          "a": 0,
+          "why": "The National Park Service: it kept that name until 1851."
+        },
+        {
+          "t": "Jackson Square was named for Andrew Jackson from the day it was laid out.",
+          "a": 2,
+          "why": "It was the Place d'Armes until the statue was erected in 1851."
+        }
+      ],
+      "sources": [
+        {
+          "t": "National Park Service: Place d'Armes",
+          "u": "https://www.nps.gov/places/places-darmes.htm"
+        },
+        {
+          "t": "TCLF: Jackson Square",
+          "u": "https://www.tclf.org/landscapes/jackson-square"
+        }
+      ],
+      "card": {
+        "a": "1814",
+        "b": "1851",
+        "la": "Troops reviewed",
+        "lb": "Renamed"
+      }
     },
     {
-     "t": "The mansard roof on the Cabildo is original from the 1790s.",
-     "a": 2,
-     "why": "The third floor and mansard roof were added in 1847, then rebuilt after the 1988 fire."
-    }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: The Cabildo",
-     "u": "https://en.wikipedia.org/wiki/The_Cabildo"
+      "id": "cathedral",
+      "name": "St. Louis Cathedral",
+      "short": "Cathedral",
+      "badge": "Cathedral",
+      "tag": "Stop 2 of 4",
+      "teaser": "A church rebuilt after a Good Friday fire.",
+      "map": "St. Louis Cathedral, 615 Pere Antoine Alley, New Orleans, LA",
+      "clue": "Stand in Jackson Square and face the big white church with tall spires.",
+      "safety": "Respect worship times and quiet inside. Watch for crowds and carriage traffic around the square.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Count the tall spires on the front of the cathedral. How many?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 1,
+        "hint": "Count the pointed towers.",
+        "verify": "The cathedral has three spires (Wikipedia photo caption). Count on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "about 1900",
+        "label": "The cathedral then",
+        "line": "St. Louis Cathedral and the Jackson Square statue around 1900, in a Detroit Photographic Co. photo.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "no_ca_then",
+          "by": "Detroit Photographic Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Jackson_Square_&_Cathedral_of_St._Louis,_New_Orleans_LCCN2017658694.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2022",
+        "head": "Today",
+        "label": "Inside the cathedral",
+        "line": "The nave, with flags hanging from the balconies. Photo from 2022.",
+        "ph": {
+          "k": "no_ca_now",
+          "by": "APK",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:St._Louis_Cathedral_(New_Orleans)_2.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The first church on the site, a crude wooden building, went up in 1718. A brick and timber church was completed in 1727. The Great New Orleans Fire destroyed it on Good Friday, March 21, 1788.",
+        "The third church was begun in 1789 and finished in 1794, and the church became a cathedral in 1793. The present building dates mostly to 1850. A central tower designed by Benjamin Henry Latrobe in 1819 collapsed in 1850 during rebuilding.",
+        "Pope Paul VI named it a minor basilica in 1964. Wikipedia calls it \"the oldest cathedral in continuous use in the United States,\" a title it shares with the Royal Presidio Chapel in Monterey, California."
+      ],
+      "fact": "The 1788 fire destroyed the earlier church and many other buildings.",
+      "disputed": "The \"oldest cathedral\" title is shared with a chapel in Monterey, California, so it depends on how you count.",
+      "claims": [
+        {
+          "t": "The Great New Orleans Fire of 1788 destroyed the earlier church on this site.",
+          "a": 0,
+          "why": "Wikipedia: it burned on Good Friday, March 21, 1788."
+        },
+        {
+          "t": "St. Louis Cathedral is the only oldest cathedral in continuous use in the United States.",
+          "a": 1,
+          "why": "Wikipedia says it shares the distinction with the Royal Presidio Chapel in Monterey, California."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: St. Louis Cathedral",
+          "u": "https://en.wikipedia.org/wiki/St._Louis_Cathedral_(New_Orleans)"
+        },
+        {
+          "t": "The Clio: St. Louis Cathedral",
+          "u": "https://theclio.com/tour/122/5"
+        }
+      ],
+      "card": {
+        "a": "1788",
+        "b": "1850",
+        "la": "Fire destroys church",
+        "lb": "Present building"
+      }
     },
     {
-     "t": "National Park Service: Louisiana territory transferred",
-     "u": "https://www.nps.gov/articles/000/louisiana-territory-officially-transferred.htm"
-    }
-   ],
-   "card": {
-    "a": "1799",
-    "b": "1994",
-    "la": "Completed",
-    "lb": "Reopened after fire"
-   }
-  },
-  {
-   "id": "frenchmarket",
-   "name": "French Market",
-   "short": "French Market",
-   "badge": "French Market",
-   "tag": "Stop 4 of 4",
-   "teaser": "A market older than the country around it.",
-   "map": "French Market, 1008 N Peters St, New Orleans, LA",
-   "clue": "Walk along the river side of the Quarter to the long covered market. At its upriver end you will find a famous café.",
-   "safety": "The market is crowded and the streets around it are busy. Watch for traffic and wet pavement.",
-   "field": "Field notes pending: nobody has walked this stop for the app yet.",
-   "q": {
-    "prompt": "Which famous café marks one end of the French Market?",
-    "options": [
-     "Café du Monde",
-     "Café Beignet",
-     "Café Brasil",
-     "Café Amelie"
-    ],
-    "answer": 0,
-    "hint": "Think powdered sugar.",
-    "verify": "Wikipedia says the market marks the upriver end at Café du Monde. Confirm on site. Written from sources, not yet checked on site."
-   },
-   "then": {
-    "yr": "about 1900",
-    "label": "The market then",
-    "line": "A Detroit Photographic Company view of the French Market around 1900.",
-    "link": {
-     "t": "Look for historic photos at the Library of Congress",
-     "u": "https://www.loc.gov/pictures/"
+      "id": "cabildo",
+      "name": "The Cabildo",
+      "short": "Cabildo",
+      "badge": "Cabildo",
+      "tag": "Stop 3 of 4",
+      "teaser": "The Spanish city hall where a country changed hands.",
+      "map": "The Cabildo, 701 Chartres St, New Orleans, LA",
+      "clue": "Next to the cathedral on Jackson Square, find the pale, arched building with a dark sloped roof.",
+      "safety": "Stay on the sidewalks, watch for street performers and carriages, and check hours if you want to go in.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "What kind of roof tops the Cabildo's top floor?",
+        "options": [
+          "Flat",
+          "Thatched",
+          "Dome",
+          "Mansard"
+        ],
+        "answer": 3,
+        "hint": "A French style.",
+        "verify": "Wikipedia says a third floor with a French-style mansard roof was added in 1847. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "about 1900",
+        "label": "The Cabildo then",
+        "line": "The Cabildo around 1900, when it was home to the Louisiana Supreme Court.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "no_cb_then",
+          "by": "Detroit Publishing Co.",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Cabildo_Supreme_Court_c_1900_New_Orleans.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2007",
+        "head": "Today",
+        "label": "The Cabildo today",
+        "line": "The Cabildo beside the cathedral. Photo from 2007.",
+        "ph": {
+          "k": "no_cb_now",
+          "by": "Infrogmation of New Orleans",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Cabildo9Jul07SousaphoneFront.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Cabildo was built between 1795 and 1799 as the home of Spanish municipal government in New Orleans. Gilberto Guillemard is listed as its architect. Spanish officials used its courtroom from 1799 to 1803.",
+        "Ceremonies marking the transfer of Louisiana took place at the Cabildo in late 1803. A third floor with a French-style mansard roof was added in 1847.",
+        "A fire on May 11, 1988 destroyed the cupola and the entire third floor. The building reopened in 1994 after restoration. Since 1911 it has housed the Louisiana State Museum."
+      ],
+      "fact": "The Sala Capitular hosted landmark court cases, including Plessy v. Ferguson.",
+      "disputed": "Nothing big is disputed here. The mistake is assuming the roof you see is original.",
+      "claims": [
+        {
+          "t": "The Cabildo was built in the 1790s as the home of Spanish city government.",
+          "a": 0,
+          "why": "Wikipedia: built between 1795 and 1799."
+        },
+        {
+          "t": "The mansard roof on the Cabildo is original from the 1790s.",
+          "a": 2,
+          "why": "The third floor and mansard roof were added in 1847, then rebuilt after the 1988 fire."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: The Cabildo",
+          "u": "https://en.wikipedia.org/wiki/The_Cabildo"
+        },
+        {
+          "t": "National Park Service: Louisiana territory transferred",
+          "u": "https://www.nps.gov/articles/000/louisiana-territory-officially-transferred.htm"
+        }
+      ],
+      "card": {
+        "a": "1799",
+        "b": "1994",
+        "la": "Completed",
+        "lb": "Reopened after fire"
+      }
     },
-    "ph": {
-     "k": "no_fm_then",
-     "by": "Detroit Photographic Company",
-     "lic": "Public domain",
-     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0347)_-_French_Market,_New_Orleans.jpg",
-     "note": "resized"
-    }
-   },
-   "now": {
-    "yr": "2016",
-    "head": "Today",
-    "label": "The market hall today",
-    "line": "A covered hall of the French Market. Photo from 2016.",
-    "ph": {
-     "k": "no_fm_now",
-     "by": "Infrogmation of New Orleans",
-     "lic": "CC BY-SA 4.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:French_Market_Hall_New_Orleans_11_October_2016.jpg",
-     "note": "resized"
-    }
-   },
-   "story": [
-    "Part of the space was dedicated as a market in 1791, during the colonial period. Wikipedia says it began as a Native American trading post before European colonization, with no date given. The oldest surviving structures date to about 1813.",
-    "The Works Progress Administration made major renovations in the 1930s. The market spans six blocks, from Café du Monde to the flea market stalls across from the New Orleans Mint.",
-    "Wikipedia calls it \"the oldest of its kind in the United States.\""
-   ],
-   "fact": "The market began where Café du Monde now stands.",
-   "disputed": "\"Oldest\" is argued. Other markets also claim long histories, and counts depend on what you mean by \"public market.\"",
-   "claims": [
     {
-     "t": "The French Market was dedicated as a market in 1791.",
-     "a": 0,
-     "why": "Wikipedia: part of the space was dedicated as a market in 1791."
-    },
-    {
-     "t": "The French Market is the oldest public market in the United States.",
-     "a": 1,
-     "why": "Wikipedia says so, but other markets claim long histories, so the claim depends on definitions."
+      "id": "frenchmarket",
+      "name": "French Market",
+      "short": "French Market",
+      "badge": "French Market",
+      "tag": "Stop 4 of 4",
+      "teaser": "A market older than the country around it.",
+      "map": "French Market, 1008 N Peters St, New Orleans, LA",
+      "clue": "Walk along the river side of the Quarter to the long covered market. At its upriver end you will find a famous café.",
+      "safety": "The market is crowded and the streets around it are busy. Watch for traffic and wet pavement.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Which famous café marks one end of the French Market?",
+        "options": [
+          "Café du Monde",
+          "Café Beignet",
+          "Café Brasil",
+          "Café Amelie"
+        ],
+        "answer": 0,
+        "hint": "Think powdered sugar.",
+        "verify": "Wikipedia says the market marks the upriver end at Café du Monde. Confirm on site. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "about 1900",
+        "label": "The market then",
+        "line": "A Detroit Photographic Company view of the French Market around 1900.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "no_fm_then",
+          "by": "Detroit Photographic Company",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Detroit_Photographic_Company_(0347)_-_French_Market,_New_Orleans.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "The market hall today",
+        "line": "A covered hall of the French Market. Photo from 2016.",
+        "ph": {
+          "k": "no_fm_now",
+          "by": "Infrogmation of New Orleans",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:French_Market_Hall_New_Orleans_11_October_2016.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Part of the space was dedicated as a market in 1791, during the colonial period. Wikipedia says it began as a Native American trading post before European colonization, with no date given. The oldest surviving structures date to about 1813.",
+        "The Works Progress Administration made major renovations in the 1930s. The market spans six blocks, from Café du Monde to the flea market stalls across from the New Orleans Mint.",
+        "Wikipedia calls it \"the oldest of its kind in the United States.\""
+      ],
+      "fact": "The market began where Café du Monde now stands.",
+      "disputed": "\"Oldest\" is argued. Other markets also claim long histories, and counts depend on what you mean by \"public market.\"",
+      "claims": [
+        {
+          "t": "The French Market was dedicated as a market in 1791.",
+          "a": 0,
+          "why": "Wikipedia: part of the space was dedicated as a market in 1791."
+        },
+        {
+          "t": "The French Market is the oldest public market in the United States.",
+          "a": 1,
+          "why": "Wikipedia says so, but other markets claim long histories, so the claim depends on definitions."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: French Market",
+          "u": "https://en.wikipedia.org/wiki/French_Market"
+        },
+        {
+          "t": "French Quarter: French Market",
+          "u": "https://www.frenchquarter.com/nola/french-market/5803"
+        }
+      ],
+      "card": {
+        "a": "1791",
+        "b": "1930s",
+        "la": "Dedicated",
+        "lb": "WPA renovation"
+      }
     }
-   ],
-   "sources": [
-    {
-     "t": "Wikipedia: French Market",
-     "u": "https://en.wikipedia.org/wiki/French_Market"
-    },
-    {
-     "t": "French Quarter: French Market",
-     "u": "https://www.frenchquarter.com/nola/french-market/5803"
-    }
-   ],
-   "card": {
-    "a": "1791",
-    "b": "1930s",
-    "la": "Dedicated",
-    "lb": "WPA renovation"
-   }
-  }
- ],
- "heroKey": "no_js_now"
+  ],
+  "heroKey": "no_js_now"
 }
