@@ -1,0 +1,417 @@
+{
+ "id": "burlington",
+ "name": "Burlington",
+ "explorer": "Lake Champlain Explorer",
+ "initials": "BTV",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "Lake Walker"
+  ],
+  [
+   250,
+   "Landmark Hunter"
+  ],
+  [
+   450,
+   "Burlington Scholar"
+  ],
+  [
+   600,
+   "Burlington Historian"
+  ]
+ ],
+ "heroAlt": "Old Mill at the University of Vermont",
+ "heroLi": "<li>Header: AlexiusHoratius · CC BY-SA 3.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Old_Mill_UVM_5.JPG\">Source</a> · resized</li>",
+ "heroCredit": "Photo: AlexiusHoratius · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC BY-SA 3.0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Old_Mill_UVM_5.JPG\">Source</a>",
+ "mission": "Find four landmarks around Burlington. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Burlington is waiting.",
+ "safetyNote": "<li>Downtown Burlington has busy streets and a hilltop park above the lake. Use crosswalks, stay on paths, and keep back from steep edges and the water.</li>",
+ "badgeMap": {
+  "church": [
+   "bv_cs_now",
+   "50% 45%"
+  ],
+  "battery": [
+   "bv_bp_now",
+   "50% 45%"
+  ],
+  "mill": [
+   "bv_om_now",
+   "50% 45%"
+  ],
+  "billings": [
+   "bv_bl_now",
+   "50% 45%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The East",
+ "stops": [
+  {
+   "id": "church",
+   "name": "Church Street Marketplace",
+   "short": "Church Street",
+   "badge": "Church Street",
+   "tag": "Stop 1 of 4",
+   "teaser": "Four blocks of street that cars gave up in 1980.",
+   "map": "Church Street Marketplace, Burlington, VT",
+   "clue": "Go to Church Street between Main Street and Pearl Street. Look for a wide, car-free street with shops, outdoor tables and a church steeple at the top.",
+   "safety": "Bicycles and delivery vehicles may use the edges of the street. Stay out of any road, and keep an eye on little kids near cafe tables.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was built on these four blocks of Church Street in 1980 and 1981?",
+    "options": [
+     "A railroad yard",
+     "A pedestrian marketplace",
+     "A parking garage",
+     "A canal"
+    ],
+    "answer": 1,
+    "hint": "Compare the old photo and the new one.",
+    "verify": "Wikipedia says the uncovered outdoor pedestrian mall was built in 1980 and 1981. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1940",
+    "label": "The street then",
+    "line": "A color-tinted postcard of cars parked and driving along the street, with shop signs and a steeple in the distance.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bv_cs_then",
+     "by": "Tichnor Quality Views (Riverside Paper Co.)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Church_Street,_Burlington,_Vermont_(67643).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2013",
+    "head": "Today",
+    "label": "The street today",
+    "line": "A car-free street full of walkers and cafe tables, with trees and a steeple beyond.",
+    "ph": {
+     "k": "bv_cs_now",
+     "by": "Beyond My Ken",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Church_Street_Marketplace_Burlington_Vermont_looking_north_from_Main_Street.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Church Street Marketplace is an uncovered outdoor pedestrian shopping and dining mall made of four blocks of Church Street, between Main and Pearl streets. The idea for it began in 1958 as part of urban renewal discussions.",
+    "In the summer of 1971, a one-day street fair on the four blocks drew about 15,000 people. A week-long fair followed in 1972, with traffic rerouted to the parallel streets. The mall was built in 1980 and 1981 to a design by Carr, Lynch Associates of Cambridge, Massachusetts.",
+    "It has about 86 storefronts. The American Planning Association named it one of America's Great Public Spaces for 2008."
+   ],
+   "fact": "A one-day street fair in 1971 helped prove the mall could work.",
+   "disputed": "Many people think the mall was an overnight decision. Wikipedia says it took from 1958 to 1981, with trial street fairs along the way.",
+   "claims": [
+    {
+     "t": "The Church Street Marketplace was built in 1980 and 1981.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The marketplace opened in 1958.",
+     "a": 2,
+     "why": "Wikipedia says the idea began in 1958."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Church Street Marketplace",
+     "u": "https://en.wikipedia.org/wiki/Church_Street_Marketplace"
+    },
+    {
+     "t": "Wikipedia: Burlington, Vermont",
+     "u": "https://en.wikipedia.org/wiki/Burlington,_Vermont"
+    }
+   ],
+   "card": {
+    "a": "1971",
+    "b": "1981",
+    "la": "First one-day street fair",
+    "lb": "Marketplace is built"
+   }
+  },
+  {
+   "id": "battery",
+   "name": "Battery Park",
+   "short": "Battery Park",
+   "badge": "Battery Park",
+   "tag": "Stop 2 of 4",
+   "teaser": "A park on a bluff named for guns that beat back a British squadron.",
+   "map": "Battery Park, Burlington, VT",
+   "clue": "Go to Battery Park at the west end of downtown, on the bluff above Lake Champlain. Look for the big lawn, the old trees and the wide view of the lake.",
+   "safety": "The bluff has steep drop-offs. Stay on the paths and behind any railings, and do not climb on walls or monuments.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Where does Battery Park get its name?",
+    "options": [
+     "A battery factory",
+     "A row of lights",
+     "A sailing club",
+     "Artillery stationed here in 1812"
+    ],
+    "answer": 3,
+    "hint": "Think about a war that took place on this lake.",
+    "verify": "Wikipedia says the park was named for the artillery stationed there by American forces during the War of 1812. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1940",
+    "label": "The park then",
+    "line": "A color-tinted postcard of the park entrance, with a road curving past trees and lamp posts toward the lake.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bv_bp_then",
+     "by": "Tichnor Quality Views (Riverside Paper Co.)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Entrance_to_Battery_Park,_Burlington,_Vermont_(67644).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2015",
+    "head": "Today",
+    "label": "The park today",
+    "line": "A wide lawn with bare trees and a path, and the lake and hills far in the distance.",
+    "ph": {
+     "k": "bv_bp_now",
+     "by": "Niranjan Arminius",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:BTV_BatteryPark_20151118.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Battery Park is a public park overlooking Lake Champlain at the western end of downtown Burlington. It was named for the artillery that American forces stationed there during the War of 1812.",
+    "On August 13, 1813, American gunners, helped by the USS President, defended the position against an attack by a British squadron led by Lt Colonel John Murray. The park land was deeded to the City of Burlington in 1870.",
+    "The park has a bandshell, a playground and monuments, including a bronze statue of Civil War veteran General William W. Wells and a red oak sculpture of Chief Gray Lock. It is a popular place to watch fireworks on the Fourth of July."
+   ],
+   "fact": "The park was deeded to Burlington in 1870.",
+   "disputed": "Many people repeat that Rudyard Kipling called this one of the two finest sunset views in the world. Wikipedia reports it only as 'according to' Kipling, so treat it as a claim, not a record.",
+   "claims": [
+    {
+     "t": "Battery Park was named for artillery stationed here.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "The park land was deeded to the city in 1972.",
+     "a": 2,
+     "why": "Wikipedia says 1870. A 1972 extension was added to the south end."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Battery Park (Burlington, Vermont)",
+     "u": "https://en.wikipedia.org/wiki/Battery_Park_(Burlington,_Vermont)"
+    },
+    {
+     "t": "Wikipedia: Burlington, Vermont",
+     "u": "https://en.wikipedia.org/wiki/Burlington,_Vermont"
+    }
+   ],
+   "card": {
+    "a": "1813",
+    "b": "1870",
+    "la": "British squadron driven back",
+    "lb": "Land is deeded to the city"
+   }
+  },
+  {
+   "id": "mill",
+   "name": "Old Mill",
+   "short": "Old Mill",
+   "badge": "Old Mill",
+   "tag": "Stop 3 of 4",
+   "teaser": "The oldest building at the University of Vermont, rebuilt after a fire.",
+   "map": "Old Mill, University of Vermont, Burlington, VT",
+   "clue": "Go to the University of Vermont green, on the east side. Look for the long red-brick building with a tall central tower and spire.",
+   "safety": "It is a working campus. Stay on the public paths and do not enter unless a building is open to visitors.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Who laid the cornerstone of South College in 1825?",
+    "options": [
+     "General Lafayette",
+     "George Washington",
+     "Ethan Allen",
+     "Abraham Lincoln"
+    ],
+    "answer": 0,
+    "hint": "He was a French hero visiting the U.S. on a national tour.",
+    "verify": "Wikipedia says General Lafayette laid the cornerstone for South College on June 29, 1825, during his national tour. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1900",
+    "label": "The college then",
+    "line": "A tinted postcard of the brick building with a small tower, behind tall trees on the green.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bv_om_then",
+     "by": "Detroit Publishing Company (NYPL scan)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:University_of_Vermont,_Burlington,_Vt_(NYPL_b12647398-68377).tiff",
+     "note": "resized, cropped"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The building today",
+    "line": "The red-brick building with a tall central spire and a big evergreen in front, under a blue sky.",
+    "ph": {
+     "k": "bv_om_now",
+     "by": "AlexiusHoratius",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Old_Mill_UVM_5.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Old Mill, historically known as the Main College Building, is the oldest campus building of the University of Vermont. The first Main College was built in 1801 and 1802 by John Johnson, but it burned down in 1824. Johnson also designed its replacement.",
+    "The cornerstone for North College was laid on April 26, 1825 by Vermont Governor Cornelius P. Van Ness. Two months later, on June 29, General Lafayette laid the cornerstone for South College during his tour. A third building, Middle College, was added in 1829.",
+    "Each of the buildings was built 7 to 8 feet apart to keep a fire from destroying the whole thing again. They were connected in 1846. The building was added to the National Register of Historic Places in 1975, as part of the University Green Historic District."
+   ],
+   "fact": "The buildings were built 7 to 8 feet apart to stop a fire from spreading.",
+   "disputed": "Many people hear the name 'Old Mill' and think it ground grain. Wikipedia says it was the Main College Building.",
+   "claims": [
+    {
+     "t": "The first Main College building burned down in 1824.",
+     "a": 0,
+     "why": "Wikipedia: its predecessor burned down in 1824."
+    },
+    {
+     "t": "The Old Mill building was a grain mill.",
+     "a": 2,
+     "why": "Wikipedia says it was historically called the Main College Building."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Old Mill (University of Vermont)",
+     "u": "https://en.wikipedia.org/wiki/Old_Mill_(University_of_Vermont)"
+    },
+    {
+     "t": "Wikipedia: Burlington, Vermont",
+     "u": "https://en.wikipedia.org/wiki/Burlington,_Vermont"
+    }
+   ],
+   "card": {
+    "a": "1825",
+    "b": "1846",
+    "la": "Rebuilt after fire",
+    "lb": "Buildings are connected"
+   }
+  },
+  {
+   "id": "billings",
+   "name": "Billings Library",
+   "short": "Billings Library",
+   "badge": "Billings Library",
+   "tag": "Stop 4 of 4",
+   "teaser": "A castle-like stone library by a famous architect, now home to special collections.",
+   "map": "Billings Library, University of Vermont, Burlington, VT",
+   "clue": "Go to the University of Vermont green. Look for the building made of red stone with a round tower, a gray roof and a big arched doorway.",
+   "safety": "It is a working campus. Look from the public path, and enter only if it is open to visitors.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "Which famous architect designed the Billings Library?",
+    "options": [
+     "Louis Sullivan",
+     "Stanford White",
+     "H. H. Richardson",
+     "Frank Lloyd Wright"
+    ],
+    "answer": 2,
+    "hint": "His name is a style of Romanesque architecture.",
+    "verify": "Wikipedia says Henry Hobson Richardson designed it, built in 1883. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "yr": "About 1940",
+    "label": "The library then",
+    "line": "A tinted postcard of the stone library with a round tower and gray roof behind a big tree.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/"
+    },
+    "ph": {
+     "k": "bv_bl_then",
+     "by": "Tichnor Quality Views (Riverside Paper Co.)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Billings_Library,_Burlington,_Vt_(77623).jpg",
+     "note": "resized"
+    }
+   },
+   "now": {
+    "yr": "2024",
+    "head": "Today",
+    "label": "The library today",
+    "line": "The same red stone library with its round tower and arched door, in warm light against a blue sky.",
+    "ph": {
+     "k": "bv_bl_now",
+     "by": "HeyTomek",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:University_of_Vermont_Billings_Library.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Billings Memorial Library was built in 1883 and designed by the American architect Henry Hobson Richardson to resemble the Winn Library in Woburn, Massachusetts. Frederick H. Billings of Woodstock donated it to the University of Vermont.",
+    "It opened in 1885 and was a central part of campus life. In 1961 the university built a new library because Billings was too small, and in 1963 the old one became a student center.",
+    "After the Davis Center opened in 2007 as the new student center, Billings got an $11.4 million renovation that finished in 2018. It is home to academic departments again, including Special Collections."
+   ],
+   "fact": "The building has been a library, a student center and then academic offices.",
+   "disputed": "Many people think a building keeps one job for life. Wikipedia says Billings was a library, then a student center from 1963, then academic space after 2018.",
+   "claims": [
+    {
+     "t": "Billings Library was built in 1883.",
+     "a": 0,
+     "why": "Wikipedia says so."
+    },
+    {
+     "t": "It has been used only as a library.",
+     "a": 2,
+     "why": "Wikipedia says it was a student center from 1963."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Billings Memorial Library",
+     "u": "https://en.wikipedia.org/wiki/Billings_Memorial_Library"
+    },
+    {
+     "t": "Wikipedia: Burlington, Vermont",
+     "u": "https://en.wikipedia.org/wiki/Burlington,_Vermont"
+    }
+   ],
+   "card": {
+    "a": "1883",
+    "b": "2018",
+    "la": "Built to Richardson's design",
+    "lb": "Renovation finishes"
+   }
+  }
+ ],
+ "heroKey": "bv_om_now"
+}

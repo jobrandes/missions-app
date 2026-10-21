@@ -529,3 +529,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 ### Newport Knoxville Portland ME (Oct 20)
 | Key | Source page | Author | License | Year |
 |---|---|---|---|---|
+
+### New Haven Burlington (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| nh_gr_then | https://commons.wikimedia.org/wiki/File:New_Haven_Green.jpg | Thomas Prichard Rossiter (painting) | Public domain | about 1850 |
+| nh_gr_now | https://commons.wikimedia.org/wiki/File:New_Haven_Green_with_Center_Church.jpg | Dicklyon | CC BY-SA 4.0 | 2019 |
+| nh_oc_then | https://commons.wikimedia.org/wiki/File:Phelps_Hall_and_Lyceum,_Yale_College,_New_Haven,_Connecticut,_1901.jpg | Detroit Publishing Co. | Public domain | 1901 |
+| nh_oc_now | https://commons.wikimedia.org/wiki/File:Yale_University_Old_Campus_04.JPG | Ad Meskens | CC BY-SA 3.0 | 2012 |
+| nh_vh_then | https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall,_Yale_College-LCCN2008679555.jpg | Detroit Publishing Co. | Public domain | 1901 |
+| nh_vh_now | https://commons.wikimedia.org/wiki/File:Vanderbilt_Hall_spring.JPG | Nick Allen | CC BY-SA 3.0 | 2014 |
+| nh_dh_then | https://commons.wikimedia.org/wiki/File:Dwight_Hall,_Yale_College.jpg | Detroit Publishing Co. | Public domain | about 1903 |
+| nh_dh_now | https://commons.wikimedia.org/wiki/File:DwightHallYale.jpg | Jdf8 | CC BY-SA 3.0 | 2008 |
+| bv_cs_then | https://commons.wikimedia.org/wiki/File:Church_Street,_Burlington,_Vermont_(67643).jpg | Tichnor Quality Views (Riverside Paper Co.) | Public domain | about 1940 |
+| bv_cs_now | https://commons.wikimedia.org/wiki/File:Church_Street_Marketplace_Burlington_Vermont_looking_north_from_Main_Street.jpg | Beyond My Ken | CC BY-SA 4.0 | 2013 |
+| bv_bp_then | https://commons.wikimedia.org/wiki/File:Entrance_to_Battery_Park,_Burlington,_Vermont_(67644).jpg | Tichnor Quality Views (Riverside Paper Co.) | Public domain | about 1940 |
+| bv_bp_now | https://commons.wikimedia.org/wiki/File:BTV_BatteryPark_20151118.jpg | Niranjan Arminius | CC BY-SA 4.0 | 2015 |
+| bv_om_then | https://commons.wikimedia.org/wiki/File:University_of_Vermont,_Burlington,_Vt_(NYPL_b12647398-68377).tiff | Detroit Publishing Company (NYPL scan) | Public domain | about 1900 |
+| bv_om_now | https://commons.wikimedia.org/wiki/File:Old_Mill_UVM_5.JPG | AlexiusHoratius | CC BY-SA 3.0 | 2012 |
+| bv_bl_then | https://commons.wikimedia.org/wiki/File:Billings_Library,_Burlington,_Vt_(77623).jpg | Tichnor Quality Views (Riverside Paper Co.) | Public domain | about 1940 |
+| bv_bl_now | https://commons.wikimedia.org/wiki/File:University_of_Vermont_Billings_Library.jpg | HeyTomek | CC0 | 2024 |

@@ -2068,5 +2068,97 @@
    "a": 3,
    "why": "The current one is the fourth city hall, after earlier ones burned."
   }
+ ],
+ "newhaven": [
+  {
+   "q": "What lies under the soil of the New Haven Green?",
+   "o": [
+    "A railway",
+    "Old graves",
+    "A fort",
+    "A lake"
+   ],
+   "a": 1,
+   "why": "It was the main burial ground for 150 years."
+  },
+  {
+   "q": "Yale's first building in New Haven was called what?",
+   "o": [
+    "Harkness Tower",
+    "Phelps Hall",
+    "Dwight Hall",
+    "The College House"
+   ],
+   "a": 3,
+   "why": "Built in 1718."
+  },
+  {
+   "q": "Who designed Vanderbilt Hall?",
+   "o": [
+    "Stanford White",
+    "Louis Sullivan",
+    "Charles C. Haight",
+    "Frank Lloyd Wright"
+   ],
+   "a": 2,
+   "why": "Haight completed it in 1894."
+  },
+  {
+   "q": "What was today's Dwight Hall built as in 1842?",
+   "o": [
+    "A library",
+    "A theater",
+    "A hotel",
+    "A bank"
+   ],
+   "a": 0,
+   "why": "The Yale College Library."
+  }
+ ],
+ "burlington": [
+  {
+   "q": "What was built on four blocks of Church Street in 1980 and 1981?",
+   "o": [
+    "A stadium",
+    "A harbor",
+    "A pedestrian marketplace",
+    "A highway"
+   ],
+   "a": 2,
+   "why": "The Church Street Marketplace."
+  },
+  {
+   "q": "Battery Park gets its name from what?",
+   "o": [
+    "Artillery in the War of 1812",
+    "Batteries made here",
+    "A row of lights",
+    "A baseball team"
+   ],
+   "a": 0,
+   "why": "American artillery was stationed there."
+  },
+  {
+   "q": "Who laid South College's cornerstone in 1825?",
+   "o": [
+    "Ethan Allen",
+    "George Washington",
+    "Abraham Lincoln",
+    "General Lafayette"
+   ],
+   "a": 3,
+   "why": "He was on his national tour."
+  },
+  {
+   "q": "Who designed Billings Library?",
+   "o": [
+    "Julia Morgan",
+    "H. H. Richardson",
+    "Frank Lloyd Wright",
+    "Louis Sullivan"
+   ],
+   "a": 1,
+   "why": "Henry Hobson Richardson."
+  }
  ]
 }
