@@ -465,3 +465,23 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | mk_sh_now | https://commons.wikimedia.org/wiki/File:Soldiers_Home_Milwaukee.jpg | James Steakley | CC BY-SA 3.0 | 2009 |
 | mk_au_then | https://commons.wikimedia.org/wiki/File:The_new_auditorium,_Milwaukee_LCCN2013646928.jpg | Library of Congress (Miscellaneous Items in High Demand) | Public domain | 1908 |
 | mk_au_now | https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg | Royalbroil | CC BY-SA 3.0 | 2012 |
+
+### Columbus and Gettysburg (Oct 20)
+| Key | Source page | Author | License | Year |
+|---|---|---|---|---|
+| cb_sh_then | https://commons.wikimedia.org/wiki/File:Columbus,_Ohio_10a.jpg | Unknown author (Library of Congress) | Public domain | 1900 to 1910 |
+| cb_sh_now | https://commons.wikimedia.org/wiki/File:Ohio_State_House,_Columbus,_OH_-_48310705042.jpg | Warren LeMay | CC0 | 2019 |
+| cb_us_then | https://commons.wikimedia.org/wiki/File:Columbus_Union_Station_facade_from_the_north_(cropped).jpg | Detroit Publishing Company | Public domain | about 1900 to 1915 |
+| cb_us_now | https://commons.wikimedia.org/wiki/File:Front_of_Columbus_Union_Station_arch,_September_2016.JPG | Pi.1415926535 | CC BY-SA 3.0 | 2016 |
+| cb_lq_then | https://commons.wikimedia.org/wiki/File:Leveque_Tower_aerial.tif | Mayfield Photos, Dayton | Public domain | 1926 |
+| cb_lq_now | https://commons.wikimedia.org/wiki/File:LeVeque_Tower_NW_1.jpg | Sixflashphoto | CC BY-SA 4.0 | 2017 |
+| cb_ot_then | https://commons.wikimedia.org/wiki/File:Ohio_Theatre_photograph.png | Ohio Federal Writers' Project | Public domain | about 1936 to 1940 |
+| cb_ot_now | https://commons.wikimedia.org/wiki/File:Ohio_Theatre,_Columbus,_OH.jpg | Warren LeMay | CC0 | 2019 |
+| gb_wh_then | https://commons.wikimedia.org/wiki/File:The_Will's_House,_where_Lincoln_wrote_his_Gettysburg_address,_Gettysburg,_Pa_(64226).jpg | L. E. Smith, Wholesale Distributor (postcard) | Public domain | about 1930 to 1945 |
+| gb_wh_now | https://commons.wikimedia.org/wiki/File:The_David_Wills_House_Gettysburg_(PA)_2013_(9387972956).jpg | Ron Cogswell | CC BY 2.0 | 2013 |
+| gb_ph_then | https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall,_Gettysburg_College.jpg | Frederick Tilberg | Public domain | 1950 |
+| gb_ph_now | https://commons.wikimedia.org/wiki/File:Pennsylvania_Hall_in_the_spring.jpg | Smb51095 | CC BY-SA 4.0 | 2015 |
+| gb_sm_then | https://commons.wikimedia.org/wiki/File:Masonic_Conescecration_of_Solder_Monument_Gettysburg_PA.jpg | Harper's Weekly | Public domain | 1865 |
+| gb_sm_now | https://commons.wikimedia.org/wiki/File:Soldiers'_National_Monument_-_Gettysburg_National_Cemetery.jpg | Farragutful | CC BY-SA 4.0 | 2017 |
+| gb_nc_then | https://commons.wikimedia.org/wiki/File:Lincoln's_Gettysburg_Address,_Gettysburg.jpg | David Bachrach | Public domain | 1863 |
+| gb_nc_now | https://commons.wikimedia.org/wiki/File:Gettysburg_National_Cemetery_(2019).jpg | P. Hughes | CC BY-SA 4.0 | 2019 |

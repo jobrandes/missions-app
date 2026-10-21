@@ -1792,5 +1792,97 @@
    "a": 1,
    "why": "It was dedicated on September 21, 1909."
   }
+ ],
+ "columbus": [
+  {
+   "q": "The Ohio Statehouse has a low cone on top instead of what?",
+   "o": [
+    "A clock",
+    "A rounded dome",
+    "A flagpole",
+    "A steeple"
+   ],
+   "a": 1,
+   "why": "The designers dropped the rounded dome for a low conical roof."
+  },
+  {
+   "q": "Only one piece of Union Station still stands. What is it?",
+   "o": [
+    "The clock tower",
+    "A platform",
+    "The ticket hall",
+    "An arch"
+   ],
+   "a": 3,
+   "why": "One arch was saved and now stands in McFerson Commons."
+  },
+  {
+   "q": "The LeVeque Tower was built five inches taller than which monument?",
+   "o": [
+    "The Statue of Liberty",
+    "The Lincoln Memorial",
+    "The Washington Monument",
+    "The Eiffel Tower"
+   ],
+   "a": 2,
+   "why": "It was set 5 inches taller than the Washington Monument."
+  },
+  {
+   "q": "The Ohio Theatre opened in which year?",
+   "o": [
+    "1928",
+    "1869",
+    "1977",
+    "1897"
+   ],
+   "a": 0,
+   "why": "It opened on March 17, 1928."
+  }
+ ],
+ "gettysburg": [
+  {
+   "q": "Who was Lincoln's host in Gettysburg?",
+   "o": [
+    "George Meade",
+    "Thaddeus Stevens",
+    "David Wills",
+    "Andrew Curtin"
+   ],
+   "a": 2,
+   "why": "David Wills hosted Lincoln at his house."
+  },
+  {
+   "q": "What was Pennsylvania Hall used for in July 1863?",
+   "o": [
+    "A hospital",
+    "A courthouse",
+    "A hotel",
+    "A bank"
+   ],
+   "a": 0,
+   "why": "Soldiers of both armies were treated there."
+  },
+  {
+   "q": "In what year was the Soldiers' National Monument dedicated?",
+   "o": [
+    "1863",
+    "1895",
+    "1913",
+    "1869"
+   ],
+   "a": 3,
+   "why": "It was dedicated in 1869."
+  },
+  {
+   "q": "How many words are in the Gettysburg Address?",
+   "o": [
+    "2,700",
+    "271",
+    "27",
+    "1,000"
+   ],
+   "a": 1,
+   "why": "It has only 271 words."
+  }
  ]
 }
