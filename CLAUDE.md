@@ -77,3 +77,9 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 **UX batch 4 (Oct 21):** tablet pass (768px home headline/wordmark no longer wrap to 6 lines, app width 720px), fixed town rail scrolling off the active town at tablet widths, 'Today' caption no longer doubled. Hero photo credit stays in the hero (license wants it beside the photo).
 
 **Beta prep (Oct 21):** 'Back up your passport' card (id #backup), link under the home passport row (data-a=backup), one-time nudge on the Trail after the first stamp (again after 8 more; localStorage `stp-bk-seen`). Netlify 'Powered by Netlify' badge (free plan, projects from Aug 19 2026) must be switched off in Project configuration > General by Jo-Anne. See `docs/beta-checklist.md`. Midwest is now the smallest region (9 towns); scouting Springfield IL and St. Paul next (Lincoln Home 1865 parlor photo and Minnesota Capitol construction photos exist on Commons).
+
+## Dayton (Oct 22)
+- Town 53, Midwest. Springfield IL and St. Paul were skipped: too few free "then" photos. Madison and Mackinac are also thin on Commons.
+- Stop 1 then-photo (Orville in the shop, 1897) is from the West Third St shop, not the Williams St building. The captions say so.
+- Stop 4 "then" is a 1906 portrait of Dunbar, not the house. Huffman Prairie is on Wright-Patterson AFB: safety text says to check NPS access rules. Jo-Anne should verify access on the day.
+- Fact-check rounds 1-3 (46 stops) found 4 small fixes, all applied.

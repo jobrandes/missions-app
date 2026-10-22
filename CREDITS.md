@@ -609,3 +609,12 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | na_ps_then | https://commons.wikimedia.org/wiki/File:Courthouse_and_Market_-_Public_Square,_Nashville,_Tenn._LCCN2003675166.jpg | Miscellaneous Items in High Demand (Library of Congress) | Public domain | 1892 |
 | na_ps_now | https://commons.wikimedia.org/wiki/File:Davidson_County_Courthouse_(Southwest_corner).JPG | Michael Rivera | CC BY-SA 4.0 | 2015 |
 | sv_rs_then | https://commons.wikimedia.org/wiki/File:Historic_American_Buildings_Survey_Branan_Sanders,_Photographer_March_1934_FRONT_VIEW_-_Factor%27s_Warehouse,_River_Street_West,_Savannah,_Chatham_County,_GA_HABS_GA,26-SAV,51-1.tif | Branan Sanders (HABS) | Public domain | 1934 |
+| da_hero | https://commons.wikimedia.org/wiki/File:Deeds_Carillon,_Dayton_Ohio,_from_the_west.jpg | Photohio | Public domain | 2017 |
+| da_cy_then | https://commons.wikimedia.org/wiki/File:OrvilleInBikeShop.jpg | Wright brothers | Public domain | 1897 |
+| da_cy_now | https://commons.wikimedia.org/wiki/File:Wright_Cycle_Company_Offices.jpg | Nyttend | Public domain | 2010 |
+| da_hp_then | https://commons.wikimedia.org/wiki/File:Wilbur_and_Orville_Wright_with_Flyer_II_at_Huffman_Prairie_-_GPN-2002-000126.jpg | Unknown (NASA) | Public domain | 1904 |
+| da_hp_now | https://commons.wikimedia.org/wiki/File:US_National_Park_Service_marker_at_Huffman_Prairie_Flying_Field.jpg | Pi3.124 | CC BY-SA 4.0 | 2016 |
+| da_f3_then | https://commons.wikimedia.org/wiki/File:1905_Wright_Flyer_III_(flight_41).jpg | Wilbur Wright | Public domain | 1905 |
+| da_f3_now | https://commons.wikimedia.org/wiki/File:Wright_Flyer_III_at_Carillon_Park.jpg | Nyttend | Public domain | 2012 |
+| da_db_then | https://commons.wikimedia.org/wiki/File:Paul_Laurence_Dunbar_cph.3a46806.jpg | Kell (Library of Congress) | Public domain | about 1906 |
+| da_db_now | https://commons.wikimedia.org/wiki/File:Dunbar_Home_P2110034.JPG | Chris Light | CC BY-SA 3.0 | 2006 |

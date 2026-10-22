@@ -2390,5 +2390,51 @@
       "a": 1,
       "why": "It opened in 1902."
     }
+  ],
+  "dayton": [
+    {
+      "q": "In what year did the Wrights start testing the Flyer II at Huffman Prairie?",
+      "o": [
+        "1899",
+        "1903",
+        "1904",
+        "1910"
+      ],
+      "a": 2,
+      "why": "Wikipedia: they began testing there in 1904."
+    },
+    {
+      "q": "How long was Wilbur's record flight in the Flyer III on October 5, 1905?",
+      "o": [
+        "39 minutes",
+        "39 seconds",
+        "3 hours",
+        "9 minutes"
+      ],
+      "a": 0,
+      "why": "Wikipedia: 24.2 miles in 39 minutes 23 seconds."
+    },
+    {
+      "q": "Who owned the Huffman Prairie field and let the Wrights use it?",
+      "o": [
+        "Hap Arnold",
+        "Orville Wright",
+        "Matilda Dunbar",
+        "Torrence Huffman"
+      ],
+      "a": 3,
+      "why": "Dayton banker Torrence Huffman."
+    },
+    {
+      "q": "Whom did Paul Laurence Dunbar buy his house for?",
+      "o": [
+        "His mother",
+        "His publisher",
+        "His school",
+        "The Wright brothers"
+      ],
+      "a": 0,
+      "why": "Wikipedia: he bought it for his mother, Matilda, in 1904."
+    }
   ]
 }

@@ -1,0 +1,417 @@
+{
+  "id": "dayton",
+  "name": "Dayton",
+  "explorer": "Gem City Explorer",
+  "initials": "DAY",
+  "ranks": [
+    [
+      0,
+      "Visitor"
+    ],
+    [
+      100,
+      "Shop Helper"
+    ],
+    [
+      250,
+      "Field Watcher"
+    ],
+    [
+      450,
+      "Flight Scholar"
+    ],
+    [
+      600,
+      "Dayton Historian"
+    ]
+  ],
+  "heroAlt": "The Deeds Carillon bell tower in Dayton",
+  "heroLi": "<li>Header: Photohio · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Deeds_Carillon,_Dayton_Ohio,_from_the_west.jpg\">Source</a> · resized, cropped</li>",
+  "heroCredit": "Photo: Photohio · Public domain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Deeds_Carillon,_Dayton_Ohio,_from_the_west.jpg\">Source</a>",
+  "mission": "Find four places around Dayton where flight took off. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Dayton is waiting.",
+  "safetyNote": "<li>Some Dayton stops are on city streets and one is on a working Air Force base. Use crosswalks, follow posted signs, and check each place's visiting rules before you go.</li>",
+  "badgeMap": {
+    "cycle": [
+      "da_cy_now",
+      "50% 50%"
+    ],
+    "huffman": [
+      "da_hp_now",
+      "50% 50%"
+    ],
+    "flyer3": [
+      "da_f3_now",
+      "50% 50%"
+    ],
+    "dunbar": [
+      "da_db_now",
+      "50% 50%"
+    ]
+  },
+  "level": "Classics",
+  "region": "The Midwest",
+  "stops": [
+    {
+      "id": "cycle",
+      "name": "Wright Cycle Company Building",
+      "short": "Williams Street",
+      "badge": "Wright Cycle",
+      "tag": "Stop 1 of 4",
+      "teaser": "The red-brick shop where two bicycle sellers were already dreaming about flight.",
+      "map": "Wright Cycle Company Building, 22 South Williams Street, Dayton, OH",
+      "clue": "Go to the Wright-Dunbar area of west Dayton. Look for a red-brick two-story building with a sign that says The Wright Cycle Co.",
+      "safety": "This is a city street with traffic and a parking lot next to it. Use the sidewalks and crosswalks.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The Wrights ran two businesses in this building. Besides selling bicycles, what did they run upstairs?",
+        "options": [
+          "A flying school",
+          "A telegraph office",
+          "A printing shop",
+          "A bakery"
+        ],
+        "answer": 2,
+        "hint": "Think ink and paper, rather than wheels.",
+        "verify": "Wikipedia says the main bicycle store was on the ground floor with their printing shop on the second floor. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1897",
+        "label": "Inside the Wrights' bicycle shop",
+        "line": "Orville Wright (right) and Edwin Sines at work in the brothers' shop in 1897. This photo is from their later shop on West Third Street, not this building.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "da_cy_then",
+          "by": "Wright brothers",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:OrvilleInBikeShop.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2010",
+        "head": "Today",
+        "label": "The building today",
+        "line": "The 1886 brick building at 22 South Williams Street, the only one of the Wrights' six shops still standing on its original spot.",
+        "ph": {
+          "k": "da_cy_now",
+          "by": "Nyttend",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Wright_Cycle_Company_Offices.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The building at 22 South Williams Street was built in 1886. The Wright brothers rented it from 1895 to 1897. The bicycle store was on the main floor, and their printing shop was on the second floor.",
+        "In 1896, while they were here, the brothers started selling bicycles of their own design, the Van Cleve and the St. Clair.",
+        "This is the only one of the Wrights' six shops still standing, and the only one still on its original foundation. The Wright Flyer was not built here. It was built at their last shop, on West Third Street. This building became a National Historic Landmark in 1990."
+      ],
+      "fact": "It is the only one of the Wrights' six shops still standing on its original spot.",
+      "disputed": "Many people think the Wrights built their first airplane in this shop. Wikipedia says the Wright Flyer was built at their last shop, at 1127 West Third Street.",
+      "claims": [
+        {
+          "t": "The Wright brothers rented this building from 1895 to 1897.",
+          "a": 0,
+          "why": "Wikipedia: they rented it from 1895 to 1897."
+        },
+        {
+          "t": "The Wright Flyer was built in this building.",
+          "a": 2,
+          "why": "It was built at their last shop, at 1127 West Third Street."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Wright Cycle Company",
+          "u": "https://en.wikipedia.org/wiki/Wright_Cycle_Company"
+        },
+        {
+          "t": "National Park Service: Wright Cycle Company Building",
+          "u": "https://npshistory.com/publications/daav/brochures/wright-cycle-company-building.pdf"
+        }
+      ],
+      "card": {
+        "a": "1886",
+        "b": "1990",
+        "la": "Building built",
+        "lb": "National Historic Landmark"
+      }
+    },
+    {
+      "id": "huffman",
+      "name": "Huffman Prairie Flying Field",
+      "short": "Huffman Prairie",
+      "badge": "Huffman Prairie",
+      "tag": "Stop 2 of 4",
+      "teaser": "A grassy field where the Wrights learned to really fly.",
+      "map": "Huffman Prairie Flying Field, Wright-Patterson Air Force Base, Dayton, OH",
+      "clue": "Go to Huffman Prairie Flying Field near Dayton. Look for a wide, flat, grassy field with National Park Service signs at its edge.",
+      "safety": "The field is on a working Air Force base. Check the National Park Service website for current visiting rules before you go, and follow every posted sign.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The field is kept mowed short to look like what the Wrights used in 1904?",
+        "options": [
+          "A grazing pasture",
+          "A golf course",
+          "A cornfield",
+          "A runway"
+        ],
+        "answer": 0,
+        "hint": "Animals once munched on it.",
+        "verify": "Wikipedia says the field is mowed short to resemble the grazed pasture the Wrights used. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1904",
+        "label": "The Flyer II on the prairie",
+        "line": "Wilbur and Orville Wright with the Flyer II at Huffman Prairie in May 1904. A wooden shed stands behind it.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "da_hp_then",
+          "by": "Unknown (NASA)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Wilbur_and_Orville_Wright_with_Flyer_II_at_Huffman_Prairie_-_GPN-2002-000126.jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "The flying field today",
+        "line": "A National Park Service sign at the edge of the field, with short grass and a paved path behind it.",
+        "ph": {
+          "k": "da_hp_now",
+          "by": "Pi3.124",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:US_National_Park_Service_marker_at_Huffman_Prairie_Flying_Field.jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "story": [
+        "Dayton banker Torrence Huffman owned this field and let the Wright brothers use it starting in 1904. They tested the Wright Flyer II here from April 1904, and made about 150 flights in 1904 and 1905.",
+        "One timed flight is on record. On November 16, 1904, Orville flew about 1,760 feet in just over 40 seconds. The 1905 Wright Flyer III came out of this work. The Wrights thought of it as the first practical airplane.",
+        "In 1910 the Wright Company moved here and ran the Wright Flying School, which trained more than 100 pilots, including Hap Arnold. The Army bought the field in 1917. In 1948 the area joined Patterson Field to form Wright-Patterson Air Force Base. Huffman Prairie became a National Historic Landmark in 1990."
+      ],
+      "fact": "The Wrights flew about 150 times here in 1904 and 1905.",
+      "disputed": "Many people think the Wrights learned to fly only at Kitty Hawk. Wikipedia says the Flyer III, which they considered the first practical airplane, grew out of testing here.",
+      "claims": [
+        {
+          "t": "Huffman Prairie became a National Historic Landmark in 1990.",
+          "a": 0,
+          "why": "Wikipedia: designated June 21, 1990."
+        },
+        {
+          "t": "The Wrights first flew at Huffman Prairie in 1903.",
+          "a": 2,
+          "why": "Their work at Huffman Prairie began in 1904."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Huffman Prairie",
+          "u": "https://en.wikipedia.org/wiki/Huffman_Prairie"
+        },
+        {
+          "t": "National Park Service: Huffman Prairie Flying Field",
+          "u": "https://www.nps.gov/daav/learn/historyculture/huffman-prairie-flying-field.htm"
+        }
+      ],
+      "card": {
+        "a": "1904",
+        "b": "1990",
+        "la": "Testing begins",
+        "lb": "National Historic Landmark"
+      }
+    },
+    {
+      "id": "flyer3",
+      "name": "Wright Flyer III",
+      "short": "Carillon Historical Park",
+      "badge": "Flyer III",
+      "tag": "Stop 3 of 4",
+      "teaser": "The restored airplane that stayed in the air for 39 minutes.",
+      "map": "Wright Hall, Carillon Historical Park, 1000 Carillon Boulevard, Dayton, OH",
+      "clue": "Go to Carillon Historical Park in Dayton. Find Wright Hall and look for the wooden two-winged airplane on display inside.",
+      "safety": "Carillon Historical Park is a large park with a parking lot and roads. Watch for cars, and ask the staff about opening hours and tickets before you go.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "On October 5, 1905, how long did Wilbur stay in the air in the Flyer III?",
+        "options": [
+          "12 seconds",
+          "39 minutes",
+          "3 hours",
+          "A full day"
+        ],
+        "answer": 1,
+        "hint": "Longer than a TV show, but shorter than a movie.",
+        "verify": "Wikipedia says Wilbur flew 24.2 miles in 39 minutes 23 seconds over Huffman Prairie. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "1905",
+        "label": "The Flyer III in the air",
+        "line": "The Flyer III in flight over Huffman Prairie on September 29, 1905, its 41st flight. Wilbur Wright took the photo.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "da_f3_then",
+          "by": "Wilbur Wright",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:1905_Wright_Flyer_III_(flight_41).jpg",
+          "note": "resized"
+        }
+      },
+      "now": {
+        "yr": "2012",
+        "head": "Today",
+        "label": "The Flyer III today",
+        "line": "The restored Flyer III inside Wright Hall at Carillon Historical Park.",
+        "ph": {
+          "k": "da_f3_now",
+          "by": "Nyttend",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Wright_Flyer_III_at_Carillon_Park.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Flyer III was built in the winter of 1904 and 1905 and first flew on June 23, 1905. After a crash in July, the Wrights rebuilt it with bigger tail surfaces and a separate control for the rudder.",
+        "On October 5, 1905, Wilbur circled over Huffman Prairie for 24.2 miles. The flight lasted 39 minutes and 23 seconds. The Wrights thought of the Flyer III as their first practical airplane.",
+        "Its parts were held in Massachusetts from 1911 until Orville asked for them back in 1946. It was restored between 1947 and 1950, and craftsmen estimated that 60 to 85 percent of the original material survived. The wingspan is 40 feet 4 inches."
+      ],
+      "fact": "Wikipedia says it is the only fixed-wing aircraft designated a National Historic Landmark.",
+      "disputed": "Many people think the Wrights' first airplane in 1903 was their best. Wikipedia says the 1905 Flyer III was the first practical and dependable one.",
+      "claims": [
+        {
+          "t": "Wilbur flew the Flyer III about 24 miles on October 5, 1905.",
+          "a": 0,
+          "why": "Wikipedia: 24.2 miles in 39 minutes 23 seconds."
+        },
+        {
+          "t": "The Flyer III is on display at the Smithsonian in Washington, D.C.",
+          "a": 2,
+          "why": "It is on display at Carillon Historical Park in Dayton."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Wright Flyer III",
+          "u": "https://en.wikipedia.org/wiki/Wright_Flyer_III"
+        },
+        {
+          "t": "National Park Service: Wright Flyer III",
+          "u": "https://www.npshistory.com/publications/daav/brochures/wf3.pdf"
+        }
+      ],
+      "card": {
+        "a": "1905",
+        "b": "1950",
+        "la": "Built",
+        "lb": "Restoration finished"
+      }
+    },
+    {
+      "id": "dunbar",
+      "name": "Paul Laurence Dunbar House",
+      "short": "Summit Street",
+      "badge": "Dunbar House",
+      "tag": "Stop 4 of 4",
+      "teaser": "A brick house where a famous poet lived his last years.",
+      "map": "Paul Laurence Dunbar House, 219 Paul Laurence Dunbar Street, Dayton, OH",
+      "clue": "Go to the Paul Laurence Dunbar House in Dayton. Look for a red-brick house with a decorated front porch and a sign for the state memorial.",
+      "safety": "This is a residential street. Stay on the sidewalk and be quiet and respectful around the neighbors.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Paul Laurence Dunbar bought this house in 1904 for whom?",
+        "options": [
+          "His publisher",
+          "His school",
+          "Orville Wright",
+          "His mother"
+        ],
+        "answer": 3,
+        "hint": "A family member who stayed on in the house long after he died.",
+        "verify": "Wikipedia says Dunbar bought the house for his mother, Matilda, in June 1904. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "yr": "About 1906",
+        "label": "The poet then",
+        "line": "A portrait of Paul Laurence Dunbar from about 1906, the year he died in this house.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/"
+        },
+        "ph": {
+          "k": "da_db_then",
+          "by": "Kell (Library of Congress)",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Paul_Laurence_Dunbar_cph.3a46806.jpg",
+          "note": "resized, cropped"
+        }
+      },
+      "now": {
+        "yr": "2006",
+        "head": "Today",
+        "label": "The house today",
+        "line": "The red-brick house with its decorated porch and the state memorial sign out front.",
+        "ph": {
+          "k": "da_db_now",
+          "by": "Chris Light",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Dunbar_Home_P2110034.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The house at 219 Paul Laurence Dunbar Street, then called North Summit Street, was built in 1894. Dunbar bought it for his mother, Matilda, in June 1904. He lived here until he died in the house in 1906.",
+        "Matilda lived here until her death on February 24, 1934. She kept his books, manuscripts and study just as he left them.",
+        "Ohio bought the house in 1936 and dedicated it as the first state memorial to an African American. It became a National Historic Landmark on December 29, 1962."
+      ],
+      "fact": "His mother kept his study exactly as he left it.",
+      "disputed": "Many people think a famous poet must have lived in a grand mansion. Wikipedia describes a modest brick house built in 1894 that Dunbar bought for his mother.",
+      "claims": [
+        {
+          "t": "Ohio dedicated the house as a state memorial in 1936.",
+          "a": 0,
+          "why": "Wikipedia: Ohio bought and dedicated it in 1936."
+        },
+        {
+          "t": "Dunbar lived in this house for fifty years.",
+          "a": 2,
+          "why": "He lived here from 1904 until he died in 1906."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Paul Laurence Dunbar House",
+          "u": "https://en.wikipedia.org/wiki/Paul_Laurence_Dunbar_House"
+        },
+        {
+          "t": "National Park Service: Paul Laurence Dunbar House",
+          "u": "https://home.nps.gov/places/dunbar-house.htm"
+        }
+      ],
+      "card": {
+        "a": "1894",
+        "b": "1936",
+        "la": "House built",
+        "lb": "State memorial"
+      }
+    }
+  ],
+  "heroKey": "da_hero"
+}
