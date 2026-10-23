@@ -88,3 +88,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Home: progress card (weekly streak + stamps this month + next goal), My trip (star on town tiles), state chips, Trails across towns (regex on stop names: stations, capitols/courthouses, churches/missions, bridges/towers).
 - Share card: canvas PNG (no location data), Web Share if available, else a save modal. Falls back to a no-photo card if the canvas is tainted (file://).
 - localStorage keys: stp-log (stamp dates), stp-trip (starred towns). TSTATE/TFULL map towns to states: update when adding a town.
+
+## Browse tabs (Oct 23)
+- Home browse area is tabs: Towns (photo tiles) | Trails (colored collection cards + checklist) | My trip (checklist). State: btab/btrail vars, setBtab(). Next: hamburger Menu for secondary items (backup, guide, feedback, parents info, credits, settings; accounts later for the App Store).

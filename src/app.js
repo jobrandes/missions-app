@@ -229,13 +229,13 @@
     function soonLi(o){ var nm=(typeof o==='string')?o:o.name; return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
     SOON.forEach(function(o){ var r=(typeof o==='string')?'More places':(o.region||'More places'); if(regs.indexOf(r)<0) regs.push(r); });
-    h+=tripHtml()+'<section id="missions"><h2 class="hh">Pick a mission</h2>'+chipsHtml()+'<label class="tsearch"><span class="sr">Search towns or states</span><input id="townSearch" type="search" placeholder="Search towns or states" autocomplete="off" autocapitalize="words" spellcheck="false" aria-controls="missions"></label><p class="tnone" id="townNone" hidden>No town matches. Try another spelling.</p>'+regs.map(function(r){
+    h+=browseOpen()+'<section id="missions"><h2 class="hh">Pick a mission</h2>'+chipsHtml()+'<label class="tsearch"><span class="sr">Search towns or states</span><input id="townSearch" type="search" placeholder="Search towns or states" autocomplete="off" autocapitalize="words" spellcheck="false" aria-controls="missions"></label><p class="tnone" id="townNone" hidden>No town matches. Try another spelling.</p>'+regs.map(function(r){
       var items=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }).map(townLi).join('')+SOON.filter(function(o){ return ((typeof o==='string')?'More places':(o.region||'More places'))===r; }).map(soonLi).join('');
       var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }), rg=0, rt=0; rk.forEach(function(k){ rg+=sum(ALL[k].done); rt+=CITIES[k].stops.length; });
       var open=(CITIES[cityId]&&(CITIES[cityId].region||'More places')===r)||(regs[0]===r&&!(CITIES[cityId]&&(ALL[cityId]&&sum(ALL[cityId].done)>0)));
       return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span class="rname"><i class="ring" style="--p:'+(rt?Math.round(rg/rt*100):0)+'" aria-hidden="true"></i>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
-    h+=trailsHtml();
+    h+='</div><div class="bpanel" id="bp-trails" role="tabpanel"'+(btab==='trails'?'':' hidden')+'>'+trailsHtml()+'</div><div class="bpanel" id="bp-trip" role="tabpanel"'+(btab==='trip'?'':' hidden')+'>'+tripHtml()+'</div></section>';
     if(got>0) h+='<details class="pitch"><summary><span class="mono">About</span><strong>How Stamp the Past works</strong></summary>';
     var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
@@ -393,10 +393,13 @@
   }
   function tripGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-trip')||'[]'); return Array.isArray(a)?a.filter(function(k){ return CITIES[k]; }):[]; }catch(e){ return []; } }
   function tripSet(a){ try{ localStorage.setItem('stp-trip',JSON.stringify(a)); }catch(e){} }
+  var btab='towns', btrail='stations';
   function tripHtml(){
-    var t=tripGet(); if(!t.length) return '';
-    var left=0; var rows=t.map(function(k){ var c=CITIES[k], d=sum(ALL[k].done), r=c.stops.length-d; left+=r; return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tin"><h3>'+c.name+'</h3><span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+(r?r+' of '+c.stops.length+' stamps to go':'Complete')+'</span></span><span class="go">Open ›</span></button><button class="tstar on" data-a="trip" data-c="'+k+'" aria-pressed="true" aria-label="Remove '+c.name+' from my trip">★</button></li>'; }).join('');
-    return '<section class="trip" id="trip"><p class="mono">My trip</p><h2 class="hh">'+t.length+(t.length===1?' town':' towns')+' · '+left+' stamps to collect</h2><ul class="towns">'+rows+'</ul></section>';
+    var t=tripGet();
+    if(!t.length) return '<div class="bempty"><h3>Plan a trip</h3><p>Tap the star on any town to save it here. You will see how many stamps are left in each place, like a checklist for the road.</p></div>';
+    var left=0, rows=t.map(function(k){ var c=CITIES[k], d=sum(ALL[k].done), n=c.stops.length, r=n-d; left+=r; var pc=Math.round(d/n*100);
+      return '<li class="trow'+(r?'':' done')+'"><button class="trowb" data-a="city" data-c="'+k+'"><span class="tcheck" aria-hidden="true">'+(r?'':'&#10003;')+'</span><span class="tn"><strong>'+c.name+'</strong><span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+(r?r+' of '+n+' stamps to go':'All stamped')+'</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></span><span class="go">Open ›</span></button><button class="tstar on" data-a="trip" data-c="'+k+'" aria-pressed="true" aria-label="Remove '+c.name+' from my trip">★</button></li>'; }).join('');
+    return '<div class="trip" id="trip"><p class="tripsum"><strong>'+t.length+(t.length===1?' town':' towns')+'</strong> · '+left+' stamps to collect</p><ul class="tlist">'+rows+'</ul></div>';
   }
   var STATE_ORDER=null;
   function chipsHtml(){
@@ -411,9 +414,19 @@
     {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|tower|monument|needle|gate\b/i}
   ];
   function trailStops(re){ var out=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(re.test(st.name)) out.push({k:k,st:st,done:!!ALL[k].done[i]}); }); }); return out; }
+  var TRICON={"stations": "<path d=\"M6 5h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 4h12M8 20l1.5-3m6.5 3-1.5-3M9 13h.01M15 13h.01\"/>", "capitols": "<path d=\"M4 20h16M6 20v-7m4 7v-7m4 7v-7m4 7v-7M3 13h18M5 13a7 7 0 0 1 14 0M12 3v3\"/>", "faith": "<path d=\"M12 2v5m-2-3h4M7 21V12l5-5 5 5v9M10 21v-4h4v4M4 21h16\"/>", "bridges": "<path d=\"M2 18h20M4 18v-5m16 5v-5M4 13c3-6 13-6 16 0M8 14v4m4-5v5m4-4v4\"/>"};
+  var TRCOL={stations:'#B7791F',capitols:'#1B58B8',faith:'#2F855A',bridges:'#0F766E'};
+  function browseOpen(){
+    var n=tripGet().length, T=[['towns','Towns'],['trails','Trails'],['trip','My trip'+(n?' ('+n+')':'')]];
+    return '<section class="browse" id="browse"><div class="btabs" role="tablist" aria-label="Browse">'+T.map(function(t){ return '<button class="btab" role="tab" id="bt-'+t[0]+'" data-a="btab" data-t="'+t[0]+'" aria-selected="'+(btab===t[0])+'" aria-controls="bp-'+t[0]+'">'+t[1]+'</button>'; }).join('')+'</div><div class="bpanel" id="bp-towns" role="tabpanel"'+(btab==='towns'?'':' hidden')+'>';
+  }
+  function setBtab(t){ btab=t; ['towns','trails','trip'].forEach(function(x){ var p=document.getElementById('bp-'+x), b=document.getElementById('bt-'+x); if(p) p.hidden=(x!==t); if(b) b.setAttribute('aria-selected',x===t?'true':'false'); }); }
   function trailsHtml(){
-    return '<section class="trails" id="trails"><h2 class="hh">Trails across towns</h2><p class="why">Collect a theme, not just a town. Tap a trail to see every stop on it.</p>'+TRAILS.map(function(tr){ var L=trailStops(tr.re); if(L.length<3) return ''; var d=L.filter(function(x){ return x.done; }).length;
-      return '<details class="reg trail"><summary class="region"><span class="rname"><i class="ring" style="--p:'+Math.round(d/L.length*100)+'" aria-hidden="true"></i>'+tr.name+'</span><span class="rcount">'+d+' of '+L.length+'</span></summary><p class="why">'+tr.note+'</p><ul class="towns">'+L.map(function(x){ return '<li><button class="town tl'+(x.done?' got':'')+'" data-a="city" data-c="'+x.k+'"><span class="tin"><h3>'+x.st.name+'</h3><span class="sub">'+CITIES[x.k].name+(TSTATE[x.k]?', '+TSTATE[x.k]:'')+(x.done?' · stamped':'')+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></details>'; }).join('')+'</section>';
+    var cards='', lists='';
+    TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
+      cards+='<button class="tcard'+(on?' on':'')+'" data-a="trail" data-t="'+tr.id+'" style="--tc:'+TRCOL[tr.id]+';--p:'+pc+'" aria-pressed="'+on+'"><span class="tic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+TRICON[tr.id]+'</svg></span><strong>'+tr.name+'</strong><span class="tcount">'+d+' of '+L.length+' stamped</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></button>';
+      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+CITIES[x.k].name+(TSTATE[x.k]?', '+TSTATE[x.k]:'')+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
+    return '<p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card
   function shareDraw(kind,k,cb,noimg){
@@ -710,11 +723,13 @@
     if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
+    if(a==='btab'){ setBtab(b.getAttribute('data-t')); return; }
+    if(a==='trail'){ btrail=b.getAttribute('data-t'); document.querySelectorAll('.tcard').forEach(function(c){ var on=c.getAttribute('data-t')===btrail; c.classList.toggle('on',on); c.setAttribute('aria-pressed',on?'true':'false'); }); document.querySelectorAll('.trl').forEach(function(x){ x.hidden=(x.getAttribute('data-trail')!==btrail); }); return; }
     if(a==='share'){ var sk=b.getAttribute('data-k'); if(sk&&CITIES[sk]) shareStamps('town',sk); else shareStamps('passport'); return; }
     if(a==='shareclose'){ shareClose(); return; }
     if(a==='trip'){ var tk=b.getAttribute('data-c'), ta=tripGet(), ti=ta.indexOf(tk); if(ti>-1) ta.splice(ti,1); else ta.push(tk); tripSet(ta); var sv=window.scrollY; render(); window.scrollTo(0,sv); toast(ti>-1?'Removed from your trip.':'Added to your trip.'); return; }
     if(a==='schip'){ var inp=document.getElementById('townSearch'); if(inp){ var sv2=b.getAttribute('data-s'); inp.value=(inp.value.trim().toLowerCase()===sv2.toLowerCase())?'':sv2; inp.dispatchEvent(new Event('input',{bubbles:true})); } return; }
-    if(a==='gomissions'){ var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    if(a==='gomissions'){ setBtab('towns'); var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }
     if(a==='backup'){ closeCeleb(); try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} openPass(); setTimeout(function(){ var el=document.getElementById('backup'); if(el) el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); },60); return; }
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }

@@ -628,3 +628,57 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 .sharecard{max-width:420px}
 .sharecard img{width:100%;height:auto;max-height:60vh;object-fit:contain;border-radius:12px;display:block;margin:0 auto 10px}
 .sharecard a.btn{display:block;text-align:center;text-decoration:none}
+
+/* browse tabs + distinct tiles */
+.browse{margin:18px 0}
+.btabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;background:var(--surface-2);border-radius:12px;margin-bottom:14px;position:sticky;top:0;z-index:5}
+.btab{border:0;background:transparent;color:var(--muted);font:600 15px var(--font-body,inherit);min-height:44px;border-radius:9px;cursor:pointer;padding:0 6px}
+.btab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.18)}
+.btab:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+.bpanel[hidden]{display:none!important}
+/* towns as photo tiles */
+#missions details.reg>.towns{grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:760px){#missions details.reg>.towns{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1100px){#missions details.reg>.towns{grid-template-columns:repeat(4,1fr)}}
+#missions .towns .town:not(.soon){position:relative;display:block;padding:0;min-height:0;aspect-ratio:4/3;overflow:hidden;border:0;border-radius:14px;background:var(--surface-2)}
+#missions .towns .town:not(.soon) .tph{position:absolute;inset:0;width:100%;height:100%;border-radius:0}
+#missions .towns .town:not(.soon)::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,20,.88) 0%,rgba(8,14,20,.45) 48%,rgba(8,14,20,0) 78%);pointer-events:none}
+#missions .towns .town:not(.soon) .tin{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:10px 12px;color:#fff}
+#missions .towns .town:not(.soon) h3{color:#fff;font-size:18px;line-height:1.1}
+#missions .towns .town:not(.soon) .sub{color:#E3EAF0;font-size:12px}
+#missions .towns .town:not(.soon) .lvl{display:none}
+#missions .towns .town:not(.soon) .go{position:absolute;top:8px;left:8px;z-index:1;margin:0;padding:3px 9px;border-radius:999px;background:rgba(8,14,20,.7);color:#fff;font-size:11px}
+#missions .towns li:has(.tstar) .go{margin-right:0}
+#missions .tstar{top:4px;right:4px;z-index:3;background:rgba(8,14,20,.55);color:#fff;border-radius:999px;min-width:40px;min-height:40px;font-size:1.25rem}
+#missions .tstar.on{color:var(--bulb)}
+#missions .town.soon{min-height:0}
+/* trails as collection cards */
+.tcards{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 12px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.tcard{flex:0 0 164px;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;text-align:left;padding:14px;border:2px solid var(--line);border-top:6px solid var(--tc);border-radius:14px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.tcard.on{border-color:var(--tc);box-shadow:0 0 0 2px var(--tc) inset}
+.tcard strong{font:800 17px/1.15 var(--font-display);text-transform:uppercase}
+.tcard:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tic{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--tc);color:#fff}
+.tcount{font-size:13px;color:var(--muted)}
+.pbar{display:block;height:6px;border-radius:99px;background:var(--surface-2);overflow:hidden;margin-top:2px}
+.pbar i{display:block;height:100%;background:var(--tc,var(--bulb));border-radius:99px}
+@media (min-width:760px){.tcard{flex:1 1 0;min-width:180px}}
+/* checklist rows for trips and trail stops */
+.tlist{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0;border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.tlist .trow{position:relative;border-top:1px solid var(--line)}
+.tlist .trow:first-child{border-top:0}
+.trowb{display:flex;align-items:center;gap:12px;width:100%;min-height:60px;padding:10px 54px 10px 12px;border:0;background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.trowb:hover,.trowb:focus-visible{background:var(--surface-2)}
+.trowb:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.tcheck{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff}
+.trow.done .tcheck{background:var(--tc,var(--bulb));border-color:var(--tc,var(--bulb))}
+.tn{flex:1;min-width:0;display:block}
+.tn strong{display:block;font-size:16px;line-height:1.2}
+.tn .sub{display:block;color:var(--muted);font-size:13px}
+.trowb .go{display:none}
+.tlist .tstar{top:50%;transform:translateY(-50%);right:6px}
+.tripsum{margin:2px 0 6px;font-size:1rem}
+.bempty{padding:18px;border:2px dashed var(--line);border-radius:14px;background:var(--surface)}
+.bempty h3{margin:0 0 6px;font:800 20px var(--font-display);text-transform:uppercase}
+.bempty p{margin:0;color:var(--muted)}
+.trip{margin:0}
