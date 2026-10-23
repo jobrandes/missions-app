@@ -83,3 +83,8 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Stop 1 then-photo (Orville in the shop, 1897) is from the West Third St shop, not the Williams St building. The captions say so.
 - Stop 4 "then" is a 1906 portrait of Dunbar, not the house. Huffman Prairie is on Wright-Patterson AFB: safety text says to check NPS access rules. Jo-Anne should verify access on the day.
 - Fact-check rounds 1-3 (46 stops) found 4 small fixes, all applied.
+
+## Come-back batch (Oct 22)
+- Home: progress card (weekly streak + stamps this month + next goal), My trip (star on town tiles), state chips, Trails across towns (regex on stop names: stations, capitols/courthouses, churches/missions, bridges/towers).
+- Share card: canvas PNG (no location data), Web Share if available, else a save modal. Falls back to a no-photo card if the canvas is tainted (file://).
+- localStorage keys: stp-log (stamp dates), stp-trip (starred towns). TSTATE/TFULL map towns to states: update when adding a town.

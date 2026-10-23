@@ -218,25 +218,24 @@
     if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
       h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
     var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button><button class="link bklink" data-a="backup">Back up your passport</button></section>':'';
-    h+=passTop;
-    var TSTATE={"reno":"NV","vc":"NV","tahoeicons":"CA/NV","tahoe":"CA/NV","boston":"MA","dc":"DC","ny":"NY","chicago":"IL","sf":"CA","philly":"PA","la":"CA","seattle":"WA","nola":"LA","detroit":"MI","minneapolis":"MN","atlanta":"GA","memphis":"TN","savannah":"GA","denver":"CO","santafe":"NM","phoenix":"AZ","albuquerque":"NM","tucson":"AZ","pittsburgh":"PA","baltimore":"MD","cleveland":"OH","stlouis":"MO","cincinnati":"OH","indianapolis":"IN","buffalo":"NY","richmond":"VA","charleston":"SC","houston":"TX","nashville":"TN","providence":"RI","saltlake":"UT","sandiego":"CA","portland":"OR","milwaukee":"WI","columbus":"OH","gettysburg":"PA","louisville":"KY","newport":"RI","knoxville":"TN","portlandme":"ME","newhaven":"CT","burlington":"VT","coloradosprings":"CO","lasvegas":"NV","flagstaff":"AZ","elpaso":"TX","sanantonio":"TX","dayton":"OH"}, TFULL={"NV":"Nevada","CA":"California","MA":"Massachusetts","DC":"District of Columbia Washington","NY":"New York","IL":"Illinois","PA":"Pennsylvania","WA":"Washington","LA":"Louisiana","MI":"Michigan","MN":"Minnesota","GA":"Georgia","TN":"Tennessee","CO":"Colorado","NM":"New Mexico","AZ":"Arizona","MD":"Maryland","OH":"Ohio","MO":"Missouri","IN":"Indiana","VA":"Virginia","SC":"South Carolina","TX":"Texas","RI":"Rhode Island","UT":"Utah","OR":"Oregon","WI":"Wisconsin","KY":"Kentucky","ME":"Maine","CT":"Connecticut","VT":"Vermont"};
-    function stOf(k){ var a=TSTATE[k]||''; return a.split('/').map(function(x){return TFULL[x]||x;}).join(' ')+' '+a.replace('/',' '); }
+    h+=passTop+goalHtml();
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
       var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
-      return '<li data-q="'+stOf(k).toLowerCase()+'"><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button></li>';
+      return '<li data-q="'+stOf(k).toLowerCase()+'"><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button><button class="tstar'+(tripGet().indexOf(k)>-1?' on':'')+'" data-a="trip" data-c="'+k+'" aria-pressed="'+(tripGet().indexOf(k)>-1?'true':'false')+'" aria-label="'+(tripGet().indexOf(k)>-1?'Remove '+c.name+' from my trip':'Add '+c.name+' to my trip')+'">'+(tripGet().indexOf(k)>-1?'★':'☆')+'</button></li>';
     }
     function soonLi(o){ var nm=(typeof o==='string')?o:o.name; return '<li><div class="town soon"><span class="tph"></span><span class="tin"><h3>'+nm+'</h3><span class="sub">Coming soon</span></span></div></li>'; }
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
     SOON.forEach(function(o){ var r=(typeof o==='string')?'More places':(o.region||'More places'); if(regs.indexOf(r)<0) regs.push(r); });
-    h+='<section id="missions"><h2 class="hh">Pick a mission</h2><label class="tsearch"><span class="sr">Search towns or states</span><input id="townSearch" type="search" placeholder="Search towns or states" autocomplete="off" autocapitalize="words" spellcheck="false" aria-controls="missions"></label><p class="tnone" id="townNone" hidden>No town matches. Try another spelling.</p>'+regs.map(function(r){
+    h+=tripHtml()+'<section id="missions"><h2 class="hh">Pick a mission</h2>'+chipsHtml()+'<label class="tsearch"><span class="sr">Search towns or states</span><input id="townSearch" type="search" placeholder="Search towns or states" autocomplete="off" autocapitalize="words" spellcheck="false" aria-controls="missions"></label><p class="tnone" id="townNone" hidden>No town matches. Try another spelling.</p>'+regs.map(function(r){
       var items=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }).map(townLi).join('')+SOON.filter(function(o){ return ((typeof o==='string')?'More places':(o.region||'More places'))===r; }).map(soonLi).join('');
       var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }), rg=0, rt=0; rk.forEach(function(k){ rg+=sum(ALL[k].done); rt+=CITIES[k].stops.length; });
       var open=(CITIES[cityId]&&(CITIES[cityId].region||'More places')===r)||(regs[0]===r&&!(CITIES[cityId]&&(ALL[cityId]&&sum(ALL[cityId].done)>0)));
       return '<details class="reg"'+(open?' open':'')+'><summary class="region"><span class="rname"><i class="ring" style="--p:'+(rt?Math.round(rg/rt*100):0)+'" aria-hidden="true"></i>'+r+'</span><span class="rcount">'+(rt?rg+' of '+rt+' stamps':'soon')+'</span></summary><ul class="towns">'+items+'</ul></details>';
     }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps collected across '+ORDER.length+' missions.</p></section>';
+    h+=trailsHtml();
     if(got>0) h+='<details class="pitch"><summary><span class="mono">About</span><strong>How Stamp the Past works</strong></summary>';
     var hs=CITIES[hk].stops, HT=[['Find the spot','A clue sends you to a real landmark. Bring your own two feet.'],['Prove it','Answer a question you can only get by standing there.'],['Fact or fiction','Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.'],['Get stamped','Every stop adds a stamp to your passport and a Then/Now photo you can fade through.']];
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
@@ -251,7 +250,7 @@
     var got=0,total=0,full=0,seals=0,b=bossBest();
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; var d=sum(ALL[k].done); got+=d; if(d===CITIES[k].stops.length) full++; if(sealTier(b[k])) seals++; });
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
-    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div></section>';
+    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
     h+='<section class="passport" id="passport">'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.filter(function(k){ return sum(ALL[k].done)>0; }).map(function(k){
       var c=CITIES[k], d=sum(ALL[k].done);
       return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
@@ -292,7 +291,7 @@
     var c=city(), x=xp(), r=rank(x), old=document.getElementById('celeb'); if(old) old.remove();
     var cf=''; for(var q=0;q<14;q++) cf+='<i style="--x:'+(q*7+3)+'%;--d:'+((q%5)*0.12)+'s;--c:'+(q%3)+'"></i>';
     var d=document.createElement('div'); d.id='celeb'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','celebT');
-    d.innerHTML='<div class="celeb-card"><div class="confetti" aria-hidden="true">'+cf+'</div><div class="celeb-stamp"><div class="bbox lg">'+badge('master',true)+'</div></div><p class="mono">Mission complete</p><h2 id="celebT">'+c.explorer+'</h2><p>'+c.afterDone+'</p><p class="celeb-stats"><strong>'+r.name+'</strong> · '+x+' XP · 4 of 4 stamps</p><div class="celeb-btns"><button class="btn" data-a="passport">See my passport</button><button class="btn ghost" data-a="celebclose">Keep exploring</button></div></div>';
+    d.innerHTML='<div class="celeb-card"><div class="confetti" aria-hidden="true">'+cf+'</div><div class="celeb-stamp"><div class="bbox lg">'+badge('master',true)+'</div></div><p class="mono">Mission complete</p><h2 id="celebT">'+c.explorer+'</h2><p>'+c.afterDone+'</p><p class="celeb-stats"><strong>'+r.name+'</strong> · '+x+' XP · 4 of 4 stamps</p><div class="celeb-btns"><button class="btn" data-a="share" data-k="'+cityId+'">Share my stamps</button><button class="btn ghost" data-a="passport">See my passport</button><button class="btn ghost" data-a="celebclose">Keep exploring</button></div></div>';
     document.body.appendChild(d);
     var f=d.querySelector('button'); if(f) f.focus();
   }
@@ -373,6 +372,81 @@
   var SEALS={gold:['#f2cf72','#b8872a','#6e4b0c','Gold Seal','Master Historian'],silver:['#eceff3','#9aa3b0','#566070','Silver Seal','Sharp Eye'],bronze:['#e8b58a','#a8693a','#643415','Bronze Seal','Plaque Reader'],grand:['#f2cf72','#1d3557','#f2cf72','Grand Historian','Gold in every town']};
   function sealTier(n){ return n>=4?'gold':(n===3?'silver':(n===2?'bronze':null)); }
   function ptsOf(n){ return n===undefined||n===null?0:50*n+(n>=4?100:0); }
+    var TSTATE={"reno":"NV","vc":"NV","tahoeicons":"CA/NV","tahoe":"CA/NV","boston":"MA","dc":"DC","ny":"NY","chicago":"IL","sf":"CA","philly":"PA","la":"CA","seattle":"WA","nola":"LA","detroit":"MI","minneapolis":"MN","atlanta":"GA","memphis":"TN","savannah":"GA","denver":"CO","santafe":"NM","phoenix":"AZ","albuquerque":"NM","tucson":"AZ","pittsburgh":"PA","baltimore":"MD","cleveland":"OH","stlouis":"MO","cincinnati":"OH","indianapolis":"IN","buffalo":"NY","richmond":"VA","charleston":"SC","houston":"TX","nashville":"TN","providence":"RI","saltlake":"UT","sandiego":"CA","portland":"OR","milwaukee":"WI","columbus":"OH","gettysburg":"PA","louisville":"KY","newport":"RI","knoxville":"TN","portlandme":"ME","newhaven":"CT","burlington":"VT","coloradosprings":"CO","lasvegas":"NV","flagstaff":"AZ","elpaso":"TX","sanantonio":"TX","dayton":"OH"}, TFULL={"NV":"Nevada","CA":"California","MA":"Massachusetts","DC":"District of Columbia Washington","NY":"New York","IL":"Illinois","PA":"Pennsylvania","WA":"Washington","LA":"Louisiana","MI":"Michigan","MN":"Minnesota","GA":"Georgia","TN":"Tennessee","CO":"Colorado","NM":"New Mexico","AZ":"Arizona","MD":"Maryland","OH":"Ohio","MO":"Missouri","IN":"Indiana","VA":"Virginia","SC":"South Carolina","TX":"Texas","RI":"Rhode Island","UT":"Utah","OR":"Oregon","WI":"Wisconsin","KY":"Kentucky","ME":"Maine","CT":"Connecticut","VT":"Vermont"};
+    function stOf(k){ var a=TSTATE[k]||''; return a.split('/').map(function(x){return TFULL[x]||x;}).join(' ')+' '+a.replace('/',' '); }
+
+  var DISP={DC:'Washington DC'};
+  function logGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-log')||'[]'); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+  function dstr(d){ function z(n){ return (n<10?'0':'')+n; } return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate()); }
+  function logStamp(){ var a=logGet(); a.push(dstr(new Date())); if(a.length>500) a=a.slice(-500); try{ localStorage.setItem('stp-log',JSON.stringify(a)); }catch(e){} }
+  function wkOf(ds){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(ds); if(!m) return null; return Math.floor((Date.UTC(+m[1],+m[2]-1,+m[3])/86400000-4)/7); }
+  function streakWeeks(){ var set={}; logGet().forEach(function(d){ var w=wkOf(d); if(w!==null) set[w]=1; }); var now=wkOf(dstr(new Date())), w=set[now]?now:now-1, n=0; while(set[w]){ n++; w--; } return n; }
+  function monthStamps(){ var m=dstr(new Date()).slice(0,7); return logGet().filter(function(d){ return d.slice(0,7)===m; }).length; }
+  function goalHtml(){
+    var n=totalStamps(); if(n<1) return '';
+    var best=null; ORDER.forEach(function(k){ var d=sum(ALL[k].done), t=CITIES[k].stops.length; if(d>0&&d<t){ var left=t-d; if(!best||left<best.left) best={k:k,left:left}; } });
+    var sw=streakWeeks(), ms=monthStamps(), bits=[];
+    if(sw>0) bits.push('<strong>'+sw+(sw===1?' week':' weeks')+' in a row</strong> with a new stamp');
+    if(ms>0) bits.push('<strong>'+ms+'</strong> '+(ms===1?'stamp':'stamps')+' this month');
+    var goal=best?'<button class="rcard" data-a="city" data-c="'+best.k+'"><span><strong>Next goal: finish '+CITIES[best.k].name+'</strong><span class="rsub">'+best.left+' more '+(best.left===1?'stamp':'stamps')+' to complete it</span></span><span class="go">Go ›</span></button>':'<p class="rsub">Pick a new town below to start your next goal.</p>';
+    return '<section class="goal"><p class="mono">Your progress</p>'+(bits.length?'<p class="gbits">'+bits.join(' · ')+'</p>':'')+goal+'</section>';
+  }
+  function tripGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-trip')||'[]'); return Array.isArray(a)?a.filter(function(k){ return CITIES[k]; }):[]; }catch(e){ return []; } }
+  function tripSet(a){ try{ localStorage.setItem('stp-trip',JSON.stringify(a)); }catch(e){} }
+  function tripHtml(){
+    var t=tripGet(); if(!t.length) return '';
+    var left=0; var rows=t.map(function(k){ var c=CITIES[k], d=sum(ALL[k].done), r=c.stops.length-d; left+=r; return '<li><button class="town" data-a="city" data-c="'+k+'"><span class="tin"><h3>'+c.name+'</h3><span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+(r?r+' of '+c.stops.length+' stamps to go':'Complete')+'</span></span><span class="go">Open ›</span></button><button class="tstar on" data-a="trip" data-c="'+k+'" aria-pressed="true" aria-label="Remove '+c.name+' from my trip">★</button></li>'; }).join('');
+    return '<section class="trip" id="trip"><p class="mono">My trip</p><h2 class="hh">'+t.length+(t.length===1?' town':' towns')+' · '+left+' stamps to collect</h2><ul class="towns">'+rows+'</ul></section>';
+  }
+  var STATE_ORDER=null;
+  function chipsHtml(){
+    var seen={}, list=[]; ORDER.forEach(function(k){ (TSTATE[k]||'').split('/').forEach(function(a){ if(a&&!seen[a]){ seen[a]=1; list.push(a); } }); });
+    list.sort(function(a,b){ return (DISP[a]||TFULL[a]||a).localeCompare(DISP[b]||TFULL[b]||b); });
+    return '<div class="schips" role="group" aria-label="Browse by state">'+list.map(function(a){ var nm=DISP[a]||TFULL[a]||a, q=a==='DC'?'District of Columbia':nm; return '<button class="chip" data-a="schip" data-s="'+q+'">'+nm+'</button>'; }).join('')+'</div>';
+  }
+  var TRAILS=[
+    {id:'stations',name:'Train stations',note:'Depots and terminals where the country arrived.',re:/station|depot|terminal/i},
+    {id:'capitols',name:'Capitols and courthouses',note:'Where laws were made and arguments settled.',re:/capitol|statehouse|state house|courthouse|city hall/i},
+    {id:'faith',name:'Churches and missions',note:'Cathedrals, missions and meeting houses.',re:/church|cathedral|temple|mission|basilica|meeting ?house/i},
+    {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|tower|monument|needle|gate\b/i}
+  ];
+  function trailStops(re){ var out=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(re.test(st.name)) out.push({k:k,st:st,done:!!ALL[k].done[i]}); }); }); return out; }
+  function trailsHtml(){
+    return '<section class="trails" id="trails"><h2 class="hh">Trails across towns</h2><p class="why">Collect a theme, not just a town. Tap a trail to see every stop on it.</p>'+TRAILS.map(function(tr){ var L=trailStops(tr.re); if(L.length<3) return ''; var d=L.filter(function(x){ return x.done; }).length;
+      return '<details class="reg trail"><summary class="region"><span class="rname"><i class="ring" style="--p:'+Math.round(d/L.length*100)+'" aria-hidden="true"></i>'+tr.name+'</span><span class="rcount">'+d+' of '+L.length+'</span></summary><p class="why">'+tr.note+'</p><ul class="towns">'+L.map(function(x){ return '<li><button class="town tl'+(x.done?' got':'')+'" data-a="city" data-c="'+x.k+'"><span class="tin"><h3>'+x.st.name+'</h3><span class="sub">'+CITIES[x.k].name+(TSTATE[x.k]?', '+TSTATE[x.k]:'')+(x.done?' · stamped':'')+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></details>'; }).join('')+'</section>';
+  }
+  // share card
+  function shareDraw(kind,k,cb,noimg){
+    var W=1080,H=1350,c=document.createElement('canvas'); c.width=W; c.height=H; var g=c.getContext('2d');
+    var keys=[], title, big, line;
+    if(kind==='town'){ keys=townKeys(k).slice(0,4); title=CITIES[k].name; big=sum(ALL[k].done)+' of '+CITIES[k].stops.length+' stamps'; line=CITIES[k].explorer; }
+    else { var tk=ORDER.filter(function(x){ return sum(ALL[x].done)>0; }).sort(function(a,b){ return sum(ALL[b].done)-sum(ALL[a].done); }); tk.slice(0,4).forEach(function(x){ var kk=townKeys(x)[0]; if(kk) keys.push(kk); }); var full=ORDER.filter(function(x){ return sum(ALL[x].done)===CITIES[x].stops.length; }).length; title='My passport'; big=totalStamps()+' stamps'; line=tk.length+(tk.length===1?' town':' towns')+(full?' · '+full+' complete':''); }
+    g.fillStyle='#13202C'; g.fillRect(0,0,W,H); g.fillStyle='#F2B01E'; g.fillRect(0,0,W,14);
+    g.fillStyle='#9AAAB8'; g.font='600 34px system-ui,sans-serif'; g.textAlign='center'; g.fillText('STAMP THE PAST',W/2,110);
+    g.fillStyle='#FFFFFF'; g.font='800 96px system-ui,sans-serif'; var t=title; while(g.measureText(t).width>W-120&&g.font.indexOf('px')>0){ var sz=parseInt(g.font.split(' ')[1],10)-6; g.font='800 '+sz+'px system-ui,sans-serif'; } g.fillText(t,W/2,235);
+    g.fillStyle='#F2B01E'; g.font='700 64px system-ui,sans-serif'; g.fillText(big,W/2,325); g.fillStyle='#C9D1D9'; g.font='500 38px system-ui,sans-serif'; g.fillText(line,W/2,385);
+    var n=keys.length, loaded=0, imgs=[], cell=380, gap=36, startX=(W-(2*cell+gap))/2, startY=430;
+    function finish(){
+      imgs.forEach(function(im,i){ if(!im) return; var x=startX+(i%2)*(cell+gap), y=startY+Math.floor(i/2)*(cell+gap); if(i===imgs.length-1&&i%2===0) x=(W-cell)/2; g.save(); g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.clip(); var r=Math.max(cell/im.width,cell/im.height), w=im.width*r, h=im.height*r; g.drawImage(im,x+(cell-w)/2,y+(cell-h)/2,w,h); g.restore(); g.lineWidth=10; g.strokeStyle='#F2B01E'; g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.stroke(); });
+      g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText('stamp-the-past.netlify.app',W/2,1318);
+      try{ c.toBlob(function(b){ cb(b); },'image/png'); }catch(e){ if(!noimg) shareDraw(kind,k,cb,true); else cb(null); }
+    }
+    if(!n||noimg){ finish(); return; }
+    keys.forEach(function(key,i){ var im=new Image(); im.onload=function(){ imgs[i]=im; if(++loaded===n) finish(); }; im.onerror=function(){ if(++loaded===n) finish(); }; im.src=PHOTOS[key]; });
+  }
+  function shareClose(){ var e=document.getElementById('sharem'); if(e){ if(e._u) try{ URL.revokeObjectURL(e._u); }catch(x){} e.remove(); } }
+  function shareStamps(kind,k){
+    toast('Making your card...');
+    shareDraw(kind,k,function(b){
+      if(!b){ toast('Could not make the card on this device.'); return; }
+      var name='stamp-the-past-'+(kind==='town'?k:'passport')+'.png', f=null; try{ f=new File([b],name,{type:'image/png'}); }catch(e){}
+      var txt=(kind==='town'?'I finished '+CITIES[k].name+' on Stamp the Past.':'My Stamp the Past passport.')+' Go there. Prove it. Stamp the past.';
+      if(f&&navigator.canShare&&navigator.canShare({files:[f]})&&navigator.share){ navigator.share({files:[f],text:txt}).catch(function(){}); return; }
+      shareClose(); var u=URL.createObjectURL(b), d=document.createElement('div'); d.id='sharem'; d._u=u; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Your share card');
+      d.innerHTML='<div class="celeb-card sharecard"><img src="'+u+'" alt="Your stamp card"><p class="why">Press and hold the picture to save or share it.</p><div class="celeb-btns"><a class="btn" href="'+u+'" download="'+name+'">Save the picture</a><button class="btn ghost" data-a="shareclose">Close</button></div></div>';
+      document.body.appendChild(d);
+    });
+  }
   function totalStamps(){ var t=0; ORDER.forEach(function(k){ t+=sum(ALL[k].done); }); return t; }
   function bkSeen(){ try{ return parseInt(localStorage.getItem('stp-bk-seen')||'-1',10); }catch(e){ return -1; } }
   function totalPts(){ var b=bossBest(),t=0; ORDER.forEach(function(k){ t+=ptsOf(b[k]); }); return t; }
@@ -636,6 +710,10 @@
     if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
+    if(a==='share'){ var sk=b.getAttribute('data-k'); if(sk&&CITIES[sk]) shareStamps('town',sk); else shareStamps('passport'); return; }
+    if(a==='shareclose'){ shareClose(); return; }
+    if(a==='trip'){ var tk=b.getAttribute('data-c'), ta=tripGet(), ti=ta.indexOf(tk); if(ti>-1) ta.splice(ti,1); else ta.push(tk); tripSet(ta); var sv=window.scrollY; render(); window.scrollTo(0,sv); toast(ti>-1?'Removed from your trip.':'Added to your trip.'); return; }
+    if(a==='schip'){ var inp=document.getElementById('townSearch'); if(inp){ var sv2=b.getAttribute('data-s'); inp.value=(inp.value.trim().toLowerCase()===sv2.toLowerCase())?'':sv2; inp.dispatchEvent(new Event('input',{bubbles:true})); } return; }
     if(a==='gomissions'){ var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }
     if(a==='backup'){ closeCeleb(); try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} openPass(); setTimeout(function(){ var el=document.getElementById('backup'); if(el) el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); },60); return; }
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
@@ -652,7 +730,7 @@
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; save(); if(allDone()) setTimeout(celebrate,450); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); if(allDone()) setTimeout(celebrate,450); }
         cur.wrong=[]; render();
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);

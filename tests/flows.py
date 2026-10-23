@@ -30,7 +30,7 @@ with sync_playwright() as p:
     pg=new()
     need('go there' in pg.inner_text('#main').lower(),'first launch should show Home')
     need(not pg.locator('.hero').is_visible(),'hero should be hidden on Home')
-    need(pg.locator('.town:not(.soon)').count()==NT and pg.locator('.town.soon').count()==1,f'Home should list {NT} towns + 1 coming soon')
+    need(pg.locator('#missions .town:not(.soon)').count()==NT and pg.locator('#missions .town.soon').count()==1,f'Home should list {NT} towns + 1 coming soon')
     pg.click('.town >> nth=0'); need(pg.locator('.hero').is_visible() and pg.inner_text('#cityName').lower()=='reno','Start Reno from Home')
     pg.click('.city.home'); need('pick a mission' in pg.inner_text('#main').lower(),'Home chip returns Home')
     pg.reload(); need('pick a mission' in pg.inner_text('#main').lower(),'Home persists across reload')

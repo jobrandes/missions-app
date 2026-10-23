@@ -605,3 +605,26 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 .row2{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .row2 .btn{flex:1 1 140px}
 .bklink{display:block;margin:2px 0 0;padding:6px 4px}
+
+/* come back batch */
+.goal{margin:14px 0}
+.goal .gbits{margin:4px 0 10px;font-size:1rem;line-height:1.4}
+.goal .rsub{display:block}
+.towns li{position:relative}
+.tstar{position:absolute;top:6px;right:6px;min-width:44px;min-height:44px;border:0;background:transparent;color:var(--muted);font-size:1.5rem;line-height:1;cursor:pointer;border-radius:10px;z-index:2}
+.tstar.on{color:var(--bulb)}
+.tstar:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.towns li:has(.tstar) .go{margin-right:44px}
+.trip{margin:18px 0}
+.trip .hh{margin:2px 0 10px}
+.schips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 10px;margin:0 -2px 6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.chip{flex:0 0 auto;min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.9rem;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--accent)}
+.chip:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.trails{margin:22px 0}
+.trails .why{margin:2px 0 10px}
+.trail .why{padding:0 14px}
+.tl.got .sub{color:var(--accent)}
+.sharecard{max-width:420px}
+.sharecard img{width:100%;height:auto;max-height:60vh;object-fit:contain;border-radius:12px;display:block;margin:0 auto 10px}
+.sharecard a.btn{display:block;text-align:center;text-decoration:none}
