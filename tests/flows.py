@@ -82,7 +82,7 @@ with sync_playwright() as p:
         pg.click('[data-a=bnext]')
     need(pg.locator('.boss-res .seal').count()==0,'zero correct earns no seal')
     # report a problem: dialog opens, needs text, sends with where-context, and fails gracefully
-    pg=new(); pg.click('[data-a=report]'); need(pg.locator('#report').count()==1,'report dialog opens from Home')
+    pg=new(); pg.click('#menuBtn'); pg.click('#menu [data-a=report]'); need(pg.locator('#report').count()==1 and pg.locator('#menu').count()==0,'report dialog opens from the Menu')
     pg.click('[data-a=repsend]'); need('sentence' in pg.inner_text('#repMsgOut').lower(),'empty report asks for text')
     pg.fill('#repMsg','The plaque says 1987'); pg.click('[data-a=repsend]'); pg.wait_for_timeout(300)
     need(pg.locator('#report').count()==1 and 'could not send' in pg.inner_text('#repMsgOut').lower(),'failed send stays open with a clear message')

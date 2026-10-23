@@ -91,3 +91,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Browse tabs (Oct 23)
 - Home browse area is tabs: Towns (photo tiles) | Trails (colored collection cards + checklist) | My trip (checklist). State: btab/btrail vars, setBtab(). Next: hamburger Menu for secondary items (backup, guide, feedback, parents info, credits, settings; accounts later for the App Store).
+
+## Menu (Oct 23)
+- Right-side drawer from the top-bar Menu button (openMenu/closeMenu): backup, share passport, replay guide, how it works, feedback, parents info, photo credits, appearance (stp-theme: system/light/dark), Account placeholder ("No account needed"). Home footer now just links to the Menu. Hidden inside a stop. If real accounts are added, Apple requires in-app account deletion.

@@ -217,7 +217,7 @@
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
     if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
       h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
-    var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button><button class="link bklink" data-a="backup">Back up your passport</button></section>':'';
+    var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
     h+=passTop+goalHtml();
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
@@ -243,7 +243,7 @@
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
     h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     if(got>0) h+='</details>';
-    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="report">Report a problem or send feedback</button><br><button class="link" data-a="replaytour">Replay the guide</button></p>';
+    h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="menu">Menu: backup, help, settings</button></p>';
     return h;
   }
   function viewPass(){
@@ -285,6 +285,39 @@
     return h;
   }
 
+  var menuFrom=null;
+  function themeGet(){ try{ var t=localStorage.getItem('stp-theme'); return (t==='light'||t==='dark')?t:'system'; }catch(e){ return 'system'; } }
+  function themeApply(t){ var r=document.documentElement; if(t==='light'||t==='dark') r.setAttribute('data-theme',t); else r.removeAttribute('data-theme'); }
+  themeApply(themeGet());
+  function menuHtml(){
+    var got=totalStamps(), th=themeGet();
+    var ex=function(txt){ return '<li>'+txt+'</li>'; };
+    var seg=['system','light','dark'].map(function(t){ return '<button class="seg'+(th===t?' on':'')+'" data-a="theme" data-t="'+t+'" aria-pressed="'+(th===t)+'">'+(t==='system'?'Match phone':t.charAt(0).toUpperCase()+t.slice(1))+'</button>'; }).join('');
+    var item=function(a,label,sub,extra){ return '<button class="mitem" data-a="'+a+'"'+(extra||'')+'><span><strong>'+label+'</strong>'+(sub?'<span class="msub">'+sub+'</span>':'')+'</span><span class="go" aria-hidden="true">›</span></button>'; };
+    return '<div class="menu-panel" role="document"><div class="menu-head"><h2 id="menuT">Menu</h2><button class="menu-x" data-a="menuclose" aria-label="Close menu">&times;</button></div>'
+     +'<p class="mgroup">Your passport</p>'
+     +item('backup','Back up your passport','Save a code so a lost phone does not lose your stamps')
+     +(got>0?item('share','Share my passport','Make a picture of your stamps',' data-k=""'):'')
+     +'<p class="mgroup">Help</p>'
+     +item('replaytour','Replay the guide','The quick tour of how a stop works')
+     +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question you can only get by standing there.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
+     +item('report','Report a problem or send feedback','Tell us what is wrong or confusing')
+     +'<p class="mgroup">Safety and privacy</p>'
+     +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li><li>Go with a parent or trusted adult, in daylight, and follow local rules at every stop.</li></ul></details>'
+     +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
+     +'<p class="mgroup">Settings</p>'
+     +'<div class="mrow"><span id="thl">Appearance</span><div class="segs" role="group" aria-labelledby="thl">'+seg+'</div></div>'
+     +'<p class="mgroup">Account</p>'
+     +'<div class="macct"><strong>No account needed.</strong><span class="msub">Your stamps live on this phone. Use a backup code to move them to a new one. Optional sign-in may come later, so your stamps can follow you between devices.</span></div>'
+     +'<p class="mfoot">Made by a mom and her teenage son.</p></div>';
+  }
+  function openMenu(){
+    closeMenu(); menuFrom=document.activeElement;
+    var d=document.createElement('div'); d.id='menu'; d.className='menu'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','menuT');
+    d.innerHTML='<div class="menu-scrim" data-a="menuclose"></div>'+menuHtml(); document.body.appendChild(d); document.body.classList.add('menuopen');
+    var f=d.querySelector('.menu-x'); if(f) f.focus();
+  }
+  function closeMenu(){ var e=document.getElementById('menu'); if(e){ e.remove(); document.body.classList.remove('menuopen'); if(menuFrom&&menuFrom.focus&&document.body.contains(menuFrom)) try{ menuFrom.focus(); }catch(x){} } }
   function celebKeyGet(){ try{ return JSON.parse(localStorage.getItem('then-now-cel')||'{}')||{}; }catch(e){ return {}; } }
   function celebrate(){
     var kv=celebKeyGet(); if(kv[cityId]) return; kv[cityId]=1; try{ localStorage.setItem('then-now-cel',JSON.stringify(kv)); }catch(e){}
@@ -297,9 +330,9 @@
   }
   function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
   document.addEventListener('keydown',function(e){
-    if(e.key==='Tab'){ var dlg=document.getElementById('report')||document.getElementById('tour')||document.getElementById('celeb'); if(dlg&&dlg.offsetParent!==null||dlg&&getComputedStyle(dlg).display!=='none'){ var f=dlg.querySelectorAll('button'); if(f.length){ var first=f[0], last=f[f.length-1]; if(!dlg.contains(document.activeElement)){ first.focus(); e.preventDefault(); } else if(e.shiftKey&&document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey&&document.activeElement===last){ first.focus(); e.preventDefault(); } } } }
+    if(e.key==='Tab'){ var dlg=document.getElementById('report')||document.getElementById('menu')||document.getElementById('tour')||document.getElementById('celeb'); if(dlg&&dlg.offsetParent!==null||dlg&&getComputedStyle(dlg).display!=='none'){ var f=dlg.querySelectorAll('button'); if(f.length){ var first=f[0], last=f[f.length-1]; if(!dlg.contains(document.activeElement)){ first.focus(); e.preventDefault(); } else if(e.shiftKey&&document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey&&document.activeElement===last){ first.focus(); e.preventDefault(); } } } }
   });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeReport(); closeCeleb(); if(document.getElementById('tour')) endTour(); } });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeReport(); closeCeleb(); closeMenu(); if(document.getElementById('tour')) endTour(); } });
   /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
   try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
   window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
@@ -708,6 +741,10 @@
   document.addEventListener('click',function(e){
     var b=e.target.closest('[data-a]'); if(!b) return;
     var a=b.getAttribute('data-a');
+    if(a==='menu'){ openMenu(); return; }
+    if(a==='menuclose'){ closeMenu(); return; }
+    if(a==='theme'){ var tv=b.getAttribute('data-t'); try{ if(tv==='system') localStorage.removeItem('stp-theme'); else localStorage.setItem('stp-theme',tv); }catch(x){} themeApply(tv); b.parentNode.querySelectorAll('.seg').forEach(function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(document.getElementById('menu')&&['backup','share','replaytour','report'].indexOf(a)>-1) closeMenu();
     if(a==='home'){ goHome(); return; }
     if(a==='nextstop'){ openStop(+b.getAttribute('data-i'),0); return; }
     if(a==='bossgo'){ leave(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
