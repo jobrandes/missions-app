@@ -7,6 +7,9 @@ The web app in `site/` is wrapped by Capacitor. Same code, same photos, bundled 
 - Icons and splash come from `assets/` via `npx capacitor-assets generate` (icon source: `tools/make_icon_src.py`).
 - Feedback form: inside the app it posts to `https://stamp-the-past.netlify.app/` (no-cors); on the web it posts to `/`.
 
+## Note
+The iOS web files (`ios/App/App/public`) and `capacitor.config.json` are committed on purpose, and no Capacitor plugins are installed, so the Xcode project opens straight after a git clone with no npm step. Run `npm run sync` after any web change and commit the result. Re-adding a plugin means `npm install` on the Mac again.
+
 ## Commands
 - `npm install` once.
 - `npm run sync` = `python3 build.py && npx cap sync` (rebuild web files, copy into ios/ and android/).

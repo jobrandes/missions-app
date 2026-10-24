@@ -1,0 +1,18 @@
+{
+	"appId": "com.stampthepast.app",
+	"appName": "Stamp the Past",
+	"webDir": "site",
+	"backgroundColor": "#EDF1F5",
+	"ios": {
+		"contentInset": "never",
+		"limitsNavigationsToAppBoundDomains": false
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": true,
+			"launchShowDuration": 0,
+			"backgroundColor": "#EDF1F5"
+		}
+	},
+	"packageClassList": []
+}
