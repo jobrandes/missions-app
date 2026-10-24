@@ -44,8 +44,8 @@
    "mk_sh_now",
    "50% 45%"
   ],
-  "auditorium": [
-   "mk_au_now",
+  "pabst": [
+   "mk_pt_now",
    "50% 45%"
   ]
  },
@@ -256,19 +256,19 @@
     "verify": "Wikipedia says it was built for the rehabilitation of Civil War soldiers. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1885",
+    "yr": "Undated",
     "label": "The home then",
-    "line": "An 1885 engraving of the whole soldiers' home, with its buildings, paths and trees.",
+    "line": "An old photograph of the Main Building, finished in 1868, with its tall tower and two cannons on the lawn.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     },
     "ph": {
      "k": "mk_sh_then",
-     "by": "James E. Heg (1885 Wisconsin Blue Book)",
+     "by": "Sherman (file by James Steakley)",
      "lic": "Public domain",
      "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_Soldiers_Home.jpeg",
+     "page": "https://commons.wikimedia.org/wiki/File:Soldiers_Home_Mix.jpg",
      "note": "resized"
     }
    },
@@ -323,95 +323,94 @@
    }
   },
   {
-   "id": "auditorium",
-   "name": "Milwaukee Auditorium",
-   "short": "Auditorium",
-   "badge": "Auditorium",
+   "id": "pabst",
+   "name": "Pabst Theater",
+   "short": "Pabst Theater",
+   "badge": "Pabst",
    "tag": "Stop 4 of 4",
-   "teaser": "A giant hall built on the ashes of an exposition building.",
-   "map": "Milwaukee Theatre (Milwaukee Auditorium), 500 W Kilbourn Avenue, Milwaukee, WI",
-   "clue": "Go to West Kilbourn Avenue downtown. Look for a long brick building with big arched windows and a sign that says Milwaukee Theatre.",
+   "teaser": "A theater that burned down and was rebuilt the same year.",
+   "map": "Pabst Theater, 144 E Wells Street, Milwaukee, WI",
+   "clue": "Go to East Wells Street downtown, next to the tall clock tower of City Hall. Look for a big red-brick theater with the word PABST on a tall vertical sign.",
    "safety": "Downtown streets are busy. Use crosswalks, and view the building from the public sidewalk.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
    "q": {
-    "prompt": "What building stood on this spot before it was destroyed by fire in 1905?",
+    "prompt": "What happened to the first theater on this spot in 1895, before the Pabst Theater was built?",
     "options": [
-     "The Milwaukee Industrial Exposition Building",
-     "The old City Hall",
-     "A brewery",
-     "A railroad station"
+     "It burned down",
+     "It was moved to another street",
+     "It was turned into a brewery",
+     "It was torn down for City Hall"
     ],
     "answer": 0,
-    "hint": "It was a big hall for showing off new products.",
-    "verify": "Wikipedia says the auditorium replaced the Milwaukee Industrial Exposition Building, destroyed by fire in 1905. Written from sources, not yet checked on site. Written from sources, not yet checked on site."
+    "hint": "The new theater opened later the same year.",
+    "verify": "Wikipedia says the Nixon Theater burned in January 1895 and the Pabst Theater opened on November 9, 1895. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1908",
-    "label": "The auditorium then",
-    "line": "A colorized print of the new hall with a long front and horse carriages and early cars out front.",
+    "yr": "1970",
+    "label": "The Pabst then",
+    "line": "A black and white view from the street: dark brick, the old PABST sign and City Hall's tower behind.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     },
     "ph": {
-     "k": "mk_au_then",
-     "by": "Library of Congress (Miscellaneous Items in High Demand)",
+     "k": "mk_pt_then",
+     "by": "Douglas Green",
      "lic": "Public domain",
      "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:The_new_auditorium,_Milwaukee_LCCN2013646928.jpg",
-     "note": "resized, cropped"
+     "page": "https://commons.wikimedia.org/wiki/File:Pabst_Theater_(vintage).jpg",
+     "note": "resized"
     }
    },
    "now": {
-    "yr": "2012",
+    "yr": "2024",
     "head": "Today",
-    "label": "The auditorium today",
-    "line": "The long brick front with its big windows and the Milwaukee Theatre sign.",
+    "label": "The Pabst today",
+    "line": "The same brick front and the PABST sign, with the City Hall tower rising beside it.",
     "ph": {
-     "k": "mk_au_now",
-     "by": "Royalbroil",
-     "lic": "CC BY-SA 3.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg",
+     "k": "mk_pt_now",
+     "by": "SecretName101",
+     "lic": "CC BY 4.0",
+     "lu": "https://creativecommons.org/licenses/by/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Pabst_Theater_and_Milwaukee_City_Hall_in_Milwaukee_photographed_in_June_2024_\u20142396.jpg",
      "note": "resized"
     }
    },
    "story": [
-    "The Milwaukee Auditorium was built in 1909 where the Milwaukee Industrial Exposition Building had stood before a fire destroyed it in 1905. The cornerstone was laid on August 1, 1908, and the building was dedicated on September 21, 1909.",
-    "It held 13,520 people and had almost 105,000 square feet of exhibition space. Elizabeth Plankinton donated a pipe organ. It hosted concerts, circuses, political rallies and sports events, from John Philip Sousa and Enrico Caruso to modern stars, and sitting presidents from Taft to Clinton gave speeches there.",
-    "A renovation from 2001 to 2003 changed its name to the Milwaukee Theatre. A naming rights deal changed it to the Miller High Life Theatre in 2017. Today it seats 4,086 people."
+    "The Pabst Theater opened on November 9, 1895. It replaced the Nixon Theater, which had burned in January of that year, and brewer Captain Frederick Pabst paid for the new one. Otto Strack designed it.",
+    "It was named a National Historic Landmark on December 4, 1991, and it still hosts concerts and shows in a hall of about 1,300 seats."
    ],
-   "fact": "Presidents from Taft to Clinton spoke here.",
-   "disputed": "Many people think the Milwaukee Theatre has always had that name. Wikipedia says it was originally the Milwaukee Auditorium.",
+   "fact": "It was rebuilt within the same year its predecessor burned.",
+   "disputed": "Some sources call it one of the oldest continuously operating theaters in the country, but the exact ranking is disputed.",
    "claims": [
     {
-     "t": "The Milwaukee Auditorium was dedicated in 1909.",
+     "t": "The Pabst Theater opened in 1895.",
      "a": 0,
-     "why": "Wikipedia: dedicated on September 21, 1909."
+     "why": "Wikipedia: opened November 9, 1895."
     },
     {
-     "t": "The building has always been called the Milwaukee Theatre.",
-     "a": 2,
-     "why": "It was originally the Milwaukee Auditorium."
+     "t": "The Pabst Theater is officially the fourth-oldest theater in the US.",
+     "a": 1,
+     "why": "This ranking is claimed, but sources disagree on how to count."
     }
    ],
    "sources": [
     {
-     "t": "Wikipedia: Miller High Life Theatre",
-     "u": "https://en.wikipedia.org/wiki/Miller_High_Life_Theatre"
+     "t": "Wikipedia: Pabst Theater",
+     "u": "https://en.wikipedia.org/wiki/Pabst_Theater"
     },
     {
-     "t": "Wikipedia: Milwaukee",
-     "u": "https://en.wikipedia.org/wiki/Milwaukee"
+     "t": "Wikipedia: List of National Historic Landmarks in Wisconsin",
+     "u": "https://en.wikipedia.org/wiki/List_of_National_Historic_Landmarks_in_Wisconsin"
     }
    ],
    "card": {
-    "a": "1908",
-    "b": "2003",
-    "la": "Cornerstone laid",
-    "lb": "Renovation finishes"
+    "a": "1895",
+    "b": "1991",
+    "la": "Theater opens",
+    "lb": "National Historic Landmark"
    }
   }
  ],
- "heroKey": "mk_au_now"
+ "heroKey": "mk_pt_now"
 }

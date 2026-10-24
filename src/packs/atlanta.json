@@ -166,19 +166,19 @@
     "verify": "Wikipedia says the dome is gilded with gold leaf. Confirm on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "1889",
+    "yr": "1930",
     "label": "The Capitol then",
-    "line": "An 1889 print of the Capitol from a cigarette card series.",
+    "line": "A 1930 aerial photo looking north over the Capitol, with the rail yards beside it.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     },
     "ph": {
      "k": "at_cp_then",
-     "by": "Allen & Ginter / August Gast",
-     "lic": "CC0",
-     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Capitol_of_Georgia_in_Atlanta,_from_the_General_Government_and_State_Capitol_Buildings_series_(N14)_for_Allen_%26_Ginter_Cigarettes_Brands_MET_DP834734.jpg",
+     "by": "U.S. National Archives and Records Administration",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Georgia_-_Atlanta_-_NARA_-_23936979_(cropped).jpg",
      "note": "resized"
     }
    },
