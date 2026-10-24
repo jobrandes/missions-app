@@ -1229,8 +1229,9 @@ body.navhide::after{opacity:0}
     if(!msg){ out.className='feedback bad'; out.textContent='Write a sentence first.'; return; }
     var body=new URLSearchParams({'form-name':'report','bot-field':'','where':d.dataset.where,'message':msg,'contact':document.getElementById('repWho').value.trim()}).toString();
     out.className='feedback'; out.textContent='Sending...';
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
-      if(!r.ok) throw new Error('bad'); closeReport(); toast('Thanks. Sent.');
+    var web=/^https?:$/.test(location.protocol);
+    fetch(web?'/':'https://stamp-the-past.netlify.app/',{method:'POST',mode:web?'same-origin':'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
+      if(web&&!r.ok) throw new Error('bad'); closeReport(); toast('Thanks. Sent.');
     }).catch(function(){ out.className='feedback bad'; out.textContent='Could not send from here. Try the test site, or check your connection.'; });
   }
   /* ---------- first-run tour ---------- */

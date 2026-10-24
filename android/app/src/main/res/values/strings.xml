@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Stamp the Past</string>
+    <string name="title_activity_main">Stamp the Past</string>
+    <string name="package_name">com.stampthepast.app</string>
+    <string name="custom_url_scheme">com.stampthepast.app</string>
+</resources>

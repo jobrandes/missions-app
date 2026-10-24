@@ -4,3 +4,12 @@ node_modules/
 .netlify
 _*.html
 src/_*.html
+
+node_modules/
+ios/App/Pods/
+ios/App/build/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/capacitor-cordova-android-plugins/

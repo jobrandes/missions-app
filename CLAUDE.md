@@ -101,3 +101,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Home order: hero (on phones the photo cluster comes first), slim progress card (stamps, rank via GRANKS, small "Next stop" button), "Jump back in" town photo rings, then goal card and browse tabs. The big blue button and the dark passport card were rejected by Jo-Anne as ugly: keep things slim.
 - Rule from Jo-Anne: copying ideas from other apps is fine, but check screenshots and make it look good. Do not hide hero content.
 - Home hero photos auto-rotate every 5 s through towns (round-robin across regions: Reno, Boston, Chicago, New Orleans, Denver...). Paused 12 s after any manual focus (hover, region fold), when the tab is hidden, off Home, or with reduced motion.
+
+## Native wrapper (Oct 24)
+- Capacitor 8 project added: `ios/`, `android/`, `capacitor.config.json`, `package.json`, `assets/`. See `docs/native-app.md`. App id `com.stampthepast.app` (permanent after first upload). Plan: iPhone first (Jo-Anne has an iPhone and a Mac; Xcode not yet installed as of Oct 24, Mac screen was locked so it could not be installed remotely), Android later (Play needs 12 testers for 14 days on new personal accounts).
+- TODO before store release: move progress storage to Capacitor Preferences; store listing text; privacy answers; real domain.
