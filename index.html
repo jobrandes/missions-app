@@ -778,6 +778,9 @@ body.ishome .menubtn{margin-top:0}
 @keyframes thud{0%{transform:scale(2.2) rotate(-14deg);opacity:0}55%{transform:scale(.88) rotate(3deg);opacity:1}75%{transform:scale(1.06) rotate(-1deg)}100%{transform:scale(1) rotate(0)}}
 @keyframes thudring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.9);opacity:0}}
 @keyframes earnedflash{0%,45%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 55%,transparent)}70%{box-shadow:0 0 0 10px color-mix(in srgb,var(--good) 0%,transparent)}100%{box-shadow:none}}
+/* returning players: progress first, shorter pitch (headline and photos stay) */
+.home-hero.ret .sub,.home-hero.ret .heroGo{display:none}
+.home-hero.ret{padding-top:8px}
 </style>
 
 <div class="app">
@@ -1054,8 +1057,8 @@ body.ishome .menubtn{margin-top:0}
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var hk=homeTown(), stamps=stampsHtml();
     var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
-    var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
-    h=h+statusHtml(got,total,res0,hk)+ringsHtml();
+    var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    h=(got>0?statusHtml(got,total,res0,hk)+ringsHtml()+h:h+statusHtml(got,total,res0,hk)+ringsHtml());
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';

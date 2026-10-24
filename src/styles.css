@@ -771,3 +771,6 @@ body.ishome .menubtn{margin-top:0}
 @keyframes thud{0%{transform:scale(2.2) rotate(-14deg);opacity:0}55%{transform:scale(.88) rotate(3deg);opacity:1}75%{transform:scale(1.06) rotate(-1deg)}100%{transform:scale(1) rotate(0)}}
 @keyframes thudring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.9);opacity:0}}
 @keyframes earnedflash{0%,45%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 55%,transparent)}70%{box-shadow:0 0 0 10px color-mix(in srgb,var(--good) 0%,transparent)}100%{box-shadow:none}}
+/* returning players: progress first, shorter pitch (headline and photos stay) */
+.home-hero.ret .sub,.home-hero.ret .heroGo{display:none}
+.home-hero.ret{padding-top:8px}
