@@ -751,3 +751,8 @@ body.celebopen .bnav{z-index:1}
 .rph img{width:100%;height:100%;object-fit:cover;display:block}
 .rn{font-size:12px;font-weight:600;line-height:1.15;text-align:center;max-width:76px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .rbtn:focus-visible .rg{outline:3px solid var(--accent);outline-offset:2px}
+/* keep hero photos truly round (Safari ignores % height inside aspect-ratio boxes) */
+.hstamp{box-sizing:border-box}
+.hstamp img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px)}
+@media (max-width:560px){.home-hero .hstamps{width:132px;height:132px;aspect-ratio:auto;justify-self:end}}
+@media (max-width:560px){.home-hero .hstamps{margin-bottom:18px}}
