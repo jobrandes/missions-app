@@ -756,3 +756,8 @@ body.celebopen .bnav{z-index:1}
 .hstamp img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px)}
 @media (max-width:560px){.home-hero .hstamps{width:132px;height:132px;aspect-ratio:auto;justify-self:end}}
 @media (max-width:560px){.home-hero .hstamps{margin-bottom:18px}}
+/* calm top bar on Home: wordmark + menu only (towns live in the Towns tab) */
+.topmark{display:none}
+body.ishome .navwrap{align-items:center;justify-content:flex-end;padding-top:6px}
+body.ishome .navwrap .cities{display:none}
+body.ishome .menubtn{margin-top:0}

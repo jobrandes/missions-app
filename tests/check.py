@@ -15,6 +15,7 @@ with sync_playwright() as p:
         cx=b.new_context(viewport={'width':w,'height':h},color_scheme=cs,reduced_motion='reduce'); cx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}"); pg=cx.new_page()
         pg.on('pageerror',lambda e:errs.append(str(e)))
         pg.goto('file://'+R+'src/_chk.html'); tag=f'{w}px/{cs}'
+        pg.click('#missions .town:not(.soon) >> nth=0')
         for city in ('Reno','Virginia City'):
             pg.click('.city >> text='+city)
             for step in range(4):
