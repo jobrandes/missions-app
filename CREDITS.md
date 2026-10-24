@@ -271,7 +271,7 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sa_lf_now | https://commons.wikimedia.org/wiki/File:La_fonda_sw_view.jpg | Atakra | CC0 | 2013 |
 | sa_sm_then | https://commons.wikimedia.org/wiki/File:The_Church_of_San_Miguel,_the_oldest_church_in_Santa_Fe,_N.M._-_T._H._O'Sullivan,_phot._LCCN2007684822.jpg | Timothy H. O'Sullivan | Public domain | 1873 |
 | sa_sm_now | https://commons.wikimedia.org/wiki/File:San_Miguel_Mission_Church.jpg | Dorothy Harris | CC BY 2.0 | 2012 |
-| sa_pg_then | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors,_erected_1605_A.D.,_Santa_Fe,_New_Mexico.jpg | Boston Public Library (linen postcard) | Public domain | mid-1900s |
+| sa_pg_then | https://commons.wikimedia.org/?curid=34265402 | M. James Slack, Historic American Buildings Survey | Public domain | 1934 |
 | sa_pg_now | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors_pano.jpg | Dicklyon | CC BY-SA 4.0 | 2021 |
 | px_cap_then | https://commons.wikimedia.org/wiki/File:CapitolBuilding.PhoenixAZ.1908.jpg | Haines Photo Co. | Public domain | 1908 |
 | px_cap_now | https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg | David Jiang | CC BY-SA 4.0 | 2021 |

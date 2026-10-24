@@ -346,20 +346,20 @@
     "verify": "The photos show a long covered porch with wooden posts. Check the front on site. Written from sources, not yet checked on site."
    },
    "then": {
-    "yr": "Mid-1900s",
+    "yr": "1934",
     "label": "The Palace then",
-    "line": "A postcard of the Palace, with a procession passing in front of the long porch.",
+    "line": "A 1934 survey photo of the long adobe front and its porch of striped wooden posts, with a lone car down the street.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/"
     },
     "ph": {
      "k": "sa_pg_then",
-     "by": "Boston Public Library (linen postcard)",
+     "by": "M. James Slack, Historic American Buildings Survey",
      "lic": "Public domain",
      "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors,_erected_1605_A.D.,_Santa_Fe,_New_Mexico.jpg",
-     "note": "resized"
+     "page": "https://commons.wikimedia.org/?curid=34265402",
+     "note": "resized, cropped"
     }
    },
    "now": {
