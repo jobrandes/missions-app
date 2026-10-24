@@ -215,20 +215,34 @@
     for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
     var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
     var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
-    var st=got>0?'<section class="stat" aria-label="Your progress"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">'+gr.name+'</p>'+(gr.next?'<p class="snext">'+(gr.next[0]-got)+' more to reach '+gr.next[1]+'</p>':'')+'</section>':'';
-    return st+btn;
+    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">'+gr.name+(gr.next?' <span class="snext">· '+(gr.next[0]-got)+' to '+gr.next[1]+'</span>':'')+'</p></div>':'';
+    return '<section class="stat" aria-label="Your progress">'+st+btn+'</section>';
+  }
+  function ringsHtml(){
+    var seen={}, list=[];
+    function add(k){ if(CITIES[k]&&!seen[k]){ seen[k]=1; list.push(k); } }
+    [cityId].concat(ORDER).forEach(function(k){ if(CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) add(k); } });
+    var started=list.length;
+    tripGet().forEach(function(k){ var d=CITIES[k]?sum(ALL[k].done):0; if(CITIES[k]&&d<CITIES[k].stops.length) add(k); });
+    ORDER.forEach(function(k){ if(list.length<10&&CITIES[k]&&CITIES[k].level==='Classics'&&!sum(ALL[k].done)) add(k); });
+    list=list.slice(0,10);
+    if(!list.length) return '';
+    return '<section class="rings" aria-label="Towns to continue"><p class="mono">'+(started?'Jump back in':'Try one of these')+'</p><div class="rrow">'+list.map(function(k){
+      var c=CITIES[k], n=sum(ALL[k].done), pc=Math.round(n/c.stops.length*100), key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      return '<button class="rbtn" data-a="city" data-c="'+k+'" aria-label="'+c.name+', '+n+' of '+c.stops.length+' stamps"><span class="rg" style="--p:'+pc+'"><span class="rph">'+img+'</span></span><span class="rn">'+c.name+'</span></button>';
+    }).join('')+'</div></section>';
   }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var hk=homeTown(), stamps=stampsHtml();
     var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
-    var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
-    h=(got>0?statusHtml(got,total,res0,hk):'')+h+(got>0?'':statusHtml(got,total,res0,hk));
+    var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    h=h+statusHtml(got,total,res0,hk)+ringsHtml();
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
-    h+=passTop+goalHtml();
+    h+=goalHtml();
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
