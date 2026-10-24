@@ -108,3 +108,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Launch checklist (Oct 24)
 - Live checklist artifact: https://claude.ai/artifact/Rqby3GwGuEoNVNfgqGL3bf (tick boxes, add items; data in the `tasks` collection, add rows with ArtifactData: title, note, group "N Name", kind store|want, owner Jo-Anne|Claude|Both, done, order). Source page: `docs/checklist.html`. Add new to-dos there as they come up and tick off what we finish.
+- Oct 24: removed the per-stop Safety box from the Find it screen (user asked earlier for safety tips gone). iOS target is iPhone only now. Store text, privacy/age answers in `store/app-store-listing.md`; screenshots in `store/screenshots-iphone/` (regenerate with the script in that doc's notes: Playwright 440x956 @3x on `site/index.html`).
