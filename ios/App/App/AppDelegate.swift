@@ -42,3 +42,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return config
     }
 }
+
+// Stamp the Past: keeps a copy of the player's progress in the app's own storage
+// (UserDefaults, part of the normal iPhone backup) so a web-view cache wipe cannot erase stamps.
+@objc(StampStorePlugin)
+public class StampStorePlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "StampStorePlugin"
+    public let jsName = "StampStore"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "getAll", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setItem", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "removeItem", returnType: CAPPluginReturnPromise)
+    ]
+    private let prefix = "stp."
+
+    @objc func getAll(_ call: CAPPluginCall) {
+        var out: [String: String] = [:]
+        for (k, v) in UserDefaults.standard.dictionaryRepresentation() {
+            if k.hasPrefix(prefix), let s = v as? String {
+                out[String(k.dropFirst(prefix.count))] = s
+            }
+        }
+        call.resolve(["values": out])
+    }
+
+    @objc func setItem(_ call: CAPPluginCall) {
+        guard let key = call.getString("key"), let value = call.getString("value") else {
+            call.reject("key and value are required")
+            return
+        }
+        UserDefaults.standard.set(value, forKey: prefix + key)
+        call.resolve()
+    }
+
+    @objc func removeItem(_ call: CAPPluginCall) {
+        guard let key = call.getString("key") else {
+            call.reject("key is required")
+            return
+        }
+        UserDefaults.standard.removeObject(forKey: prefix + key)
+        call.resolve()
+    }
+}
+
+@objc(StampViewController)
+class StampViewController: CAPBridgeViewController {
+    override func capacitorDidLoad() {
+        bridge?.registerPluginInstance(StampStorePlugin())
+    }
+}

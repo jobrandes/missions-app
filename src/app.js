@@ -1,5 +1,21 @@
 (function(){
   var DATA=__DATA__;
+  /* ---------- native progress backup (iPhone/Android app only) ---------- */
+  (function(){
+    var NB=null;
+    try{ if(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()) NB=Capacitor.registerPlugin('StampStore'); }catch(e){}
+    if(!NB) return;
+    var MIR=/^(then-now|stp-)/;
+    var si=Storage.prototype.setItem, ri=Storage.prototype.removeItem;
+    Storage.prototype.setItem=function(k,v){ si.call(this,k,v); if(this===window.localStorage&&MIR.test(k)) try{ NB.setItem({key:k,value:String(v)}).catch(function(){}); }catch(e){} };
+    Storage.prototype.removeItem=function(k){ ri.call(this,k); if(this===window.localStorage&&MIR.test(k)) try{ NB.removeItem({key:k}).catch(function(){}); }catch(e){} };
+    NB.getAll().then(function(r){
+      var d=(r&&r.values)||{}, restored=false, ls=window.localStorage;
+      Object.keys(d).forEach(function(k){ if(ls.getItem(k)===null){ si.call(ls,k,d[k]); restored=true; } });
+      for(var i=0;i<ls.length;i++){ var k=ls.key(i); if(MIR.test(k)&&d[k]===undefined) NB.setItem({key:k,value:ls.getItem(k)}).catch(function(){}); }
+      if(restored&&!sessionStorage.getItem('stp-restored')){ sessionStorage.setItem('stp-restored','1'); location.reload(); }
+    }).catch(function(){});
+  })();
   /* ---------- scene + badge drawing ---------- */
   var BMAPS={}; Object.keys(DATA.packs).forEach(function(k){ BMAPS[k]=DATA.packs[k].badgeMap||{}; });
   function mono(id,pid){
