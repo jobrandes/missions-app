@@ -94,3 +94,9 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Menu (Oct 23)
 - Right-side drawer from the top-bar Menu button (openMenu/closeMenu): backup, share passport, replay guide, how it works, feedback, parents info, photo credits, appearance (stp-theme: system/light/dark), Account placeholder ("No account needed"). Home footer now just links to the Menu. Hidden inside a stop. If real accounts are added, Apple requires in-app account deletion.
+
+## Tab bar and Home redesign (Oct 24)
+- Floating pill bottom nav `#bnav` (Home / Towns / Trails / Passport), hidden inside a stop; the top-rail Home and My Passport buttons are gone. Tests use `#bnav [data-t=home]`.
+- Safety tips are removed from the UI (user feedback). `safety` and `safetyNote` stay in the packs only because the validator requires them. The Huffman base-access note lives in its clue.
+- Home order: hero (on phones the photo cluster comes first), slim progress card (stamps, rank via GRANKS, small "Next stop" button), "Jump back in" town photo rings, then goal card and browse tabs. The big blue button and the dark passport card were rejected by Jo-Anne as ugly: keep things slim.
+- Rule from Jo-Anne: copying ideas from other apps is fine, but check screenshots and make it look good. Do not hide hero content.
