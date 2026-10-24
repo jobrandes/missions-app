@@ -105,3 +105,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 ## Native wrapper (Oct 24)
 - Capacitor 8 project added: `ios/`, `android/`, `capacitor.config.json`, `package.json`, `assets/`. See `docs/native-app.md`. App id `com.stampthepast.app` (permanent after first upload). Plan: iPhone first (Jo-Anne has an iPhone and a Mac; Xcode not yet installed as of Oct 24, Mac screen was locked so it could not be installed remotely), Android later (Play needs 12 testers for 14 days on new personal accounts).
 - Done Oct 24: progress is mirrored into native UserDefaults by a local Swift plugin `StampStore` (in AppDelegate.swift, registered by StampViewController in the storyboard; JS shim at top of app.js; restores into localStorage and reloads once if the web view was wiped). Untested on a device until Jo-Anne reruns from Xcode. TODO before store release: store listing text; privacy answers; real domain.
+
+## Launch checklist (Oct 24)
+- Live checklist artifact: https://claude.ai/artifact/Rqby3GwGuEoNVNfgqGL3bf (tick boxes, add items; data in the `tasks` collection, add rows with ArtifactData: title, note, group "N Name", kind store|want, owner Jo-Anne|Claude|Both, done, order). Source page: `docs/checklist.html`. Add new to-dos there as they come up and tick off what we finish.
