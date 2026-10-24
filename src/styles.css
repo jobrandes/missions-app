@@ -774,3 +774,13 @@ body.ishome .menubtn{margin-top:0}
 /* returning players: progress first, shorter pitch (headline and photos stay) */
 .home-hero.ret .sub,.home-hero.ret .heroGo{display:none}
 .home-hero.ret{padding-top:8px}
+/* Home: menu button shares the logo row; fade behind the floating nav */
+.app{position:relative}
+body.ishome .navwrap{position:absolute;top:8px;right:0;z-index:6;padding:0;width:auto}
+body.ishome .home-hero{padding-top:14px}
+@media (max-width:560px){
+  .home-hero .wordmark{font-size:clamp(22px,6.4vw,30px);justify-self:start;margin:0 0 6px;padding:7px 12px 5px}
+  body.ishome .home-hero .wordmark{font-size:clamp(22px,6.4vw,30px)}
+}
+body:not(.instop)::after{content:"";position:fixed;left:0;right:0;bottom:0;height:calc(84px + env(safe-area-inset-bottom,0px));background:linear-gradient(to bottom,transparent,var(--bg) 70%);pointer-events:none;z-index:13}
+body.navhide::after{opacity:0}
