@@ -451,6 +451,7 @@
   function tripGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-trip')||'[]'); return Array.isArray(a)?a.filter(function(k){ return CITIES[k]; }):[]; }catch(e){ return []; } }
   function tripSet(a){ try{ localStorage.setItem('stp-trip',JSON.stringify(a)); }catch(e){} }
   var btab='towns', btrail='stations', bnavSel='home';
+  (function(){ var ly=0, ut=0; function u(){ ut=Date.now(); } window.addEventListener('touchmove',u,{passive:true}); window.addEventListener('wheel',u,{passive:true}); window.addEventListener('scroll',function(){ var y=window.pageYOffset||0, d=y-ly; if(Math.abs(d)<10) return; ly=y; if(Date.now()-ut>1200) return; document.body.classList.toggle('navhide',d>0&&y>160); },{passive:true}); })();
   function updateBnav(){ var nb=document.getElementById('bnav'); if(!nb) return; var cur2=onPass&&atHome?'pass':(atHome?bnavSel:''); nb.querySelectorAll('button').forEach(function(x){ var on=x.getAttribute('data-t')===cur2; x.classList.toggle('on',on); if(on) x.setAttribute('aria-current','page'); else x.removeAttribute('aria-current'); }); }
   function tripHtml(){
     var t=tripGet();
@@ -700,7 +701,7 @@
 
   function render(focusTitle){
     updateHeader();
-    document.body.classList.toggle('ishome',atHome); updateBnav();
+    document.body.classList.toggle('ishome',atHome); document.body.classList.remove('navhide'); updateBnav();
     document.body.classList.toggle('instop',!!cur&&!boss);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
