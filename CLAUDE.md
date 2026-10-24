@@ -100,3 +100,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Safety tips are removed from the UI (user feedback). `safety` and `safetyNote` stay in the packs only because the validator requires them. The Huffman base-access note lives in its clue.
 - Home order: hero (on phones the photo cluster comes first), slim progress card (stamps, rank via GRANKS, small "Next stop" button), "Jump back in" town photo rings, then goal card and browse tabs. The big blue button and the dark passport card were rejected by Jo-Anne as ugly: keep things slim.
 - Rule from Jo-Anne: copying ideas from other apps is fine, but check screenshots and make it look good. Do not hide hero content.
+- Home hero photos auto-rotate every 5 s through towns (round-robin across regions: Reno, Boston, Chicago, New Orleans, Denver...). Paused 12 s after any manual focus (hover, region fold), when the tab is hidden, off Home, or with reduced motion.

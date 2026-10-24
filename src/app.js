@@ -194,11 +194,23 @@
     }
     return keys.slice(0,4).map(function(k){ return '<div class="hstamp"><img src="'+PHOTOS[k]+'" alt=""></div>'; }).join('')+'<p class="hstamps-cap mono">'+cap+'</p>';
   }
-  function setHeroFocus(f){
+  var heroPause=0;
+  function setHeroFocus(f,auto){
+    if(!auto) heroPause=Date.now()+12000;
     if(JSON.stringify(f)===JSON.stringify(heroFocus)) return;
     heroFocus=f; var el=document.querySelector('.hstamps'); if(!el) return;
     el.classList.add('swap'); setTimeout(function(){ el.innerHTML=stampsHtml(); el.classList.remove('swap'); },170);
   }
+  (function(){
+    var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)'), seq=null, si=0;
+    function build(){ var regs=[], by={}; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(!by[r]){ by[r]=[]; regs.push(r); } by[r].push(k); }); var out=[], i=0; while(out.length<ORDER.length){ regs.forEach(function(r){ if(by[r][i]) out.push(by[r][i]); }); i++; } return out; }
+    setInterval(function(){
+      if(!atHome||onPass||document.hidden||(rm&&rm.matches)||Date.now()<heroPause||!document.querySelector('.hstamps')) return;
+      if(!seq){ seq=build(); }
+      var cur2=heroFocus&&heroFocus.c, at=seq.indexOf(cur2); si=(at<0?si:at)+1; if(si>=seq.length) si=0;
+      setHeroFocus({c:seq[si]},true);
+    },5000);
+  })();
   document.addEventListener('click',function(e){
     var sm=e.target.closest&&e.target.closest('.home-regions summary.region, details.reg:not(.ppreg) > summary.region'); if(!sm) return;
     var r=sm.firstElementChild&&sm.firstElementChild.textContent; if(r) setHeroFocus({r:r});
