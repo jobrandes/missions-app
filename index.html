@@ -768,6 +768,16 @@ body.celebopen .bnav{z-index:1}
 body.ishome .navwrap{align-items:center;justify-content:flex-end;padding-top:6px}
 body.ishome .navwrap .cities{display:none}
 body.ishome .menubtn{margin-top:0}
+/* stamp thud: the stamp lands, a ring rings out */
+.earned .bbox{position:relative}
+@media (prefers-reduced-motion:no-preference){
+  .earned .bbox.thud{animation:thud .6s cubic-bezier(.2,.9,.3,1) both}
+  .earned .bbox.thud::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:3px solid var(--accent);opacity:0;animation:thudring .8s .22s ease-out both;pointer-events:none}
+  .earned:has(.thud){animation:earnedflash 1.1s ease-out both}
+}
+@keyframes thud{0%{transform:scale(2.2) rotate(-14deg);opacity:0}55%{transform:scale(.88) rotate(3deg);opacity:1}75%{transform:scale(1.06) rotate(-1deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes thudring{0%{transform:scale(.9);opacity:.8}100%{transform:scale(1.9);opacity:0}}
+@keyframes earnedflash{0%,45%{box-shadow:0 0 0 0 color-mix(in srgb,var(--good) 55%,transparent)}70%{box-shadow:0 0 0 10px color-mix(in srgb,var(--good) 0%,transparent)}100%{box-shadow:none}}
 </style>
 
 <div class="app">
@@ -926,6 +936,7 @@ body.ishome .menubtn{margin-top:0}
   function code(){ return 'TN3-'+ORDER.map(function(k){ return ALL[k].done.join('')+ALL[k].claims.join(''); }).join('-'); }
   function allDone(){ return sum(S.done)===4; }
 
+  var stampFx=false;
   function toast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg; t.classList.add('show');
@@ -1619,8 +1630,8 @@ body.ishome .menubtn{margin-top:0}
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); if(allDone()) setTimeout(celebrate,450); }
-        cur.wrong=[]; render();
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
         render();

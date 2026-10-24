@@ -120,6 +120,7 @@
   function code(){ return 'TN3-'+ORDER.map(function(k){ return ALL[k].done.join('')+ALL[k].claims.join(''); }).join('-'); }
   function allDone(){ return sum(S.done)===4; }
 
+  var stampFx=false;
   function toast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg; t.classList.add('show');
@@ -813,8 +814,8 @@
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); if(allDone()) setTimeout(celebrate,450); }
-        cur.wrong=[]; render();
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
         render();
