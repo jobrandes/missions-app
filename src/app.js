@@ -79,6 +79,8 @@
   var CITIES = DATA.packs;
   var RANKS=RENO_RANKS;
   var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
+  /* shown on the share card; swap for the real domain or App Store link once it exists */
+  var SHARE_URL='stamp-the-past.netlify.app';
   var railRegion=null, ORDER=DATA.order, SOON=DATA.soon||[], atHome=true, onPass=false;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
   var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
@@ -530,7 +532,7 @@
     var n=keys.length, loaded=0, imgs=[], cell=380, gap=36, startX=(W-(2*cell+gap))/2, startY=430;
     function finish(){
       imgs.forEach(function(im,i){ if(!im) return; var x=startX+(i%2)*(cell+gap), y=startY+Math.floor(i/2)*(cell+gap); if(i===imgs.length-1&&i%2===0) x=(W-cell)/2; g.save(); g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.clip(); var r=Math.max(cell/im.width,cell/im.height), w=im.width*r, h=im.height*r; g.drawImage(im,x+(cell-w)/2,y+(cell-h)/2,w,h); g.restore(); g.lineWidth=10; g.strokeStyle='#F2B01E'; g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.stroke(); });
-      g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText('stamp-the-past.netlify.app',W/2,1318);
+      g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText(SHARE_URL,W/2,1318);
       try{ c.toBlob(function(b){ cb(b); },'image/png'); }catch(e){ if(!noimg) shareDraw(kind,k,cb,true); else cb(null); }
     }
     if(!n||noimg){ finish(); return; }
