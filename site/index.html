@@ -693,7 +693,7 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 /* menu */
 .navwrap{display:flex;align-items:flex-start;gap:8px}
 .navwrap .cities{flex:1;min-width:0}
-.menubtn{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:4px;padding:0 14px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:600 14px var(--font-body,inherit);cursor:pointer}
+.menubtn{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;margin-top:4px;padding:0 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font:600 14px var(--font-body,inherit);cursor:pointer}
 .menubtn:hover{border-color:var(--accent)}
 .menubtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .burger{display:inline-flex;flex-direction:column;gap:4px}
@@ -727,7 +727,7 @@ body.instop .navwrap{display:none}
 </style></head><body>
 
 <div class="app">
-  <div class="navwrap"><nav class="cities" id="cities" aria-label="Towns"></nav><button class="menubtn" id="menuBtn" data-a="menu" aria-haspopup="dialog"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span><span>Menu</span></button></div>
+  <div class="navwrap"><nav class="cities" id="cities" aria-label="Towns"></nav><button class="menubtn" id="menuBtn" data-a="menu" aria-haspopup="dialog" aria-label="Menu"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button></div>
   <header class="hero" id="hero">
     <img class="art" id="heroImg" alt="">
     <p class="mono">Stamp the Past</p>
