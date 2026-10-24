@@ -791,6 +791,10 @@ body.ishome .home-hero{padding-top:14px}
 }
 body:not(.instop)::after{content:"";position:fixed;left:0;right:0;bottom:0;height:calc(84px + env(safe-area-inset-bottom,0px));background:linear-gradient(to bottom,transparent,var(--bg) 70%);pointer-events:none;z-index:13}
 body.navhide::after{opacity:0}
+
+/* Passport page: menu button gets its own row so it never sits on the card */
+body.ispass .navwrap{position:static;justify-content:flex-end;padding:6px 0 0}
+body.ispass .menubtn{margin-top:0}
 </style></head><body>
 
 <div class="app">
@@ -1544,7 +1548,7 @@ body.navhide::after{opacity:0}
 
   function render(focusTitle){
     updateHeader();
-    document.body.classList.toggle('ishome',atHome); document.body.classList.remove('navhide'); updateBnav();
+    document.body.classList.toggle('ishome',atHome); document.body.classList.toggle('ispass',atHome&&onPass); document.body.classList.remove('navhide'); updateBnav();
     document.body.classList.toggle('instop',!!cur&&!boss);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
