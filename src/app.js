@@ -137,7 +137,7 @@
     document.getElementById('heroCredit').innerHTML=c.heroCredit;
     var regsR=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regsR.indexOf(r)<0) regsR.push(r); });
     var curR=railRegion||c.region||'More places';
-    document.getElementById('cities').innerHTML='<div class="rail1"><button class="city home" data-a="home" aria-pressed="'+(atHome&&!onPass)+'">Home</button><button class="city home" data-a="mypass" aria-pressed="'+(atHome&&onPass)+'">My Passport</button>'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
+    document.getElementById('cities').innerHTML='<div class="rail1">'+regsR.map(function(r){ return '<button class="rtab" data-a="rregion" data-r="'+r+'" aria-pressed="'+(r===curR)+'">'+r+'</button>'; }).join('')+'</div><div class="rail2">'+ORDER.filter(function(k){ return (CITIES[k].region||'More places')===curR; }).map(function(k){
       return '<button class="city" data-a="city" data-c="'+k+'" aria-pressed="'+(!atHome&&k===cityId)+'">'+CITIES[k].name+'</button>';
     }).join('')+'</div>';
     var act=document.querySelector('#cities .rail2 .city[aria-pressed="true"]'); if(act){ try{ var bx=act.parentNode; var ar=act.getBoundingClientRect(), br=bx.getBoundingClientRect(); if(ar.left<br.left+8||ar.right>br.right-8) bx.scrollLeft=Math.max(0,bx.scrollLeft+(ar.left-br.left)-16); }catch(_){} }
@@ -148,7 +148,7 @@
     tab='trail'; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0);
   }
   function openPass(){ leave(); atHome=true; onPass=true; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
-  function goHome(){ leave(); atHome=true; onPass=false; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
+  function goHome(){ if(typeof bnavSel!=='undefined'&&0){} leave(); atHome=true; onPass=false; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
   function updateHeader(){
     var x=xp(), r=rank(x);
     document.getElementById('rankName').textContent=r.name;
@@ -281,7 +281,7 @@
       var d=S.done[i];
       return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
-    h+='<details class="card"><summary>Safety, privacy and photo credits</summary><ul><li>Go with a parent or trusted adult, in daylight, and stay on public sidewalks.</li>'+city().safetyNote+'<li>This page has no accounts, uploads, camera use, or location tracking. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
+    h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads, camera use, or location tracking. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
   }
 
@@ -302,8 +302,8 @@
      +item('replaytour','Replay the guide','The quick tour of how a stop works')
      +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question you can only get by standing there.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
      +item('report','Report a problem or send feedback','Tell us what is wrong or confusing')
-     +'<p class="mgroup">Safety and privacy</p>'
-     +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li><li>Go with a parent or trusted adult, in daylight, and follow local rules at every stop.</li></ul></details>'
+     +'<p class="mgroup">Privacy</p>'
+     +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></details>'
      +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
      +'<p class="mgroup">Settings</p>'
      +'<div class="mrow"><span id="thl">Appearance</span><div class="segs" role="group" aria-labelledby="thl">'+seg+'</div></div>'
@@ -426,7 +426,8 @@
   }
   function tripGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-trip')||'[]'); return Array.isArray(a)?a.filter(function(k){ return CITIES[k]; }):[]; }catch(e){ return []; } }
   function tripSet(a){ try{ localStorage.setItem('stp-trip',JSON.stringify(a)); }catch(e){} }
-  var btab='towns', btrail='stations';
+  var btab='towns', btrail='stations', bnavSel='home';
+  function updateBnav(){ var nb=document.getElementById('bnav'); if(!nb) return; var cur2=onPass&&atHome?'pass':(atHome?bnavSel:''); nb.querySelectorAll('button').forEach(function(x){ var on=x.getAttribute('data-t')===cur2; x.classList.toggle('on',on); if(on) x.setAttribute('aria-current','page'); else x.removeAttribute('aria-current'); }); }
   function tripHtml(){
     var t=tripGet();
     if(!t.length) return '<div class="bempty"><h3>Plan a trip</h3><p>Tap the star on any town to save it here. You will see how many stamps are left in each place, like a checklist for the road.</p></div>';
@@ -453,7 +454,7 @@
     var n=tripGet().length, T=[['towns','Towns'],['trails','Trails'],['trip','My trip'+(n?' ('+n+')':'')]];
     return '<section class="browse" id="browse"><div class="btabs" role="tablist" aria-label="Browse">'+T.map(function(t){ return '<button class="btab" role="tab" id="bt-'+t[0]+'" data-a="btab" data-t="'+t[0]+'" aria-selected="'+(btab===t[0])+'" aria-controls="bp-'+t[0]+'">'+t[1]+'</button>'; }).join('')+'</div><div class="bpanel" id="bp-towns" role="tabpanel"'+(btab==='towns'?'':' hidden')+'>';
   }
-  function setBtab(t){ btab=t; ['towns','trails','trip'].forEach(function(x){ var p=document.getElementById('bp-'+x), b=document.getElementById('bt-'+x); if(p) p.hidden=(x!==t); if(b) b.setAttribute('aria-selected',x===t?'true':'false'); }); }
+  function setBtab(t){ btab=t; if(t==='towns'||t==='trails') bnavSel=t; ['towns','trails','trip'].forEach(function(x){ var p=document.getElementById('bp-'+x), b=document.getElementById('bt-'+x); if(p) p.hidden=(x!==t); if(b) b.setAttribute('aria-selected',x===t?'true':'false'); }); }
   function trailsHtml(){
     var cards='', lists='';
     TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
@@ -675,7 +676,7 @@
 
   function render(focusTitle){
     updateHeader();
-    document.body.classList.toggle('ishome',atHome);
+    document.body.classList.toggle('ishome',atHome); updateBnav();
     document.body.classList.toggle('instop',!!cur&&!boss);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
@@ -760,6 +761,10 @@
     if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
+    if(a==='bnav'){ var bt=b.getAttribute('data-t');
+      if(bt==='pass'){ openPass(); return; }
+      if(bt==='home'){ bnavSel='home'; goHome(); return; }
+      bnavSel=bt; if(!atHome||onPass) goHome(); setBtab(bt); updateBnav(); var bw=document.getElementById('browse'); if(bw&&bw.scrollIntoView) bw.scrollIntoView({behavior:'smooth',block:'start'}); return; }
     if(a==='btab'){ setBtab(b.getAttribute('data-t')); return; }
     if(a==='trail'){ btrail=b.getAttribute('data-t'); document.querySelectorAll('.tcard').forEach(function(c){ var on=c.getAttribute('data-t')===btrail; c.classList.toggle('on',on); c.setAttribute('aria-pressed',on?'true':'false'); }); document.querySelectorAll('.trl').forEach(function(x){ x.hidden=(x.getAttribute('data-trail')!==btrail); }); return; }
     if(a==='share'){ var sk=b.getAttribute('data-k'); if(sk&&CITIES[sk]) shareStamps('town',sk); else shareStamps('passport'); return; }
