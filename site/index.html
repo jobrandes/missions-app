@@ -725,16 +725,28 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 body.menuopen{overflow:hidden}
 body.instop .navwrap{display:none}
 
-/* bottom tab bar */
-.bnav{position:fixed;left:0;right:0;bottom:0;z-index:14;display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border-top:1px solid var(--line);padding:4px max(8px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(8px,env(safe-area-inset-left,0px))}
-.bnav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;border:0;background:transparent;color:var(--muted);font:600 11px var(--font-body,inherit);letter-spacing:.02em;cursor:pointer;border-radius:12px;position:relative}
-.bnav button.on{color:var(--accent)}
-.bnav button.on::before{content:"";position:absolute;top:2px;width:28px;height:3px;border-radius:3px;background:var(--accent)}
+/* bottom tab bar: floating pill */
+.bnav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:14;width:min(440px,calc(100% - 24px));display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.bnav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:52px;border:0;background:transparent;color:var(--muted);font:600 11px var(--font-body,inherit);letter-spacing:.02em;cursor:pointer;border-radius:999px}
+.bnav button.on{color:var(--accent);background:color-mix(in srgb,var(--accent) 16%,transparent)}
 .bnav button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
-body:not(.instop){padding-bottom:calc(68px + env(safe-area-inset-bottom,0px))}
+body:not(.instop){padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 body.instop .bnav{display:none}
 body.celebopen .bnav{z-index:1}
-@media (min-width:900px){.bnav{left:50%;right:auto;transform:translateX(-50%);width:min(560px,100%);border:1px solid var(--line);border-bottom:0;border-radius:16px 16px 0 0}}
+/* status + next stop */
+.stat{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 16px 4px}
+.stat .snum{display:flex;align-items:baseline;gap:8px}
+.stat .snum b{font-size:clamp(52px,16vw,76px);line-height:1;font-weight:800;color:var(--fg)}
+.stat .snum span{color:var(--muted);font-weight:600}
+.stat .sverd{margin:4px 0 0;font-size:22px;font-weight:700;color:var(--accent)}
+.stat .snext{margin:2px 0 0;color:var(--muted);font-size:14px}
+.bigbtn{display:flex;flex-direction:column;align-items:center;gap:2px;width:100%;max-width:520px;margin:14px auto;padding:16px 20px;border:0;border-radius:22px;background:var(--accent);color:var(--accent-ink);cursor:pointer;box-shadow:0 5px 0 color-mix(in srgb,var(--accent) 60%,#000)}
+.bigbtn:active{transform:translateY(3px);box-shadow:0 2px 0 color-mix(in srgb,var(--accent) 60%,#000)}
+.bigbtn .bl{font-size:24px;font-weight:800;letter-spacing:.01em}
+.bigbtn .bs{font-size:14px;opacity:.92}
+.bigbtn:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.home-hero.ret .sub,.home-hero.ret .hstamps,.home-hero.ret .heroGo{display:none}
+.home-hero.ret h1{font-size:clamp(20px,6vw,28px)}
 </style></head><body>
 
 <div class="app">
@@ -981,16 +993,26 @@ body.celebopen .bnav{z-index:1}
   document.addEventListener('focusin',function(e){
     var t=e.target.closest&&e.target.closest('button.town[data-c]'); if(t&&t.getAttribute('data-c')) setHeroFocus({c:t.getAttribute('data-c')});
   });
+  var GRANKS=[[0,'Newcomer'],[3,'Wanderer'],[10,'Trailblazer'],[25,'Pathfinder'],[50,'Explorer'],[100,'Historian'],[200,'Time Traveler']];
+  function gRank(n){ var r=GRANKS[0][1],nx=null; GRANKS.forEach(function(g){ if(n>=g[0]) r=g[1]; }); for(var i=0;i<GRANKS.length;i++){ if(GRANKS[i][0]>n){ nx=GRANKS[i]; break; } } return {name:r,next:nx}; }
+  function statusHtml(got,total,res,hk){
+    var gr=gRank(got), tk=res||hk, tc=CITIES[tk], ni=0;
+    for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
+    var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
+    var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
+    var st=got>0?'<section class="stat" aria-label="Your progress"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">'+gr.name+'</p>'+(gr.next?'<p class="snext">'+(gr.next[0]-got)+' more to reach '+gr.next[1]+'</p>':'')+'</section>':'';
+    return st+btn;
+  }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var hk=homeTown(), stamps=stampsHtml();
-    var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
+    var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    h=(got>0?statusHtml(got,total,res0,hk):'')+h+(got>0?'':statusHtml(got,total,res0,hk));
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
-    if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
-      h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
-    var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
+        var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
     h+=passTop+goalHtml();
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
@@ -1549,6 +1571,7 @@ body.celebopen .bnav{z-index:1}
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
+    if(a==='nextstop'){ railRegion=null; setCity(b.getAttribute('data-c')); openStop(+b.getAttribute('data-i')); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }

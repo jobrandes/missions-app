@@ -41,8 +41,8 @@ with sync_playwright() as p:
     pg.click('#bnav [data-t=home]'); need('0 of 4 stamps' in pg.inner_text('#main').lower(),'Home shows progress')
     # resume card appears for a town in progress
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
-    need(pg.locator('.resume .rcard').count()==1 and '1 of 4' in pg.inner_text('.resume'),'Home shows a resume card for a town in progress')
-    pg.click('.rcard'); need(pg.inner_text('#cityName').lower()=='reno','resume card opens that town')
+    need(pg.locator('.bigbtn[data-a=nextstop]').count()==1 and '1' in pg.inner_text('.stat'),'Home shows status and a Next stop button for a town in progress')
+    pg.click('.bigbtn'); need(pg.inner_text('#cityName').lower()=='reno','Next stop opens that town')
     # finishing the 4th stamp shows the celebration once; passport lists stamps
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=3'); pg.click('text=I am here')

@@ -208,16 +208,26 @@
   document.addEventListener('focusin',function(e){
     var t=e.target.closest&&e.target.closest('button.town[data-c]'); if(t&&t.getAttribute('data-c')) setHeroFocus({c:t.getAttribute('data-c')});
   });
+  var GRANKS=[[0,'Newcomer'],[3,'Wanderer'],[10,'Trailblazer'],[25,'Pathfinder'],[50,'Explorer'],[100,'Historian'],[200,'Time Traveler']];
+  function gRank(n){ var r=GRANKS[0][1],nx=null; GRANKS.forEach(function(g){ if(n>=g[0]) r=g[1]; }); for(var i=0;i<GRANKS.length;i++){ if(GRANKS[i][0]>n){ nx=GRANKS[i]; break; } } return {name:r,next:nx}; }
+  function statusHtml(got,total,res,hk){
+    var gr=gRank(got), tk=res||hk, tc=CITIES[tk], ni=0;
+    for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
+    var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
+    var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
+    var st=got>0?'<section class="stat" aria-label="Your progress"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">'+gr.name+'</p>'+(gr.next?'<p class="snext">'+(gr.next[0]-got)+' more to reach '+gr.next[1]+'</p>':'')+'</section>':'';
+    return st+btn;
+  }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var hk=homeTown(), stamps=stampsHtml();
-    var h='<section class="home-hero"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
+    var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
+    h=(got>0?statusHtml(got,total,res0,hk):'')+h+(got>0?'':statusHtml(got,total,res0,hk));
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
-    if(res){ var rc=CITIES[res], rd=sum(ALL[res].done), nx=0; for(var q=0;q<rc.stops.length;q++){ if(!ALL[res].done[q]){ nx=q; break; } }
-      h+='<section class="resume"><p class="mono">Pick up where you left off</p><button class="rcard" data-a="city" data-c="'+res+'"><span><strong>'+rc.name+'</strong><span class="rsub">'+rd+' of '+rc.stops.length+' stamps · next up: '+rc.stops[nx].name+'</span></span><span class="go">Continue ›</span></button></section>'; }
-    var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
+        var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
     h+=passTop+goalHtml();
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
@@ -776,6 +786,7 @@
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
+    if(a==='nextstop'){ railRegion=null; setCity(b.getAttribute('data-c')); openStop(+b.getAttribute('data-i')); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
