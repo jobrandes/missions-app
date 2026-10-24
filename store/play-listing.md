@@ -32,4 +32,4 @@ Choose 13+ or "all ages except children under 13" unless you want the stricter F
 - Ads: **No**. In-app purchases: **No** (for now).
 - App access: all functionality available without login.
 - Target API level: 36 (set). Build: GitHub Actions makes the bundle; signing key needed **[YOU, later]**.
-- Screenshots: phone screenshots required (min 2, 16:9 to 9:16). Reuse `store/screenshots-iphone/` cropped, or retake from an Android emulator later. Feature graphic 1024x500 needed (not made yet).
+- Screenshots: phone screenshots required (min 2, 16:9 to 9:16). Reuse `store/screenshots-iphone/` cropped, or retake from an Android emulator later. Feature graphic: `store/play-feature-graphic.png` (1024x500, done).
