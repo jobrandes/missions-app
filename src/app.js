@@ -139,6 +139,24 @@
   function allDone(){ return sum(S.done)===4; }
 
   var stampFx=false;
+  function geoGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-geo')||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
+  function geoVerified(k,i){ var st=CITIES[k]&&CITIES[k].stops[i]; return !!(st&&geoGet()[k+':'+st.id]); }
+  function distM(a,b,c,d){ var R=6371000,p=Math.PI/180,x=Math.sin((c-a)*p/2),y=Math.sin((d-b)*p/2),h=x*x+Math.cos(a*p)*Math.cos(c*p)*y*y; return 2*R*Math.asin(Math.sqrt(h)); }
+  function nice(m){ return m<1000?'about '+(Math.max(10,Math.round(m/10)*10))+' m ('+Math.round(m*3.281/10)*10+' ft)':'about '+(m/1000).toFixed(1)+' km ('+(m/1609.34).toFixed(1)+' mi)'; }
+  function geoMsg(t,bad){ var e=document.getElementById('geoMsg'); if(e){ e.textContent=t; e.className='geomsg'+(bad?' bad':''); } }
+  function geoCheck(){
+    var st=STOPS[cur.i]; if(!st||!st.geo||cur.demo||S.done[cur.i]) return;
+    if(!navigator.geolocation){ geoMsg('This device cannot share its location. Tap the big button to continue without the gold stamp.',true); return; }
+    geoMsg('Checking your location. Stays on this phone.',false);
+    navigator.geolocation.getCurrentPosition(function(pos){
+      var acc=pos.coords.accuracy||0, d=distM(pos.coords.latitude,pos.coords.longitude,st.geo[0],st.geo[1]);
+      if(acc>150){ geoMsg('The location signal is too weak here (off by about '+Math.round(acc)+' m). Try again outside, or continue without the gold stamp.',true); return; }
+      if(d<=st.geo[2]){ cur.gv=true; toast('Location confirmed. This visit will be verified.'); setStep(1); }
+      else geoMsg('You look '+nice(d)+' from '+st.name+'. Walk closer and try again, or continue without the gold stamp.',true);
+    },function(err){
+      geoMsg(err&&err.code===1?'Location is off for this app, which is fine. Tap the big button to continue without the gold stamp.':'Could not get your location. Try again, or continue without the gold stamp.',true);
+    },{enableHighAccuracy:true,timeout:15000,maximumAge:30000});
+  }
   function toast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg; t.classList.add('show');
@@ -334,9 +352,9 @@
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
-    h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads, camera use, or location tracking. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
+    h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads or camera use. Location is optional and only checked on your phone, never sent anywhere. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
   }
 
@@ -658,7 +676,7 @@
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
       h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
         +'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'
-        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
+        +(st.geo&&!d&&!cur.demo?'<button class="btn gold" data-a="geo">Check my location for a verified visit</button><p class="hint">Optional. Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';
@@ -669,7 +687,7 @@
         return '<button type="button" class="'+cls+'" data-a="pick" data-k="'+k+'"'+(d?' disabled':'')+'><span>'+o+'</span>'+mark+'</button>';
       }).join('')+'</fieldset>';
       if(d){
-        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':'Badge earned')+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
+        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
       } else {
         h+='<p class="feedback'+(cur.wrong.length?' bad':'')+'" aria-live="polite">'+(cur.wrong.length?'Not yet. '+st.q.hint:'Get it right to earn the '+st.badge+' badge and 100 XP.')+'</p>';
       }
@@ -840,12 +858,13 @@
     if(a==='exit'){ exitStop(); return; }
     if(a==='goback'){ goBack(); return; }
     if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
+    if(a==='geo'){ geoCheck(); return; }
     if(a==='step'){ setStep(+b.getAttribute('data-n')); return; }
     if(a==='pick'){
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ var gg=geoGet(); gg[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} } logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);

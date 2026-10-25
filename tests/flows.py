@@ -99,6 +99,23 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[0,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('[data-a=report]'); need('reno / ' in pg.evaluate("document.getElementById('report').dataset.where").lower(),'report carries the stop context')
     pg.keyboard.press('Escape'); need(pg.locator('#report').count()==0,'Escape closes the report dialog')
+    # GPS verified visit (optional): near, far, and denied
+    def geo_ctx(lat,lon,allow=True):
+        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',geolocation={'latitude':lat,'longitude':lon,'accuracy':20},permissions=['geolocation'] if allow else [])
+        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}")
+        gp=ctx.new_page(); gp.on('pageerror',lambda e:errs.append(str(e))); gp.goto(U); return gp
+    gp=geo_ctx(39.52812,-119.81366); gp.click('.stop >> nth=0'); need(gp.locator('[data-a=geo]').count()==1,'Find it offers the optional location check')
+    gp.click('[data-a=geo]'); gp.wait_for_timeout(600); need('i am here' not in gp.inner_text('#main').lower() or gp.locator('.opt').count()>0,'near the stop the location check moves on to the question')
+    for k in range(4):
+        gp.locator('.opt').nth(k).click()
+        if gp.query_selector('.opt.right'): break
+    need('visit verified' in gp.inner_text('#main').lower(),'a verified visit says so on the badge card')
+    gp.click('.stophead [data-a=exit]'); need('visit verified' in gp.inner_text('#main').lower(),'trail marks a verified visit')
+    gp=geo_ctx(39.7392,-104.9903); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need('from' in gp.inner_text('#geoMsg') and gp.locator('.opt').count()==0,'far away: message shows the distance and stays on Find it')
+    gp.click('text=I am here'); need(gp.locator('.opt').count()>0,'far away: the normal I am here button still works')
+    gp=geo_ctx(39.52812,-119.81366,allow=False); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need(gp.inner_text('#geoMsg').strip()!='' and gp.locator('.opt').count()==0,'denied permission shows a friendly message and does not block')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')
