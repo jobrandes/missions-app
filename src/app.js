@@ -147,7 +147,7 @@
   var geoDenied=false;
   function geoGranted(){ try{ return localStorage.getItem('stp-geo-ok')==='1'; }catch(e){ return false; } }
   try{ if(navigator.permissions&&navigator.permissions.query){ navigator.permissions.query({name:'geolocation'}).then(function(r){
-    function sync(){ geoDenied=(r.state==='denied'); if(r.state==='granted'){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} } }
+    function sync(){ /* never trust 'denied' here: iOS web views misreport it. Only a refused request counts. */ if(r.state==='granted'){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} } }
     sync(); r.onchange=sync; }).catch(function(){}); } }catch(e){}
   function geoSave(){ var gg=geoGet(); gg[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} }
   // quiet=true: automatic check, says nothing unless you are in range
