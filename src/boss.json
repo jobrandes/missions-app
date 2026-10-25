@@ -2436,5 +2436,51 @@
       "a": 0,
       "why": "Wikipedia: he bought it for his mother, Matilda, in 1904."
     }
+  ],
+  "sparks": [
+    {
+      "q": "Who was the town of Sparks named for?",
+      "o": [
+        "A railroad president",
+        "Governor John Sparks",
+        "A local rancher",
+        "The mayor of Reno"
+      ],
+      "a": 1,
+      "why": "It was renamed in April 1904 for Nevada governor John Sparks."
+    },
+    {
+      "q": "Which railroad moved its terminal from Wadsworth to Sparks in 1904?",
+      "o": [
+        "Union Pacific",
+        "Santa Fe",
+        "Southern Pacific",
+        "Virginia & Truckee"
+      ],
+      "a": 2,
+      "why": "The Southern Pacific moved its terminal in summer 1904."
+    },
+    {
+      "q": "How many stalls did the Sparks roundhouse have, according to the state marker?",
+      "o": [
+        "20",
+        "30",
+        "50",
+        "40"
+      ],
+      "a": 3,
+      "why": "The marker says 40 stalls, taken down in 1959."
+    },
+    {
+      "q": "Where does the Truckee River end?",
+      "o": [
+        "Pyramid Lake",
+        "Lake Tahoe",
+        "The Pacific Ocean",
+        "Walker Lake"
+      ],
+      "a": 0,
+      "why": "The Truckee starts at Lake Tahoe and ends in Pyramid Lake, which has no outlet."
+    }
   ]
 }

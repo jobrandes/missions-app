@@ -34,7 +34,7 @@ with sync_playwright() as p:
     pg.click('.town >> nth=0'); need(pg.locator('.hero').is_visible() and pg.inner_text('#cityName').lower()=='reno','Start Reno from Home')
     pg.click('#bnav [data-t=home]'); need('pick a mission' in pg.inner_text('#main').lower(),'Home chip returns Home')
     pg.reload(); need('pick a mission' in pg.inner_text('#main').lower(),'Home persists across reload')
-    pg.click('.town >> nth=1'); pg.reload(); need(pg.inner_text('#cityName').lower()=='virginia city' and pg.locator('.hero').is_visible(),'last town persists across reload')
+    pg.click('.town >> nth=1'); pg.reload(); need(pg.inner_text('#cityName').lower()=='sparks' and pg.locator('.hero').is_visible(),'last town persists across reload')
     # hardware back from a stop returns to the trail, not out of the app
     pg.click('.stop >> nth=0'); pg.go_back(); pg.wait_for_timeout(200); need(pg.locator('.stops').count()==1,'browser Back from a stop returns to the trail')
     # progress shows on Home

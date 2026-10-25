@@ -1,0 +1,445 @@
+{
+ "id": "sparks",
+ "name": "Sparks",
+ "explorer": "Rail City Explorer",
+ "initials": "SP",
+ "stops": [
+  {
+   "id": "victorian",
+   "name": "Victorian Square",
+   "short": "Victorian Square",
+   "badge": "Victorian Square",
+   "tag": "Stop 1 of 4",
+   "teaser": "A railroad town’s old-fashioned main plaza.",
+   "map": "Victorian Square, Victorian Ave, Sparks, NV",
+   "geo": [
+    39.5347,
+    -119.7515,
+    400
+   ],
+   "clue": "Find the plaza on Victorian Avenue with the train-themed shelter and a real steam locomotive on display. Sparks was a railroad town from day one, and the railroad is still the star here.",
+   "safety": "Stay on sidewalks and trails, away from the active rail yard and tracks, which are private and dangerous. Trains still run here. Cross streets only at corners.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Find the old steam locomotive on display. Which railroad’s name is lettered on it?",
+    "options": [
+     "Southern Pacific",
+     "Union Pacific",
+     "Virginia & Truckee",
+     "Santa Fe"
+    ],
+    "answer": 0,
+    "hint": "Look at the cab or tender. The same company built the rail yard that created this town in 1904.",
+    "verify": "Union Pacific lists Southern Pacific Engine No. 8 on loan from the Nevada State Railroad Museum. Confirm the lettering on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sp_en_then",
+     "by": "The Greater Southwestern Exploration Company",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Southern_Pacific_Railway_No._8_in_Carson_City,_Nevada_-_February_1975.jpg",
+     "note": "resized"
+    },
+    "yr": "1975",
+    "label": "Southern Pacific No. 8",
+    "line": "This photo shows Southern Pacific No. 8 in Carson City in 1975. It is the same engine that Union Pacific says is now on loan here, shown in a different town, so this is a looser match, not the same spot.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "Victorian Square",
+    "line": "The square keeps the railroad theme, with a train-style shelter on Victorian Avenue. Photo taken in 2011, so details may have changed.",
+    "ph": {
+     "k": "sp_en_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Victorian_Square,_Sparks,_Nevada_(6402414793).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Sparks began in 1904 when the Southern Pacific Railroad moved its terminal here from Wadsworth. The new town was named for Nevada governor John Sparks.",
+    "Victorian Square is the town’s historic heart. Union Pacific says it shows Southern Pacific Engine No. 8, on loan from the Nevada State Railroad Museum.",
+    "Sparks Heritage Museum sits nearby on Victorian Avenue, with local history from the railroad years."
+   ],
+   "fact": "The town was first called East Reno, then Harriman, before it was renamed for the governor in April 1904.",
+   "disputed": "The photo of Engine No. 8 here was taken in Carson City, not Sparks. The engine only came to Victorian Square later, so the “Then” is the same engine in another place, not the same view. The 2011 “Now” photo shows the shelter, not the engine itself.",
+   "claims": [
+    {
+     "t": "Sparks was named for a Nevada governor.",
+     "a": 0,
+     "why": "Sources agree it was named for Governor John Sparks in 1904."
+    },
+    {
+     "t": "Sparks has always been called Sparks.",
+     "a": 2,
+     "why": "It was first called East Reno and then Harriman before the 1904 renaming."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Sparks, Nevada",
+     "u": "https://en.wikipedia.org/wiki/Sparks,_Nevada"
+    },
+    {
+     "t": "Northern Nevada Business Weekly: history of Sparks",
+     "u": "https://nnbw.com/news/2019/nov/27/no-mystery-about-the-history-of-sparks"
+    },
+    {
+     "t": "Union Pacific: Train Town, Sparks",
+     "u": "https://www.up.com/aboutup/train_town/sparks_nv/index.htm"
+    }
+   ],
+   "card": {
+    "a": "1904",
+    "b": "Today",
+    "la": "Town founded",
+    "lb": "Victorian Square"
+   }
+  },
+  {
+   "id": "shops",
+   "name": "Railroad Shops",
+   "short": "Railroad Shops",
+   "badge": "Railroad Shops",
+   "tag": "Stop 2 of 4",
+   "teaser": "Where steam locomotives were repaired in 1906.",
+   "map": "Southern Pacific rail yard historical marker, Sparks, NV",
+   "geo": [
+    39.5322,
+    -119.7525,
+    400
+   ],
+   "clue": "Find the blue Nevada historical marker about the Southern Pacific rail yards. Look across to the yard. Big repair shops once stood here, and some of the work still goes on nearby.",
+   "safety": "Stay on sidewalks and trails, away from the active rail yard and tracks, which are private and dangerous. Trains still run here. Cross streets only at corners.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "The marker says the railroad moved its terminal here in 1904. Which Nevada town did it move from?",
+    "options": [
+     "Winnemucca",
+     "Wadsworth",
+     "Lovelock",
+     "Fernley"
+    ],
+    "answer": 1,
+    "hint": "It is a small town east of here on the Truckee River.",
+    "verify": "Nevada SHPO marker No. 189 text. Confirm the wording and location on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sp_sh_then",
+     "by": "Brück & Sohn Kunstverlag (postcard)",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:08092-Sparks,_Nev.-1906-Railroad_Shops-Brück_&_Sohn_Kunstverlag.jpg",
+     "note": "resized"
+    },
+    "yr": "1906",
+    "label": "Railroad Shops, Sparks",
+    "line": "A hand-colored 1906 postcard of the shops, two years after the railroad moved its terminal to this spot.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The marker at the rail yard",
+    "line": "The shops are mostly gone. A historical marker now tells the story. Photo taken in 2011.",
+    "ph": {
+     "k": "sp_sh_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Southern_Pacific_Railroad_Yards,_Nevada_Historical_Marker_No._189,_Sparks,_Nevada_(6320844260).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "In summer 1904 the Southern Pacific moved its terminal from Wadsworth to the new town of Sparks. Workers built a depot, a freight yard, and big shops.",
+    "The railroad was the town’s main employer for most of the next century. Passenger trains stopped here until 2009.",
+    "Part of the old machine shop was reported demolished in 2024."
+   ],
+   "fact": "The depot opened on June 19, 1904, and the building is now a yard office for Union Pacific.",
+   "disputed": "The state marker says the machine and erecting shops still stand, but Wikipedia says the machine shop was demolished in 2024. Check what you can see on site.",
+   "claims": [
+    {
+     "t": "The Southern Pacific moved its terminal to Sparks in 1904.",
+     "a": 0,
+     "why": "Both the state marker and Union Pacific give 1904."
+    },
+    {
+     "t": "Passenger trains still stop in Sparks today.",
+     "a": 2,
+     "why": "Passenger service ended in 2009 per Wikipedia."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Nevada SHPO: Southern Pacific Railroad Yards marker",
+     "u": "https://shpo.nv.gov/nevadas-historical-markers/historical-markers/southern-pacific-railroad-yards"
+    },
+    {
+     "t": "Wikipedia: Sparks station",
+     "u": "https://en.wikipedia.org/wiki/Sparks_station"
+    },
+    {
+     "t": "Union Pacific: Train Town, Sparks",
+     "u": "https://www.up.com/aboutup/train_town/sparks_nv/index.htm"
+    }
+   ],
+   "card": {
+    "a": "1904",
+    "b": "2009",
+    "la": "Terminal moved",
+    "lb": "Last passenger train"
+   }
+  },
+  {
+   "id": "river",
+   "name": "Truckee River",
+   "short": "Truckee River",
+   "badge": "Truckee River",
+   "tag": "Stop 3 of 4",
+   "teaser": "The river that made the railroad possible.",
+   "map": "Tahoe-Pyramid Trail, Truckee River, Sparks, NV",
+   "geo": [
+    39.5265,
+    -119.769,
+    500
+   ],
+   "clue": "Head to the Tahoe-Pyramid Trail along the Truckee River, on the south side of town. Find a spot where you can see the water and the hills beyond it.",
+   "safety": "Stay on sidewalks and trails, away from the active rail yard and tracks, which are private and dangerous. Trains still run here. Cross streets only at corners.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Which famous lake does the Truckee River flow out of, upstream of Sparks?",
+    "options": [
+     "Pyramid Lake",
+     "Walker Lake",
+     "Donner Lake",
+     "Lake Tahoe"
+    ],
+    "answer": 3,
+    "hint": "It is the big blue lake on the border of Nevada and California.",
+    "verify": "Look for a trail sign or marker naming the river. Confirm what is posted on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sp_rv_then",
+     "by": "Brück & Sohn Kunstverlag (postcard)",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:08091-Sparks,_Nev.-1906-River_Scene-Brück_&_Sohn_Kunstverlag.jpg",
+     "note": "resized"
+    },
+    "yr": "1906",
+    "label": "River Scene, Sparks",
+    "line": "The 1906 postcard is titled only “River Scene, Sparks, Nev.” The Truckee is the river here, so it is the likely match.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2020",
+    "head": "Today",
+    "label": "The Truckee along the trail",
+    "line": "The Tahoe-Pyramid Trail follows the river between Sparks and Reno. Photo taken in 2020.",
+    "ph": {
+     "k": "sp_rv_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tahoe-Pyramid_Trail_Between_Sparks_and_Reno,_Nevada_(49910575383).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Truckee River begins at Lake Tahoe and runs about 120 miles down to Pyramid Lake. It passes right along the edge of Sparks.",
+    "The river gave the railroad a path across the desert, and the town grew up beside it.",
+    "Today a paved trail follows the water between Sparks and Reno."
+   ],
+   "fact": "The Truckee does not reach the ocean. It ends in Pyramid Lake, which has no outlet.",
+   "disputed": "The postcard only says “River Scene.” It was probably the Truckee, but the exact spot is not known, so this “Now” photo is a match for the river, not the spot.",
+   "claims": [
+    {
+     "t": "The Truckee River flows out of Lake Tahoe.",
+     "a": 0,
+     "why": "Lake Tahoe is its source, and it ends at Pyramid Lake."
+    },
+    {
+     "t": "The Truckee River flows to the Pacific Ocean.",
+     "a": 2,
+     "why": "It ends in Pyramid Lake, in a basin with no outlet to the sea."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Sparks, Nevada",
+     "u": "https://en.wikipedia.org/wiki/Sparks,_Nevada"
+    },
+    {
+     "t": "Northern Nevada Business Weekly: history of Sparks",
+     "u": "https://nnbw.com/news/2019/nov/27/no-mystery-about-the-history-of-sparks"
+    }
+   ],
+   "card": {
+    "a": "1906",
+    "b": "Today",
+    "la": "Postcard",
+    "lb": "Tahoe-Pyramid Trail"
+   }
+  },
+  {
+   "id": "roundhouse",
+   "name": "The Roundhouse",
+   "short": "Roundhouse",
+   "badge": "Roundhouse",
+   "tag": "Stop 4 of 4",
+   "teaser": "A giant engine garage that is now gone.",
+   "map": "Southern Pacific rail yard, Sparks, NV",
+   "geo": [
+    39.5309,
+    -119.7555,
+    450
+   ],
+   "clue": "Stay by the same railroad marker and look out at the yard. A huge round building for turning and fixing locomotives once stood in this area. Now look for the empty space where it used to be.",
+   "safety": "Stay on sidewalks and trails, away from the active rail yard and tracks, which are private and dangerous. Trains still run here. Cross streets only at corners.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "The marker says the roundhouse was taken down in 1959. How many stalls did it have?",
+    "options": [
+     "20",
+     "30",
+     "40",
+     "50"
+    ],
+    "answer": 2,
+    "hint": "The number is a round one, and it is more than 30.",
+    "verify": "Nevada SHPO marker No. 189 text. Confirm the number on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sp_rh_then",
+     "by": "Brück & Sohn Kunstverlag (postcard)",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg",
+     "note": "resized"
+    },
+    "yr": "1906",
+    "label": "Round House and Shops",
+    "line": "A hand-colored 1906 postcard of the roundhouse and the shops behind it.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2011",
+    "head": "Today",
+    "label": "The marker explains what is gone",
+    "line": "The roundhouse is gone. The marker stands near the old yard. Photo taken in 2011.",
+    "ph": {
+     "k": "sp_rh_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Southern_Pacific_Railroad_Yards,_Nevada_Historical_Marker_No._189,_Sparks,_Nevada_(6320320617).jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "A roundhouse is a round building with a turntable in the middle. Engines drove in to be fixed or to wait for their next trip.",
+    "Sparks had a 40-stall roundhouse. It was taken down in 1959, when diesel engines replaced steam.",
+    "Union Pacific says an original roundhouse stood until the 1970s, so sources differ on which one the marker means."
+   ],
+   "fact": "Diesel locomotives did not need the same kind of daily servicing as steam engines, so big roundhouses were no longer needed.",
+   "disputed": "The state marker says the 40-stall roundhouse was dismantled in 1959. Union Pacific says the original roundhouse stood until the 1970s. We could not tell which building each source means.",
+   "claims": [
+    {
+     "t": "The Sparks roundhouse had 40 stalls.",
+     "a": 0,
+     "why": "The state marker gives 40 stalls and a 1959 teardown."
+    },
+    {
+     "t": "The roundhouse is still standing today.",
+     "a": 2,
+     "why": "The marker says it was dismantled in 1959, and Union Pacific says it was gone by the 1970s."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Nevada SHPO: Southern Pacific Railroad Yards marker",
+     "u": "https://shpo.nv.gov/nevadas-historical-markers/historical-markers/southern-pacific-railroad-yards"
+    },
+    {
+     "t": "Union Pacific: Train Town, Sparks",
+     "u": "https://www.up.com/aboutup/train_town/sparks_nv/index.htm"
+    }
+   ],
+   "card": {
+    "a": "1906",
+    "b": "1959",
+    "la": "Postcard",
+    "lb": "Roundhouse taken down"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Tenderfoot"
+  ],
+  [
+   100,
+   "Brakeman"
+  ],
+  [
+   250,
+   "Switchman"
+  ],
+  [
+   450,
+   "Conductor"
+  ],
+  [
+   600,
+   "Rail City Historian"
+  ]
+ ],
+ "heroKey": "sp_rh_then",
+ "heroAlt": "Hand-colored 1906 postcard of the Southern Pacific roundhouse and shops in Sparks",
+ "heroLi": "<li>Header: 1906 postcard, Brück &amp; Sohn Kunstverlag · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg\">Source</a></li>",
+ "heroCredit": "Photo: Brück &amp; Sohn Kunstverlag · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg\">Source</a>",
+ "mission": "Find four spots in a railroad town. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. Sparks is stamped.",
+ "safetyNote": "<li>Stops are outdoors on public sidewalks and trails. Stay away from the active rail yard and tracks. Trains still run here. Casinos are for adults, and none of the stops go inside one.</li>",
+ "badgeMap": {
+  "victorian": [
+   "sp_en_now",
+   "50% 50%"
+  ],
+  "shops": [
+   "sp_sh_now",
+   "50% 40%"
+  ],
+  "river": [
+   "sp_rv_now",
+   "50% 50%"
+  ],
+  "roundhouse": [
+   "sp_rh_now",
+   "50% 30%"
+  ]
+ },
+ "level": "Hidden Gems",
+ "region": "The West"
+}

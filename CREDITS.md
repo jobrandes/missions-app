@@ -618,3 +618,16 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | da_f3_now | https://commons.wikimedia.org/wiki/File:Wright_Flyer_III_at_Carillon_Park.jpg | Nyttend | Public domain | 2012 |
 | da_db_then | https://commons.wikimedia.org/wiki/File:Paul_Laurence_Dunbar_cph.3a46806.jpg | Kell (Library of Congress) | Public domain | about 1906 |
 | da_db_now | https://commons.wikimedia.org/wiki/File:Dunbar_Home_P2110034.JPG | Chris Light | CC BY-SA 3.0 | 2006 |
+
+## Sparks (photos added Oct 25)
+
+| Use | File | Author | License | Note |
+|---|---|---|---|---|
+| Header + Roundhouse Then | File:08093-Sparks, Nev.-1906-Round House and Shops-Brück & Sohn Kunstverlag.jpg | Brück & Sohn Kunstverlag | CC0 | 1906 postcard, resized |
+| Railroad Shops Then | File:08092-Sparks, Nev.-1906-Railroad Shops-Brück & Sohn Kunstverlag.jpg | Brück & Sohn Kunstverlag | CC0 | 1906 postcard, resized |
+| Truckee River Then | File:08091-Sparks, Nev.-1906-River Scene-Brück & Sohn Kunstverlag.jpg | Brück & Sohn Kunstverlag | CC0 | 1906 postcard, resized. Card only says "River Scene". |
+| Victorian Square Then | File:Southern Pacific Railway No. 8 in Carson City, Nevada - February 1975.jpg | The Greater Southwestern Exploration Company | CC BY 2.0 | Same engine, shot in Carson City. Loose match, labeled as such. |
+| Victorian Square Now | File:Victorian Square, Sparks, Nevada (6402414793).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2011 |
+| Railroad Shops Now | File:Southern Pacific Railroad Yards, Nevada Historical Marker No. 189, Sparks, Nevada (6320844260).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2011 |
+| Roundhouse Now | File:Southern Pacific Railroad Yards, Nevada Historical Marker No. 189, Sparks, Nevada (6320320617).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2011 |
+| Truckee River Now | File:Tahoe-Pyramid Trail Between Sparks and Reno, Nevada (49910575383).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2020 |
