@@ -100,9 +100,10 @@ with sync_playwright() as p:
     pg.click('.stop >> nth=0'); pg.click('[data-a=report]'); need('reno / ' in pg.evaluate("document.getElementById('report').dataset.where").lower(),'report carries the stop context')
     pg.keyboard.press('Escape'); need(pg.locator('#report').count()==0,'Escape closes the report dialog')
     # GPS verified visit (optional): near, far, and denied
-    def geo_ctx(lat,lon,allow=True):
+    def geo_ctx(lat,lon,allow=True,ok=False,done=0):
         ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',geolocation={'latitude':lat,'longitude':lon,'accuracy':20},permissions=['geolocation'] if allow else [])
-        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}")
+        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');"+("localStorage.setItem('stp-geo-ok','1');" if ok else '')+"localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[%d,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}"%done)
+        ctx.add_init_script("try{Object.defineProperty(navigator,'permissions',{value:undefined})}catch(e){}")
         gp=ctx.new_page(); gp.on('pageerror',lambda e:errs.append(str(e))); gp.goto(U); return gp
     gp=geo_ctx(39.52812,-119.81366); gp.click('.stop >> nth=0'); need(gp.locator('[data-a=geo]').count()==1,'Find it offers the optional location check')
     gp.click('[data-a=geo]'); gp.wait_for_timeout(600); need('i am here' not in gp.inner_text('#main').lower() or gp.locator('.opt').count()>0,'near the stop the location check moves on to the question')
@@ -116,6 +117,20 @@ with sync_playwright() as p:
     gp.click('text=I am here'); need(gp.locator('.opt').count()>0,'far away: the normal I am here button still works')
     gp=geo_ctx(39.52812,-119.81366,allow=False); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
     need(gp.inner_text('#geoMsg').strip()!='' and gp.locator('.opt').count()==0,'denied permission shows a friendly message and does not block')
+    # auto-detect once permission was granted: no button press needed
+    gp=geo_ctx(39.52812,-119.81366,ok=True); gp.click('.stop >> nth=0'); gp.wait_for_timeout(900)
+    need(gp.locator('.opt').count()>0,'permission already granted: arriving at the stop jumps straight to the question')
+    gp=geo_ctx(39.7392,-104.9903,ok=True); gp.click('.stop >> nth=0'); gp.wait_for_timeout(900)
+    need(gp.locator('.opt').count()==0 and gp.locator('[data-a=geo]').count()==1,'auto-detect far away stays quiet on Find it')
+    gp=geo_ctx(39.52812,-119.81366); gp.click('.stop >> nth=0'); gp.wait_for_timeout(600)
+    need(gp.locator('.opt').count()==0,'no auto-check before the person has ever allowed location')
+    # verify later on an already stamped stop
+    gp=geo_ctx(39.52812,-119.81366,done=1); gp.click('.stop >> nth=0'); need(gp.locator('[data-a=geo]').count()==1,'stamped stop offers Verify this visit')
+    gp.click('[data-a=geo]'); gp.wait_for_timeout(700)
+    need(gp.locator('[data-a=geo]').count()==0,'verify later removes the button once confirmed')
+    gp.click('.stophead [data-a=exit]'); need('visit verified' in gp.inner_text('#main').lower(),'late verification shows on the trail')
+    gp=geo_ctx(39.7392,-104.9903,done=1); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need('from' in gp.inner_text('#geoMsg'),'verify later far away shows the distance')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')
