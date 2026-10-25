@@ -8,7 +8,7 @@ A mom and her teenage son are building a free phone game about real landmarks (R
 
 It is a test version, so some check-in answers are still being confirmed on site. If something is wrong, confusing or broken, there is a "Something wrong? Tell us" button on every stop. That is exactly what we want.
 
-Link: https://stamp-the-past.netlify.app (works on any phone browser; add it to your home screen if you like)
+Link: https://stampthepast.com (works on any phone browser; add it to your home screen if you like)
 No sign-up, no ads, nothing collected beyond what you choose to send in a report. Your stamps live on your phone, so use "Back up your passport" on the passport page to save a code.
 
 ## What we most want to know

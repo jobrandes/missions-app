@@ -12,7 +12,7 @@ Everything App Store Connect asks for, written so it can be pasted in. Items mar
 | Keywords | 100 | history,scavenger hunt,landmarks,travel,passport,stamps,then and now,road trip,trivia,family,photos |
 | Category (primary) | | Travel |
 | Category (secondary) | | Education |
-| Support URL | | **[YOU]** the real domain's /support page (not bought yet; the test site works meanwhile: stamp-the-past.netlify.app/support) |
+| Support URL | | **[YOU]** https://stampthepast.com/support (domain bought and live Oct 25; the old test site stamp-the-past.netlify.app/support) |
 | Privacy policy URL | | **[YOU]** same domain, /privacy |
 | Marketing URL (optional) | | the domain's home page |
 | Copyright | | 2026 **[YOU: your name or company]** |

@@ -18,7 +18,7 @@ We wanted a reason to drag the family downtown, so we built one. Stamp the Past 
 - 53 towns, 212 stops (Reno, Boston, Chicago, New Orleans, Denver and more)
 - Real photos only, all credited. Stories come with sources, and we label what is disputed
 - No account, no ads, no tracking, no location access
-- Works in a phone browser now: stamp-the-past.netlify.app (an iPhone app is coming)
+- Works in a phone browser now: stampthepast.com (an iPhone app is coming)
 
 What we need: try your own town (or any town from your couch with the "Try it from home" button) and tell us what is wrong. A wrong date, a bad clue, a broken screen, anything. There is a "Something wrong?" button in the app.
 
