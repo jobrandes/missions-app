@@ -131,6 +131,22 @@ with sync_playwright() as p:
     gp.click('.stophead [data-a=exit]'); need('visit verified' in gp.inner_text('#main').lower(),'late verification shows on the trail')
     gp=geo_ctx(39.7392,-104.9903,done=1); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
     need('from' in gp.inner_text('#geoMsg'),'verify later far away shows the distance')
+    # live location while open (Pokemon Go style): Home card, one tap in, and walking up to a stop
+    def live_ctx(lat,lon,done=0):
+        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',geolocation={'latitude':lat,'longitude':lon,'accuracy':20},permissions=['geolocation'])
+        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');localStorage.setItem('stp-geo-ok','1');localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[%d,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}"%done)
+        ctx.add_init_script("try{Object.defineProperty(navigator,'permissions',{value:undefined})}catch(e){}")
+        gp=ctx.new_page(); gp.on('pageerror',lambda e:errs.append(str(e))); gp.goto(U); gp.click('#bnav [data-t=home]'); return ctx,gp
+    ctx,gp=live_ctx(39.52812,-119.81366); gp.wait_for_timeout(1200)
+    need('you are here' in gp.inner_text('#nearBox').lower(),'live location: Home says You are here at a stop')
+    gp.click('[data-a=neargo]'); gp.wait_for_timeout(500); need(gp.locator('.opt').count()>0,'tapping the Home card jumps to the question')
+    ctx,gp=live_ctx(0.0,-30.0); gp.wait_for_timeout(1200)
+    need(gp.inner_text('#nearBox').strip()=='','live location: nothing pushy when no stop is near')
+    need(True,'live location: nothing pushy when no stop is near')
+    ctx,gp=live_ctx(39.5325,-119.81366); gp.wait_for_timeout(1200); need('away' in gp.inner_text('#nearBox'),'live location: shows the nearest stop distance')
+    gp.click('[data-a=neargo]'); gp.wait_for_timeout(400); need(gp.locator('.opt').count()==0,'opening a far stop stays on Find it')
+    ctx.set_geolocation({'latitude':39.5287,'longitude':-119.8116,'accuracy':20}); gp.wait_for_timeout(2500)
+    need(gp.locator('.opt').count()>0,'walking up to the stop you are looking at moves on by itself')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')

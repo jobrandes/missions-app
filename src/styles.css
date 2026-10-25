@@ -795,3 +795,4 @@ body.ispass .menubtn{margin-top:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root:not([data-theme=light]) .geomsg.bad{color:#f2a0a0}}
 :root[data-theme=dark] .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root[data-theme=dark] .geomsg.bad{color:#f2a0a0}
 .geomsg:empty{display:none}
+.nearbox:not(:empty){padding-top:56px}.nearcard.here{border-color:var(--gold,#b8860b)}

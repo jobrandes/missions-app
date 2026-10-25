@@ -40,7 +40,7 @@ WHAT YOU GET
 • Works offline once it has loaded, so a patchy signal will not stop you at the steps of the courthouse
 
 PRIVATE BY DESIGN
-No account. No ads. No tracking. Location is optional and checked only on your phone. Your stamps live on your phone. A save code lets you move them yourself.
+No account. No ads. No tracking. Location is optional and used only on your phone while the app is open. Your stamps live on your phone. A save code lets you move them yourself.
 
 MADE BY A MOM AND HER TEENAGE SON
 We wanted a reason to drag the family downtown. It worked.
