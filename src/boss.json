@@ -2461,15 +2461,15 @@
       "why": "The Southern Pacific moved its terminal in summer 1904."
     },
     {
-      "q": "How many stalls did the Sparks roundhouse have, according to the state marker?",
+      "q": "What was the Sparks Marina lake before it was a lake?",
       "o": [
-        "20",
-        "30",
-        "50",
-        "40"
+        "A reservoir",
+        "A swamp",
+        "A rail yard",
+        "A gravel pit"
       ],
       "a": 3,
-      "why": "The marker says 40 stalls, taken down in 1959."
+      "why": "It was the Helms gravel pit, filled by the 1997 flood."
     },
     {
       "q": "Where does the Truckee River end?",

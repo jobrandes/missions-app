@@ -298,98 +298,102 @@
    }
   },
   {
-   "id": "roundhouse",
-   "name": "The Roundhouse",
-   "short": "Roundhouse",
-   "badge": "Roundhouse",
+   "id": "marina",
+   "name": "Sparks Marina",
+   "short": "Sparks Marina",
+   "badge": "Sparks Marina",
    "tag": "Stop 4 of 4",
-   "teaser": "A giant engine garage that is now gone.",
-   "map": "Southern Pacific rail yard, Sparks, NV",
+   "teaser": "A gravel pit that became a lake.",
+   "map": "Sparks Marina Park, Howard Dr, Sparks, NV",
    "geo": [
-    39.5309,
-    -119.7555,
-    450
+    39.5378,
+    -119.7236,
+    900
    ],
-   "clue": "Stay by the same railroad marker and look out at the yard. A huge round building for turning and fixing locomotives once stood in this area. Now look for the empty space where it used to be.",
+   "clue": "Head to Sparks Marina Park, next to Legends. The lake you see used to be a gravel pit. Walk to the shore and look across the water.",
    "safety": "Stay on sidewalks and trails, away from the active rail yard and tracks, which are private and dangerous. Trains still run here. Cross streets only at corners.",
    "field": "Field notes pending: Jo-Anne will check this spot on foot.",
    "q": {
-    "prompt": "The marker says the roundhouse was taken down in 1959. How many stalls did it have?",
+    "prompt": "Look at the signs or the lake itself. What was this lake before it was a park?",
     "options": [
-     "20",
-     "30",
-     "40",
-     "50"
+     "A reservoir",
+     "A gravel pit",
+     "A rail yard",
+     "A swamp"
     ],
-    "answer": 2,
-    "hint": "The number is a round one, and it is more than 30.",
-    "verify": "Nevada SHPO marker No. 189 text. Confirm the number on site."
+    "answer": 1,
+    "hint": "Think about what is dug out of the ground to build roads.",
+    "verify": "KUNR and the Library of Congress both describe the Helms gravel pit. Confirm any park signs on site."
    },
    "then": {
     "ph": {
-     "k": "sp_rh_then",
+     "k": "sp_rv_then",
      "by": "Brück & Sohn Kunstverlag (postcard)",
      "lic": "CC0",
      "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg",
+     "page": "https://commons.wikimedia.org/wiki/File:08091-Sparks,_Nev.-1906-River_Scene-Brück_&_Sohn_Kunstverlag.jpg",
      "note": "resized"
     },
     "yr": "1906",
-    "label": "Round House and Shops",
-    "line": "A hand-colored 1906 postcard of the roundhouse and the shops behind it.",
+    "label": "Stand-in: the river before the Marina",
+    "line": "We do not have a free photo of the pit yet. This 1906 river postcard is a stand-in. It shows the Truckee near Sparks, not the Marina. A real Helms Pit photo is coming.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
     }
    },
    "now": {
-    "yr": "2011",
+    "yr": "2014",
     "head": "Today",
-    "label": "The marker explains what is gone",
-    "line": "The roundhouse is gone. The marker stands near the old yard. Photo taken in 2011.",
+    "label": "Sparks Marina",
+    "line": "The Marina is now a lake of about 77 acres with beaches, a pier, and a loop trail. Photo taken in 2014.",
     "ph": {
-     "k": "sp_rh_now",
-     "by": "Ken Lund",
-     "lic": "CC BY-SA 2.0",
-     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Southern_Pacific_Railroad_Yards,_Nevada_Historical_Marker_No._189,_Sparks,_Nevada_(6320320617).jpg",
+     "k": "sp_mr_now",
+     "by": "Jazfry",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Sparks_Marina.jpg",
      "note": "resized"
     }
    },
    "story": [
-    "A roundhouse is a round building with a turntable in the middle. Engines drove in to be fixed or to wait for their next trip.",
-    "Sparks had a 40-stall roundhouse. It was taken down in 1959, when diesel engines replaced steam.",
-    "Union Pacific says an original roundhouse stood until the 1970s, so sources differ on which one the marker means."
+    "For decades the Helms gravel pit supplied rock for roads. In 1987, millions of gallons of oil leaked into the pit from a nearby tank farm.",
+    "The city bought the site in 1995. After a cleanup, the New Year’s Day flood of 1997 filled the pit with water in about two days, and it became a lake.",
+    "Today it is Sparks Marina Park, with the 77-acre Helms Lake and a loop trail."
    ],
-   "fact": "Diesel locomotives did not need the same kind of daily servicing as steam engines, so big roundhouses were no longer needed.",
-   "disputed": "The state marker says the 40-stall roundhouse was dismantled in 1959. Union Pacific says the original roundhouse stood until the 1970s. We could not tell which building each source means.",
+   "fact": "The lake was filled by the 1997 flood in about two days, with roughly a billion gallons of water.",
+   "disputed": "The “Then” photo is a stand-in, not the pit. Sources also differ on small details of the cleanup, so check the details on site.",
    "claims": [
     {
-     "t": "The Sparks roundhouse had 40 stalls.",
+     "t": "The Sparks Marina lake started as a gravel pit.",
      "a": 0,
-     "why": "The state marker gives 40 stalls and a 1959 teardown."
+     "why": "The Library of Congress and KUNR both describe the Helms gravel pit."
     },
     {
-     "t": "The roundhouse is still standing today.",
+     "t": "The Marina was dug as a lake on purpose.",
      "a": 2,
-     "why": "The marker says it was dismantled in 1959, and Union Pacific says it was gone by the 1970s."
+     "why": "It was a gravel pit, and the 1997 flood filled it with water."
     }
    ],
    "sources": [
     {
-     "t": "Nevada SHPO: Southern Pacific Railroad Yards marker",
-     "u": "https://shpo.nv.gov/nevadas-historical-markers/historical-markers/southern-pacific-railroad-yards"
+     "t": "KUNR: The Sparks Marina, past, present, future",
+     "u": "https://www.kunr.org/local-stories/2015-10-08/the-sparks-marina-past-present-future"
     },
     {
-     "t": "Union Pacific: Train Town, Sparks",
-     "u": "https://www.up.com/aboutup/train_town/sparks_nv/index.htm"
+     "t": "Library of Congress: Helms gravel pit (Peter Goin)",
+     "u": "https://www.loc.gov/pictures/item/2012645401/"
+    },
+    {
+     "t": "Wikipedia: Sparks, Nevada",
+     "u": "https://en.wikipedia.org/wiki/Sparks,_Nevada"
     }
    ],
    "card": {
-    "a": "1906",
-    "b": "1959",
-    "la": "Postcard",
-    "lb": "Roundhouse taken down"
+    "a": "1987",
+    "b": "1997",
+    "la": "Oil leak into the pit",
+    "lb": "Flood fills the lake"
    }
   }
  ],
@@ -435,9 +439,9 @@
    "sp_rv_now",
    "50% 50%"
   ],
-  "roundhouse": [
-   "sp_rh_now",
-   "50% 30%"
+  "marina": [
+   "sp_mr_now",
+   "50% 50%"
   ]
  },
  "level": "Hidden Gems",
