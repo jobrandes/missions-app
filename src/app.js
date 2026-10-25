@@ -259,7 +259,7 @@
     list=list.slice(0,10);
     if(!list.length) return '';
     return '<section class="rings" aria-label="Towns to continue"><p class="mono">'+(started?'Jump back in':'Try one of these')+'</p><div class="rrow">'+list.map(function(k){
-      var c=CITIES[k], n=sum(ALL[k].done), pc=Math.round(n/c.stops.length*100), key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var c=CITIES[k], n=sum(ALL[k].done), pc=Math.round(n/c.stops.length*100), key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img loading="lazy" decoding="async" src="'+PHOTOS[key]+'" alt="">':'';
       return '<button class="rbtn" data-a="city" data-c="'+k+'" aria-label="'+c.name+', '+n+' of '+c.stops.length+' stamps"><span class="rg" style="--p:'+pc+'"><span class="rph">'+img+'</span></span><span class="rn">'+c.name+'</span></button>';
     }).join('')+'</div></section>';
   }
@@ -277,7 +277,7 @@
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
-      var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img loading="lazy" decoding="async" src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
       return '<li data-q="'+stOf(k).toLowerCase()+'"><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button><button class="tstar'+(tripGet().indexOf(k)>-1?' on':'')+'" data-a="trip" data-c="'+k+'" aria-pressed="'+(tripGet().indexOf(k)>-1?'true':'false')+'" aria-label="'+(tripGet().indexOf(k)>-1?'Remove '+c.name+' from my trip':'Add '+c.name+' to my trip')+'">'+(tripGet().indexOf(k)>-1?'★':'☆')+'</button></li>';
     }
@@ -501,8 +501,8 @@
   var TRAILS=[
     {id:'stations',name:'Train stations',note:'Depots and terminals where the country arrived.',re:/station|depot|terminal/i},
     {id:'capitols',name:'Capitols and courthouses',note:'Where laws were made and arguments settled.',re:/capitol|statehouse|state house|courthouse|city hall/i},
-    {id:'faith',name:'Churches and missions',note:'Cathedrals, missions and meeting houses.',re:/church|cathedral|temple|mission|basilica|meeting ?house/i},
-    {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|tower|monument|needle|gate\b/i}
+    {id:'faith',name:'Churches and missions',note:'Cathedrals, missions and meeting houses.',re:/church(?!ill| street)|cathedral|temple|mission|basilica|meeting ?house/i},
+    {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|\b(?!terminal\b)\w+ tower|monument|needle|gate\b/i}
   ];
   function trailStops(re){ var out=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(re.test(st.name)) out.push({k:k,st:st,done:!!ALL[k].done[i]}); }); }); return out; }
   var TRICON={"stations": "<path d=\"M6 5h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 4h12M8 20l1.5-3m6.5 3-1.5-3M9 13h.01M15 13h.01\"/>", "capitols": "<path d=\"M4 20h16M6 20v-7m4 7v-7m4 7v-7m4 7v-7M3 13h18M5 13a7 7 0 0 1 14 0M12 3v3\"/>", "faith": "<path d=\"M12 2v5m-2-3h4M7 21V12l5-5 5 5v9M10 21v-4h4v4M4 21h16\"/>", "bridges": "<path d=\"M2 18h20M4 18v-5m16 5v-5M4 13c3-6 13-6 16 0M8 14v4m4-5v5m4-4v4\"/>"};

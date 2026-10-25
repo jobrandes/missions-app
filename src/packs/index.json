@@ -54,10 +54,5 @@
     "sanantonio",
     "dayton"
   ],
-  "soon": [
-    {
-      "name": "Paris",
-      "region": "Europe"
-    }
-  ]
+  "soon": []
 }
