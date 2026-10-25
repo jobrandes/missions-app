@@ -644,7 +644,7 @@
     shareDraw(kind,k,function(b){
       if(!b){ toast('Could not make the card on this device.'); return; }
       var name='stamp-the-past-'+(kind==='town'?k:'passport')+'.png', f=null; try{ f=new File([b],name,{type:'image/png'}); }catch(e){}
-      var txt=(kind==='town'?'I finished '+CITIES[k].name+' on Stamp the Past.':'My Stamp the Past passport.')+' Go there. Prove it. Stamp the past.';
+      var txt=(kind==='town'?'I finished '+CITIES[k].name+' on Stamp the Past.':'My Stamp the Past passport.')+' Go there. Prove it. Stamp the past. https://'+SHARE_URL;
       if(f&&navigator.canShare&&navigator.canShare({files:[f]})&&navigator.share){ navigator.share({files:[f],text:txt}).catch(function(){}); return; }
       shareClose(); var u=URL.createObjectURL(b), d=document.createElement('div'); d.id='sharem'; d._u=u; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Your share card');
       d.innerHTML='<div class="celeb-card sharecard"><img src="'+u+'" alt="Your stamp card"><p class="why">Press and hold the picture to save or share it.</p><div class="celeb-btns"><a class="btn" href="'+u+'" download="'+name+'">Save the picture</a><button class="btn ghost" data-a="shareclose">Close</button></div></div>';
