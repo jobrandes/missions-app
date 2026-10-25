@@ -327,16 +327,16 @@
    },
    "then": {
     "ph": {
-     "k": "sp_rv_then",
-     "by": "Brück & Sohn Kunstverlag (postcard)",
-     "lic": "CC0",
-     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:08091-Sparks,_Nev.-1906-River_Scene-Brück_&_Sohn_Kunstverlag.jpg",
-     "note": "resized"
+     "k": "sp_fl_then",
+     "by": "Patrick A. Glancy, U.S. Geological Survey",
+     "lic": "Public domain (U.S. government work)",
+     "lu": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+     "page": "https://pubs.usgs.gov/fs/1997/0123/report.pdf",
+     "note": "cropped from a report page and resized"
     },
-    "yr": "1906",
-    "label": "Stand-in: the river before the Marina",
-    "line": "We do not have a free photo of the pit yet. This 1906 river postcard is a stand-in. It shows the Truckee near Sparks, not the Marina. A real Helms Pit photo is coming.",
+    "yr": "1997",
+    "label": "The flood that filled the pit",
+    "line": "The New Year’s flood of January 3, 1997, seen from a helicopter over the industrial part of Sparks. This is not the pit itself. It is the same flood that filled it. We still want a free photo of the pit.",
     "link": {
      "t": "Look for historic photos at the Library of Congress",
      "u": "https://www.loc.gov/pictures/search/?q=Sparks%20Nevada&co=hh"
@@ -362,7 +362,7 @@
     "Today it is Sparks Marina Park, with the 77-acre Helms Lake and a loop trail."
    ],
    "fact": "The lake was filled by the 1997 flood in about two days, with roughly a billion gallons of water.",
-   "disputed": "The “Then” photo is a stand-in, not the pit. Sources also differ on small details of the cleanup, so check the details on site.",
+   "disputed": "The “Then” photo shows the 1997 flood elsewhere in Sparks, not the pit. Sources also differ on small details of the cleanup, so check the details on site.",
    "claims": [
     {
      "t": "The Sparks Marina lake started as a gravel pit.",
@@ -376,6 +376,10 @@
     }
    ],
    "sources": [
+    {
+     "t": "USGS: Flood of January 1997 in the Truckee River Basin",
+     "u": "https://pubs.usgs.gov/fs/1997/0123/report.pdf"
+    },
     {
      "t": "KUNR: The Sparks Marina, past, present, future",
      "u": "https://www.kunr.org/local-stories/2015-10-08/the-sparks-marina-past-present-future"
@@ -419,8 +423,8 @@
    "Rail City Historian"
   ]
  ],
- "heroKey": "sp_rh_then",
- "heroAlt": "Hand-colored 1906 postcard of the Southern Pacific roundhouse and shops in Sparks",
+ "heroKey": "sp_hero",
+ "heroAlt": "Hand-colored 1906 postcard of the Southern Pacific roundhouse and shops in Sparks, cropped",
  "heroLi": "<li>Header: 1906 postcard, Brück &amp; Sohn Kunstverlag · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg\">Source</a></li>",
  "heroCredit": "Photo: Brück &amp; Sohn Kunstverlag · <a target=\"_blank\" rel=\"noopener\" href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a> · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:08093-Sparks,_Nev.-1906-Round_House_and_Shops-Brück_&_Sohn_Kunstverlag.jpg\">Source</a>",
  "mission": "Find four spots in a railroad town. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
