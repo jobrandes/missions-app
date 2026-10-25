@@ -397,7 +397,7 @@
   function vnote(st){
     var v=st.verified;
     if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
-    var fn=st.field.replace(/^Field notes pending:\s*/i,''); return '<div class="vbadge"><b>Not verified on site yet</b>'+(/nobody has walked/i.test(fn)?'':'<span>'+fn+'</span>')+'</div>';
+    var fn=st.field.replace(/^Field notes pending:\s*/i,''); return '<div class="vbadge"><b>Written from sources, not walked yet</b>'+(/nobody has walked/i.test(fn)?'':'<span>'+fn+'</span>')+'</div>';
   }
   /* ---------- report a problem ---------- */
   function whereAmI(){
@@ -462,6 +462,7 @@
   function sealTier(n){ return n>=4?'gold':(n===3?'silver':(n===2?'bronze':null)); }
   function ptsOf(n){ return n===undefined||n===null?0:50*n+(n>=4?100:0); }
     var TSTATE={"reno":"NV","vc":"NV","tahoeicons":"CA/NV","tahoe":"CA/NV","boston":"MA","dc":"DC","ny":"NY","chicago":"IL","sf":"CA","philly":"PA","la":"CA","seattle":"WA","nola":"LA","detroit":"MI","minneapolis":"MN","atlanta":"GA","memphis":"TN","savannah":"GA","denver":"CO","santafe":"NM","phoenix":"AZ","albuquerque":"NM","tucson":"AZ","pittsburgh":"PA","baltimore":"MD","cleveland":"OH","stlouis":"MO","cincinnati":"OH","indianapolis":"IN","buffalo":"NY","richmond":"VA","charleston":"SC","houston":"TX","nashville":"TN","providence":"RI","saltlake":"UT","sandiego":"CA","portland":"OR","milwaukee":"WI","columbus":"OH","gettysburg":"PA","louisville":"KY","newport":"RI","knoxville":"TN","portlandme":"ME","newhaven":"CT","burlington":"VT","coloradosprings":"CO","lasvegas":"NV","flagstaff":"AZ","elpaso":"TX","sanantonio":"TX","dayton":"OH"}, TFULL={"NV":"Nevada","CA":"California","MA":"Massachusetts","DC":"District of Columbia Washington","NY":"New York","IL":"Illinois","PA":"Pennsylvania","WA":"Washington","LA":"Louisiana","MI":"Michigan","MN":"Minnesota","GA":"Georgia","TN":"Tennessee","CO":"Colorado","NM":"New Mexico","AZ":"Arizona","MD":"Maryland","OH":"Ohio","MO":"Missouri","IN":"Indiana","VA":"Virginia","SC":"South Carolina","TX":"Texas","RI":"Rhode Island","UT":"Utah","OR":"Oregon","WI":"Wisconsin","KY":"Kentucky","ME":"Maine","CT":"Connecticut","VT":"Vermont"};
+    function placeLabel(k){ var nm=CITIES[k].name, st=TSTATE[k]||''; return (!st||st==='DC'||/,\s*\S+$/.test(nm))?nm:nm+', '+st; }
     function stOf(k){ var a=TSTATE[k]||''; return a.split('/').map(function(x){return TFULL[x]||x;}).join(' ')+' '+a.replace('/',' '); }
 
   var DISP={DC:'Washington DC'};
@@ -516,7 +517,7 @@
     var cards='', lists='';
     TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
       cards+='<button class="tcard'+(on?' on':'')+'" data-a="trail" data-t="'+tr.id+'" style="--tc:'+TRCOL[tr.id]+';--p:'+pc+'" aria-pressed="'+on+'"><span class="tic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+TRICON[tr.id]+'</svg></span><strong>'+tr.name+'</strong><span class="tcount">'+d+' of '+L.length+' stamped</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></button>';
-      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+CITIES[x.k].name+(TSTATE[x.k]?', '+TSTATE[x.k]:'')+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
+      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+placeLabel(x.k)+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
     return '<p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card

@@ -649,7 +649,7 @@ body.instop .hero::before{background:linear-gradient(180deg,rgba(6,14,24,.7),rgb
 #missions .towns .town:not(.soon) .lvl{display:none}
 #missions .towns .town:not(.soon) .go{position:absolute;top:8px;left:8px;z-index:1;margin:0;padding:3px 9px;border-radius:999px;background:rgba(8,14,20,.7);color:#fff;font-size:11px}
 #missions .towns li:has(.tstar) .go{margin-right:0}
-#missions .tstar{top:4px;right:4px;z-index:3;background:rgba(8,14,20,.55);color:#fff;border-radius:999px;min-width:40px;min-height:40px;font-size:1.25rem}
+#missions .tstar{top:2px;right:2px;z-index:3;background:rgba(8,14,20,.55);color:#fff;border-radius:999px;min-width:44px;min-height:44px;font-size:1.25rem}
 #missions .tstar.on{color:var(--bulb)}
 #missions .town.soon{min-height:0}
 /* trails as collection cards */
