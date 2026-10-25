@@ -40,7 +40,7 @@ WHAT YOU GET
 • Works offline once it has loaded, so a patchy signal will not stop you at the steps of the courthouse
 
 PRIVATE BY DESIGN
-No account. No ads. No tracking. No location access. Your stamps live on your phone. A save code lets you move them yourself.
+No account. No ads. No tracking. Location is optional and checked only on your phone. Your stamps live on your phone. A save code lets you move them yourself.
 
 MADE BY A MOM AND HER TEENAGE SON
 We wanted a reason to drag the family downtown. It worked.
@@ -85,7 +85,7 @@ Answer: **Yes, we collect data**, only through the optional report form.
 - Contact info > Email address: only if the player chooses to type one. Used for: App functionality (to reply). Linked to the user: yes (it is an email). Used for tracking: no.
 - User content > Customer support: the message typed in "Something wrong?" plus the screen name. Used for: App functionality. Linked to the user: no. Tracking: no.
 
-Nothing else is collected: no location, no identifiers, no usage data, no diagnostics, no purchases, no photos. The privacy page says the same. The app does not request any device permission.
+Nothing else is collected: no location, no identifiers, no usage data, no diagnostics, no purchases, no photos. The privacy page says the same. The only device permission is optional location (when in use), processed on the device for the verified-visit stamp and never transmitted, so it is not "collected".
 
 Tracking: **No.** App Tracking Transparency prompt: **not needed.**
 
@@ -102,7 +102,7 @@ If the report form ever goes away, change the first answer to "No data collected
 
 ## App Review notes (paste into "Notes")
 
-No account or login is needed. Everything works with no setup. The app is a history scavenger hunt: open a town from the Towns tab, tap a stop, then "I am here" to check in (there is no location check, by design, so reviewers can try it anywhere), answer the question, and stamp the stop. The "Try it from home" button on the first screen lets anyone explore without being at a landmark. The app uses no location, camera, microphone or notifications. The optional "Something wrong?" form sends a short text report to our own server.
+No account or login is needed. Everything works with no setup. The app is a history scavenger hunt: open a town from the Towns tab, tap a stop, then "I am here" to check in (the optional gold "Check my location" button needs GPS, but the normal check-in works anywhere, so reviewers can try it from home), answer the question, and stamp the stop. The "Try it from home" button on the first screen lets anyone explore without being at a landmark. The app uses location only if the user taps the optional verify button; it uses no camera, microphone or notifications. The optional "Something wrong?" form sends a short text report to our own server.
 
 ## Contact for App Review **[YOU]**
 

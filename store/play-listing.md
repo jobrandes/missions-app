@@ -20,7 +20,7 @@ Reuses the App Store text (`app-store-listing.md`). Items marked **[YOU]** need 
   - Other messages (the report text), purpose App functionality, not shared, not required.
 - Data shared with third parties: **No**.
 - Security: data in transit is encrypted (HTTPS). Users can ask for deletion by email (support page). 
-- No location, no device IDs, no ads, no analytics.
+- Location is optional, used on-device only and not collected or shared; no device IDs, no ads, no analytics.
 
 ## Content rating (IARC questionnaire)
 Answer honestly. Expect a low rating (for everyone or 10+). History text mentions battles and a massacre in a line or two. No gambling game (casinos appear only as landmarks), no user content, no purchases.

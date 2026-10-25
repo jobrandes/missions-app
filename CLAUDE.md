@@ -18,7 +18,7 @@ Built by Jo-Anne (builder, on-site verifier) and her 14-year-old son (tester and
 5. Go global months after the MVP (France, Mexico, Italy, etc.), so nothing may be tied to one town or an English idiom.
 
 ## Hard rules
-- No weapons or tactical guidance. No surveillance. No precise location data from kids. No GPS, accounts or uploads in the MVP.
+- No weapons or tactical guidance. No surveillance. No precise location data from kids. No accounts or uploads in the MVP. GPS is allowed ONLY as the optional, on-device 'verified visit' check (never sent anywhere, never required).
 - Caden does not manage payments or accounts, and does not publish personal info.
 - Jo-Anne verifies on site. Content is "written from sources, not yet checked on site" until she walks it.
 - Photos: real, freely licensed photos only (Wikimedia Commons, Library of Congress, public domain). Credit every photo in `CREDITS.md` and in the stop's `ph` block. If no free photo exists, show an honest "photo pending". **Do not go live with missing photos** (her requirement, Oct 19). Never email archives or ask permission-by-email.
@@ -116,3 +116,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Review follow-up (Oct 24, evening)
 - Full UI/UX review done on the live site (see repo history). Already fixed before: 44px state chips, lazy images, trail categories, Paris dead end hidden. Fixed now: 44px star buttons on town tiles, trail location labels (no more 'Portland, Maine, ME' or 'Washington DC, DC'), banner reworded to 'Written from sources, not walked yet'. The 'menu overlap' in the review was really the scrolling town rail with a fade, not a bug. Focus rings exist (`:focus-visible`). Still open: real-device test of progress backup in the native app, airplane-mode test, App Store native-value list, continue-first home screen idea.
+
+## GPS verified visits (Oct 24)
+- Audience is now anyone, not teen-only. Each stop has `"geo": [lat, lon, radius_m]` (211 of 212; Pikes Peak excluded). Validator checks it. Coordinates came from Wikipedia and Nominatim with outlier checks; a few were set by hand.
+- Find it screen has an optional gold 'Check my location' button (geoCheck in app.js: accuracy <=150 m and inside radius). Normal 'I am here' always works. Verified flags live in localStorage `stp-geo` (mirrored natively, not in the TN3 save code). Location is never sent anywhere. iOS NSLocationWhenInUseUsageDescription and Android location permissions added; privacy page and store docs updated.
