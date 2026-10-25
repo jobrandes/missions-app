@@ -796,3 +796,8 @@ body.ispass .menubtn{margin-top:0}
 :root[data-theme=dark] .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root[data-theme=dark] .geomsg.bad{color:#f2a0a0}
 .geomsg:empty{display:none}
 .nearbox:not(:empty){padding-top:56px}.nearcard.here{border-color:var(--gold,#b8860b)}
+
+.herebanner{position:fixed;left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));width:calc(100% - 32px);max-width:520px;background:var(--bg);color:var(--ink);border:2px solid #c9a227;border-radius:16px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.28);z-index:40}
+.herebanner p{margin:0 0 10px;font-size:16px}
+.herebanner .hbrow{display:flex;gap:8px}
+.herebanner .btn{min-height:44px;flex:1}

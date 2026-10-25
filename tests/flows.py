@@ -148,6 +148,12 @@ with sync_playwright() as p:
     gp.click('[data-a=neargo]'); gp.wait_for_timeout(400); need(gp.locator('.opt').count()==0,'opening a far stop stays on Find it')
     ctx.set_geolocation({'latitude':39.5287,'longitude':-119.8116,'accuracy':20}); gp.wait_for_timeout(2500)
     need(gp.locator('.opt').count()>0,'walking up to the stop you are looking at moves on by itself')
+    ctx,gp=live_ctx(39.5378,-119.7236); gp.wait_for_timeout(1500)
+    need(gp.locator('.herebanner').count()==1 and 'Sparks Marina' in gp.inner_text('.herebanner'),'standing at a stop pops up a proactive you-are-here banner')
+    gp.click('.herebanner [data-hb=go]'); gp.wait_for_timeout(500)
+    need(gp.locator('.herebanner').count()==0 and gp.locator('.opt').count()>0,'banner Open jumps straight to the question')
+    ctx,gp=live_ctx(39.5378,-119.7236); gp.wait_for_timeout(1500); gp.click('.herebanner [data-hb=no]'); gp.wait_for_timeout(300)
+    need(gp.locator('.herebanner').count()==0,'Not now dismisses the banner')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')

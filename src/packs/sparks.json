@@ -343,16 +343,16 @@
     }
    },
    "now": {
-    "yr": "2014",
+    "yr": "2012",
     "head": "Today",
-    "label": "Sparks Marina",
-    "line": "The Marina is now a lake of about 77 acres with beaches, a pier, and a loop trail. Photo taken in 2014.",
+    "label": "Sparks Marina at sunset",
+    "line": "The Marina is now a lake of about 77 acres with beaches, a pier, and a loop trail. Photo taken at sunset in 2012, with enhanced colors.",
     "ph": {
      "k": "sp_mr_now",
-     "by": "Jazfry",
-     "lic": "CC0",
-     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
-     "page": "https://commons.wikimedia.org/wiki/File:Sparks_Marina.jpg",
+     "by": "Janusz Sobolewski",
+     "lic": "CC BY 2.0",
+     "lu": "https://creativecommons.org/licenses/by/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Sunset_at_Sparks_Marina_(27411390814).jpg",
      "note": "resized"
     }
    },

@@ -629,5 +629,5 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | Victorian Square Then | File:Southern Pacific Railway No. 8 in Carson City, Nevada - February 1975.jpg | The Greater Southwestern Exploration Company | CC BY 2.0 | Same engine, shot in Carson City. Loose match, labeled as such. |
 | Victorian Square Now | File:Victorian Square, Sparks, Nevada (6402414793).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2011 |
 | Railroad Shops Now | File:Southern Pacific Railroad Yards, Nevada Historical Marker No. 189, Sparks, Nevada (6320844260).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2011 |
-| Sparks Marina Now | File:Sparks Marina.jpg | Jazfry | CC0 | Photo from 2014. Marina "Then" is a stand-in: the River Scene postcard, until a free Helms Pit photo is found. |
+| Sparks Marina Now | File:Sunset at Sparks Marina (27411390814).jpg | Janusz Sobolewski | CC BY 2.0 | Photo from 2012, colors enhanced by the photographer. Marina "Then" is a stand-in: the River Scene postcard, until a free Helms Pit photo is found. |
 | Truckee River Now | File:Tahoe-Pyramid Trail Between Sparks and Reno, Nevada (49910575383).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2020 |

@@ -193,6 +193,18 @@
     return '';
   }
   function nearPaint(){ var e=document.getElementById('nearBox'); if(e) e.innerHTML=nearHtml(); }
+  var hereSeen={};
+  function hereHide(){ var e=document.querySelector('.herebanner'); if(e&&e.parentNode) e.parentNode.removeChild(e); }
+  function hereShow(h){
+    var key=h.c+':'+h.i; if(hereSeen[key]) return; hereSeen[key]=1;
+    var c=CITIES[h.c], st=c.stops[h.i]; hereHide();
+    var e=document.createElement('div'); e.className='herebanner'; e.setAttribute('role','alert');
+    e.innerHTML='<p><strong>You are at '+st.name+'.</strong> '+(ALL[h.c].done[h.i]?'Tap to open it.':'Ready to stamp it?')+'</p><div class="hbrow"><button class="btn gold" type="button" data-hb="go">Open</button><button class="btn ghost" type="button" data-hb="no">Not now</button></div>';
+    e.addEventListener('click',function(ev){ var b=ev.target.closest('[data-hb]'); if(!b) return; hereHide();
+      if(b.getAttribute('data-hb')==='go'){ railRegion=null; if(h.c!==cityId||atHome) setCity(h.c); openStop(h.i,0); if(!ALL[h.c].done[h.i]){ cur.gv=true; setStep(1); } } });
+    document.body.appendChild(e);
+    try{ if(navigator.vibrate) navigator.vibrate(200); }catch(x){}
+  }
   function onFix(pos){
     var la=pos.coords.latitude, lo=pos.coords.longitude, acc=pos.coords.accuracy||0;
     geoPos={lat:la,lon:lo,acc:acc};
@@ -208,6 +220,7 @@
     var nx=hit||best, key=nx?nx.c+':'+nx.i+':'+(nx.inr?1:0)+':'+Math.round(nx.d/500):'';
     var pk=nearHit?nearHit.c+':'+nearHit.i+':'+(nearHit.inr?1:0)+':'+Math.round(nearHit.d/500):'';
     nearHit=nx; if(key!==pk) nearPaint();
+    if(hit&&!(cur&&!atHome&&cityId===hit.c&&cur.i===hit.i)) hereShow(hit);
     if(changed){ toast('Location confirmed. Visit verified.'); if(cur&&S.done[cur.i]) render(false); }
     // standing at the stop you are looking at: go straight to the question
     if(cur&&!atHome&&cur.step===0&&!cur.demo&&!S.done[cur.i]&&STOPS[cur.i]&&STOPS[cur.i].geo&&hit&&hit.c===cityId&&hit.i===cur.i&&!cur.gv){
