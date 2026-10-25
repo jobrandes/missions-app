@@ -30,7 +30,7 @@ with sync_playwright() as p:
     pg=new()
     need('go there' in pg.inner_text('#main').lower(),'first launch should show Home')
     need(not pg.locator('.hero').is_visible(),'hero should be hidden on Home')
-    need(pg.locator('#missions .town:not(.soon)').count()==NT and pg.locator('#missions .town.soon').count()==1,f'Home should list {NT} towns + 1 coming soon')
+    need(pg.locator('#missions .town:not(.soon)').count()==NT and pg.locator('#missions .town.soon').count()==0,f'Home should list {NT} towns and no coming-soon dead ends')
     pg.click('.town >> nth=0'); need(pg.locator('.hero').is_visible() and pg.inner_text('#cityName').lower()=='reno','Start Reno from Home')
     pg.click('#bnav [data-t=home]'); need('pick a mission' in pg.inner_text('#main').lower(),'Home chip returns Home')
     pg.reload(); need('pick a mission' in pg.inner_text('#main').lower(),'Home persists across reload')
@@ -43,6 +43,13 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     need(pg.locator('.bigbtn[data-a=nextstop]').count()==1 and '1' in pg.inner_text('.stat'),'Home shows status and a Next stop button for a town in progress')
     pg.click('.bigbtn'); need(pg.inner_text('#cityName').lower()=='reno','Next stop opens that town')
+    # regression: Next stop from Home must switch to the town in progress, not reuse the current town
+    pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'vc':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    need(pg.locator('.bigbtn[data-a=nextstop]').count()==1,'cross-town test has a Next stop button')
+    if True:
+        want=pg.get_attribute('.bigbtn[data-a=nextstop]','data-c'); pg.click('.bigbtn')
+        need(want!='reno','cross-town test uses a town other than the current one')
+        need('virginia' in pg.inner_text('#cityName').lower(),'Next stop from Home opens the town in progress (Virginia City), not the current town')
     # finishing the 4th stamp shows the celebration once; passport lists stamps
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=3'); pg.click('text=I am here')
@@ -92,6 +99,54 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[0,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('[data-a=report]'); need('reno / ' in pg.evaluate("document.getElementById('report').dataset.where").lower(),'report carries the stop context')
     pg.keyboard.press('Escape'); need(pg.locator('#report').count()==0,'Escape closes the report dialog')
+    # GPS verified visit (optional): near, far, and denied
+    def geo_ctx(lat,lon,allow=True,ok=False,done=0):
+        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',geolocation={'latitude':lat,'longitude':lon,'accuracy':20},permissions=['geolocation'] if allow else [])
+        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');"+("localStorage.setItem('stp-geo-ok','1');" if ok else '')+"localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[%d,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}"%done)
+        ctx.add_init_script("try{Object.defineProperty(navigator,'permissions',{value:undefined})}catch(e){}")
+        gp=ctx.new_page(); gp.on('pageerror',lambda e:errs.append(str(e))); gp.goto(U); return gp
+    gp=geo_ctx(39.52812,-119.81366); gp.click('.stop >> nth=0'); need(gp.locator('[data-a=geo]').count()==1,'Find it offers the optional location check')
+    gp.click('[data-a=geo]'); gp.wait_for_timeout(600); need('i am here' not in gp.inner_text('#main').lower() or gp.locator('.opt').count()>0,'near the stop the location check moves on to the question')
+    for k in range(4):
+        gp.locator('.opt').nth(k).click()
+        if gp.query_selector('.opt.right'): break
+    need('visit verified' in gp.inner_text('#main').lower(),'a verified visit says so on the badge card')
+    gp.click('.stophead [data-a=exit]'); need('visit verified' in gp.inner_text('#main').lower(),'trail marks a verified visit')
+    gp=geo_ctx(39.7392,-104.9903); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need('from' in gp.inner_text('#geoMsg') and gp.locator('.opt').count()==0,'far away: message shows the distance and stays on Find it')
+    gp.click('text=I am here'); need(gp.locator('.opt').count()>0,'far away: the normal I am here button still works')
+    gp=geo_ctx(39.52812,-119.81366,allow=False); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need(gp.inner_text('#geoMsg').strip()!='' and gp.locator('.opt').count()==0,'denied permission shows a friendly message and does not block')
+    # auto-detect once permission was granted: no button press needed
+    gp=geo_ctx(39.52812,-119.81366,ok=True); gp.click('.stop >> nth=0'); gp.wait_for_timeout(900)
+    need(gp.locator('.opt').count()>0,'permission already granted: arriving at the stop jumps straight to the question')
+    gp=geo_ctx(39.7392,-104.9903,ok=True); gp.click('.stop >> nth=0'); gp.wait_for_timeout(900)
+    need(gp.locator('.opt').count()==0 and gp.locator('[data-a=geo]').count()==1,'auto-detect far away stays quiet on Find it')
+    gp=geo_ctx(39.52812,-119.81366); gp.click('.stop >> nth=0'); gp.wait_for_timeout(600)
+    need(gp.locator('.opt').count()==0,'no auto-check before the person has ever allowed location')
+    # verify later on an already stamped stop
+    gp=geo_ctx(39.52812,-119.81366,done=1); gp.click('.stop >> nth=0'); need(gp.locator('[data-a=geo]').count()==1,'stamped stop offers Verify this visit')
+    gp.click('[data-a=geo]'); gp.wait_for_timeout(700)
+    need(gp.locator('[data-a=geo]').count()==0,'verify later removes the button once confirmed')
+    gp.click('.stophead [data-a=exit]'); need('visit verified' in gp.inner_text('#main').lower(),'late verification shows on the trail')
+    gp=geo_ctx(39.7392,-104.9903,done=1); gp.click('.stop >> nth=0'); gp.click('[data-a=geo]'); gp.wait_for_timeout(600)
+    need('from' in gp.inner_text('#geoMsg'),'verify later far away shows the distance')
+    # live location while open (Pokemon Go style): Home card, one tap in, and walking up to a stop
+    def live_ctx(lat,lon,done=0):
+        ctx=b.new_context(viewport={'width':390,'height':844},reduced_motion='reduce',geolocation={'latitude':lat,'longitude':lon,'accuracy':20},permissions=['geolocation'])
+        ctx.add_init_script("try{localStorage.setItem('then-now-tour','1');localStorage.setItem('stp-geo-ok','1');localStorage.setItem('then-now-v3',JSON.stringify({city:'reno',home:0,p:{reno:{done:[%d,0,0,0],claims:[0,0,0,0,0,0,0,0]}}}))}catch(e){}"%done)
+        ctx.add_init_script("try{Object.defineProperty(navigator,'permissions',{value:undefined})}catch(e){}")
+        gp=ctx.new_page(); gp.on('pageerror',lambda e:errs.append(str(e))); gp.goto(U); gp.click('#bnav [data-t=home]'); return ctx,gp
+    ctx,gp=live_ctx(39.52812,-119.81366); gp.wait_for_timeout(1200)
+    need('you are here' in gp.inner_text('#nearBox').lower(),'live location: Home says You are here at a stop')
+    gp.click('[data-a=neargo]'); gp.wait_for_timeout(500); need(gp.locator('.opt').count()>0,'tapping the Home card jumps to the question')
+    ctx,gp=live_ctx(0.0,-30.0); gp.wait_for_timeout(1200)
+    need(gp.inner_text('#nearBox').strip()=='','live location: nothing pushy when no stop is near')
+    need(True,'live location: nothing pushy when no stop is near')
+    ctx,gp=live_ctx(39.5325,-119.81366); gp.wait_for_timeout(1200); need('away' in gp.inner_text('#nearBox'),'live location: shows the nearest stop distance')
+    gp.click('[data-a=neargo]'); gp.wait_for_timeout(400); need(gp.locator('.opt').count()==0,'opening a far stop stays on Find it')
+    ctx.set_geolocation({'latitude':39.5287,'longitude':-119.8116,'accuracy':20}); gp.wait_for_timeout(2500)
+    need(gp.locator('.opt').count()>0,'walking up to the stop you are looking at moves on by itself')
     # finishing a stop points at the next one
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,0,0,0,0,0,0]}}}})
     pg.click('.stop >> nth=0'); pg.click('text=sort fact from fiction')

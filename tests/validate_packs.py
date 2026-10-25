@@ -27,6 +27,8 @@ for cid in order:
         need(len(st['claims'])==2,f'{w}: the XP model assumes 2 claims per stop')
         for c in st['claims']: need(c['a'] in (0,1,2) and c['t'] and c['why'],f'{w}: bad claim')
         need(len(st['story'])>=2,f'{w}: story too short')
+        g=st.get('geo')
+        if g is not None: need(isinstance(g,list) and len(g)==3 and -90<=g[0]<=90 and -180<=g[1]<=180 and 50<=g[2]<=1000,f'{w}: geo must be [lat, lon, radius_m 50..1000]')
         need(len(st['sources'])>=2 and all(s['u'].startswith('https://') for s in st['sources']),f'{w}: needs 2+ https sources')
         for era in ('then','now'):
             e=st[era]; need(e.get('yr') and e.get('label') and e.get('line'),f'{w}/{era}: missing text')

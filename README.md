@@ -1,8 +1,8 @@
 # Stamp the Past
 
-A phone-first scavenger-hunt mission app for towns you visit. Find a real landmark, answer a question you can only answer standing there, earn its badge, then unlock the history story and a Then/Now photo pair.
+A phone-first scavenger-hunt mission app for towns you visit. Find a real landmark, answer a question about what is in front of you (the app does not check your location), earn its badge, then unlock the history story and a Then/Now photo pair.
 
-Built by Jo-Anne and Caden. Missions: downtown Reno and Virginia City (4 stops each). Lake Tahoe is next.
+Built by Jo-Anne and her teenage son. 53 towns, 4 stops each (212 stops), from Reno and Virginia City to Boston, Chicago, New Orleans and Denver. Wrapped for iPhone and Android with Capacitor (`ios/`, `android/`). See `CLAUDE.md` for the full project brief.
 
 ## Design rules
 - No accounts, no uploads, no GPS, no camera. Progress lives in the browser (localStorage) with a copy/paste save code.

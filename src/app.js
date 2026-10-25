@@ -79,6 +79,8 @@
   var CITIES = DATA.packs;
   var RANKS=RENO_RANKS;
   var KEY='then-now-reno-v1', KEY2='then-now-v2', KEY3='then-now-v3';
+  /* shown on the share card; swap for the real domain or App Store link once it exists */
+  var SHARE_URL='stamp-the-past.netlify.app';
   var railRegion=null, ORDER=DATA.order, SOON=DATA.soon||[], atHome=true, onPass=false;
   function blank(){ return {done:[0,0,0,0],claims:[0,0,0,0,0,0,0,0]}; }
   var ALL={}; ORDER.forEach(function(k){ ALL[k]=blank(); });
@@ -137,6 +139,82 @@
   function allDone(){ return sum(S.done)===4; }
 
   var stampFx=false;
+  function geoGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-geo')||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
+  function geoVerified(k,i){ var st=CITIES[k]&&CITIES[k].stops[i]; return !!(st&&geoGet()[k+':'+st.id]); }
+  function distM(a,b,c,d){ var R=6371000,p=Math.PI/180,x=Math.sin((c-a)*p/2),y=Math.sin((d-b)*p/2),h=x*x+Math.cos(a*p)*Math.cos(c*p)*y*y; return 2*R*Math.asin(Math.sqrt(h)); }
+  function nice(m){ return m<1000?'about '+(Math.max(10,Math.round(m/10)*10))+' m ('+Math.round(m*3.281/10)*10+' ft)':'about '+(m/1000).toFixed(1)+' km ('+(m/1609.34).toFixed(1)+' mi)'; }
+  function geoMsg(t,bad){ var e=document.getElementById('geoMsg'); if(e){ e.textContent=t; e.className='geomsg'+(bad?' bad':''); } }
+  var geoDenied=false;
+  function geoGranted(){ try{ return localStorage.getItem('stp-geo-ok')==='1'; }catch(e){ return false; } }
+  try{ if(navigator.permissions&&navigator.permissions.query){ navigator.permissions.query({name:'geolocation'}).then(function(r){
+    function sync(){ geoDenied=(r.state==='denied'); if(r.state==='granted'){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} } }
+    sync(); r.onchange=sync; }).catch(function(){}); } }catch(e){}
+  function geoSave(){ var gg=geoGet(); gg[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} }
+  // quiet=true: automatic check, says nothing unless you are in range
+  function geoCheck(quiet){
+    var st=STOPS[cur.i]; if(!st||!st.geo||cur.demo) return;
+    var late=!!S.done[cur.i]; if(late&&geoVerified(cityId,cur.i)) return;
+    var at=cur.i, ct=cityId;
+    if(!navigator.geolocation){ if(!quiet) geoMsg('This device cannot share its location. You can continue without the gold stamp.',true); return; }
+    if(!quiet) geoMsg('Checking your location. Stays on this phone.',false);
+    navigator.geolocation.getCurrentPosition(function(pos){
+      if(!cur||cur.i!==at||cityId!==ct) return;
+      try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){}
+      geoStartWatch();
+      var acc=pos.coords.accuracy||0, d=distM(pos.coords.latitude,pos.coords.longitude,st.geo[0],st.geo[1]);
+      if(acc>150){ if(!quiet) geoMsg('The location signal is too weak here (off by about '+Math.round(acc)+' m). Try again outside, or continue without the gold stamp.',true); return; }
+      if(d<=st.geo[2]){
+        if(late){ geoSave(); toast('Location confirmed. Visit verified.'); render(false); }
+        else if(cur.step===0){ cur.gv=true; toast('You are here. This visit will be verified.'); setStep(1); }
+      } else if(!quiet) geoMsg('You look '+nice(d)+' from '+st.name+'. Walk closer and try again'+(late?'.':', or continue without the gold stamp.'),true);
+    },function(err){
+      if(err&&err.code===1) geoDenied=true;
+      if(!quiet) geoMsg(err&&err.code===1?'Location is off for this app, which is fine. You can continue without the gold stamp.':'Could not get your location. Try again, or continue without the gold stamp.',true);
+    },{enableHighAccuracy:true,timeout:15000,maximumAge:30000});
+  }
+  function lateVerify(st,d){
+    if(!(d&&st.geo&&!cur.demo)||geoVerified(cityId,cur.i)||geoDenied) return '';
+    return '<section class="card"><p class="mono">Verified visit</p><p>Standing at '+st.name+' now? Add the gold stamp.</p><button class="btn gold" data-a="geo">Verify this visit</button><p class="hint">Optional. Checked on this phone only, never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p></section>';
+  }
+  // Live location while the app is open (never in the background, never sent anywhere)
+  var geoPos=null, geoWatchId=null, nearHit=null;
+  function liveOn(){ try{ return localStorage.getItem('stp-geo-live')!=='0'; }catch(e){ return true; } }
+  function geoMark(c,i){ var st=CITIES[c]&&CITIES[c].stops[i]; if(!st) return; var gg=geoGet(); gg[c+':'+st.id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} }
+  function geoStopWatch(){ if(geoWatchId!==null){ try{ navigator.geolocation.clearWatch(geoWatchId); }catch(e){} geoWatchId=null; } }
+  function geoStartWatch(){
+    if(geoWatchId!==null||!navigator.geolocation||!geoGranted()||geoDenied||!liveOn()||document.hidden) return;
+    try{ geoWatchId=navigator.geolocation.watchPosition(onFix,function(e){ if(e&&e.code===1){ geoDenied=true; geoStopWatch(); nearHit=null; nearPaint(); } },{enableHighAccuracy:true,maximumAge:10000,timeout:30000}); }catch(e){}
+  }
+  function nearHtml(){
+    var n=nearHit; if(!n||atHome===false) return '';
+    var c=CITIES[n.c], st=c.stops[n.i];
+    if(n.inr) return '<section class="card nearcard here"><p class="mono">You are here</p><p><strong>'+st.name+'</strong>, '+c.name+'. Start the hunt for the gold stamp.</p><button class="btn gold" data-a="neargo" data-c="'+n.c+'" data-i="'+n.i+'">Start this stop</button></section>';
+    if(n.d<=30000) return '<section class="card nearcard"><p class="mono">Near you</p><p><strong>'+st.name+'</strong>, '+c.name+', is '+nice(n.d)+' away.</p><button class="btn ghost" data-a="neargo" data-c="'+n.c+'" data-i="'+n.i+'" data-far="1">Open this stop</button></section>';
+    return '';
+  }
+  function nearPaint(){ var e=document.getElementById('nearBox'); if(e) e.innerHTML=nearHtml(); }
+  function onFix(pos){
+    var la=pos.coords.latitude, lo=pos.coords.longitude, acc=pos.coords.accuracy||0;
+    geoPos={lat:la,lon:lo,acc:acc};
+    var best=null, hit=null, changed=false;
+    ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){
+      if(!st.geo) return; var d=distM(la,lo,st.geo[0],st.geo[1]); var inr=acc<=150&&d<=st.geo[2];
+      var done=ALL[k].done[i];
+      if(inr&&done&&!geoVerified(k,i)){ geoMark(k,i); changed=true; }
+      if(done) return;
+      if(inr){ if(!hit||d<hit.d) hit={c:k,i:i,d:d,inr:true}; }
+      else if(!best||d<best.d) best={c:k,i:i,d:d,inr:false};
+    }); });
+    var nx=hit||best, key=nx?nx.c+':'+nx.i+':'+(nx.inr?1:0)+':'+Math.round(nx.d/500):'';
+    var pk=nearHit?nearHit.c+':'+nearHit.i+':'+(nearHit.inr?1:0)+':'+Math.round(nearHit.d/500):'';
+    nearHit=nx; if(key!==pk) nearPaint();
+    if(changed){ toast('Location confirmed. Visit verified.'); if(cur&&S.done[cur.i]) render(false); }
+    // standing at the stop you are looking at: go straight to the question
+    if(cur&&!atHome&&cur.step===0&&!cur.demo&&!S.done[cur.i]&&STOPS[cur.i]&&STOPS[cur.i].geo&&hit&&hit.c===cityId&&hit.i===cur.i&&!cur.gv){
+      cur.gv=true; toast('You are here. This visit will be verified.'); setStep(1);
+    }
+  }
+  document.addEventListener('visibilitychange',function(){ if(document.hidden) geoStopWatch(); else geoStartWatch(); });
   function toast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg; t.classList.add('show');
@@ -257,7 +335,7 @@
     list=list.slice(0,10);
     if(!list.length) return '';
     return '<section class="rings" aria-label="Towns to continue"><p class="mono">'+(started?'Jump back in':'Try one of these')+'</p><div class="rrow">'+list.map(function(k){
-      var c=CITIES[k], n=sum(ALL[k].done), pc=Math.round(n/c.stops.length*100), key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var c=CITIES[k], n=sum(ALL[k].done), pc=Math.round(n/c.stops.length*100), key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img loading="lazy" decoding="async" src="'+PHOTOS[key]+'" alt="">':'';
       return '<button class="rbtn" data-a="city" data-c="'+k+'" aria-label="'+c.name+', '+n+' of '+c.stops.length+' stamps"><span class="rg" style="--p:'+pc+'"><span class="rph">'+img+'</span></span><span class="rn">'+c.name+'</span></button>';
     }).join('')+'</div></section>';
   }
@@ -268,6 +346,7 @@
     var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
     var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     h=(got>0?statusHtml(got,total,res0,hk)+ringsHtml()+h:h+ringsHtml());
+    h='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>'+h;
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
@@ -275,7 +354,7 @@
     function townLi(k){
       var c=CITIES[k], st=ALL[k], n=sum(st.done), x=sum(st.done)*100+sum(st.claims)*25, rk=c.ranks[0][1];
       c.ranks.forEach(function(r){ if(x>=r[0]) rk=r[1]; });
-      var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img src="'+PHOTOS[key]+'" alt="">':'';
+      var key=c.heroKey||((BMAPS[k]||{})[c.stops[0].id]||[])[0], img=(key&&PHOTOS[key])?'<img loading="lazy" decoding="async" src="'+PHOTOS[key]+'" alt="">':'';
       var label=n===c.stops.length?'Complete':(n>0?'Continue':'Start');
       return '<li data-q="'+stOf(k).toLowerCase()+'"><button class="town" data-a="city" data-c="'+k+'"><span class="tph">'+img+'</span><span class="tin"><h3>'+c.name+'</h3>'+(c.level?'<span class="lvl '+(c.level==='Classics'?'ic':'dc')+'">'+(c.level==='Classics'?'Classics · easy':'Hidden Gems · harder')+'</span>':'')+'<span class="sub">'+(TSTATE[k]?TSTATE[k]+' · ':'')+n+' of '+c.stops.length+' stamps · '+rk+'</span></span><span class="go">'+label+' ›</span></button><button class="tstar'+(tripGet().indexOf(k)>-1?' on':'')+'" data-a="trip" data-c="'+k+'" aria-pressed="'+(tripGet().indexOf(k)>-1?'true':'false')+'" aria-label="'+(tripGet().indexOf(k)>-1?'Remove '+c.name+' from my trip':'Add '+c.name+' to my trip')+'">'+(tripGet().indexOf(k)>-1?'★':'☆')+'</button></li>';
     }
@@ -294,7 +373,7 @@
     h+='<section class="navy"><p class="mono">How it works</p><h2>Four steps. One stamp.</h2><p class="why" style="color:inherit;opacity:.85">Pictured: your current mission, '+CITIES[hk].name+'.</p><div class="hsteps">'+HT.map(function(t,i){ var st=hs[i]; return '<div class="hstep"><span class="bbox sm" aria-hidden="true">'+badge(st.id,true,hk)+'</span><b>'+(i+1)+'</b><h3>'+t[0]+'</h3><p>'+t[1]+'</p><p class="mono" style="opacity:.8">e.g. '+st.name+'</p></div>'; }).join('')+'</div></section>';
     if(PHOTOS.arch_now&&PHOTOS.sign1973) h+='<section class="hsec"><p class="mono">Then and now</p><h2 class="hh2">Swipe back through time.</h2><p>Swipe the photo or drag the slider. Every stop unlocks a real old photo next to a current one. This one is the Reno Arch, 1973 to 2021.</p><div class="cmp" style="margin-top:12px"><div class="box"><img src="'+PHOTOS.arch_now+'" alt="The Reno Arch in 2021"><img class="top" src="'+PHOTOS.sign1973+'" alt="The Reno sign in 1973"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973" data-cmp="1"><span>1973</span></div></div></section>';
     h+='<section class="hsec"><p class="mono">The part nobody else does</p><h2 class="hh2">Is that actually true?</h2><p>Every story comes with claims to sort: well documented, disputed, or not true. Every answer shows its sources, so the game rewards checking, not guessing.</p><div id="homefof" style="margin-top:12px">'+homeFof()+'</div></section>';
-    h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>No location tracking</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
+    h+='<section class="grown"><p class="mono">For parents (the grown-up section)</p><h2 class="hh2">A game that makes your teen read a plaque. Voluntarily.</h2><ul><li>No accounts and no sign-up</li><li>Location is optional, used only on the phone and never sent anywhere</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li>'+(vcount?'<li>'+vcount+' of '+total+' stops verified on site by the makers</li>':'')+'</ul></section>';
     if(got>0) h+='</details>';
     h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="menu">Menu: backup, help, settings</button></p>';
     return h;
@@ -332,9 +411,9 @@
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
-    h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads, camera use, or location tracking. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
+    h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads or camera use. Location is optional and only checked on your phone, never sent anywhere. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
   }
 
@@ -360,6 +439,7 @@
      +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
      +'<p class="mgroup">Settings</p>'
      +'<div class="mrow"><span id="thl">Appearance</span><div class="segs" role="group" aria-labelledby="thl">'+seg+'</div></div>'
+     +(geoGranted()?'<div class="mrow"><span id="lvl">Live location while the app is open</span><div class="segs"><button class="seg on" data-a="livetoggle" aria-labelledby="lvl" aria-pressed="'+liveOn()+'">'+(liveOn()?'On':'Off')+'</button></div></div>':'')
      +'<p class="mgroup">Account</p>'
      +'<div class="macct"><strong>No account needed.</strong><span class="msub">Your stamps live on this phone. Use a backup code to move them to a new one. Optional sign-in may come later, so your stamps can follow you between devices.</span></div>'
      +'<p class="mfoot">Made by a mom and her teenage son.</p></div>';
@@ -395,7 +475,7 @@
   function vnote(st){
     var v=st.verified;
     if(v&&v.on) return '<div class="vbadge ok"><b>Verified on site</b><span>by '+v.by+(vdate(v.on)?' · '+vdate(v.on):'')+'</span>'+(v.note?'<em>'+v.note+'</em>':'')+'</div>';
-    var fn=st.field.replace(/^Field notes pending:\s*/i,''); return '<div class="vbadge"><b>Not verified on site yet</b>'+(/nobody has walked/i.test(fn)?'':'<span>'+fn+'</span>')+'</div>';
+    var fn=st.field.replace(/^Field notes pending:\s*/i,''); return '<div class="vbadge"><b>Written from sources, not walked yet</b>'+(/nobody has walked/i.test(fn)?'':'<span>'+fn+'</span>')+'</div>';
   }
   /* ---------- report a problem ---------- */
   function whereAmI(){
@@ -460,6 +540,7 @@
   function sealTier(n){ return n>=4?'gold':(n===3?'silver':(n===2?'bronze':null)); }
   function ptsOf(n){ return n===undefined||n===null?0:50*n+(n>=4?100:0); }
     var TSTATE={"reno":"NV","vc":"NV","tahoeicons":"CA/NV","tahoe":"CA/NV","boston":"MA","dc":"DC","ny":"NY","chicago":"IL","sf":"CA","philly":"PA","la":"CA","seattle":"WA","nola":"LA","detroit":"MI","minneapolis":"MN","atlanta":"GA","memphis":"TN","savannah":"GA","denver":"CO","santafe":"NM","phoenix":"AZ","albuquerque":"NM","tucson":"AZ","pittsburgh":"PA","baltimore":"MD","cleveland":"OH","stlouis":"MO","cincinnati":"OH","indianapolis":"IN","buffalo":"NY","richmond":"VA","charleston":"SC","houston":"TX","nashville":"TN","providence":"RI","saltlake":"UT","sandiego":"CA","portland":"OR","milwaukee":"WI","columbus":"OH","gettysburg":"PA","louisville":"KY","newport":"RI","knoxville":"TN","portlandme":"ME","newhaven":"CT","burlington":"VT","coloradosprings":"CO","lasvegas":"NV","flagstaff":"AZ","elpaso":"TX","sanantonio":"TX","dayton":"OH"}, TFULL={"NV":"Nevada","CA":"California","MA":"Massachusetts","DC":"District of Columbia Washington","NY":"New York","IL":"Illinois","PA":"Pennsylvania","WA":"Washington","LA":"Louisiana","MI":"Michigan","MN":"Minnesota","GA":"Georgia","TN":"Tennessee","CO":"Colorado","NM":"New Mexico","AZ":"Arizona","MD":"Maryland","OH":"Ohio","MO":"Missouri","IN":"Indiana","VA":"Virginia","SC":"South Carolina","TX":"Texas","RI":"Rhode Island","UT":"Utah","OR":"Oregon","WI":"Wisconsin","KY":"Kentucky","ME":"Maine","CT":"Connecticut","VT":"Vermont"};
+    function placeLabel(k){ var nm=CITIES[k].name, st=TSTATE[k]||''; return (!st||st==='DC'||/,\s*\S+$/.test(nm))?nm:nm+', '+st; }
     function stOf(k){ var a=TSTATE[k]||''; return a.split('/').map(function(x){return TFULL[x]||x;}).join(' ')+' '+a.replace('/',' '); }
 
   var DISP={DC:'Washington DC'};
@@ -499,8 +580,8 @@
   var TRAILS=[
     {id:'stations',name:'Train stations',note:'Depots and terminals where the country arrived.',re:/station|depot|terminal/i},
     {id:'capitols',name:'Capitols and courthouses',note:'Where laws were made and arguments settled.',re:/capitol|statehouse|state house|courthouse|city hall/i},
-    {id:'faith',name:'Churches and missions',note:'Cathedrals, missions and meeting houses.',re:/church|cathedral|temple|mission|basilica|meeting ?house/i},
-    {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|tower|monument|needle|gate\b/i}
+    {id:'faith',name:'Churches and missions',note:'Cathedrals, missions and meeting houses.',re:/church(?!ill| street)|cathedral|temple|mission|basilica|meeting ?house/i},
+    {id:'bridges',name:'Bridges and towers',note:'Big things people built to reach farther.',re:/bridge|\b(?!terminal\b)\w+ tower|monument|needle|gate\b/i}
   ];
   function trailStops(re){ var out=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(re.test(st.name)) out.push({k:k,st:st,done:!!ALL[k].done[i]}); }); }); return out; }
   var TRICON={"stations": "<path d=\"M6 5h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm0 4h12M8 20l1.5-3m6.5 3-1.5-3M9 13h.01M15 13h.01\"/>", "capitols": "<path d=\"M4 20h16M6 20v-7m4 7v-7m4 7v-7m4 7v-7M3 13h18M5 13a7 7 0 0 1 14 0M12 3v3\"/>", "faith": "<path d=\"M12 2v5m-2-3h4M7 21V12l5-5 5 5v9M10 21v-4h4v4M4 21h16\"/>", "bridges": "<path d=\"M2 18h20M4 18v-5m16 5v-5M4 13c3-6 13-6 16 0M8 14v4m4-5v5m4-4v4\"/>"};
@@ -514,7 +595,7 @@
     var cards='', lists='';
     TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
       cards+='<button class="tcard'+(on?' on':'')+'" data-a="trail" data-t="'+tr.id+'" style="--tc:'+TRCOL[tr.id]+';--p:'+pc+'" aria-pressed="'+on+'"><span class="tic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+TRICON[tr.id]+'</svg></span><strong>'+tr.name+'</strong><span class="tcount">'+d+' of '+L.length+' stamped</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></button>';
-      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+CITIES[x.k].name+(TSTATE[x.k]?', '+TSTATE[x.k]:'')+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
+      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+placeLabel(x.k)+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
     return '<p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card
@@ -530,7 +611,7 @@
     var n=keys.length, loaded=0, imgs=[], cell=380, gap=36, startX=(W-(2*cell+gap))/2, startY=430;
     function finish(){
       imgs.forEach(function(im,i){ if(!im) return; var x=startX+(i%2)*(cell+gap), y=startY+Math.floor(i/2)*(cell+gap); if(i===imgs.length-1&&i%2===0) x=(W-cell)/2; g.save(); g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.clip(); var r=Math.max(cell/im.width,cell/im.height), w=im.width*r, h=im.height*r; g.drawImage(im,x+(cell-w)/2,y+(cell-h)/2,w,h); g.restore(); g.lineWidth=10; g.strokeStyle='#F2B01E'; g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.stroke(); });
-      g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText('stamp-the-past.netlify.app',W/2,1318);
+      g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText(SHARE_URL,W/2,1318);
       try{ c.toBlob(function(b){ cb(b); },'image/png'); }catch(e){ if(!noimg) shareDraw(kind,k,cb,true); else cb(null); }
     }
     if(!n||noimg){ finish(); return; }
@@ -653,9 +734,9 @@
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
-      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p><div class="safety"><span class="mono">Safety</span><span>'+st.safety+'</span></div>'+vnote(st)
+      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
         +'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'
-        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
+        +(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn gold" data-a="geo">'+(geoGranted()?'Check my location again':'Check my location for a verified visit')+'</button><p class="hint">Optional. Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';
@@ -666,13 +747,14 @@
         return '<button type="button" class="'+cls+'" data-a="pick" data-k="'+k+'"'+(d?' disabled':'')+'><span>'+o+'</span>'+mark+'</button>';
       }).join('')+'</fieldset>';
       if(d){
-        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':'Badge earned')+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
+        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
       } else {
         h+='<p class="feedback'+(cur.wrong.length?' bad':'')+'" aria-live="polite">'+(cur.wrong.length?'Not yet. '+st.q.hint:'Get it right to earn the '+st.badge+' badge and 100 XP.')+'</p>';
       }
       h+='</section>';
     }
     if(cur.step===2 && d){
+      h+=lateVerify(st,d);
       h+='<div class="stopcols"><div class="sc-l">';
       h+=compare(st);
       if(hasPh(st,'then')&&hasPh(st,'now')){
@@ -779,8 +861,9 @@
     var entry=(step!==undefined?step:(S.done[i]?2:0));
     cur={i:i,step:entry,entry:entry,wrong:[],picks:[],checked:false};
     if(!pushed){ try{ history.pushState({stop:1},'','#stop'); pushed=true; }catch(e){} }
-    render(true); window.scrollTo(0,0);
+    render(true); window.scrollTo(0,0); autoGeo();
   }
+  function autoGeo(){ if(cur&&cur.step===0&&!cur.autoTried&&!cur.demo&&!S.done[cur.i]&&STOPS[cur.i]&&STOPS[cur.i].geo&&geoGranted()&&!geoDenied){ cur.autoTried=true; geoCheck(true); } }
   function setStep(n){
     if(n>=2 && !S.done[cur.i]) return;
     cur.step=n; cur.checked=false; render(true); window.scrollTo(0,0);
@@ -802,7 +885,7 @@
     if(a==='theme'){ var tv=b.getAttribute('data-t'); try{ if(tv==='system') localStorage.removeItem('stp-theme'); else localStorage.setItem('stp-theme',tv); }catch(x){} themeApply(tv); b.parentNode.querySelectorAll('.seg').forEach(function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
     if(document.getElementById('menu')&&['backup','share','replaytour','report'].indexOf(a)>-1) closeMenu();
     if(a==='home'){ goHome(); return; }
-    if(a==='nextstop'){ openStop(+b.getAttribute('data-i'),0); return; }
+    if(a==='nextstop'){ var nc=b.getAttribute('data-c'); if(nc&&CITIES[nc]&&nc!==cityId){ railRegion=null; setCity(nc); } openStop(+b.getAttribute('data-i'),0); return; }
     if(a==='bossgo'){ leave(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='boss'||a==='bossagain'){ boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='bossexit'){ boss=null; render(); window.scrollTo(0,0); return; }
@@ -831,19 +914,21 @@
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
-    if(a==='nextstop'){ railRegion=null; setCity(b.getAttribute('data-c')); openStop(+b.getAttribute('data-i')); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
     if(a==='exit'){ exitStop(); return; }
     if(a==='goback'){ goBack(); return; }
     if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
+    if(a==='geo'){ geoCheck(false); return; }
+    if(a==='neargo'){ var nc2=b.getAttribute('data-c'), ni=+b.getAttribute('data-i'); var inr=!b.getAttribute('data-far'); if(nc2&&CITIES[nc2]){ railRegion=null; if(nc2!==cityId||atHome) setCity(nc2); openStop(ni,0); if(inr&&!S.done[ni]){ cur.gv=true; setStep(1); } } return; }
+    if(a==='livetoggle'){ try{ localStorage.setItem('stp-geo-live',liveOn()?'0':'1'); }catch(x){} if(liveOn()) geoStartWatch(); else { geoStopWatch(); nearHit=null; } b.setAttribute('aria-pressed',liveOn()); b.textContent=liveOn()?'On':'Off'; return; }
     if(a==='step'){ setStep(+b.getAttribute('data-n')); return; }
     if(a==='pick'){
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
@@ -895,5 +980,5 @@
     if(a==='resetyes'){ ALL[cityId]=blank(); S=ALL[cityId]; save(); confirmReset=false; render(); toast('Progress erased'); return; }
   });
 
-  load(); applyCity(); render(); maybeTour();
+  load(); applyCity(); render(); maybeTour(); geoStartWatch();
 })();

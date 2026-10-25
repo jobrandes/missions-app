@@ -214,7 +214,7 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | mn_bs_now | File:Front Entrance to the Basilica of Saint Mary.jpg | Switchroyale | CC BY-SA 4.0 | 2018 |
 | mn_bs_then | File:St. Mary's groundbreaking.jpg | Unknown | Public domain | 1907 |
 | at_cp_now | File:Georgia State Capitol, Atlanta, Georgia.jpg | Ken Lund | CC BY-SA 2.0 | 2011 |
-| at_cp_then | File:Capitol of Georgia in Atlanta, from the General Government and State Capitol Buildings series (N14) for Allen & Ginter Cigarettes Brands MET DP834734.jpg | Allen & Ginter / August Gast | CC0 | 1889 |
+| at_cp_then | File:Georgia - Atlanta - NARA - 23936979 (cropped).jpg | U.S. National Archives and Records Administration | Public domain | 1930 |
 | at_fl_now | File:Flatiron Building Atlanta.jpg | dbking | CC BY 2.0 | 2006 |
 | at_fl_then | File:Collier's 1921 Georgia - Atlanta (Flatiron Building).jpg | Ewing Galloway | Public domain | 1921 |
 | at_pk_now | File:View of Lake Clara Meer from bridge.jpg | Gatorfan252525 | CC BY-SA 4.0 | 2021 |
@@ -271,7 +271,7 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sa_lf_now | https://commons.wikimedia.org/wiki/File:La_fonda_sw_view.jpg | Atakra | CC0 | 2013 |
 | sa_sm_then | https://commons.wikimedia.org/wiki/File:The_Church_of_San_Miguel,_the_oldest_church_in_Santa_Fe,_N.M._-_T._H._O'Sullivan,_phot._LCCN2007684822.jpg | Timothy H. O'Sullivan | Public domain | 1873 |
 | sa_sm_now | https://commons.wikimedia.org/wiki/File:San_Miguel_Mission_Church.jpg | Dorothy Harris | CC BY 2.0 | 2012 |
-| sa_pg_then | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors,_erected_1605_A.D.,_Santa_Fe,_New_Mexico.jpg | Boston Public Library (linen postcard) | Public domain | mid-1900s |
+| sa_pg_then | https://commons.wikimedia.org/?curid=34265402 | M. James Slack, Historic American Buildings Survey | Public domain | 1934 |
 | sa_pg_now | https://commons.wikimedia.org/wiki/File:Palace_of_the_Governors_pano.jpg | Dicklyon | CC BY-SA 4.0 | 2021 |
 | px_cap_then | https://commons.wikimedia.org/wiki/File:CapitolBuilding.PhoenixAZ.1908.jpg | Haines Photo Co. | Public domain | 1908 |
 | px_cap_now | https://commons.wikimedia.org/wiki/File:Arizona_State_Capitol_Daytime_December_2021.jpg | David Jiang | CC BY-SA 4.0 | 2021 |
@@ -455,10 +455,10 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | mk_ch_now | https://commons.wikimedia.org/wiki/File:Milwaukee_June_2022_19_(Milwaukee_City_Hall).jpg | Michael Barera | CC BY-SA 4.0 | 2022 |
 | mk_mb_then | https://commons.wikimedia.org/wiki/File:Milwaukee_Mitchell_Building.jpg | W. H. Sherman (file by James Steakley) | Public domain | undated |
 | mk_mb_now | https://commons.wikimedia.org/wiki/File:Mitchell_Building_Milwaukee.jpg | James Steakley | CC BY-SA 3.0 | 2009 |
-| mk_sh_then | https://commons.wikimedia.org/wiki/File:Milwaukee_Soldiers_Home.jpeg | James E. Heg (1885 Wisconsin Blue Book) | Public domain | 1885 |
+| mk_sh_then | https://commons.wikimedia.org/wiki/File:Soldiers_Home_Mix.jpg | Sherman (file by James Steakley) | Public domain | undated |
 | mk_sh_now | https://commons.wikimedia.org/wiki/File:Soldiers_Home_Milwaukee.jpg | James Steakley | CC BY-SA 3.0 | 2009 |
-| mk_au_then | https://commons.wikimedia.org/wiki/File:The_new_auditorium,_Milwaukee_LCCN2013646928.jpg | Library of Congress (Miscellaneous Items in High Demand) | Public domain | 1908 |
-| mk_au_now | https://commons.wikimedia.org/wiki/File:Milwaukee_Theatre_September_2012.jpg | Royalbroil | CC BY-SA 3.0 | 2012 |
+| mk_pt_then | https://commons.wikimedia.org/wiki/File:Pabst_Theater_(vintage).jpg | Douglas Green | Public domain | 1970 |
+| mk_pt_now | https://commons.wikimedia.org/wiki/File:Pabst_Theater_and_Milwaukee_City_Hall_in_Milwaukee_photographed_in_June_2024_—2396.jpg | SecretName101 | CC BY 4.0 | 2024 |
 
 ### Columbus and Gettysburg (Oct 20)
 | Key | Source page | Author | License | Year |

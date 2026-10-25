@@ -1,0 +1,148 @@
+<title>Launch Checklist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@600;700&family=IBM+Plex+Mono:wght@600&display=swap">
+<style>
+:root{--bg:#F3F0E8;--surface:#FFFFFF;--surface2:#ECE7DA;--ink:#14202E;--muted:#5C6773;--line:#D9D2C0;--accent:#B97A00;--accent-bg:#FBEFCF;--navy:#0F1F33;--good:#1F7A4D;--req:#B3361F;--font-d:"Oswald","Arial Narrow",Impact,sans-serif;--font-b:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--font-m:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C141E;--surface:#142131;--surface2:#1B2B3F;--ink:#EEF1F4;--muted:#9AAAB8;--line:#2A3B50;--accent:#E9A91A;--accent-bg:#3A2E10;--good:#4CC38A;--req:#FF8A73;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C141E;--surface:#142131;--surface2:#1B2B3F;--ink:#EEF1F4;--muted:#9AAAB8;--line:#2A3B50;--accent:#E9A91A;--accent-bg:#3A2E10;--good:#4CC38A;--req:#FF8A73;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.45 var(--font-b);padding-block:20px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:760px;margin:0 auto;display:grid;gap:18px}
+.mono{font:600 12px var(--font-m);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font:700 clamp(30px,8vw,44px)/1.05 var(--font-d);text-transform:uppercase;margin:4px 0 6px;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:60ch}
+.prog{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;display:grid;gap:10px}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;align-items:center;font-size:14px}
+.bar b{font:600 13px var(--font-m);color:var(--muted)}
+.track{grid-column:1/-1;height:10px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.fill{height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+.fill.req{background:var(--req)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:40px;padding:0 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:600 13px var(--font-b);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:var(--accent);color:#14202E;border-color:var(--accent)}}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--accent);color:#14202E;border-color:var(--accent)}
+section.grp{display:grid;gap:8px}
+section.grp h2{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font:700 20px var(--font-d);text-transform:uppercase;letter-spacing:.02em;margin:10px 0 0;padding-bottom:6px;border-bottom:2px solid var(--line)}
+section.grp h2 span{font:600 12px var(--font-m);color:var(--muted);letter-spacing:.08em}
+.item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 4px;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:4px 12px 4px 4px}
+.item.done{opacity:.62}
+.item.done .t{text-decoration:line-through}
+.cb{grid-row:1/3;width:44px;height:44px;display:grid;place-items:center;background:none;border:0;cursor:pointer;padding:0}
+.cb i{width:26px;height:26px;border-radius:8px;border:2px solid var(--muted);display:grid;place-items:center;color:transparent;font:700 17px/1 var(--font-b);font-style:normal}
+.done .cb i{background:var(--good);border-color:var(--good);color:#fff}
+.cb:focus-visible{outline:3px solid var(--accent);outline-offset:-4px;border-radius:10px}
+.t{font-weight:600;padding-top:9px;overflow-wrap:anywhere}
+.n{color:var(--muted);font-size:14px;padding-bottom:8px;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font:600 11px var(--font-m);letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.tag.req{color:var(--req);border-color:var(--req)}
+.tag.me{color:var(--accent);border-color:var(--accent)}
+.del{grid-column:2;justify-self:end;background:none;border:0;color:var(--muted);font:600 12px var(--font-b);min-height:32px;cursor:pointer;text-decoration:underline}
+form.add{background:var(--surface);border:1.5px dashed var(--line);border-radius:16px;padding:14px;display:grid;gap:10px}
+form.add h2{margin:0;font:700 18px var(--font-d);text-transform:uppercase}
+input,select{width:100%;min-height:44px;padding:0 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:400 16px var(--font-b)}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+button.go{min-height:46px;border:0;border-radius:12px;background:var(--navy);color:#fff;font:700 15px var(--font-b);cursor:pointer}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) button.go{background:var(--accent);color:#14202E}}
+:root[data-theme="dark"] button.go{background:var(--accent);color:#14202E}
+.msg{color:var(--muted);font-size:14px;margin:0}
+.empty{background:var(--surface);border:1.5px dashed var(--line);border-radius:14px;padding:18px;text-align:center;color:var(--muted)}
+</style>
+
+<main>
+  <header>
+    <p class="mono">Stamp the Past</p>
+    <h1>Launch checklist</h1>
+    <p class="lede">Everything between "it runs on my phone" and "it is in the App Store", plus the extras we want. Tick things off. New ideas get added here so nothing gets lost.</p>
+  </header>
+  <div class="prog" aria-live="polite"><div class="bars" id="bars"></div></div>
+  <div class="chips" id="chips" role="group" aria-label="Filter"></div>
+  <div id="list"><div class="empty">Loading the list…</div></div>
+  <form class="add" id="add">
+    <h2>Add something</h2>
+    <input id="f-title" placeholder="What needs doing?" required maxlength="140" aria-label="What needs doing">
+    <input id="f-note" placeholder="Details (optional)" maxlength="300" aria-label="Details">
+    <div class="row2">
+      <select id="f-group" aria-label="Section"></select>
+      <select id="f-kind" aria-label="Type"><option value="want">Nice to have</option><option value="store">App Store needs it</option></select>
+      <select id="f-owner" aria-label="Who"><option>Jo-Anne</option><option>Claude</option><option>Both</option></select>
+    </div>
+    <button class="go" type="submit">Add to the list</button>
+    <p class="msg" id="msg"></p>
+  </form>
+</main>
+
+<script>
+(function(){
+  var tasks=[], filter='all', db=null, ready=false;
+  var GROUPS=['1 Accounts and legal','2 Build and test','3 Store listing','4 Content and photos','5 Polish and extras','6 Android (later)'];
+  var $=function(i){return document.getElementById(i)};
+  function gname(g){return String(g).replace(/^\d+\s/,'')}
+  function el(t,c,x){var e=document.createElement(t); if(c) e.className=c; if(x!=null) e.textContent=x; return e}
+  function vis(t){
+    if(filter==='all') return true;
+    if(filter==='open') return !t.done;
+    if(filter==='store') return t.kind==='store';
+    if(filter==='want') return t.kind!=='store';
+    return t.owner===filter || (t.owner==='Both' && (filter==='Jo-Anne'||filter==='Claude'));
+  }
+  function bar(label,done,total,req){
+    var w=el('div','bar'); w.appendChild(el('span',null,label)); w.appendChild(el('b',null,done+' of '+total));
+    var tr=el('div','track'),f=el('div','fill'+(req?' req':'')); f.style.width=(total?Math.round(100*done/total):0)+'%'; tr.appendChild(f); w.appendChild(tr); return w;
+  }
+  function render(){
+    var st=tasks.filter(function(t){return t.kind==='store'}), wt=tasks.filter(function(t){return t.kind!=='store'});
+    var b=$('bars'); b.textContent='';
+    b.appendChild(bar('App Store needs these',st.filter(function(t){return t.done}).length,st.length,true));
+    b.appendChild(bar('Nice to have',wt.filter(function(t){return t.done}).length,wt.length,false));
+    var chips=[['all','All'],['open','Still open'],['store','App Store needs'],['want','Nice to have'],['Jo-Anne','Jo-Anne'],['Claude','Claude']];
+    var c=$('chips'); c.textContent='';
+    chips.forEach(function(x){var k=el('button','chip',x[1]); k.type='button'; k.setAttribute('aria-pressed',filter===x[0]?'true':'false'); k.onclick=function(){filter=x[0];render()}; c.appendChild(k)});
+    var gs={}; tasks.forEach(function(t){(gs[t.group]=gs[t.group]||[]).push(t)});
+    var names=Object.keys(gs).sort(function(a,b){var ia=GROUPS.indexOf(a),ib=GROUPS.indexOf(b); return (ia<0?99:ia)-(ib<0?99:ib)||a.localeCompare(b)});
+    var L=$('list'); L.textContent='';
+    var shown=0;
+    names.forEach(function(g){
+      var items=gs[g].slice().sort(function(a,b){return (a.order||0)-(b.order||0)||String(a.title).localeCompare(b.title)});
+      var vs=items.filter(vis); if(!vs.length) return; shown++;
+      var s=el('section','grp'), h=el('h2',null,gname(g)); h.appendChild(el('span',null,items.filter(function(t){return t.done}).length+'/'+items.length)); s.appendChild(h);
+      vs.forEach(function(t){
+        var it=el('div','item'+(t.done?' done':''));
+        var cb=el('button','cb'); cb.type='button'; cb.setAttribute('role','checkbox'); cb.setAttribute('aria-checked',t.done?'true':'false'); cb.setAttribute('aria-label',t.title); cb.appendChild(el('i',null,'✓')); cb.onclick=function(){toggle(t)};
+        it.appendChild(cb);
+        var body=el('div'); body.appendChild(el('div','t',t.title)); if(t.note) body.appendChild(el('div','n',t.note));
+        var tg=el('div','tags'); tg.appendChild(el('span','tag'+(t.kind==='store'?' req':''),t.kind==='store'?'App Store needs it':'Nice to have')); tg.appendChild(el('span','tag me',t.owner||'Both')); body.appendChild(tg);
+        it.appendChild(body);
+        var d=el('button','del','Remove'); d.type='button'; d.onclick=function(){ if(d.dataset.sure){remove(t)} else {d.dataset.sure='1'; d.textContent='Tap again to remove'; setTimeout(function(){d.dataset.sure=''; d.textContent='Remove'},3000)} }; it.appendChild(d);
+        s.appendChild(it);
+      });
+      L.appendChild(s);
+    });
+    if(!shown) L.appendChild(el('div','empty',ready?(tasks.length?'Nothing matches this filter.':'The list is empty. Add the first item below.'):'Loading the list…'));
+    var sel=$('f-group'), cur=sel.value; sel.textContent='';
+    var all=GROUPS.concat(names.filter(function(n){return GROUPS.indexOf(n)<0}));
+    all.forEach(function(g){var o=el('option',null,gname(g)); o.value=g; sel.appendChild(o)}); if(cur) sel.value=cur;
+  }
+  function msg(t){$('msg').textContent=t||''}
+  function toggle(t){ if(!db) return msg('Open this page from your Claude app to tick things off.'); var d=!t.done; db.doc('tasks/'+t.id).update({done:d,doneAt:d?new Date().toISOString():null}).catch(function(e){msg('Could not save: '+(e&&e.message||'try again'))}) }
+  function remove(t){ if(!db) return; db.doc('tasks/'+t.id).delete().catch(function(e){msg('Could not remove: '+(e&&e.message||'try again'))}) }
+  $('add').addEventListener('submit',function(ev){
+    ev.preventDefault(); if(!db) return msg('Open this page from your Claude app to add items.');
+    var g=$('f-group').value, max=0; tasks.forEach(function(t){ if(t.group===g) max=Math.max(max,t.order||0) });
+    db.collection('tasks').add({title:$('f-title').value.trim(),note:$('f-note').value.trim(),group:g,kind:$('f-kind').value,owner:$('f-owner').value,done:false,order:max+10,added:new Date().toISOString()})
+      .then(function(){ $('f-title').value=''; $('f-note').value=''; msg('Added.') }).catch(function(e){ msg('Could not add: '+(e&&e.message||'try again')) });
+  });
+  render();
+  if(window.claude&&claude.use){
+    claude.use('db').then(function(d){
+      if(!d){ ready=true; render(); return; }
+      db=d;
+      db.collection('tasks').onSnapshot(function(s){
+        tasks=s.docs.map(function(x){var o=Object.assign({},x.data()); o.id=x.id; return o}); ready=true; render();
+      },function(){ ready=true; render() });
+    }).catch(function(){ ready=true; render() });
+  } else { ready=true; render(); }
+})();
+</script>
