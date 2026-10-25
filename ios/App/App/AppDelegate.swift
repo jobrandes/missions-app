@@ -1,5 +1,7 @@
 import UIKit
 import Capacitor
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -85,9 +87,149 @@ public class StampStorePlugin: CAPPlugin, CAPBridgedPlugin {
     }
 }
 
+
+// Stamp the Past: optional "you are near a stop" alerts, even when the app is closed.
+// Uses iOS region monitoring (no tracking, nothing is sent anywhere). iOS allows 20 regions at a time,
+// so the 20 nearest not-yet-stamped stops are watched and the list is refreshed on big moves.
+@objc(StampGeoPlugin)
+public class StampGeoPlugin: CAPPlugin, CAPBridgedPlugin, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
+    public let identifier = "StampGeoPlugin"
+    public let jsName = "StampGeo"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "enable", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "disable", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "pending", returnType: CAPPluginReturnPromise)
+    ]
+    private let mgr = CLLocationManager()
+    private let kStops = "stampgeo.stops"
+    private let kOn = "stampgeo.on"
+    private let kPending = "stampgeo.pending"
+    private let kSeen = "stampgeo.seen"
+
+    override public func load() {
+        mgr.delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        if UserDefaults.standard.bool(forKey: kOn) { startMonitoring() }
+    }
+
+    @objc func enable(_ call: CAPPluginCall) {
+        guard let arr = call.getArray("stops") else { call.reject("stops required"); return }
+        if let data = try? JSONSerialization.data(withJSONObject: arr), let str = String(data: data, encoding: .utf8) {
+            UserDefaults.standard.set(str, forKey: kStops)
+        }
+        UserDefaults.standard.set(true, forKey: kOn)
+        DispatchQueue.main.async {
+            self.mgr.requestAlwaysAuthorization()
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
+            self.startMonitoring()
+            call.resolve(["status": self.statusText()])
+        }
+    }
+
+    @objc func disable(_ call: CAPPluginCall) {
+        UserDefaults.standard.set(false, forKey: kOn)
+        DispatchQueue.main.async {
+            for r in self.mgr.monitoredRegions { self.mgr.stopMonitoring(for: r) }
+            self.mgr.stopMonitoringSignificantLocationChanges()
+            call.resolve()
+        }
+    }
+
+    @objc func pending(_ call: CAPPluginCall) {
+        let v = UserDefaults.standard.string(forKey: kPending) ?? ""
+        UserDefaults.standard.removeObject(forKey: kPending)
+        call.resolve(["id": v])
+    }
+
+    private func statusText() -> String {
+        switch mgr.authorizationStatus {
+        case .authorizedAlways: return "always"
+        case .authorizedWhenInUse: return "whenInUse"
+        case .denied, .restricted: return "denied"
+        default: return "unknown"
+        }
+    }
+
+    private func startMonitoring() {
+        mgr.startMonitoringSignificantLocationChanges()
+        refreshRegions(near: mgr.location)
+        mgr.requestLocation()
+    }
+
+    private func loadStops() -> [[String: Any]] {
+        guard let str = UserDefaults.standard.string(forKey: kStops),
+              let data = str.data(using: .utf8),
+              let arr = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] else { return [] }
+        return arr
+    }
+
+    private func refreshRegions(near loc: CLLocation?) {
+        guard UserDefaults.standard.bool(forKey: kOn), CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) else { return }
+        var stops = loadStops()
+        if let l = loc {
+            stops.sort { a, b in
+                let da = l.distance(from: CLLocation(latitude: (a["lat"] as? Double) ?? 0, longitude: (a["lon"] as? Double) ?? 0))
+                let db = l.distance(from: CLLocation(latitude: (b["lat"] as? Double) ?? 0, longitude: (b["lon"] as? Double) ?? 0))
+                return da < db
+            }
+        }
+        for r in mgr.monitoredRegions { mgr.stopMonitoring(for: r) }
+        for st in stops.prefix(20) {
+            guard let id = st["id"] as? String, let lat = st["lat"] as? Double, let lon = st["lon"] as? Double else { continue }
+            let rad = min(max((st["r"] as? Double) ?? 200, 100), mgr.maximumRegionMonitoringDistance)
+            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: lon), radius: rad, identifier: id)
+            region.notifyOnEntry = true
+            region.notifyOnExit = false
+            mgr.startMonitoring(for: region)
+        }
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        refreshRegions(near: locations.last)
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {}
+
+    public func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if UserDefaults.standard.bool(forKey: kOn) { startMonitoring() }
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        let id = region.identifier
+        var seen = (UserDefaults.standard.dictionary(forKey: kSeen) as? [String: Double]) ?? [:]
+        let now = Date().timeIntervalSince1970
+        if let t = seen[id], now - t < 6 * 3600 { return }
+        seen[id] = now
+        UserDefaults.standard.set(seen, forKey: kSeen)
+        var name = "a stop"
+        if let st = loadStops().first(where: { ($0["id"] as? String) == id }), let n = st["n"] as? String { name = n }
+        let content = UNMutableNotificationContent()
+        content.title = "You are near " + name
+        content.body = "Open Stamp the Past to find it and earn the stamp."
+        content.sound = .default
+        content.userInfo = ["id": id]
+        let req = UNNotificationRequest(identifier: "near-" + id, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+    }
+
+    // Do not show a banner while the app is open (the app has its own prompt).
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([])
+    }
+
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if let id = response.notification.request.content.userInfo["id"] as? String {
+            UserDefaults.standard.set(id, forKey: kPending)
+            notifyListeners("stopTap", data: ["id": id])
+        }
+        completionHandler()
+    }
+}
+
 @objc(StampViewController)
 class StampViewController: CAPBridgeViewController {
     override func capacitorDidLoad() {
         bridge?.registerPluginInstance(StampStorePlugin())
+        bridge?.registerPluginInstance(StampGeoPlugin())
     }
 }

@@ -193,6 +193,13 @@
     return '';
   }
   function nearPaint(){ var e=document.getElementById('nearBox'); if(e) e.innerHTML=nearHtml(); }
+  // Optional alerts when the app is closed (iPhone app only; the phone does the watching, nothing is sent anywhere)
+  var NG=null;
+  try{ if(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()&&Capacitor.getPlatform&&Capacitor.getPlatform()==='ios') NG=Capacitor.registerPlugin('StampGeo'); }catch(e){}
+  function bgOn(){ try{ return localStorage.getItem('stp-bg')==='1'; }catch(e){ return false; } }
+  function bgStops(){ var out=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(!st.geo||ALL[k].done[i]) return; out.push({id:k+':'+i,n:st.name+', '+CITIES[k].name,lat:st.geo[0],lon:st.geo[1],r:Math.min(st.geo[2],500)}); }); }); return out; }
+  function bgSync(){ if(NG&&bgOn()) try{ NG.enable({stops:bgStops()}).catch(function(){}); }catch(e){} }
+  function bgOpenPending(){ if(!NG) return; try{ NG.pending().then(function(r){ var id=r&&r.id; if(!id) return; var q=id.split(':'), k=q[0], i=+q[1]; if(CITIES[k]&&CITIES[k].stops[i]){ railRegion=null; if(k!==cityId||atHome) setCity(k); openStop(i,0); } }).catch(function(){}); }catch(e){} }
   var hereSeen={};
   function hereHide(){ var e=document.querySelector('.herebanner'); if(e&&e.parentNode) e.parentNode.removeChild(e); }
   function hereShow(h){
@@ -227,7 +234,7 @@
       cur.gv=true; toast('You are here. This visit will be verified.'); setStep(1);
     }
   }
-  document.addEventListener('visibilitychange',function(){ if(document.hidden) geoStopWatch(); else geoStartWatch(); });
+  document.addEventListener('visibilitychange',function(){ if(document.hidden) geoStopWatch(); else { geoStartWatch(); bgSync(); bgOpenPending(); } });
   function toast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg; t.classList.add('show');
@@ -453,6 +460,7 @@
      +'<p class="mgroup">Settings</p>'
      +'<div class="mrow"><span id="thl">Appearance</span><div class="segs" role="group" aria-labelledby="thl">'+seg+'</div></div>'
      +(geoGranted()?'<div class="mrow"><span id="lvl">Live location while the app is open</span><div class="segs"><button class="seg on" data-a="livetoggle" aria-labelledby="lvl" aria-pressed="'+liveOn()+'">'+(liveOn()?'On':'Off')+'</button></div></div>':'')
+     +(NG?'<div class="mrow"><span id="bgl">Alert me near stops, even when the app is closed</span><div class="segs"><button class="seg on" data-a="bgtoggle" aria-labelledby="bgl" aria-pressed="'+bgOn()+'">'+(bgOn()?'On':'Off')+'</button></div></div><p class="msub">iPhone asks for "Always" location. It only watches the 20 nearest stops, and nothing leaves your phone.</p>':'')
      +'<p class="mgroup">Account</p>'
      +'<div class="macct"><strong>No account needed.</strong><span class="msub">Your stamps live on this phone. Use a backup code to move them to a new one. Optional sign-in may come later, so your stamps can follow you between devices.</span></div>'
      +'<p class="mfoot">Made by a mom and her teenage son.</p></div>';
@@ -935,6 +943,7 @@
     if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
     if(a==='geo'){ geoCheck(false); return; }
     if(a==='neargo'){ var nc2=b.getAttribute('data-c'), ni=+b.getAttribute('data-i'); var inr=!b.getAttribute('data-far'); if(nc2&&CITIES[nc2]){ railRegion=null; if(nc2!==cityId||atHome) setCity(nc2); openStop(ni,0); if(inr&&!S.done[ni]){ cur.gv=true; setStep(1); } } return; }
+    if(a==='bgtoggle'){ var on=!bgOn(); try{ localStorage.setItem('stp-bg',on?'1':'0'); }catch(x){} if(on) bgSync(); else if(NG) try{ NG.disable(); }catch(x){} b.setAttribute('aria-pressed',on); b.textContent=on?'On':'Off'; return; }
     if(a==='livetoggle'){ try{ localStorage.setItem('stp-geo-live',liveOn()?'0':'1'); }catch(x){} if(liveOn()) geoStartWatch(); else { geoStopWatch(); nearHit=null; } b.setAttribute('aria-pressed',liveOn()); b.textContent=liveOn()?'On':'Off'; return; }
     if(a==='step'){ setStep(+b.getAttribute('data-n')); return; }
     if(a==='pick'){
@@ -993,5 +1002,6 @@
     if(a==='resetyes'){ ALL[cityId]=blank(); S=ALL[cityId]; save(); confirmReset=false; render(); toast('Progress erased'); return; }
   });
 
-  load(); applyCity(); render(); maybeTour(); geoStartWatch();
+  load(); applyCity(); render(); maybeTour(); geoStartWatch(); bgSync(); bgOpenPending();
+  if(NG){ try{ NG.addListener('stopTap',function(){ bgOpenPending(); }); }catch(e){} }
 })();

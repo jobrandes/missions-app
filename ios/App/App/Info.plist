@@ -4,6 +4,8 @@
 <dict>
   <key>NSLocationWhenInUseUsageDescription</key>
 	<string>Optional. Stamp the Past checks on your phone that you are near the landmark so you can earn a verified-visit stamp. Your location is never sent anywhere.</string>
+  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Optional. If you turn on stop alerts, Stamp the Past can tell you when you are near a landmark, even when the app is closed. Your location stays on your phone and is never sent anywhere.</string>
   <key>CAPACITOR_DEBUG</key>
 	<string>$(CAPACITOR_DEBUG)</string>
 	<key>CFBundleDevelopmentRegion</key>
