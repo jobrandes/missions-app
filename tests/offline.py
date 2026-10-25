@@ -9,7 +9,7 @@ try:
     with sync_playwright() as p:
         b=p.chromium.launch(); ctx=b.new_context(viewport={'width':390,'height':800}); ctx.add_init_script("try{localStorage.setItem('then-now-tour','1')}catch(e){}"); pg=ctx.new_page()
         errs=[]; pg.on('pageerror',lambda e: errs.append(str(e)))
-        pg.goto('http://localhost:8765/index.html'); 
+        pg.goto('http://localhost:8765/play.html'); 
         ok=pg.evaluate("navigator.serviceWorker.ready.then(()=>true)")
         pg.wait_for_timeout(1500); pg.reload(); pg.wait_for_timeout(800)
         if not pg.evaluate("!!navigator.serviceWorker.controller"): bad.append('service worker is not controlling the page')

@@ -29,8 +29,8 @@ os.makedirs(R+'site',exist_ok=True)
 reset='<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>'
 full=('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0e1d33"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Stamp the Past">'
   +rd('src/head.html')+reset+'<style>\n'+rd('src/styles.css')+'</style></head><body>'+rd('src/body.html')+'<form name="report" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="form-name" value="report"><input name="bot-field"><input name="where"><input name="message"><input name="contact"></form><script>\n'+js+'</script></body></html>')
-open(R+'site/index.html','w').write(full)
-open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Robots-Tag: noindex\n')
+open(R+'site/play.html','w').write(full)
+open(R+'site/_headers','w').write('/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/play\n  X-Robots-Tag: noindex\n/play.html\n  X-Robots-Tag: noindex\n')
 
 import shutil
 for pg in ('privacy.html','support.html'):
@@ -43,9 +43,17 @@ print('copied pages and',len(keys),'photos')
 import hashlib
 h=hashlib.sha1(full.encode()).hexdigest()[:10]
 open(R+'site/sw.js','w').write(rd('src/sw.js').replace('__BUILD__',h))
-open(R+'site/manifest.webmanifest','w').write(json.dumps({"name":"Stamp the Past","short_name":"Stamp the Past","start_url":"./","scope":"./","display":"standalone","background_color":"#0e1d33","theme_color":"#0e1d33","description":"Missions for real places.","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}))
+open(R+'site/manifest.webmanifest','w').write(json.dumps({"name":"Stamp the Past","short_name":"Stamp the Past","start_url":"play.html","scope":"./","display":"standalone","background_color":"#0e1d33","theme_color":"#0e1d33","description":"Missions for real places.","icons":[{"src":"icon-192.png","sizes":"192x192","type":"image/png"},{"src":"icon-512.png","sizes":"512x512","type":"image/png"},{"src":"icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}))
 for f in ('icon-192.png','icon-512.png','icon-maskable-512.png','apple-touch-icon.png'):
     shutil.copy(R+'src/assets/'+f,R+'site/'+f)
 hd=open(R+'site/_headers').read()+'/sw.js\n  Cache-Control: no-cache\n/index.html\n  Cache-Control: no-cache\n'
 open(R+'site/_headers','w').write(hd)
 print('offline files written, build',h)
+
+# --- landing page at the site root (the app itself lives at /play) ---
+land=rd('src/landing.html').replace('{{TOWNS}}',str(len(order)))
+assert '{{' not in land
+open(R+'site/index.html','w').write(land)
+open(R+'site/robots.txt','w').write('User-agent: *\nAllow: /\nDisallow: /play\nSitemap: https://stampthepast.com/sitemap.xml\n')
+open(R+'site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://stampthepast.com/{u}</loc></url>' for u in ('','privacy.html','support.html'))+'</urlset>')
+print('landing page written,',len(land)//1024,'KB')

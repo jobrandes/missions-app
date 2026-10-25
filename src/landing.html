@@ -1,5 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Stamp the Past</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1d33">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://stampthepast.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stamp the Past">
+<meta property="og:description" content="Go there. Prove it. Stamp the past. A free history scavenger hunt for real places.">
+<meta property="og:url" content="https://stampthepast.com/">
+<meta property="og:image" content="https://stampthepast.com/photos/arch_now.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and get stamped.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +96,7 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
   .stamps{max-width:340px}
 }
 @media (max-width:420px){.steps{grid-template-columns:1fr}}
-</style>
+</style></head><body>
 
 <div class="wrap">
   <div class="top"><span class="mark">Stamp the Past</span><span class="pill">Coming to the App Store</span></div>
@@ -95,13 +106,13 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
       <div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div>
       <h1>Go there.<br>Prove it.<br>Stamp it.</h1>
       <p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p>
-      <div class="cta"><a class="btn" href="https://claude.ai/artifact/4jha39rpChXp1cMVXRYkBs">Try it free</a><span class="mono">Free. No sign-up.</span></div>
+      <div class="cta"><a class="btn" href="play">Play free in your browser</a><span class="mono">Free. No sign-up. Works on any phone.</span></div>
     </div>
     <div class="stamps" aria-label="Four passport stamps, each a real photo of a landmark">
-      <div class="stamp"><img alt="The Reno Arch, lit at dusk" src="{{arch_now}}"></div>
-      <div class="stamp"><img alt="Piper's Opera House, Virginia City" src="{{vc_pip_now}}"></div>
-      <div class="stamp"><img alt="C Street, Virginia City" src="{{vc_cs_now}}"></div>
-      <div class="stamp"><img alt="Fourth Ward School, Virginia City" src="{{vc_sch_now}}"></div>
+      <div class="stamp"><img alt="The Reno Arch, lit at dusk" src="photos/arch_now.jpg"></div>
+      <div class="stamp"><img alt="Piper's Opera House, Virginia City" src="photos/vc_pip_now.jpg"></div>
+      <div class="stamp"><img alt="C Street, Virginia City" src="photos/vc_cs_now.jpg"></div>
+      <div class="stamp"><img alt="Fourth Ward School, Virginia City" src="photos/vc_sch_now.jpg"></div>
     </div>
   </header>
 
@@ -111,7 +122,7 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
       <h2 style="margin-top:8px">Four steps. One stamp.</h2>
       <div class="steps">
         <div class="step"><b>1</b><h3>Find the spot</h3><p>A clue sends you to a real landmark. Bring your own two feet.</p></div>
-        <div class="step"><b>2</b><h3>Prove it</h3><p>Answer a question you can only get by standing there.</p></div>
+        <div class="step"><b>2</b><h3>Prove it</h3><p>Answer a question about what is right in front of you.</p></div>
         <div class="step"><b>3</b><h3>Fact or fiction</h3><p>Is the famous story solid, disputed, or a tall tale? Historians argue. Now so can you.</p></div>
         <div class="step"><b>4</b><h3>Stamp the past</h3><p>Every stop adds a stamp to your passport and a Then/Now photo you can fade through. Finish a town to take its final challenge and earn a seal.</p></div>
       </div>
@@ -125,7 +136,7 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
       <p>Every stop unlocks a real old photo next to a current one. Slide between them and watch a street change. This one is the Reno Arch, 1973 to 2021.</p>
     </div>
     <div class="cmp">
-      <div class="box"><img alt="The Reno Arch in 2021" src="{{arch_now}}"><img class="top-img" id="topimg" alt="The Reno sign in 1973" src="{{sign1973}}"></div>
+      <div class="box"><img alt="The Reno Arch in 2021" src="photos/arch_now.jpg"><img class="top-img" id="topimg" alt="The Reno sign in 1973" src="photos/sign1973.jpg"></div>
       <div class="row"><span>Now</span><input id="rng" type="range" min="0" max="100" value="0" aria-label="Fade from now to 1973"><span>1973</span></div>
       <p class="credit">Photos: Missvain (CC BY 4.0), Michael Holley (CC0), via Wikimedia Commons. Resized.</p>
     </div>
@@ -151,7 +162,7 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
       <h2 style="margin:8px 0 6px">A game that makes your teen read a plaque. Voluntarily.</h2>
       <ul>
         <li>No accounts and no sign-up</li>
-        <li>No location tracking</li>
+        <li>Location is optional and stays on your phone</li>
         <li>No photo uploads</li>
         <li>No ads</li>
         <li>Every story shows its sources</li>
@@ -161,8 +172,8 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
   </section>
 
   <footer>
-    <p><strong>Made by a mom and her teenage son.</strong> Seven towns across the West and the East so far, with more on the way.</p>
-    <p class="mono"><a href="#">Privacy</a> · <a href="#">Support</a></p>
+    <p><strong>Made by a mom and her teenage son.</strong> {{TOWNS}} towns across the US so far, with more on the way.</p>
+    <p class="mono"><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:stampthepast@gmail.com">stampthepast@gmail.com</a></p>
     <p class="credits">Stamp photos: Reno Arch by Missvain (CC BY 4.0). C Street by Famartin (CC BY-SA 4.0). Piper's Opera House by Vivaverdi (CC BY 3.0). Fourth Ward School by Carol M. Highsmith, Library of Congress (public domain). All via Wikimedia Commons, resized.</p>
   </footer>
 </div>
@@ -191,3 +202,4 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
   }catch(e){}
 })();
 </script>
+</body></html>

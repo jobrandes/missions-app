@@ -1,6 +1,9 @@
 /*
   X-Content-Type-Options: nosniff
-  Referrer-Policy: no-referrer
+  Referrer-Policy: strict-origin-when-cross-origin
+/play
+  X-Robots-Tag: noindex
+/play.html
   X-Robots-Tag: noindex
 /sw.js
   Cache-Control: no-cache

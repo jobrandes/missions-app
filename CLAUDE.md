@@ -128,3 +128,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Sparks engine "then" is SP No. 8 in Carson City (1975), a looser match. Roundhouse stop was dropped (it shared a marker with Railroad Shops); roundhouse postcard is the Sparks hero.
 - Proactive 'You are at X' banner (hereShow in app.js) when the app is open. Background alerts (iOS only, off by default, Menu toggle `stp-bg`): Swift `StampGeoPlugin` in AppDelegate.swift monitors the 20 nearest unstamped stops, local notification on entry, tap opens the stop. NOT yet compiled or tested on a device.
 - Lesson: view every downloaded photo before wiring it in (the Commons "Sparks Marina.jpg" was a car show).
+
+## Landing page (Oct 25)
+- `src/landing.html` is built by build.py into `site/index.html` (stampthepast.com root). The game itself is `site/play.html` (served at /play). Manifest start_url and sw.js use play.html; sw ignores other navigations. robots.txt and sitemap.xml are generated; /play is noindex, the landing is indexable.
+- Landing says location is optional and stays on the phone (not "no location tracking"); app Menu matches.
