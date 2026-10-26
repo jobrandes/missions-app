@@ -1,0 +1,437 @@
+{
+  "id": "skagway",
+  "name": "Skagway",
+  "explorer": "Gold Rush Explorer",
+  "initials": "SGY",
+  "ranks": [
+    [
+      0,
+      "Visitor"
+    ],
+    [
+      100,
+      "Cheechako"
+    ],
+    [
+      250,
+      "Stampeder"
+    ],
+    [
+      450,
+      "Sourdough"
+    ],
+    [
+      600,
+      "Skagway Historian"
+    ]
+  ],
+  "heroAlt": "The driftwood-covered Arctic Brotherhood Hall in Skagway",
+  "heroLi": "<li>Header: Miyagawa · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG\">Source</a> · resized, cropped</li>",
+  "heroCredit": "Photo: Miyagawa · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG\">Source</a>",
+  "mission": "Find four places on Skagway's main streets where the Klondike gold rush happened. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Skagway is waiting.",
+  "safetyNote": "<li>Skagway is a small town that fills with cruise-ship visitors in summer. Use boardwalks and crosswalks, stay off the railroad tracks, and check each place's visiting hours before you go.</li>",
+  "badgeMap": {
+    "broadway": [
+      "sk_bw_now",
+      "50% 40%"
+    ],
+    "depot": [
+      "sk_dp_now",
+      "50% 50%"
+    ],
+    "parlor": [
+      "sk_js_now",
+      "50% 50%"
+    ],
+    "hall": [
+      "sk_ab_now",
+      "50% 50%"
+    ]
+  },
+  "level": "Hidden Gems",
+  "region": "The West",
+  "stops": [
+    {
+      "id": "broadway",
+      "name": "Broadway Avenue",
+      "short": "Broadway",
+      "badge": "Broadway",
+      "tag": "Stop 1 of 4",
+      "teaser": "The main street of the biggest town in Alaska, in 1898.",
+      "map": "Broadway Ave, Skagway, AK",
+      "geo": [
+        59.4603,
+        -135.3141,
+        150
+      ],
+      "clue": "Stand on Broadway, the main street that runs from the harbor through the middle of town. Look for old false-front wooden buildings with painted signs and wooden boardwalks.",
+      "safety": "Skagway's streets are busy with tour buses and cruise-ship crowds in summer, so stay on the boardwalks and cross at corners. Broadway is also a road for buses and trucks.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "In June 1898, during the gold rush, Skagway was the largest city in Alaska. About how many people lived here then?",
+        "options": [
+          "About 900",
+          "About 3,000",
+          "About 9,000",
+          "About 90,000"
+        ],
+        "answer": 2,
+        "hint": "Today about 1,200 people live here, and this was a boom town.",
+        "verify": "Wikipedia says the population was between 8,000 and 10,000 in June 1898. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "sk_bw_then",
+          "by": "Eric A. Hegg",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Broadway,_Skagway,_Alaska,_May_20,_1898_(HEGG_223).jpeg",
+          "note": "resized"
+        },
+        "yr": "1898",
+        "label": "Broadway, May 20, 1898",
+        "line": "Horses and wagons crowd the dirt street, with hand-painted signs on every building. The date is the one listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Skagway%20Alaska&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2017",
+        "head": "Today",
+        "label": "A Broadway storefront",
+        "line": "A painted shop front on the same street. This is one building, not the whole street, so it is a different view from the 1898 photo.",
+        "ph": {
+          "k": "sk_bw_now",
+          "by": "Diego Delso",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Centro_histórico_de_Skagway,_Alaska,_Estados_Unidos,_2017-08-18,_DD_41.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The first boat of prospectors docked at Moore's wharf on July 29, 1897. By the spring of 1898 an estimated 8,000 people lived here, and about 1,000 more passed through each week on their way to the Klondike.",
+        "By June 1898 Skagway was the largest city in Alaska. One North-West Mounted Police officer called it \"little better than a hell on earth,\" and the town had no telegraph until 1901.",
+        "The name comes from the Tlingit sha-ka-ԍéi, which refers to rough seas in the Taiya Inlet caused by strong north winds. Today about 1,200 people live here, and much of Broadway is part of Klondike Gold Rush National Historical Park."
+      ],
+      "fact": "The town's name is a Tlingit phrase for the rough water that strong north winds stir up in the inlet.",
+      "disputed": "The \"Now\" photo shows one storefront, not the full street, so it is not the same view as the 1898 \"Then\" photo.",
+      "claims": [
+        {
+          "t": "By June 1898 Skagway was the largest city in Alaska.",
+          "a": 0,
+          "why": "Wikipedia says its population was between 8,000 and 10,000 in June 1898."
+        },
+        {
+          "t": "Skagway had a telegraph line by 1898.",
+          "a": 2,
+          "why": "Telegraph lines did not reach or leave Skagway until 1901."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Skagway, Alaska",
+          "u": "https://en.wikipedia.org/wiki/Skagway,_Alaska"
+        },
+        {
+          "t": "Wikipedia: Klondike Gold Rush National Historical Park",
+          "u": "https://en.wikipedia.org/wiki/Klondike_Gold_Rush_National_Historical_Park"
+        }
+      ],
+      "card": {
+        "a": "1897",
+        "b": "1898",
+        "la": "First prospectors land",
+        "lb": "Largest city in Alaska"
+      }
+    },
+    {
+      "id": "depot",
+      "name": "White Pass and Yukon Route Depot",
+      "short": "Railroad Depot",
+      "badge": "Railroad Depot",
+      "tag": "Stop 2 of 4",
+      "teaser": "Where the gold rush railroad began.",
+      "map": "White Pass & Yukon Route Depot, 2nd Ave and Broadway, Skagway, AK",
+      "geo": [
+        59.4588,
+        -135.3136,
+        150
+      ],
+      "clue": "Look for the old railroad depot at the corner of 2nd Avenue and Broadway. It is now the visitor center for the National Park. Narrow-gauge train cars often sit nearby.",
+      "safety": "Skagway's streets are busy with tour buses and cruise-ship crowds in summer, so stay on the boardwalks and cross at corners. Railroad tracks run near this stop, so stay off the tracks and obey any signals.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The White Pass and Yukon Route railroad starts here. In what year did construction begin in Skagway?",
+        "options": [
+          "1898",
+          "1887",
+          "1912",
+          "1925"
+        ],
+        "answer": 0,
+        "hint": "The Klondike gold rush was at its height.",
+        "verify": "Wikipedia says construction started in May 1898. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "sk_dp_then",
+          "by": "Historic American Buildings Survey",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:WHITE_PASS_and_YUKON_ROUTE_RAILROAD_DEPOT,_LOOKING_SOUTH_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-65.tif",
+          "note": "resized"
+        },
+        "yr": "Undated",
+        "label": "The depot, survey photo",
+        "line": "A black-and-white survey photo of the depot area, looking south. Its Wikimedia Commons listing gives no date.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=White%20Pass%20Yukon%20Route%20Skagway&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "The depot area today",
+        "line": "The restored railway buildings in bright colors, now run by the National Park Service as a visitor center and park offices.",
+        "ph": {
+          "k": "sk_dp_now",
+          "by": "National Park Service",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:WhitePassandYukonRailwayDepot.jpeg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Most prospectors reached the gold fields on foot, and Canada made them carry a ton of supplies over the passes. That took several trips, so a railroad looked like a better way. Construction started here in May 1898 on a narrow 3-foot-gauge line, and about 450 tons of explosives were needed to reach the top of White Pass.",
+        "The depot was built between September and December 1898. The line reached the Yukon in 1900. It ran until 1982, and a part was revived in 1988 as a heritage railway.",
+        "From 1942 to 1946 the U.S. Army took over the railroad to supply the Alaska Highway. The National Park Service got the depot in 1976 and finished restoring it in 1984."
+      ],
+      "fact": "The railway's president, Samuel H. Graves, was elected chairman of the vigilantes who tried to run Soapy Smith's gang out of town.",
+      "disputed": "The \"Then\" photo is an undated survey photo, so we show no year. The \"Now\" photo shows the depot area, and the buildings have been restored since the survey photo was taken.",
+      "claims": [
+        {
+          "t": "The depot was built between September and December 1898.",
+          "a": 0,
+          "why": "Wikipedia gives that construction period for the railroad depot."
+        },
+        {
+          "t": "The railroad has run without a break since 1900.",
+          "a": 2,
+          "why": "The route stopped in 1982 and partly reopened as a heritage railway in 1988."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: White Pass and Yukon Route",
+          "u": "https://en.wikipedia.org/wiki/White_Pass_and_Yukon_Route"
+        },
+        {
+          "t": "Wikipedia: Klondike Gold Rush National Historical Park",
+          "u": "https://en.wikipedia.org/wiki/Klondike_Gold_Rush_National_Historical_Park"
+        }
+      ],
+      "card": {
+        "a": "1898",
+        "b": "1984",
+        "la": "Depot built",
+        "lb": "Restoration finished"
+      }
+    },
+    {
+      "id": "parlor",
+      "name": "Jeff. Smith's Parlor",
+      "short": "Soapy Smith's Parlor",
+      "badge": "Soapy's Parlor",
+      "tag": "Stop 3 of 4",
+      "teaser": "The con man's headquarters, three months before he was shot.",
+      "map": "Jeff. Smith's Parlor, 2nd Ave, Skagway, AK",
+      "geo": [
+        59.4585,
+        -135.3148,
+        100
+      ],
+      "clue": "Walk west from Broadway along 2nd Avenue until you see a small plain wooden building with a sign across the top that reads Jeff. Smith's Parlor.",
+      "safety": "Skagway's streets are busy with tour buses and cruise-ship crowds in summer, so stay on the boardwalks and cross at corners. This is a museum with set hours, so stay outside unless you are visiting during open hours.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Soapy Smith's best-known trick was a street con that got him his nickname. What did he sell in it?",
+        "options": [
+          "Lucky horseshoes",
+          "Gold-dust scales",
+          "Mystery maps",
+          "Prize soap"
+        ],
+        "answer": 3,
+        "hint": "Bills were wrapped inside a few of the packages, and the crowd was told they might win.",
+        "verify": "Wikipedia describes the \"prize soap racket.\" Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "sk_js_then",
+          "by": "Webster & Stevens",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Skagway-js-parlor-1898.jpg",
+          "note": "resized"
+        },
+        "yr": "1898",
+        "label": "The parlor, 1898",
+        "line": "A group of men stands out front under a banner reading Jeff. Smith's Parlor. The date is the one listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Skagway%20Soapy%20Smith&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2009",
+        "head": "Today",
+        "label": "The parlor today",
+        "line": "The same small wooden building, now with a plain false front and the name across the top.",
+        "ph": {
+          "k": "sk_js_now",
+          "by": "Notyourbroom",
+          "lic": "CC BY 3.0",
+          "lu": "https://creativecommons.org/licenses/by/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Soapy_Smith_parlor_Skagway_2009.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Jefferson Randolph \"Soapy\" Smith was a con man who ran gangs in Denver and Creede before he moved to Skagway during the Klondike gold rush. His nickname came from his \"prize soap racket,\" in which he sold wrapped bars of soap and made it look as if a few hid cash prizes.",
+        "He opened Jeff. Smith's Parlor in March 1898 as an office from which to run his operations. He and his gang tricked miners for only about three months. On July 8, 1898, Smith was shot dead in the Shootout on Juneau Wharf by Frank Reid and Jesse Murphy.",
+        "Martin Itjen bought the building in 1922 and made it a museum with animatronic figures of Smith and his gang. It stayed open until 1986. The National Park Service received it in 2007 and reopened it in April 2016."
+      ],
+      "fact": "A policeman writing in a logbook forgot Smith's first name and wrote \"Soapy,\" and the nickname stuck.",
+      "disputed": "Whether the men in the \"Then\" photo include Soapy Smith is not stated on its Wikimedia Commons listing. We do not say who they are.",
+      "claims": [
+        {
+          "t": "Soapy Smith opened Jeff. Smith's Parlor in March 1898 as an office for his operations.",
+          "a": 0,
+          "why": "Wikipedia gives March 1898 for the opening."
+        },
+        {
+          "t": "Soapy Smith ran his gang in Skagway for about ten years.",
+          "a": 2,
+          "why": "He tricked miners in Skagway for only about three months before he was shot on July 8, 1898."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Soapy Smith",
+          "u": "https://en.wikipedia.org/wiki/Soapy_Smith"
+        },
+        {
+          "t": "Wikipedia: Klondike Gold Rush National Historical Park",
+          "u": "https://en.wikipedia.org/wiki/Klondike_Gold_Rush_National_Historical_Park"
+        }
+      ],
+      "card": {
+        "a": "1898",
+        "b": "2016",
+        "la": "Parlor opens",
+        "lb": "Reopened to visitors"
+      }
+    },
+    {
+      "id": "hall",
+      "name": "Arctic Brotherhood Hall",
+      "short": "Driftwood Hall",
+      "badge": "Driftwood Hall",
+      "tag": "Stop 4 of 4",
+      "teaser": "The front of this hall is a wall of driftwood.",
+      "map": "Arctic Brotherhood Hall, Broadway, Skagway, AK",
+      "geo": [
+        59.4594,
+        -135.3139,
+        120
+      ],
+      "clue": "Look along Broadway for a two-story building whose whole front is covered in bits of weathered wood, with a gabled top and a small flagpole above it.",
+      "safety": "Skagway's streets are busy with tour buses and cruise-ship crowds in summer, so stay on the boardwalks and cross at corners. The hall is a shop or visitor building with its own hours, so stay on the sidewalk.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Look closely at the front of the Arctic Brotherhood Hall. What covers it?",
+        "options": [
+          "Seashells",
+          "Driftwood",
+          "Moose antlers",
+          "Painted tin"
+        ],
+        "answer": 1,
+        "hint": "The pieces were gathered from along the shore.",
+        "verify": "Wikipedia says its front is covered with driftwood. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "sk_ab_then",
+          "by": "Historic American Buildings Survey",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:ARCTIC_BROTHERHOOD_HALL_(1899),_BROADWAY_AVENUE_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-79_(CT).tif",
+          "note": "resized"
+        },
+        "yr": "Undated",
+        "label": "The hall, survey photo",
+        "line": "A color survey photo of the hall's driftwood front. Its Wikimedia Commons listing gives no date.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Arctic%20Brotherhood%20Hall%20Skagway&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2012",
+        "head": "Today",
+        "label": "The hall today",
+        "line": "The same driftwood facade, now with a modern street and cars in front.",
+        "ph": {
+          "k": "sk_ab_now",
+          "by": "Miyagawa",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Arctic Brotherhood Hall was built in 1899, and its front is covered with driftwood. It is one of the buildings that make up the Skagway Historic District and White Pass, a National Historic Landmark District.",
+        "Almost 100 buildings from the gold rush are still standing in the district. The Skagway part covers a historic core 23 blocks long and three to five blocks wide, with more than 350 buildings. Most are wood-frame buildings with one or two stories and brightly painted false fronts.",
+        "Fourteen of those blocks were under National Park Service protection by 1999."
+      ],
+      "fact": "Nearly 100 buildings from the gold rush years are still standing in the Skagway historic district.",
+      "disputed": "The \"Then\" photo has no date in its Wikimedia Commons listing, so we show none. It is a survey photo, not a gold rush photo.",
+      "claims": [
+        {
+          "t": "The front of the Arctic Brotherhood Hall is covered with driftwood.",
+          "a": 0,
+          "why": "Wikipedia says so, and the photos show it."
+        },
+        {
+          "t": "The Arctic Brotherhood Hall was built before the Klondike gold rush began in 1897.",
+          "a": 2,
+          "why": "Wikipedia lists the hall as built in 1899."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Skagway Historic District and White Pass",
+          "u": "https://en.wikipedia.org/wiki/Skagway_Historic_District_and_White_Pass"
+        },
+        {
+          "t": "Wikipedia: Skagway, Alaska",
+          "u": "https://en.wikipedia.org/wiki/Skagway,_Alaska"
+        }
+      ],
+      "card": {
+        "a": "1899",
+        "b": "Today",
+        "la": "Hall built",
+        "lb": "Part of a landmark district"
+      }
+    }
+  ],
+  "heroKey": "sk_hero"
+}

@@ -655,3 +655,12 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | ho_at_now | https://commons.wikimedia.org/wiki/File:Aloha_Tower_Honolulu._(10754440616).jpg | Bernard Spragg. NZ from Christchurch, New Zealand | CC0 | 2013 |
 | ho_kc_then | https://commons.wikimedia.org/wiki/File:WEST_(FRONT)_ELEVATION,_OBLIQUE_VIEW_-_Kawaiahao_Church,_Punchbowl_and_King_Streets,_Honolulu,_Honolulu_County,_HI_HABS_HI,2-HONLU,13-1.tif | Historic American Buildings Survey | Public domain | Undated survey photo |
 | ho_kc_now | https://commons.wikimedia.org/wiki/File:Honolulu-Kawaiahao-church-front.JPG | Joel Bradshaw | Public domain | 2007 |
+| sk_hero | https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG | Miyagawa | CC BY-SA 4.0 | 2012, resized, cropped |
+| sk_bw_then | https://commons.wikimedia.org/wiki/File:Broadway,_Skagway,_Alaska,_May_20,_1898_(HEGG_223).jpeg | Eric A. Hegg | Public domain | 1898 |
+| sk_bw_now | https://commons.wikimedia.org/wiki/File:Centro_histórico_de_Skagway,_Alaska,_Estados_Unidos,_2017-08-18,_DD_41.jpg | Diego Delso | CC BY-SA 4.0 | 2017 |
+| sk_dp_then | https://commons.wikimedia.org/wiki/File:WHITE_PASS_and_YUKON_ROUTE_RAILROAD_DEPOT,_LOOKING_SOUTH_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-65.tif | Historic American Buildings Survey | Public domain | Undated survey photo |
+| sk_dp_now | https://commons.wikimedia.org/wiki/File:WhitePassandYukonRailwayDepot.jpeg | National Park Service | Public domain | 2013 |
+| sk_js_then | https://commons.wikimedia.org/wiki/File:Skagway-js-parlor-1898.jpg | Webster & Stevens | Public domain | 1898 |
+| sk_js_now | https://commons.wikimedia.org/wiki/File:Soapy_Smith_parlor_Skagway_2009.jpg | Notyourbroom | CC BY 3.0 | 2009 |
+| sk_ab_then | https://commons.wikimedia.org/wiki/File:ARCTIC_BROTHERHOOD_HALL_(1899),_BROADWAY_AVENUE_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-79_(CT).tif | Historic American Buildings Survey | Public domain | Undated survey photo |
+| sk_ab_now | https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG | Miyagawa | CC BY-SA 4.0 | 2012 |

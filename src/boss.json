@@ -2574,5 +2574,51 @@
    "a": 0,
    "why": "The church sits on the site of a spring and pool of a chiefess named Ha\u02bbo."
   }
+ ],
+ "skagway": [
+  {
+   "q": "In what year did part of the White Pass and Yukon Route reopen as a heritage railway?",
+   "o": [
+    "1988",
+    "1982",
+    "1900",
+    "1971"
+   ],
+   "a": 0,
+   "why": "The route ran until 1982 and was partly revived in 1988."
+  },
+  {
+   "q": "About how many tons of explosives were used to blast the railroad to the top of White Pass?",
+   "o": [
+    "45 tons",
+    "150 tons",
+    "4,500 tons",
+    "450 tons"
+   ],
+   "a": 3,
+   "why": "Wikipedia says 450 tons of explosives were used."
+  },
+  {
+   "q": "Which steamer docked at Moore's wharf on July 29, 1897 with the first boatload of prospectors?",
+   "o": [
+    "Gertrude",
+    "Portland",
+    "Queen",
+    "Princess"
+   ],
+   "a": 2,
+   "why": "The steamer Queen arrived with the first boatload."
+  },
+  {
+   "q": "Who was elected chairman of the vigilantes trying to expel Soapy Smith's gang?",
+   "o": [
+    "Frank Reid",
+    "Samuel H. Graves",
+    "Billy Moore",
+    "Martin Itjen"
+   ],
+   "a": 1,
+   "why": "Samuel H. Graves, the railroad's president, was elected chairman."
+  }
  ]
 }
