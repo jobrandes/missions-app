@@ -76,9 +76,9 @@ button{font-family:inherit}
 .bimg.plain{display:flex;align-items:center;justify-content:center;border-radius:50%;border:3px solid var(--bulb-off);color:var(--muted);font:800 20px var(--font-display);letter-spacing:.04em}
 .bimg.plain.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--bulb);color:var(--ink);background:var(--surface-2)}
 .bbox.lg .bimg.plain{font-size:30px}
-.hero-credit{font:500 11px var(--font-mono);letter-spacing:.04em;color:rgba(255,255,255,.8)}
+.hero-credit{font:500 11px var(--font-mono);letter-spacing:.04em;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7)}
 .hero-credit a{color:#fff}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,14,24,.72) 0%,rgba(6,14,24,.38) 48%,rgba(6,14,24,.12) 72%,rgba(6,14,24,.4) 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,14,24,.72) 0%,rgba(6,14,24,.38) 48%,rgba(6,14,24,.18) 66%,rgba(6,14,24,.74) 100%)}
 .hero h1{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .hero .mono{color:rgba(255,255,255,.82)}
 .rank-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -812,6 +812,9 @@ body.ispass .menubtn{margin-top:0}
 .bnav button.dot{position:relative}
 .bnav button.dot::after{content:"";position:absolute;top:5px;left:calc(50% + 8px);width:10px;height:10px;border-radius:50%;background:var(--gold,#E9A91A);box-shadow:0 0 0 2px var(--surface)}
 .goal .rcard+.rcard{margin-top:10px}
+
+/* status bar scrim: scrolled content never collides with the clock */
+body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bg);opacity:.9;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:60;pointer-events:none}
 </style>
 
 <div class="app">
@@ -1476,7 +1479,7 @@ body.ispass .menubtn{margin-top:0}
     TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
       cards+='<button class="tcard'+(on?' on':'')+'" data-a="trail" data-t="'+tr.id+'" style="--tc:'+TRCOL[tr.id]+';--p:'+pc+'" aria-pressed="'+on+'"><span class="tic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+TRICON[tr.id]+'</svg></span><strong>'+tr.name+'</strong><span class="tcount">'+d+' of '+L.length+' stamped</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></button>';
       lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+placeLabel(x.k)+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
-    return '<p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
+    return '<h2 class="hh">Pick a trail</h2><p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card
   function shareDraw(kind,k,cb,noimg){
@@ -1615,8 +1618,7 @@ body.ispass .menubtn{margin-top:0}
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
       h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
-        +'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'
-        +(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn gold" data-a="geo">'+(geoGranted()?'Check my location again':'Check my location for a verified visit')+'</button><p class="hint">Optional. Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
+        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';

@@ -69,9 +69,9 @@ button{font-family:inherit}
 .bimg.plain{display:flex;align-items:center;justify-content:center;border-radius:50%;border:3px solid var(--bulb-off);color:var(--muted);font:800 20px var(--font-display);letter-spacing:.04em}
 .bimg.plain.on{border-color:var(--accent);box-shadow:0 0 0 3px var(--bulb);color:var(--ink);background:var(--surface-2)}
 .bbox.lg .bimg.plain{font-size:30px}
-.hero-credit{font:500 11px var(--font-mono);letter-spacing:.04em;color:rgba(255,255,255,.8)}
+.hero-credit{font:500 11px var(--font-mono);letter-spacing:.04em;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7)}
 .hero-credit a{color:#fff}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,14,24,.72) 0%,rgba(6,14,24,.38) 48%,rgba(6,14,24,.12) 72%,rgba(6,14,24,.4) 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,14,24,.72) 0%,rgba(6,14,24,.38) 48%,rgba(6,14,24,.18) 66%,rgba(6,14,24,.74) 100%)}
 .hero h1{color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
 .hero .mono{color:rgba(255,255,255,.82)}
 .rank-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -805,3 +805,6 @@ body.ispass .menubtn{margin-top:0}
 .bnav button.dot{position:relative}
 .bnav button.dot::after{content:"";position:absolute;top:5px;left:calc(50% + 8px);width:10px;height:10px;border-radius:50%;background:var(--gold,#E9A91A);box-shadow:0 0 0 2px var(--surface)}
 .goal .rcard+.rcard{margin-top:10px}
+
+/* status bar scrim: scrolled content never collides with the clock */
+body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bg);opacity:.9;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:60;pointer-events:none}
