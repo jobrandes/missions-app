@@ -123,7 +123,7 @@
   function endDemo(){ if(demoSnap&&demoC){ demoC.done=demoSnap.done.slice(); demoC.claims=demoSnap.claims.slice(); } demoSnap=null; demoC=null; }
   function save(){ if(demoSnap) return; try{ localStorage.setItem(KEY3,JSON.stringify({city:cityId,home:atHome?1:0,p:ALL})); }catch(e){} }
   function sum(a){ return a.reduce(function(x,y){return x+y;},0); }
-  function xp(){ return sum(S.done)*100 + sum(S.claims)*25; }
+  function xp(){ var d=(demoSnap&&demoC===S)?demoSnap:S; return sum(d.done)*100 + sum(d.claims)*25; }
   function rank(x){
     var i=0; RANKS.forEach(function(r,k){ if(x>=r[0]) i=k; });
     var next=RANKS[i+1]||null;
