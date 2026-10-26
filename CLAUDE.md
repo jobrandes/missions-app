@@ -144,3 +144,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Haptic on stamp: native `StampStore.haptic` (Swift in AppDelegate.swift, UINotificationFeedbackGenerator). Compile and feel NOT yet tested on a device. JS ignores it on web or old builds.
 - Open in Maps button already existed on Find it (text search); do not add another.
 - Passport share card already existed (Passport + each town); share text now carries the web address.
+
+- Native app: Capacitor webDir is site/, whose index.html is the landing page. The landing head script redirects to play.html when running inside the app (capacitor: protocol). Do not remove it or the App Store build shows the website instead of the game.
