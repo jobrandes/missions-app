@@ -102,7 +102,11 @@ If the report form ever goes away, change the first answer to "No data collected
 
 ## App Review notes (paste into "Notes")
 
-No account or login is needed. Everything works with no setup. The app is a history scavenger hunt: open a town from the Towns tab, tap a stop, then "I am here" to check in (the optional gold "Check my location" button needs GPS, but the normal check-in works anywhere, so reviewers can try it from home), answer the question, and stamp the stop. The "Try it from home" button on the first screen lets anyone explore without being at a landmark. The app uses location only if the user taps the optional verify button; it uses no camera, microphone or notifications. The optional "Something wrong?" form sends a short text report to our own server.
+No account or login is needed. Everything works with no setup. The app is a history scavenger hunt: open a town from the Towns tab, tap a stop, then "I am here" to check in, answer the question, and stamp the stop. The normal check-in works anywhere, so reviewers can try every stop from home. The "Try it from home" button lets anyone explore without being at a landmark.
+
+Location is optional and never leaves the phone. Tapping "Check my location" (or leaving "Live location while the app is open" on) only compares the phone's position with the stop on the device, to add a gold "Visit verified" mark. There is also an optional, off-by-default Menu switch, "Alert me near stops, even when the app is closed". If a user turns it on, the app asks for Always location and notification permission, watches only the 20 nearest unstamped stops using the system's region monitoring, and posts a local notification ("You are near ...") when the user walks into one. Nothing is uploaded, and the app uses no camera or microphone. To try it without travelling, the reviewer can leave it off; the rest of the app is unaffected. The optional "Something wrong?" form sends a short text report to our own server.
+
+Native features beyond a website: progress is mirrored into the app's own storage (survives web view clean-up), region-based local notifications, on-device location checks, the system share sheet for the stamp card, and full offline use because every town, story and photo is bundled in the app.
 
 ## Contact for App Review **[YOU]**
 
