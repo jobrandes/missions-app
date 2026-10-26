@@ -632,3 +632,17 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | Sparks Marina Now | File:Sunset at Sparks Marina (27411390814).jpg | Janusz Sobolewski | CC BY 2.0 | Photo from 2012, colors enhanced by the photographer. |
 | Truckee River Now | File:Tahoe-Pyramid Trail Between Sparks and Reno, Nevada (49910575383).jpg | Ken Lund | CC BY-SA 2.0 | Photo from 2020 |
 | Sparks Marina Then | pubs.usgs.gov/fs/1997/0123/report.pdf, Figure 2 | Patrick A. Glancy, U.S. Geological Survey | Public domain (U.S. government work) | Flooded industrial Sparks, Jan 3, 1997. Not the pit itself; labeled as such. A free photo of the pit is still wanted. |
+
+## Carson City (photos added Oct 25)
+
+| Where used | File on Commons | Author | License | Notes |
+|---|---|---|---|---|
+| Header | File:Carson City Mint (1866).jpg | US government (Library of Congress) | Public domain | Date uncertain, resized |
+| Capitol Then | File:Nevada State Capitol, 1875.jpg | Unknown | Public domain | Date as listed on Commons |
+| Capitol Now, badge | File:Nevada State Capitol Building - Carson City.jpg | Quintin Soloviev | CC0 | Aerial view, resized |
+| Mint Then | File:U. S. Mint, Carson City, Nevada.tif | James H. Crockwell | Public domain | 1889 souvenir album page, resized |
+| Mint Now, badge | File:The Mint.JPG | Barbmathers | CC BY-SA 3.0 | 2012, resized |
+| Stewart Then | File:Stewart Indian School 1905.jpg | Unknown | Public domain | Date as listed on Commons |
+| Stewart Now, badge | File:Stewart Indian School.JPG | Barbmathers | CC BY-SA 3.0 | 2012, different building than Then |
+| Railroad Then | File:Virginia & Truckee RR 20, Tahoe (before restoration). Carson City engine house.jpg | Unknown | Public domain | Listed 1925, before 1931 |
+| Railroad Now, badge | File:Nevada State Railroad Museum, Carson City, Nevada - December 2019.jpg | Ken Lund | CC BY-SA 2.0 | 2019, resized |

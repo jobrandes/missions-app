@@ -1,2486 +1,2532 @@
 {
-  "reno": [
-    {
-      "q": "In what year did Reno first raise a steel arch over Virginia Street?",
-      "o": [
-        "1905",
-        "1926",
-        "1963",
-        "1987"
-      ],
-      "a": 1,
-      "why": "The first arch went up on October 23, 1926."
-    },
-    {
-      "q": "An entrant from Sacramento won $100 for writing what?",
-      "o": [
-        "The city's first newspaper",
-        "A song for the 1927 exposition",
-        "The slogan \"The Biggest Little City in the World\"",
-        "The name of the Truckee River bridge"
-      ],
-      "a": 2,
-      "why": "The slogan contest followed the 1927 highways exposition."
-    },
-    {
-      "q": "Who built the first bridge at this crossing in 1860?",
-      "o": [
-        "Myron Lake",
-        "Charles Fuller",
-        "George Wingfield",
-        "John B. Leonard"
-      ],
-      "a": 1,
-      "why": "Charles Fuller built it in 1860. Myron Lake took over in 1861 and charged tolls."
-    },
-    {
-      "q": "Which California town received the 1963 arch?",
-      "o": [
-        "Truckee",
-        "Willits",
-        "Sacramento",
-        "Auburn"
-      ],
-      "a": 1,
-      "why": "The arch went to Willits, which changed its slogan to welcome visitors to the redwoods."
-    }
-  ],
-  "vc": [
-    {
-      "q": "In what year was silver found at Virginia City?",
-      "o": [
-        "1849",
-        "1859",
-        "1875",
-        "1886"
-      ],
-      "a": 1,
-      "why": "Silver was found in 1859, setting off the Comstock Lode rush."
-    },
-    {
-      "q": "Which newspaper did young Sam Clemens write for in Virginia City?",
-      "o": [
-        "The Comstock Courier",
-        "The Silver Standard",
-        "The Territorial Enterprise",
-        "The Carson Gazette"
-      ],
-      "a": 2,
-      "why": "He wrote for the Territorial Enterprise and first signed \"Mark Twain\" in 1863."
-    },
-    {
-      "q": "What happened in Virginia City on October 26, 1875?",
-      "o": [
-        "The Fourth Ward School opened",
-        "The Great Fire",
-        "The silver ran out",
-        "The railroad arrived"
-      ],
-      "a": 1,
-      "why": "The Great Fire burned much of the town and left about 2,000 people homeless."
-    },
-    {
-      "q": "In what year did the last class graduate from the Fourth Ward School?",
-      "o": [
-        "1876",
-        "1936",
-        "1961",
-        "1986"
-      ],
-      "a": 1,
-      "why": "The last class graduated in 1936. The building reopened as a museum in 1986."
-    }
-  ],
-  "tahoeicons": [
-    {
-      "q": "Who built Vikingsholm in 1929?",
-      "o": [
-        "George Whittell Jr.",
-        "Alonzo Richardson",
-        "Lora Josephine Knight",
-        "Walter Hobart Jr."
-      ],
-      "a": 2,
-      "why": "Lora Josephine Knight built it, with the architect Lennart Palme."
-    },
-    {
-      "q": "What is the only island in Lake Tahoe called?",
-      "o": [
-        "Bliss Island",
-        "Fannette Island",
-        "Tallac Island",
-        "Richardson Island"
-      ],
-      "a": 1,
-      "why": "Fannette Island sits in Emerald Bay."
-    },
-    {
-      "q": "In which year did the first Cave Rock highway tunnel open?",
-      "o": [
-        "1905",
-        "1931",
-        "1957",
-        "1994"
-      ],
-      "a": 1,
-      "why": "The first tunnel opened in 1931."
-    },
-    {
-      "q": "Camp Richardson is named after whom?",
-      "o": [
-        "Captain Alonzo L. Richardson",
-        "Governor Richardson",
-        "Joe King",
-        "Robert Watson"
-      ],
-      "a": 0,
-      "why": "Captain Alonzo L. Richardson started a stage service here in 1921."
-    }
-  ],
-  "tahoe": [
-    {
-      "q": "What was built to carry guests to the Tahoe Tavern by 1902?",
-      "o": [
-        "A cable car line",
-        "A monorail",
-        "A narrow gauge railway from Truckee",
-        "A streetcar line"
-      ],
-      "a": 2,
-      "why": "A narrow gauge railway ran 15 miles from Truckee to a pier at Tahoe City."
-    },
-    {
-      "q": "In what year was the present concrete Lake Tahoe Dam finished?",
-      "o": [
-        "1870",
-        "1909",
-        "1913",
-        "1981"
-      ],
-      "a": 2,
-      "why": "It was built between 1909 and 1913."
-    },
-    {
-      "q": "When did the original gatekeeper's cabin burn?",
-      "o": [
-        "1910",
-        "1964",
-        "1978",
-        "1981"
-      ],
-      "a": 2,
-      "why": "It burned in 1978. The present cabin was finished in 1981."
-    },
-    {
-      "q": "For whom did Robert Watson build his log cabin in 1908?",
-      "o": [
-        "His son and daughter-in-law",
-        "The new gatekeeper",
-        "A summer gift shop",
-        "The Tahoe Water War judge"
-      ],
-      "a": 0,
-      "why": "He built it for his son and daughter-in-law, who moved in during 1909."
-    }
-  ],
-  "boston": [
-    {
-      "q": "In what year was the Old State House completed?",
-      "o": [
-        "1680",
-        "1713",
-        "1742",
-        "1776"
-      ],
-      "a": 1,
-      "why": "It is the city's oldest surviving public building."
-    },
-    {
-      "q": "How did the town vote on accepting Faneuil's market in 1740?",
-      "o": [
-        "Unanimously",
-        "367 to 360",
-        "200 to 10",
-        "It was decided by a coin flip"
-      ],
-      "a": 1,
-      "why": "The vote was 367 to 360, so it was very close."
-    },
-    {
-      "q": "In what year did Paul Revere buy his house?",
-      "o": [
-        "1680",
-        "1735",
-        "1770",
-        "1800"
-      ],
-      "a": 2,
-      "why": "He bought it on January 13, 1770, and owned it until 1800."
-    },
-    {
-      "q": "How many lanterns were hung in the Old North Church steeple on April 18, 1775?",
-      "o": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
-      ],
-      "a": 1,
-      "why": "Two lanterns warned patriots in Charlestown that the British were moving by water."
-    }
-  ],
-  "dc": [
-    {
-      "q": "In what year was the Lincoln Memorial dedicated?",
-      "o": [
-        "1863",
-        "1922",
-        "1943",
-        "1963"
-      ],
-      "a": 1,
-      "why": "It was dedicated on May 30, 1922."
-    },
-    {
-      "q": "Work on the Washington Monument stopped in 1854. When did it resume?",
-      "o": [
-        "1865",
-        "1877",
-        "1888",
-        "1913"
-      ],
-      "a": 1,
-      "why": "Work stopped from 1854 until 1877 because of money problems and the Civil War."
-    },
-    {
-      "q": "In what year did British troops burn the Capitol?",
-      "o": [
-        "1776",
-        "1793",
-        "1814",
-        "1866"
-      ],
-      "a": 2,
-      "why": "British troops burned it on August 24, 1814, during the War of 1812."
-    },
-    {
-      "q": "When was the bronze statue of Jefferson installed?",
-      "o": [
-        "1943",
-        "1947",
-        "1952",
-        "1969"
-      ],
-      "a": 1,
-      "why": "A plaster statue stood there in 1943. The bronze one arrived in April 1947."
-    }
-  ],
-  "ny": [
-    {
-      "q": "Who helped supervise the Brooklyn Bridge construction for about 11 years after Washington Roebling became too ill to visit?",
-      "o": [
-        "John A. Roebling",
-        "Emily Warren Roebling",
-        "P. T. Barnum",
-        "Daniel Burnham"
-      ],
-      "a": 1,
-      "why": "Emily Warren Roebling relayed communications and managed daily work."
-    },
-    {
-      "q": "When did Grand Central Terminal open?",
-      "o": [
-        "1883",
-        "1902",
-        "1913",
-        "1950"
-      ],
-      "a": 2,
-      "why": "It opened on February 2, 1913."
-    },
-    {
-      "q": "What was the Flatiron Building first called?",
-      "o": [
-        "The Fuller Building",
-        "The Burnham Tower",
-        "The Broadway Wedge",
-        "The Fifth Avenue Building"
-      ],
-      "a": 0,
-      "why": "It was named for George A. Fuller, founder of the Fuller Company."
-    },
-    {
-      "q": "Whose company built the iron frame inside the Statue of Liberty?",
-      "o": [
-        "Bartholdi's",
-        "Gustave Eiffel's",
-        "Daniel Burnham's",
-        "Thomas Walter's"
-      ],
-      "a": 1,
-      "why": "Gustave Eiffel's company built the frame. Bartholdi was the sculptor."
-    }
-  ],
-  "chicago": [
-    {
-      "q": "How many stainless steel plates make up Cloud Gate?",
-      "o": [
-        "88",
-        "168",
-        "240",
-        "336"
-      ],
-      "a": 1,
-      "why": "Wikipedia gives 168 plates."
-    },
-    {
-      "q": "Who remodeled the Rookery's lobby in 1905?",
-      "o": [
-        "Louis Sullivan",
-        "Mies van der Rohe",
-        "Daniel Burnham",
-        "Frank Lloyd Wright"
-      ],
-      "a": 3,
-      "why": "Frank Lloyd Wright, from 1905 to 1907."
-    },
-    {
-      "q": "The sea horses at Buckingham Fountain stand for what?",
-      "o": [
-        "Four famous mayors",
-        "The four states that touch Lake Michigan",
-        "Four Great Lakes",
-        "Chicago's four founders"
-      ],
-      "a": 1,
-      "why": "Illinois, Wisconsin, Michigan and Indiana."
-    },
-    {
-      "q": "About how big is the Lincoln Park Conservatory?",
-      "o": [
-        "3 acres",
-        "30 acres",
-        "300 acres",
-        "1 acre"
-      ],
-      "a": 0,
-      "why": "About 3 acres."
-    }
-  ],
-  "sf": [
-    {
-      "q": "What is the Golden Gate Bridge's official color called?",
-      "o": [
-        "International Orange",
-        "Signal Red",
-        "Burnt Sienna",
-        "Coral Fog"
-      ],
-      "a": 0,
-      "why": "Irving Morrow chose International Orange."
-    },
-    {
-      "q": "In what year did the Ferry Building open?",
-      "o": [
-        "1869",
-        "1898",
-        "1915",
-        "1937"
-      ],
-      "a": 1,
-      "why": "It opened on July 13, 1898."
-    },
-    {
-      "q": "Lillie Hitchcock Coit left money for what purpose?",
-      "o": [
-        "Building a hospital",
-        "Paying for a bridge",
-        "Adding to the beauty of the city",
-        "Founding a school"
-      ],
-      "a": 2,
-      "why": "Her bequest funded Coit Tower."
-    },
-    {
-      "q": "Why was the Palace of Fine Arts rebuilt in concrete?",
-      "o": [
-        "A fire destroyed it",
-        "The temporary plaster building decayed",
-        "It was moved",
-        "A flood washed it away"
-      ],
-      "a": 1,
-      "why": "It was built of plaster over wood for the 1915 fair and decayed."
-    }
-  ],
-  "philly": [
-    {
-      "q": "Which document was drafted at Independence Hall in 1787?",
-      "o": [
-        "The Emancipation Proclamation",
-        "The Articles of Confederation",
-        "The U.S. Constitution",
-        "The Bill of Rights"
-      ],
-      "a": 2,
-      "why": "The Constitutional Convention met May 25 to September 17, 1787."
-    },
-    {
-      "q": "Who gave the Liberty Bell its famous name in the 1830s?",
-      "o": [
-        "The Founders",
-        "Abolitionists",
-        "Congress",
-        "A bell maker"
-      ],
-      "a": 1,
-      "why": "Abolitionist societies called it the Liberty Bell."
-    },
-    {
-      "q": "The Betsy Ross flag story traces back mostly to whom?",
-      "o": [
-        "Her relatives and the 1876 Centennial",
-        "George Washington's diary",
-        "A Congress record",
-        "A newspaper from 1777"
-      ],
-      "a": 0,
-      "why": "Historians trace it to her grandsons, the Canbys, and the Centennial."
-    },
-    {
-      "q": "Carpenters' Hall hosted which Congress in 1774?",
-      "o": [
-        "Second Continental Congress",
-        "First Continental Congress",
-        "Confederation Congress",
-        "Congress of the Union"
-      ],
-      "a": 1,
-      "why": "The First Continental Congress, September 5 to October 26, 1774."
-    }
-  ],
-  "la": [
-    {
-      "q": "When was the Bradbury Building built?",
-      "o": [
-        "1850",
-        "1920",
-        "1893",
-        "1975"
-      ],
-      "a": 2,
-      "why": "It was built in 1893 and finished in 1894."
-    },
-    {
-      "q": "What did the Hollywood Sign originally read?",
-      "o": [
-        "Hollywoodland",
-        "Hollywood Hills",
-        "Tinseltown",
-        "Studio City"
-      ],
-      "a": 0,
-      "why": "It advertised the Hollywoodland housing development in 1923."
-    },
-    {
-      "q": "Angels Flight opened in which year?",
-      "o": [
-        "1901",
-        "1925",
-        "1950",
-        "1996"
-      ],
-      "a": 0,
-      "why": "It opened in 1901."
-    },
-    {
-      "q": "How many settlers founded Los Angeles in 1781?",
-      "o": [
-        "12",
-        "44",
-        "100",
-        "200"
-      ],
-      "a": 1,
-      "why": "11 families, 44 people."
-    }
-  ],
-  "seattle": [
-    {
-      "q": "What was the Space Needle built for?",
-      "o": [
-        "A baseball opening",
-        "The 1962 World's Fair",
-        "A radio station",
-        "A lumber company"
-      ],
-      "a": 1,
-      "why": "It opened April 21, 1962 for the Century 21 Exposition."
-    },
-    {
-      "q": "Who is the bronze pig at Pike Place Market named?",
-      "o": [
-        "Penny",
-        "Wilbur",
-        "Pearl",
-        "Rachel"
-      ],
-      "a": 3,
-      "why": "Rachel is a 550-pound bronze piggy bank."
-    },
-    {
-      "q": "Smith Tower was the tallest building west of the Mississippi until which year?",
-      "o": [
-        "1931",
-        "1962",
-        "1914",
-        "1948"
-      ],
-      "a": 0,
-      "why": "The Kansas City Power & Light Building passed it in 1931."
-    },
-    {
-      "q": "Which Seattle neighborhood was destroyed in the fire of June 6, 1889?",
-      "o": [
-        "Pioneer Square",
-        "Capitol Hill",
-        "Ballard",
-        "Fremont"
-      ],
-      "a": 0,
-      "why": "Pioneer Square."
-    }
-  ],
-  "nola": [
-    {
-      "q": "When did Jackson Square get its current name?",
-      "o": [
-        "1803",
-        "1814",
-        "1851",
-        "1895"
-      ],
-      "a": 2,
-      "why": "It kept the name Place d'Armes until 1851."
-    },
-    {
-      "q": "What destroyed the earlier St. Louis church in 1788?",
-      "o": [
-        "A hurricane",
-        "A flood",
-        "An earthquake",
-        "The Great New Orleans Fire"
-      ],
-      "a": 3,
-      "why": "It burned on Good Friday, March 21, 1788."
-    },
-    {
-      "q": "Which roof was added to the Cabildo in 1847?",
-      "o": [
-        "A thatched roof",
-        "A mansard roof",
-        "A glass roof",
-        "A dome"
-      ],
-      "a": 1,
-      "why": "A third floor with a French-style mansard roof."
-    },
-    {
-      "q": "The French Market was dedicated as a market in which year?",
-      "o": [
-        "1791",
-        "1850",
-        "1815",
-        "1920"
-      ],
-      "a": 0,
-      "why": "Part of the space was dedicated as a market in 1791."
-    }
-  ],
-  "detroit": [
-    {
-      "q": "What did Diego Rivera paint in the Rivera Court?",
-      "o": [
-        "Oil portraits",
-        "Fresco murals",
-        "Mosaics",
-        "Stained glass"
-      ],
-      "a": 1,
-      "why": "He painted the Detroit Industry murals in fresco, 1932 to 1933."
-    },
-    {
-      "q": "What was the Fisher Building's roof first covered in?",
-      "o": [
-        "Copper sheets",
-        "Slate",
-        "Glass",
-        "Gold-leaf tiles"
-      ],
-      "a": 3,
-      "why": "The roof was gold-leaf tiles at first."
-    },
-    {
-      "q": "What do roads like Eight Mile measure their distance from?",
-      "o": [
-        "Campus Martius",
-        "Belle Isle",
-        "The Ambassador Bridge",
-        "Eastern Market"
-      ],
-      "a": 0,
-      "why": "Detroit's coordinate system starts at the Point of Origin in Campus Martius."
-    },
-    {
-      "q": "When did Michigan Central Station reopen?",
-      "o": [
-        "1988",
-        "2018",
-        "2024",
-        "1913"
-      ],
-      "a": 2,
-      "why": "It reopened in June 2024."
-    }
-  ],
-  "minneapolis": [
-    {
-      "q": "What ignited in the 1878 Washburn A Mill explosion?",
-      "o": [
-        "Coal gas",
-        "Flour dust",
-        "Gunpowder",
-        "Lamp oil"
-      ],
-      "a": 1,
-      "why": "Airborne flour dust ignited."
-    },
-    {
-      "q": "What was the Stone Arch Bridge built for?",
-      "o": [
-        "Trains",
-        "Cars",
-        "Boats",
-        "Pedestrians"
-      ],
-      "a": 0,
-      "why": "It carried a railroad."
-    },
-    {
-      "q": "Which waterfall was the only natural major waterfall on the Mississippi?",
-      "o": [
-        "Minnehaha Falls",
-        "Niagara Falls",
-        "Saint Anthony Falls",
-        "Hidden Falls"
-      ],
-      "a": 2,
-      "why": "Saint Anthony Falls."
-    },
-    {
-      "q": "Who designated the Basilica of Saint Mary a basilica in 1926?",
-      "o": [
-        "Pope Leo XIII",
-        "Pope John Paul II",
-        "Pope Benedict XV",
-        "Pope Pius XI"
-      ],
-      "a": 3,
-      "why": "Pope Pius XI made it the first basilica in the United States."
-    }
-  ],
-  "atlanta": [
-    {
-      "q": "Who was co-pastor at Ebenezer with his father from 1960?",
-      "o": [
-        "Ralph Abernathy",
-        "Andrew Young",
-        "Jesse Jackson",
-        "Martin Luther King Jr."
-      ],
-      "a": 3,
-      "why": "King served as co-pastor until 1968."
-    },
-    {
-      "q": "The Georgia Capitol's gold leaf came from near which town?",
-      "o": [
-        "Dahlonega",
-        "Sacramento",
-        "Fairbanks",
-        "Johannesburg"
-      ],
-      "a": 0,
-      "why": "Gold from near Dahlonega in Lumpkin County."
-    },
-    {
-      "q": "Atlanta's Flatiron Building was finished how many years before New York's?",
-      "o": [
-        "1",
-        "5",
-        "10",
-        "25"
-      ],
-      "a": 1,
-      "why": "Five years."
-    },
-    {
-      "q": "Piedmont Park sits on the site of which 1895 event?",
-      "o": [
-        "A World's Fair",
-        "A Civil War muster",
-        "Cotton States and International Exposition",
-        "The Olympic Games"
-      ],
-      "a": 2,
-      "why": "The Cotton States and International Exposition."
-    }
-  ],
-  "memphis": [
-    {
-      "q": "Who opened Sun Studio?",
-      "o": [
-        "Sam Phillips",
-        "Elvis Presley",
-        "Johnny Cash",
-        "W.C. Handy"
-      ],
-      "a": 0,
-      "why": "Sam Phillips, January 3, 1950."
-    },
-    {
-      "q": "What did Congress call Beale Street in 1977?",
-      "o": [
-        "The Jazz Mile",
-        "Music Row",
-        "Blues Avenue",
-        "The Home of the Blues"
-      ],
-      "a": 3,
-      "why": "December 15, 1977."
-    },
-    {
-      "q": "How much did Elvis pay for Graceland?",
-      "o": [
-        "$25,000",
-        "$102,500",
-        "$1 million",
-        "$500,000"
-      ],
-      "a": 1,
-      "why": "He paid $102,500 in 1957."
-    },
-    {
-      "q": "Floor trading at the Memphis Cotton Exchange ended in which year?",
-      "o": [
-        "1939",
-        "1950",
-        "1978",
-        "2001"
-      ],
-      "a": 2,
-      "why": "Floor trading closed in 1978."
-    }
-  ],
-  "savannah": [
-    {
-      "q": "When was the Forsyth Park fountain installed?",
-      "o": [
-        "1776",
-        "1812",
-        "1858",
-        "1902"
-      ],
-      "a": 2,
-      "why": "It was installed in 1858."
-    },
-    {
-      "q": "The cathedral was rebuilt after a fire in which year?",
-      "o": [
-        "1876",
-        "1912",
-        "1865",
-        "1898"
-      ],
-      "a": 3,
-      "why": "Fire destroyed the interior on February 6, 1898."
-    },
-    {
-      "q": "Which Georgia fort fell to rifled cannon in about 30 hours in 1862?",
-      "o": [
-        "Fort Pulaski",
-        "Fort Sumter",
-        "Fort Moultrie",
-        "Fort McHenry"
-      ],
-      "a": 0,
-      "why": "Fort Pulaski, on Cockspur Island."
-    },
-    {
-      "q": "What trade built River Street's warehouses?",
-      "o": [
-        "Tobacco",
-        "Cotton",
-        "Coal",
-        "Steel"
-      ],
-      "a": 1,
-      "why": "Cotton brokers, called factors, worked there."
-    }
-  ],
-  "denver": [
-    {
-      "q": "In what year was the Mizpah arch in front of Union Station dedicated?",
-      "o": [
-        "1881",
-        "1894",
-        "1906",
-        "1931"
-      ],
-      "a": 2,
-      "why": "It was dedicated on July 4, 1906 and torn down in 1931."
-    },
-    {
-      "q": "Which president was the first sitting president to visit the Brown Palace?",
-      "o": [
-        "Theodore Roosevelt",
-        "Abraham Lincoln",
-        "Harry Truman",
-        "Herbert Hoover"
-      ],
-      "a": 0,
-      "why": "Theodore Roosevelt visited on May 8, 1905."
-    },
-    {
-      "q": "The Denver Mint's building is based on a palace in which city?",
-      "o": [
-        "Paris",
-        "Madrid",
-        "Vienna",
-        "Florence"
-      ],
-      "a": 3,
-      "why": "It is based on the Palazzo Medici-Riccardi in Florence."
-    },
-    {
-      "q": "What was the land under Cheesman Park before it became a park?",
-      "o": [
-        "A farm",
-        "A cemetery",
-        "A railyard",
-        "A mine"
-      ],
-      "a": 1,
-      "why": "It was Prospect Hill Cemetery."
-    }
-  ],
-  "santafe": [
-    {
-      "q": "The Santa Fe Trail connected the Plaza with which state?",
-      "o": [
-        "Texas",
-        "Kansas",
-        "Missouri",
-        "Ohio"
-      ],
-      "a": 2,
-      "why": "It linked New Mexico with Missouri."
-    },
-    {
-      "q": "La Fonda simply means what in Spanish?",
-      "o": [
-        "The fountain",
-        "The inn",
-        "The plaza",
-        "The fire"
-      ],
-      "a": 1,
-      "why": "Wikipedia says it means the inn."
-    },
-    {
-      "q": "In which year was San Miguel Chapel rebuilt after the Pueblo Revolt?",
-      "o": [
-        "1610",
-        "1680",
-        "1798",
-        "1710"
-      ],
-      "a": 3,
-      "why": "It was rebuilt in 1710."
-    },
-    {
-      "q": "Which governor finished writing Ben-Hur in the Palace of the Governors?",
-      "o": [
-        "Lew Wallace",
-        "Pedro de Peralta",
-        "Diego de Vargas",
-        "Kit Carson"
-      ],
-      "a": 0,
-      "why": "Lew Wallace wrote the final parts there in the late 1870s."
-    }
-  ],
-  "phoenix": [
-    {
-      "q": "In which year did the Arizona territorial legislature move to Phoenix?",
-      "o": [
-        "1889",
-        "1864",
-        "1900",
-        "1912"
-      ],
-      "a": 0,
-      "why": "It voted to move to Phoenix on January 29, 1889."
-    },
-    {
-      "q": "Why did Dr. Rosson resign as mayor?",
-      "o": [
-        "He moved to California",
-        "He got sick",
-        "Trouble with the city council",
-        "He lost a lawsuit"
-      ],
-      "a": 2,
-      "why": "He resigned after difficulties with the city council."
-    },
-    {
-      "q": "Who is the architect of record of the Arizona Biltmore?",
-      "o": [
-        "Frank Lloyd Wright",
-        "Albert Chase McArthur",
-        "Mary Colter",
-        "James Riely Gordon"
-      ],
-      "a": 1,
-      "why": "Albert Chase McArthur designed it. Wright only consulted."
-    },
-    {
-      "q": "What formed the Arizona Falls waterfall?",
-      "o": [
-        "A river",
-        "An earthquake",
-        "A glacier",
-        "A canal over a rock ledge"
-      ],
-      "a": 3,
-      "why": "The man-made Arizona Canal crossed a natural 20-foot drop."
-    }
-  ],
-  "albuquerque": [
-    {
-      "q": "In which year did the Alvarado Hotel open?",
-      "o": [
-        "1887",
-        "1927",
-        "1902",
-        "1970"
-      ],
-      "a": 2,
-      "why": "It opened on May 10, 1902."
-    },
-    {
-      "q": "What was the KiMo's name chosen through?",
-      "o": [
-        "A school vote",
-        "A newspaper contest",
-        "A coin toss",
-        "The mayor's decision"
-      ],
-      "a": 1,
-      "why": "A newspaper naming contest, won by Pablo Abeita."
-    },
-    {
-      "q": "What was the main job at the Santa Fe Railway Shops?",
-      "o": [
-        "Steam locomotive maintenance",
-        "Building passenger cars",
-        "Printing tickets",
-        "Making rails"
-      ],
-      "a": 0,
-      "why": "They overhauled steam locomotives."
-    },
-    {
-      "q": "In which year did construction on the current San Felipe de Neri Church begin?",
-      "o": [
-        "1706",
-        "1793",
-        "1850",
-        "1902"
-      ],
-      "a": 1,
-      "why": "Construction began in 1793 after the first church collapsed."
-    }
-  ],
-  "tucson": [
-    {
-      "q": "Who founded Mission San Xavier del Bac in 1692?",
-      "o": [
-        "Coronado",
-        "Junipero Serra",
-        "Eusebio Kino",
-        "Diego de Vargas"
-      ],
-      "a": 2,
-      "why": "Eusebio Kino, a Jesuit, founded it."
-    },
-    {
-      "q": "The Tucson depot was restored to the look it had in which year?",
-      "o": [
-        "1907",
-        "1941",
-        "1970",
-        "2004"
-      ],
-      "a": 1,
-      "why": "Restoration returned it to its 1941 Spanish Colonial Revival look."
-    },
-    {
-      "q": "Who designed the Pima County Courthouse?",
-      "o": [
-        "Roy Place",
-        "Frank Lloyd Wright",
-        "Mary Colter",
-        "Daniel Patterson"
-      ],
-      "a": 0,
-      "why": "Roy Place designed it in 1928."
-    },
-    {
-      "q": "Why was Old Main renamed the School of Agriculture?",
-      "o": [
-        "It was moved",
-        "Federal loans for agricultural schools",
-        "A fire",
-        "The state demanded it"
-      ],
-      "a": 1,
-      "why": "Officials found federal loans for agricultural schools were available."
-    }
-  ],
-  "pittsburgh": [
-    {
-      "q": "On which date did the Monongahela Incline open?",
-      "o": [
-        "May 28, 1870",
-        "July 4, 1776",
-        "March 19, 1883",
-        "October 13, 1884"
-      ],
-      "a": 0,
-      "why": "It opened on May 28, 1870."
-    },
-    {
-      "q": "Who designed the Smithfield Street Bridge that stands today?",
-      "o": [
-        "John Roebling",
-        "Louis Wernwag",
-        "Henry Bouquet",
-        "Gustav Lindenthal"
-      ],
-      "a": 3,
-      "why": "Gustav Lindenthal designed the present bridge."
-    },
-    {
-      "q": "What happened to Pittsburgh's old courthouse on May 7, 1882?",
-      "o": [
-        "It was torn down",
-        "It was moved",
-        "It burned",
-        "It was sold"
-      ],
-      "a": 2,
-      "why": "A fire destroyed it, and Richardson's design replaced it."
-    },
-    {
-      "q": "Who refused Henry Clay Frick's offer to move the Block House?",
-      "o": [
-        "The city council",
-        "The Daughters of the American Revolution",
-        "The army",
-        "The governor"
-      ],
-      "a": 1,
-      "why": "The Daughters refused his $25,000 offer, and the court backed them."
-    }
-  ],
-  "baltimore": [
-    {
-      "q": "What famous message was first sent to Mount Clare by telegraph in 1844?",
-      "o": [
-        "Hello, world",
-        "What hath God wrought?",
-        "The war is over",
-        "Come at once"
-      ],
-      "a": 1,
-      "why": "Samuel Morse's telegraph carried \"What hath God wrought?\" on May 24, 1844."
-    },
-    {
-      "q": "Who designed Baltimore's Washington Monument?",
-      "o": [
-        "Robert Mills",
-        "Edmund Lind",
-        "Jean Foncin",
-        "George Peabody"
-      ],
-      "a": 0,
-      "why": "Robert Mills won the 1814 design competition."
-    },
-    {
-      "q": "For how many hours did the British bombard Fort McHenry in 1814?",
-      "o": [
-        "8",
-        "12",
-        "25",
-        "100"
-      ],
-      "a": 2,
-      "why": "The bombardment lasted 25 hours."
-    },
-    {
-      "q": "Who designed the George Peabody Library?",
-      "o": [
-        "Robert Mills",
-        "Edmund George Lind",
-        "Jean Foncin",
-        "John Chislett"
-      ],
-      "a": 1,
-      "why": "Local architect Edmund George Lind designed it, and it opened in 1878."
-    }
-  ],
-  "cleveland": [
-    {
-      "q": "Who designed the Soldiers' and Sailors' Monument?",
-      "o": [
-        "Levi Scofield",
-        "John Eisenmann",
-        "Charles Heard",
-        "Louis Sullivan"
-      ],
-      "a": 0,
-      "why": "Levi T. Scofield, a Civil War veteran, designed it and made its sculptures."
-    },
-    {
-      "q": "In what year did the Cleveland Arcade open?",
-      "o": [
-        "1927",
-        "1894",
-        "1890",
-        "1975"
-      ],
-      "a": 2,
-      "why": "It opened on May 30, 1890."
-    },
-    {
-      "q": "When was the replica steeple added to the Old Stone Church?",
-      "o": [
-        "1857",
-        "1884",
-        "1927",
-        "1999"
-      ],
-      "a": 3,
-      "why": "The replica was added in 1999."
-    },
-    {
-      "q": "The Terminal Tower was planned as 14 stories. How many did it end up with?",
-      "o": [
-        "28",
-        "52",
-        "40",
-        "100"
-      ],
-      "a": 1,
-      "why": "It was expanded to 52 floors."
-    }
-  ],
-  "stlouis": [
-    {
-      "q": "Who designed the Gateway Arch?",
-      "o": [
-        "Louis Sullivan",
-        "Eero Saarinen",
-        "James Eads",
-        "Theodore Link"
-      ],
-      "a": 1,
-      "why": "Eero Saarinen designed it in 1947."
-    },
-    {
-      "q": "How long is the Eads Bridge's center arch?",
-      "o": [
-        "220 feet",
-        "520 feet",
-        "1,020 feet",
-        "52 feet"
-      ],
-      "a": 1,
-      "why": "It is 520 feet, the longest rigid span at the time."
-    },
-    {
-      "q": "In what year did St. Louis Union Station open?",
-      "o": [
-        "1894",
-        "1904",
-        "1926",
-        "1978"
-      ],
-      "a": 0,
-      "why": "It opened on September 1, 1894."
-    },
-    {
-      "q": "Who called the Wainwright Building the first human expression of a tall steel office building as architecture?",
-      "o": [
-        "Louis Sullivan",
-        "Eero Saarinen",
-        "Frank Lloyd Wright",
-        "Ellis Wainwright"
-      ],
-      "a": 2,
-      "why": "Frank Lloyd Wright said it."
-    }
-  ],
-  "cincinnati": [
-    {
-      "q": "What was the Roebling bridge's main span when it opened in 1867?",
-      "o": [
-        "1,595 feet",
-        "1,057 feet",
-        "500 feet",
-        "2,000 feet"
-      ],
-      "a": 1,
-      "why": "Wikipedia says the main span was 1,057 feet."
-    },
-    {
-      "q": "The Tyler Davidson Fountain is also called what?",
-      "o": [
-        "The River Queen",
-        "The Queen City Fountain",
-        "The Silver Rain",
-        "The Genius of Water"
-      ],
-      "a": 3,
-      "why": "It is also called The Genius of Water."
-    },
-    {
-      "q": "Music Hall is in which neighborhood?",
-      "o": [
-        "Mount Adams",
-        "Over-the-Rhine",
-        "Downtown Kentucky",
-        "Roebling Point"
-      ],
-      "a": 1,
-      "why": "It sits in Over-the-Rhine across from Washington Park."
-    },
-    {
-      "q": "How tall is the Carew Tower?",
-      "o": [
-        "200 feet",
-        "1,000 feet",
-        "398 feet",
-        "574 feet"
-      ],
-      "a": 3,
-      "why": "It is 574 feet tall."
-    }
-  ],
-  "indianapolis": [
-    {
-      "q": "Who designed the Soldiers' and Sailors' Monument?",
-      "o": [
-        "Bruno Schmitz",
-        "Thomas Rodd",
-        "Eero Saarinen",
-        "Daniel Burnham"
-      ],
-      "a": 0,
-      "why": "German architect Bruno Schmitz designed it."
-    },
-    {
-      "q": "In what year was the current Indiana Statehouse built?",
-      "o": [
-        "1916",
-        "1902",
-        "1888",
-        "1824"
-      ],
-      "a": 2,
-      "why": "It was built in 1888."
-    },
-    {
-      "q": "Who designed the 1888 Union Station?",
-      "o": [
-        "Thomas Rodd",
-        "Bruno Schmitz",
-        "Louis Sullivan",
-        "George Cary"
-      ],
-      "a": 0,
-      "why": "Thomas Rodd of Pittsburgh designed it."
-    },
-    {
-      "q": "The Indiana World War Memorial Plaza started as a plan to lure which group's headquarters?",
-      "o": [
-        "The Red Cross",
-        "The Olympic Committee",
-        "The American Legion",
-        "The Boy Scouts"
-      ],
-      "a": 2,
-      "why": "It started in 1919 to attract the American Legion."
-    }
-  ],
-  "buffalo": [
-    {
-      "q": "How many stories does Buffalo City Hall have?",
-      "o": [
-        "49",
-        "10",
-        "52",
-        "32"
-      ],
-      "a": 3,
-      "why": "It has 32 stories."
-    },
-    {
-      "q": "Ellicott Square was the world's largest office building by floor area until what year?",
-      "o": [
-        "1975",
-        "1908",
-        "1896",
-        "1931"
-      ],
-      "a": 1,
-      "why": "It held the record until 1908."
-    },
-    {
-      "q": "How tall is the Old Post Office's tower?",
-      "o": [
-        "74 feet",
-        "398 feet",
-        "574 feet",
-        "244 feet"
-      ],
-      "a": 3,
-      "why": "Wikipedia gives 244 feet."
-    },
-    {
-      "q": "The History Museum's building was built for which event?",
-      "o": [
-        "The Olympic Games",
-        "The Pan-American Exposition",
-        "The 1932 Centennial",
-        "The Erie Canal opening"
-      ],
-      "a": 1,
-      "why": "It was the New York State pavilion at the 1901 Pan-American Exposition."
-    }
-  ],
-  "richmond": [
-    {
-      "q": "Who is credited with the overall design of the Virginia State Capitol?",
-      "o": [
-        "Patrick Henry",
-        "Lewis Ginter",
-        "Robert E. Lee",
-        "Thomas Jefferson"
-      ],
-      "a": 3,
-      "why": "Thomas Jefferson, together with Charles-Louis Clérisseau."
-    },
-    {
-      "q": "What neighborhood is named for St. John's Church?",
-      "o": [
-        "Church Hill",
-        "Shockoe Bottom",
-        "The Fan",
-        "Jackson Ward"
-      ],
-      "a": 0,
-      "why": "Wikipedia says the Church Hill district was named for it."
-    },
-    {
-      "q": "The architects of the Jefferson Hotel later designed which library?",
-      "o": [
-        "The Morgan Library",
-        "The New York Public Library",
-        "The Library of Congress",
-        "The Boston Public Library"
-      ],
-      "a": 1,
-      "why": "Carrère and Hastings designed the New York Public Library."
-    },
-    {
-      "q": "Main Street Station was built by Seaboard and which other railroad?",
-      "o": [
-        "Pennsylvania Railroad",
-        "Southern Pacific",
-        "Chesapeake and Ohio",
-        "Union Pacific"
-      ],
-      "a": 2,
-      "why": "The C&O and Seaboard built it together in 1901."
-    }
-  ],
-  "charleston": [
-    {
-      "q": "How many houses make up Rainbow Row?",
-      "o": [
-        "Thirty",
-        "Seven",
-        "Thirteen",
-        "Three"
-      ],
-      "a": 2,
-      "why": "There are thirteen buildings."
-    },
-    {
-      "q": "Which group preserves the Old Exchange?",
-      "o": [
-        "The National Guard",
-        "The Boy Scouts",
-        "The Coast Guard",
-        "Daughters of the American Revolution"
-      ],
-      "a": 3,
-      "why": "It was granted to the DAR in 1913."
-    },
-    {
-      "q": "White Point Garden is at the end of which seawall?",
-      "o": [
-        "The Battery",
-        "The Wharf",
-        "The Breakwater",
-        "The Levee"
-      ],
-      "a": 0,
-      "why": "It is the southern end of the Battery."
-    },
-    {
-      "q": "Which U.S. president worshipped in pew 43 at St. Michael's in 1791?",
-      "o": [
-        "James Madison",
-        "George Washington",
-        "Thomas Jefferson",
-        "Abraham Lincoln"
-      ],
-      "a": 1,
-      "why": "George Washington visited in 1791."
-    }
-  ],
-  "houston": [
-    {
-      "q": "Who built the current Rice Hotel in 1913?",
-      "o": [
-        "William Marsh Rice",
-        "Eugene Heiner",
-        "George Dickey",
-        "Jesse H. Jones"
-      ],
-      "a": 3,
-      "why": "Jesse H. Jones built it in 1913."
-    },
-    {
-      "q": "Market Square was originally named what?",
-      "o": [
-        "Congress Square",
-        "Bayou Square",
-        "Union Square",
-        "Rice Square"
-      ],
-      "a": 0,
-      "why": "It was named Congress Square in the original survey."
-    },
-    {
-      "q": "Houston's Union Station now sits beside what?",
-      "o": [
-        "A university",
-        "A baseball park",
-        "An airport",
-        "A prison"
-      ],
-      "a": 1,
-      "why": "It is a cornerstone of the baseball park."
-    },
-    {
-      "q": "In what year did the Houston Cotton Exchange move out of its building?",
-      "o": [
-        "1907",
-        "1973",
-        "1924",
-        "1884"
-      ],
-      "a": 2,
-      "why": "It moved to a new building in 1924."
-    }
-  ],
-  "nashville": [
-    {
-      "q": "The capitol's cupola is modeled on a monument to whom?",
-      "o": [
-        "Alexander",
-        "Lysicrates",
-        "Caesar",
-        "Pericles"
-      ],
-      "a": 1,
-      "why": "The Choragic Monument of Lysicrates."
-    },
-    {
-      "q": "Who designed Nashville's Union Station?",
-      "o": [
-        "Louis Sullivan",
-        "Warren and Wetmore",
-        "Henry Hobson Richardson and Richard Montfort",
-        "William Strickland"
-      ],
-      "a": 2,
-      "why": "Wikipedia credits Richardson and Montfort."
-    },
-    {
-      "q": "In what decade was the current Davidson County Courthouse built?",
-      "o": [
-        "1780s",
-        "1830s",
-        "1880s",
-        "1930s"
-      ],
-      "a": 3,
-      "why": "It was built in 1936-37."
-    },
-    {
-      "q": "What was the Nashville Parthenon first built from?",
-      "o": [
-        "Plaster, wood and brick",
-        "Marble",
-        "Steel",
-        "Limestone"
-      ],
-      "a": 0,
-      "why": "It was plaster, wood and brick in 1897."
-    }
-  ],
-  "providence": [
-    {
-      "q": "Who designed the Rhode Island State House?",
-      "o": [
-        "Russell Warren",
-        "McKim, Mead & White",
-        "Patrick Keely",
-        "Hoppin & Ely"
-      ],
-      "a": 1,
-      "why": "A New York firm, McKim, Mead & White, designed it."
-    },
-    {
-      "q": "What was the cathedral bishop's rule about money?",
-      "o": [
-        "He took a big loan",
-        "He sold the land",
-        "He charged tickets",
-        "He refused to borrow"
-      ],
-      "a": 3,
-      "why": "Hendricken refused to borrow and saved $10,000 a year."
-    },
-    {
-      "q": "When were the Van Wickle Gates dedicated?",
-      "o": [
-        "1901",
-        "1828",
-        "1773",
-        "1950"
-      ],
-      "a": 0,
-      "why": "They were dedicated on June 18, 1901."
-    },
-    {
-      "q": "The Arcade is called the first what in the United States?",
-      "o": [
-        "Subway",
-        "Public library",
-        "Enclosed shopping mall",
-        "Skyscraper"
-      ],
-      "a": 2,
-      "why": "It is the first enclosed shopping mall."
-    }
-  ],
-  "saltlake": [
-    {
-      "q": "What stands on top of the Eagle Gate?",
-      "o": [
-        "A lion",
-        "A clock",
-        "An eagle on a beehive",
-        "A golden angel"
-      ],
-      "a": 2,
-      "why": "A sculpture of an eagle perched on a beehive."
-    },
-    {
-      "q": "Who designed both the Beehive House and the Lion House?",
-      "o": [
-        "Truman O. Angell",
-        "Brigham Young",
-        "William Ward III",
-        "Pavel Albieri"
-      ],
-      "a": 0,
-      "why": "Truman O. Angell was involved in both."
-    },
-    {
-      "q": "What does the Lion House's name come from?",
-      "o": [
-        "A live lion",
-        "A zoo",
-        "A sports team",
-        "A statue of a lion"
-      ],
-      "a": 3,
-      "why": "A lion statue above the front entrance."
-    },
-    {
-      "q": "The Salt Lake Temple's large font rests on what?",
-      "o": [
-        "Six bees",
-        "Twelve oxen",
-        "Four lions",
-        "Eight eagles"
-      ],
-      "a": 1,
-      "why": "It rests on the backs of twelve oxen."
-    }
-  ],
-  "sandiego": [
-    {
-      "q": "In what year did the Hotel del Coronado open?",
-      "o": [
-        "1769",
-        "1915",
-        "1827",
-        "1888"
-      ],
-      "a": 3,
-      "why": "It opened in 1888."
-    },
-    {
-      "q": "How many churches have stood at the mission site, counting today's?",
-      "o": [
-        "Nine",
-        "Five",
-        "One",
-        "Two"
-      ],
-      "a": 1,
-      "why": "Today's church is the fifth to stand there."
-    },
-    {
-      "q": "The Botanical Building was built for what event?",
-      "o": [
-        "The 1849 Gold Rush",
-        "The 1984 Olympics",
-        "The 1915 Panama-California Exposition",
-        "The 1893 World's Fair"
-      ],
-      "a": 2,
-      "why": "It was built for the 1915-16 exposition."
-    },
-    {
-      "q": "In what year was the Casa de Estudillo built?",
-      "o": [
-        "1827",
-        "1884",
-        "1915",
-        "1769"
-      ],
-      "a": 0,
-      "why": "It was built in 1827."
-    }
-  ],
-  "portland": [
-    {
-      "q": "Pioneer Courthouse is called the oldest federal building where?",
-      "o": [
-        "The Midwest",
-        "The Gulf Coast",
-        "The Pacific Northwest",
-        "Alaska"
-      ],
-      "a": 2,
-      "why": "It is the oldest federal building in the Pacific Northwest."
-    },
-    {
-      "q": "Who designed the City Hall that was built after the first design was thrown out?",
-      "o": [
-        "Whidden and Lewis",
-        "Henry J. Hefty",
-        "Olin Levi Warner",
-        "Van Brunt & Howe"
-      ],
-      "a": 0,
-      "why": "Whidden and Lewis designed the current building."
-    },
-    {
-      "q": "Skidmore Fountain was dedicated in what year?",
-      "o": [
-        "1925",
-        "1888",
-        "1776",
-        "1895"
-      ],
-      "a": 1,
-      "why": "It was dedicated September 22, 1888."
-    },
-    {
-      "q": "How often is the Union Station clock wound?",
-      "o": [
-        "Every day",
-        "Once a year",
-        "Never",
-        "Every seven days"
-      ],
-      "a": 3,
-      "why": "It is wound every seven days."
-    }
-  ],
-  "milwaukee": [
-    {
-      "q": "City Hall's bell is named after which person?",
-      "o": [
-        "Alexander Mitchell",
-        "Henry Koch",
-        "Frederick Pabst",
-        "Solomon Juneau"
-      ],
-      "a": 3,
-      "why": "It is named after Solomon Juneau."
-    },
-    {
-      "q": "The Mitchell Building was designed by which architect?",
-      "o": [
-        "Pietro Belluschi",
-        "A. E. Doyle",
-        "E. Townsend Mix",
-        "Henry C. Koch"
-      ],
-      "a": 2,
-      "why": "E. Townsend Mix designed it."
-    },
-    {
-      "q": "Old Main was unoccupied starting in which year?",
-      "o": [
-        "1989",
-        "1867",
-        "1909",
-        "2011"
-      ],
-      "a": 0,
-      "why": "It was unoccupied starting in 1989."
-    },
-    {
-      "q": "The Milwaukee Auditorium was dedicated in which year?",
-      "o": [
-        "1867",
-        "1909",
-        "1895",
-        "1989"
-      ],
-      "a": 1,
-      "why": "It was dedicated on September 21, 1909."
-    }
-  ],
-  "columbus": [
-    {
-      "q": "The Ohio Statehouse has a low cone on top instead of what?",
-      "o": [
-        "A clock",
-        "A rounded dome",
-        "A flagpole",
-        "A steeple"
-      ],
-      "a": 1,
-      "why": "The designers dropped the rounded dome for a low conical roof."
-    },
-    {
-      "q": "Only one piece of Union Station still stands. What is it?",
-      "o": [
-        "The clock tower",
-        "A platform",
-        "The ticket hall",
-        "An arch"
-      ],
-      "a": 3,
-      "why": "One arch was saved and now stands in McFerson Commons."
-    },
-    {
-      "q": "The LeVeque Tower was built five inches taller than which monument?",
-      "o": [
-        "The Statue of Liberty",
-        "The Lincoln Memorial",
-        "The Washington Monument",
-        "The Eiffel Tower"
-      ],
-      "a": 2,
-      "why": "It was set 5 inches taller than the Washington Monument."
-    },
-    {
-      "q": "The Ohio Theatre opened in which year?",
-      "o": [
-        "1928",
-        "1869",
-        "1977",
-        "1897"
-      ],
-      "a": 0,
-      "why": "It opened on March 17, 1928."
-    }
-  ],
-  "gettysburg": [
-    {
-      "q": "Who was Lincoln's host in Gettysburg?",
-      "o": [
-        "George Meade",
-        "Thaddeus Stevens",
-        "David Wills",
-        "Andrew Curtin"
-      ],
-      "a": 2,
-      "why": "David Wills hosted Lincoln at his house."
-    },
-    {
-      "q": "What was Pennsylvania Hall used for in July 1863?",
-      "o": [
-        "A hospital",
-        "A courthouse",
-        "A hotel",
-        "A bank"
-      ],
-      "a": 0,
-      "why": "Soldiers of both armies were treated there."
-    },
-    {
-      "q": "In what year was the Soldiers' National Monument dedicated?",
-      "o": [
-        "1863",
-        "1895",
-        "1913",
-        "1869"
-      ],
-      "a": 3,
-      "why": "It was dedicated in 1869."
-    },
-    {
-      "q": "How many words are in the Gettysburg Address?",
-      "o": [
-        "2,700",
-        "271",
-        "27",
-        "1,000"
-      ],
-      "a": 1,
-      "why": "It has only 271 words."
-    }
-  ],
-  "louisville": [
-    {
-      "q": "Winners of the Kentucky Derby began receiving a garland of what in 1896?",
-      "o": [
-        "Gold coins",
-        "Ribbons",
-        "Roses",
-        "Tulips"
-      ],
-      "a": 2,
-      "why": "The garland of roses began in 1896."
-    },
-    {
-      "q": "The Seelbach Hotel inspired a hotel in which famous novel?",
-      "o": [
-        "Moby-Dick",
-        "Little Women",
-        "Huckleberry Finn",
-        "The Great Gatsby"
-      ],
-      "a": 3,
-      "why": "F. Scott Fitzgerald took inspiration from it for The Great Gatsby."
-    },
-    {
-      "q": "Who works in the old Union Station today?",
-      "o": [
-        "The post office",
-        "The city transit agency",
-        "A railroad",
-        "A bank"
-      ],
-      "a": 1,
-      "why": "It has been TARC's offices since 1980."
-    },
-    {
-      "q": "What destroyed the Water Tower's shaft and most of its statues in 1890?",
-      "o": [
-        "A tornado",
-        "A flood",
-        "A fire",
-        "An earthquake"
-      ],
-      "a": 0,
-      "why": "The March 27, 1890 tornado destroyed the shaft and all but two of the ten statues."
-    }
-  ],
-  "newport": [
-    {
-      "q": "The Breakers was built to resist what, after the first house burned?",
-      "o": [
-        "Earthquakes",
-        "Fire",
-        "Floods",
-        "Termites"
-      ],
-      "a": 1,
-      "why": "Masonry and steel after the 1892 fire."
-    },
-    {
-      "q": "The Cliff Walk is about how long?",
-      "o": [
-        "350 feet",
-        "12 miles",
-        "3.5 miles",
-        "35 miles"
-      ],
-      "a": 2,
-      "why": "A 3.5-mile public path."
-    },
-    {
-      "q": "Which sport's first U.S. championships were played at the Casino?",
-      "o": [
-        "Golf",
-        "Baseball",
-        "Polo",
-        "Lawn tennis"
-      ],
-      "a": 3,
-      "why": "The Tennis Hall of Fame is there."
-    },
-    {
-      "q": "What does carbon-14 testing say the Old Stone Mill was?",
-      "o": [
-        "A 17th-century windmill",
-        "A Viking church",
-        "A fort",
-        "A lighthouse"
-      ],
-      "a": 0,
-      "why": "Testing points to a windmill."
-    }
-  ],
-  "knoxville": [
-    {
-      "q": "Who built the Southern Terminal in 1903?",
-      "o": [
-        "The city",
-        "The TVA",
-        "A bank",
-        "Southern Railway"
-      ],
-      "a": 3,
-      "why": "Southern Railway built it."
-    },
-    {
-      "q": "What did Gay Street become in 1854?",
-      "o": [
-        "The first canal",
-        "The first paved road",
-        "The first railroad",
-        "The first bridge"
-      ],
-      "a": 1,
-      "why": "Knoxville's first paved road."
-    },
-    {
-      "q": "What was Blount Mansion nearly turned into in 1925?",
-      "o": [
-        "A parking lot",
-        "A school",
-        "A fort",
-        "A stadium"
-      ],
-      "a": 0,
-      "why": "A developer planned a hotel parking lot."
-    },
-    {
-      "q": "What stone covers the Old Customs House?",
-      "o": [
-        "Wood siding",
-        "Concrete",
-        "East Tennessee marble",
-        "Red brick"
-      ],
-      "a": 2,
-      "why": "It is sheathed in East Tennessee marble."
-    }
-  ],
-  "portlandme": [
-    {
-      "q": "Who made the Longfellow statue?",
-      "o": [
-        "Gutzon Borglum",
-        "Saint-Gaudens",
-        "Franklin Simmons",
-        "Daniel Chester French"
-      ],
-      "a": 2,
-      "why": "Franklin Simmons."
-    },
-    {
-      "q": "The Portland Observatory was built to watch what?",
-      "o": [
-        "Ships",
-        "Stars",
-        "Storms",
-        "Fires"
-      ],
-      "a": 0,
-      "why": "A maritime signal tower."
-    },
-    {
-      "q": "Where was Longfellow born?",
-      "o": [
-        "Boston",
-        "His aunt's house nearby",
-        "The Wadsworth house",
-        "A ship"
-      ],
-      "a": 1,
-      "why": "He was born nearby, then moved in at eight months."
-    },
-    {
-      "q": "How many City Halls has Portland had at this site, counting the current one?",
-      "o": [
-        "Only one",
-        "None",
-        "Exactly ten",
-        "More than one"
-      ],
-      "a": 3,
-      "why": "The current one is the fourth city hall, after earlier ones burned."
-    }
-  ],
-  "newhaven": [
-    {
-      "q": "What lies under the soil of the New Haven Green?",
-      "o": [
-        "A railway",
-        "Old graves",
-        "A fort",
-        "A lake"
-      ],
-      "a": 1,
-      "why": "It was the main burial ground for 150 years."
-    },
-    {
-      "q": "Yale's first building in New Haven was called what?",
-      "o": [
-        "Harkness Tower",
-        "Phelps Hall",
-        "Dwight Hall",
-        "The College House"
-      ],
-      "a": 3,
-      "why": "Built in 1718."
-    },
-    {
-      "q": "Who designed Vanderbilt Hall?",
-      "o": [
-        "Stanford White",
-        "Louis Sullivan",
-        "Charles C. Haight",
-        "Frank Lloyd Wright"
-      ],
-      "a": 2,
-      "why": "Haight completed it in 1894."
-    },
-    {
-      "q": "What was today's Dwight Hall built as in 1842?",
-      "o": [
-        "A library",
-        "A theater",
-        "A hotel",
-        "A bank"
-      ],
-      "a": 0,
-      "why": "The Yale College Library."
-    }
-  ],
-  "burlington": [
-    {
-      "q": "What was built on four blocks of Church Street in 1980 and 1981?",
-      "o": [
-        "A stadium",
-        "A harbor",
-        "A pedestrian marketplace",
-        "A highway"
-      ],
-      "a": 2,
-      "why": "The Church Street Marketplace."
-    },
-    {
-      "q": "Battery Park gets its name from what?",
-      "o": [
-        "Artillery in the War of 1812",
-        "Batteries made here",
-        "A row of lights",
-        "A baseball team"
-      ],
-      "a": 0,
-      "why": "American artillery was stationed there."
-    },
-    {
-      "q": "Who laid South College's cornerstone in 1825?",
-      "o": [
-        "Ethan Allen",
-        "George Washington",
-        "Abraham Lincoln",
-        "General Lafayette"
-      ],
-      "a": 3,
-      "why": "He was on his national tour."
-    },
-    {
-      "q": "Who designed Billings Library?",
-      "o": [
-        "Julia Morgan",
-        "H. H. Richardson",
-        "Frank Lloyd Wright",
-        "Louis Sullivan"
-      ],
-      "a": 1,
-      "why": "Henry Hobson Richardson."
-    }
-  ],
-  "coloradosprings": [
-    {
-      "q": "What was the Pioneers Museum building before 1979?",
-      "o": [
-        "A school",
-        "A depot",
-        "The county courthouse",
-        "A hotel"
-      ],
-      "a": 2,
-      "why": "It was the courthouse from 1903 to 1973."
-    },
-    {
-      "q": "How many steps climb beside Seven Falls?",
-      "o": [
-        "224",
-        "24",
-        "1,224",
-        "5,000"
-      ],
-      "a": 0,
-      "why": "A staircase of 224 steps."
-    },
-    {
-      "q": "What did surveyor Melancthon Beach suggest the place would suit in 1859?",
-      "o": [
-        "A fort",
-        "A farm",
-        "A school",
-        "A beer garden"
-      ],
-      "a": 3,
-      "why": "A capital place for a beer garden."
-    },
-    {
-      "q": "Which song was inspired by climbing Pikes Peak?",
-      "o": [
-        "Home on the Range",
-        "America the Beautiful",
-        "Yankee Doodle",
-        "Dixie"
-      ],
-      "a": 1,
-      "why": "Katharine Lee Bates, 1893."
-    }
-  ],
-  "lasvegas": [
-    {
-      "q": "Fremont Street was closed to cars in which year?",
-      "o": [
-        "1905",
-        "1931",
-        "1952",
-        "1994"
-      ],
-      "a": 3,
-      "why": "To build the Fremont Street Experience."
-    },
-    {
-      "q": "Why did people doubt El Cortez at first?",
-      "o": [
-        "On a lake",
-        "Too far from downtown",
-        "No power",
-        "Too small"
-      ],
-      "a": 1,
-      "why": "6th and Fremont was thought too far out."
-    },
-    {
-      "q": "The Fifth Street School got its name because Las Vegas Boulevard was once called what?",
-      "o": [
-        "Fifth Street",
-        "Main Street",
-        "Hoover Road",
-        "Nugget Lane"
-      ],
-      "a": 0,
-      "why": "An informal name from the old street name."
-    },
-    {
-      "q": "Who dedicated Hoover Dam in 1935?",
-      "o": [
-        "President Lincoln",
-        "President Taft",
-        "President Franklin D. Roosevelt",
-        "President Herbert Hoover"
-      ],
-      "a": 2,
-      "why": "Roosevelt dedicated it on September 30, 1935."
-    }
-  ],
-  "flagstaff": [
-    {
-      "q": "Who discovered Pluto at Lowell Observatory?",
-      "o": [
-        "Carl Sagan",
-        "Clyde Tombaugh",
-        "Percival Lowell",
-        "Galileo"
-      ],
-      "a": 1,
-      "why": "Tombaugh, in 1930."
-    },
-    {
-      "q": "About how high is the Flagstaff station above sea level?",
-      "o": [
-        "16,902 feet",
-        "2,000 feet",
-        "6,902 feet",
-        "902 feet"
-      ],
-      "a": 2,
-      "why": "One of the highest Amtrak stations."
-    },
-    {
-      "q": "What was removed from the Weatherford Hotel in 1929?",
-      "o": [
-        "Its balcony and cupola",
-        "Its kitchen",
-        "Its basement",
-        "Its sign"
-      ],
-      "a": 0,
-      "why": "Fire damage led to their removal."
-    },
-    {
-      "q": "Which people built the Walnut Canyon cliff dwellings?",
-      "o": [
-        "The Vikings",
-        "The Romans",
-        "The Spanish",
-        "The Sinagua"
-      ],
-      "a": 3,
-      "why": "They lived there about 1100 to 1250 AD."
-    }
-  ],
-  "elpaso": [
-    {
-      "q": "Who designed El Paso's Union Depot?",
-      "o": [
-        "Henry Hobson Richardson",
-        "Daniel Burnham",
-        "Frank Lloyd Wright",
-        "Julia Morgan"
-      ],
-      "a": 1,
-      "why": "He also designed Washington Union Station."
-    },
-    {
-      "q": "Which animals lived in San Jacinto Plaza's pond?",
-      "o": [
-        "Flamingos",
-        "Beavers",
-        "Alligators",
-        "Penguins"
-      ],
-      "a": 2,
-      "why": "A sculpture honors them."
-    },
-    {
-      "q": "When did the Hotel Paso del Norte open?",
-      "o": [
-        "Thanksgiving Day 1912",
-        "Christmas Day 1850",
-        "July 4, 1776",
-        "New Year's Day 1990"
-      ],
-      "a": 0,
-      "why": "Trost & Trost designed it."
-    },
-    {
-      "q": "What started the 1907 fire at Ysleta Mission?",
-      "o": [
-        "A lightning bolt",
-        "A campfire",
-        "A train spark",
-        "Chemicals stored to repel bats"
-      ],
-      "a": 3,
-      "why": "The chemicals were stored in the bell tower."
-    }
-  ],
-  "sanantonio": [
-    {
-      "q": "What did the Alamo start out as?",
-      "o": [
-        "A hotel",
-        "A school",
-        "A mission",
-        "A bank"
-      ],
-      "a": 2,
-      "why": "It began as Mission San Antonio de Valero in 1718."
-    },
-    {
-      "q": "In what year was the cornerstone of San Fernando Cathedral laid?",
-      "o": [
-        "1738",
-        "1638",
-        "1838",
-        "1938"
-      ],
-      "a": 0,
-      "why": "It was laid on May 11, 1738."
-    },
-    {
-      "q": "In what year was Mission San Jose founded?",
-      "o": [
-        "1520",
-        "1820",
-        "1920",
-        "1720"
-      ],
-      "a": 3,
-      "why": "The National Park Service says 1720."
-    },
-    {
-      "q": "Which railroad built Sunset Station?",
-      "o": [
-        "Reading",
-        "Southern Pacific",
-        "Union Pacific",
-        "Santa Fe"
-      ],
-      "a": 1,
-      "why": "It opened in 1902."
-    }
-  ],
-  "dayton": [
-    {
-      "q": "In what year did the Wrights start testing the Flyer II at Huffman Prairie?",
-      "o": [
-        "1899",
-        "1903",
-        "1904",
-        "1910"
-      ],
-      "a": 2,
-      "why": "Wikipedia: they began testing there in 1904."
-    },
-    {
-      "q": "How long was Wilbur's record flight in the Flyer III on October 5, 1905?",
-      "o": [
-        "39 minutes",
-        "39 seconds",
-        "3 hours",
-        "9 minutes"
-      ],
-      "a": 0,
-      "why": "Wikipedia: 24.2 miles in 39 minutes 23 seconds."
-    },
-    {
-      "q": "Who owned the Huffman Prairie field and let the Wrights use it?",
-      "o": [
-        "Hap Arnold",
-        "Orville Wright",
-        "Matilda Dunbar",
-        "Torrence Huffman"
-      ],
-      "a": 3,
-      "why": "Dayton banker Torrence Huffman."
-    },
-    {
-      "q": "Whom did Paul Laurence Dunbar buy his house for?",
-      "o": [
-        "His mother",
-        "His publisher",
-        "His school",
-        "The Wright brothers"
-      ],
-      "a": 0,
-      "why": "Wikipedia: he bought it for his mother, Matilda, in 1904."
-    }
-  ],
-  "sparks": [
-    {
-      "q": "Who was the town of Sparks named for?",
-      "o": [
-        "A railroad president",
-        "Governor John Sparks",
-        "A local rancher",
-        "The mayor of Reno"
-      ],
-      "a": 1,
-      "why": "It was renamed in April 1904 for Nevada governor John Sparks."
-    },
-    {
-      "q": "Which railroad moved its terminal from Wadsworth to Sparks in 1904?",
-      "o": [
-        "Union Pacific",
-        "Santa Fe",
-        "Southern Pacific",
-        "Virginia & Truckee"
-      ],
-      "a": 2,
-      "why": "The Southern Pacific moved its terminal in summer 1904."
-    },
-    {
-      "q": "What was the Sparks Marina lake before it was a lake?",
-      "o": [
-        "A reservoir",
-        "A swamp",
-        "A rail yard",
-        "A gravel pit"
-      ],
-      "a": 3,
-      "why": "It was the Helms gravel pit, filled by the 1997 flood."
-    },
-    {
-      "q": "Where does the Truckee River end?",
-      "o": [
-        "Pyramid Lake",
-        "Lake Tahoe",
-        "The Pacific Ocean",
-        "Walker Lake"
-      ],
-      "a": 0,
-      "why": "The Truckee starts at Lake Tahoe and ends in Pyramid Lake, which has no outlet."
-    }
-  ]
+ "reno": [
+  {
+   "q": "In what year did Reno first raise a steel arch over Virginia Street?",
+   "o": [
+    "1905",
+    "1926",
+    "1963",
+    "1987"
+   ],
+   "a": 1,
+   "why": "The first arch went up on October 23, 1926."
+  },
+  {
+   "q": "An entrant from Sacramento won $100 for writing what?",
+   "o": [
+    "The city's first newspaper",
+    "A song for the 1927 exposition",
+    "The slogan \"The Biggest Little City in the World\"",
+    "The name of the Truckee River bridge"
+   ],
+   "a": 2,
+   "why": "The slogan contest followed the 1927 highways exposition."
+  },
+  {
+   "q": "Who built the first bridge at this crossing in 1860?",
+   "o": [
+    "Myron Lake",
+    "Charles Fuller",
+    "George Wingfield",
+    "John B. Leonard"
+   ],
+   "a": 1,
+   "why": "Charles Fuller built it in 1860. Myron Lake took over in 1861 and charged tolls."
+  },
+  {
+   "q": "Which California town received the 1963 arch?",
+   "o": [
+    "Truckee",
+    "Willits",
+    "Sacramento",
+    "Auburn"
+   ],
+   "a": 1,
+   "why": "The arch went to Willits, which changed its slogan to welcome visitors to the redwoods."
+  }
+ ],
+ "vc": [
+  {
+   "q": "In what year was silver found at Virginia City?",
+   "o": [
+    "1849",
+    "1859",
+    "1875",
+    "1886"
+   ],
+   "a": 1,
+   "why": "Silver was found in 1859, setting off the Comstock Lode rush."
+  },
+  {
+   "q": "Which newspaper did young Sam Clemens write for in Virginia City?",
+   "o": [
+    "The Comstock Courier",
+    "The Silver Standard",
+    "The Territorial Enterprise",
+    "The Carson Gazette"
+   ],
+   "a": 2,
+   "why": "He wrote for the Territorial Enterprise and first signed \"Mark Twain\" in 1863."
+  },
+  {
+   "q": "What happened in Virginia City on October 26, 1875?",
+   "o": [
+    "The Fourth Ward School opened",
+    "The Great Fire",
+    "The silver ran out",
+    "The railroad arrived"
+   ],
+   "a": 1,
+   "why": "The Great Fire burned much of the town and left about 2,000 people homeless."
+  },
+  {
+   "q": "In what year did the last class graduate from the Fourth Ward School?",
+   "o": [
+    "1876",
+    "1936",
+    "1961",
+    "1986"
+   ],
+   "a": 1,
+   "why": "The last class graduated in 1936. The building reopened as a museum in 1986."
+  }
+ ],
+ "tahoeicons": [
+  {
+   "q": "Who built Vikingsholm in 1929?",
+   "o": [
+    "George Whittell Jr.",
+    "Alonzo Richardson",
+    "Lora Josephine Knight",
+    "Walter Hobart Jr."
+   ],
+   "a": 2,
+   "why": "Lora Josephine Knight built it, with the architect Lennart Palme."
+  },
+  {
+   "q": "What is the only island in Lake Tahoe called?",
+   "o": [
+    "Bliss Island",
+    "Fannette Island",
+    "Tallac Island",
+    "Richardson Island"
+   ],
+   "a": 1,
+   "why": "Fannette Island sits in Emerald Bay."
+  },
+  {
+   "q": "In which year did the first Cave Rock highway tunnel open?",
+   "o": [
+    "1905",
+    "1931",
+    "1957",
+    "1994"
+   ],
+   "a": 1,
+   "why": "The first tunnel opened in 1931."
+  },
+  {
+   "q": "Camp Richardson is named after whom?",
+   "o": [
+    "Captain Alonzo L. Richardson",
+    "Governor Richardson",
+    "Joe King",
+    "Robert Watson"
+   ],
+   "a": 0,
+   "why": "Captain Alonzo L. Richardson started a stage service here in 1921."
+  }
+ ],
+ "tahoe": [
+  {
+   "q": "What was built to carry guests to the Tahoe Tavern by 1902?",
+   "o": [
+    "A cable car line",
+    "A monorail",
+    "A narrow gauge railway from Truckee",
+    "A streetcar line"
+   ],
+   "a": 2,
+   "why": "A narrow gauge railway ran 15 miles from Truckee to a pier at Tahoe City."
+  },
+  {
+   "q": "In what year was the present concrete Lake Tahoe Dam finished?",
+   "o": [
+    "1870",
+    "1909",
+    "1913",
+    "1981"
+   ],
+   "a": 2,
+   "why": "It was built between 1909 and 1913."
+  },
+  {
+   "q": "When did the original gatekeeper's cabin burn?",
+   "o": [
+    "1910",
+    "1964",
+    "1978",
+    "1981"
+   ],
+   "a": 2,
+   "why": "It burned in 1978. The present cabin was finished in 1981."
+  },
+  {
+   "q": "For whom did Robert Watson build his log cabin in 1908?",
+   "o": [
+    "His son and daughter-in-law",
+    "The new gatekeeper",
+    "A summer gift shop",
+    "The Tahoe Water War judge"
+   ],
+   "a": 0,
+   "why": "He built it for his son and daughter-in-law, who moved in during 1909."
+  }
+ ],
+ "boston": [
+  {
+   "q": "In what year was the Old State House completed?",
+   "o": [
+    "1680",
+    "1713",
+    "1742",
+    "1776"
+   ],
+   "a": 1,
+   "why": "It is the city's oldest surviving public building."
+  },
+  {
+   "q": "How did the town vote on accepting Faneuil's market in 1740?",
+   "o": [
+    "Unanimously",
+    "367 to 360",
+    "200 to 10",
+    "It was decided by a coin flip"
+   ],
+   "a": 1,
+   "why": "The vote was 367 to 360, so it was very close."
+  },
+  {
+   "q": "In what year did Paul Revere buy his house?",
+   "o": [
+    "1680",
+    "1735",
+    "1770",
+    "1800"
+   ],
+   "a": 2,
+   "why": "He bought it on January 13, 1770, and owned it until 1800."
+  },
+  {
+   "q": "How many lanterns were hung in the Old North Church steeple on April 18, 1775?",
+   "o": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "a": 1,
+   "why": "Two lanterns warned patriots in Charlestown that the British were moving by water."
+  }
+ ],
+ "dc": [
+  {
+   "q": "In what year was the Lincoln Memorial dedicated?",
+   "o": [
+    "1863",
+    "1922",
+    "1943",
+    "1963"
+   ],
+   "a": 1,
+   "why": "It was dedicated on May 30, 1922."
+  },
+  {
+   "q": "Work on the Washington Monument stopped in 1854. When did it resume?",
+   "o": [
+    "1865",
+    "1877",
+    "1888",
+    "1913"
+   ],
+   "a": 1,
+   "why": "Work stopped from 1854 until 1877 because of money problems and the Civil War."
+  },
+  {
+   "q": "In what year did British troops burn the Capitol?",
+   "o": [
+    "1776",
+    "1793",
+    "1814",
+    "1866"
+   ],
+   "a": 2,
+   "why": "British troops burned it on August 24, 1814, during the War of 1812."
+  },
+  {
+   "q": "When was the bronze statue of Jefferson installed?",
+   "o": [
+    "1943",
+    "1947",
+    "1952",
+    "1969"
+   ],
+   "a": 1,
+   "why": "A plaster statue stood there in 1943. The bronze one arrived in April 1947."
+  }
+ ],
+ "ny": [
+  {
+   "q": "Who helped supervise the Brooklyn Bridge construction for about 11 years after Washington Roebling became too ill to visit?",
+   "o": [
+    "John A. Roebling",
+    "Emily Warren Roebling",
+    "P. T. Barnum",
+    "Daniel Burnham"
+   ],
+   "a": 1,
+   "why": "Emily Warren Roebling relayed communications and managed daily work."
+  },
+  {
+   "q": "When did Grand Central Terminal open?",
+   "o": [
+    "1883",
+    "1902",
+    "1913",
+    "1950"
+   ],
+   "a": 2,
+   "why": "It opened on February 2, 1913."
+  },
+  {
+   "q": "What was the Flatiron Building first called?",
+   "o": [
+    "The Fuller Building",
+    "The Burnham Tower",
+    "The Broadway Wedge",
+    "The Fifth Avenue Building"
+   ],
+   "a": 0,
+   "why": "It was named for George A. Fuller, founder of the Fuller Company."
+  },
+  {
+   "q": "Whose company built the iron frame inside the Statue of Liberty?",
+   "o": [
+    "Bartholdi's",
+    "Gustave Eiffel's",
+    "Daniel Burnham's",
+    "Thomas Walter's"
+   ],
+   "a": 1,
+   "why": "Gustave Eiffel's company built the frame. Bartholdi was the sculptor."
+  }
+ ],
+ "chicago": [
+  {
+   "q": "How many stainless steel plates make up Cloud Gate?",
+   "o": [
+    "88",
+    "168",
+    "240",
+    "336"
+   ],
+   "a": 1,
+   "why": "Wikipedia gives 168 plates."
+  },
+  {
+   "q": "Who remodeled the Rookery's lobby in 1905?",
+   "o": [
+    "Louis Sullivan",
+    "Mies van der Rohe",
+    "Daniel Burnham",
+    "Frank Lloyd Wright"
+   ],
+   "a": 3,
+   "why": "Frank Lloyd Wright, from 1905 to 1907."
+  },
+  {
+   "q": "The sea horses at Buckingham Fountain stand for what?",
+   "o": [
+    "Four famous mayors",
+    "The four states that touch Lake Michigan",
+    "Four Great Lakes",
+    "Chicago's four founders"
+   ],
+   "a": 1,
+   "why": "Illinois, Wisconsin, Michigan and Indiana."
+  },
+  {
+   "q": "About how big is the Lincoln Park Conservatory?",
+   "o": [
+    "3 acres",
+    "30 acres",
+    "300 acres",
+    "1 acre"
+   ],
+   "a": 0,
+   "why": "About 3 acres."
+  }
+ ],
+ "sf": [
+  {
+   "q": "What is the Golden Gate Bridge's official color called?",
+   "o": [
+    "International Orange",
+    "Signal Red",
+    "Burnt Sienna",
+    "Coral Fog"
+   ],
+   "a": 0,
+   "why": "Irving Morrow chose International Orange."
+  },
+  {
+   "q": "In what year did the Ferry Building open?",
+   "o": [
+    "1869",
+    "1898",
+    "1915",
+    "1937"
+   ],
+   "a": 1,
+   "why": "It opened on July 13, 1898."
+  },
+  {
+   "q": "Lillie Hitchcock Coit left money for what purpose?",
+   "o": [
+    "Building a hospital",
+    "Paying for a bridge",
+    "Adding to the beauty of the city",
+    "Founding a school"
+   ],
+   "a": 2,
+   "why": "Her bequest funded Coit Tower."
+  },
+  {
+   "q": "Why was the Palace of Fine Arts rebuilt in concrete?",
+   "o": [
+    "A fire destroyed it",
+    "The temporary plaster building decayed",
+    "It was moved",
+    "A flood washed it away"
+   ],
+   "a": 1,
+   "why": "It was built of plaster over wood for the 1915 fair and decayed."
+  }
+ ],
+ "philly": [
+  {
+   "q": "Which document was drafted at Independence Hall in 1787?",
+   "o": [
+    "The Emancipation Proclamation",
+    "The Articles of Confederation",
+    "The U.S. Constitution",
+    "The Bill of Rights"
+   ],
+   "a": 2,
+   "why": "The Constitutional Convention met May 25 to September 17, 1787."
+  },
+  {
+   "q": "Who gave the Liberty Bell its famous name in the 1830s?",
+   "o": [
+    "The Founders",
+    "Abolitionists",
+    "Congress",
+    "A bell maker"
+   ],
+   "a": 1,
+   "why": "Abolitionist societies called it the Liberty Bell."
+  },
+  {
+   "q": "The Betsy Ross flag story traces back mostly to whom?",
+   "o": [
+    "Her relatives and the 1876 Centennial",
+    "George Washington's diary",
+    "A Congress record",
+    "A newspaper from 1777"
+   ],
+   "a": 0,
+   "why": "Historians trace it to her grandsons, the Canbys, and the Centennial."
+  },
+  {
+   "q": "Carpenters' Hall hosted which Congress in 1774?",
+   "o": [
+    "Second Continental Congress",
+    "First Continental Congress",
+    "Confederation Congress",
+    "Congress of the Union"
+   ],
+   "a": 1,
+   "why": "The First Continental Congress, September 5 to October 26, 1774."
+  }
+ ],
+ "la": [
+  {
+   "q": "When was the Bradbury Building built?",
+   "o": [
+    "1850",
+    "1920",
+    "1893",
+    "1975"
+   ],
+   "a": 2,
+   "why": "It was built in 1893 and finished in 1894."
+  },
+  {
+   "q": "What did the Hollywood Sign originally read?",
+   "o": [
+    "Hollywoodland",
+    "Hollywood Hills",
+    "Tinseltown",
+    "Studio City"
+   ],
+   "a": 0,
+   "why": "It advertised the Hollywoodland housing development in 1923."
+  },
+  {
+   "q": "Angels Flight opened in which year?",
+   "o": [
+    "1901",
+    "1925",
+    "1950",
+    "1996"
+   ],
+   "a": 0,
+   "why": "It opened in 1901."
+  },
+  {
+   "q": "How many settlers founded Los Angeles in 1781?",
+   "o": [
+    "12",
+    "44",
+    "100",
+    "200"
+   ],
+   "a": 1,
+   "why": "11 families, 44 people."
+  }
+ ],
+ "seattle": [
+  {
+   "q": "What was the Space Needle built for?",
+   "o": [
+    "A baseball opening",
+    "The 1962 World's Fair",
+    "A radio station",
+    "A lumber company"
+   ],
+   "a": 1,
+   "why": "It opened April 21, 1962 for the Century 21 Exposition."
+  },
+  {
+   "q": "Who is the bronze pig at Pike Place Market named?",
+   "o": [
+    "Penny",
+    "Wilbur",
+    "Pearl",
+    "Rachel"
+   ],
+   "a": 3,
+   "why": "Rachel is a 550-pound bronze piggy bank."
+  },
+  {
+   "q": "Smith Tower was the tallest building west of the Mississippi until which year?",
+   "o": [
+    "1931",
+    "1962",
+    "1914",
+    "1948"
+   ],
+   "a": 0,
+   "why": "The Kansas City Power & Light Building passed it in 1931."
+  },
+  {
+   "q": "Which Seattle neighborhood was destroyed in the fire of June 6, 1889?",
+   "o": [
+    "Pioneer Square",
+    "Capitol Hill",
+    "Ballard",
+    "Fremont"
+   ],
+   "a": 0,
+   "why": "Pioneer Square."
+  }
+ ],
+ "nola": [
+  {
+   "q": "When did Jackson Square get its current name?",
+   "o": [
+    "1803",
+    "1814",
+    "1851",
+    "1895"
+   ],
+   "a": 2,
+   "why": "It kept the name Place d'Armes until 1851."
+  },
+  {
+   "q": "What destroyed the earlier St. Louis church in 1788?",
+   "o": [
+    "A hurricane",
+    "A flood",
+    "An earthquake",
+    "The Great New Orleans Fire"
+   ],
+   "a": 3,
+   "why": "It burned on Good Friday, March 21, 1788."
+  },
+  {
+   "q": "Which roof was added to the Cabildo in 1847?",
+   "o": [
+    "A thatched roof",
+    "A mansard roof",
+    "A glass roof",
+    "A dome"
+   ],
+   "a": 1,
+   "why": "A third floor with a French-style mansard roof."
+  },
+  {
+   "q": "The French Market was dedicated as a market in which year?",
+   "o": [
+    "1791",
+    "1850",
+    "1815",
+    "1920"
+   ],
+   "a": 0,
+   "why": "Part of the space was dedicated as a market in 1791."
+  }
+ ],
+ "detroit": [
+  {
+   "q": "What did Diego Rivera paint in the Rivera Court?",
+   "o": [
+    "Oil portraits",
+    "Fresco murals",
+    "Mosaics",
+    "Stained glass"
+   ],
+   "a": 1,
+   "why": "He painted the Detroit Industry murals in fresco, 1932 to 1933."
+  },
+  {
+   "q": "What was the Fisher Building's roof first covered in?",
+   "o": [
+    "Copper sheets",
+    "Slate",
+    "Glass",
+    "Gold-leaf tiles"
+   ],
+   "a": 3,
+   "why": "The roof was gold-leaf tiles at first."
+  },
+  {
+   "q": "What do roads like Eight Mile measure their distance from?",
+   "o": [
+    "Campus Martius",
+    "Belle Isle",
+    "The Ambassador Bridge",
+    "Eastern Market"
+   ],
+   "a": 0,
+   "why": "Detroit's coordinate system starts at the Point of Origin in Campus Martius."
+  },
+  {
+   "q": "When did Michigan Central Station reopen?",
+   "o": [
+    "1988",
+    "2018",
+    "2024",
+    "1913"
+   ],
+   "a": 2,
+   "why": "It reopened in June 2024."
+  }
+ ],
+ "minneapolis": [
+  {
+   "q": "What ignited in the 1878 Washburn A Mill explosion?",
+   "o": [
+    "Coal gas",
+    "Flour dust",
+    "Gunpowder",
+    "Lamp oil"
+   ],
+   "a": 1,
+   "why": "Airborne flour dust ignited."
+  },
+  {
+   "q": "What was the Stone Arch Bridge built for?",
+   "o": [
+    "Trains",
+    "Cars",
+    "Boats",
+    "Pedestrians"
+   ],
+   "a": 0,
+   "why": "It carried a railroad."
+  },
+  {
+   "q": "Which waterfall was the only natural major waterfall on the Mississippi?",
+   "o": [
+    "Minnehaha Falls",
+    "Niagara Falls",
+    "Saint Anthony Falls",
+    "Hidden Falls"
+   ],
+   "a": 2,
+   "why": "Saint Anthony Falls."
+  },
+  {
+   "q": "Who designated the Basilica of Saint Mary a basilica in 1926?",
+   "o": [
+    "Pope Leo XIII",
+    "Pope John Paul II",
+    "Pope Benedict XV",
+    "Pope Pius XI"
+   ],
+   "a": 3,
+   "why": "Pope Pius XI made it the first basilica in the United States."
+  }
+ ],
+ "atlanta": [
+  {
+   "q": "Who was co-pastor at Ebenezer with his father from 1960?",
+   "o": [
+    "Ralph Abernathy",
+    "Andrew Young",
+    "Jesse Jackson",
+    "Martin Luther King Jr."
+   ],
+   "a": 3,
+   "why": "King served as co-pastor until 1968."
+  },
+  {
+   "q": "The Georgia Capitol's gold leaf came from near which town?",
+   "o": [
+    "Dahlonega",
+    "Sacramento",
+    "Fairbanks",
+    "Johannesburg"
+   ],
+   "a": 0,
+   "why": "Gold from near Dahlonega in Lumpkin County."
+  },
+  {
+   "q": "Atlanta's Flatiron Building was finished how many years before New York's?",
+   "o": [
+    "1",
+    "5",
+    "10",
+    "25"
+   ],
+   "a": 1,
+   "why": "Five years."
+  },
+  {
+   "q": "Piedmont Park sits on the site of which 1895 event?",
+   "o": [
+    "A World's Fair",
+    "A Civil War muster",
+    "Cotton States and International Exposition",
+    "The Olympic Games"
+   ],
+   "a": 2,
+   "why": "The Cotton States and International Exposition."
+  }
+ ],
+ "memphis": [
+  {
+   "q": "Who opened Sun Studio?",
+   "o": [
+    "Sam Phillips",
+    "Elvis Presley",
+    "Johnny Cash",
+    "W.C. Handy"
+   ],
+   "a": 0,
+   "why": "Sam Phillips, January 3, 1950."
+  },
+  {
+   "q": "What did Congress call Beale Street in 1977?",
+   "o": [
+    "The Jazz Mile",
+    "Music Row",
+    "Blues Avenue",
+    "The Home of the Blues"
+   ],
+   "a": 3,
+   "why": "December 15, 1977."
+  },
+  {
+   "q": "How much did Elvis pay for Graceland?",
+   "o": [
+    "$25,000",
+    "$102,500",
+    "$1 million",
+    "$500,000"
+   ],
+   "a": 1,
+   "why": "He paid $102,500 in 1957."
+  },
+  {
+   "q": "Floor trading at the Memphis Cotton Exchange ended in which year?",
+   "o": [
+    "1939",
+    "1950",
+    "1978",
+    "2001"
+   ],
+   "a": 2,
+   "why": "Floor trading closed in 1978."
+  }
+ ],
+ "savannah": [
+  {
+   "q": "When was the Forsyth Park fountain installed?",
+   "o": [
+    "1776",
+    "1812",
+    "1858",
+    "1902"
+   ],
+   "a": 2,
+   "why": "It was installed in 1858."
+  },
+  {
+   "q": "The cathedral was rebuilt after a fire in which year?",
+   "o": [
+    "1876",
+    "1912",
+    "1865",
+    "1898"
+   ],
+   "a": 3,
+   "why": "Fire destroyed the interior on February 6, 1898."
+  },
+  {
+   "q": "Which Georgia fort fell to rifled cannon in about 30 hours in 1862?",
+   "o": [
+    "Fort Pulaski",
+    "Fort Sumter",
+    "Fort Moultrie",
+    "Fort McHenry"
+   ],
+   "a": 0,
+   "why": "Fort Pulaski, on Cockspur Island."
+  },
+  {
+   "q": "What trade built River Street's warehouses?",
+   "o": [
+    "Tobacco",
+    "Cotton",
+    "Coal",
+    "Steel"
+   ],
+   "a": 1,
+   "why": "Cotton brokers, called factors, worked there."
+  }
+ ],
+ "denver": [
+  {
+   "q": "In what year was the Mizpah arch in front of Union Station dedicated?",
+   "o": [
+    "1881",
+    "1894",
+    "1906",
+    "1931"
+   ],
+   "a": 2,
+   "why": "It was dedicated on July 4, 1906 and torn down in 1931."
+  },
+  {
+   "q": "Which president was the first sitting president to visit the Brown Palace?",
+   "o": [
+    "Theodore Roosevelt",
+    "Abraham Lincoln",
+    "Harry Truman",
+    "Herbert Hoover"
+   ],
+   "a": 0,
+   "why": "Theodore Roosevelt visited on May 8, 1905."
+  },
+  {
+   "q": "The Denver Mint's building is based on a palace in which city?",
+   "o": [
+    "Paris",
+    "Madrid",
+    "Vienna",
+    "Florence"
+   ],
+   "a": 3,
+   "why": "It is based on the Palazzo Medici-Riccardi in Florence."
+  },
+  {
+   "q": "What was the land under Cheesman Park before it became a park?",
+   "o": [
+    "A farm",
+    "A cemetery",
+    "A railyard",
+    "A mine"
+   ],
+   "a": 1,
+   "why": "It was Prospect Hill Cemetery."
+  }
+ ],
+ "santafe": [
+  {
+   "q": "The Santa Fe Trail connected the Plaza with which state?",
+   "o": [
+    "Texas",
+    "Kansas",
+    "Missouri",
+    "Ohio"
+   ],
+   "a": 2,
+   "why": "It linked New Mexico with Missouri."
+  },
+  {
+   "q": "La Fonda simply means what in Spanish?",
+   "o": [
+    "The fountain",
+    "The inn",
+    "The plaza",
+    "The fire"
+   ],
+   "a": 1,
+   "why": "Wikipedia says it means the inn."
+  },
+  {
+   "q": "In which year was San Miguel Chapel rebuilt after the Pueblo Revolt?",
+   "o": [
+    "1610",
+    "1680",
+    "1798",
+    "1710"
+   ],
+   "a": 3,
+   "why": "It was rebuilt in 1710."
+  },
+  {
+   "q": "Which governor finished writing Ben-Hur in the Palace of the Governors?",
+   "o": [
+    "Lew Wallace",
+    "Pedro de Peralta",
+    "Diego de Vargas",
+    "Kit Carson"
+   ],
+   "a": 0,
+   "why": "Lew Wallace wrote the final parts there in the late 1870s."
+  }
+ ],
+ "phoenix": [
+  {
+   "q": "In which year did the Arizona territorial legislature move to Phoenix?",
+   "o": [
+    "1889",
+    "1864",
+    "1900",
+    "1912"
+   ],
+   "a": 0,
+   "why": "It voted to move to Phoenix on January 29, 1889."
+  },
+  {
+   "q": "Why did Dr. Rosson resign as mayor?",
+   "o": [
+    "He moved to California",
+    "He got sick",
+    "Trouble with the city council",
+    "He lost a lawsuit"
+   ],
+   "a": 2,
+   "why": "He resigned after difficulties with the city council."
+  },
+  {
+   "q": "Who is the architect of record of the Arizona Biltmore?",
+   "o": [
+    "Frank Lloyd Wright",
+    "Albert Chase McArthur",
+    "Mary Colter",
+    "James Riely Gordon"
+   ],
+   "a": 1,
+   "why": "Albert Chase McArthur designed it. Wright only consulted."
+  },
+  {
+   "q": "What formed the Arizona Falls waterfall?",
+   "o": [
+    "A river",
+    "An earthquake",
+    "A glacier",
+    "A canal over a rock ledge"
+   ],
+   "a": 3,
+   "why": "The man-made Arizona Canal crossed a natural 20-foot drop."
+  }
+ ],
+ "albuquerque": [
+  {
+   "q": "In which year did the Alvarado Hotel open?",
+   "o": [
+    "1887",
+    "1927",
+    "1902",
+    "1970"
+   ],
+   "a": 2,
+   "why": "It opened on May 10, 1902."
+  },
+  {
+   "q": "What was the KiMo's name chosen through?",
+   "o": [
+    "A school vote",
+    "A newspaper contest",
+    "A coin toss",
+    "The mayor's decision"
+   ],
+   "a": 1,
+   "why": "A newspaper naming contest, won by Pablo Abeita."
+  },
+  {
+   "q": "What was the main job at the Santa Fe Railway Shops?",
+   "o": [
+    "Steam locomotive maintenance",
+    "Building passenger cars",
+    "Printing tickets",
+    "Making rails"
+   ],
+   "a": 0,
+   "why": "They overhauled steam locomotives."
+  },
+  {
+   "q": "In which year did construction on the current San Felipe de Neri Church begin?",
+   "o": [
+    "1706",
+    "1793",
+    "1850",
+    "1902"
+   ],
+   "a": 1,
+   "why": "Construction began in 1793 after the first church collapsed."
+  }
+ ],
+ "tucson": [
+  {
+   "q": "Who founded Mission San Xavier del Bac in 1692?",
+   "o": [
+    "Coronado",
+    "Junipero Serra",
+    "Eusebio Kino",
+    "Diego de Vargas"
+   ],
+   "a": 2,
+   "why": "Eusebio Kino, a Jesuit, founded it."
+  },
+  {
+   "q": "The Tucson depot was restored to the look it had in which year?",
+   "o": [
+    "1907",
+    "1941",
+    "1970",
+    "2004"
+   ],
+   "a": 1,
+   "why": "Restoration returned it to its 1941 Spanish Colonial Revival look."
+  },
+  {
+   "q": "Who designed the Pima County Courthouse?",
+   "o": [
+    "Roy Place",
+    "Frank Lloyd Wright",
+    "Mary Colter",
+    "Daniel Patterson"
+   ],
+   "a": 0,
+   "why": "Roy Place designed it in 1928."
+  },
+  {
+   "q": "Why was Old Main renamed the School of Agriculture?",
+   "o": [
+    "It was moved",
+    "Federal loans for agricultural schools",
+    "A fire",
+    "The state demanded it"
+   ],
+   "a": 1,
+   "why": "Officials found federal loans for agricultural schools were available."
+  }
+ ],
+ "pittsburgh": [
+  {
+   "q": "On which date did the Monongahela Incline open?",
+   "o": [
+    "May 28, 1870",
+    "July 4, 1776",
+    "March 19, 1883",
+    "October 13, 1884"
+   ],
+   "a": 0,
+   "why": "It opened on May 28, 1870."
+  },
+  {
+   "q": "Who designed the Smithfield Street Bridge that stands today?",
+   "o": [
+    "John Roebling",
+    "Louis Wernwag",
+    "Henry Bouquet",
+    "Gustav Lindenthal"
+   ],
+   "a": 3,
+   "why": "Gustav Lindenthal designed the present bridge."
+  },
+  {
+   "q": "What happened to Pittsburgh's old courthouse on May 7, 1882?",
+   "o": [
+    "It was torn down",
+    "It was moved",
+    "It burned",
+    "It was sold"
+   ],
+   "a": 2,
+   "why": "A fire destroyed it, and Richardson's design replaced it."
+  },
+  {
+   "q": "Who refused Henry Clay Frick's offer to move the Block House?",
+   "o": [
+    "The city council",
+    "The Daughters of the American Revolution",
+    "The army",
+    "The governor"
+   ],
+   "a": 1,
+   "why": "The Daughters refused his $25,000 offer, and the court backed them."
+  }
+ ],
+ "baltimore": [
+  {
+   "q": "What famous message was first sent to Mount Clare by telegraph in 1844?",
+   "o": [
+    "Hello, world",
+    "What hath God wrought?",
+    "The war is over",
+    "Come at once"
+   ],
+   "a": 1,
+   "why": "Samuel Morse's telegraph carried \"What hath God wrought?\" on May 24, 1844."
+  },
+  {
+   "q": "Who designed Baltimore's Washington Monument?",
+   "o": [
+    "Robert Mills",
+    "Edmund Lind",
+    "Jean Foncin",
+    "George Peabody"
+   ],
+   "a": 0,
+   "why": "Robert Mills won the 1814 design competition."
+  },
+  {
+   "q": "For how many hours did the British bombard Fort McHenry in 1814?",
+   "o": [
+    "8",
+    "12",
+    "25",
+    "100"
+   ],
+   "a": 2,
+   "why": "The bombardment lasted 25 hours."
+  },
+  {
+   "q": "Who designed the George Peabody Library?",
+   "o": [
+    "Robert Mills",
+    "Edmund George Lind",
+    "Jean Foncin",
+    "John Chislett"
+   ],
+   "a": 1,
+   "why": "Local architect Edmund George Lind designed it, and it opened in 1878."
+  }
+ ],
+ "cleveland": [
+  {
+   "q": "Who designed the Soldiers' and Sailors' Monument?",
+   "o": [
+    "Levi Scofield",
+    "John Eisenmann",
+    "Charles Heard",
+    "Louis Sullivan"
+   ],
+   "a": 0,
+   "why": "Levi T. Scofield, a Civil War veteran, designed it and made its sculptures."
+  },
+  {
+   "q": "In what year did the Cleveland Arcade open?",
+   "o": [
+    "1927",
+    "1894",
+    "1890",
+    "1975"
+   ],
+   "a": 2,
+   "why": "It opened on May 30, 1890."
+  },
+  {
+   "q": "When was the replica steeple added to the Old Stone Church?",
+   "o": [
+    "1857",
+    "1884",
+    "1927",
+    "1999"
+   ],
+   "a": 3,
+   "why": "The replica was added in 1999."
+  },
+  {
+   "q": "The Terminal Tower was planned as 14 stories. How many did it end up with?",
+   "o": [
+    "28",
+    "52",
+    "40",
+    "100"
+   ],
+   "a": 1,
+   "why": "It was expanded to 52 floors."
+  }
+ ],
+ "stlouis": [
+  {
+   "q": "Who designed the Gateway Arch?",
+   "o": [
+    "Louis Sullivan",
+    "Eero Saarinen",
+    "James Eads",
+    "Theodore Link"
+   ],
+   "a": 1,
+   "why": "Eero Saarinen designed it in 1947."
+  },
+  {
+   "q": "How long is the Eads Bridge's center arch?",
+   "o": [
+    "220 feet",
+    "520 feet",
+    "1,020 feet",
+    "52 feet"
+   ],
+   "a": 1,
+   "why": "It is 520 feet, the longest rigid span at the time."
+  },
+  {
+   "q": "In what year did St. Louis Union Station open?",
+   "o": [
+    "1894",
+    "1904",
+    "1926",
+    "1978"
+   ],
+   "a": 0,
+   "why": "It opened on September 1, 1894."
+  },
+  {
+   "q": "Who called the Wainwright Building the first human expression of a tall steel office building as architecture?",
+   "o": [
+    "Louis Sullivan",
+    "Eero Saarinen",
+    "Frank Lloyd Wright",
+    "Ellis Wainwright"
+   ],
+   "a": 2,
+   "why": "Frank Lloyd Wright said it."
+  }
+ ],
+ "cincinnati": [
+  {
+   "q": "What was the Roebling bridge's main span when it opened in 1867?",
+   "o": [
+    "1,595 feet",
+    "1,057 feet",
+    "500 feet",
+    "2,000 feet"
+   ],
+   "a": 1,
+   "why": "Wikipedia says the main span was 1,057 feet."
+  },
+  {
+   "q": "The Tyler Davidson Fountain is also called what?",
+   "o": [
+    "The River Queen",
+    "The Queen City Fountain",
+    "The Silver Rain",
+    "The Genius of Water"
+   ],
+   "a": 3,
+   "why": "It is also called The Genius of Water."
+  },
+  {
+   "q": "Music Hall is in which neighborhood?",
+   "o": [
+    "Mount Adams",
+    "Over-the-Rhine",
+    "Downtown Kentucky",
+    "Roebling Point"
+   ],
+   "a": 1,
+   "why": "It sits in Over-the-Rhine across from Washington Park."
+  },
+  {
+   "q": "How tall is the Carew Tower?",
+   "o": [
+    "200 feet",
+    "1,000 feet",
+    "398 feet",
+    "574 feet"
+   ],
+   "a": 3,
+   "why": "It is 574 feet tall."
+  }
+ ],
+ "indianapolis": [
+  {
+   "q": "Who designed the Soldiers' and Sailors' Monument?",
+   "o": [
+    "Bruno Schmitz",
+    "Thomas Rodd",
+    "Eero Saarinen",
+    "Daniel Burnham"
+   ],
+   "a": 0,
+   "why": "German architect Bruno Schmitz designed it."
+  },
+  {
+   "q": "In what year was the current Indiana Statehouse built?",
+   "o": [
+    "1916",
+    "1902",
+    "1888",
+    "1824"
+   ],
+   "a": 2,
+   "why": "It was built in 1888."
+  },
+  {
+   "q": "Who designed the 1888 Union Station?",
+   "o": [
+    "Thomas Rodd",
+    "Bruno Schmitz",
+    "Louis Sullivan",
+    "George Cary"
+   ],
+   "a": 0,
+   "why": "Thomas Rodd of Pittsburgh designed it."
+  },
+  {
+   "q": "The Indiana World War Memorial Plaza started as a plan to lure which group's headquarters?",
+   "o": [
+    "The Red Cross",
+    "The Olympic Committee",
+    "The American Legion",
+    "The Boy Scouts"
+   ],
+   "a": 2,
+   "why": "It started in 1919 to attract the American Legion."
+  }
+ ],
+ "buffalo": [
+  {
+   "q": "How many stories does Buffalo City Hall have?",
+   "o": [
+    "49",
+    "10",
+    "52",
+    "32"
+   ],
+   "a": 3,
+   "why": "It has 32 stories."
+  },
+  {
+   "q": "Ellicott Square was the world's largest office building by floor area until what year?",
+   "o": [
+    "1975",
+    "1908",
+    "1896",
+    "1931"
+   ],
+   "a": 1,
+   "why": "It held the record until 1908."
+  },
+  {
+   "q": "How tall is the Old Post Office's tower?",
+   "o": [
+    "74 feet",
+    "398 feet",
+    "574 feet",
+    "244 feet"
+   ],
+   "a": 3,
+   "why": "Wikipedia gives 244 feet."
+  },
+  {
+   "q": "The History Museum's building was built for which event?",
+   "o": [
+    "The Olympic Games",
+    "The Pan-American Exposition",
+    "The 1932 Centennial",
+    "The Erie Canal opening"
+   ],
+   "a": 1,
+   "why": "It was the New York State pavilion at the 1901 Pan-American Exposition."
+  }
+ ],
+ "richmond": [
+  {
+   "q": "Who is credited with the overall design of the Virginia State Capitol?",
+   "o": [
+    "Patrick Henry",
+    "Lewis Ginter",
+    "Robert E. Lee",
+    "Thomas Jefferson"
+   ],
+   "a": 3,
+   "why": "Thomas Jefferson, together with Charles-Louis Clérisseau."
+  },
+  {
+   "q": "What neighborhood is named for St. John's Church?",
+   "o": [
+    "Church Hill",
+    "Shockoe Bottom",
+    "The Fan",
+    "Jackson Ward"
+   ],
+   "a": 0,
+   "why": "Wikipedia says the Church Hill district was named for it."
+  },
+  {
+   "q": "The architects of the Jefferson Hotel later designed which library?",
+   "o": [
+    "The Morgan Library",
+    "The New York Public Library",
+    "The Library of Congress",
+    "The Boston Public Library"
+   ],
+   "a": 1,
+   "why": "Carrère and Hastings designed the New York Public Library."
+  },
+  {
+   "q": "Main Street Station was built by Seaboard and which other railroad?",
+   "o": [
+    "Pennsylvania Railroad",
+    "Southern Pacific",
+    "Chesapeake and Ohio",
+    "Union Pacific"
+   ],
+   "a": 2,
+   "why": "The C&O and Seaboard built it together in 1901."
+  }
+ ],
+ "charleston": [
+  {
+   "q": "How many houses make up Rainbow Row?",
+   "o": [
+    "Thirty",
+    "Seven",
+    "Thirteen",
+    "Three"
+   ],
+   "a": 2,
+   "why": "There are thirteen buildings."
+  },
+  {
+   "q": "Which group preserves the Old Exchange?",
+   "o": [
+    "The National Guard",
+    "The Boy Scouts",
+    "The Coast Guard",
+    "Daughters of the American Revolution"
+   ],
+   "a": 3,
+   "why": "It was granted to the DAR in 1913."
+  },
+  {
+   "q": "White Point Garden is at the end of which seawall?",
+   "o": [
+    "The Battery",
+    "The Wharf",
+    "The Breakwater",
+    "The Levee"
+   ],
+   "a": 0,
+   "why": "It is the southern end of the Battery."
+  },
+  {
+   "q": "Which U.S. president worshipped in pew 43 at St. Michael's in 1791?",
+   "o": [
+    "James Madison",
+    "George Washington",
+    "Thomas Jefferson",
+    "Abraham Lincoln"
+   ],
+   "a": 1,
+   "why": "George Washington visited in 1791."
+  }
+ ],
+ "houston": [
+  {
+   "q": "Who built the current Rice Hotel in 1913?",
+   "o": [
+    "William Marsh Rice",
+    "Eugene Heiner",
+    "George Dickey",
+    "Jesse H. Jones"
+   ],
+   "a": 3,
+   "why": "Jesse H. Jones built it in 1913."
+  },
+  {
+   "q": "Market Square was originally named what?",
+   "o": [
+    "Congress Square",
+    "Bayou Square",
+    "Union Square",
+    "Rice Square"
+   ],
+   "a": 0,
+   "why": "It was named Congress Square in the original survey."
+  },
+  {
+   "q": "Houston's Union Station now sits beside what?",
+   "o": [
+    "A university",
+    "A baseball park",
+    "An airport",
+    "A prison"
+   ],
+   "a": 1,
+   "why": "It is a cornerstone of the baseball park."
+  },
+  {
+   "q": "In what year did the Houston Cotton Exchange move out of its building?",
+   "o": [
+    "1907",
+    "1973",
+    "1924",
+    "1884"
+   ],
+   "a": 2,
+   "why": "It moved to a new building in 1924."
+  }
+ ],
+ "nashville": [
+  {
+   "q": "The capitol's cupola is modeled on a monument to whom?",
+   "o": [
+    "Alexander",
+    "Lysicrates",
+    "Caesar",
+    "Pericles"
+   ],
+   "a": 1,
+   "why": "The Choragic Monument of Lysicrates."
+  },
+  {
+   "q": "Who designed Nashville's Union Station?",
+   "o": [
+    "Louis Sullivan",
+    "Warren and Wetmore",
+    "Henry Hobson Richardson and Richard Montfort",
+    "William Strickland"
+   ],
+   "a": 2,
+   "why": "Wikipedia credits Richardson and Montfort."
+  },
+  {
+   "q": "In what decade was the current Davidson County Courthouse built?",
+   "o": [
+    "1780s",
+    "1830s",
+    "1880s",
+    "1930s"
+   ],
+   "a": 3,
+   "why": "It was built in 1936-37."
+  },
+  {
+   "q": "What was the Nashville Parthenon first built from?",
+   "o": [
+    "Plaster, wood and brick",
+    "Marble",
+    "Steel",
+    "Limestone"
+   ],
+   "a": 0,
+   "why": "It was plaster, wood and brick in 1897."
+  }
+ ],
+ "providence": [
+  {
+   "q": "Who designed the Rhode Island State House?",
+   "o": [
+    "Russell Warren",
+    "McKim, Mead & White",
+    "Patrick Keely",
+    "Hoppin & Ely"
+   ],
+   "a": 1,
+   "why": "A New York firm, McKim, Mead & White, designed it."
+  },
+  {
+   "q": "What was the cathedral bishop's rule about money?",
+   "o": [
+    "He took a big loan",
+    "He sold the land",
+    "He charged tickets",
+    "He refused to borrow"
+   ],
+   "a": 3,
+   "why": "Hendricken refused to borrow and saved $10,000 a year."
+  },
+  {
+   "q": "When were the Van Wickle Gates dedicated?",
+   "o": [
+    "1901",
+    "1828",
+    "1773",
+    "1950"
+   ],
+   "a": 0,
+   "why": "They were dedicated on June 18, 1901."
+  },
+  {
+   "q": "The Arcade is called the first what in the United States?",
+   "o": [
+    "Subway",
+    "Public library",
+    "Enclosed shopping mall",
+    "Skyscraper"
+   ],
+   "a": 2,
+   "why": "It is the first enclosed shopping mall."
+  }
+ ],
+ "saltlake": [
+  {
+   "q": "What stands on top of the Eagle Gate?",
+   "o": [
+    "A lion",
+    "A clock",
+    "An eagle on a beehive",
+    "A golden angel"
+   ],
+   "a": 2,
+   "why": "A sculpture of an eagle perched on a beehive."
+  },
+  {
+   "q": "Who designed both the Beehive House and the Lion House?",
+   "o": [
+    "Truman O. Angell",
+    "Brigham Young",
+    "William Ward III",
+    "Pavel Albieri"
+   ],
+   "a": 0,
+   "why": "Truman O. Angell was involved in both."
+  },
+  {
+   "q": "What does the Lion House's name come from?",
+   "o": [
+    "A live lion",
+    "A zoo",
+    "A sports team",
+    "A statue of a lion"
+   ],
+   "a": 3,
+   "why": "A lion statue above the front entrance."
+  },
+  {
+   "q": "The Salt Lake Temple's large font rests on what?",
+   "o": [
+    "Six bees",
+    "Twelve oxen",
+    "Four lions",
+    "Eight eagles"
+   ],
+   "a": 1,
+   "why": "It rests on the backs of twelve oxen."
+  }
+ ],
+ "sandiego": [
+  {
+   "q": "In what year did the Hotel del Coronado open?",
+   "o": [
+    "1769",
+    "1915",
+    "1827",
+    "1888"
+   ],
+   "a": 3,
+   "why": "It opened in 1888."
+  },
+  {
+   "q": "How many churches have stood at the mission site, counting today's?",
+   "o": [
+    "Nine",
+    "Five",
+    "One",
+    "Two"
+   ],
+   "a": 1,
+   "why": "Today's church is the fifth to stand there."
+  },
+  {
+   "q": "The Botanical Building was built for what event?",
+   "o": [
+    "The 1849 Gold Rush",
+    "The 1984 Olympics",
+    "The 1915 Panama-California Exposition",
+    "The 1893 World's Fair"
+   ],
+   "a": 2,
+   "why": "It was built for the 1915-16 exposition."
+  },
+  {
+   "q": "In what year was the Casa de Estudillo built?",
+   "o": [
+    "1827",
+    "1884",
+    "1915",
+    "1769"
+   ],
+   "a": 0,
+   "why": "It was built in 1827."
+  }
+ ],
+ "portland": [
+  {
+   "q": "Pioneer Courthouse is called the oldest federal building where?",
+   "o": [
+    "The Midwest",
+    "The Gulf Coast",
+    "The Pacific Northwest",
+    "Alaska"
+   ],
+   "a": 2,
+   "why": "It is the oldest federal building in the Pacific Northwest."
+  },
+  {
+   "q": "Who designed the City Hall that was built after the first design was thrown out?",
+   "o": [
+    "Whidden and Lewis",
+    "Henry J. Hefty",
+    "Olin Levi Warner",
+    "Van Brunt & Howe"
+   ],
+   "a": 0,
+   "why": "Whidden and Lewis designed the current building."
+  },
+  {
+   "q": "Skidmore Fountain was dedicated in what year?",
+   "o": [
+    "1925",
+    "1888",
+    "1776",
+    "1895"
+   ],
+   "a": 1,
+   "why": "It was dedicated September 22, 1888."
+  },
+  {
+   "q": "How often is the Union Station clock wound?",
+   "o": [
+    "Every day",
+    "Once a year",
+    "Never",
+    "Every seven days"
+   ],
+   "a": 3,
+   "why": "It is wound every seven days."
+  }
+ ],
+ "milwaukee": [
+  {
+   "q": "City Hall's bell is named after which person?",
+   "o": [
+    "Alexander Mitchell",
+    "Henry Koch",
+    "Frederick Pabst",
+    "Solomon Juneau"
+   ],
+   "a": 3,
+   "why": "It is named after Solomon Juneau."
+  },
+  {
+   "q": "The Mitchell Building was designed by which architect?",
+   "o": [
+    "Pietro Belluschi",
+    "A. E. Doyle",
+    "E. Townsend Mix",
+    "Henry C. Koch"
+   ],
+   "a": 2,
+   "why": "E. Townsend Mix designed it."
+  },
+  {
+   "q": "Old Main was unoccupied starting in which year?",
+   "o": [
+    "1989",
+    "1867",
+    "1909",
+    "2011"
+   ],
+   "a": 0,
+   "why": "It was unoccupied starting in 1989."
+  },
+  {
+   "q": "The Milwaukee Auditorium was dedicated in which year?",
+   "o": [
+    "1867",
+    "1909",
+    "1895",
+    "1989"
+   ],
+   "a": 1,
+   "why": "It was dedicated on September 21, 1909."
+  }
+ ],
+ "columbus": [
+  {
+   "q": "The Ohio Statehouse has a low cone on top instead of what?",
+   "o": [
+    "A clock",
+    "A rounded dome",
+    "A flagpole",
+    "A steeple"
+   ],
+   "a": 1,
+   "why": "The designers dropped the rounded dome for a low conical roof."
+  },
+  {
+   "q": "Only one piece of Union Station still stands. What is it?",
+   "o": [
+    "The clock tower",
+    "A platform",
+    "The ticket hall",
+    "An arch"
+   ],
+   "a": 3,
+   "why": "One arch was saved and now stands in McFerson Commons."
+  },
+  {
+   "q": "The LeVeque Tower was built five inches taller than which monument?",
+   "o": [
+    "The Statue of Liberty",
+    "The Lincoln Memorial",
+    "The Washington Monument",
+    "The Eiffel Tower"
+   ],
+   "a": 2,
+   "why": "It was set 5 inches taller than the Washington Monument."
+  },
+  {
+   "q": "The Ohio Theatre opened in which year?",
+   "o": [
+    "1928",
+    "1869",
+    "1977",
+    "1897"
+   ],
+   "a": 0,
+   "why": "It opened on March 17, 1928."
+  }
+ ],
+ "gettysburg": [
+  {
+   "q": "Who was Lincoln's host in Gettysburg?",
+   "o": [
+    "George Meade",
+    "Thaddeus Stevens",
+    "David Wills",
+    "Andrew Curtin"
+   ],
+   "a": 2,
+   "why": "David Wills hosted Lincoln at his house."
+  },
+  {
+   "q": "What was Pennsylvania Hall used for in July 1863?",
+   "o": [
+    "A hospital",
+    "A courthouse",
+    "A hotel",
+    "A bank"
+   ],
+   "a": 0,
+   "why": "Soldiers of both armies were treated there."
+  },
+  {
+   "q": "In what year was the Soldiers' National Monument dedicated?",
+   "o": [
+    "1863",
+    "1895",
+    "1913",
+    "1869"
+   ],
+   "a": 3,
+   "why": "It was dedicated in 1869."
+  },
+  {
+   "q": "How many words are in the Gettysburg Address?",
+   "o": [
+    "2,700",
+    "271",
+    "27",
+    "1,000"
+   ],
+   "a": 1,
+   "why": "It has only 271 words."
+  }
+ ],
+ "louisville": [
+  {
+   "q": "Winners of the Kentucky Derby began receiving a garland of what in 1896?",
+   "o": [
+    "Gold coins",
+    "Ribbons",
+    "Roses",
+    "Tulips"
+   ],
+   "a": 2,
+   "why": "The garland of roses began in 1896."
+  },
+  {
+   "q": "The Seelbach Hotel inspired a hotel in which famous novel?",
+   "o": [
+    "Moby-Dick",
+    "Little Women",
+    "Huckleberry Finn",
+    "The Great Gatsby"
+   ],
+   "a": 3,
+   "why": "F. Scott Fitzgerald took inspiration from it for The Great Gatsby."
+  },
+  {
+   "q": "Who works in the old Union Station today?",
+   "o": [
+    "The post office",
+    "The city transit agency",
+    "A railroad",
+    "A bank"
+   ],
+   "a": 1,
+   "why": "It has been TARC's offices since 1980."
+  },
+  {
+   "q": "What destroyed the Water Tower's shaft and most of its statues in 1890?",
+   "o": [
+    "A tornado",
+    "A flood",
+    "A fire",
+    "An earthquake"
+   ],
+   "a": 0,
+   "why": "The March 27, 1890 tornado destroyed the shaft and all but two of the ten statues."
+  }
+ ],
+ "newport": [
+  {
+   "q": "The Breakers was built to resist what, after the first house burned?",
+   "o": [
+    "Earthquakes",
+    "Fire",
+    "Floods",
+    "Termites"
+   ],
+   "a": 1,
+   "why": "Masonry and steel after the 1892 fire."
+  },
+  {
+   "q": "The Cliff Walk is about how long?",
+   "o": [
+    "350 feet",
+    "12 miles",
+    "3.5 miles",
+    "35 miles"
+   ],
+   "a": 2,
+   "why": "A 3.5-mile public path."
+  },
+  {
+   "q": "Which sport's first U.S. championships were played at the Casino?",
+   "o": [
+    "Golf",
+    "Baseball",
+    "Polo",
+    "Lawn tennis"
+   ],
+   "a": 3,
+   "why": "The Tennis Hall of Fame is there."
+  },
+  {
+   "q": "What does carbon-14 testing say the Old Stone Mill was?",
+   "o": [
+    "A 17th-century windmill",
+    "A Viking church",
+    "A fort",
+    "A lighthouse"
+   ],
+   "a": 0,
+   "why": "Testing points to a windmill."
+  }
+ ],
+ "knoxville": [
+  {
+   "q": "Who built the Southern Terminal in 1903?",
+   "o": [
+    "The city",
+    "The TVA",
+    "A bank",
+    "Southern Railway"
+   ],
+   "a": 3,
+   "why": "Southern Railway built it."
+  },
+  {
+   "q": "What did Gay Street become in 1854?",
+   "o": [
+    "The first canal",
+    "The first paved road",
+    "The first railroad",
+    "The first bridge"
+   ],
+   "a": 1,
+   "why": "Knoxville's first paved road."
+  },
+  {
+   "q": "What was Blount Mansion nearly turned into in 1925?",
+   "o": [
+    "A parking lot",
+    "A school",
+    "A fort",
+    "A stadium"
+   ],
+   "a": 0,
+   "why": "A developer planned a hotel parking lot."
+  },
+  {
+   "q": "What stone covers the Old Customs House?",
+   "o": [
+    "Wood siding",
+    "Concrete",
+    "East Tennessee marble",
+    "Red brick"
+   ],
+   "a": 2,
+   "why": "It is sheathed in East Tennessee marble."
+  }
+ ],
+ "portlandme": [
+  {
+   "q": "Who made the Longfellow statue?",
+   "o": [
+    "Gutzon Borglum",
+    "Saint-Gaudens",
+    "Franklin Simmons",
+    "Daniel Chester French"
+   ],
+   "a": 2,
+   "why": "Franklin Simmons."
+  },
+  {
+   "q": "The Portland Observatory was built to watch what?",
+   "o": [
+    "Ships",
+    "Stars",
+    "Storms",
+    "Fires"
+   ],
+   "a": 0,
+   "why": "A maritime signal tower."
+  },
+  {
+   "q": "Where was Longfellow born?",
+   "o": [
+    "Boston",
+    "His aunt's house nearby",
+    "The Wadsworth house",
+    "A ship"
+   ],
+   "a": 1,
+   "why": "He was born nearby, then moved in at eight months."
+  },
+  {
+   "q": "How many City Halls has Portland had at this site, counting the current one?",
+   "o": [
+    "Only one",
+    "None",
+    "Exactly ten",
+    "More than one"
+   ],
+   "a": 3,
+   "why": "The current one is the fourth city hall, after earlier ones burned."
+  }
+ ],
+ "newhaven": [
+  {
+   "q": "What lies under the soil of the New Haven Green?",
+   "o": [
+    "A railway",
+    "Old graves",
+    "A fort",
+    "A lake"
+   ],
+   "a": 1,
+   "why": "It was the main burial ground for 150 years."
+  },
+  {
+   "q": "Yale's first building in New Haven was called what?",
+   "o": [
+    "Harkness Tower",
+    "Phelps Hall",
+    "Dwight Hall",
+    "The College House"
+   ],
+   "a": 3,
+   "why": "Built in 1718."
+  },
+  {
+   "q": "Who designed Vanderbilt Hall?",
+   "o": [
+    "Stanford White",
+    "Louis Sullivan",
+    "Charles C. Haight",
+    "Frank Lloyd Wright"
+   ],
+   "a": 2,
+   "why": "Haight completed it in 1894."
+  },
+  {
+   "q": "What was today's Dwight Hall built as in 1842?",
+   "o": [
+    "A library",
+    "A theater",
+    "A hotel",
+    "A bank"
+   ],
+   "a": 0,
+   "why": "The Yale College Library."
+  }
+ ],
+ "burlington": [
+  {
+   "q": "What was built on four blocks of Church Street in 1980 and 1981?",
+   "o": [
+    "A stadium",
+    "A harbor",
+    "A pedestrian marketplace",
+    "A highway"
+   ],
+   "a": 2,
+   "why": "The Church Street Marketplace."
+  },
+  {
+   "q": "Battery Park gets its name from what?",
+   "o": [
+    "Artillery in the War of 1812",
+    "Batteries made here",
+    "A row of lights",
+    "A baseball team"
+   ],
+   "a": 0,
+   "why": "American artillery was stationed there."
+  },
+  {
+   "q": "Who laid South College's cornerstone in 1825?",
+   "o": [
+    "Ethan Allen",
+    "George Washington",
+    "Abraham Lincoln",
+    "General Lafayette"
+   ],
+   "a": 3,
+   "why": "He was on his national tour."
+  },
+  {
+   "q": "Who designed Billings Library?",
+   "o": [
+    "Julia Morgan",
+    "H. H. Richardson",
+    "Frank Lloyd Wright",
+    "Louis Sullivan"
+   ],
+   "a": 1,
+   "why": "Henry Hobson Richardson."
+  }
+ ],
+ "coloradosprings": [
+  {
+   "q": "What was the Pioneers Museum building before 1979?",
+   "o": [
+    "A school",
+    "A depot",
+    "The county courthouse",
+    "A hotel"
+   ],
+   "a": 2,
+   "why": "It was the courthouse from 1903 to 1973."
+  },
+  {
+   "q": "How many steps climb beside Seven Falls?",
+   "o": [
+    "224",
+    "24",
+    "1,224",
+    "5,000"
+   ],
+   "a": 0,
+   "why": "A staircase of 224 steps."
+  },
+  {
+   "q": "What did surveyor Melancthon Beach suggest the place would suit in 1859?",
+   "o": [
+    "A fort",
+    "A farm",
+    "A school",
+    "A beer garden"
+   ],
+   "a": 3,
+   "why": "A capital place for a beer garden."
+  },
+  {
+   "q": "Which song was inspired by climbing Pikes Peak?",
+   "o": [
+    "Home on the Range",
+    "America the Beautiful",
+    "Yankee Doodle",
+    "Dixie"
+   ],
+   "a": 1,
+   "why": "Katharine Lee Bates, 1893."
+  }
+ ],
+ "lasvegas": [
+  {
+   "q": "Fremont Street was closed to cars in which year?",
+   "o": [
+    "1905",
+    "1931",
+    "1952",
+    "1994"
+   ],
+   "a": 3,
+   "why": "To build the Fremont Street Experience."
+  },
+  {
+   "q": "Why did people doubt El Cortez at first?",
+   "o": [
+    "On a lake",
+    "Too far from downtown",
+    "No power",
+    "Too small"
+   ],
+   "a": 1,
+   "why": "6th and Fremont was thought too far out."
+  },
+  {
+   "q": "The Fifth Street School got its name because Las Vegas Boulevard was once called what?",
+   "o": [
+    "Fifth Street",
+    "Main Street",
+    "Hoover Road",
+    "Nugget Lane"
+   ],
+   "a": 0,
+   "why": "An informal name from the old street name."
+  },
+  {
+   "q": "Who dedicated Hoover Dam in 1935?",
+   "o": [
+    "President Lincoln",
+    "President Taft",
+    "President Franklin D. Roosevelt",
+    "President Herbert Hoover"
+   ],
+   "a": 2,
+   "why": "Roosevelt dedicated it on September 30, 1935."
+  }
+ ],
+ "flagstaff": [
+  {
+   "q": "Who discovered Pluto at Lowell Observatory?",
+   "o": [
+    "Carl Sagan",
+    "Clyde Tombaugh",
+    "Percival Lowell",
+    "Galileo"
+   ],
+   "a": 1,
+   "why": "Tombaugh, in 1930."
+  },
+  {
+   "q": "About how high is the Flagstaff station above sea level?",
+   "o": [
+    "16,902 feet",
+    "2,000 feet",
+    "6,902 feet",
+    "902 feet"
+   ],
+   "a": 2,
+   "why": "One of the highest Amtrak stations."
+  },
+  {
+   "q": "What was removed from the Weatherford Hotel in 1929?",
+   "o": [
+    "Its balcony and cupola",
+    "Its kitchen",
+    "Its basement",
+    "Its sign"
+   ],
+   "a": 0,
+   "why": "Fire damage led to their removal."
+  },
+  {
+   "q": "Which people built the Walnut Canyon cliff dwellings?",
+   "o": [
+    "The Vikings",
+    "The Romans",
+    "The Spanish",
+    "The Sinagua"
+   ],
+   "a": 3,
+   "why": "They lived there about 1100 to 1250 AD."
+  }
+ ],
+ "elpaso": [
+  {
+   "q": "Who designed El Paso's Union Depot?",
+   "o": [
+    "Henry Hobson Richardson",
+    "Daniel Burnham",
+    "Frank Lloyd Wright",
+    "Julia Morgan"
+   ],
+   "a": 1,
+   "why": "He also designed Washington Union Station."
+  },
+  {
+   "q": "Which animals lived in San Jacinto Plaza's pond?",
+   "o": [
+    "Flamingos",
+    "Beavers",
+    "Alligators",
+    "Penguins"
+   ],
+   "a": 2,
+   "why": "A sculpture honors them."
+  },
+  {
+   "q": "When did the Hotel Paso del Norte open?",
+   "o": [
+    "Thanksgiving Day 1912",
+    "Christmas Day 1850",
+    "July 4, 1776",
+    "New Year's Day 1990"
+   ],
+   "a": 0,
+   "why": "Trost & Trost designed it."
+  },
+  {
+   "q": "What started the 1907 fire at Ysleta Mission?",
+   "o": [
+    "A lightning bolt",
+    "A campfire",
+    "A train spark",
+    "Chemicals stored to repel bats"
+   ],
+   "a": 3,
+   "why": "The chemicals were stored in the bell tower."
+  }
+ ],
+ "sanantonio": [
+  {
+   "q": "What did the Alamo start out as?",
+   "o": [
+    "A hotel",
+    "A school",
+    "A mission",
+    "A bank"
+   ],
+   "a": 2,
+   "why": "It began as Mission San Antonio de Valero in 1718."
+  },
+  {
+   "q": "In what year was the cornerstone of San Fernando Cathedral laid?",
+   "o": [
+    "1738",
+    "1638",
+    "1838",
+    "1938"
+   ],
+   "a": 0,
+   "why": "It was laid on May 11, 1738."
+  },
+  {
+   "q": "In what year was Mission San Jose founded?",
+   "o": [
+    "1520",
+    "1820",
+    "1920",
+    "1720"
+   ],
+   "a": 3,
+   "why": "The National Park Service says 1720."
+  },
+  {
+   "q": "Which railroad built Sunset Station?",
+   "o": [
+    "Reading",
+    "Southern Pacific",
+    "Union Pacific",
+    "Santa Fe"
+   ],
+   "a": 1,
+   "why": "It opened in 1902."
+  }
+ ],
+ "dayton": [
+  {
+   "q": "In what year did the Wrights start testing the Flyer II at Huffman Prairie?",
+   "o": [
+    "1899",
+    "1903",
+    "1904",
+    "1910"
+   ],
+   "a": 2,
+   "why": "Wikipedia: they began testing there in 1904."
+  },
+  {
+   "q": "How long was Wilbur's record flight in the Flyer III on October 5, 1905?",
+   "o": [
+    "39 minutes",
+    "39 seconds",
+    "3 hours",
+    "9 minutes"
+   ],
+   "a": 0,
+   "why": "Wikipedia: 24.2 miles in 39 minutes 23 seconds."
+  },
+  {
+   "q": "Who owned the Huffman Prairie field and let the Wrights use it?",
+   "o": [
+    "Hap Arnold",
+    "Orville Wright",
+    "Matilda Dunbar",
+    "Torrence Huffman"
+   ],
+   "a": 3,
+   "why": "Dayton banker Torrence Huffman."
+  },
+  {
+   "q": "Whom did Paul Laurence Dunbar buy his house for?",
+   "o": [
+    "His mother",
+    "His publisher",
+    "His school",
+    "The Wright brothers"
+   ],
+   "a": 0,
+   "why": "Wikipedia: he bought it for his mother, Matilda, in 1904."
+  }
+ ],
+ "sparks": [
+  {
+   "q": "Who was the town of Sparks named for?",
+   "o": [
+    "A railroad president",
+    "Governor John Sparks",
+    "A local rancher",
+    "The mayor of Reno"
+   ],
+   "a": 1,
+   "why": "It was renamed in April 1904 for Nevada governor John Sparks."
+  },
+  {
+   "q": "Which railroad moved its terminal from Wadsworth to Sparks in 1904?",
+   "o": [
+    "Union Pacific",
+    "Santa Fe",
+    "Southern Pacific",
+    "Virginia & Truckee"
+   ],
+   "a": 2,
+   "why": "The Southern Pacific moved its terminal in summer 1904."
+  },
+  {
+   "q": "What was the Sparks Marina lake before it was a lake?",
+   "o": [
+    "A reservoir",
+    "A swamp",
+    "A rail yard",
+    "A gravel pit"
+   ],
+   "a": 3,
+   "why": "It was the Helms gravel pit, filled by the 1997 flood."
+  },
+  {
+   "q": "Where does the Truckee River end?",
+   "o": [
+    "Pyramid Lake",
+    "Lake Tahoe",
+    "The Pacific Ocean",
+    "Walker Lake"
+   ],
+   "a": 0,
+   "why": "The Truckee starts at Lake Tahoe and ends in Pyramid Lake, which has no outlet."
+  }
+ ],
+ "carson": [
+  {
+   "q": "Where did the stone for the Nevada State Capitol come from?",
+   "o": [
+    "Lake Tahoe granite quarries",
+    "The Nevada State Prison quarry",
+    "Brick kilns in San Francisco",
+    "Limestone from Utah"
+   ],
+   "a": 1,
+   "why": "The builders used sandstone from the Nevada State Prison quarry just outside town."
+  },
+  {
+   "q": "What two-letter mint mark do Carson City Mint coins carry?",
+   "o": [
+    "CC",
+    "CS",
+    "NV",
+    "CM"
+   ],
+   "a": 0,
+   "why": "Coins struck here from 1870 to 1893 carry the “CC” mark."
+  },
+  {
+   "q": "In what year did the Stewart Indian School close?",
+   "o": [
+    "1934",
+    "1950",
+    "1965",
+    "1980"
+   ],
+   "a": 3,
+   "why": "The school ran from 1890 to 1980."
+  },
+  {
+   "q": "Which railroad, built to serve the Comstock silver mines, ended service in 1950?",
+   "o": [
+    "Southern Pacific",
+    "Virginia & Truckee",
+    "Western Pacific",
+    "Union Pacific"
+   ],
+   "a": 1,
+   "why": "The Virginia & Truckee began in 1869 and was abandoned in 1950."
+  }
+ ]
 }

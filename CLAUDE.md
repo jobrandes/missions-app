@@ -132,3 +132,9 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 ## Landing page (Oct 25)
 - `src/landing.html` is built by build.py into `site/index.html` (stampthepast.com root). The game itself is `site/play.html` (served at /play). Manifest start_url and sw.js use play.html; sw ignores other navigations. robots.txt and sitemap.xml are generated; /play is noindex, the landing is indexable.
 - Landing says location is optional and stays on the phone (not "no location tracking"); app Menu matches.
+
+## Carson City (Oct 25)
+- 4 stops: Capitol, Old Mint (Nevada State Museum), Stewart Indian School, Railroad Museum. Second town after Reno/Sparks (index order: reno, sparks, carson, vc...).
+- GPS circles are estimates from Wikipedia coordinates (Stewart and Railroad Museum are rough). Jo-Anne to walk them.
+- Capitol "Now" is a drone view (CC0); Stewart "Now" is a different building than 1905 Then; both labeled honestly. Stewart text is deliberately careful about boarding school history.
+- Source for photos: Commons via browser pane; shell cannot reach Wikimedia.

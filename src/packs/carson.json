@@ -1,0 +1,437 @@
+{
+ "id": "carson",
+ "name": "Carson City",
+ "explorer": "Capital City Explorer",
+ "initials": "CC",
+ "stops": [
+  {
+   "id": "capitol",
+   "name": "Nevada State Capitol",
+   "short": "State Capitol",
+   "badge": "State Capitol",
+   "tag": "Stop 1 of 4",
+   "teaser": "A sandstone capitol with a silver dome.",
+   "map": "Nevada State Capitol, 101 N Carson St, Carson City, NV",
+   "geo": [
+    39.1642,
+    -119.7664,
+    300
+   ],
+   "clue": "Find the sandstone Capitol on North Carson Street. It sits in a park-like plaza and has a silver dome on top. Nevada has been run from this building since 1871.",
+   "safety": "Stay on sidewalks and cross streets only at corners. Carson Street is busy. Public buildings have hours and security. Stay outside unless you are visiting during open hours.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Look up at the top of the dome. The small windowed tower that crowns it has a name. What is it called?",
+    "options": [
+     "A belfry",
+     "A turret",
+     "A cupola",
+     "A minaret"
+    ],
+    "answer": 2,
+    "hint": "It sits on top and lets daylight into the rooms below.",
+    "verify": "Public Works and Wikipedia both describe the dome topped with a cupola. Confirm on site."
+   },
+   "then": {
+    "ph": {
+     "k": "cc_cap_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Nevada_State_Capitol,_1875.jpg",
+     "note": "resized"
+    },
+    "yr": "1875",
+    "label": "The Capitol, 1875",
+    "line": "A few years after it opened, the Capitol stood in an open plaza behind a fence, with young trees just planted. The date is the one listed on Wikimedia Commons.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Carson%20City%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2025",
+    "head": "Today",
+    "label": "The Capitol from above",
+    "line": "A recent view from above. You can see the two wings and the annex added in the early 1900s, so it is a different angle from the 1875 photo.",
+    "ph": {
+     "k": "cc_cap_now",
+     "by": "Quintin Soloviev",
+     "lic": "CC0",
+     "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Nevada_State_Capitol_Building_-_Carson_City.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Carson City was named the capital when Nevada became a state in 1864. The Capitol was built between 1869 and 1871, with the cornerstone laid on June 9, 1870.",
+    "To save money the builders used sandstone from the Nevada State Prison quarry, hauled in by prison labor. It still cost far more than the $100,000 the Legislature first allowed.",
+    "The first lawmakers met in the unfinished building in early 1871. A State Library annex was added in 1906, and two legislative wings joined in time for the 1915 session."
+   ],
+   "fact": "The Capitol sits on a plaza that town founder Abraham Curry set aside in the middle of Carson City years before the building existed.",
+   "disputed": "The date on the \"Then\" photo (1875) comes from its Wikimedia Commons listing, and its photographer is unknown. Treat the year as approximate.",
+   "claims": [
+    {
+     "t": "The Capitol’s sandstone came from the Nevada State Prison quarry.",
+     "a": 0,
+     "why": "The state’s Public Works history and Wikipedia agree the stone came from the prison quarry near town."
+    },
+    {
+     "t": "The Capitol was finished under its $100,000 budget.",
+     "a": 2,
+     "why": "The 1869 law set aside $100,000, but the state ended up paying over $160,000."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Nevada State Capitol",
+     "u": "https://en.wikipedia.org/wiki/Nevada_State_Capitol"
+    },
+    {
+     "t": "Nevada Public Works: Historical overview of the Capitol and Annex (PDF)",
+     "u": "https://publicworks.nv.gov/uploadedFiles/publicworksnvgov/content/Documents/Historical%20Overview%20of%20the%20Nevada%20State%20Capitol%20and%20Capitol%20Annex.pdf"
+    }
+   ],
+   "card": {
+    "a": "1875",
+    "b": "Today",
+    "la": "Capitol, early years",
+    "lb": "The Capitol from above"
+   }
+  },
+  {
+   "id": "mint",
+   "name": "The Old Mint",
+   "short": "The Old Mint",
+   "badge": "The Old Mint",
+   "tag": "Stop 2 of 4",
+   "teaser": "Where Comstock silver became coins.",
+   "map": "Nevada State Museum, 600 N Carson St, Carson City, NV",
+   "geo": [
+    39.1675,
+    -119.7672,
+    300
+   ],
+   "clue": "Walk north on Carson Street to the old Mint. It is a sandstone building with tall arched windows, and it is now the Nevada State Museum. Coins were struck here during the Comstock silver boom.",
+   "safety": "Stay on sidewalks and cross streets only at corners. Carson Street is busy. The museum has set hours and an entry fee, and none of this stop requires going inside.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Coins struck in this building carry a tiny mint mark. Which letters are on them?",
+    "options": [
+     "CS",
+     "CC",
+     "NV",
+     "CN"
+    ],
+    "answer": 1,
+    "hint": "Look at the coin displays or signs about the Mint. The mark is two matching letters.",
+    "verify": "Wikipedia and the NPS both give the CC mark. Confirm on site with the museum’s coin displays."
+   },
+   "then": {
+    "ph": {
+     "k": "cc_mint_then",
+     "by": "James H. Crockwell",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:U._S._Mint,_Carson_City,_Nevada.tif",
+     "note": "resized"
+    },
+    "yr": "1889",
+    "label": "U.S. Mint, Carson City",
+    "line": "A page from an 1889 souvenir album of Nevada state buildings. The Mint was about to reopen after a four-year pause.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Carson%20City%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "The Nevada State Museum",
+    "line": "The same sandstone building, now the Nevada State Museum, seen from a garden side. Photo taken in 2012, so details may have changed.",
+    "ph": {
+     "k": "cc_mint_now",
+     "by": "Barbmathers",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:The_Mint.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Carson City Mint opened in 1870 so Comstock silver could be turned into coins close to the mines. It struck coins in 21 separate years, and 107 different issues carry its “CC” mark.",
+    "It closed for a break in 1885, reopened in 1889, and stopped making coins for good in 1893. Later it served as a bullion depository and then an assay office.",
+    "The state bought the building in 1939, and since 1941 it has been the Nevada State Museum. Its original Coin Press No. 1 is still inside and is used to strike special “CC” medallions."
+   ],
+   "fact": "Many Morgan dollars with the “CC” mark are rare, so coin collectors pay a big premium for them.",
+   "disputed": "Most Comstock silver actually went straight to the San Francisco Mint, which is one reason the Carson City Mint never ran at full steam. The 1889 album date comes from the Commons listing.",
+   "claims": [
+    {
+     "t": "The Carson City Mint made coins every year from 1870 to 1893.",
+     "a": 2,
+     "why": "It struck coins in only 21 non-consecutive years, with a pause from 1885 to 1889."
+    },
+    {
+     "t": "The old Mint has been the Nevada State Museum since 1941.",
+     "a": 0,
+     "why": "Wikipedia and the museum sources agree the state bought it in 1939 and it opened as the museum in 1941."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Carson City Mint",
+     "u": "https://en.wikipedia.org/wiki/Carson_City_Mint"
+    },
+    {
+     "t": "National Park Service: U.S. Mint, Carson City",
+     "u": "https://www.nps.gov/NR/travel/nevada/usm.htm"
+    }
+   ],
+   "card": {
+    "a": "1889",
+    "b": "Today",
+    "la": "The Mint, 1889",
+    "lb": "Nevada State Museum"
+   }
+  },
+  {
+   "id": "stewart",
+   "name": "Stewart Indian School",
+   "short": "Stewart School",
+   "badge": "Stewart School",
+   "tag": "Stop 3 of 4",
+   "teaser": "A boarding school built of colorful local stone.",
+   "map": "Stewart Indian School Cultural Center & Museum, 5366 Snyder Ave, Carson City, NV",
+   "geo": [
+    39.116,
+    -119.757,
+    600
+   ],
+   "clue": "Head south to the Stewart Indian School campus on Snyder Avenue. Look for the older buildings with patchwork stone walls. For many Native families this is a place of difficult memories, so visit with respect.",
+   "safety": "Stay on paths, follow posted signs, and visit during open hours. This is a place of memory for many Native families, so be quiet and respectful, and ask before photographing people.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Look at the walls of the older campus buildings. What are they built from?",
+    "options": [
+     "Red brick",
+     "Adobe",
+     "Logs",
+     "Local stone in many colors"
+    ],
+    "answer": 3,
+    "hint": "Count how many different colors you can spot in a single wall.",
+    "verify": "Visit Carson City and Wikipedia describe the multicolored local stone buildings. Confirm on site."
+   },
+   "then": {
+    "ph": {
+     "k": "cc_stw_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Stewart_Indian_School_1905.jpg",
+     "note": "resized"
+    },
+    "yr": "1905",
+    "label": "Students at the administration building",
+    "line": "American Indian students lined up in front of the school’s administration building in 1905. The date is the one listed on Wikimedia Commons.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Carson%20City%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2012",
+    "head": "Today",
+    "label": "A campus building",
+    "line": "A stone-and-timber building on the Stewart campus, It is not the same building as the 1905 photo. Photo taken in 2012.",
+    "ph": {
+     "k": "cc_stw_now",
+     "by": "Barbmathers",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Stewart_Indian_School.JPG",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Stewart Indian School opened on December 17, 1890 and closed in 1980. It was the only off-reservation Indian boarding school in Nevada, and it was named for Senator William M. Stewart.",
+    "Children came first from Nevada tribes and later from many across the West. For decades they were pressed to give up their languages and cultures, and early on they worked without pay to keep the school running.",
+    "Most of the 65-plus historic buildings were put up between about 1922 and 1942, with students learning masonry and using multicolored local stone. The campus is now a National Historic District and the Stewart Indian School Cultural Center & Museum."
+   ],
+   "fact": "The campus covers about 110 acres and still has more than 65 historic buildings.",
+   "disputed": "The 1905 photo shows an administration building, while the “Now” photo shows a different campus building, so this is not the same view. Different people remember the boarding school years very differently.",
+   "claims": [
+    {
+     "t": "The Stewart Indian School closed in 1980.",
+     "a": 0,
+     "why": "Wikipedia and Visit Carson City both give 1890 to 1980."
+    },
+    {
+     "t": "Students were encouraged to speak their own languages when the school opened.",
+     "a": 2,
+     "why": "Early on, children could be punished for speaking their native languages, and that did not ease until policy changes in the 1930s."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Stewart Indian School",
+     "u": "https://en.wikipedia.org/wiki/Stewart_Indian_School"
+    },
+    {
+     "t": "Visit Carson City: 7 things to know about the Stewart Indian School",
+     "u": "https://visitcarsoncity.com/blog/7-things-to-know-about-the-stewart-indian-school/"
+    }
+   ],
+   "card": {
+    "a": "1905",
+    "b": "Today",
+    "la": "Students, 1905",
+    "lb": "The campus today"
+   }
+  },
+  {
+   "id": "railroad",
+   "name": "Nevada State Railroad Museum",
+   "short": "Railroad Museum",
+   "badge": "Railroad Museum",
+   "tag": "Stop 4 of 4",
+   "teaser": "The Comstock railroad’s engines, still alive.",
+   "map": "Nevada State Railroad Museum, 2180 S Carson St, Carson City, NV",
+   "geo": [
+    39.15,
+    -119.7672,
+    450
+   ],
+   "clue": "Head to the south end of Carson Street and find the Nevada State Railroad Museum, the yellow-and-glass building with historic steam locomotives and cars around it. Look for the railroad that once ran between here and Virginia City.",
+   "safety": "Stay on sidewalks and designated paths, away from any tracks and moving equipment. Cross Carson Street only at crosswalks. Check the museum’s hours before you go.",
+   "field": "Field notes pending: Jo-Anne will check this spot on foot.",
+   "q": {
+    "prompt": "Find a historic locomotive or car lettered for the railroad that once linked Carson City to the Comstock mines. Which railroad is it?",
+    "options": [
+     "Virginia & Truckee",
+     "Southern Pacific",
+     "Western Pacific",
+     "Nevada Northern"
+    ],
+    "answer": 0,
+    "hint": "Many of its engines were named for Nevada towns, like Dayton and Genoa.",
+    "verify": "The museum holds V&T locomotives such as Genoa and Dayton. Confirm the lettering on site."
+   },
+   "then": {
+    "ph": {
+     "k": "cc_rr_then",
+     "by": "Unknown author",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Virginia_%26_Truckee_RR_20,_Tahoe_(before_restoration)._Carson_City_engine_house.jpg",
+     "note": "resized"
+    },
+    "yr": "Before 1931",
+    "label": "V&T engine No. 20, Tahoe",
+    "line": "Virginia & Truckee locomotive No. 20, called Tahoe, inside the railroad’s Carson City engine house. Commons lists the year as 1925, but the exact date is not documented.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Carson%20City%20Nevada&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The museum",
+    "line": "The Nevada State Railroad Museum, which opened in 1980. This is a different building from the old engine house. Photo taken in 2019.",
+    "ph": {
+     "k": "cc_rr_now",
+     "by": "Ken Lund",
+     "lic": "CC BY-SA 2.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Nevada_State_Railroad_Museum,_Carson_City,_Nevada_-_December_2019.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Virginia & Truckee Railroad was built to haul ore, lumber and supplies for the Comstock Lode silver mines. Work started in 1869, and regular trains ran between Carson City and Virginia City by that December.",
+    "The line later reached Reno in 1872 and added a branch to Minden in 1906. Falling traffic and competition from highways ended it, and the last run came in 1950.",
+    "The Nevada State Railroad Museum opened in 1980 as the V&T Railroad Museum and was renamed in 1985. It keeps and runs historic engines and cars, and some of its equipment came from Hollywood movie sets."
+   ],
+   "fact": "Special V&T trains carried theatergoers from Carson City to Piper’s Opera House in Virginia City starting in December 1869.",
+   "disputed": "The date on the old engine-house photo is not documented. Commons lists 1925, but it is only known to be before 1931.",
+   "claims": [
+    {
+     "t": "The Virginia & Truckee Railroad ran between Carson City and Virginia City.",
+     "a": 0,
+     "why": "Wikipedia and museum sources agree: the first section from Virginia City to Carson City opened in 1869."
+    },
+    {
+     "t": "Every locomotive in the museum is original Virginia & Truckee equipment.",
+     "a": 2,
+     "why": "The museum also keeps equipment from other railroads, and some came from Hollywood studios."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Nevada State Railroad Museum",
+     "u": "https://en.wikipedia.org/wiki/Nevada_State_Railroad_Museum"
+    },
+    {
+     "t": "Wikipedia: Virginia and Truckee Railroad",
+     "u": "https://en.wikipedia.org/wiki/Virginia_and_Truckee_Railroad"
+    }
+   ],
+   "card": {
+    "a": "1925",
+    "b": "Today",
+    "la": "V&T No. 20, Tahoe",
+    "lb": "The railroad museum"
+   }
+  }
+ ],
+ "ranks": [
+  [
+   0,
+   "Tourist"
+  ],
+  [
+   100,
+   "Page"
+  ],
+  [
+   250,
+   "Clerk"
+  ],
+  [
+   450,
+   "Legislator"
+  ],
+  [
+   600,
+   "Capital Historian"
+  ]
+ ],
+ "heroKey": "cc_hero",
+ "heroAlt": "Early photo of the old Carson City Mint, a sandstone building with a flat roof and chimneys, with mountains behind",
+ "heroLi": "<li>Header: U.S. government photo of the Carson City Mint, via Library of Congress and Wikimedia Commons · public domain, date uncertain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Carson_City_Mint_(1866).jpg\">Source</a></li>",
+ "heroCredit": "Photo: U.S. government, via the Library of Congress · public domain, date uncertain · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Carson_City_Mint_(1866).jpg\">Source</a>",
+ "mission": "Find four spots in Nevada’s capital. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. Carson City is stamped.",
+ "safetyNote": "<li>Stops are outdoors on public sidewalks and grounds. Carson Street is busy, so cross only at corners. Stewart Indian School is a place of memory for many Native families, so be respectful.</li>",
+ "badgeMap": {
+  "capitol": [
+   "cc_cap_now",
+   "50% 40%"
+  ],
+  "mint": [
+   "cc_mint_now",
+   "50% 50%"
+  ],
+  "stewart": [
+   "cc_stw_now",
+   "50% 50%"
+  ],
+  "railroad": [
+   "cc_rr_now",
+   "50% 50%"
+  ]
+ },
+ "level": "Hidden Gems",
+ "region": "The West"
+}
