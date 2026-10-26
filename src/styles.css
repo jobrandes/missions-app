@@ -801,3 +801,6 @@ body.ispass .menubtn{margin-top:0}
 .herebanner p{margin:0 0 10px;font-size:16px}
 .herebanner .hbrow{display:flex;gap:8px}
 .herebanner .btn{min-height:44px;flex:1}
+
+.bnav button.dot{position:relative}
+.bnav button.dot::after{content:"";position:absolute;top:5px;left:calc(50% + 8px);width:10px;height:10px;border-radius:50%;background:var(--gold,#E9A91A);box-shadow:0 0 0 2px var(--surface)}

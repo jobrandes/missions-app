@@ -40,6 +40,11 @@ with sync_playwright() as p:
     # progress shows on Home
     pg.click('#bnav [data-t=home]'); need('0 of 4 stamps' in pg.inner_text('#main').lower(),'Home shows progress')
     # resume card appears for a town in progress
+    # Passport tab shows a dot when there are stamps you have not looked at yet, and clears it once opened
+    pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    need(pg.locator('#bnav [data-t=pass].dot').count()==1,'Passport dot shows when there is a new stamp')
+    pg.click('#bnav [data-t=pass]'); need(pg.locator('#bnav [data-t=pass].dot').count()==0,'Passport dot clears after opening Passport')
+    pg.click('#bnav [data-t=home]'); need(pg.locator('#bnav [data-t=pass].dot').count()==0,'Passport dot stays clear until another stamp')
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     need(pg.locator('.bigbtn[data-a=nextstop]').count()==1 and '1' in pg.inner_text('.stat'),'Home shows status and a Next stop button for a town in progress')
     pg.click('.bigbtn'); need(pg.inner_text('#cityName').lower()=='reno','Next stop opens that town')
