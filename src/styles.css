@@ -804,3 +804,4 @@ body.ispass .menubtn{margin-top:0}
 
 .bnav button.dot{position:relative}
 .bnav button.dot::after{content:"";position:absolute;top:5px;left:calc(50% + 8px);width:10px;height:10px;border-radius:50%;background:var(--gold,#E9A91A);box-shadow:0 0 0 2px var(--surface)}
+.goal .rcard+.rcard{margin-top:10px}

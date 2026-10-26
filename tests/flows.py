@@ -40,6 +40,10 @@ with sync_playwright() as p:
     # progress shows on Home
     pg.click('#bnav [data-t=home]'); need('0 of 4 stamps' in pg.inner_text('#main').lower(),'Home shows progress')
     # resume card appears for a town in progress
+    # Trail of the week card opens the Trails tab on that trail
+    pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    need(pg.locator('[data-a=trailweek]').count()==1,'Trail of the week card shows on Home')
+    pg.click('[data-a=trailweek]'); need(pg.locator('#bp-trails').is_visible() and pg.locator('.tcard.on').count()==1,'Trail of the week opens the Trails tab on that trail')
     # Passport tab shows a dot when there are stamps you have not looked at yet, and clears it once opened
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
     need(pg.locator('#bnav [data-t=pass].dot').count()==1,'Passport dot shows when there is a new stamp')

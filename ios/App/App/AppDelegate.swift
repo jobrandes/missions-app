@@ -54,9 +54,24 @@ public class StampStorePlugin: CAPPlugin, CAPBridgedPlugin {
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "getAll", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "setItem", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "removeItem", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "removeItem", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "haptic", returnType: CAPPluginReturnPromise)
     ]
     private let prefix = "stp."
+
+    // A short tap when a stamp is earned.
+    @objc func haptic(_ call: CAPPluginCall) {
+        let kind = call.getString("kind") ?? "success"
+        DispatchQueue.main.async {
+            if kind == "light" {
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            } else {
+                let g = UINotificationFeedbackGenerator()
+                g.notificationOccurred(kind == "error" ? .error : .success)
+            }
+            call.resolve()
+        }
+    }
 
     @objc func getAll(_ call: CAPPluginCall) {
         var out: [String: String] = [:]

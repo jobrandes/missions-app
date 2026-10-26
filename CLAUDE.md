@@ -138,3 +138,9 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - GPS circles are estimates from Wikipedia coordinates (Stewart and Railroad Museum are rough). Jo-Anne to walk them.
 - Capitol "Now" is a drone view (CC0); Stewart "Now" is a different building than 1905 Then; both labeled honestly. Stewart text is deliberately careful about boarding school history.
 - Source for photos: Commons via browser pane; shell cannot reach Wikimedia.
+
+## Oct 26 additions
+- Trail of the week card on Home (rotates weekly through trails with 3+ stops; opens the Trails tab). Passport tab dot for unseen stamps (`stp-pass-seen`).
+- Haptic on stamp: native `StampStore.haptic` (Swift in AppDelegate.swift, UINotificationFeedbackGenerator). Compile and feel NOT yet tested on a device. JS ignores it on web or old builds.
+- Open in Maps button already existed on Find it (text search); do not add another.
+- Passport share card already existed (Passport + each town); share text now carries the web address.

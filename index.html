@@ -811,6 +811,7 @@ body.ispass .menubtn{margin-top:0}
 
 .bnav button.dot{position:relative}
 .bnav button.dot::after{content:"";position:absolute;top:5px;left:calc(50% + 8px);width:10px;height:10px;border-radius:50%;background:var(--gold,#E9A91A);box-shadow:0 0 0 2px var(--surface)}
+.goal .rcard+.rcard{margin-top:10px}
 </style>
 
 <div class="app">
@@ -988,6 +989,7 @@ body.ispass .menubtn{margin-top:0}
   function allDone(){ return sum(S.done)===4; }
 
   var stampFx=false;
+  function haptic(k){ try{ var P=window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()&&Capacitor.Plugins&&Capacitor.Plugins.StampStore; if(P&&P.haptic){ var p=P.haptic({kind:k||'success'}); if(p&&p.catch) p.catch(function(){}); } }catch(e){} }
   function geoGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-geo')||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
   function geoVerified(k,i){ var st=CITIES[k]&&CITIES[k].stops[i]; return !!(st&&geoGet()[k+':'+st.id]); }
   function distM(a,b,c,d){ var R=6371000,p=Math.PI/180,x=Math.sin((c-a)*p/2),y=Math.sin((d-b)*p/2),h=x*x+Math.cos(a*p)*Math.cos(c*p)*y*y; return 2*R*Math.asin(Math.sqrt(h)); }
@@ -1421,13 +1423,19 @@ body.ispass .menubtn{margin-top:0}
   function streakWeeks(){ var set={}; logGet().forEach(function(d){ var w=wkOf(d); if(w!==null) set[w]=1; }); var now=wkOf(dstr(new Date())), w=set[now]?now:now-1, n=0; while(set[w]){ n++; w--; } return n; }
   function monthStamps(){ var m=dstr(new Date()).slice(0,7); return logGet().filter(function(d){ return d.slice(0,7)===m; }).length; }
   function goalHtml(){
-    var n=totalStamps(); if(n<1) return '';
+    var n=totalStamps(); var tw=weekTrailHtml(); if(n<1) return tw?'<section class="goal"><p class="mono">This week</p>'+tw+'</section>':'';
     var best=null; ORDER.forEach(function(k){ var d=sum(ALL[k].done), t=CITIES[k].stops.length; if(d>0&&d<t){ var left=t-d; if(!best||left<best.left) best={k:k,left:left}; } });
     var sw=streakWeeks(), ms=monthStamps(), bits=[];
     if(sw>0) bits.push('<strong>'+sw+(sw===1?' week':' weeks')+' in a row</strong> with a new stamp');
     if(ms>0) bits.push('<strong>'+ms+'</strong> '+(ms===1?'stamp':'stamps')+' this month');
     var goal=best?'<button class="rcard" data-a="city" data-c="'+best.k+'"><span><strong>Next goal: finish '+CITIES[best.k].name+'</strong><span class="rsub">'+best.left+' more '+(best.left===1?'stamp':'stamps')+' to complete it</span></span><span class="go">Go ›</span></button>':'<p class="rsub">Pick a new town below to start your next goal.</p>';
-    return '<section class="goal"><p class="mono">Your progress</p>'+(bits.length?'<p class="gbits">'+bits.join(' · ')+'</p>':'')+goal+'</section>';
+    return '<section class="goal"><p class="mono">Your progress</p>'+(bits.length?'<p class="gbits">'+bits.join(' · ')+'</p>':'')+goal+tw+'</section>';
+  }
+  // one calm featured trail per week (rotates, same for everyone, no timers)
+  function weekTrailHtml(){
+    var el=TRAILS.filter(function(tr){ return trailStops(tr.re).length>=3; }); if(!el.length) return '';
+    var tr=el[Math.floor(Date.now()/604800000)%el.length], L=trailStops(tr.re), d=L.filter(function(x){ return x.done; }).length;
+    return '<button class="rcard" data-a="trailweek" data-t="'+tr.id+'"><span><strong>Trail of the week: '+tr.name+'</strong><span class="rsub">'+d+' of '+L.length+' stamped. '+tr.note+'</span></span><span class="go">Open ›</span></button>';
   }
   function tripGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-trip')||'[]'); return Array.isArray(a)?a.filter(function(k){ return CITIES[k]; }):[]; }catch(e){ return []; } }
   function tripSet(a){ try{ localStorage.setItem('stp-trip',JSON.stringify(a)); }catch(e){} }
@@ -1786,6 +1794,7 @@ body.ispass .menubtn{margin-top:0}
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
+    if(a==='trailweek'){ btrail=b.getAttribute('data-t'); setBtab('trails'); render(); updateBnav(); var bw2=document.getElementById('browse'); if(bw2&&bw2.scrollIntoView) bw2.scrollIntoView({behavior:'smooth',block:'start'}); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
     if(a==='tab'){ boss=null; leave(); tab=b.getAttribute('data-t'); confirmReset=false; render(); window.scrollTo(0,0); return; }
     if(a==='open'){ var s=b.getAttribute('data-s'); openStop(+b.getAttribute('data-i'), s?+s:undefined); return; }
@@ -1801,7 +1810,7 @@ body.ispass .menubtn{margin-top:0}
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); stampFx=true; try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
