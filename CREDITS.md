@@ -646,3 +646,12 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | Stewart Now, badge | File:Stewart Indian School.JPG | Barbmathers | CC BY-SA 3.0 | 2012, different building than Then |
 | Railroad Then | File:Virginia & Truckee RR 20, Tahoe (before restoration). Carson City engine house.jpg | Unknown | Public domain | Listed 1925, before 1931 |
 | Railroad Now, badge | File:Nevada State Railroad Museum, Carson City, Nevada - December 2019.jpg | Ken Lund | CC BY-SA 2.0 | 2019, resized |
+| ho_hero | https://commons.wikimedia.org/wiki/File:Iolani_Palace_(14164614262).jpg | Bernard Spragg. NZ from Christchurch, New Zealand | CC0 | 2013, resized, cropped |
+| ho_ip_then | https://commons.wikimedia.org/wiki/File:Iolani_Palace_in_1885.jpg | Unknown | Public domain | About 1885, as listed on Commons |
+| ho_ip_now | https://commons.wikimedia.org/wiki/File:Iolani_Palace_(14164614262).jpg | Bernard Spragg. NZ from Christchurch, New Zealand | CC0 | 2013 |
+| ho_ah_then | https://commons.wikimedia.org/wiki/File:Aliiolani_Hale,_1888_(PPWD-1-7-017).jpg | Unknown | Public domain | About 1888, as listed on Commons |
+| ho_ah_now | https://commons.wikimedia.org/wiki/File:Aliiolanihale.jpg | Cumulus Clouds | CC BY-SA 3.0 | 2007 |
+| ho_at_then | https://commons.wikimedia.org/wiki/File:Aloha_Tower,_Honolulu,_1959.jpg | Father of JGKlein | Public domain | 1959 |
+| ho_at_now | https://commons.wikimedia.org/wiki/File:Aloha_Tower_Honolulu._(10754440616).jpg | Bernard Spragg. NZ from Christchurch, New Zealand | CC0 | 2013 |
+| ho_kc_then | https://commons.wikimedia.org/wiki/File:WEST_(FRONT)_ELEVATION,_OBLIQUE_VIEW_-_Kawaiahao_Church,_Punchbowl_and_King_Streets,_Honolulu,_Honolulu_County,_HI_HABS_HI,2-HONLU,13-1.tif | Historic American Buildings Survey | Public domain | Undated survey photo |
+| ho_kc_now | https://commons.wikimedia.org/wiki/File:Honolulu-Kawaiahao-church-front.JPG | Joel Bradshaw | Public domain | 2007 |

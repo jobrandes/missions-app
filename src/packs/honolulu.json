@@ -1,0 +1,437 @@
+{
+  "id": "honolulu",
+  "name": "Honolulu",
+  "explorer": "Aloha Explorer",
+  "initials": "HNL",
+  "ranks": [
+    [
+      0,
+      "Visitor"
+    ],
+    [
+      100,
+      "Harbor Watcher"
+    ],
+    [
+      250,
+      "Palace Guide"
+    ],
+    [
+      450,
+      "Island Scholar"
+    ],
+    [
+      600,
+      "Honolulu Historian"
+    ]
+  ],
+  "heroAlt": "ʻIolani Palace in Honolulu",
+  "heroLi": "<li>Header: Bernard Spragg. NZ from Christchurch, New Zealand · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Iolani_Palace_(14164614262).jpg\">Source</a> · resized, cropped</li>",
+  "heroCredit": "Photo: Bernard Spragg. NZ from Christchurch, New Zealand · CC0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Iolani_Palace_(14164614262).jpg\">Source</a>",
+  "mission": "Find four places in downtown Honolulu where Hawaiian history happened. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Honolulu is waiting.",
+  "safetyNote": "<li>These stops are on busy downtown streets, and the palace and courthouse have set visiting hours. Use crosswalks and check each place's visiting rules before you go.</li>",
+  "badgeMap": {
+    "palace": [
+      "ho_ip_now",
+      "50% 50%"
+    ],
+    "hale": [
+      "ho_ah_now",
+      "50% 40%"
+    ],
+    "tower": [
+      "ho_at_now",
+      "50% 40%"
+    ],
+    "church": [
+      "ho_kc_now",
+      "50% 40%"
+    ]
+  },
+  "level": "Classics",
+  "region": "The West",
+  "stops": [
+    {
+      "id": "palace",
+      "name": "ʻIolani Palace",
+      "short": "ʻIolani Palace",
+      "badge": "ʻIolani Palace",
+      "tag": "Stop 1 of 4",
+      "teaser": "The only royal palace on U.S. soil.",
+      "map": "ʻIolani Palace, 364 S King St, Honolulu, HI",
+      "geo": [
+        21.30667,
+        -157.85889,
+        120
+      ],
+      "clue": "Find the grand palace on South King Street, surrounded by a lawn and a low wall. It has wide porches on two floors and a small tower over the middle. Hawaiian kings and queens lived here.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. This is downtown Honolulu, so traffic is busy. The palace has set visiting hours and ticketed tours. Everything in this stop can be done from the sidewalk and the grounds.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "ʻIolani Palace was once home to Hawaiian royalty. Which of these is true about it today?",
+        "options": [
+          "It is the oldest building in Hawaiʻi",
+          "It is the only royal palace on U.S. soil",
+          "It was built by the crew of Captain Cook",
+          "It is still the home of the governor"
+        ],
+        "answer": 1,
+        "hint": "Ask yourself how many palaces like this the United States has.",
+        "verify": "Wikipedia states the palace is the only royal palace on US soil. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "ho_ip_then",
+          "by": "Unknown author",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Iolani_Palace_in_1885.jpg",
+          "note": "resized"
+        },
+        "yr": "c. 1885",
+        "label": "The palace, about 1885",
+        "line": "A few years after it was finished, the palace stood on open ground with young trees and no crowds. The date is the one listed on Wikimedia Commons and is approximate.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Iolani%20Palace&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "The palace from the front",
+        "line": "The same two-story porches and the tower over the center, now with tall trees and a paved walk in front.",
+        "ph": {
+          "k": "ho_ip_now",
+          "by": "Bernard Spragg. NZ from Christchurch, New Zealand",
+          "lic": "CC0",
+          "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Iolani_Palace_(14164614262).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "From 1845 the earlier house on this site, called Hale Aliʻi, was the home of the Hawaiian kings. The palace you see was completed in November 1882 and cost over $340,000, a huge sum at the time.",
+        "King Kalākaua had already reigned for nine years when a formal coronation was held on the grounds on February 12, 1883. The coronation pavilion was later moved and became a bandstand for the Royal Hawaiian Band.",
+        "After the monarchy was overthrown in 1893 the building served as the capitol of Hawaiʻi until 1969. Queen Liliʻuokalani was held in an upper room for nine months after the 1895 rebellion. The palace opened as a museum in 1978."
+      ],
+      "fact": "The coronation pavilion on the grounds was later moved to a corner of the lawn and turned into a bandstand.",
+      "disputed": "The date on the \"Then\" photo (about 1885) comes from its Wikimedia Commons listing, and the photographer is unknown. Treat the year as approximate.",
+      "claims": [
+        {
+          "t": "ʻIolani Palace is the only royal palace on U.S. soil.",
+          "a": 0,
+          "why": "Wikipedia says so directly, and no other U.S. building was home to a reigning monarch."
+        },
+        {
+          "t": "The palace cost less than $100,000 to build.",
+          "a": 2,
+          "why": "It was completed in 1882 and cost over $340,000."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: ʻIolani Palace",
+          "u": "https://en.wikipedia.org/wiki/%CA%BBIolani_Palace"
+        },
+        {
+          "t": "ʻIolani Palace official site",
+          "u": "https://www.iolanipalace.org/"
+        }
+      ],
+      "card": {
+        "a": "1882",
+        "b": "1978",
+        "la": "Palace completed",
+        "lb": "Opened as a museum"
+      }
+    },
+    {
+      "id": "hale",
+      "name": "Aliʻiōlani Hale and the Kamehameha Statue",
+      "short": "Aliʻiōlani Hale",
+      "badge": "Aliʻiōlani Hale",
+      "tag": "Stop 2 of 4",
+      "teaser": "A palace that became a courthouse, with a golden king out front.",
+      "map": "Aliʻiōlani Hale, 417 S King St, Honolulu, HI",
+      "geo": [
+        21.30571,
+        -157.85965,
+        80
+      ],
+      "clue": "Walk a short way across King Street from the palace to a cream-colored building with a clock tower. In front of it stands a golden statue of a king with his arm out.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. This is downtown Honolulu, so traffic is busy. King Street has several lanes, so use the marked crosswalk. The building is the state Supreme Court, so stay outside unless you are visiting during open hours.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The golden statue in front shows a famous king. Which one?",
+        "options": [
+          "King Kalākaua",
+          "Captain James Cook",
+          "Kamehameha the Great",
+          "Kamehameha III"
+        ],
+        "answer": 2,
+        "hint": "The name is on the plaque at the base of the statue.",
+        "verify": "Wikipedia identifies the statue as Kamehameha I. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "ho_ah_then",
+          "by": "Unknown author",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Aliiolani_Hale,_1888_(PPWD-1-7-017).jpg",
+          "note": "resized"
+        },
+        "yr": "c. 1888",
+        "label": "Aliʻiōlani Hale, about 1888",
+        "line": "A wide view over the rooftops of Honolulu in the 1880s, with the clock tower of Aliʻiōlani Hale rising among the other buildings. The date is the one listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Honolulu%20Hawaii&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2007",
+        "head": "Today",
+        "label": "Hale and statue",
+        "line": "The same clock tower, now with the golden statue of Kamehameha I in the foreground and palm trees on both sides.",
+        "ph": {
+          "k": "ho_ah_now",
+          "by": "Cumulus Clouds",
+          "lic": "CC BY-SA 3.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Aliiolanihale.jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Aliʻiōlani Hale means \"House of Heavenly Kings.\" Australian architect Thomas Rowe designed it in an Italian Renaissance style as a palace for Kamehameha V, but the king commissioned it as a government building instead. He laid the cornerstone on February 19, 1872, and Kalākaua dedicated it in 1874.",
+        "The golden statue is a replacement. The first cast, made in Paris, sank in a shipwreck near the Falkland Islands, and a second was cast for Honolulu and unveiled during Kalākaua's coronation in 1883. The first statue was recovered and now stands in Kapaʻau on Hawaiʻi Island.",
+        "In 1893 the group that overthrew Queen Liliʻuokalani read its proclamation from this building. Today it houses the Hawaiʻi State Supreme Court. In 2005 radar found a time capsule buried by Kamehameha V under the cornerstone, and it was left in place."
+      ],
+      "fact": "In 2005 ground-penetrating radar found a time capsule under the cornerstone. It was left where it is to protect the building.",
+      "disputed": "The date on the \"Then\" photo (about 1888) comes from its Wikimedia Commons listing, and the photographer is unknown. Treat the year as approximate.",
+      "claims": [
+        {
+          "t": "Aliʻiōlani Hale was designed as a royal palace but built to be a government building.",
+          "a": 0,
+          "why": "Wikipedia says Kamehameha V had it designed as a palace, then commissioned it as a government office building."
+        },
+        {
+          "t": "The gold statue in Honolulu is the original cast that sank near the Falkland Islands.",
+          "a": 2,
+          "why": "The Honolulu statue is a replacement. The original was recovered and stands in Kapaʻau on Hawaiʻi Island."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Aliʻiōlani Hale",
+          "u": "https://en.wikipedia.org/wiki/Ali%CA%BBi%C5%8Dlani_Hale"
+        },
+        {
+          "t": "Wikipedia: Statue of Kamehameha I (Honolulu)",
+          "u": "https://en.wikipedia.org/wiki/Statue_of_Kamehameha_I_(Honolulu)"
+        }
+      ],
+      "card": {
+        "a": "1874",
+        "b": "1883",
+        "la": "Hale dedicated",
+        "lb": "Statue unveiled"
+      }
+    },
+    {
+      "id": "tower",
+      "name": "Aloha Tower",
+      "short": "Aloha Tower",
+      "badge": "Aloha Tower",
+      "tag": "Stop 3 of 4",
+      "teaser": "The harbor's welcome mat since 1926.",
+      "map": "Aloha Tower, 1 Aloha Tower Dr, Honolulu, HI",
+      "geo": [
+        21.30708,
+        -157.86597,
+        150
+      ],
+      "clue": "Head toward the waterfront at Honolulu Harbor. Look for a tall slim tower with a clock face on each side and a flagpole on top. It stands on Pier 9.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. Nimitz Highway is a big, fast road, so cross only at signals. The harbor area has working piers, so stay on the public walkways.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The Aloha Tower stands at Honolulu Harbor. What was its job when it opened?",
+        "options": [
+          "A lighthouse that guided ships",
+          "A water tower",
+          "A radio station mast",
+          "A bell tower for a church"
+        ],
+        "answer": 0,
+        "hint": "Think about who needed to find the harbor at night.",
+        "verify": "Wikipedia calls it a retired lighthouse opened in 1926. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "ho_at_then",
+          "by": "Father of JGKlein",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Aloha_Tower,_Honolulu,_1959.jpg",
+          "note": "resized"
+        },
+        "yr": "1959",
+        "label": "Aloha Tower, 1959",
+        "line": "A color photo from 1959, when the tower still stood above a working harbor. The date and photographer are the ones listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Aloha%20Tower%20Honolulu&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2013",
+        "head": "Today",
+        "label": "The tower from the plaza",
+        "line": "The tower now rises over palm trees and a plaza. Newer buildings crowd the harbor around it.",
+        "ph": {
+          "k": "ho_at_now",
+          "by": "Bernard Spragg. NZ from Christchurch, New Zealand",
+          "lic": "CC0",
+          "lu": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Aloha_Tower_Honolulu._(10754440616).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The Aloha Tower opened on September 11, 1926, at a cost of $160,000. It is a retired lighthouse, 10 stories and 184 feet tall, with a flag mast on top. It was Hawaiʻi's tallest structure for about four decades.",
+        "Ships arriving from far away landed at the pier below it. Wikipedia compares its welcome to the Statue of Liberty greeting immigrants in New York.",
+        "After the attack on Pearl Harbor on December 7, 1941, Coast Guardsmen took defensive positions around the tower, and it was painted in camouflage. Public access to the observation deck was limited after September 11, 2001, but it has since reopened."
+      ],
+      "fact": "After the Pearl Harbor attack the tower was painted in camouflage, so it would be harder to spot from the air.",
+      "disputed": "The \"Then\" photo is dated 1959 in its Wikimedia Commons listing, which credits the uploader's father. Treat the year as the listed date, not a checked record.",
+      "claims": [
+        {
+          "t": "The Aloha Tower was Hawaiʻi's tallest structure for about four decades.",
+          "a": 0,
+          "why": "Wikipedia says so, and it was the tallest until the 1960s."
+        },
+        {
+          "t": "The Aloha Tower opened in the 1880s, under the monarchy.",
+          "a": 2,
+          "why": "It opened on September 11, 1926, long after the monarchy ended."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Aloha Tower",
+          "u": "https://en.wikipedia.org/wiki/Aloha_Tower"
+        },
+        {
+          "t": "Lighthouse Friends: Aloha Tower",
+          "u": "https://lighthousefriends.com/light.asp?ID=890"
+        }
+      ],
+      "card": {
+        "a": "1926",
+        "b": "1941",
+        "la": "Tower opens",
+        "lb": "Painted camouflage"
+      }
+    },
+    {
+      "id": "church",
+      "name": "Kawaiahaʻo Church",
+      "short": "Kawaiahaʻo Church",
+      "badge": "Kawaiahaʻo Church",
+      "tag": "Stop 4 of 4",
+      "teaser": "The coral-stone church called Hawaiʻi's Westminster Abbey.",
+      "map": "Kawaiahaʻo Church, 957 Punchbowl St, Honolulu, HI",
+      "geo": [
+        21.3043,
+        -157.8579,
+        100
+      ],
+      "clue": "Walk to the corner of Punchbowl and King Streets. Look for a pale stone church with a square clock tower and tall white columns at the front. It is the oldest church on Oʻahu.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. This is downtown Honolulu, so traffic is busy. The church is still in use for services, so be quiet near the doors and respect any signs about visiting.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Look closely at the church walls. What were the big blocks cut from?",
+        "options": [
+          "Volcanic lava rock",
+          "Bricks shipped from California",
+          "Koa wood planks",
+          "Coral rock from the sea"
+        ],
+        "answer": 3,
+        "hint": "The builders worked in the water, not in a quarry.",
+        "verify": "Wikipedia says it was built of some 14,000 coral slabs quarried from an offshore reef. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "ho_kc_then",
+          "by": "Historic American Buildings Survey",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:WEST_(FRONT)_ELEVATION,_OBLIQUE_VIEW_-_Kawaiahao_Church,_Punchbowl_and_King_Streets,_Honolulu,_Honolulu_County,_HI_HABS_HI,2-HONLU,13-1.tif",
+          "note": "resized"
+        },
+        "yr": "Undated",
+        "label": "The church, survey photo",
+        "line": "A black-and-white record photograph of the front of the church from the Historic American Buildings Survey. Its Wikimedia Commons listing gives no date.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Kawaiahao%20Church&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2007",
+        "head": "Today",
+        "label": "The church front",
+        "line": "The same tower and columns, shown in color with a clear blue sky behind.",
+        "ph": {
+          "k": "ho_kc_now",
+          "by": "Joel Bradshaw",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Honolulu-Kawaiahao-church-front.JPG",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The mission here began in 1820. The stone church was built between 1836 and 1842, designed by the missionary Rev. Hiram Bingham in a New England style. Hawaiian divers cut about 14,000 slabs of coral rock from an offshore reef, each weighing about a thousand pounds.",
+        "The name comes from ka wai a Haʻo, \"the water of Haʻo,\" after a spring and pool of a high chiefess on the site. Kamehameha III, IV and V and Kalākaua took their oaths of office to their constitutions here.",
+        "When Queen Liliʻuokalani died in 1917 she lay in state in the church for a week. Today the gallery holds portraits of 20 Hawaiian royals, and part of each service is still in Hawaiian."
+      ],
+      "fact": "King Lunalilo chose to be buried in a church cemetery, so his crypt is in the front courtyard here instead of the Royal Mausoleum.",
+      "disputed": "The \"Then\" photo has no date in its Wikimedia Commons listing, so we show none. It is a survey photo, not a postcard.",
+      "claims": [
+        {
+          "t": "The church was built from about 14,000 slabs of coral cut from an offshore reef.",
+          "a": 0,
+          "why": "Wikipedia says some 14,000 coral blocks were quarried from a reef by Hawaiian divers."
+        },
+        {
+          "t": "Queen Liliʻuokalani's funeral was held in Kawaiahaʻo Church.",
+          "a": 2,
+          "why": "She lay in state here for a week, but her funeral was held at ʻIolani Palace."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Kawaiahaʻo Church",
+          "u": "https://en.wikipedia.org/wiki/Kawaiaha%CA%BBo_Church"
+        },
+        {
+          "t": "Kawaiahaʻo Church official site",
+          "u": "https://www.kawaiahao.org/"
+        }
+      ],
+      "card": {
+        "a": "1842",
+        "b": "Today",
+        "la": "Church completed",
+        "lb": "Still holding services"
+      }
+    }
+  ],
+  "heroKey": "ho_hero"
+}
