@@ -963,7 +963,7 @@
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
-        render();
+        render(); try{ var fb=document.querySelector('.feedback.bad'); if(fb&&fb.scrollIntoView) fb.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){}
       }
       return;
     }
