@@ -198,6 +198,23 @@ with sync_playwright() as p:
     need('preview only' in pg.inner_text('#main').lower(),'demo answer says preview only')
     pg.click('[data-a=exit]'); pg.click('#tab-rewards')
     need('0 XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'demo leaves XP at zero, got {pg.inner_text("#xpText")}')
+    # level and badges: first stamp unlocks First Stamp (non-blocking snackbar), Trophy Case opens from it
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
+    pg.click('.stop >> nth=0'); pg.click('text=I am here')
+    for k in range(4):
+        pg.locator('.opt').nth(k).click()
+        if pg.query_selector('.opt.right'): break
+    pg.wait_for_selector('#bpop',timeout=6000)
+    need('first stamp' in pg.inner_text('#bpop').lower(),'first stamp unlocks the First Stamp badge')
+    need(pg.evaluate("JSON.parse(localStorage.getItem('stp-badges')||'{}').first")!=None,'earned badge is saved')
+    need(pg.locator('#celeb').count()==0 and pg.locator('#bpop [data-a=trophy]').count()==1,'badge popup does not block the screen')
+    pg.click('#bpop [data-a=trophy]'); pg.wait_for_timeout(300)
+    need(pg.locator('#trophy').count()==1 and 'of 39 badges' in pg.inner_text('#trophy').lower(),'Trophy Case opens from the badge popup and counts badges')
+    need('level 2' in pg.inner_text('.xlv').lower() or 'level\n2' in pg.inner_text('.xlv').lower(),'150 XP puts a new explorer at level 2')
+    # existing players are not buried in popups: badges they already earned are filed quietly
+    pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(2600)
+    need(pg.locator('#bpop').count()==0,'first run with existing progress shows no badge popup')
+    need(len(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-badges')||'{}'))"))>=2,'existing progress is filed as earned badges')
     b.close()
 bad+= [f'page error: {e}' for e in errs]
 print('FLOWS: '+('OK' if not bad else 'FAILED'))

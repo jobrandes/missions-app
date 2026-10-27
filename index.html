@@ -815,6 +815,56 @@ body.ispass .menubtn{margin-top:0}
 
 /* status bar scrim: scrolled content never collides with the clock */
 body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top,0px);background:var(--bg);opacity:.9;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);z-index:60;pointer-events:none}
+
+/* ---- explorer level, Trophy Case, badge snackbar ---- */
+.xlv{background:var(--surface);border:1.5px solid var(--accent);border-radius:16px;padding:16px;margin:0 0 14px}
+.lvl-top{display:flex;align-items:center;gap:14px}
+.lvl-n{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;background:var(--accent);color:var(--accent-ink)}
+.lvl-n span{font:600 10px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.lvl-n b{font:800 32px/1 var(--font-display)}
+.lvl-t{min-width:0}
+.lvl-t strong{display:block;font:800 26px/1.05 var(--font-display);text-transform:uppercase;text-wrap:balance}
+.lvl-t span{color:var(--muted);font-size:14px}
+.lbar{height:12px;border-radius:999px;background:var(--surface-2);margin:14px 0 4px;overflow:hidden}
+.lbar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--bulb));transition:width .6s ease}
+.lvl-how{margin-top:8px;font-size:14px}
+.lvl-how summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-weight:600}
+.lvl-how ul{margin:0 0 4px;padding-left:20px;display:grid;gap:4px;color:var(--muted)}
+.lvl-how b{color:var(--ink)}
+.tcase{margin:0 0 16px}
+.tc-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.tc-head .hh2{margin:0}
+.tc-sub{margin:14px 0 8px;color:var(--muted)}
+.bgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){.bgrid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.bgrid{grid-template-columns:repeat(3,1fr)}}
+.bt{display:flex;gap:12px;align-items:center;min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.bt.on{border-color:var(--accent)}
+.bt.t-l.on{border-color:var(--bulb);box-shadow:0 0 0 1px var(--bulb)}
+.bt-m{flex:none;display:block;width:64px;height:64px;line-height:0}
+.bt.lock .bt-m{opacity:.75}
+.bt-i{display:flex;flex-direction:column;gap:3px;min-width:0}
+.bt-i strong{font:800 18px/1.1 var(--font-display);text-transform:uppercase}
+.bt-d{color:var(--muted);font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+.bt-s{color:var(--muted);font-size:11px}
+.bt.on .bt-s{color:var(--good)}
+.bt-p{display:block;height:8px;border-radius:999px;background:var(--surface-2);overflow:hidden;margin-top:2px}
+.bt-p i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.tc-more{margin-top:14px}
+.tc-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-weight:600}
+.tc-more .bgrid{margin-top:8px}
+.bsnack{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:30;width:min(440px,calc(100% - 24px));display:flex;align-items:center;gap:10px;padding:10px 10px 10px 8px;background:var(--surface);color:var(--ink);border:2px solid var(--bulb);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.28);animation:bsin .45s cubic-bezier(.2,1.2,.4,1)}
+.bsn-m{flex:none;line-height:0}
+.bsn-t{display:flex;flex-direction:column;min-width:0;flex:1}
+.bsn-t .mono{font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.bsn-t strong{font:800 20px/1.1 var(--font-display);text-transform:uppercase;overflow-wrap:anywhere}
+.bsn-d{font-size:13px;color:var(--muted);line-height:1.3}
+.bsn-b{flex:none;display:flex;align-items:center;gap:2px}
+.bsn-x{min-width:44px;min-height:44px;border:0;background:transparent;color:var(--muted);font-size:26px;line-height:1;cursor:pointer;border-radius:10px}
+.bsn-x:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+@keyframes bsin{from{transform:translate(-50%,24px) scale(.94);opacity:0}to{transform:translate(-50%,0) scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.bsnack{animation:none}.lbar i{transition:none}}
+body.menuopen .bsnack{display:none}
 </style>
 
 <div class="app">
@@ -1003,7 +1053,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   try{ if(navigator.permissions&&navigator.permissions.query){ navigator.permissions.query({name:'geolocation'}).then(function(r){
     function sync(){ /* never trust 'denied' here: iOS web views misreport it. Only a refused request counts. */ if(r.state==='granted'){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} } }
     sync(); r.onchange=sync; }).catch(function(){}); } }catch(e){}
-  function geoSave(){ var gg=geoGet(); gg[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} }
+  function geoSave(){ var gg=geoGet(); gg[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} awardSoon(); }
   // quiet=true: automatic check, says nothing unless you are in range
   function geoCheck(quiet){
     var st=STOPS[cur.i]; if(!st||!st.geo||cur.demo) return;
@@ -1033,7 +1083,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   // Live location while the app is open (never in the background, never sent anywhere)
   var geoPos=null, geoWatchId=null, nearHit=null;
   function liveOn(){ try{ return localStorage.getItem('stp-geo-live')!=='0'; }catch(e){ return true; } }
-  function geoMark(c,i){ var st=CITIES[c]&&CITIES[c].stops[i]; if(!st) return; var gg=geoGet(); gg[c+':'+st.id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} }
+  function geoMark(c,i){ var st=CITIES[c]&&CITIES[c].stops[i]; if(!st) return; var gg=geoGet(); gg[c+':'+st.id]=1; try{ localStorage.setItem('stp-geo',JSON.stringify(gg)); }catch(e){} awardSoon(); }
   function geoStopWatch(){ if(geoWatchId!==null){ try{ navigator.geolocation.clearWatch(geoWatchId); }catch(e){} geoWatchId=null; } }
   function geoStartWatch(){
     if(geoWatchId!==null||!navigator.geolocation||!geoGranted()||geoDenied||!liveOn()||document.hidden) return;
@@ -1189,14 +1239,12 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   document.addEventListener('focusin',function(e){
     var t=e.target.closest&&e.target.closest('button.town[data-c]'); if(t&&t.getAttribute('data-c')) setHeroFocus({c:t.getAttribute('data-c')});
   });
-  var GRANKS=[[0,'Newcomer'],[3,'Wanderer'],[10,'Trailblazer'],[25,'Pathfinder'],[50,'Explorer'],[100,'Historian'],[200,'Time Traveler']];
-  function gRank(n){ var r=GRANKS[0][1],nx=null; GRANKS.forEach(function(g){ if(n>=g[0]) r=g[1]; }); for(var i=0;i<GRANKS.length;i++){ if(GRANKS[i][0]>n){ nx=GRANKS[i]; break; } } return {name:r,next:nx}; }
   function statusHtml(got,total,res,hk){
-    var gr=gRank(got), tk=res||hk, tc=CITIES[tk], ni=0;
+    var gs=gStats(), lv=lvOf(gs.xp), tk=res||hk, tc=CITIES[tk], ni=0;
     for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
     var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
     var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
-    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">'+gr.name+(gr.next?' <span class="snext">· '+(gr.next[0]-got)+' to '+gr.next[1]+'</span>':'')+'</p></div>':'';
+    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">Level '+lv.n+' · '+lv.title+' <span class="snext">· '+nfmt(lv.to-gs.xp)+' XP to level '+(lv.n+1)+'</span></p></div>':'';
     return '<section class="stat" aria-label="Your progress">'+st+btn+'</section>';
   }
   function ringsHtml(){
@@ -1257,6 +1305,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; var d=sum(ALL[k].done); got+=d; if(d===CITIES[k].stops.length) full++; if(sealTier(b[k])) seals++; });
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
     var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
+    var bd=bdAll(); h+=levelHtml(bd.s)+trophyHtml(bd);
     h+='<section class="passport" id="passport">'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.filter(function(k){ return sum(ALL[k].done)>0; }).map(function(k){
       var c=CITIES[k], d=sum(ALL[k].done);
       return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
@@ -1336,11 +1385,11 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
     document.body.appendChild(d);
     var f=d.querySelector('button'); if(f) f.focus();
   }
-  function closeCeleb(){ var e=document.getElementById('celeb'); if(e) e.remove(); }
+  function closeCeleb(){ var e=document.getElementById('celeb'); if(e){ e.remove(); setTimeout(flushBadges,250); } }
   document.addEventListener('keydown',function(e){
     if(e.key==='Tab'){ var dlg=document.getElementById('report')||document.getElementById('menu')||document.getElementById('tour')||document.getElementById('celeb'); if(dlg&&dlg.offsetParent!==null||dlg&&getComputedStyle(dlg).display!=='none'){ var f=dlg.querySelectorAll('button'); if(f.length){ var first=f[0], last=f[f.length-1]; if(!dlg.contains(document.activeElement)){ first.focus(); e.preventDefault(); } else if(e.shiftKey&&document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey&&document.activeElement===last){ first.focus(); e.preventDefault(); } } } }
   });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeReport(); closeCeleb(); closeMenu(); if(document.getElementById('tour')) endTour(); } });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeReport(); closeCeleb(); closeBpop(); closeMenu(); if(document.getElementById('tour')) endTour(); } });
   /* offline: the web version caches itself (sw.js). Say so when the connection changes. */
   try{ if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) navigator.serviceWorker.register('sw.js').catch(function(){}); }catch(e){}
   window.addEventListener('offline',function(){ toast('You are offline. Everything still works except map links.'); });
@@ -1445,8 +1494,8 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   var btab='towns', btrail='stations', bnavSel='home';
   (function(){ var ly=0, ut=0; function u(){ ut=Date.now(); } window.addEventListener('touchmove',u,{passive:true}); window.addEventListener('wheel',u,{passive:true}); window.addEventListener('scroll',function(){ var y=window.pageYOffset||0, d=y-ly; if(Math.abs(d)<10) return; ly=y; if(Date.now()-ut>1200) return; document.body.classList.toggle('navhide',d>0&&y>160); },{passive:true}); })();
   function updateBnav(){ var nb=document.getElementById('bnav'); if(!nb) return; var cur2=onPass&&atHome?'pass':(atHome?bnavSel:''); nb.querySelectorAll('button').forEach(function(x){ var on=x.getAttribute('data-t')===cur2; x.classList.toggle('on',on); if(on) x.setAttribute('aria-current','page'); else x.removeAttribute('aria-current'); if(x.getAttribute('data-t')==='pass'){ if(on) passSeenSet(); var nd=!on&&passNew(); x.classList.toggle('dot',nd); if(nd) x.setAttribute('aria-label','Passport, new stamps'); else x.removeAttribute('aria-label'); } }); }
-  function passNew(){ try{ return totalStamps()>parseInt(localStorage.getItem('stp-pass-seen')||'0',10); }catch(e){ return false; } }
-  function passSeenSet(){ try{ localStorage.setItem('stp-pass-seen',String(totalStamps())); }catch(e){} }
+  function passNew(){ try{ return totalStamps()>parseInt(localStorage.getItem('stp-pass-seen')||'0',10)||Object.keys(bdGet()).length>parseInt(localStorage.getItem('stp-bseen')||'0',10); }catch(e){ return false; } }
+  function passSeenSet(){ try{ localStorage.setItem('stp-pass-seen',String(totalStamps())); localStorage.setItem('stp-bseen',String(Object.keys(bdGet()).length)); }catch(e){} }
   function tripHtml(){
     var t=tripGet();
     if(!t.length) return '<div class="bempty"><h3>Plan a trip</h3><p>Tap the star on any town to save it here. You will see how many stamps are left in each place, like a checklist for the road.</p></div>';
@@ -1517,6 +1566,120 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
   function bkSeen(){ try{ return parseInt(localStorage.getItem('stp-bk-seen')||'-1',10); }catch(e){ return -1; } }
   function totalPts(){ var b=bossBest(),t=0; ORDER.forEach(function(k){ t+=ptsOf(b[k]); }); return t; }
   function grandOk(){ var b=bossBest(); return ORDER.length>0&&ORDER.every(function(k){ return b[k]>=4; }); }
+  /* ---------- explorer level + badges (everything is worked out from saved progress; only the earned list is stored) ---------- */
+  var LVTITLES=[[1,'Newcomer'],[3,'Wanderer'],[5,'Trailblazer'],[8,'Pathfinder'],[12,'Explorer'],[16,'Historian'],[21,'Archivist'],[27,'Time Traveler'],[34,'Grand Chronicler']];
+  function lvXp(L){ return 25*(L-1)*(L+2); }
+  function lvOf(x){ var L=1; while(L<60&&lvXp(L+1)<=x) L++; var t=LVTITLES[0][1]; LVTITLES.forEach(function(e){ if(L>=e[0]) t=e[1]; }); return {n:L,title:t,from:lvXp(L),to:lvXp(L+1),pc:Math.max(0,Math.min(100,Math.round((x-lvXp(L))/(lvXp(L+1)-lvXp(L))*100)))}; }
+  function nfmt(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
+  function gStats(){
+    var b=bossBest(), g=geoGet(), s={xp:0,stamps:0,claims:0,full:0,ver:0,gems:0,seals:0,golds:0,reg:{},st:{},nv:0,town:{},cnt:{}};
+    ORDER.forEach(function(k){
+      var a=ALL[k], c=CITIES[k], d=sum(a.done); s.stamps+=d; s.claims+=sum(a.claims); s.xp+=d*100+sum(a.claims)*25; s.town[k]=d;
+      if(d===c.stops.length){ s.full++; s.xp+=100; }
+      if(d>0){ if(c.region) s.reg[c.region]=1; if(c.level==='Hidden Gems') s.gems+=d; (TSTATE[k]||'').split('/').forEach(function(x){ if(x&&!s.st[x]){ s.st[x]=1; s.xp+=50; } }); if(/NV/.test(TSTATE[k]||'')&&!/CA/.test(TSTATE[k]||'')) s.nv++; }
+      c.stops.forEach(function(st,i){ if(a.done[i]&&g[k+':'+st.id]){ s.ver++; s.xp+=50; } });
+      if(sealTier(b[k])) s.seals++; if(b[k]>=4) s.golds++; s.xp+=ptsOf(b[k]);
+    });
+    var cnt={}, mx=0; logGet().forEach(function(d){ cnt[d]=(cnt[d]||0)+1; if(cnt[d]>mx) mx=cnt[d]; }); s.day=mx; s.wk=streakWeeks();
+    s.nst=Object.keys(s.st).length; s.nreg=Object.keys(s.reg).length;
+    return s;
+  }
+  function trailN(re){ return trailStops(re).filter(function(x){ return x.done; }).length; }
+  function hasReg(s,re){ return Object.keys(s.reg).some(function(r){ return re.test(r); })?1:0; }
+  var BADGES=[
+    {id:'first',n:'First Stamp',d:'Get your first stamp. Everything after this is momentum.',t:'c',g:'1',f:function(s){ return [s.stamps,1]; }},
+    {id:'s10',n:'Ten Down',d:'Collect 10 stamps.',t:'c',g:'10',f:function(s){ return [s.stamps,10]; }},
+    {id:'s25',n:'Pocket Full of Stamps',d:'Collect 25 stamps.',t:'c',g:'25',f:function(s){ return [s.stamps,25]; }},
+    {id:'s50',n:'Half a Hundred',d:'Collect 50 stamps.',t:'r',g:'50',f:function(s){ return [s.stamps,50]; }},
+    {id:'s100',n:'Centurion',d:'Collect 100 stamps. Your passport is getting thick.',t:'r',g:'100',f:function(s){ return [s.stamps,100]; }},
+    {id:'s200',n:'Double Century',d:'Collect 200 stamps.',t:'l',g:'200',f:function(s){ return [s.stamps,200]; }},
+    {id:'s400',n:'Walking Archive',d:'Collect 400 stamps. Libraries call you for advice.',t:'l',g:'400',f:function(s){ return [s.stamps,400]; }},
+    {id:'t1',n:'Town Done',d:'Stamp all four stops in one town. Trivia night is now winnable.',t:'c',g:'★',f:function(s){ return [s.full,1]; }},
+    {id:'t5',n:'Five Towns Deep',d:'Finish 5 towns.',t:'r',g:'5',f:function(s){ return [s.full,5]; }},
+    {id:'t15',n:'Mayor of Everywhere',d:'Finish 15 towns.',t:'l',g:'15',f:function(s){ return [s.full,15]; }},
+    {id:'st3',n:'Road Tripper',d:'Get stamps in 3 different states.',t:'c',g:'3',f:function(s){ return [s.nst,3]; }},
+    {id:'st10',n:'Double Digits',d:'Get stamps in 10 different states.',t:'r',g:'10',f:function(s){ return [s.nst,10]; }},
+    {id:'st25',n:'Half the Map',d:'Get stamps in 25 different states.',t:'l',g:'25',f:function(s){ return [s.nst,25]; }},
+    {id:'coast',n:'Coast to Coast',d:'Get a stamp in the West and a stamp in the East.',t:'c',g:'⇄',f:function(s){ return [hasReg(s,/West/)+hasReg(s,/East/),2]; }},
+    {id:'reg5',n:'Every Region',d:'Get a stamp in all five regions.',t:'r',g:'5',f:function(s){ return [s.nreg,5]; }},
+    {id:'far',n:'Aloha and Brrr',d:'Get stamps in both Hawaii and Alaska. Pack accordingly.',t:'r',g:'☀',f:function(s){ return [(s.st.HI?1:0)+(s.st.AK?1:0),2]; }},
+    {id:'nv',n:'Battle Born',d:'Get stamps in 4 different Nevada towns.',t:'c',g:'NV',f:function(s){ return [s.nv,4]; }},
+    {id:'rush',n:'Gold Rush Gremlin',d:'Get stamps in Virginia City, Carson City and Skagway.',t:'r',g:'Au',f:function(s){ return [(s.town.vc>0?1:0)+(s.town.carson>0?1:0)+(s.town.skagway>0?1:0),3]; }},
+    {id:'gem5',n:'Off the Beaten Path',d:'Collect 5 stamps in Hidden Gems towns.',t:'c',g:'◆',f:function(s){ return [s.gems,5]; }},
+    {id:'gem20',n:'Where Is That?',d:'Collect 20 stamps in Hidden Gems towns. Hidden from everyone but you.',t:'r',g:'◆',f:function(s){ return [s.gems,20]; }},
+    {id:'c10',n:'Fact Checker',d:'Sort 10 claims correctly.',t:'c',g:'✓',f:function(s){ return [s.claims,10]; }},
+    {id:'c50',n:'Myth Buster',d:'Sort 50 claims correctly.',t:'r',g:'✓',f:function(s){ return [s.claims,50]; }},
+    {id:'c150',n:'Citation Needed',d:'Sort 150 claims correctly. Footnotes fear you.',t:'l',g:'✓',f:function(s){ return [s.claims,150]; }},
+    {id:'q1',n:'Quiz Show',d:'Earn your first challenge seal.',t:'c',g:'?',f:function(s){ return [s.seals,1]; }},
+    {id:'q4',n:'Perfect Score',d:'Score 4 of 4 on a final challenge.',t:'r',g:'4',f:function(s){ return [s.golds,1]; }},
+    {id:'q5',n:'Perfect Five',d:'Score 4 of 4 on five final challenges.',t:'l',g:'5',f:function(s){ return [s.golds,5]; }},
+    {id:'v1',n:'Boots on the Ground',d:'Get a stamp verified by being there.',t:'c',g:'⚑',f:function(s){ return [s.ver,1]; }},
+    {id:'v10',n:'Certified Wanderer',d:'Verify 10 visits by being there.',t:'r',g:'10',f:function(s){ return [s.ver,10]; }},
+    {id:'v40',n:'Professional Loiterer',d:'Verify 40 visits. You have stood near a lot of plaques.',t:'l',g:'40',f:function(s){ return [s.ver,40]; }},
+    {id:'w2',n:'Two Weeks Running',d:'Stamp something in 2 weeks in a row.',t:'c',g:'2w',f:function(s){ return [s.wk,2]; }},
+    {id:'w4',n:'A Month of Weeks',d:'Stamp something in 4 weeks in a row.',t:'r',g:'4w',f:function(s){ return [s.wk,4]; }},
+    {id:'w12',n:'Habit Formed',d:'Stamp something in 12 weeks in a row.',t:'l',g:'12w',f:function(s){ return [s.wk,12]; }},
+    {id:'d3',n:'Hat Trick',d:'Get 3 stamps in one day.',t:'c',g:'3',f:function(s){ return [s.day,3]; }},
+    {id:'d5',n:'Stamp Rush',d:'Get 5 stamps in one day.',t:'r',g:'5',f:function(s){ return [s.day,5]; }},
+    {id:'d8',n:'Overachiever',d:'Get 8 stamps in one day. Did you sleep?',t:'l',g:'8',f:function(s){ return [s.day,8]; }},
+    {id:'tr1',n:'All Aboard',d:'Stamp 5 train stations or depots.',t:'r',g:'☰',f:function(){ return [trailN(/station|depot|terminal/i),5]; }},
+    {id:'tr2',n:'Capitol Gains',d:'Stamp 5 capitols or courthouses.',t:'r',g:'⌂',f:function(){ return [trailN(/capitol|statehouse|state house|courthouse|city hall/i),5]; }},
+    {id:'tr3',n:'Steeple Chaser',d:'Stamp 5 churches, cathedrals or missions.',t:'r',g:'✚',f:function(){ return [trailN(/church(?!ill| street)|cathedral|temple|mission|basilica|meeting ?house/i),5]; }},
+    {id:'tr4',n:'Bridge Troll',d:'Stamp 5 bridges, towers or monuments.',t:'r',g:'∩',f:function(){ return [trailN(/bridge|\b(?!terminal\b)\w+ tower|monument|needle|gate\b/i),5]; }}
+  ];
+  var TIERN={c:'Common',r:'Rare',l:'Legendary'};
+  function bdGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-badges')||'{}'); return (o&&typeof o==='object'&&!Array.isArray(o))?o:{}; }catch(e){ return {}; } }
+  function bdAll(){
+    var s=gStats(), have=bdGet();
+    return {s:s,list:BADGES.map(function(b){ var p=b.f(s), ok=p[0]>=p[1]; return {b:b,cur:Math.min(p[0],p[1]),goal:p[1],on:!!have[b.id]||ok,when:have[b.id]||''}; })};
+  }
+  function medal(b,on,sz){
+    var C={c:['#2f7a99','#4fa6c7'],r:['#6b3fb0','#9b72d6'],l:['#a9770f','#f0c24a']}[b.t], o=on?C:['#6e7581','#9aa1ab'], g=b.g, fs=g.length>2?19:(g.length>1?25:32);
+    return '<svg viewBox="0 0 100 100" width="'+sz+'" height="'+sz+'" aria-hidden="true" focusable="false"><polygon points="30,60 18,96 34,88 43,98 51,64" fill="'+o[0]+'"/><polygon points="70,60 82,96 66,88 57,98 49,64" fill="'+o[0]+'"/><circle cx="50" cy="40" r="36" fill="'+o[0]+'"/><circle cx="50" cy="40" r="29" fill="'+o[1]+'" stroke="#fff" stroke-opacity=".55" stroke-width="2"/><text x="50" y="'+(40+fs*0.36).toFixed(1)+'" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="'+fs+'" fill="'+(on?'#fff':'#eef0f3')+'">'+g+'</text></svg>';
+  }
+  var badgeQ=[];
+  function awardCheck(){
+    if(demoSnap) return;
+    var first=false; try{ first=localStorage.getItem('stp-badges')===null; }catch(e){}
+    var r=bdAll(), have=bdGet(), today=dstr(new Date()), fresh=[];
+    r.list.forEach(function(x){ if(x.cur>=x.goal&&!have[x.b.id]){ have[x.b.id]=today; fresh.push(x.b); } });
+    if(!fresh.length&&!first) return;
+    try{ localStorage.setItem('stp-badges',JSON.stringify(have)); }catch(e){}
+    if(first){ if(fresh.length) setTimeout(function(){ toast('New: the Trophy Case is in your Passport. You already have '+fresh.length+(fresh.length===1?' badge.':' badges.')); },900); try{ localStorage.setItem('stp-bseen',String(fresh.length)); }catch(e){} return; }
+    fresh.forEach(function(b){ badgeQ.push(b); });
+    flushBadges(); updateBnav();
+  }
+  function awardSoon(){ setTimeout(awardCheck,1900); }
+  var bsnT=null;
+  function flushBadges(){
+    if(!badgeQ.length||document.getElementById('celeb')||document.getElementById('bpop')) return;
+    var q=badgeQ.splice(0,badgeQ.length), s=gStats(), lv=lvOf(s.xp), b0=q[0];
+    var d=document.createElement('div'); d.id='bpop'; d.className='bsnack'; d.setAttribute('role','status'); d.setAttribute('aria-live','polite');
+    d.innerHTML='<span class="bsn-m">'+medal(b0,true,56)+'</span><span class="bsn-t"><span class="mono">'+(q.length===1?'Badge unlocked':q.length+' badges unlocked')+'</span><strong>'+(q.length===1?b0.n:q.slice(0,3).map(function(b){ return b.n; }).join(', ')+(q.length>3?' and more':''))+'</strong><span class="bsn-d">'+(q.length===1?b0.d:'Level '+lv.n+' · '+lv.title)+'</span></span><span class="bsn-b"><button class="btn small" data-a="trophy">See</button><button class="bsn-x" data-a="bpopclose" aria-label="Dismiss">\u00d7</button></span>';
+    document.body.appendChild(d); clearTimeout(bsnT); bsnT=setTimeout(closeBpop,9000);
+    try{ haptic('success'); }catch(e){}
+  }
+  function closeBpop(){ clearTimeout(bsnT); var e=document.getElementById('bpop'); if(e){ e.remove(); setTimeout(flushBadges,300); } }
+  function levelHtml(s){
+    var lv=lvOf(s.xp);
+    return '<section class="xlv" aria-label="Explorer level"><div class="lvl-top"><div class="lvl-n"><span>Level</span><b>'+lv.n+'</b></div><div class="lvl-t"><strong>'+lv.title+'</strong><span>'+nfmt(s.xp)+' XP · '+nfmt(lv.to-s.xp)+' to level '+(lv.n+1)+'</span></div></div><div class="lbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+lv.pc+'" aria-label="Progress to level '+(lv.n+1)+'"><i style="width:'+lv.pc+'%"></i></div>'
+      +'<details class="lvl-how"><summary>How XP works</summary><ul><li><b>+100</b> for every stamp</li><li><b>+25</b> for each claim you sort correctly</li><li><b>+50</b> for a stamp verified by being there</li><li><b>+50</b> for your first stamp in a new state</li><li><b>+100</b> for finishing a town</li><li><b>Up to +300</b> from a town’s final challenge</li></ul></details></section>';
+  }
+  function tileHtml(x){
+    var b=x.b, pc=Math.round(x.cur/x.goal*100);
+    return '<li class="bt'+(x.on?' on':' lock')+' t-'+b.t+'"><span class="bt-m">'+medal(b,x.on,64)+'</span><span class="bt-i"><strong>'+b.n+'</strong><span class="bt-d">'+b.d+'</span>'
+      +(x.on?'<span class="mono bt-s">'+TIERN[b.t]+' · earned'+(vdate(x.when)?' '+vdate(x.when):'')+'</span>':'<span class="bt-p" role="progressbar" aria-valuemin="0" aria-valuemax="'+x.goal+'" aria-valuenow="'+x.cur+'" aria-label="'+b.n+' progress"><i style="width:'+pc+'%"></i></span><span class="mono bt-s">'+TIERN[b.t]+' · '+x.cur+' of '+x.goal+'</span>')+'</span></li>';
+  }
+  function trophyHtml(r){
+    var on=r.list.filter(function(x){ return x.on; }), off=r.list.filter(function(x){ return !x.on; });
+    off.sort(function(a,b){ return (b.cur/b.goal)-(a.cur/a.goal); });
+    on.sort(function(a,b){ return (b.when||'').localeCompare(a.when||''); });
+    var next=off.slice(0,3);
+    return '<section class="tcase" id="trophy" aria-label="Trophy Case"><div class="tc-head"><h2 class="hh2">Trophy Case</h2><span class="mono">'+on.length+' of '+r.list.length+' badges</span></div>'
+      +(next.length?'<p class="mono tc-sub">Closest to earning</p><ul class="bgrid next">'+next.map(tileHtml).join('')+'</ul>':'<p class="why">You have every badge. Frankly, we are a little scared of you.</p>')
+      +(on.length?'<p class="mono tc-sub">Earned</p><ul class="bgrid">'+on.slice(0,6).map(tileHtml).join('')+'</ul>':'')
+      +((on.length>6||off.length>3)?'<details class="tc-more"><summary>More badges ('+(Math.max(0,on.length-6)+Math.max(0,off.length-3))+')</summary>'+(on.length>6?'<p class="mono tc-sub">Earned</p><ul class="bgrid">'+on.slice(6).map(tileHtml).join('')+'</ul>':'')+(off.length>3?'<p class="mono tc-sub">Still locked</p><ul class="bgrid">'+off.slice(3).map(tileHtml).join('')+'</ul>':'')+'</details>':'')+'</section>';
+  }
   function seal(t,sz){
     var c=SEALS[t]; if(!c) return '';
     var p='',i,a,x,y,pts='';
@@ -1525,7 +1688,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
     return '<svg class="seal" width="'+(sz||64)+'" height="'+(sz||64)+'" viewBox="0 0 100 100" role="img" aria-label="'+c[3]+'">'+p+'<circle cx="50" cy="50" r="38" fill="'+c[1]+'"/><circle cx="50" cy="50" r="31" fill="'+c[0]+'" stroke="'+c[2]+'" stroke-width="2"/><polygon points="'+pts+'" fill="'+c[2]+'"/></svg>';
   }
   var OKL=['Stamped.','Nailed it.','Clean.','Plaque reader.'], BADL=['Ouch. The plaque disagrees.','Nope. Historians winced.','Close, the way a bird is close to a plane.','Not this time. The answer is in green.'];
-  function bossSave(pid,n){ var b=bossBest(); boss.prev=b[pid]; boss.gain=ptsOf(Math.max(n,b[pid]===undefined?0:b[pid]))-ptsOf(b[pid]); if(b[pid]===undefined||n>b[pid]){ b[pid]=n; try{ localStorage.setItem('then-now-boss',JSON.stringify(b)); }catch(e){} } }
+  function bossSave(pid,n){ awardSoon(); var b=bossBest(); boss.prev=b[pid]; boss.gain=ptsOf(Math.max(n,b[pid]===undefined?0:b[pid]))-ptsOf(b[pid]); if(b[pid]===undefined||n>b[pid]){ b[pid]=n; try{ localStorage.setItem('then-now-boss',JSON.stringify(b)); }catch(e){} } }
   function viewBoss(){
     var Q=(DATA.boss||{})[boss.pid]||[], n=Q.length;
     var h='<div class="stophead"><button class="link" data-a="bossexit">‹ Trail</button><span class="mono">Final challenge</span></div>';
@@ -1795,6 +1958,8 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
     if(a==='backup'){ closeCeleb(); try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} openPass(); setTimeout(function(){ var el=document.getElementById('backup'); if(el) el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); },60); return; }
     if(a==='bkdismiss'){ try{ localStorage.setItem('stp-bk-seen',String(totalStamps())); }catch(e){} render(); return; }
     if(a==='passport'||a==='mypass'){ closeCeleb(); openPass(); return; }
+    if(a==='bpopclose'){ closeBpop(); return; }
+    if(a==='trophy'){ closeBpop(); closeCeleb(); openPass(); setTimeout(function(){ var el=document.getElementById('trophy'); if(el) el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); },60); return; }
     if(a==='rregion'){ railRegion=b.getAttribute('data-r'); if(atHome) setHeroFocus({r:railRegion}); applyCity(); return; }
     if(a==='trailweek'){ btrail=b.getAttribute('data-t'); setBtab('trails'); render(); updateBnav(); var bw2=document.getElementById('browse'); if(bw2&&bw2.scrollIntoView) bw2.scrollIntoView({behavior:'smooth',block:'start'}); return; }
     if(a==='city'){ railRegion=null; setCity(b.getAttribute('data-c')); return; }
@@ -1812,7 +1977,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); awardSoon(); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
@@ -1834,7 +1999,7 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
         if(cur.picks[ci]===c.a){ S.claims[gi]=1; gained+=25; ok++; }
       });
       cur.checked=true; save(); render();
-      if(gained) toast('+'+gained+' XP');
+      if(gained){ toast('+'+gained+' XP'); awardSoon(); }
       else if(ok<st2.claims.length) toast('Not yet. Try again.');
       return;
     }
@@ -1857,14 +2022,14 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
         if(segs.length>ORDER.length){ msg.textContent='That code has more towns than this version of the app. Update the app and try again.'; return; }
         segs.forEach(function(g,i){ ALL[ORDER[i]]={done:arr(g.slice(0,4)),claims:arr(g.slice(4))}; });
       }
-      S=ALL[cityId]; save(); render(); toast('Progress restored'); return;
+      S=ALL[cityId]; save(); render(); toast('Progress restored'); awardSoon(); return;
     }
     if(a==='resetask'){ confirmReset=true; render(); return; }
     if(a==='resetno'){ confirmReset=false; render(); return; }
     if(a==='resetyes'){ ALL[cityId]=blank(); S=ALL[cityId]; save(); confirmReset=false; render(); toast('Progress erased'); return; }
   });
 
-  load(); applyCity(); render(); maybeTour(); geoStartWatch(); bgSync(); bgOpenPending();
+  load(); applyCity(); render(); maybeTour(); geoStartWatch(); bgSync(); bgOpenPending(); try{ if(localStorage.getItem('stp-badges')===null&&!totalStamps()) localStorage.setItem('stp-badges','{}'); }catch(e){} awardSoon();
   if(NG){ try{ NG.addListener('stopTap',function(){ bgOpenPending(); }); }catch(e){} }
 })();
 </script>

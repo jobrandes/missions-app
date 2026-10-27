@@ -146,3 +146,8 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Passport share card already existed (Passport + each town); share text now carries the web address.
 
 - Native app: Capacitor webDir is site/, whose index.html is the landing page. The landing head script redirects to play.html when running inside the app (capacitor: protocol). Do not remove it or the App Store build shows the website instead of the game.
+
+## Level, badges and Trophy Case (Oct 26)
+- Explorer level is global and derived from saved progress (`gStats()`, `lvOf()` in app.js): level L needs 25*(L-1)*(L+2) XP; titles Newcomer, Wanderer, Trailblazer, Pathfinder, Explorer, Historian, Archivist, Time Traveler, Grand Chronicler. XP = town XP (100/stamp, 25/claim) + 100 per finished town + 50 per verified visit + 50 per new state + challenge points. Town ranks and inks are unchanged.
+- 39 badges in `BADGES` (common/rare/legendary), all derived; only the earned list is stored (`stp-badges`, id to date; `stp-bseen` for the Passport dot). Trophy Case and level card sit on the Passport page; Home status card shows level. A non-blocking snackbar (`#bpop`) announces new badges about 2 s after a stamp, claim check, challenge or verified visit. Existing players get their badges filed quietly with one toast.
+- Next phases: quests/collections and the Now-photo camera (Phase 2), friends and leaderboards (Phase 3, needs accounts and moderation).
