@@ -2620,5 +2620,51 @@
    "a": 1,
    "why": "Samuel H. Graves, the railroad's president, was elected chairman."
   }
+ ],
+ "sitka": [
+  {
+   "q": "What name did the Russians give to the town that is now called Sitka?",
+   "o": [
+    "New Archangel",
+    "Novo Moskva",
+    "Fort Peter",
+    "Baranov Bay"
+   ],
+   "a": 0,
+   "why": "After 1804 the Russians called the settlement New Archangel, after Arkhangelsk."
+  },
+  {
+   "q": "Who designed St. Michael's Cathedral in the Russian church style?",
+   "o": [
+    "Alexander Baranov",
+    "Sheldon Jackson",
+    "Father Innocent Veniaminov",
+    "Frank La Roche"
+   ],
+   "a": 2,
+   "why": "Father Innocent Veniaminov founded and designed the cathedral, finished in 1848."
+  },
+  {
+   "q": "About how tall is the rock outcrop of Castle Hill?",
+   "o": [
+    "20 feet",
+    "40 feet",
+    "200 feet",
+    "60 feet"
+   ],
+   "a": 3,
+   "why": "Wikipedia gives its height as about 60 feet."
+  },
+  {
+   "q": "Which flag was first flown on Castle Hill in Alaska after statehood in 1959?",
+   "o": [
+    "A 48-star flag",
+    "A 49-star flag",
+    "A 50-star flag",
+    "The Russian flag"
+   ],
+   "a": 1,
+   "why": "It was the first 49-star flag in Alaska, raised in an unofficial ceremony."
+  }
  ]
 }

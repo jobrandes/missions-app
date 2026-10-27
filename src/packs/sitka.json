@@ -1,0 +1,437 @@
+{
+  "id": "sitka",
+  "name": "Sitka",
+  "explorer": "Alaska Explorer",
+  "initials": "SIT",
+  "ranks": [
+    [
+      0,
+      "Visitor"
+    ],
+    [
+      100,
+      "Harbor Walker"
+    ],
+    [
+      250,
+      "Cathedral Watcher"
+    ],
+    [
+      450,
+      "Castle Hill Scholar"
+    ],
+    [
+      600,
+      "Sitka Historian"
+    ]
+  ],
+  "heroAlt": "The green spire of St. Michael's Cathedral in Sitka",
+  "heroLi": "<li>Header: Jrozwado · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_St_Michael's_Orthodox_Cathedral_(1).jpg\">Source</a> · resized, cropped</li>",
+  "heroCredit": "Photo: Jrozwado · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_St_Michael's_Orthodox_Cathedral_(1).jpg\">Source</a>",
+  "mission": "Find four places in Sitka where Russian, Tlingit and American history meet. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+  "afterDone": "All four badges earned. The rest of Sitka is waiting.",
+  "safetyNote": "<li>Sitka is a small, rainy town, and Castle Hill has steep steps. Use sidewalks and crosswalks, wear shoes with grip, and check each place's visiting hours before you go.</li>",
+  "badgeMap": {
+    "cathedral": [
+      "si_sm_now",
+      "50% 30%"
+    ],
+    "bishop": [
+      "si_bh_now",
+      "50% 50%"
+    ],
+    "castle": [
+      "si_ch_now",
+      "50% 50%"
+    ],
+    "school": [
+      "si_sj_now",
+      "50% 50%"
+    ]
+  },
+  "level": "Hidden Gems",
+  "region": "The West",
+  "stops": [
+    {
+      "id": "cathedral",
+      "name": "St. Michael's Cathedral",
+      "short": "St. Michael's",
+      "badge": "St. Michael's",
+      "tag": "Stop 1 of 4",
+      "teaser": "A Russian church that burned down and was rebuilt as a copy.",
+      "map": "St. Michael's Cathedral, 240 Lincoln St, Sitka, AK",
+      "geo": [
+        57.05008,
+        -135.33512,
+        100
+      ],
+      "clue": "Walk along Lincoln Street to the middle of Sitka. Look for a white church with a tall green spire, a green onion-shaped dome, and golden crosses on top. It sits in the middle of the street's end.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. Sitka gets a lot of rain, so wet paths can be slippery. It is an active church, so be quiet near the doors and follow posted signs.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The cathedral you see is a rebuilt copy of the original. What happened to the original building in January 1966?",
+        "options": [
+          "An earthquake toppled it",
+          "It was taken apart and moved to Russia",
+          "It was swept away by a flood",
+          "A fire destroyed it"
+        ],
+        "answer": 3,
+        "hint": "It happened at night, and it was an accident.",
+        "verify": "Wikipedia says an accidental fire destroyed the cathedral on the night of January 2, 1966. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "si_sm_then",
+          "by": "Frank La Roche",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Russian_Orthodox_Cathedral_of_St_Michael,_Sitka,_Alaska,_ca_1897_(LAROCHE_252).jpeg",
+          "note": "resized"
+        },
+        "yr": "c. 1897",
+        "label": "The old cathedral, about 1897",
+        "line": "The original wooden cathedral with its dome and bell tower, among plain wooden buildings. The date is the one listed on Wikimedia Commons and is approximate.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Sitka%20Alaska%20cathedral&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "The rebuilt cathedral",
+        "line": "The tall green spire and onion dome of the copy built after the fire, seen through the trees.",
+        "ph": {
+          "k": "si_sm_now",
+          "by": "Jrozwado",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_St_Michael's_Orthodox_Cathedral_(1).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Father Innocent Veniaminov designed the cathedral in the Russian church style. The Russian-American Company paid for it, and it was finished on November 20, 1848. The bells were forged in Alaska, and the clock in the bell tower was made by Innocent.",
+        "In 1867 Alaska was sold to the United States, and soldiers who arrived with Major General Jefferson C. Davis pillaged the cathedral. It stood for more than a hundred years until a fire destroyed it on the night of January 2, 1966. The royal doors and a chandelier were saved, but the bells, the clock and a library of books in Russian, Tlingit and Aleut were lost.",
+        "The new cathedral is a copy built to the same measurements at the same spot, from 1961 survey drawings. It is made of concrete and steel with vinyl siding, and it was re-consecrated in 1978."
+      ],
+      "fact": "Some of the icons inside date to the mid-17th century, and two were painted by Vladimir Borovikovsky.",
+      "disputed": "The date on the \"Then\" photo (about 1897) comes from its Wikimedia Commons listing. The \"Now\" building is a replica of the one in the photo, not the original.",
+      "claims": [
+        {
+          "t": "The present cathedral was built as a copy using 1961 survey drawings.",
+          "a": 0,
+          "why": "Wikipedia says the rebuilding was based on 1961 Historic American Buildings Survey drawings."
+        },
+        {
+          "t": "The cathedral still has the original clock in its bell tower.",
+          "a": 2,
+          "why": "The clock in the bell tower was lost in the 1966 fire."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: St. Michael's Cathedral (Sitka, Alaska)",
+          "u": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral_(Sitka,_Alaska)"
+        },
+        {
+          "t": "Wikipedia: Sitka, Alaska",
+          "u": "https://en.wikipedia.org/wiki/Sitka,_Alaska"
+        }
+      ],
+      "card": {
+        "a": "1848",
+        "b": "1978",
+        "la": "Cathedral completed",
+        "lb": "Copy re-consecrated"
+      }
+    },
+    {
+      "id": "bishop",
+      "name": "Russian Bishop's House",
+      "short": "Bishop's House",
+      "badge": "Bishop's House",
+      "tag": "Stop 2 of 4",
+      "teaser": "One of the oldest buildings left from Russian America.",
+      "map": "Russian Bishop's House, 501 Lincoln St, Sitka, AK",
+      "geo": [
+        57.05147,
+        -135.33101,
+        100
+      ],
+      "clue": "Walk east along Lincoln Street to a large yellow two-story building with white trim and a red roof. It is a National Park Service site.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. Sitka gets a lot of rain, so wet paths can be slippery. It is a park building with set hours, so stay outside unless you are visiting during open hours.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "The Russian Bishop's House is one of the oldest surviving buildings from Russian America. What is its main structure made of?",
+        "options": [
+          "Brick",
+          "Logs",
+          "Stone blocks",
+          "Sod"
+        ],
+        "answer": 1,
+        "hint": "The clapboard on the outside covers what is underneath.",
+        "verify": "Wikipedia calls it a two-story log structure. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "si_bh_then",
+          "by": "NPS",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Russian_Bishop's_House_in_1974_(c09dd71c-1dd8-b71c-0702-d33b8cbb9ad6).jpg",
+          "note": "resized"
+        },
+        "yr": "1974",
+        "label": "The house in 1974",
+        "line": "The same building before restoration, with weathered wood, boarded lower windows and faded paint. The date comes from the file's title on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Russian%20Bishop%27s%20House%20Sitka&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "The house restored",
+        "line": "The house repainted yellow with white window frames and a red roof, seen from a slightly different angle.",
+        "ph": {
+          "k": "si_bh_now",
+          "by": "Jrozwado",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Sitka_National_Historical_Park_-_Russian_Bishop's_House_(1).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The house was built between 1841 and 1843 by Finnish laborers brought in by the Russian-American Company. It was the home of Ivan Veniaminov, the first Bishop of Alaska, who is now honored as Saint Innocent of Alaska.",
+        "From here he oversaw Orthodox schools and missions among the Alaska Native peoples of southern Alaska. The number of Orthodox worshippers in the region nearly doubled between 1841 and 1860.",
+        "After the 1867 sale the diocese moved to San Francisco in 1872, and the house became housing for priests and an inn. The National Park Service bought the property in 1973 and restored it as part of Sitka National Historical Park."
+      ],
+      "fact": "The building is about 42 by 63 feet and divided into nine bays, each about one sazhen, or 7 feet, square.",
+      "disputed": "The \"Then\" photo is dated 1974 only in its file name. It shows a different side of the building from the \"Now\" photo, so the two views do not line up exactly.",
+      "claims": [
+        {
+          "t": "Finnish laborers brought in by the Russian-American Company built the Bishop's House.",
+          "a": 0,
+          "why": "Wikipedia says so, and dates the work to 1841 to 1843."
+        },
+        {
+          "t": "The Bishop's House was built in the 1890s.",
+          "a": 2,
+          "why": "It was built in 1841 to 1843. The Old School next to it dates from 1897."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Russian Bishop's House",
+          "u": "https://en.wikipedia.org/wiki/Russian_Bishop%27s_House"
+        },
+        {
+          "t": "Wikipedia: Sitka, Alaska",
+          "u": "https://en.wikipedia.org/wiki/Sitka,_Alaska"
+        }
+      ],
+      "card": {
+        "a": "1843",
+        "b": "1973",
+        "la": "House completed",
+        "lb": "Park Service buys it"
+      }
+    },
+    {
+      "id": "castle",
+      "name": "Castle Hill",
+      "short": "Castle Hill",
+      "badge": "Castle Hill",
+      "tag": "Stop 3 of 4",
+      "teaser": "Where Russia handed Alaska to the United States.",
+      "map": "Baranof Castle Hill State Historic Site, 2 Lincoln St, Sitka, AK",
+      "geo": [
+        57.0487,
+        -135.33783,
+        100
+      ],
+      "clue": "Find the steps near the harbor end of Lincoln Street that climb a small rocky hill. At the top is a flat lookout with cannons, a flagpole and a stone wall.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. Sitka gets a lot of rain, so wet paths can be slippery. The summit is a steep rock hill with steps, so hold the rail and watch your footing.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "On this hill in 1867 a ceremony took place that changed the map. What happened?",
+        "options": [
+          "A gold strike was announced",
+          "A treaty with the Tlingit was signed",
+          "Russian Alaska was handed to the United States",
+          "Alaska became a state"
+        ],
+        "answer": 2,
+        "hint": "Alaska Day is celebrated every October because of it.",
+        "verify": "Wikipedia says the formal transfer took place in Sitka on October 18, 1867, on Castle Hill. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "si_ch_then",
+          "by": "Frank La Roche",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Baranov_Castle,_Sitka,_Alaska,_ca_1897_(LAROCHE_93).jpeg",
+          "note": "resized"
+        },
+        "yr": "c. 1897",
+        "label": "Looking out from the hill, about 1897",
+        "line": "A view over the roofs, wharves and harbor of Sitka, with the white cathedral spire among the buildings. The date is the one listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Sitka%20Alaska%20Castle%20Hill&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "The summit today",
+        "line": "Flat grass, a stone wall and one of the old cannons on the top of Castle Hill, with trees beyond.",
+        "ph": {
+          "k": "si_ch_now",
+          "by": "Jrozwado",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Baranof_Castle_Hill_State_Historic_Site_(American_Flag_Raising_Site).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "Castle Hill is a rock outcrop about 60 feet high. Families of the Kiksadi clan of Tlingit lived here before the Russians came, and the Tlingit name for the hill is Noow Tlein. In 1804 Alexander Baranov of the Russian-American Company took the hill after the six-day Battle of Sitka.",
+        "From 1806 it was the seat of government for Russian Alaska. The last building on top, a brick Governor's House with a cupola, was built in 1836 and burned in 1894.",
+        "The transfer of Alaska to the United States took place here in a ceremony on October 18, 1867. In 1959 the first 49-star flag in Alaska was raised here, in an unofficial and secret ceremony. It became a National Historic Landmark in 1962."
+      ],
+      "fact": "A stone parapet, six cannons and a flagpole now mark the top. The hill is set back from the water because fill was added around it in 1968.",
+      "disputed": "The Governor's House, called the castle, burned in 1894, so the \"about 1897\" date and the \"from the castle\" caption on the \"Then\" photo cannot both be exact. Treat the year as approximate.",
+      "claims": [
+        {
+          "t": "Russian Alaska was formally handed over to the United States on Castle Hill in 1867.",
+          "a": 0,
+          "why": "Wikipedia says the transfer ceremony took place at Sitka on October 18, 1867, on Castle Hill."
+        },
+        {
+          "t": "The Russian Governor's House on the hill is still standing today.",
+          "a": 2,
+          "why": "The Governor's House burned in 1894."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Castle Hill (Sitka, Alaska)",
+          "u": "https://en.wikipedia.org/wiki/Castle_Hill_(Sitka,_Alaska)"
+        },
+        {
+          "t": "Wikipedia: Alaska Purchase",
+          "u": "https://en.wikipedia.org/wiki/Alaska_Purchase"
+        }
+      ],
+      "card": {
+        "a": "1867",
+        "b": "1959",
+        "la": "Alaska handed to the U.S.",
+        "lb": "49-star flag raised"
+      }
+    },
+    {
+      "id": "school",
+      "name": "Sheldon Jackson School",
+      "short": "Sheldon Jackson",
+      "badge": "Sheldon Jackson",
+      "tag": "Stop 4 of 4",
+      "teaser": "Alaska's oldest college, and a hard chapter of its history.",
+      "map": "Sheldon Jackson Museum, 104 College Dr, Sitka, AK",
+      "geo": [
+        57.05095,
+        -135.32372,
+        150
+      ],
+      "clue": "Walk east along Lincoln Street to the end of town, then up onto the campus on the hill. Look for older school buildings with wide lawns around them. It is now the Sitka Fine Arts Campus.",
+      "safety": "Stay on sidewalks and cross only at crosswalks. Sitka gets a lot of rain, so wet paths can be slippery. The campus has several organizations, and some buildings have set hours, so stay on the paths and outside unless you are visiting during open hours.",
+      "field": "Field notes pending: nobody has walked this stop for the app yet.",
+      "q": {
+        "prompt": "Sheldon Jackson College was the oldest college in Alaska. In what year was the school first founded?",
+        "options": [
+          "1878",
+          "1867",
+          "1912",
+          "1950"
+        ],
+        "answer": 0,
+        "hint": "It opened about ten years after the Alaska Purchase.",
+        "verify": "Wikipedia says the school was founded in 1878. Written from sources, not yet checked on site."
+      },
+      "then": {
+        "ph": {
+          "k": "si_sj_then",
+          "by": "William H. Partridge",
+          "lic": "Public domain",
+          "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Sheldon_Jackson_Sitka_Industrial_Training_School,_Sitka,_Alaska,_1887_(AL+CA_2882).jpg",
+          "note": "resized"
+        },
+        "yr": "1887",
+        "label": "The school, 1887",
+        "line": "Two large wooden school buildings in front of a steep mountain, with a fence along the front. Its caption calls it the Sitka Training School. The date is the one listed on Wikimedia Commons.",
+        "link": {
+          "t": "Look for historic photos at the Library of Congress",
+          "u": "https://www.loc.gov/pictures/search/?q=Sheldon%20Jackson%20Sitka&co=hh"
+        }
+      },
+      "now": {
+        "yr": "2016",
+        "head": "Today",
+        "label": "A campus building today",
+        "line": "A low wooden building with a gabled roof and a small cupola on the campus, now home to the Sitka Fine Arts Camp. It is not one of the 1887 buildings.",
+        "ph": {
+          "k": "si_sj_now",
+          "by": "Jrozwado",
+          "lic": "CC BY-SA 4.0",
+          "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Sitka_Fine_Arts_Campus_(Formerly_Sheldon_Jackson_College)_(1).jpg",
+          "note": "resized"
+        }
+      },
+      "story": [
+        "The school was founded in 1878 by Fannie Kellogg and John G. Brady as the Sitka Industrial and Training School, for Tlingit boys. It nearly closed in 1882 when its first building burned. The Presbyterian missionary Sheldon Jackson raised money across the country to build a new one, and in 1910 the school was renamed for him.",
+        "Wikipedia says the school held that students' native languages and cultures had no value, and students were punished for speaking their own language. A boarding high school was added in 1917 and a college in 1944.",
+        "The college closed in 2007. The campus now hosts the Sheldon Jackson Museum, the Sitka Fine Arts Camp, the Sitka Sound Science Center and other groups, and the buildings are part of a National Historic Landmark district."
+      ],
+      "fact": "The college was the oldest institution of higher learning in Alaska when it closed in 2007.",
+      "disputed": "The \"Now\" photo shows a campus building that is not among the 1887 school buildings in the \"Then\" photo, so the two are not the same view.",
+      "claims": [
+        {
+          "t": "Sheldon Jackson College was the oldest institution of higher learning in Alaska.",
+          "a": 0,
+          "why": "Wikipedia says so, and dates its founding to 1878."
+        },
+        {
+          "t": "Sheldon Jackson College is still open as a college today.",
+          "a": 2,
+          "why": "It closed in 2007. The campus is now used by the Sitka Fine Arts Camp and other groups."
+        }
+      ],
+      "sources": [
+        {
+          "t": "Wikipedia: Sheldon Jackson College",
+          "u": "https://en.wikipedia.org/wiki/Sheldon_Jackson_College"
+        },
+        {
+          "t": "Wikipedia: Sitka, Alaska",
+          "u": "https://en.wikipedia.org/wiki/Sitka,_Alaska"
+        }
+      ],
+      "card": {
+        "a": "1878",
+        "b": "2007",
+        "la": "School founded",
+        "lb": "College closed"
+      }
+    }
+  ],
+  "heroKey": "si_hero"
+}

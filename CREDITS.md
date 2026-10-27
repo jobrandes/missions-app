@@ -664,3 +664,12 @@ Still pending "then" photos: Spirit of Detroit, Fox Theatre (Detroit), Mill City
 | sk_js_now | https://commons.wikimedia.org/wiki/File:Soapy_Smith_parlor_Skagway_2009.jpg | Notyourbroom | CC BY 3.0 | 2009 |
 | sk_ab_then | https://commons.wikimedia.org/wiki/File:ARCTIC_BROTHERHOOD_HALL_(1899),_BROADWAY_AVENUE_-_City_of_Skagway,_Skagway,_Skagway-Hoonah-Angoon_Census_Area,_AK_HABS_AK,18-SKAG,1-79_(CT).tif | Historic American Buildings Survey | Public domain | Undated survey photo |
 | sk_ab_now | https://commons.wikimedia.org/wiki/File:Arctic_Brotherhood_Skagway.JPG | Miyagawa | CC BY-SA 4.0 | 2012 |
+| si_hero | https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_St_Michael's_Orthodox_Cathedral_(1).jpg | Jrozwado | CC BY-SA 4.0 | 2016, resized, cropped |
+| si_sm_then | https://commons.wikimedia.org/wiki/File:Russian_Orthodox_Cathedral_of_St_Michael,_Sitka,_Alaska,_ca_1897_(LAROCHE_252).jpeg | Frank La Roche | Public domain | About 1897, as listed on Commons |
+| si_sm_now | https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_St_Michael's_Orthodox_Cathedral_(1).jpg | Jrozwado | CC BY-SA 4.0 | 2016 |
+| si_bh_then | https://commons.wikimedia.org/wiki/File:Russian_Bishop's_House_in_1974_(c09dd71c-1dd8-b71c-0702-d33b8cbb9ad6).jpg | NPS | Public domain | 1974, per the file title |
+| si_bh_now | https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Sitka_National_Historical_Park_-_Russian_Bishop's_House_(1).jpg | Jrozwado | CC BY-SA 4.0 | 2016 |
+| si_ch_then | https://commons.wikimedia.org/wiki/File:Baranov_Castle,_Sitka,_Alaska,_ca_1897_(LAROCHE_93).jpeg | Frank La Roche | Public domain | About 1897, as listed on Commons |
+| si_ch_now | https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Baranof_Castle_Hill_State_Historic_Site_(American_Flag_Raising_Site).jpg | Jrozwado | CC BY-SA 4.0 | 2016 |
+| si_sj_then | https://commons.wikimedia.org/wiki/File:Sheldon_Jackson_Sitka_Industrial_Training_School,_Sitka,_Alaska,_1887_(AL+CA_2882).jpg | William H. Partridge | Public domain | 1887 |
+| si_sj_now | https://commons.wikimedia.org/wiki/File:Sitka,_Alaska_-_Sitka_Fine_Arts_Campus_(Formerly_Sheldon_Jackson_College)_(1).jpg | Jrozwado | CC BY-SA 4.0 | 2016 |
