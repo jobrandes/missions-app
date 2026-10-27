@@ -865,6 +865,14 @@ body::before{content:"";position:fixed;left:0;right:0;top:0;height:env(safe-area
 @keyframes bsin{from{transform:translate(-50%,24px) scale(.94);opacity:0}to{transform:translate(-50%,0) scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){.bsnack{animation:none}.lbar i{transition:none}}
 body.menuopen .bsnack{display:none}
+.medal{display:block;overflow:visible}
+.medal.on{filter:drop-shadow(0 2px 3px rgba(0,0,0,.28))}
+.medal.t-l.on{filter:drop-shadow(0 0 6px rgba(255,200,60,.65)) drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.msh{animation:mshine 3.8s ease-in-out infinite;transform:skewX(-20deg)}
+@keyframes mshine{0%,55%{transform:translateX(0) skewX(-20deg)}100%{transform:translateX(140px) skewX(-20deg)}}
+@media (prefers-reduced-motion:reduce){.msh{animation:none;display:none}}
+.bt-m{width:76px;height:76px}
+.bt-m .medal{width:76px;height:76px}
 </style>
 
 <div class="app">
@@ -1633,9 +1641,47 @@ body.menuopen .bsnack{display:none}
     var s=gStats(), have=bdGet();
     return {s:s,list:BADGES.map(function(b){ var p=b.f(s), ok=p[0]>=p[1]; return {b:b,cur:Math.min(p[0],p[1]),goal:p[1],on:!!have[b.id]||ok,when:have[b.id]||''}; })};
   }
+  /* medal art: rarity picks the frame (round coin, faceted hexagon, gold starburst), the badge picks the icon */
+  var MEDN=0;
+  var MICON={
+    stamp:{a:'<path d="M15 3h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-1l3 5H13l3-5h-1a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M6 24h28a2 2 0 0 1 2 2v4H4v-4a2 2 0 0 1 2-2z"/><path d="M6 33h28v3H6z"/>',b:''},
+    star:{a:'<path d="M20 2l5.4 12.2L38.5 15l-10 8.7L31.6 37 20 30l-11.6 7 3.1-13.3-10-8.7 13.1-.8z"/>',b:''},
+    flag:{a:'<path d="M8 3h3.5v34H8z"/><path d="M11.5 5h22l-6.5 8 6.5 8h-22z"/>',b:''},
+    pin:{a:'<path fill-rule="evenodd" d="M20 2C12.8 2 7 7.7 7 14.7 7 24.6 20 38 20 38s13-13.4 13-23.3C33 7.7 27.2 2 20 2zm0 18.5a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/>',b:''},
+    map:{a:'<path d="M2 8l12-4.5 12 4.5 12-4.5v28.5L26 36.5 14 32 2 36.5z"/>',b:'<path d="M14 3.5v28.5M26 8v28.5" stroke="@D" stroke-width="2" fill="none"/>'},
+    compass:{a:'<path fill-rule="evenodd" d="M20 1.5a18.5 18.5 0 1 0 0 37 18.5 18.5 0 0 0 0-37zm0 4a14.5 14.5 0 1 1 0 29 14.5 14.5 0 0 1 0-29z"/><path d="M28 12l-5.2 10.8L12 28l5.2-10.8z"/>',b:'<circle cx="20" cy="20" r="2.2" fill="@D"/>'},
+    sun:{a:'<circle cx="20" cy="20" r="8.5"/><path d="M20 2.5v6M20 31.5v6M2.5 20h6M31.5 20h6M7.6 7.6l4.2 4.2M28.2 28.2l4.2 4.2M32.4 7.6l-4.2 4.2M11.8 28.2l-4.2 4.2" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/>',b:''},
+    gem:{a:'<path d="M11 5h18l9 11-18 22L2 16z"/>',b:'<path d="M2 16h36M11 5l4 11 5 22 5-22 4-11" stroke="@D" stroke-width="1.8" fill="none" stroke-linejoin="round"/>'},
+    nugget:{a:'<path d="M6 30l-3-9 7-9 9-3 9 2 8 8-2 9-8 5H14z"/>',b:'<path d="M12 14l5 6-3 8M25 11l-2 9 7 3" stroke="@D" stroke-width="1.8" fill="none" stroke-linejoin="round"/>'},
+    check:{a:'<path d="M20 1.5l15 5.5v11c0 9.5-6.200 16.500-15 20.500C11.200 34.500 5 27.500 5 18V7z"/>',b:'<path d="M12.500 19.500l5.500 5.500 10-11.500" stroke="@D" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'},
+    quiz:{a:'<path d="M20 1.5l15 5.5v11c0 9.5-6.200 16.500-15 20.500C11.200 34.500 5 27.500 5 18V7z"/>',b:'<text x="20" y="27" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="22" fill="@D">?</text>'},
+    trophy:{a:'<path d="M10 3h20v11c0 7-4.500 11-10 11S10 21 10 14z"/><path d="M10 6H4v4.500c0 4 3 6.500 6.500 6.500M30 6h6v4.500c0 4-3 6.500-6.500 6.500" stroke="#fff" stroke-width="2.600" fill="none"/><path d="M17 25h6v6h-6z"/><path d="M11 31h18v5H11z"/>',b:''},
+    flame:{a:'<path d="M21 1.500c1.500 8 11 11.500 11 22.500a11.500 11.500 0 0 1-23 0c0-5 2-8.500 5.500-11 0 4 1.500 6 4 6.500-1.500-6.500-1-12.500 2.500-18z"/>',b:'<path d="M20.500 22c3 3 5 5 5 8.500a5 5 0 0 1-10 0c0-2.500 1.500-4 2.500-5 .5 1.500 1.500 2 2 2-.5-2.500 0-4 .5-5.500z" fill="@D" opacity=".55"/>'},
+    bolt:{a:'<path d="M24 1.500L7 22.500h10.500L14.500 38.500 33 16.500H22z"/>',b:''},
+    train:{a:'<path d="M10 3h20a4 4 0 0 1 4 4v18a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6V7a4 4 0 0 1 4-4z"/><path d="M11 31l-4.500 6.500M29 31l4.500 6.500" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>',b:'<rect x="10" y="8" width="20" height="10" rx="2.500" fill="@D"/><circle cx="13.500" cy="24.500" r="2" fill="@D"/><circle cx="26.500" cy="24.500" r="2" fill="@D"/>'},
+    dome:{a:'<path d="M20 1.500v5M7.500 22a12.500 12.500 0 0 1 25 0z"/><path d="M9 23.500h22v3H9zM10.500 28h3.500v7h-3.500zM16.250 28h3.500v7h-3.500zM22.250 28h3.500v7h-3.500zM28 28h3.500v7H28zM5 36h30v3H5z"/><path d="M20 1.500v5" stroke="#fff" stroke-width="2.200"/>',b:''},
+    church:{a:'<path d="M20 1v8M16.500 4.500h7" stroke="#fff" stroke-width="2.400" fill="none"/><path d="M20 10l8 10v4H12v-4z"/><path d="M5 25h30v13H5z"/>',b:'<path d="M16.500 38v-6a3.500 3.500 0 0 1 7 0v6z" fill="@D"/>'},
+    bridge:{a:'<path d="M1 25h38v4H1z"/><path d="M8.500 8h3.500v30H8.500zM28 8h3.500v30H28z"/><path d="M2 25Q8 12 10.200 8Q20 27 29.800 8Q32 12 38 25" stroke="#fff" stroke-width="2.200" fill="none"/>',b:''},
+    mountain:{a:'<path d="M1 36L14 12l7 11 5-7 13 20z"/>',b:'<path d="M14 12l-4 7 4-2 3 3zM26 16l-3 5 3-1.500 2.500 2z" fill="@D" opacity=".35"/>'},
+    wave:{a:'<path d="M2 14q4-5 8 0t8 0 8 0 8 0M2 22q4-5 8 0t8 0 8 0 8 0M2 30q4-5 8 0t8 0 8 0 8 0" stroke="#fff" stroke-width="3.400" fill="none" stroke-linecap="round"/>',b:''}
+  };
+  var BDART={first:['stamp'],s10:['stamp','10'],s25:['stamp','25'],s50:['stamp','50'],s100:['stamp','100'],s200:['stamp','200'],s400:['stamp','400'],t1:['star'],t5:['flag','5'],t15:['flag','15'],st3:['map','3'],st10:['map','10'],st25:['map','25'],coast:['compass'],reg5:['compass','5'],far:['sun'],nv:['mountain','NV'],rush:['nugget'],gem5:['gem','5'],gem20:['gem','20'],c10:['check','10'],c50:['check','50'],c150:['check','150'],q1:['quiz'],q4:['trophy'],q5:['trophy','5'],v1:['pin'],v10:['pin','10'],v40:['pin','40'],w2:['flame','2w'],w4:['flame','4w'],w12:['flame','12w'],d3:['bolt','3'],d5:['bolt','5'],d8:['bolt','8'],tr1:['train'],tr2:['dome'],tr3:['church'],tr4:['bridge']};
   function medal(b,on,sz){
-    var C={c:['#2f7a99','#4fa6c7'],r:['#6b3fb0','#9b72d6'],l:['#a9770f','#f0c24a']}[b.t], o=on?C:['#6e7581','#9aa1ab'], g=b.g, fs=g.length>2?19:(g.length>1?25:32);
-    return '<svg viewBox="0 0 100 100" width="'+sz+'" height="'+sz+'" aria-hidden="true" focusable="false"><polygon points="30,60 18,96 34,88 43,98 51,64" fill="'+o[0]+'"/><polygon points="70,60 82,96 66,88 57,98 49,64" fill="'+o[0]+'"/><circle cx="50" cy="40" r="36" fill="'+o[0]+'"/><circle cx="50" cy="40" r="29" fill="'+o[1]+'" stroke="#fff" stroke-opacity=".55" stroke-width="2"/><text x="50" y="'+(40+fs*0.36).toFixed(1)+'" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="'+fs+'" fill="'+(on?'#fff':'#eef0f3')+'">'+g+'</text></svg>';
+    var id='m'+(++MEDN), art=BDART[b.id]||['star'], ic=MICON[art[0]]||MICON.star, lb=art[1]||'', t=b.t;
+    var P={c:{r0:'#8fdcf0',r1:'#1c6786',d0:'#59bfe0',d1:'#145a78',rb:'#1c6786',rb2:'#2f8fb3',dk:'#0f3f56'},r:{r0:'#e2c8ff',r1:'#51299a',d0:'#a678e6',d1:'#42207f',rb:'#42207f',rb2:'#7a4cc4',dk:'#2e1560'},l:{r0:'#fff6bf',r1:'#a8730a',d0:'#ffdc63',d1:'#b97a06',rb:'#a82a18',rb2:'#e0503a',dk:'#6b4204'}}[t];
+    if(!on) P={r0:'#cfd4db',r1:'#7b8390',d0:'#aab0ba',d1:'#6a7280',rb:'#7b8390',rb2:'#979eaa',dk:'#4d5461'};
+    var cx=50, cy=42, frame, disc, defs='<linearGradient id="'+id+'r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+P.r0+'"/><stop offset="1" stop-color="'+P.r1+'"/></linearGradient><radialGradient id="'+id+'d" cx=".38" cy=".3" r=".85"><stop offset="0" stop-color="'+P.d0+'"/><stop offset="1" stop-color="'+P.d1+'"/></radialGradient><linearGradient id="'+id+'b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="'+P.rb+'"/><stop offset=".5" stop-color="'+P.rb2+'"/><stop offset="1" stop-color="'+P.rb+'"/></linearGradient>';
+    var rib='<path d="M31 62L20 97l14-7 8 9 7-34z" fill="url(#'+id+'b)"/><path d="M69 62L80 97l-14-7-8 9-7-34z" fill="url(#'+id+'b)"/>';
+    if(t==='r'){ frame='<polygon points="50,2 85,22 85,62 50,82 15,62 15,22" fill="url(#'+id+'r)" stroke="'+P.dk+'" stroke-width="1.6" stroke-linejoin="round"/>'; disc='<polygon points="50,10 78,26 78,58 50,74 22,58 22,26" fill="url(#'+id+'d)" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round"/><polygon points="50,15 73,28.500 73,55.500 50,69 27,55.500 27,28.500" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1"/>'; }
+    else if(t==='l'){ var pts=[],k,a,rr; for(k=0;k<32;k++){ a=k*Math.PI/16-Math.PI/2; rr=k%2?36:42; pts.push((50+rr*Math.cos(a)).toFixed(1)+','+(42+rr*Math.sin(a)).toFixed(1)); } frame='<polygon points="'+pts.join(' ')+'" fill="url(#'+id+'r)" stroke="'+P.dk+'" stroke-width="1.4" stroke-linejoin="round"/><circle cx="50" cy="42" r="33" fill="none" stroke="'+P.r1+'" stroke-width="1.2" stroke-dasharray="1.500 3"/>'; disc='<circle cx="50" cy="42" r="29" fill="url(#'+id+'d)" stroke="#fff" stroke-opacity=".7" stroke-width="1.8"/>'; }
+    else { frame='<circle cx="50" cy="42" r="39" fill="url(#'+id+'r)" stroke="'+P.dk+'" stroke-width="1.6"/><circle cx="50" cy="42" r="34" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.4" stroke-dasharray="1.800 3.400"/>'; disc='<circle cx="50" cy="42" r="29" fill="url(#'+id+'d)" stroke="#fff" stroke-opacity=".6" stroke-width="1.6"/>'; }
+    var sc=lb?0.84:1.0, tx=50-20*sc, ty=(lb?36:42)-20*sc, det=ic.b.replace(/@D/g,P.dk);
+    var icon='<g transform="translate('+tx.toFixed(1)+' '+(ty+1.6).toFixed(1)+') scale('+sc+')" fill="'+P.dk+'" opacity=".38">'+ic.a.replace(/stroke="#fff"/g,'stroke="'+P.dk+'"')+'</g><g transform="translate('+tx.toFixed(1)+' '+ty.toFixed(1)+') scale('+sc+')" fill="#fff" opacity="'+(on?1:.62)+'">'+ic.a+det+'</g>';
+    var plate=lb?'<rect x="'+(50-Math.max(15,lb.length*5.4+6)).toFixed(1)+'" y="57.500" width="'+(Math.max(30,lb.length*10.8+12)).toFixed(1)+'" height="14.500" rx="7.200" fill="'+P.dk+'" stroke="'+(on?(t==='l'?'#ffe58a':'#fff'):'#c9ced6')+'" stroke-opacity=".85" stroke-width="1.200"/><text x="50" y="68.300" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="11.500" fill="'+(on?(t==='l'?'#ffe58a':'#fff'):'#dfe3e8')+'">'+lb+'</text>':'';
+    var shine=on?'<clipPath id="'+id+'c"><circle cx="50" cy="42" r="29"/></clipPath><g clip-path="url(#'+id+'c)"><ellipse cx="40" cy="25" rx="23" ry="9" transform="rotate(-24 40 25)" fill="#fff" opacity=".26"/>'+(t==='l'?'<rect class="msh" x="-34" y="4" width="16" height="76" fill="#fff" opacity=".42"/>':'')+'</g>':'';
+    var lock=on?'':'<g transform="translate(60 54)"><circle cx="11" cy="11" r="11" fill="#4d5461" stroke="#e4e7ec" stroke-width="1.400"/><rect x="6.500" y="10.500" width="9" height="7" rx="1.400" fill="#fff"/><path d="M8.300 10.500V8.600a2.700 2.700 0 0 1 5.400 0v1.900" stroke="#fff" stroke-width="1.700" fill="none"/></g>';
+    var glow=(on&&t==='l')?'<circle cx="50" cy="42" r="46" fill="#ffd34d" opacity=".22"/>':'';
+    return '<svg viewBox="0 0 100 100" width="'+sz+'" height="'+sz+'" aria-hidden="true" focusable="false" class="medal t-'+t+(on?' on':' lock')+'"><defs>'+defs+'</defs>'+glow+rib+frame+disc+icon+shine+plate+lock+'</svg>';
   }
   var badgeQ=[];
   function awardCheck(){
