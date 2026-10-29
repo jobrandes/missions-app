@@ -866,3 +866,5 @@ body.menuopen .bsnack{display:none}
 @media (prefers-reduced-motion:reduce){.msh{animation:none;display:none}}
 .bt-m{width:76px;height:76px}
 .bt-m .medal{width:76px;height:76px}
+.sharefade{margin-top:10px;width:100%;min-height:48px;font-weight:700}
+.sharecard video{display:block;width:100%;max-height:60vh;border-radius:10px;background:#13202C}

@@ -39,7 +39,7 @@
   }
   function compare(st){
     if(!(hasPh(st,'then')&&hasPh(st,'now'))) return '';
-    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p></section>';
+    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button></section>';
   }
   document.addEventListener('input',function(e){
     var q=e.target; if(q&&q.id==='townSearch'){ var v=q.value.trim().toLowerCase(), any=false;
@@ -646,6 +646,50 @@
     if(!n||noimg){ finish(); return; }
     keys.forEach(function(key,i){ var im=new Image(); im.onload=function(){ imgs[i]=im; if(++loaded===n) finish(); }; im.onerror=function(){ if(++loaded===n) finish(); }; im.src=PHOTOS[key]; });
   }
+  /* ---------- share the fade: a short clip of the old photo melting into today (still picture if the phone cannot record) ---------- */
+  function fadeCover(g,im,x,y,w,h){ var r=Math.max(w/im.width,h/im.height), sw=w/r, sh=h/r; g.drawImage(im,(im.width-sw)/2,(im.height-sh)/2,sw,sh,x,y,w,h); }
+  function fadeFit(g,txt,max,start,wt){ var sz=start; g.font=wt+' '+sz+'px system-ui,sans-serif'; while(g.measureText(txt).width>max&&sz>20){ sz-=2; g.font=wt+' '+sz+'px system-ui,sans-serif'; } }
+  function fadeFrame(g,W,H,a,b,m,mix){
+    g.fillStyle='#13202C'; g.fillRect(0,0,W,H); g.fillStyle='#F2B01E'; g.fillRect(0,0,W,10);
+    g.textAlign='center'; g.fillStyle='#9AAAB8'; g.font='600 26px system-ui,sans-serif'; g.fillText('STAMP THE PAST',W/2,62);
+    g.fillStyle='#FFFFFF'; fadeFit(g,m.s,W-80,60,'800'); g.fillText(m.s,W/2,132);
+    g.fillStyle='#F2B01E'; g.font='700 30px system-ui,sans-serif'; g.fillText(m.c,W/2,178);
+    var y0=206, ih=Math.round(W*0.75); g.save(); g.beginPath(); g.rect(0,y0,W,ih); g.clip(); fadeCover(g,a,0,y0,W,ih); g.globalAlpha=mix; fadeCover(g,b,0,y0,W,ih); g.restore();
+    var lab=mix<0.5?'TODAY':m.y; g.font='800 30px system-ui,sans-serif'; var lw=g.measureText(lab).width+44; g.fillStyle='rgba(19,32,44,.82)'; g.beginPath(); if(g.roundRect) g.roundRect(W/2-lw/2,y0+ih-70,lw,48,24); else g.rect(W/2-lw/2,y0+ih-70,lw,48); g.fill(); g.fillStyle='#FFFFFF'; g.fillText(lab,W/2,y0+ih-36);
+    var ty=y0+ih+52, x1=110, x2=W-110; g.strokeStyle='#3A4A5A'; g.lineWidth=8; g.lineCap='round'; g.beginPath(); g.moveTo(x1,ty); g.lineTo(x2,ty); g.stroke(); g.strokeStyle='#F2B01E'; g.beginPath(); g.moveTo(x1,ty); g.lineTo(x1+(x2-x1)*mix,ty); g.stroke(); g.fillStyle='#FFFFFF'; g.beginPath(); g.arc(x1+(x2-x1)*mix,ty,16,0,Math.PI*2); g.fill();
+    g.fillStyle='#9AAAB8'; g.font='600 24px system-ui,sans-serif'; g.textAlign='left'; g.fillText('NOW',24,ty+9); g.textAlign='right'; g.fillText(m.y,W-24,ty+9); g.textAlign='center';
+    g.fillStyle='#9AAAB8'; g.font='500 26px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,H-62); g.fillStyle='#FFFFFF'; g.font='700 30px system-ui,sans-serif'; g.fillText(SHARE_URL,W/2,H-22);
+  }
+  function fadeMix(t){ if(t<0.8) return 0; if(t>3.2) return 1; var u=(t-0.8)/2.4; return u<0.5?2*u*u:1-Math.pow(-2*u+2,2)/2; }
+  function fadeShare(btn){
+    var m={s:btn.getAttribute('data-s')||'',c:btn.getAttribute('data-c')||'',y:btn.getAttribute('data-y')||''}, nk=btn.getAttribute('data-n'), tk=btn.getAttribute('data-t');
+    if(!PHOTOS[nk]||!PHOTOS[tk]){ toast('Photos are missing for this stop.'); return; }
+    toast('Making your clip...');
+    var a=new Image(), b=new Image(), left=2, bad=false;
+    function go(){ if(bad||--left) return; fadeMake(a,b,m); }
+    a.onload=go; b.onload=go; a.onerror=b.onerror=function(){ if(!bad){ bad=true; toast('Could not load the photos.'); } };
+    a.src=PHOTOS[nk]; b.src=PHOTOS[tk];
+  }
+  function fadeOut(blob,m,isVideo){
+    var ext=isVideo?(/mp4/.test(blob.type)?'mp4':'webm'):'png', name='stamp-the-past-fade.'+ext, f=null; try{ f=new File([blob],name,{type:blob.type||(isVideo?'video/mp4':'image/png')}); }catch(e){}
+    var txt=m.s+', then and now. Go there. Prove it. Stamp the past. https://'+SHARE_URL;
+    if(f&&navigator.canShare&&navigator.canShare({files:[f]})&&navigator.share){ navigator.share({files:[f],text:txt}).catch(function(){}); return; }
+    shareClose(); var u=URL.createObjectURL(blob), d=document.createElement('div'); d.id='sharem'; d._u=u; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Your fade clip');
+    d.innerHTML='<div class="celeb-card sharecard">'+(isVideo?'<video src="'+u+'" autoplay loop muted playsinline aria-label="Then and now clip"></video>':'<img src="'+u+'" alt="Then and now picture">')+'<p class="why">'+(isVideo?'Press and hold the clip, or use Save, then share it anywhere.':'Press and hold the picture to save or share it.')+'</p><div class="celeb-btns"><a class="btn" href="'+u+'" download="'+name+'">Save it</a><button class="btn ghost" data-a="shareclose">Close</button></div></div>';
+    document.body.appendChild(d); var cb=d.querySelector('button'); if(cb) cb.focus();
+  }
+  function fadeMake(a,b,m){
+    var W=720,H=960, c=document.createElement('canvas'); c.width=W; c.height=H; var g=c.getContext('2d');
+    var mt=''; try{ if(window.MediaRecorder&&MediaRecorder.isTypeSupported&&c.captureStream) mt=['video/mp4;codecs=avc1.42E01E','video/mp4','video/webm;codecs=vp9','video/webm'].filter(function(x){ return MediaRecorder.isTypeSupported(x); })[0]||''; }catch(e){}
+    function still(){ fadeFrame(g,W,H,a,b,m,0.5); try{ c.toBlob(function(bl){ if(bl) fadeOut(bl,m,false); else toast('Could not make the picture on this device.'); },'image/png'); }catch(e){ toast('Could not make the picture on this device.'); } }
+    if(!mt){ still(); return; }
+    var rec, chunks=[], t0=0, done=false;
+    try{ rec=new MediaRecorder(c.captureStream(30),{mimeType:mt,videoBitsPerSecond:2500000}); }catch(e){ still(); return; }
+    rec.ondataavailable=function(e){ if(e.data&&e.data.size) chunks.push(e.data); };
+    rec.onstop=function(){ var bl=new Blob(chunks,{type:(rec.mimeType||mt).split(';')[0]}); if(bl.size<1000){ still(); return; } fadeOut(bl,m,true); };
+    function tick(now){ if(done) return; if(!t0) t0=now; var t=(now-t0)/1000; fadeFrame(g,W,H,a,b,m,fadeMix(t)); if(t>=4.8){ done=true; setTimeout(function(){ try{ rec.stop(); }catch(e){ still(); } },200); return; } requestAnimationFrame(tick); }
+    fadeFrame(g,W,H,a,b,m,0); rec.start(); requestAnimationFrame(tick);
+  }
   function shareClose(){ var e=document.getElementById('sharem'); if(e){ if(e._u) try{ URL.revokeObjectURL(e._u); }catch(x){} e.remove(); } }
   function shareStamps(kind,k){
     toast('Making your card...');
@@ -1087,6 +1131,7 @@
     if(a==='trail'){ btrail=b.getAttribute('data-t'); document.querySelectorAll('.tcard').forEach(function(c){ var on=c.getAttribute('data-t')===btrail; c.classList.toggle('on',on); c.setAttribute('aria-pressed',on?'true':'false'); }); document.querySelectorAll('.trl').forEach(function(x){ x.hidden=(x.getAttribute('data-trail')!==btrail); }); return; }
     if(a==='share'){ var sk=b.getAttribute('data-k'); if(sk&&CITIES[sk]) shareStamps('town',sk); else shareStamps('passport'); return; }
     if(a==='shareclose'){ shareClose(); return; }
+    if(a==='sharefade'){ fadeShare(b); return; }
     if(a==='trip'){ var tk=b.getAttribute('data-c'), ta=tripGet(), ti=ta.indexOf(tk); if(ti>-1) ta.splice(ti,1); else ta.push(tk); tripSet(ta); var sv=window.scrollY; render(); window.scrollTo(0,sv); toast(ti>-1?'Removed from your trip.':'Added to your trip.'); return; }
     if(a==='schip'){ var inp=document.getElementById('townSearch'); if(inp){ var sv2=b.getAttribute('data-s'); inp.value=(inp.value.trim().toLowerCase()===sv2.toLowerCase())?'':sv2; inp.dispatchEvent(new Event('input',{bubbles:true})); } return; }
     if(a==='gomissions'){ setBtab('towns'); var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }

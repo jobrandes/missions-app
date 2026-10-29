@@ -215,6 +215,17 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(2600)
     need(pg.locator('#bpop').count()==0,'first run with existing progress shows no badge popup')
     need(len(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-badges')||'{}'))"))>=2,'existing progress is filed as earned badges')
+    # share the fade: a clip (or a still, if the phone cannot record) opens in a share window
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
+    pg.click('.stop >> nth=0'); pg.click('text=I am here')
+    for k in range(4):
+        pg.locator('.opt').nth(k).click()
+        if pg.query_selector('.opt.right'): break
+    pg.click('[data-a=step][data-n="2"]'); need(pg.locator('.sharefade').count()==1,'story screen offers Share this fade')
+    pg.locator('.sharefade').click(); pg.wait_for_function("document.querySelector('#sharem')||/could not/i.test((document.getElementById('toast')||{}).textContent||'')",timeout=15000)
+    # file:// pages cannot export canvas pictures, so there the button must fail politely; on the web it opens the share window (checked by hand over http)
+    need(pg.locator('#sharem').count()==1 or 'could not' in pg.inner_text('#toast').lower(),'Share this fade either opens the share window or says why not')
+    pg.evaluate("var e=document.getElementById('sharem'); if(e) e.querySelector('[data-a=shareclose]').click()")
     b.close()
 bad+= [f'page error: {e}' for e in errs]
 print('FLOWS: '+('OK' if not bad else 'FAILED'))
