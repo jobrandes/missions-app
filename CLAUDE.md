@@ -154,4 +154,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Share this fade (Oct 29)
 - Story screen has a "Share this fade" button (`.sharefade`, `fadeShare`/`fadeMake` in app.js): 720x960 canvas + MediaRecorder clip (mp4/webm) of the Now-to-Then fade, Web Share with file, `#sharem` modal fallback, PNG fallback. Needs http (canvas is tainted on file://). Native iOS web view behavior untested.
+- Visitor counter live (Oct 29): GoatCounter site `stampthepast`, loader in src/landing.html and src/head.html, runs only on stampthepast.com and *.netlify.app (never native or tests); privacy page updated.
 - Growth learnings: Reddit tester subs and the Historic Reno Preservation Society FB group (no promo/links) gave zero replies. Plan: GoatCounter visitor counter (cookie-free; then reword "no tracking" copy on landing, Menu, parents, privacy, store listing), short fade videos, DM local contacts, set a success bar before paying the $99 Apple fee.
