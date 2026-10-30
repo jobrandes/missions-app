@@ -169,3 +169,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - First-run home (no stamps yet) shows a "How it works" block (go there / prove it / stamp it, what XP is, explore-from-home hint). Added after test card #1: the tester did not realize you must travel, and did not know what XP is for. A first-run quick-tour modal already existed; people may skip it.
 
 - Google Search Console: property https://stampthepast.com/ verified by HTML file `google7a48ffa7f434a573.html`, written by build.py into site/. Do not remove (verification lapses if it is gone).
+
+- Share this fade: iOS Safari rejects navigator.share if it is not called from a tap, and the clip takes ~5s to record, so the clip now always opens a preview with a real "Share it" button (data-a=sharefile) plus Save. fadeMake has a 9s watchdog that falls back to the still picture. Closed `<details>` with a `display:flex` child (`.srcs`) rendered as a big blank box in iOS Safari; `details:not([open])>.srcs{display:none}` fixes it. Details cards now show a +/- marker.
