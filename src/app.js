@@ -67,12 +67,12 @@
     var P=c.stops.map(function(st){ return st.geo; }); if(P.length<2||P.some(function(g){ return !g||g.length<2; })) return '';
     var best=1e12;
     (function perm(a,r){ if(!r.length){ var d=0; for(var i=1;i<a.length;i++) d+=distM(a[i-1][0],a[i-1][1],a[i][0],a[i][1]); if(d<best) best=d; return; } for(var i=0;i<r.length;i++) perm(a.concat([r[i]]),r.slice(0,i).concat(r.slice(i+1))); })([],P);
-    var mi=best/1609.34;
-    if(mi<0.1) return 'All within a short stroll of each other.';
+    var mi=best/1609.34, n=P.length+' stops. ';
+    if(mi<0.1) return n+'All within a short stroll of each other.';
     var mtxt=mi<10?mi.toFixed(1):String(Math.round(mi));
-    if(mi>2.5) return 'Spread out: about '+mtxt+' miles from first to last. Plan to drive between stops.';
+    if(mi>2.5) return n+'Spread out: about '+mtxt+' miles from first to last. Plan to drive between stops.';
     var min=Math.max(5,Math.round(mi*1.3/3*60/5)*5);
-    return 'About '+mtxt+' miles in all, roughly '+min+' minutes of walking. Straight-line, so your route may be longer.';
+    return n+'About '+mtxt+' miles in all, roughly '+min+' minutes of walking. Straight-line, so your route may be longer.';
   }
   function spotHtml(st){
     var sp=st.spot; if(!sp||!sp.options) return '';

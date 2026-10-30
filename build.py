@@ -37,7 +37,8 @@ for pg in ('privacy.html','support.html'):
     shutil.copy(R+'src/pages/'+pg,R+'site/'+pg)
 shutil.rmtree(R+'site/photos',ignore_errors=True); os.makedirs(R+'site/photos')
 for k in keys: shutil.copy(R+f'src/photos/{k}.jpg',R+f'site/photos/{k}.jpg')
-print('copied pages and',len(keys),'photos')
+shutil.rmtree(R+'site/fonts',ignore_errors=True); shutil.copytree(R+'src/fonts',R+'site/fonts')
+print('copied pages and',len(keys),'photos and fonts')
 
 # --- offline support for the static site ---
 import hashlib

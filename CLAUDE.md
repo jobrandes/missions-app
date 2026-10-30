@@ -185,3 +185,10 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Report-driven batch 1 (Oct 30): removed "DRAFT" from privacy/support (now "Last updated October 30, 2026. A plain-language summary, not legal advice."), fixed wording to match the app (button is "Verify with my location (optional)"; save code is under "Back up your passport" on the Passport screen and the town Stamps tab; virtual stamps are not in the code). `now.yr` is the label for the TODAY photo, so it must be the photo's year, not an event year: fixed 7 stops (Reno arch, Faneuil Hall, Tahoe dam/gate/watson, VC C Street/Piper's). Find-it screen now says "I am here" is on your honor and location verification is optional.
 
 - Story screen shows the first ~3 sentences (about 190 characters) and puts the rest under a "Read more" details (`storyHtml`, abbreviation-aware sentence split; the crawlable pages keep the full text). Town "Your mission" card shows `tourInfo`: about N miles in the shortest order and a rough walking time (3 mph x 1.3 detour), or "Spread out ... plan to drive" above 2.5 miles. Straight-line from the stops' map points, always worded "about".
+
+## Oct 30 audit fixes (batch)
+- SceneDelegate now creates `StampViewController` (it was a plain CAPBridgeViewController, so StampStore/StampGeo were probably never registered). Needs a device check: `Capacitor.Plugins.StampGeo` and `StampStore` should exist.
+- Info.plist `UIRequiredDeviceCapabilities`: armv7 -> arm64.
+- Fonts are bundled in `src/fonts/` (woff2 + fonts.css from @fontsource, latin subset) and copied to `site/fonts/`; `head.html` links `fonts/fonts.css`. The app makes no Google requests. Landing page and the 292 SEO pages still use Google Fonts (web only).
+- `tourInfo` now starts with the stop count ("4 stops. About 1.2 miles...").
+- Still open (checklist q03): own the CLLocationManager in AppDelegate so region alerts work after the app is killed.
