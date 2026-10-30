@@ -219,6 +219,16 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(2600)
     need(pg.locator('#bpop').count()==0,'first run with existing progress shows no badge popup')
     need(len(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-badges')||'{}'))"))>=2,'existing progress is filed as earned badges')
+    # spot the change (Reno only so far): wrong answer is struck out, right answer explains itself
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
+    pg.click('.stop >> nth=0'); pg.click('text=I am here')
+    for k in range(4):
+        pg.locator('.opt').nth(k).click()
+        if pg.query_selector('.opt.right'): break
+    pg.click('[data-a=step][data-n="2"]')
+    need(pg.locator('#spot .spo').count()==4,'Reno arch offers a Spot the change puzzle with four answers')
+    pg.click('#spot .spo >> nth=0'); need('not that one' in pg.inner_text('#spot').lower(),'wrong spot answer says try again')
+    pg.click('#spot .spo >> nth=1'); need('24 years' in pg.inner_text('#spot'),'right spot answer explains why')
     # share the fade: a clip (or a still, if the phone cannot record) opens in a share window
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')

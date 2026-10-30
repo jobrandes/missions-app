@@ -177,3 +177,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Virtual stamps look different: faded greyscale badge photo, dashed ring and a "Virtual" tag (`.bbox.virt`, `.vtag`). Real stamps keep full colour. In the native app `<a download>` does nothing in the WKWebView, so the share preview shows one "Share or save it" button (iOS share sheet has Save Video / Save Image); the plain Save link only appears where the share sheet is unavailable.
 
 - Passport shows an "Explored from home" card (#vpass) listing virtual stamps. New badge `arm` Armchair Explorer (10 virtual stops, common), so 40 badges now. endDemo() calls awardSoon() so the badge is awarded after leaving the preview.
+
+- "Spot the change" puzzle: optional `spot` {q,options,answer,why} on a stop, shown under the Then/Now slider (`spotHtml`, handler `spotpick`). No XP, nothing saved. Pilot is the 4 Reno stops; every question and answer is taken only from text already in the pack's story/then/now lines. Add more only from sourced pack text, never invent a change.

@@ -12,7 +12,11 @@
    "tag": "Stop 1 of 4",
    "teaser": "A giant sign over the main street.",
    "map": "Reno Arch, Reno NV",
-   "geo": [39.52812, -119.81366, 150],
+   "geo": [
+    39.52812,
+    -119.81366,
+    150
+   ],
    "clue": "Look for a giant sign that stretches over the main street downtown. Visitors have walked under it for generations. If you get stuck, any local can point the way.",
    "safety": "Cross only at crosswalks and stay on the sidewalk. This stop is outdoors in public space. Do not step into the street for a photo.",
    "field": "Field notes pending: sidewalk surfaces and curb cuts have not been checked on foot yet.",
@@ -104,6 +108,17 @@
     "b": "2021",
     "la": "The 1963 arch",
     "lb": "Lit-up arch today"
+   },
+   "spot": {
+    "q": "The 1973 photo shows an arch that no longer stands. About how long did that 1963 arch last before today's arch replaced it?",
+    "options": [
+     "9 years",
+     "24 years",
+     "50 years",
+     "61 years"
+    ],
+    "answer": 1,
+    "why": "It went up in 1963 and was replaced in 1987, so it stood for 24 years."
    }
   },
   {
@@ -114,7 +129,11 @@
    "tag": "Stop 2 of 4",
    "teaser": "The reason Reno exists: the railroad reached here in 1868.",
    "map": "Amtrak Station, 280 N Center St, Reno, NV",
-   "geo": [39.5287, -119.8116, 150],
+   "geo": [
+    39.5287,
+    -119.8116,
+    150
+   ],
    "clue": "Walk to the downtown Reno train station, the tan Spanish-style building beside the tracks, a few blocks from the arch.",
    "safety": "Stay on public sidewalks and away from the tracks. Trains pass here, so keep behind the fences and cross streets only at crosswalks.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -195,6 +214,17 @@
     "b": "1926",
     "la": "First depot",
     "lb": "Current depot built"
+   },
+   "spot": {
+    "q": "Slide back to 1931. One big change since then came with the 2007 ReTRAC project. What was it?",
+    "options": [
+     "The tracks were lowered below ground through downtown",
+     "The depot was moved across the river",
+     "The depot was torn down and rebuilt",
+     "A wooden Depot Hotel was added"
+    ],
+    "answer": 0,
+    "why": "ReTRAC lowered the tracks below ground through downtown. The stucco depot itself dates from 1926."
    }
   },
   {
@@ -205,7 +235,11 @@
    "tag": "Stop 3 of 4",
    "teaser": "A crossing older than the city.",
    "map": "Virginia Street Bridge, Reno NV",
-   "geo": [39.52507, -119.81263, 300],
+   "geo": [
+    39.52507,
+    -119.81263,
+    300
+   ],
    "clue": "Walk south from the first arch until the street crosses the water. This crossing is older than the city itself, and a famous legend is tied to it.",
    "safety": "Use the sidewalk and stay behind the railing. Do not lean over, climb, or throw anything into the river.",
    "field": "Field notes pending: sidewalk width and ramps have not been checked on foot yet.",
@@ -289,6 +323,17 @@
     "b": "2015",
     "la": "The 1905 bridge",
     "lb": "Last look before 2015"
+   },
+   "spot": {
+    "q": "The 1910 photo shows the 1905 concrete bridge. What happened to it in 2015?",
+    "options": [
+     "It was torn down as part of a flood control plan",
+     "It was painted white",
+     "It was moved to a museum",
+     "It was turned into a footbridge"
+    ],
+    "answer": 0,
+    "why": "The 1905 bridge was torn down. The new one opened in April 2016 with four restored light fixtures from the old one."
    }
   },
   {
@@ -299,7 +344,11 @@
    "tag": "Stop 4 of 4",
    "teaser": "An island that has been a resort and a runway.",
    "map": "Wingfield Park, 2 N Arlington Ave, Reno NV",
-   "geo": [39.52413, -119.81649, 300],
+   "geo": [
+    39.52413,
+    -119.81649,
+    300
+   ],
    "clue": "Find the island in the middle of the river. It has been a resort, a runway, and a park. Look for the outdoor stage.",
    "safety": "Stay away from the water's edge. River levels and currents can change quickly, so keep close together.",
    "field": "Field notes pending: paths and surfaces have not been checked on foot yet.",
@@ -379,6 +428,17 @@
     "b": "2015",
     "la": "Hand-tinted dam photo",
     "lb": "The river today"
+   },
+   "spot": {
+    "q": "The 1935 photo shows a dam on the Truckee River. Before it was a park, what was this island?",
+    "options": [
+     "A resort called Belle Isle",
+     "A railroad yard",
+     "A military fort",
+     "A lumber mill"
+    ],
+    "answer": 0,
+    "why": "By 1911 Belle Isle had a dance hall, an open-air theater with 700 seats and boats to rent."
    }
   }
  ],

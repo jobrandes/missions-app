@@ -39,7 +39,11 @@
   }
   function compare(st){
     if(!(hasPh(st,'then')&&hasPh(st,'now'))) return '';
-    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button></section>';
+    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button>'+spotHtml(st)+'</section>';
+  }
+  function spotHtml(st){
+    var sp=st.spot; if(!sp||!sp.options) return '';
+    return '<div class="spot" id="spot"><p class="mono">Spot the change</p><p class="sq">'+sp.q+'</p><div class="spopts" role="group" aria-label="Spot the change answers">'+sp.options.map(function(o,k){ return '<button type="button" class="btn ghost small spo" data-a="spotpick" data-k="'+k+'">'+o+'</button>'; }).join('')+'</div><p class="sfb" aria-live="polite"></p></div>';
   }
   document.addEventListener('input',function(e){
     var q=e.target; if(q&&q.id==='townSearch'){ var v=q.value.trim().toLowerCase(), any=false;
@@ -1149,6 +1153,7 @@
     if(a==='shareclose'){ shareClose(); return; }
     if(a==='sharefile'){ if(fadeFile&&navigator.share) navigator.share({files:[fadeFile.f],text:fadeFile.t}).catch(function(){}); return; }
     if(a==='sharefade'){ fadeShare(b); return; }
+    if(a==='spotpick'){ var sp=STOPS[cur.i]&&STOPS[cur.i].spot, box=document.getElementById('spot'); if(!sp||!box) return; var k=+b.getAttribute('data-k'), fb=box.querySelector('.sfb'); if(k===sp.answer){ box.querySelectorAll('.spo').forEach(function(x){ x.disabled=true; x.classList.remove('wrong'); }); b.classList.add('right'); fb.textContent='Right. '+sp.why; } else { b.classList.add('wrong'); b.disabled=true; fb.textContent='Not that one. Slide the photo again and try another.'; } return; }
     if(a==='trip'){ var tk=b.getAttribute('data-c'), ta=tripGet(), ti=ta.indexOf(tk); if(ti>-1) ta.splice(ti,1); else ta.push(tk); tripSet(ta); var sv=window.scrollY; render(); window.scrollTo(0,sv); toast(ti>-1?'Removed from your trip.':'Added to your trip.'); return; }
     if(a==='schip'){ var inp=document.getElementById('townSearch'); if(inp){ var sv2=b.getAttribute('data-s'); inp.value=(inp.value.trim().toLowerCase()===sv2.toLowerCase())?'':sv2; inp.dispatchEvent(new Event('input',{bubbles:true})); } return; }
     if(a==='gomissions'){ setBtab('towns'); var mm=document.getElementById('missions'); if(mm&&mm.scrollIntoView) mm.scrollIntoView({behavior:'smooth',block:'start'}); return; }

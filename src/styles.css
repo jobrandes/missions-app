@@ -895,3 +895,11 @@ details.card[open]{padding-bottom:12px}
 .vlist li>span:last-child{display:flex;flex-direction:column;min-width:0}
 .vlist em{font-style:normal;font-size:13px;color:var(--muted)}
 .vpass .bbox.sm{width:44px;height:44px;padding:3px}
+
+.spot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.spot .sq{margin:4px 0 10px;font-weight:600}
+.spopts{display:grid;gap:8px}
+.spopts .spo{text-align:left;justify-content:flex-start;white-space:normal;min-height:44px}
+.spo.right{border-color:var(--good);color:var(--good)}
+.spo.wrong{opacity:.5;text-decoration:line-through}
+.sfb{margin:10px 0 0;font-size:14px}
