@@ -190,7 +190,7 @@ with sync_playwright() as p:
     pg.fill('#codeIn','TN3-'+'-'.join(['000000000000']*(NT+1))); pg.click('text=Restore'); need('more towns' in pg.inner_text('#codeMsg').lower(),'code with too many towns is rejected with a clear message')
     # try it from home: preview unlocks the story but saves nothing
     pg=new(); pg.click('.town >> nth=0'); pg.click('.stoplist button >> nth=0') if pg.locator('.stoplist button').count() else pg.click('[data-a=open] >> nth=0')
-    need(pg.locator('[data-a=demo]').count()==1,'unstamped stop offers Try it from home')
+    need(pg.locator('[data-a=demo]').count()==1,'unstamped stop offers Explore from home')
     pg.click('[data-a=demo]'); need(pg.locator('.demo-banner').count()==1,'demo shows a preview banner')
     for k in range(4):
         if pg.locator('.earned').count(): break

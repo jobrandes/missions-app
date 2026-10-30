@@ -1871,13 +1871,13 @@ body.menuopen .bsnack{display:none}
     var st=STOPS[cur.i], d=S.done[cur.i];
     var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Time Cards':'Trail')+'</button><span class="mono">'+st.tag+'</span></div>';
     h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>';
-    if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Preview mode.</strong> You are trying this from home. No stamp, no points, nothing saved. The real thing needs you on the spot.</p>';
+    if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Exploring from home.</strong> Read the story, try the question and fade the photos. No stamp or points are saved, because stamps are for real visits. Go there to earn yours.</p>';
     h+=stepper();
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
       h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
-        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Try it from home (preview)</button>')+'</section>';
+        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Explore from home</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';
