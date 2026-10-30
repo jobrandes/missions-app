@@ -167,3 +167,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Menu (web only): 'Play anywhere > Daily Fact or Fiction' item opens /daily/ (hidden in the native app because /daily and /play paths do not exist there).
 
 - First-run home (no stamps yet) shows a "How it works" block (go there / prove it / stamp it, what XP is, explore-from-home hint). Added after test card #1: the tester did not realize you must travel, and did not know what XP is for. A first-run quick-tour modal already existed; people may skip it.
+
+- Google Search Console: property https://stampthepast.com/ verified by HTML file `google7a48ffa7f434a573.html`, written by build.py into site/. Do not remove (verification lapses if it is gone).

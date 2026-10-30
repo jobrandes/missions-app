@@ -54,6 +54,7 @@ print('offline files written, build',h)
 land=rd('src/landing.html').replace('{{TOWNS}}',str(len(order)))
 assert '{{' not in land
 open(R+'site/index.html','w').write(land)
+open(R+'site/google7a48ffa7f434a573.html','w').write('google-site-verification: google7a48ffa7f434a573.html')
 open(R+'site/robots.txt','w').write('User-agent: *\nAllow: /\nDisallow: /play\nSitemap: https://stampthepast.com/sitemap.xml\n')
 open(R+'site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://stampthepast.com/{u}</loc></url>' for u in ('','privacy.html','support.html'))+'</urlset>')
 print('landing page written,',len(land)//1024,'KB')
