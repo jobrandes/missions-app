@@ -916,3 +916,14 @@ details.card[open]{padding-bottom:12px}
 .more[open]>summary{display:none}
 .more p{margin:0 0 10px}
 .tourinfo{margin:10px 0 0;font:500 13px var(--font-mono);color:var(--muted)}
+
+/* Home: tappable logo on every screen, Home link inside a stop */
+button.topmark{display:inline-flex;align-items:center;flex:none;min-height:44px;padding:0 4px;margin:0;border:0;background:none;color:var(--accent);font:800 20px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+button.topmark:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:8px}
+body.ishome .navwrap{justify-content:space-between}
+.sh-r{display:flex;align-items:center;gap:12px}
+.sh-r .link{min-height:44px;padding:0 4px}
+.mlink{display:block;padding:14px 4px;color:var(--accent);font-weight:600;text-decoration:underline}
+body.ishome.homefirst .topmark{display:none}
+body.ishome.homefirst .navwrap{justify-content:flex-end}
+body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:auto;justify-content:space-between;align-items:center;padding:6px 0 10px}

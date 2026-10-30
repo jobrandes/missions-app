@@ -192,3 +192,10 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Fonts are bundled in `src/fonts/` (woff2 + fonts.css from @fontsource, latin subset) and copied to `site/fonts/`; `head.html` links `fonts/fonts.css`. The app makes no Google requests. Landing page and the 292 SEO pages still use Google Fonts (web only).
 - `tourInfo` now starts with the stop count ("4 stops. About 1.2 miles...").
 - q03: AppDelegate.didFinishLaunching creates `StampGeoRelaunch` (own CLLocationManager + delegate) when iOS relaunches the app for a location event, so region alerts fire without the web view. Alert code shared via `StampGeoNotify.entered`. Written without a compiler: the next Xcode build is the check, then a simulated-location test with the app killed.
+
+## Home that feels like home (r12, Oct 30)
+- Tappable `button.topmark` ("Stamp the Past", data-a="home") in the top bar; shown when the player has stamps (`body:not(.homefirst)`), hidden on first-time Home where the big stamp wordmark is already on screen.
+- Returning Home order: progress + Next stop, Near you, Jump back in, hero. First-time: Near you, hero, How it works, rings. `viewHome` toggles `body.homefirst`.
+- Returning Home's top bar is static (logo left, menu right) instead of the floating menu button.
+- Inside a stop, the head has a "Home" link next to the stop tag.
+- Menu has "About Stamp the Past (our website)" on stampthepast.com only (hidden in the native app).

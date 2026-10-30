@@ -402,11 +402,12 @@
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
     var hk=homeTown(), stamps=stampsHtml();
+    document.body.classList.toggle('homefirst',got===0);
     var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
     var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Travel to the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var how=got>0?'':'<section class="howto" aria-label="How it works"><h2>How it works</h2><ol><li><b>Go there.</b> Pick a mission and walk or drive to a real landmark.</li><li><b>Prove it.</b> Tap "I am here", read the story, answer the question in front of you.</li><li><b>Stamp it.</b> Each stamp earns XP, points that raise your level and unlock badges.</li></ol><p class="hint">Not near a mission? Open any stop and tap "Explore from home" to read it and fade the photos. Stamps are saved for real visits.</p></section>';
-    h=(got>0?statusHtml(got,total,res0,hk)+ringsHtml()+h:h+how+ringsHtml());
-    h='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>'+h;
+    var nearH='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>';
+    h=(got>0?statusHtml(got,total,res0,hk)+nearH+ringsHtml()+h:nearH+h+how+ringsHtml());
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
@@ -498,6 +499,7 @@
      +item('replaytour','Replay the guide','The quick tour of how a stop works')
      +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question about what is right in front of you.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
      +item('report','Report a problem or send feedback','Tell us what is wrong or confusing')
+     +(/^https?:$/.test(location.protocol)&&/stampthepast\.com$/.test(location.hostname)?'<a class="mlink" href="/">About Stamp the Past (our website)</a>':'')
      +'<p class="mgroup">Privacy</p>'
      +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>Location is optional and stays on your phone</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></details>'
      +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
@@ -1004,7 +1006,7 @@
   })();
   function viewStop(){
     var st=STOPS[cur.i], d=S.done[cur.i];
-    var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Time Cards':'Trail')+'</button><span class="mono">'+st.tag+'</span></div>';
+    var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Time Cards':'Trail')+'</button><span class="sh-r"><button class="link" data-a="home">Home</button><span class="mono">'+st.tag+'</span></span></div>';
     h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>';
     if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Exploring from home.</strong> Read the story, answer the question and fade the photos. Get it right and you earn a virtual stamp, worth 25 XP. The full stamp (100 XP) is for real visits. Go there to earn it.</p>';
     h+=stepper();
