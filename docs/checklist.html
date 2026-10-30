@@ -77,7 +77,7 @@ button.go{min-height:46px;border:0;border-radius:12px;background:var(--navy);col
 <script>
 (function(){
   var tasks=[], filter='all', db=null, ready=false;
-  var GROUPS=['1 Accounts and legal','2 Build and test','3 Store listing','4 Content and photos','5 Polish and extras','6 Android (later)'];
+  var GROUPS=['0 P0 This week','0 P1 Next 2-3 weeks','0 P2 Later','1 Accounts and legal','2 Build and test','3 Store listing','4 Content and photos','5 Polish and extras','6 Android (later)'];
   var $=function(i){return document.getElementById(i)};
   function gname(g){return String(g).replace(/^\d+\s/,'')}
   function el(t,c,x){var e=document.createElement(t); if(c) e.className=c; if(x!=null) e.textContent=x; return e}
