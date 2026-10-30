@@ -178,4 +178,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 - Passport shows an "Explored from home" card (#vpass) listing virtual stamps. New badge `arm` Armchair Explorer (10 virtual stops, common), so 40 badges now. endDemo() calls awardSoon() so the badge is awarded after leaving the preview.
 
-- "Spot the change" puzzle: optional `spot` {q,options,answer,why} on a stop, shown under the Then/Now slider (`spotHtml`, handler `spotpick`). No XP, nothing saved. Pilot is the 4 Reno stops; every question and answer is taken only from text already in the pack's story/then/now lines. Add more only from sourced pack text, never invent a change.
+- "Spot the change" puzzle: optional `spot` {q,options,answer,why} on a stop, shown under the Then/Now slider (`spotHtml`, handler `spotpick`). No XP, nothing saved. Pilot is the 4 Reno stops and the 4 Phoenix stops (Andrea played Phoenix); every question and answer is taken only from text already in the pack's story/then/now lines. Add more only from sourced pack text, never invent a change.

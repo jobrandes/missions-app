@@ -60,7 +60,11 @@
    "tag": "Stop 1 of 4",
    "teaser": "A small capitol building that ended up smaller than its architect dreamed.",
    "map": "Arizona State Capitol Museum, 1700 W Washington St, Phoenix, AZ",
-   "geo": [33.44806, -112.09639, 150],
+   "geo": [
+    33.44806,
+    -112.09639,
+    150
+   ],
    "clue": "Go to West Washington Street near 17th Avenue. Look for the stone building with a small dome on top, set back behind a lawn.",
    "safety": "Washington Street is busy. Use crosswalks, stay on the paths, and check museum hours before you go inside.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -141,6 +145,17 @@
     "b": "1900",
     "la": "Capital moves",
     "lb": "Building finished"
+   },
+   "spot": {
+    "q": "The 1908 photo shows the capitol with palms and a dirt road. The architect's original plan had wings and a big dome. What happened to them?",
+    "options": [
+     "Money was short, so the wings were dropped and a small metal top was used",
+     "They were built, then torn down in 1912",
+     "Voters asked for a plain flat roof",
+     "They were moved to Tucson"
+    ],
+    "answer": 0,
+    "why": "Money ran short, so the wings were dropped and a small metal top replaced the big dome. The building was finished in 1900."
    }
   },
   {
@@ -151,7 +166,11 @@
    "tag": "Stop 2 of 4",
    "teaser": "A bright Victorian house in the middle of a desert city, built by a mayor who quit.",
    "map": "Rosson House Museum, 113 N 6th St, Phoenix, AZ",
-   "geo": [33.4502, -112.066, 150],
+   "geo": [
+    33.4502,
+    -112.066,
+    150
+   ],
    "clue": "Go to Heritage Square downtown, at 6th and Monroe Streets. Look for a red brick Victorian house with a pointed corner tower.",
    "safety": "Heritage Square is downtown, near busy streets. Use crosswalks, check museum hours, and stay on the paths.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -232,6 +251,17 @@
     "b": "1971",
     "la": "Mayor elected",
     "lb": "National Register"
+   },
+   "spot": {
+    "q": "The 1940 photo shows the Rosson House, now a museum. Who was Dr. Roland Lee Rosson?",
+    "options": [
+     "A doctor and politician who became Phoenix mayor in 1895",
+     "A railroad owner from San Francisco",
+     "A cattle rancher and sheriff",
+     "The architect who designed the house"
+    ],
+    "answer": 0,
+    "why": "He was a doctor and politician, elected mayor on May 7, 1895. He resigned on April 6, 1896. The architect was A. P. Petit."
    }
   },
   {
@@ -242,7 +272,11 @@
    "tag": "Stop 3 of 4",
    "teaser": "A fancy resort made of patterned blocks, and a famous architect who didn't design it.",
    "map": "Arizona Biltmore, 2400 E Missouri Ave, Phoenix, AZ",
-   "geo": [33.5235, -112.023, 150],
+   "geo": [
+    33.5235,
+    -112.023,
+    150
+   ],
    "clue": "Go to 24th Street and Missouri Avenue, north of downtown near Camelback Road. Look for a resort made of patterned golden blocks.",
    "safety": "The resort is private property. Look from public areas, ask staff before wandering, and watch for cars on the entrance road.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -323,6 +357,17 @@
     "b": "1929",
     "la": "Wright consults",
     "lb": "Hotel opens"
+   },
+   "spot": {
+    "q": "Many people say Frank Lloyd Wright designed the Biltmore. Who does Wikipedia say the architect was?",
+    "options": [
+     "Albert Chase McArthur",
+     "William Wrigley Jr.",
+     "John McEntee Bowman",
+     "Clark Gable"
+    ],
+    "answer": 0,
+    "why": "Albert Chase McArthur, who had been a draftsman for Wright. Wright consulted for four months in 1928 on the patterned textile block system."
    }
   },
   {
@@ -333,7 +378,11 @@
    "tag": "Stop 4 of 4",
    "teaser": "A waterfall that wasn't natural, in a desert, that lit up a city.",
    "map": "Arizona Falls, 56th St and Indian School Rd, Phoenix, AZ",
-   "geo": [33.4899, -111.9589, 300],
+   "geo": [
+    33.4899,
+    -111.9589,
+    300
+   ],
    "clue": "Go to the Arizona Canal near 56th Street in the Arcadia neighborhood. Follow the canal path to the little park where water drops over a ledge.",
    "safety": "Stay on the canal path and park paths, and watch for bikes. Do not climb on the walls or into the water. It gets very hot, so bring water.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -414,6 +463,17 @@
     "b": "2003",
     "la": "Falls formed",
     "lb": "Modern park opens"
+   },
+   "spot": {
+    "q": "The old power plant in the photo was built in 1901 and 1902. What was it for?",
+    "options": [
+     "To provide the first electricity to Phoenix",
+     "To pump water to Tempe",
+     "To mill flour for the Valley",
+     "To run the first streetcars"
+    ],
+    "answer": 0,
+    "why": "The Phoenix Light and Fuel Company built it to bring Phoenix its first electricity. The rebuilt station today makes enough power for about 150 homes."
    }
   }
  ],
