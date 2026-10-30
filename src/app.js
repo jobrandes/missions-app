@@ -1016,7 +1016,7 @@
   function viewStop(){
     var st=STOPS[cur.i], d=S.done[cur.i];
     var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Time Cards':'Trail')+'</button><span class="sh-r"><button class="link" data-a="home">Home</button><span class="mono">'+st.tag+'</span></span></div>';
-    h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>';
+    h+='<h1 id="stopTitle" tabindex="-1">'+st.name+'</h1>';
     if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Exploring from home.</strong> Read the story, answer the question and fade the photos. Get it right and you earn a virtual stamp, worth 25 XP. The full stamp (100 XP) is for real visits. Go there to earn it.</p>';
     h+=stepper();
 
