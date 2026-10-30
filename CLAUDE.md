@@ -212,3 +212,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - `dailyCardHtml()` shows a "Daily Fact or Fiction" card on Home on stampthepast.com only (hidden on localhost, the native app and test hosts). It reads `stp-daily` and `stp-daily-streak`, which the /daily/ page writes on the same origin; button uses the existing `daily` action. Not covered by the flow tests (they run on localhost); checked once with a simulated stampthepast.com origin.
 
 - Find-it screen now says "Go there for the real stamp. About N minutes once you arrive. Or explore from home." (`stopMins`: story + question words at 200 wpm, plus 1 minute, clamped 2-6). Hidden once the stop is done and in demo mode. (audit #5)
+
+- "Protect your stamps" backup nudge (`bkNudgeHtml`) now also shows on returning Home, under the progress card; same rule as the trail (after the first stamp, then every 8). (audit #8)
