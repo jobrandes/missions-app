@@ -63,6 +63,8 @@
   }
 
   /* about how far apart a town's stops are, from their map points (straight-line, shortest order, so real routes run longer) */
+  /* about how long a stop takes once you are at the spot: reading the story plus answering (200 words a minute, plus one minute for the question) */
+  function stopMins(st){ var w=((st.story||[]).join(' ')+' '+(st.q&&st.q.q||'')).split(/\s+/).length; return Math.min(6,Math.max(2,Math.ceil(w/200)+1)); }
   function tourInfo(c){
     var P=c.stops.map(function(st){ return st.geo; }); if(P.length<2||P.some(function(g){ return !g||g.length<2; })) return '';
     var best=1e12;
@@ -1030,7 +1032,7 @@
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
-      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
+      h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+(!d&&!cur.demo?'<p class="hint stopmeta">Go there for the real stamp. About '+stopMins(st)+' minutes once you arrive. Or explore from home.</p>':'')+vnote(st)
         +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(!d&&!cur.demo?'<p class="hint">Tapping this is on your honor. Verifying with your location is optional and earns a gold stamp.</p>':'')+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="'+(st.geo&&st.geo.length>1?'https://www.google.com/maps/dir/?api=1&amp;destination='+st.geo[0]+','+st.geo[1]:'https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map))+'">Get directions in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">'+(virtHas(cityId,cur.i)?'Virtual stamp saved. Explore again':'Not there? Explore from home')+'</button>')+'</section>';
     }
     if(cur.step===1){
