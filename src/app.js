@@ -120,7 +120,7 @@
     S=ALL[cityId]; STOPS=CITIES[cityId].stops; RANKS=CITIES[cityId].ranks;
   }
   var demoSnap=null, demoC=null;
-  function endDemo(){ if(demoSnap&&demoC){ demoC.done=demoSnap.done.slice(); demoC.claims=demoSnap.claims.slice(); } demoSnap=null; demoC=null; }
+  function endDemo(){ if(demoSnap&&demoC){ demoC.done=demoSnap.done.slice(); demoC.claims=demoSnap.claims.slice(); } var was=!!demoSnap; demoSnap=null; demoC=null; if(was&&typeof awardSoon==='function') awardSoon(); }
   function save(){ if(demoSnap) return; try{ localStorage.setItem(KEY3,JSON.stringify({city:cityId,home:atHome?1:0,p:ALL})); }catch(e){} }
   function sum(a){ return a.reduce(function(x,y){return x+y;},0); }
   function xp(){ var d=(demoSnap&&demoC===S)?demoSnap:S; return sum(d.done)*100 + sum(d.claims)*25; }
@@ -411,6 +411,8 @@
       var c=CITIES[k], d=sum(ALL[k].done);
       return '<div class="pprow'+(d===c.stops.length?' full':'')+'"><div class="ppname"><strong>'+c.name+'</strong><span class="mono">'+d+' of '+c.stops.length+(d===c.stops.length?' · complete':'')+(bossBest()[k]!==undefined?' · challenge '+bossBest()[k]+'/4':'')+'</span></div><div class="ppstamps">'+(sealTier(bossBest()[k])?'<span class="bbox sm sealbox" title="'+SEALS[sealTier(bossBest()[k])][3]+'">'+seal(sealTier(bossBest()[k]),38)+'</span>':'')+c.stops.map(function(st,i){ return '<span class="bbox sm" title="'+st.badge+'">'+badge(st.id,ALL[k].done[i],k)+'</span>'; }).join('')+'</div></div>';
     }).join('')+(function(){ var n=rk.filter(function(k){ return sum(ALL[k].done)===0; }).map(function(k){ return CITIES[k].name; }); return n.length?'<p class="pp-rest"><strong>'+n.length+' not started:</strong> '+n.join(', ')+'</p>':''; })()+'</details>'; }).join('')+'<p class="passport-line"><strong>'+got+' of '+total+'</strong> stamps. Blank circles are waiting for you.'+(totalPts()?' Challenge points: <strong>'+totalPts()+'</strong>.':'')+'</p>'+(grandOk()?'<div class="grand-line">'+seal('grand',56)+' <span><strong>Grand Historian.</strong> Gold seal in every town.</span></div>':'')+'</section>';
+    var vl=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(virtHas(k,i)) vl.push({k:k,i:i,st:st}); }); });
+    if(vl.length) h+='<section class="card vpass" id="vpass"><h3>Explored from home</h3><p class="mono">'+vl.length+' virtual stamp'+(vl.length>1?'s':'')+' · 25 XP each</p><ul class="vlist">'+vl.map(function(x){ return '<li><span class="bbox sm virt">'+badge(x.st.id,true)+'</span><span><strong>'+x.st.name+'</strong><em>'+CITIES[x.k].name+'</em></span></li>'; }).join('')+'</ul><p class="hint">Go there to turn each one into a full stamp worth 100 XP. Virtual stamps are not part of the backup code below.</p></section>';
     h+='<section class="card" id="backup"><h3>Back up your passport</h3><p>Your stamps live on this phone only, which is great for privacy but means a lost phone loses them. Copy this code and keep it somewhere safe (a note, a message to yourself). On a new phone, paste it below. No account needed.</p><div class="code"><input id="codeOut" readonly value="'+code()+'" aria-label="Progress code"><button class="btn small" data-a="copy">Copy</button></div><div class="code"><input id="codeIn" placeholder="Paste a code" aria-label="Paste a progress code" autocomplete="off" autocapitalize="characters" spellcheck="false"><button class="btn small ghost" data-a="restore">Restore</button></div><p id="codeMsg" class="why" aria-live="polite"></p></section>';
     return h;
   }
@@ -775,6 +777,7 @@
     {id:'d3',n:'Hat Trick',d:'Get 3 stamps in one day.',t:'c',g:'3',f:function(s){ return [s.day,3]; }},
     {id:'d5',n:'Stamp Rush',d:'Get 5 stamps in one day.',t:'r',g:'5',f:function(s){ return [s.day,5]; }},
     {id:'d8',n:'Overachiever',d:'Get 8 stamps in one day. Did you sleep?',t:'l',g:'8',f:function(s){ return [s.day,8]; }},
+    {id:'arm',n:'Armchair Explorer',d:'Explore 10 stops from home. The couch counts, but the real stamp is better.',t:'c',g:'≈',f:function(s){ return [s.virt,10]; }},
     {id:'tr1',n:'All Aboard',d:'Stamp 5 train stations or depots.',t:'r',g:'☰',f:function(){ return [trailN(/station|depot|terminal/i),5]; }},
     {id:'tr2',n:'Capitol Gains',d:'Stamp 5 capitols or courthouses.',t:'r',g:'⌂',f:function(){ return [trailN(/capitol|statehouse|state house|courthouse|city hall/i),5]; }},
     {id:'tr3',n:'Steeple Chaser',d:'Stamp 5 churches, cathedrals or missions.',t:'r',g:'✚',f:function(){ return [trailN(/church(?!ill| street)|cathedral|temple|mission|basilica|meeting ?house/i),5]; }},

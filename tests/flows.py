@@ -213,7 +213,7 @@ with sync_playwright() as p:
     need(pg.evaluate("JSON.parse(localStorage.getItem('stp-badges')||'{}').first")!=None,'earned badge is saved')
     need(pg.locator('#celeb').count()==0 and pg.locator('#bpop [data-a=trophy]').count()==1,'badge popup does not block the screen')
     pg.click('#bpop [data-a=trophy]'); pg.wait_for_timeout(300)
-    need(pg.locator('#trophy').count()==1 and 'of 39 badges' in pg.inner_text('#trophy').lower(),'Trophy Case opens from the badge popup and counts badges')
+    need(pg.locator('#trophy').count()==1 and 'of 40 badges' in pg.inner_text('#trophy').lower(),'Trophy Case opens from the badge popup and counts badges')
     need('level 2' in pg.inner_text('.xlv').lower() or 'level\n2' in pg.inner_text('.xlv').lower(),'150 XP puts a new explorer at level 2')
     # existing players are not buried in popups: badges they already earned are filed quietly
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(2600)

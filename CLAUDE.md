@@ -149,7 +149,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Level, badges and Trophy Case (Oct 26)
 - Explorer level is global and derived from saved progress (`gStats()`, `lvOf()` in app.js): level L needs 25*(L-1)*(L+2) XP; titles Newcomer, Wanderer, Trailblazer, Pathfinder, Explorer, Historian, Archivist, Time Traveler, Grand Chronicler. XP = town XP (100/stamp, 25/claim) + 100 per finished town + 50 per verified visit + 50 per new state + challenge points. Town ranks and inks are unchanged.
-- 39 badges in `BADGES` (common/rare/legendary), all derived; only the earned list is stored (`stp-badges`, id to date; `stp-bseen` for the Passport dot). Trophy Case and level card sit on the Passport page; Home status card shows level. A non-blocking snackbar (`#bpop`) announces new badges about 2 s after a stamp, claim check, challenge or verified visit. Existing players get their badges filed quietly with one toast.
+- 40 badges in `BADGES` (common/rare/legendary), all derived; only the earned list is stored (`stp-badges`, id to date; `stp-bseen` for the Passport dot). Trophy Case and level card sit on the Passport page; Home status card shows level. A non-blocking snackbar (`#bpop`) announces new badges about 2 s after a stamp, claim check, challenge or verified visit. Existing players get their badges filed quietly with one toast.
 - Next phases: quests/collections and the Now-photo camera (Phase 2), friends and leaderboards (Phase 3, needs accounts and moderation).
 
 ## Share this fade (Oct 29)
@@ -175,3 +175,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Two stamp tiers v1 (Oct 30): "Explore from home" now earns a VIRTUAL stamp when the question is answered right. Stored in localStorage `stp-virt` {"town:stop":1}; the TN3 save code and real stamps are untouched. Worth 25 XP in global level (gStats.virt) only, once per stop, ignored once the real stamp exists. Never counts toward town completion, town XP bar, badges or streaks. Stop list shows a dashed "Virtual stamp" chip. Event `virtual-stamp` is counted anonymously. Not built yet: Armchair Explorer badge, an outline stamp image, passport view of virtual stamps. See docs/two-tier-stamps.md.
 
 - Virtual stamps look different: faded greyscale badge photo, dashed ring and a "Virtual" tag (`.bbox.virt`, `.vtag`). Real stamps keep full colour. In the native app `<a download>` does nothing in the WKWebView, so the share preview shows one "Share or save it" button (iOS share sheet has Save Video / Save Image); the plain Save link only appears where the share sheet is unavailable.
+
+- Passport shows an "Explored from home" card (#vpass) listing virtual stamps. New badge `arm` Armchair Explorer (10 virtual stops, common), so 40 badges now. endDemo() calls awardSoon() so the badge is awarded after leaving the preview.

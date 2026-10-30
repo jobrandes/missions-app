@@ -889,3 +889,9 @@ details.card[open]{padding-bottom:12px}
 .bbox.virt svg,.bbox.virt .medal,.bbox.virt .bimg{filter:grayscale(1) contrast(.85) !important;opacity:.55 !important}
 .bbox.virt::before{content:"";position:absolute;inset:2px;border:2px dashed var(--muted);border-radius:50%;pointer-events:none}
 .bbox .vtag{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);font:700 9px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--surface);color:var(--muted);border:1px solid var(--muted);border-radius:999px;padding:1px 6px;font-style:normal;white-space:nowrap}
+
+.vlist{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.vlist li{display:flex;align-items:center;gap:12px;min-width:0}
+.vlist li>span:last-child{display:flex;flex-direction:column;min-width:0}
+.vlist em{font-style:normal;font-size:13px;color:var(--muted)}
+.vpass .bbox.sm{width:44px;height:44px;padding:3px}

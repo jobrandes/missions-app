@@ -19,7 +19,7 @@ We wanted a reason to drag the family around town, so we built one. Stamp the Pa
 
 - 58 towns, 232 stops across the US, from Reno and Boston to Honolulu and Skagway
 - Real, freely licensed photos only, all credited. Stories come with sources, and every tall tale is marked solid, disputed or not true
-- Levels, 39 badges and weekly streaks if you like collecting things
+- Levels, 40 badges and weekly streaks if you like collecting things
 - No account, no ads. Location is optional and never leaves your phone
 - Works in a phone browser now: stampthepast.com (an iPhone app is coming)
 
