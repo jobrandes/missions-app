@@ -57,3 +57,13 @@ open(R+'site/index.html','w').write(land)
 open(R+'site/robots.txt','w').write('User-agent: *\nAllow: /\nDisallow: /play\nSitemap: https://stampthepast.com/sitemap.xml\n')
 open(R+'site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://stampthepast.com/{u}</loc></url>' for u in ('','privacy.html','support.html'))+'</urlset>')
 print('landing page written,',len(land)//1024,'KB')
+
+# --- crawlable town and stop pages (see seo.py) ---
+import re as _re,sys
+sys.path.insert(0,R)
+import seo
+_ts=_re.search(r'var TSTATE=(\{.*?\}), TFULL=(\{.*?\});',rd('src/app.js'))
+seo_urls=seo.build(R,packs,order,json.loads(_ts.group(1)),json.loads(_ts.group(2)))
+sm=['','privacy.html','support.html']
+open(R+'site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://stampthepast.com/{u}</loc></url>' for u in sm)+''.join(f'<url><loc>https://stampthepast.com{u}</loc></url>' for u in seo_urls)+'</urlset>')
+print('seo pages:',len(seo_urls))
