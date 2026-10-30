@@ -936,6 +936,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .nearlist{display:flex;flex-direction:column;gap:8px;margin:12px 0}.nearlist>.mono{margin:0}.nearlist.card{gap:10px}
 .hstamps-cap{opacity:1;color:var(--muted)}
 .credit{opacity:1}
+.dailycard{margin:12px 0}
 </style></head><body>
 
 <div class="app">
@@ -1381,6 +1382,14 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
       return '<button class="rbtn" data-a="city" data-c="'+k+'" aria-label="'+c.name+', '+n+' of '+c.stops.length+' stamps"><span class="rg" style="--p:'+pc+'"><span class="rph">'+img+'</span></span><span class="rn">'+c.name+'</span></button>';
     }).join('')+'</div></section>';
   }
+  // Daily Fact or Fiction card (website only; the daily page and the game share this origin's storage)
+  function dailyCardHtml(){
+    if(!(/^https?:$/.test(location.protocol)&&/stampthepast\.com$/.test(location.hostname))) return '';
+    var n=new Date(), ds=n.getFullYear()+'-'+('0'+(n.getMonth()+1)).slice(-2)+'-'+('0'+n.getDate()).slice(-2), played=null, st=null;
+    try{ played=JSON.parse(localStorage.getItem('stp-daily')||'null'); st=JSON.parse(localStorage.getItem('stp-daily-streak')||'null'); }catch(e){}
+    var done=!!(played&&played.d===ds), streak=st&&st.n>1?' · '+st.n+' days in a row':'';
+    return '<section class="dailycard" aria-label="Daily Fact or Fiction"><button class="rcard" data-a="daily"><span><strong>Daily Fact or Fiction</strong><span class="rsub">'+(done?'Played today'+streak+'. A new claim tomorrow.':'One claim a day. Solid, disputed or a tall tale?'+streak)+'</span></span><span class="go">'+(done?'See it':'Play')+' ›</span></button></section>';
+  }
   function viewHome(){
     var got=0,total=0;
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; got+=sum(ALL[k].done); });
@@ -1390,7 +1399,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Travel to the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var how=got>0?'':'<section class="howto" aria-label="How it works"><h2>How it works</h2><ol><li><b>Go there.</b> Pick a mission and walk or drive to a real landmark.</li><li><b>Prove it.</b> Tap "I am here", read the story, answer the question in front of you.</li><li><b>Stamp it.</b> Each stamp earns XP, points that raise your level and unlock badges.</li></ol><p class="hint">Not near a mission? Open any stop and tap "Explore from home" to read it and fade the photos. Stamps are saved for real visits.</p></section>';
     var nearH='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>';
-    h=(got>0?statusHtml(got,total,res0,hk)+nearH+ringsHtml()+h:nearH+h+how+ringsHtml());
+    h=(got>0?statusHtml(got,total,res0,hk)+nearH+ringsHtml()+dailyCardHtml()+h:nearH+h+how+ringsHtml()+dailyCardHtml());
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';

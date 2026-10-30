@@ -207,3 +207,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Accessibility pass 1 (r10, Oct 30)
 - axe-core (wcag2a/aa/21aa + best-practice) on Home, Towns, Passport, Stop, Question in light and dark at 390px: 0 violations after fixes. Fixes: real `<main>` landmark wrapping the tabpanel `#main`, stop title is now an h1, photo-credit and Home caption contrast. Not covered: screen reader walkthrough on a device, Dynamic Type (q07), landing and SEO pages.
+
+## Daily card on Home (audit #4, Oct 30)
+- `dailyCardHtml()` shows a "Daily Fact or Fiction" card on Home on stampthepast.com only (hidden on localhost, the native app and test hosts). It reads `stp-daily` and `stp-daily-streak`, which the /daily/ page writes on the same origin; button uses the existing `daily` action. Not covered by the flow tests (they run on localhost); checked once with a simulated stampthepast.com origin.

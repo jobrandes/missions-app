@@ -930,3 +930,4 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .nearlist{display:flex;flex-direction:column;gap:8px;margin:12px 0}.nearlist>.mono{margin:0}.nearlist.card{gap:10px}
 .hstamps-cap{opacity:1;color:var(--muted)}
 .credit{opacity:1}
+.dailycard{margin:12px 0}
