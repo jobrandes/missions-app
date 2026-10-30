@@ -7,7 +7,7 @@ Owner key: J = Jo-Anne, C = Claude.
 - [ ] J: turn on "ignore my visits" in each browser (open stampthepast.com/#toggle-goatcounter)
 - [ ] J: paste the 3rd test-card answer so C can read it
 - [ ] J: verify stampthepast.com in Google Search Console and submit /sitemap.xml
-- [ ] J: reply to Andrea (Facebook) with one question: did anything confuse you, did you finish Phoenix?
+- [x] J: reply to Andrea (skipped by choice, not bugging testers)
 - [ ] J + C: Sunday night, read GoatCounter (visits, event/first-stamp, event/town-finished) and the test cards
 - [ ] J: wake and unlock the Mac, then C does the GitHub Desktop pull and Xcode Run (several commits are not yet on the phone app)
 
