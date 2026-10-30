@@ -27,9 +27,10 @@ Owner key: J = Jo-Anne, C = Claude.
 - [ ] A curated walking tour built from sourced stops
 - [ ] Replace the 14 painted or odd "then" images with real photos
 - [ ] J: walk the Reno stops on site (docs/verification-checklist.md); check Sparks Marina and Carson GPS circles
+- [ ] Photo uploads from players (not a no: needs accounts, moderation and a kid-safe design first; revisit after launch)
 - [ ] Phase 3 friends and leaderboards (needs accounts and moderation)
 - [ ] Store listing, USPTO search, Apple Developer account, Porkbun renewal reminder (domain expires 2027-10-25)
 - [ ] More towns
 
 ## Not doing
-Photo uploads, AI-written tours (made-up history risk), ads, paying testers, video calls, approaching strangers.
+AI-written tours (made-up history risk), ads, paying testers, video calls, approaching strangers.
