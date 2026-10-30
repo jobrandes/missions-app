@@ -9,7 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // iOS can relaunch a closed app just to deliver a region-entry event, without loading the web view.
+        // Attach a location delegate right away so that alert still fires.
+        if launchOptions?[.location] != nil { StampGeoRelaunch.shared = StampGeoRelaunch() }
         return true
     }
 
@@ -210,21 +212,7 @@ public class StampGeoPlugin: CAPPlugin, CAPBridgedPlugin, CLLocationManagerDeleg
     }
 
     public func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        let id = region.identifier
-        var seen = (UserDefaults.standard.dictionary(forKey: kSeen) as? [String: Double]) ?? [:]
-        let now = Date().timeIntervalSince1970
-        if let t = seen[id], now - t < 6 * 3600 { return }
-        seen[id] = now
-        UserDefaults.standard.set(seen, forKey: kSeen)
-        var name = "a stop"
-        if let st = loadStops().first(where: { ($0["id"] as? String) == id }), let n = st["n"] as? String { name = n }
-        let content = UNMutableNotificationContent()
-        content.title = "You are near " + name
-        content.body = "Open Stamp the Past to find it and earn the stamp."
-        content.sound = .default
-        content.userInfo = ["id": id]
-        let req = UNNotificationRequest(identifier: "near-" + id, content: content, trigger: nil)
-        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+        StampGeoNotify.entered(region.identifier)
     }
 
     // Do not show a banner while the app is open (the app has its own prompt).
@@ -246,5 +234,42 @@ class StampViewController: CAPBridgeViewController {
     override func capacitorDidLoad() {
         bridge?.registerPluginInstance(StampStorePlugin())
         bridge?.registerPluginInstance(StampGeoPlugin())
+    }
+}
+
+
+// Shared by the plugin and the cold-launch path, so both post exactly the same alert (and never twice within 6 hours).
+enum StampGeoNotify {
+    static func entered(_ id: String) {
+        var seen = (UserDefaults.standard.dictionary(forKey: "stampgeo.seen") as? [String: Double]) ?? [:]
+        let now = Date().timeIntervalSince1970
+        if let t = seen[id], now - t < 6 * 3600 { return }
+        seen[id] = now
+        UserDefaults.standard.set(seen, forKey: "stampgeo.seen")
+        var name = "a stop"
+        if let str = UserDefaults.standard.string(forKey: "stampgeo.stops"),
+           let data = str.data(using: .utf8),
+           let arr = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+           let st = arr.first(where: { ($0["id"] as? String) == id }), let n = st["n"] as? String { name = n }
+        let content = UNMutableNotificationContent()
+        content.title = "You are near " + name
+        content.body = "Open Stamp the Past to find it and earn the stamp."
+        content.sound = .default
+        content.userInfo = ["id": id]
+        let req = UNNotificationRequest(identifier: "near-" + id, content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(req, withCompletionHandler: nil)
+    }
+}
+
+// Holds a location delegate when iOS relaunches the app in the background for a region event.
+final class StampGeoRelaunch: NSObject, CLLocationManagerDelegate {
+    static var shared: StampGeoRelaunch?
+    private let mgr = CLLocationManager()
+    override init() {
+        super.init()
+        mgr.delegate = self
+    }
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        StampGeoNotify.entered(region.identifier)
     }
 }

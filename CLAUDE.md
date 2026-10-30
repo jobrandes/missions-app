@@ -191,4 +191,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Info.plist `UIRequiredDeviceCapabilities`: armv7 -> arm64.
 - Fonts are bundled in `src/fonts/` (woff2 + fonts.css from @fontsource, latin subset) and copied to `site/fonts/`; `head.html` links `fonts/fonts.css`. The app makes no Google requests. Landing page and the 292 SEO pages still use Google Fonts (web only).
 - `tourInfo` now starts with the stop count ("4 stops. About 1.2 miles...").
-- Still open (checklist q03): own the CLLocationManager in AppDelegate so region alerts work after the app is killed.
+- q03: AppDelegate.didFinishLaunching creates `StampGeoRelaunch` (own CLLocationManager + delegate) when iOS relaunches the app for a location event, so region alerts fire without the web view. Alert code shared via `StampGeoNotify.entered`. Written without a compiler: the next Xcode build is the check, then a simulated-location test with the app killed.
