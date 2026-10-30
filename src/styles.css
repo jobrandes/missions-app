@@ -927,3 +927,4 @@ body.ishome .navwrap{justify-content:space-between}
 body.ishome.homefirst .topmark{display:none}
 body.ishome.homefirst .navwrap{justify-content:flex-end}
 body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:auto;justify-content:space-between;align-items:center;padding:6px 0 10px}
+.nearlist{display:flex;flex-direction:column;gap:8px;margin:12px 0}.nearlist>.mono{margin:0}.nearlist.card{gap:10px}

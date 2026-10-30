@@ -933,6 +933,7 @@ body.ishome .navwrap{justify-content:space-between}
 body.ishome.homefirst .topmark{display:none}
 body.ishome.homefirst .navwrap{justify-content:flex-end}
 body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:auto;justify-content:space-between;align-items:center;padding:6px 0 10px}
+.nearlist{display:flex;flex-direction:column;gap:8px;margin:12px 0}.nearlist>.mono{margin:0}.nearlist.card{gap:10px}
 </style></head><body>
 
 <div class="app">
@@ -1197,13 +1198,22 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     if(geoWatchId!==null||!navigator.geolocation||!geoGranted()||geoDenied||!liveOn()||document.hidden) return;
     try{ geoWatchId=navigator.geolocation.watchPosition(onFix,function(e){ if(e&&e.code===1){ geoDenied=true; geoStopWatch(); nearHit=null; nearPaint(); } },{enableHighAccuracy:true,maximumAge:10000,timeout:30000}); }catch(e){}
   }
-  function nearHtml(){
+  function nearCardHtml(){
     var n=nearHit; if(!n||atHome===false) return '';
     var c=CITIES[n.c], st=c.stops[n.i];
     if(n.inr) return '<section class="card nearcard here"><p class="mono">You are here</p><p><strong>'+st.name+'</strong>, '+c.name+'. Start the hunt for the gold stamp.</p><button class="btn gold" data-a="neargo" data-c="'+n.c+'" data-i="'+n.i+'">Start this stop</button></section>';
-    if(n.d<=30000) return '<section class="card nearcard"><p class="mono">Near you</p><p><strong>'+st.name+'</strong>, '+c.name+', is '+nice(n.d)+' away.</p><button class="btn ghost" data-a="neargo" data-c="'+n.c+'" data-i="'+n.i+'" data-far="1">Open this stop</button></section>';
+    // outside the stop's circle the nearest-stops list below takes over
     return '';
   }
+  function nearListHtml(){
+    if(atHome===false||geoDenied||!navigator.geolocation) return '';
+    if(!geoPos){ return geoGranted()?'':'<section class="card nearlist"><p class="mono">Stops near me</p><button class="btn ghost" data-a="nearme">Show the closest stops</button><p class="hint">Optional. Your location stays on this phone and is never sent anywhere.</p></section>'; }
+    var arr=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(!st.geo||ALL[k].done[i]) return; var d=distM(geoPos.lat,geoPos.lon,st.geo[0],st.geo[1]); if(d<=150000) arr.push({c:k,i:i,d:d}); }); });
+    arr.sort(function(x,y){ return x.d-y.d; }); arr=arr.slice(0,5);
+    if(!arr.length) return '<section class="card nearlist"><p class="mono">Stops near me</p><p>No unstamped stop within 90 miles of you. Pick a town from Towns to plan a trip.</p></section>';
+    return '<section class="nearlist" aria-label="Stops near you"><p class="mono">Closest to you</p>'+arr.map(function(x){ var st=CITIES[x.c].stops[x.i]; return '<button class="rcard" data-a="neargo" data-c="'+x.c+'" data-i="'+x.i+'" data-far="1"><span><strong>'+st.name+'</strong><span class="rsub">'+CITIES[x.c].name+' · '+nice(x.d)+'</span></span><span class="go">Open ›</span></button>'; }).join('')+'</section>';
+  }
+  function nearHtml(){ return nearCardHtml()+nearListHtml(); }
   function nearPaint(){ var e=document.getElementById('nearBox'); if(e) e.innerHTML=nearHtml(); }
   // Optional alerts when the app is closed (iPhone app only; the phone does the watching, nothing is sent anywhere)
   var NG=null;
@@ -2177,6 +2187,11 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     if(a==='goback'){ goBack(); return; }
     if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
     if(a==='geo'){ geoCheck(false); return; }
+    if(a==='nearme'){
+      if(!navigator.geolocation){ toast('This device cannot share its location.'); return; }
+      navigator.geolocation.getCurrentPosition(function(pos){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} geoStartWatch(); onFix(pos); nearPaint(); },function(err){ if(err&&err.code===1){ geoDenied=true; toast('Location is off for this app, which is fine. Pick a town from Towns.'); } else toast('Could not get your location. Try again outside.'); nearPaint(); },{enableHighAccuracy:false,timeout:15000,maximumAge:60000});
+      return;
+    }
     if(a==='neargo'){ var nc2=b.getAttribute('data-c'), ni=+b.getAttribute('data-i'); var inr=!b.getAttribute('data-far'); if(nc2&&CITIES[nc2]){ railRegion=null; if(nc2!==cityId||atHome) setCity(nc2); openStop(ni,0); if(inr&&!S.done[ni]){ cur.gv=true; setStep(1); } } return; }
     if(a==='bgtoggle'){ var on=!bgOn(); try{ localStorage.setItem('stp-bg',on?'1':'0'); }catch(x){} if(on) bgSync(); else if(NG) try{ NG.disable(); }catch(x){} b.setAttribute('aria-pressed',on); b.textContent=on?'On':'Off'; return; }
     if(a==='livetoggle'){ try{ localStorage.setItem('stp-geo-live',liveOn()?'0':'1'); }catch(x){} if(liveOn()) geoStartWatch(); else { geoStopWatch(); nearHit=null; } b.setAttribute('aria-pressed',liveOn()); b.textContent=liveOn()?'On':'Off'; return; }

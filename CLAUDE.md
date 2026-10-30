@@ -201,3 +201,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Menu has "About Stamp the Past (our website)" on stampthepast.com only (hidden in the native app).
 
 - Find-it screen: "Get directions in Maps" opens Google Maps directions to the stop coordinates (falls back to a name search when a stop has no geo). Accessibility notes per stop are still open (checklist r02).
+
+## Closest-stops list (r03, Oct 30)
+- Home shows "Closest to you": the 5 nearest unstamped stops within 150 km, with distance, tap to open (`nearListHtml`, handler `nearme`). Before location is allowed it shows an optional "Show the closest stops" button; denied or no geolocation shows nothing. The old single "Near you" card is gone; "You are here" (inside the circle) stays.
