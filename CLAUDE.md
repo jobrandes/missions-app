@@ -214,3 +214,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Find-it screen now says "Go there for the real stamp. About N minutes once you arrive. Or explore from home." (`stopMins`: story + question words at 200 wpm, plus 1 minute, clamped 2-6). Hidden once the stop is done and in demo mode. (audit #5)
 
 - "Protect your stamps" backup nudge (`bkNudgeHtml`) now also shows on returning Home, under the progress card; same rule as the trail (after the first stamp, then every 8). (audit #8)
+
+## Town finish payoff (audit #6, Oct 30)
+- Before a town is finished the "Your mission" card says: "Finish all four to unlock the final challenge..." (only for towns with boss questions).
+- The celebration modal leads with "Play the final challenge" (action `celebboss`) when the town has one; Share my stamps / passport / keep exploring follow. New flow tests cover both.

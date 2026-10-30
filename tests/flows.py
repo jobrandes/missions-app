@@ -61,11 +61,20 @@ with sync_playwright() as p:
         need('virginia' in pg.inner_text('#cityName').lower(),'Next stop from Home opens the town in progress (Virginia City), not the current town')
     # finishing the 4th stamp shows the celebration once; passport lists stamps
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    need('final challenge' in pg.inner_text('#main').lower(),'trail names the final challenge before the town is finished')
     pg.click('.stop >> nth=3'); pg.click('text=I am here')
     for k in range(4):
         pg.locator('.opt').nth(k).click()
         if pg.query_selector('.opt.right'): break
     pg.wait_for_selector('#celeb',timeout=3000); need('mission complete' in pg.inner_text('#celeb').lower(),'celebration shows on the 4th stamp')
+    need(pg.locator('#celeb [data-a=celebboss]').count()==1,'celebration offers the final challenge')
+    pg2=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    pg2.click('.stop >> nth=3'); pg2.click('text=I am here')
+    for k in range(4):
+        pg2.locator('.opt').nth(k).click()
+        if pg2.query_selector('.opt.right'): break
+    pg2.wait_for_selector('#celeb',timeout=3000); pg2.click('#celeb [data-a=celebboss]'); pg2.wait_for_timeout(400)
+    need(pg2.locator('#celeb').count()==0 and 'question' in pg2.inner_text('#main').lower(),'celebration button starts the final challenge')
     pg.click('text=See my passport'); pg.wait_for_timeout(300)
     need(pg.locator('#celeb').count()==0 and pg.locator('#passport .pprow.full').count()==1,'passport shows the completed mission and closes the celebration')
     pg.reload(); pg.click('.town >> nth=0'); pg.wait_for_timeout(700); need(pg.locator('#celeb').count()==0,'celebration does not repeat')

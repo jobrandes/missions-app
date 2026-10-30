@@ -1469,7 +1469,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
       if(((DATA.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
     } else {
       var nm=STOPS.map(function(s){ return s.name; }); var lst=nm.slice(0,-1).join(', ')+' and '+nm[nm.length-1];
-      h+='<section class="card"><h3>Your mission</h3><p>'+(sum(S.done)===0?city().mission:'On your list: '+lst+'. Do them in any order.')+'</p>'+(sum(S.done)===0?'<p class="why" style="margin:8px 0 0">On your list: '+lst+'.</p>':'')+(tourInfo(city())?'<p class="tourinfo">'+tourInfo(city())+'</p>':'')+'</section>';
+      h+='<section class="card"><h3>Your mission</h3><p>'+(sum(S.done)===0?city().mission:'On your list: '+lst+'. Do them in any order.')+'</p>'+(sum(S.done)===0?'<p class="why" style="margin:8px 0 0">On your list: '+lst+'.</p>':'')+(tourInfo(city())?'<p class="tourinfo">'+tourInfo(city())+'</p>':'')+(((DATA.boss||{})[cityId]||[]).length?'<p class="why finalnote">Finish all four to unlock the final challenge: four questions across every stop, and a seal to earn.</p>':'')+'</section>';
     }
     h+=bkNudgeHtml();
     h+='<ul class="stops">'+STOPS.map(function(s,i){
@@ -1523,7 +1523,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var c=city(), x=xp(), r=rank(x), old=document.getElementById('celeb'); if(old) old.remove();
     var cf=''; for(var q=0;q<14;q++) cf+='<i style="--x:'+(q*7+3)+'%;--d:'+((q%5)*0.12)+'s;--c:'+(q%3)+'"></i>';
     var d=document.createElement('div'); d.id='celeb'; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-labelledby','celebT');
-    d.innerHTML='<div class="celeb-card"><div class="confetti" aria-hidden="true">'+cf+'</div><div class="celeb-stamp"><div class="bbox lg">'+badge('master',true)+'</div></div><p class="mono">Mission complete</p><h2 id="celebT">'+c.explorer+'</h2><p>'+c.afterDone+'</p><p class="celeb-stats"><strong>'+r.name+'</strong> · '+x+' XP · 4 of 4 stamps</p><div class="celeb-btns"><button class="btn" data-a="share" data-k="'+cityId+'">Share my stamps</button><button class="btn ghost" data-a="passport">See my passport</button><button class="btn ghost" data-a="celebclose">Keep exploring</button></div></div>';
+    d.innerHTML='<div class="celeb-card"><div class="confetti" aria-hidden="true">'+cf+'</div><div class="celeb-stamp"><div class="bbox lg">'+badge('master',true)+'</div></div><p class="mono">Mission complete</p><h2 id="celebT">'+c.explorer+'</h2><p>'+c.afterDone+'</p><p class="celeb-stats"><strong>'+r.name+'</strong> · '+x+' XP · 4 of 4 stamps</p><div class="celeb-btns">'+(((DATA.boss||{})[cityId]||[]).length?'<button class="btn" data-a="celebboss">Play the final challenge</button>':'')+'<button class="btn'+(((DATA.boss||{})[cityId]||[]).length?' ghost':'')+'" data-a="share" data-k="'+cityId+'">Share my stamps</button><button class="btn ghost" data-a="passport">See my passport</button><button class="btn ghost" data-a="celebclose">Keep exploring</button></div></div>';
     document.body.appendChild(d);
     var f=d.querySelector('button'); if(f) f.focus();
   }
@@ -2177,6 +2177,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     if(a==='replaytour'){ replayTour(); return; }
     if(a==='tourskip'){ endTour(); return; }
     if(a==='celebclose'){ closeCeleb(); return; }
+    if(a==='celebboss'){ closeCeleb(); boss={pid:cityId,i:0,score:0,pick:null}; render(); window.scrollTo(0,0); return; }
     if(a==='bnav'){ var bt=b.getAttribute('data-t');
       if(bt==='pass'){ openPass(); return; }
       if(bt==='home'){ bnavSel='home'; goHome(); return; }
