@@ -8,6 +8,7 @@ python3 tests/check.py
 python3 tests/flows.py
 python3 tests/offline.py
 python3 tests/seo_check.py 2>&1 | grep -v "GET /"
+python3 tests/daily_check.py 2>&1 | grep -v "GET /"
 python3 tests/snapshot.py index.html /tmp/_now.json
 python3 - <<'PY'
 import json,sys

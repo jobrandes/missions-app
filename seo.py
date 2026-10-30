@@ -93,7 +93,7 @@ def page(path,title,desc,body,og=None,ld=None,canon=None,noindex=False):
     h.append('</head><body><div class="wrap">')
     h.append('<div class="top"><a class="mark" href="/">Stamp the Past</a><a class="btn" href="/play">Play free</a></div>')
     h.append(body)
-    h.append('<footer><p><a href="/places/">All places</a> · <a href="/privacy.html">Privacy</a> · <a href="/support.html">Support</a> · stampthepast@gmail.com</p><p>Made by a mom and her teenage son. Photos are public domain or freely licensed and credited above. Story text is written from the cited sources.</p></footer>')
+    h.append('<footer><p><a href="/daily/">Daily Fact or Fiction</a> · <a href="/places/">All places</a> · <a href="/privacy.html">Privacy</a> · <a href="/support.html">Support</a> · stampthepast@gmail.com</p><p>Made by a mom and her teenage son. Photos are public domain or freely licensed and credited above. Story text is written from the cited sources.</p></footer>')
     h.append('</div></body></html>')
     out=os.path.join(OUT,path)
     os.makedirs(os.path.dirname(out),exist_ok=True)
@@ -224,3 +224,80 @@ def test_pages(R):
       '<button class="btn" type="submit">Send my answers</button></form>')
     page('test.html','Help test Stamp the Past','A 10-minute written test of a free history game. Honest criticism welcome. No sign-up.',body,noindex=True)
     page('test-thanks.html','Thank you | Stamp the Past','Thanks for testing.','<h1>Thank you</h1><p>Your answers are in. Every comment gets read, and the repeated ones decide what gets fixed first.</p><p><a class="btn" href="/play">Keep playing</a></p>',noindex=True)
+
+
+DAILY_JS=r"""
+(function(){
+var C=__CLAIMS__, N=C.length;
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+var idx=[];for(var i=0;i<N;i++)idx.push(i);var r=rng(20261030);for(var j=N-1;j>0;j--){var k=Math.floor(r()*(j+1));var x=idx[j];idx[j]=idx[k];idx[k]=x}
+var now=new Date(), ds=now.getFullYear()+'-'+('0'+(now.getMonth()+1)).slice(-2)+'-'+('0'+now.getDate()).slice(-2);
+var day=Math.floor((Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())-Date.UTC(2026,10,1))/864e5);
+var num=day+1; if(num<1) num=1;
+var c=C[idx[((day%N)+N)%N]];
+var LAB=['Solid','Disputed','Not true'], EXPL=['Solid: sources agree.','Disputed: sources disagree, or it is not settled.','Not true: it is a myth or an error.'];
+var $=function(id){return document.getElementById(id)};
+$('num').textContent='#'+num;
+$('claim').textContent=c.t;
+$('ctx').textContent='About '+c.s+' in '+c.p;
+function get(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}
+function put(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function ping(){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'event/daily-played',title:'daily-played',event:true})}catch(e){}}
+function reveal(pick,fresh){
+  var ok=pick===c.a;
+  $('btns').hidden=true; $('res').hidden=false;
+  $('verdict').textContent=ok?'You got it.':'Not quite.';
+  $('verdict').className=ok?'dv good':'dv bad';
+  $('answer').innerHTML='<span class="tag t'+c.a+'">'+LAB[c.a]+'</span> '+EXPL[c.a];
+  $('why').textContent=c.w;
+  var h='';for(var i=0;i<c.src.length;i++){h+='<li><a href="'+c.src[i].u+'" target="_blank" rel="noopener">'+c.src[i].t.replace(/</g,'&lt;')+'</a></li>'}
+  $('src').innerHTML=h;
+  $('more').href=c.u; $('more').textContent='See '+c.s+' then and now';
+  var st=get('stp-daily-streak')||{n:0,last:''};
+  if(fresh){
+    var y=new Date(now.getTime()-864e5), ys=y.getFullYear()+'-'+('0'+(y.getMonth()+1)).slice(-2)+'-'+('0'+y.getDate()).slice(-2);
+    if(st.last!==ds){ st.n=(st.last===ys)?st.n+1:1; st.last=ds; put('stp-daily-streak',st); }
+    put('stp-daily',{d:ds,p:pick}); ping();
+  }
+  $('streak').textContent=st.n>1?(st.n+' days in a row'):'Come back tomorrow for a new one.';
+  var txt='Stamp the Past, Fact or Fiction '+'#'+num+': '+(ok?'got it ✅':'fooled ❌')+(st.n>1?' · '+st.n+' day streak':'')+'\nstampthepast.com/daily/';
+  $('share').onclick=function(){
+    if(navigator.share){navigator.share({text:txt}).catch(function(){})}
+    else if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){$('shmsg').textContent='Copied. Paste it anywhere.'},function(){$('shmsg').textContent=txt})}
+    else{$('shmsg').textContent=txt}
+  };
+}
+var saved=get('stp-daily');
+if(saved&&saved.d===ds){reveal(saved.p,false)}
+var bs=document.querySelectorAll('#btns button');
+for(var b=0;b<bs.length;b++){bs[b].addEventListener('click',function(e){reveal(+e.currentTarget.getAttribute('data-p'),true)})}
+})();
+"""
+
+def daily_page(R,packs,order,tstate):
+    global OUT
+    OUT=R+'site/'
+    claims=[]
+    for tid in order:
+        p=packs[tid]; st=tstate.get(tid,''); tn=p['name']
+        place=tn+(', '+st if st and st!='DC' and '/' not in st and not re.search(r',\s*\S+$',tn) else '')
+        for s in p['stops']:
+            for c in s.get('claims',[]):
+                claims.append({'t':c['t'],'a':c['a'],'w':c['why'],'s':s['name'],'p':place,'u':'/%s/%s/'%(tid,s['id']),
+                               'src':[{'t':x['t'],'u':x['u']} for x in s['sources'][:2]]})
+    data=json.dumps(claims,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+    body=('<div class="crumbs"><a href="/places/">Places</a> › Daily</div>'
+      '<h1>Fact or Fiction <span id="num"></span></h1>'
+      '<p>One claim a day about a real place. Is it solid, disputed, or a tall tale? Everyone gets the same one. No sign-up, nothing to download.</p>'
+      '<div class="dcard"><p class="mono" id="ctx"></p><p class="dclaim" id="claim"></p>'
+      '<div id="btns" class="dbtns"><button data-p="0">Solid</button><button data-p="1">Disputed</button><button data-p="2">Not true</button></div>'
+      '<div id="res" hidden><p id="verdict" class="dv"></p><p id="answer"></p><p id="why"></p><h2>Sources</h2><ul class="src" id="src"></ul>'
+      '<p><a id="more" href="/">More</a></p>'
+      '<p><button class="btn" id="share" type="button">Share my result</button></p><p class="note" id="shmsg" role="status"></p><p class="note" id="streak"></p></div></div>'
+      '<p class="note"><b>Solid</b> means the sources agree. <b>Disputed</b> means they disagree or it is not settled. <b>Not true</b> means it is a myth or an error. Every answer shows its sources, so check us.</p>'
+      '<div class="cta"><h2>Want the real thing?</h2><p>Go to the place, answer a question about what is in front of you, and fade between the old photo and today\'s. Free, no sign-up.</p><a class="btn" href="/play">Play Stamp the Past</a></div>'
+      '<script>'+DAILY_JS.replace('__CLAIMS__',data)+'</script>')
+    css_extra='<style>.dcard{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:18px;margin-top:18px}.dclaim{font:700 clamp(24px,5.5vw,32px)/1.2 \'Big Shoulders Display\',\'Arial Narrow\',Impact,sans-serif;margin:8px 0 16px}.dbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.dbtns[hidden]{display:none}.dbtns button{min-height:56px;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:700 18px \'Big Shoulders Display\',\'Arial Narrow\',Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}.dbtns button:hover,.dbtns button:focus-visible{border-color:var(--accent)}.dv{font:800 30px \'Big Shoulders Display\',\'Arial Narrow\',Impact,sans-serif;text-transform:uppercase;margin:0}.dv.good{color:var(--good)}.dv.bad{color:var(--bad)}@media (max-width:420px){.dbtns{grid-template-columns:1fr}}</style>'
+    page('daily/index.html','Fact or Fiction: a daily history claim | Stamp the Past',
+         'One claim a day about a real place. Is it solid, disputed or a tall tale? Play free, see the sources, share your result.',body.replace('<h1>',css_extra+'<h1>',1),None)
+    return '/daily/'
