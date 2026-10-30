@@ -57,6 +57,18 @@ ul.src{padding-left:20px;margin:10px 0 0}ul.src li{margin-top:6px;overflow-wrap:
 .stops span{display:block;padding:10px 12px}.stops b{display:block;font-size:16px}.stops small{color:var(--muted);font-size:13px}
 ul.towns{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px}
 .note{font-size:14px;color:var(--muted);margin-top:22px}
+form.tc label{display:block;font-weight:600;margin-top:20px}
+form.tc .hint{display:block;font-weight:400;color:var(--muted);font-size:14px}
+form.tc input[type=text],form.tc select,form.tc textarea{width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+form.tc textarea{min-height:84px}
+form.tc fieldset{border:0;padding:0;margin:22px 0 0}
+form.tc legend{font-weight:600;padding:0}
+form.tc .opt{display:flex;gap:10px;align-items:center;min-height:44px}
+form.tc .opt input{width:20px;height:20px;accent-color:var(--accent)}
+form.tc button{margin-top:26px;border:0;cursor:pointer}
+.tasks{counter-reset:t;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.tasks li{counter-increment:t;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:12px 14px 12px 52px;position:relative}
+.tasks li::before{content:counter(t);position:absolute;left:14px;top:10px;font:800 28px 'Big Shoulders Display','Arial Narrow',Impact,sans-serif;color:var(--accent)}
 footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font:400 12px/1.7 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:var(--muted)}
 @media (max-width:640px){.caps,.stops{grid-template-columns:1fr}ul.towns{grid-template-columns:1fr 1fr}}
 @media (max-width:380px){ul.towns{grid-template-columns:1fr}}
@@ -64,11 +76,11 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font:40
 FONTS='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">'
 COUNTER='<script>try{if(/^(www\\.)?stampthepast\\.com$|\\.netlify\\.app$/.test(location.hostname)){var g=document.createElement("script");g.async=true;g.src="//gc.zgo.at/count.js";g.setAttribute("data-goatcounter","https://stampthepast.goatcounter.com/count");document.head.appendChild(g);}}catch(e){}</script>'
 
-def page(path,title,desc,body,og=None,ld=None,canon=None):
+def page(path,title,desc,body,og=None,ld=None,canon=None,noindex=False):
     url=BASE+'/'+path
     h=['<!doctype html><html lang="en"><head><meta charset="utf-8">',
        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">',
-       COUNTER,'<title>%s</title>'%E(title),'<meta name="description" content="%s">'%E(desc),
+       COUNTER,('<meta name="robots" content="noindex">' if noindex else ''),'<title>%s</title>'%E(title),'<meta name="description" content="%s">'%E(desc),
        '<link rel="canonical" href="%s">'%url,'<meta name="theme-color" content="#0f1f33">',
        '<link rel="icon" href="/icon-192.png">','<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
        '<meta property="og:type" content="article">','<meta property="og:site_name" content="Stamp the Past">',
@@ -173,3 +185,42 @@ def build(R,packs,order,tstate,tfull,common_ids=None):
     page('places/index.html','All places: historic landmarks then and now | Stamp the Past',f'{len(order)} US towns and {n_stops} historic landmarks with then-and-now photos, sourced stories and fact checks.',b)
     urls.append('/places/')
     return urls
+
+
+def test_pages(R):
+    global OUT
+    OUT=R+'site/'
+    def radio(name,opts):
+        return ''.join('<label class="opt"><input type="radio" name="%s" value="%s" required> %s</label>'%(name,E(o),E(o)) for o in opts)
+    def task(n,text):
+        return '<fieldset><legend>%s</legend>%s</fieldset>'%(E(text),radio('task%d'%n,['Yes, easily','Yes, but it took effort','No, I gave up or got stuck',"I didn't try this"]))
+    body=('<h1>Help test Stamp the Past</h1>'
+      '<p>Stamp the Past is a free history game. You go to real landmarks, answer a question about what is in front of you, sort fact from tall tale, and fade between an old photo and today\'s view. Nothing to download and no sign-up. This takes about 10 minutes.</p>'
+      '<p><b>Honest criticism is what I need.</b> If something is confusing or boring, say so. You can stop at any step and tell me why.</p>'
+      '<h2>Try this first</h2><p>Open <a href="/play" target="_blank" rel="noopener">stampthepast.com/play</a> in a new tab. I will not tell you where to tap, because working that out is the test.</p>'
+      '<ol class="tasks"><li>Look at the first screen for about 30 seconds. What do you think this is?</li>'
+      '<li>Pick any town that looks interesting and try to earn your first stamp. If you are not at the landmark, tap the button that lets you check in anyway; I am testing the screens, not your location.</li>'
+      '<li>Find your passport and see what it shows.</li>'
+      '<li>Open any then-and-now photo and try the slider.</li></ol>'
+      '<form class="tc" name="testcard" method="POST" action="/test-thanks.html" data-netlify="true" netlify-honeypot="bot-field">'
+      '<input type="hidden" name="form-name" value="testcard"><p hidden><label>Leave empty <input name="bot-field"></label></p>'
+      '<h2>About your device</h2>'
+      '<label for="device">What did you use?</label><select id="device" name="device" required><option value="">Choose one</option><option>iPhone</option><option>Android phone</option><option>iPad or tablet</option><option>Windows computer</option><option>Mac</option><option>Other</option></select>'
+      '<label for="browser">Which browser? <span class="hint">Safari, Chrome, Edge, Firefox... or "not sure"</span></label><input type="text" id="browser" name="browser" maxlength="60">'
+      '<h2>What happened</h2>'
+      '<label for="expect">Before you tried it, what did you expect this to be?</label><textarea id="expect" name="expected" maxlength="600"></textarea>'
+      +task(1,'Task 1: Could you tell what the app is after the first screen?')+task(2,'Task 2: Could you earn your first stamp?')+task(3,'Task 3: Could you find your passport?')+task(4,'Task 4: Could you use the then-and-now slider?')+
+      '<label for="conf">What, if anything, was confusing? <span class="hint">Where did you hesitate or tap the wrong thing?</span></label><textarea id="conf" name="confusing" maxlength="800"></textarea>'
+      '<label for="tech">Did anything break or look wrong? <span class="hint">A photo that did not load, a button that did nothing, text cut off.</span></label><textarea id="tech" name="technical" maxlength="800"></textarea>'
+      '<h2>What you thought</h2>'
+      '<label for="fav">What was the best part, if any?</label><textarea id="fav" name="favorite" maxlength="600"></textarea>'
+      '<label for="least">What was the weakest part?</label><textarea id="least" name="least" maxlength="600"></textarea>'
+      '<fieldset><legend>Would you use it again?</legend>'+radio('again',['Yes','Maybe','No'])+'</fieldset>'
+      '<fieldset><legend>Would you pass it to someone else?</legend>'+radio('recommend',['Yes','Maybe','No'])+'</fieldset>'
+      '<label for="more">What would make it more worth your time?</label><textarea id="more" name="more_value" maxlength="600"></textarea>'
+      '<fieldset><legend>Which would you prefer?</legend>'+radio('format',['A website','A web app saved to my home screen','A native iPhone app',"Not sure"])+'</fieldset>'
+      '<label for="why">Why? <span class="hint">Optional</span></label><textarea id="why" name="why" maxlength="400"></textarea>'
+      '<p class="note">No name or email is collected. Answers go to the two people who made the app.</p>'
+      '<button class="btn" type="submit">Send my answers</button></form>')
+    page('test.html','Help test Stamp the Past','A 10-minute written test of a free history game. Honest criticism welcome. No sign-up.',body,noindex=True)
+    page('test-thanks.html','Thank you | Stamp the Past','Thanks for testing.','<h1>Thank you</h1><p>Your answers are in. Every comment gets read, and the repeated ones decide what gets fixed first.</p><p><a class="btn" href="/play">Keep playing</a></p>',noindex=True)

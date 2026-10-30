@@ -200,12 +200,14 @@ with sync_playwright() as p:
     need('0 XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'demo leaves XP at zero, got {pg.inner_text("#xpText")}')
     # level and badges: first stamp unlocks First Stamp (non-blocking snackbar), Trophy Case opens from it
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
+    pg.evaluate("window._pings=[];window.goatcounter={count:function(o){window._pings.push(o.title)}}")
     pg.click('.stop >> nth=0'); pg.click('text=I am here')
     for k in range(4):
         pg.locator('.opt').nth(k).click()
         if pg.query_selector('.opt.right'): break
     pg.wait_for_selector('#bpop',timeout=6000)
     need('first stamp' in pg.inner_text('#bpop').lower(),'first stamp unlocks the First Stamp badge')
+    pp=pg.evaluate('window._pings'); need('stamp' in pp and 'first-stamp' in pp,'stamping sends anonymous stamp and first-stamp counts, got %s'%pp)
     need(pg.evaluate("JSON.parse(localStorage.getItem('stp-badges')||'{}').first")!=None,'earned badge is saved')
     need(pg.locator('#celeb').count()==0 and pg.locator('#bpop [data-a=trophy]').count()==1,'badge popup does not block the screen')
     pg.click('#bpop [data-a=trophy]'); pg.wait_for_timeout(300)

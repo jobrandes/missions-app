@@ -1481,6 +1481,9 @@ body.menuopen .bsnack{display:none}
   var DISP={DC:'Washington DC'};
   function logGet(){ try{ var a=JSON.parse(localStorage.getItem('stp-log')||'[]'); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
   function dstr(d){ function z(n){ return (n<10?'0':'')+n; } return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate()); }
+  /* anonymous event counts (GoatCounter, web only; a no-op in the native app and offline). No ids, no places, no location. */
+  function ping(n){ try{ if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:'event/'+n,title:n,event:true}); }catch(e){} }
+  function pingOnce(key,evt){ try{ var o=JSON.parse(localStorage.getItem('stp-pinged')||'{}'); if(o[key]) return; o[key]=1; localStorage.setItem('stp-pinged',JSON.stringify(o)); ping(evt); }catch(e){} }
   function logStamp(){ var a=logGet(); a.push(dstr(new Date())); if(a.length>500) a=a.slice(-500); try{ localStorage.setItem('stp-log',JSON.stringify(a)); }catch(e){} }
   function wkOf(ds){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(ds); if(!m) return null; return Math.floor((Date.UTC(+m[1],+m[2]-1,+m[3])/86400000-4)/7); }
   function streakWeeks(){ var set={}; logGet().forEach(function(d){ var w=wkOf(d); if(w!==null) set[w]=1; }); var now=wkOf(dstr(new Date())), w=set[now]?now:now-1, n=0; while(set[w]){ n++; w--; } return n; }
@@ -2071,7 +2074,7 @@ body.menuopen .bsnack{display:none}
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
         if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
-        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); awardSoon(); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
+        else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); awardSoon(); ping('stamp'); pingOnce('first','first-stamp'); if(allDone()) pingOnce('t:'+city().name,'town-finished'); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
         if(cur.wrong.indexOf(k)<0) cur.wrong.push(k);
@@ -2123,7 +2126,7 @@ body.menuopen .bsnack{display:none}
     if(a==='resetyes'){ ALL[cityId]=blank(); S=ALL[cityId]; save(); confirmReset=false; render(); toast('Progress erased'); return; }
   });
 
-  load(); applyCity(); render(); maybeTour(); geoStartWatch(); bgSync(); bgOpenPending(); try{ if(localStorage.getItem('stp-badges')===null&&!totalStamps()) localStorage.setItem('stp-badges','{}'); }catch(e){} awardSoon();
+  load(); applyCity(); render(); maybeTour(); geoStartWatch(); bgSync(); bgOpenPending(); try{ if(totalStamps()>0) pingOnce('d:'+dstr(new Date()),'active-day'); }catch(e){} try{ if(localStorage.getItem('stp-badges')===null&&!totalStamps()) localStorage.setItem('stp-badges','{}'); }catch(e){} awardSoon();
   if(NG){ try{ NG.addListener('stopTap',function(){ bgOpenPending(); }); }catch(e){} }
 })();
 </script>

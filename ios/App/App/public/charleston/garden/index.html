@@ -45,6 +45,18 @@ ul.src{padding-left:20px;margin:10px 0 0}ul.src li{margin-top:6px;overflow-wrap:
 .stops span{display:block;padding:10px 12px}.stops b{display:block;font-size:16px}.stops small{color:var(--muted);font-size:13px}
 ul.towns{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px}
 .note{font-size:14px;color:var(--muted);margin-top:22px}
+form.tc label{display:block;font-weight:600;margin-top:20px}
+form.tc .hint{display:block;font-weight:400;color:var(--muted);font-size:14px}
+form.tc input[type=text],form.tc select,form.tc textarea{width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+form.tc textarea{min-height:84px}
+form.tc fieldset{border:0;padding:0;margin:22px 0 0}
+form.tc legend{font-weight:600;padding:0}
+form.tc .opt{display:flex;gap:10px;align-items:center;min-height:44px}
+form.tc .opt input{width:20px;height:20px;accent-color:var(--accent)}
+form.tc button{margin-top:26px;border:0;cursor:pointer}
+.tasks{counter-reset:t;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.tasks li{counter-increment:t;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:12px 14px 12px 52px;position:relative}
+.tasks li::before{content:counter(t);position:absolute;left:14px;top:10px;font:800 28px 'Big Shoulders Display','Arial Narrow',Impact,sans-serif;color:var(--accent)}
 footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font:400 12px/1.7 'IBM Plex Mono',ui-monospace,Menlo,monospace;color:var(--muted)}
 @media (max-width:640px){.caps,.stops{grid-template-columns:1fr}ul.towns{grid-template-columns:1fr 1fr}}
 @media (max-width:380px){ul.towns{grid-template-columns:1fr}}

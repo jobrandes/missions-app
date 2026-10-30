@@ -66,4 +66,5 @@ _ts=_re.search(r'var TSTATE=(\{.*?\}), TFULL=(\{.*?\});',rd('src/app.js'))
 seo_urls=seo.build(R,packs,order,json.loads(_ts.group(1)),json.loads(_ts.group(2)))
 sm=['','privacy.html','support.html']
 open(R+'site/sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>https://stampthepast.com/{u}</loc></url>' for u in sm)+''.join(f'<url><loc>https://stampthepast.com{u}</loc></url>' for u in seo_urls)+'</urlset>')
+seo.test_pages(R)
 print('seo pages:',len(seo_urls))
