@@ -450,6 +450,7 @@
      +'<p class="mgroup">Your passport</p>'
      +item('backup','Back up your passport','Save a code so a lost phone does not lose your stamps')
      +(got>0?item('share','Share my passport','Make a picture of your stamps',' data-k=""'):'')
+     +(/^https?:$/.test(location.protocol)?'<p class="mgroup">Play anywhere</p>'+item('daily','Daily Fact or Fiction','One claim a day, with sources. No travel needed'):'')
      +'<p class="mgroup">Help</p>'
      +item('replaytour','Replay the guide','The quick tour of how a stop works')
      +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question about what is right in front of you.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
@@ -1109,6 +1110,7 @@
     var a=b.getAttribute('data-a');
     if(a==='menu'){ openMenu(); return; }
     if(a==='menuclose'){ closeMenu(); return; }
+    if(a==='daily'){ location.href='/daily/'; return; }
     if(a==='theme'){ var tv=b.getAttribute('data-t'); try{ if(tv==='system') localStorage.removeItem('stp-theme'); else localStorage.setItem('stp-theme',tv); }catch(x){} themeApply(tv); b.parentNode.querySelectorAll('.seg').forEach(function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
     if(document.getElementById('menu')&&['backup','share','replaytour','report'].indexOf(a)>-1) closeMenu();
     if(a==='home'){ goHome(); return; }
