@@ -199,3 +199,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Returning Home's top bar is static (logo left, menu right) instead of the floating menu button.
 - Inside a stop, the head has a "Home" link next to the stop tag.
 - Menu has "About Stamp the Past (our website)" on stampthepast.com only (hidden in the native app).
+
+- Find-it screen: "Get directions in Maps" opens Google Maps directions to the stop coordinates (falls back to a name search when a stop has no geo). Accessibility notes per stop are still open (checklist r02).
