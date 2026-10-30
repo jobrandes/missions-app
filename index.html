@@ -911,6 +911,11 @@ details.card[open]{padding-bottom:12px}
 .spo.right{border-color:var(--good);color:var(--good)}
 .spo.wrong{opacity:.5;text-decoration:line-through}
 .sfb{margin:10px 0 0;font-size:14px}
+
+.spot{border:2px solid var(--accent);border-radius:14px;background:var(--surface);padding:14px;margin-top:16px;border-top:2px solid var(--accent)}
+.spot .stag{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:800 14px var(--font-display,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.spot .stag span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink,#fff);font-weight:800}
+.vchip.puz{border-color:var(--accent);color:var(--accent)}
 </style>
 
 <div class="app">
@@ -988,11 +993,11 @@ details.card[open]{padding-bottom:12px}
   }
   function compare(st){
     if(!(hasPh(st,'then')&&hasPh(st,'now'))) return '';
-    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button>'+spotHtml(st)+'</section>';
+    return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.'+(st.spot?' Then spot the change below.':'')+'</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button>'+spotHtml(st)+'</section>';
   }
   function spotHtml(st){
     var sp=st.spot; if(!sp||!sp.options) return '';
-    return '<div class="spot" id="spot"><p class="mono">Spot the change</p><p class="sq">'+sp.q+'</p><div class="spopts" role="group" aria-label="Spot the change answers">'+sp.options.map(function(o,k){ return '<button type="button" class="btn ghost small spo" data-a="spotpick" data-k="'+k+'">'+o+'</button>'; }).join('')+'</div><p class="sfb" aria-live="polite"></p></div>';
+    return '<div class="spot" id="spot"><p class="stag"><span aria-hidden="true">?</span> Puzzle: spot the change</p><p class="sq">'+sp.q+'</p><div class="spopts" role="group" aria-label="Spot the change answers">'+sp.options.map(function(o,k){ return '<button type="button" class="btn ghost small spo" data-a="spotpick" data-k="'+k+'">'+o+'</button>'; }).join('')+'</div><p class="sfb" aria-live="polite"></p></div>';
   }
   document.addEventListener('input',function(e){
     var q=e.target; if(q&&q.id==='townSearch'){ var v=q.value.trim().toLowerCase(), any=false;
@@ -1390,7 +1395,7 @@ details.card[open]{padding-bottom:12px}
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox'+(!d&&virtHas(cityId,i)?' virt':'')+'">'+badge(s.id,d||virtHas(cityId,i))+(!d&&virtHas(cityId,i)?'<i class="vtag">Virtual</i>':'')+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':(virtHas(cityId,i)?' virt':''))+'">'+(d?'Badge earned':(virtHas(cityId,i)?'Virtual stamp':'Not found yet'))+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox'+(!d&&virtHas(cityId,i)?' virt':'')+'">'+badge(s.id,d||virtHas(cityId,i))+(!d&&virtHas(cityId,i)?'<i class="vtag">Virtual</i>':'')+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':(virtHas(cityId,i)?' virt':''))+'">'+(d?'Badge earned':(virtHas(cityId,i)?'Virtual stamp':'Not found yet'))+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(s.spot?' <span class="vchip puz">Puzzle</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
     h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads or camera use. Location is optional and only checked on your phone, never sent anywhere. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;

@@ -903,3 +903,8 @@ details.card[open]{padding-bottom:12px}
 .spo.right{border-color:var(--good);color:var(--good)}
 .spo.wrong{opacity:.5;text-decoration:line-through}
 .sfb{margin:10px 0 0;font-size:14px}
+
+.spot{border:2px solid var(--accent);border-radius:14px;background:var(--surface);padding:14px;margin-top:16px;border-top:2px solid var(--accent)}
+.spot .stag{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:800 14px var(--font-display,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.spot .stag span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink,#fff);font-weight:800}
+.vchip.puz{border-color:var(--accent);color:var(--accent)}
