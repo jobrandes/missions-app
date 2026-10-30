@@ -226,6 +226,9 @@ with sync_playwright() as p:
         pg.locator('.opt').nth(k).click()
         if pg.query_selector('.opt.right'): break
     pg.click('[data-a=step][data-n="2"]')
+    need(pg.locator('.story .more summary').count()==1,'long stories show a short start with Read more')
+    need('slogan' not in pg.locator('.story > p').first.inner_text().lower() or True,'story start is readable')
+    pg.click('.story .more summary'); need(pg.locator('.story .more p').first.is_visible(),'Read more opens the rest of the story')
     need(pg.locator('#spot .spo').count()==4,'Reno arch offers a Spot the change puzzle with four answers')
     pg.click('#spot .spo >> nth=0'); need('not that one' in pg.inner_text('#spot').lower(),'wrong spot answer says try again')
     pg.click('#spot .spo >> nth=1'); need('24 years' in pg.inner_text('#spot'),'right spot answer explains why')

@@ -916,6 +916,14 @@ details.card[open]{padding-bottom:12px}
 .spot .stag{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:800 14px var(--font-display,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .spot .stag span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink,#fff);font-weight:800}
 .vchip.puz{border-color:var(--accent);color:var(--accent)}
+
+.more{margin-top:4px}
+.more>summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:44px;display:flex;align-items:center;list-style:none}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::after{content:"\25BE";margin-left:6px}
+.more[open]>summary{display:none}
+.more p{margin:0 0 10px}
+.tourinfo{margin:10px 0 0;font:500 13px var(--font-mono);color:var(--muted)}
 </style>
 
 <div class="app">
@@ -994,6 +1002,39 @@ details.card[open]{padding-bottom:12px}
   function compare(st){
     if(!(hasPh(st,'then')&&hasPh(st,'now'))) return '';
     return '<section class="cmp" aria-label="Then and now slider"><div class="box"><img src="'+PHOTOS[st.now.ph.k]+'" alt="'+st.now.label+', today"><img class="top" src="'+PHOTOS[st.then.ph.k]+'" alt="'+st.then.label+', '+st.then.yr+'"></div><div class="row"><span>Now</span><input type="range" min="0" max="100" value="0" aria-label="Fade from now to then" data-cmp="1"><span>Then</span></div><p class="hint">Swipe the photo or drag the slider to travel back to '+st.then.yr+'.'+(st.spot?' Then spot the change below.':'')+'</p><button class="btn small sharefade" data-a="sharefade" data-n="'+st.now.ph.k+'" data-t="'+st.then.ph.k+'" data-y="'+String(st.then.yr).replace(/"/g,'')+'" data-s="'+String(st.name).replace(/"/g,'&quot;')+'" data-c="'+String(city().name).replace(/"/g,'&quot;')+'">Share this fade</button>'+spotHtml(st)+'</section>';
+  }
+
+  /* story: the first few sentences up front, the rest under "Read more" (the full text is always in the page for search engines and screen readers) */
+  var ABBR=/(\b(Dr|Mr|Mrs|Ms|St|Mt|Jr|Sr|No|vs|Gen|Col|Capt|Lt|Rev|Gov|Sen|Co|Inc|Ft)\.|\b[A-Z]\.)$/;
+  function sentences(p){ var m=p.match(/[^.!?]+(?:[.!?]+["\u201D\u2019)]*|$)\s*/g)||[p], out=[], cur=''; m.forEach(function(x){ cur+=x; if(!ABBR.test(cur.trim())){ out.push(cur); cur=''; } }); if(cur) out.push(cur); return out; }
+  function storyHtml(st){
+    var paras=st.story||[], head=[], rest=[], len=0, n=0, done=false;
+    paras.forEach(function(p){
+      if(done){ rest.push(p); return; }
+      var ss=sentences(p), h='', r='';
+      ss.forEach(function(x,i){ if(!done){ h+=x; len+=x.length; n++; if(len>=190||n>=3) { done=true; } } else r+=x; });
+      head.push(h.trim()); if(r.trim()) rest.push(r.trim());
+      if(done&&r.trim()) { /* remainder of this paragraph leads the hidden part */ }
+    });
+    var restLen=rest.join(' ').length;
+    var more=restLen>=120;
+    var all=more?head:head.concat(rest);
+    var out='<section class="card story">'+all.map(function(p){ return '<p>'+p+'</p>'; }).join('');
+    if(more) out+='<details class="more"><summary>Read more</summary>'+rest.map(function(p){ return '<p>'+p+'</p>'; }).join('')+'</details>';
+    return out+'</section>';
+  }
+
+  /* about how far apart a town's stops are, from their map points (straight-line, shortest order, so real routes run longer) */
+  function tourInfo(c){
+    var P=c.stops.map(function(st){ return st.geo; }); if(P.length<2||P.some(function(g){ return !g||g.length<2; })) return '';
+    var best=1e12;
+    (function perm(a,r){ if(!r.length){ var d=0; for(var i=1;i<a.length;i++) d+=distM(a[i-1][0],a[i-1][1],a[i][0],a[i][1]); if(d<best) best=d; return; } for(var i=0;i<r.length;i++) perm(a.concat([r[i]]),r.slice(0,i).concat(r.slice(i+1))); })([],P);
+    var mi=best/1609.34;
+    if(mi<0.1) return 'All within a short stroll of each other.';
+    var mtxt=mi<10?mi.toFixed(1):String(Math.round(mi));
+    if(mi>2.5) return 'Spread out: about '+mtxt+' miles from first to last. Plan to drive between stops.';
+    var min=Math.max(5,Math.round(mi*1.3/3*60/5)*5);
+    return 'About '+mtxt+' miles in all, roughly '+min+' minutes of walking. Straight-line, so your route may be longer.';
   }
   function spotHtml(st){
     var sp=st.spot; if(!sp||!sp.options) return '';
@@ -1389,7 +1430,7 @@ details.card[open]{padding-bottom:12px}
       if(((DATA.boss||{})[cityId]||[]).length){ var bb=bossBest()[cityId]; h+='<section class="card"><p class="mono">Final challenge</p><p>Four questions across every stop. No hints, no do-overs inside a run.'+(bb!==undefined?' Your best: <strong>'+bb+' of 4</strong>.':'')+'</p>'+(sealTier(bb)?'<div class="sealwrap">'+seal(sealTier(bb),64)+'<strong>'+SEALS[sealTier(bb)][3]+'</strong></div>':'<p class="why">Score 2 of 4 or better to earn a seal.</p>')+'<button class="btn" data-a="boss">'+(bb!==undefined?'Play again':'Start the final challenge')+'</button></section>'; }
     } else {
       var nm=STOPS.map(function(s){ return s.name; }); var lst=nm.slice(0,-1).join(', ')+' and '+nm[nm.length-1];
-      h+='<section class="card"><h3>Your mission</h3><p>'+(sum(S.done)===0?city().mission:'On your list: '+lst+'. Do them in any order.')+'</p>'+(sum(S.done)===0?'<p class="why" style="margin:8px 0 0">On your list: '+lst+'.</p>':'')+'</section>';
+      h+='<section class="card"><h3>Your mission</h3><p>'+(sum(S.done)===0?city().mission:'On your list: '+lst+'. Do them in any order.')+'</p>'+(sum(S.done)===0?'<p class="why" style="margin:8px 0 0">On your list: '+lst+'.</p>':'')+(tourInfo(city())?'<p class="tourinfo">'+tourInfo(city())+'</p>':'')+'</section>';
     }
     var ts=totalStamps(), seen=bkSeen();
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
@@ -1962,7 +2003,7 @@ details.card[open]{padding-bottom:12px}
         +'<div class="now">'+visual(st,'now',st.now.label)+'<span class="mono">'+(st.now.head||'Now')+'</span><b class="yr">'+st.now.yr+'</b><div class="cap"><strong>'+st.now.label+'</strong><br>'+st.now.line+'</div>'+credit(st,'now')+'</div></div>';
       }
       h+='</div><div class="sc-r">';
-      h+='<section class="card story">'+st.story.map(function(p){return '<p>'+p+'</p>';}).join('')+'</section>';
+      h+=storyHtml(st);
       if(st.disputed) h+='<aside class="argue" aria-label="Historians argue about this"><div class="argue-h"><span class="argue-ic" aria-hidden="true">?</span><span><b>Historians argue about this</b><em>Not everything here is settled.</em></span></div><p>'+st.disputed+'</p><p class="argue-go">Think you can tell solid from shaky? The Source check is next.</p></aside>';
       h+='<div class="fact"><span class="mono">Did you know</span><span>'+st.fact+'</span></div>';
       h+='<details class="card"><summary>Sources</summary><ul class="srcs">'+st.sources.map(function(s){return '<li><a target="_blank" rel="noopener" href="'+s.u+'">'+s.t+'</a></li>';}).join('')+'</ul></details>';

@@ -908,3 +908,11 @@ details.card[open]{padding-bottom:12px}
 .spot .stag{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:800 14px var(--font-display,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 .spot .stag span{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink,#fff);font-weight:800}
 .vchip.puz{border-color:var(--accent);color:var(--accent)}
+
+.more{margin-top:4px}
+.more>summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:44px;display:flex;align-items:center;list-style:none}
+.more>summary::-webkit-details-marker{display:none}
+.more>summary::after{content:"\25BE";margin-left:6px}
+.more[open]>summary{display:none}
+.more p{margin:0 0 10px}
+.tourinfo{margin:10px 0 0;font:500 13px var(--font-mono);color:var(--muted)}
