@@ -892,6 +892,11 @@ details.card[open]{padding-bottom:12px}
 .sc-r>.btn{margin-top:10px}
 
 .status.virt{border-style:dashed;color:var(--muted)}
+
+.bbox.virt{position:relative}
+.bbox.virt svg,.bbox.virt .medal,.bbox.virt .bimg{filter:grayscale(1) contrast(.85) !important;opacity:.55 !important}
+.bbox.virt::before{content:"";position:absolute;inset:2px;border:2px dashed var(--muted);border-radius:50%;pointer-events:none}
+.bbox .vtag{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);font:700 9px var(--font-mono);letter-spacing:.08em;text-transform:uppercase;background:var(--surface);color:var(--muted);border:1px solid var(--muted);border-radius:999px;padding:1px 6px;font-style:normal;white-space:nowrap}
 </style></head><body>
 
 <div class="app">
@@ -1365,7 +1370,7 @@ details.card[open]{padding-bottom:12px}
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':(virtHas(cityId,i)?' virt':''))+'">'+(d?'Badge earned':(virtHas(cityId,i)?'Virtual stamp':'Not found yet'))+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox'+(!d&&virtHas(cityId,i)?' virt':'')+'">'+badge(s.id,d||virtHas(cityId,i))+(!d&&virtHas(cityId,i)?'<i class="vtag">Virtual</i>':'')+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':(virtHas(cityId,i)?' virt':''))+'">'+(d?'Badge earned':(virtHas(cityId,i)?'Virtual stamp':'Not found yet'))+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
     h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads or camera use. Location is optional and only checked on your phone, never sent anywhere. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
@@ -1614,7 +1619,7 @@ details.card[open]{padding-bottom:12px}
     var txt=m.s+', then and now. Go there. Prove it. Stamp the past. https://'+SHARE_URL;
     var canSh=!!(f&&navigator.canShare&&navigator.canShare({files:[f]})&&navigator.share); fadeFile=canSh?{f:f,t:txt}:null;
     shareClose(); var u=URL.createObjectURL(blob), d=document.createElement('div'); d.id='sharem'; d._u=u; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Your fade clip');
-    d.innerHTML='<div class="celeb-card sharecard">'+(isVideo?'<video src="'+u+'" autoplay loop muted playsinline aria-label="Then and now clip"></video>':'<img src="'+u+'" alt="Then and now picture">')+'<p class="why">'+(isVideo?'Press and hold the clip, or use Save, then share it anywhere.':'Press and hold the picture to save or share it.')+'</p><div class="celeb-btns">'+(canSh?'<button class="btn" data-a="sharefile">Share it</button>':'')+'<a class="btn'+(canSh?' ghost':'')+'" href="'+u+'" download="'+name+'">Save it</a><button class="btn ghost" data-a="shareclose">Close</button></div></div>';
+    d.innerHTML='<div class="celeb-card sharecard">'+(isVideo?'<video src="'+u+'" autoplay loop muted playsinline aria-label="Then and now clip"></video>':'<img src="'+u+'" alt="Then and now picture">')+'<p class="why">'+(isVideo?'Tap Share or save it, then choose Save Video, Messages, or any app.':'Press and hold the picture to save or share it.')+'</p><div class="celeb-btns">'+(canSh?'<button class="btn" data-a="sharefile">Share or save it</button>':'<a class="btn" href="'+u+'" download="'+name+'">Save it</a>')+'<button class="btn ghost" data-a="shareclose">Close</button></div></div>';
     document.body.appendChild(d); var cb=d.querySelector('button'); if(cb) cb.focus();
   }
   function fadeMake(a,b,m){
@@ -1913,7 +1918,7 @@ details.card[open]{padding-bottom:12px}
         return '<button type="button" class="'+cls+'" data-a="pick" data-k="'+k+'"'+(d?' disabled':'')+'><span>'+o+'</span>'+mark+'</button>';
       }).join('')+'</fieldset>';
       if(d){
-        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Virtual stamp earned':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+(cur.demo?'+25 XP. Go there for the full stamp (100 XP).':st.badge)+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
+        h+='<div class="earned pop"><div class="bbox lg'+(cur.demo?' virt':'')+'">'+badge(st.id,true)+(cur.demo?'<i class="vtag">Virtual</i>':'')+'</div><div><strong>'+(cur.demo?'Virtual stamp earned':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+(cur.demo?'+25 XP. Go there for the full stamp (100 XP).':st.badge)+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
       } else {
         h+='<p class="feedback'+(cur.wrong.length?' bad':'')+'" aria-live="polite">'+(cur.wrong.length?'Not yet. '+st.q.hint:'Get it right to earn the '+st.badge+' badge and 100 XP.')+'</p>';
       }
