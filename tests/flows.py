@@ -195,9 +195,11 @@ with sync_playwright() as p:
     for k in range(4):
         if pg.locator('.earned').count(): break
         pg.click('.opt >> nth=%d'%k)
-    need('preview only' in pg.inner_text('#main').lower(),'demo answer says preview only')
+    need('virtual stamp earned' in pg.inner_text('#main').lower(),'demo answer earns a virtual stamp')
     pg.click('[data-a=exit]'); pg.click('#tab-rewards')
-    need('0 XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'demo leaves XP at zero, got {pg.inner_text("#xpText")}')
+    need('0 XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'virtual stamp does not add town XP, got {pg.inner_text("#xpText")}')
+    need(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-virt')||'{}')).length")==1,'virtual stamp is saved once')
+    need(pg.evaluate("JSON.parse(localStorage.getItem('then-now-v3')||'{}').p?JSON.stringify(JSON.parse(localStorage.getItem('then-now-v3')).p).indexOf('1')<0:true"),'virtual stamp never touches real stamps or the save code')
     # level and badges: first stamp unlocks First Stamp (non-blocking snackbar), Trophy Case opens from it
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.evaluate("window._pings=[];window.goatcounter={count:function(o){window._pings.push(o.title)}}")

@@ -882,3 +882,5 @@ details.card>summary::after{content:"+";font-size:22px;font-weight:500;color:var
 details.card[open]>summary::after{content:"\2013"}
 details.card[open]{padding-bottom:12px}
 .sc-r>.btn{margin-top:10px}
+
+.status.virt{border-style:dashed;color:var(--muted)}

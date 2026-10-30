@@ -140,6 +140,9 @@
 
   var stampFx=false;
   function haptic(k){ try{ var P=window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()&&Capacitor.Plugins&&Capacitor.Plugins.StampStore; if(P&&P.haptic){ var p=P.haptic({kind:k||'success'}); if(p&&p.catch) p.catch(function(){}); } }catch(e){} }
+  function virtGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-virt')||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
+  function virtHas(c,i){ var st=CITIES[c]&&CITIES[c].stops[i]; return !!(st&&virtGet()[c+':'+st.id]&&!(ALL[c]&&ALL[c].done[i])); }
+  function virtSave(){ var v=virtGet(); v[cityId+':'+STOPS[cur.i].id]=1; try{ localStorage.setItem('stp-virt',JSON.stringify(v)); }catch(e){} }
   function geoGet(){ try{ var o=JSON.parse(localStorage.getItem('stp-geo')||'{}'); return (o&&typeof o==='object')?o:{}; }catch(e){ return {}; } }
   function geoVerified(k,i){ var st=CITIES[k]&&CITIES[k].stops[i]; return !!(st&&geoGet()[k+':'+st.id]); }
   function distM(a,b,c,d){ var R=6371000,p=Math.PI/180,x=Math.sin((c-a)*p/2),y=Math.sin((d-b)*p/2),h=x*x+Math.cos(a*p)*Math.cos(c*p)*y*y; return 2*R*Math.asin(Math.sqrt(h)); }
@@ -432,7 +435,7 @@
     if(ts>=1&&(seen<0||ts>=seen+8)) h+='<section class="card nudge" aria-label="Back up reminder"><h3>Protect your stamps</h3><p>Your passport is saved on this phone only. Copy your backup code so a new phone or a cleared browser does not erase it.</p><div class="row2"><button class="btn small" data-a="backup">Back up now</button><button class="btn small ghost" data-a="bkdismiss">Not now</button></div></section>';
     h+='<ul class="stops">'+STOPS.map(function(s,i){
       var d=S.done[i];
-      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':'')+'">'+(d?'Badge earned':'Not found yet')+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
+      return '<li><button class="stop" data-a="open" data-i="'+i+'"><span class="bbox">'+badge(s.id,d)+'</span><span><h3>'+s.name+'</h3><span class="sub">'+s.teaser+'</span><br><span class="status'+(d?' ok':(virtHas(cityId,i)?' virt':''))+'">'+(d?'Badge earned':(virtHas(cityId,i)?'Virtual stamp':'Not found yet'))+'</span>'+(s.verified&&s.verified.on?' <span class="vchip">Verified</span>':'')+(d&&geoVerified(cityId,i)?' <span class="vchip gold">Visit verified</span>':'')+(d&&s.geo&&!geoVerified(cityId,i)&&!geoDenied?' <span class="vchip">Tap to verify when you visit</span>':'')+'</span><span class="chev" aria-hidden="true">›</span></button></li>';
     }).join('')+'</ul>';
     h+='<details class="card"><summary>Privacy and photo credits</summary><ul><li>This page has no accounts, uploads or camera use. Location is optional and only checked on your phone, never sent anywhere. Badges and XP are saved only in this browser.</li><li>Photos come from Wikimedia Commons under free licenses, with credit under each one. Where no free photo exists yet, the app says so instead of showing a stand-in.</li></ul>'+creditsList()+'</details>';
     return h;
@@ -722,12 +725,12 @@
   function lvOf(x){ var L=1; while(L<60&&lvXp(L+1)<=x) L++; var t=LVTITLES[0][1]; LVTITLES.forEach(function(e){ if(L>=e[0]) t=e[1]; }); return {n:L,title:t,from:lvXp(L),to:lvXp(L+1),pc:Math.max(0,Math.min(100,Math.round((x-lvXp(L))/(lvXp(L+1)-lvXp(L))*100)))}; }
   function nfmt(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
   function gStats(){
-    var b=bossBest(), g=geoGet(), s={xp:0,stamps:0,claims:0,full:0,ver:0,gems:0,seals:0,golds:0,reg:{},st:{},nv:0,town:{},cnt:{}};
+    var b=bossBest(), g=geoGet(), vg=virtGet(), s={virt:0,xp:0,stamps:0,claims:0,full:0,ver:0,gems:0,seals:0,golds:0,reg:{},st:{},nv:0,town:{},cnt:{}};
     ORDER.forEach(function(k){
       var a=ALL[k], c=CITIES[k], d=sum(a.done); s.stamps+=d; s.claims+=sum(a.claims); s.xp+=d*100+sum(a.claims)*25; s.town[k]=d;
       if(d===c.stops.length){ s.full++; s.xp+=100; }
       if(d>0){ if(c.region) s.reg[c.region]=1; if(c.level==='Hidden Gems') s.gems+=d; (TSTATE[k]||'').split('/').forEach(function(x){ if(x&&!s.st[x]){ s.st[x]=1; s.xp+=50; } }); if(/NV/.test(TSTATE[k]||'')&&!/CA/.test(TSTATE[k]||'')) s.nv++; }
-      c.stops.forEach(function(st,i){ if(a.done[i]&&g[k+':'+st.id]){ s.ver++; s.xp+=50; } });
+      c.stops.forEach(function(st,i){ if(a.done[i]&&g[k+':'+st.id]){ s.ver++; s.xp+=50; } if(!a.done[i]&&vg[k+':'+st.id]){ s.virt++; s.xp+=25; } });
       if(sealTier(b[k])) s.seals++; if(b[k]>=4) s.golds++; s.xp+=ptsOf(b[k]);
     });
     var cnt={}, mx=0; logGet().forEach(function(d){ cnt[d]=(cnt[d]||0)+1; if(cnt[d]>mx) mx=cnt[d]; }); s.day=mx; s.wk=streakWeeks();
@@ -963,13 +966,13 @@
     var st=STOPS[cur.i], d=S.done[cur.i];
     var h='<div class="stophead"><button class="link" data-a="exit">‹ '+(tab==='cards'?'Time Cards':'Trail')+'</button><span class="mono">'+st.tag+'</span></div>';
     h+='<h2 id="stopTitle" tabindex="-1">'+st.name+'</h2>';
-    if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Exploring from home.</strong> Read the story, try the question and fade the photos. No stamp or points are saved, because stamps are for real visits. Go there to earn yours.</p>';
+    if(cur.demo) h+='<p class="demo-banner" role="status"><strong>Exploring from home.</strong> Read the story, answer the question and fade the photos. Get it right and you earn a virtual stamp, worth 25 XP. The full stamp (100 XP) is for real visits. Go there to earn it.</p>';
     h+=stepper();
 
     if(cur.step===0){
       h+='<div class="banner">'+visual(st,'now',st.name+' today')+'<span class="tagline">'+(hasPh(st,'now')?'Photo':'Illustration')+'</span></div><p class="credit">'+credit(st,'now')+'</p>';
       h+='<section class="card"><p class="mono">Find it</p><p>'+st.clue+'</p>'+vnote(st)
-        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">Not there? Explore from home</button>')+'</section>';
+        +'<button class="btn" data-a="step" data-n="1">I am here. Show me the question</button>'+(st.geo&&!d&&!cur.demo&&!geoDenied?'<button class="btn ghost" data-a="geo">'+(geoGranted()?'Re-check my location':'Verify with my location (optional)')+'</button><p class="hint">Your location is checked on this phone and never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p>':'')+'<a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(st.map)+'">Open in Maps</a>'+(d?'':'<button class="btn ghost" data-a="demo">'+(virtHas(cityId,cur.i)?'Virtual stamp saved. Explore again':'Not there? Explore from home')+'</button>')+'</section>';
     }
     if(cur.step===1){
       h+='<section class="card"><p class="mono">Check in</p>';
@@ -980,7 +983,7 @@
         return '<button type="button" class="'+cls+'" data-a="pick" data-k="'+k+'"'+(d?' disabled':'')+'><span>'+o+'</span>'+mark+'</button>';
       }).join('')+'</fieldset>';
       if(d){
-        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Preview only: no stamp saved':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+st.badge+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
+        h+='<div class="earned pop"><div class="bbox lg">'+badge(st.id,true)+'</div><div><strong>'+(cur.demo?'Virtual stamp earned':(geoVerified(cityId,cur.i)?'Badge earned: visit verified':'Badge earned'))+'</strong><span>'+(cur.demo?'+25 XP. Go there for the full stamp (100 XP).':st.badge)+'</span></div></div><button class="btn" data-a="step" data-n="2">Unlock the story</button>';
       } else {
         h+='<p class="feedback'+(cur.wrong.length?' bad':'')+'" aria-live="polite">'+(cur.wrong.length?'Not yet. '+st.q.hint:'Get it right to earn the '+st.badge+' badge and 100 XP.')+'</p>';
       }
@@ -1167,7 +1170,7 @@
     if(a==='pick'){
       var k=+b.getAttribute('data-k'), st=STOPS[cur.i];
       if(k===st.q.answer){
-        if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; toast('Correct. Preview only, so no stamp is saved.'); } }
+        if(cur.demo){ if(!S.done[cur.i]){ S.done[cur.i]=1; var vnew=!virtGet()[cityId+':'+st.id]; virtSave(); if(vnew){ ping('virtual-stamp'); toast('Correct. Virtual stamp saved, +25 XP. Go there for the real one.'); } else toast('Correct. You already have this virtual stamp.'); } }
         else if(!S.done[cur.i]){ S.done[cur.i]=1; if(cur.gv){ geoSave(); } logStamp(); save(); awardSoon(); ping('stamp'); pingOnce('first','first-stamp'); if(allDone()) pingOnce('t:'+city().name,'town-finished'); stampFx=true; haptic('success'); try{ if(navigator.vibrate) navigator.vibrate([18,40,28]); }catch(e){} if(allDone()) setTimeout(celebrate,1400); }
         cur.wrong=[]; render(); if(stampFx){ stampFx=false; var eb=document.querySelector('.earned .bbox'); if(eb){ eb.classList.add('thud'); try{ var er=eb.closest('.earned'); if(er&&er.scrollIntoView) er.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
       } else {
