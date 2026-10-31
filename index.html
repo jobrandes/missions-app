@@ -973,6 +973,8 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
 
 .stickgo{position:sticky;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .bsnack{pointer-events:none}.bsnack button,.bsnack a{pointer-events:auto}
+.stat .sgoal{margin:2px 0 0;font-size:0.8125rem;color:var(--muted)}
+.passhead .pcur{margin:12px 0 0;font-size:0.9375rem;color:#f2cf72}
 </style>
 
 <div class="app">
@@ -1418,12 +1420,16 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
   document.addEventListener('focusin',function(e){
     var t=e.target.closest&&e.target.closest('button.town[data-c]'); if(t&&t.getAttribute('data-c')) setHeroFocus({c:t.getAttribute('data-c')});
   });
+  function nextBadge(){
+    try{ var best=null; bdAll().list.forEach(function(x){ if(x.on||x.cur<=0||x.goal<=1) return; var f=x.cur/x.goal; if(!best||f>best.f) best={f:f,x:x}; }); return best&&best.x; }catch(e){ return null; }
+  }
   function statusHtml(got,total,res,hk){
     var gs=gStats(), lv=lvOf(gs.xp), tk=res||hk, tc=CITIES[tk], ni=0;
     for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
     var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
     var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
-    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">Explorer level '+lv.n+' · '+lv.title+' <span class="snext">· '+nfmt(lv.to-gs.xp)+' XP to level '+(lv.n+1)+'</span></p></div>':'';
+    var nb=got>0?nextBadge():null;
+    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">Explorer level '+lv.n+' · '+lv.title+' <span class="snext">· '+nfmt(lv.to-gs.xp)+' XP to level '+(lv.n+1)+'</span></p>'+(nb?'<p class="sgoal">Next badge: '+nb.b.n+' · '+nb.cur+' of '+nb.goal+'</p>':'')+'</div>':'';
     return '<section class="stat" aria-label="Your progress">'+st+btn+'</section>';
   }
   function ringsHtml(){
@@ -1495,11 +1501,15 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
     h+='<p class="home-foot"><strong>Made by a mom and her teenage son.</strong><br>The West, the Midwest, the South, the East and the Southwest so far. More regions on the way.<br><button class="link" data-a="menu">Menu: backup, help, settings</button></p>';
     return h;
   }
+  function curTownLine(){
+    try{ var n=nextRef(); if(!n) return ''; var c=CITIES[n.k], d=sum(ALL[n.k].done), t=c.stops.length; if(d<=0||d>=t) return '';
+      return '<p class="pcur"><b>Right now: '+c.name+'</b> · '+d+' of '+t+' stamps, '+(t-d)+' to go</p>'; }catch(e){ return ''; }
+  }
   function viewPass(){
     var got=0,total=0,full=0,seals=0,b=bossBest();
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; var d=sum(ALL[k].done); got+=d; if(d===CITIES[k].stops.length) full++; if(sealTier(b[k])) seals++; });
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
-    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+(seals===0?'<p class="pnote">Challenge seals and points come from a town\'s final challenge. Stamp every stop in a town to unlock it.</p><button class="btn small" data-a="'+(got>0?'nextstop':'gomissions')+'">'+(got>0?'Go to my next stop':'Pick a town')+'</button>':'')+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
+    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+curTownLine()+(seals===0?'<p class="pnote">Challenge seals and points come from a town\'s final challenge. Stamp every stop in a town to unlock it.</p><button class="btn small" data-a="'+(got>0?'nextstop':'gomissions')+'">'+(got>0?'Go to my next stop':'Pick a town')+'</button>':'')+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
     var bd=bdAll(); h+=levelHtml(bd.s)+trophyHtml(bd);
     h+='<section class="passport" id="passport">'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.filter(function(k){ return sum(ALL[k].done)>0; }).map(function(k){
       var c=CITIES[k], d=sum(ALL[k].done);

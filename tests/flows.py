@@ -261,6 +261,12 @@ with sync_playwright() as p:
     pg.click('.stop >> nth=0'); pg.wait_for_timeout(300)
     bt=pg.evaluate("(()=>{const r=[...document.querySelectorAll('button')].find(b=>/I am here/i.test(b.textContent)).getBoundingClientRect();return [r.top,r.bottom,innerHeight]})()")
     need(bt[0]>0 and bt[1]<=bt[2],'I am here button is on screen without scrolling')
+    # Home shows one near-term badge goal; Passport names the town you are working on
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,1,1,1],'claims':[0]*8},'sparks':{'done':[1,0,0,0],'claims':[0]*8}}}})
+    pg.click('#bnav [data-t=home]'); pg.wait_for_timeout(200)
+    need('next badge:' in pg.inner_text('.stat').lower(),'Home shows a next badge goal')
+    pg.click('#bnav [data-t=pass]'); pg.wait_for_timeout(200)
+    need('right now: sparks' in pg.inner_text('.passhead').lower() and '3 to go' in pg.inner_text('.passhead').lower(),'Passport names the current town and stamps to go')
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')

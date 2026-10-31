@@ -256,3 +256,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Verified-visit card (v07): on an already-stamped stop it now says you already have the stamp and that verifying upgrades it to a gold stamp for +50 XP.
 - Nearby list (v08): Home shows 3 closest stops, then a 'See more nearby stops' button reveals up to 8.
 - Badge popup (test fix): .bsnack lets taps pass through (only its See and close buttons catch taps) so it never blocks Next buttons beneath it for its 13 s.
+- Home badge goal + Passport current town (v09, v10): Home progress card shows 'Next badge: <name> · n of goal' (closest unearned badge); Passport head shows 'Right now: <town> · d of t stamps, n to go' for the in-progress town. Tests added.
