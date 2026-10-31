@@ -238,3 +238,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Town share card (r06): finished towns show a "Did you know?" line, one stop fact (<=150 chars, same one every time per town) via townDiscovery(k) in src/app.js.
 
 - Landing + ~297 town pages now use bundled /fonts/fonts.css instead of Google Fonts (n02). Plex Mono 600 is not bundled; browsers synthesize it from 500.
+
+- Larger text (q07): every font-size in src/styles.css is now rem (px/16), and `@supports (font:-apple-system-body){html{font:-apple-system-body}}` makes iOS Safari and the app follow the Dynamic Type setting (default Large = 17px, so about 6% bigger than before on iPhone). Checked in Playwright with html font-size 16/24/32px at 390 wide: no sideways scroll on Home/Towns. Landing page and SEO pages still use px. Not yet checked on a real phone with the setting turned up.
