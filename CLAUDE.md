@@ -218,3 +218,9 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 ## Town finish payoff (audit #6, Oct 30)
 - Before a town is finished the "Your mission" card says: "Finish all four to unlock the final challenge..." (only for towns with boss questions).
 - The celebration modal leads with "Play the final challenge" (action `celebboss`) when the town has one; Share my stamps / passport / keep exploring follow. New flow tests cover both.
+
+## Sacramento (town 59, added Oct 30 2026, a friend's request)
+- Pack `src/packs/sacramento.json`, 4 stops: State Capitol, Sutter's Fort, Tower Bridge, Crocker Art Museum. Photo keys use the `sc_` prefix (`sa_` is San Antonio). Final challenge added in `src/boss.json`; `TSTATE` in app.js has `sacramento:CA`.
+- Photos: all from Commons (PD or CC BY-SA/PD), credited in CREDITS.md and each stop's `ph`. Then photos: c.1900 Capitol (C. C. Pierce, CHS), 1925 fort bastion (HABS), July 1935 Tower Bridge construction (HAER), 1886 Crocker house (HABS/Society of California Pioneers). The Tower Bridge "now" photo is a 2006 public-domain edit.
+- GPS circles are estimates from Wikipedia coordinates (Tower Bridge center moved east to the Sacramento approach). Nobody has walked these yet, so check circles on site.
+- Photo route lesson: in this session the built-in browser could read Commons pages but not run downloads. Chrome via Control_Chrome worked after a full Chrome restart (frozen tab made every execute_javascript time out). Sync XHR in execute_javascript returns the result string directly.

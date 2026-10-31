@@ -2666,5 +2666,51 @@
    "a": 1,
    "why": "It was the first 49-star flag in Alaska, raised in an unofficial ceremony."
   }
+ ],
+ "sacramento": [
+  {
+   "q": "On what date in 1848 was gold discovered at Sutter's Mill in Coloma?",
+   "o": [
+    "January 24, 1848",
+    "July 4, 1848",
+    "March 1, 1848",
+    "December 15, 1848"
+   ],
+   "a": 0,
+   "why": "Wikipedia gives January 24, 1848, after which Sutter's Fort was abandoned."
+  },
+  {
+   "q": "In what year did the Native Sons of the Golden West buy Sutter's Fort to repair it?",
+   "o": [
+    "1847",
+    "1891",
+    "1947",
+    "1976"
+   ],
+   "a": 1,
+   "why": "They bought and began repairing the fort in 1891."
+  },
+  {
+   "q": "Who designed the Tower Bridge?",
+   "o": [
+    "Alfred Eichler",
+    "Reuben Clark",
+    "Seth Babson",
+    "Charles Gwathmey"
+   ],
+   "a": 0,
+   "why": "Alfred Eichler designed the Tower Bridge, which opened on December 15, 1935."
+  },
+  {
+   "q": "Which architecture firm designed the Crocker's 2010 expansion?",
+   "o": [
+    "Clark & Kenitzer",
+    "Gwathmey Siegel & Associates",
+    "George Pollock & Company",
+    "Butler & Cummings"
+   ],
+   "a": 1,
+   "why": "Gwathmey Siegel & Associates designed the expansion, which opened October 10, 2010."
+  }
  ]
 }

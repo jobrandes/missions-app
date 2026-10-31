@@ -1,0 +1,437 @@
+{
+ "id": "sacramento",
+ "name": "Sacramento",
+ "explorer": "Capital City Explorer",
+ "initials": "SAC",
+ "ranks": [
+  [
+   0,
+   "Visitor"
+  ],
+  [
+   100,
+   "River Walker"
+  ],
+  [
+   250,
+   "Capitol Guide"
+  ],
+  [
+   450,
+   "Gold Rush Scholar"
+  ],
+  [
+   600,
+   "Sacramento Historian"
+  ]
+ ],
+ "heroAlt": "The dome of the California State Capitol in Sacramento, with yellow roses in front",
+ "heroLi": "<li>Header: Frank Schulenburg · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a> · resized, cropped</li>",
+ "heroCredit": "Photo: Frank Schulenburg · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a>",
+ "mission": "Find four places in Sacramento where California's capital history happened. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
+ "afterDone": "All four badges earned. The rest of Sacramento is waiting.",
+ "safetyNote": "<li>These stops are on busy downtown streets, and the Capitol, fort and museum have set visiting hours. Use crosswalks, stay back from the river's edge, and check each place's visiting rules before you go.</li>",
+ "badgeMap": {
+  "capitol": [
+   "sc_cap_now",
+   "50% 30%"
+  ],
+  "fort": [
+   "sc_sf_now",
+   "50% 50%"
+  ],
+  "bridge": [
+   "sc_tb_now",
+   "50% 50%"
+  ],
+  "crocker": [
+   "sc_cr_now",
+   "30% 50%"
+  ]
+ },
+ "level": "Classics",
+ "region": "The West",
+ "stops": [
+  {
+   "id": "capitol",
+   "name": "California State Capitol",
+   "short": "State Capitol",
+   "badge": "State Capitol",
+   "tag": "Stop 1 of 4",
+   "teaser": "A capitol that took fourteen years to build, then got a seventy-room remodel.",
+   "map": "California State Capitol, 1315 10th St, Sacramento, CA",
+   "geo": [
+    38.57667,
+    -121.49361,
+    160
+   ],
+   "clue": "Head to the big white building with a tall dome and a long row of columns at 10th and L Streets. It sits in the middle of a huge green park full of trees and monuments.",
+   "safety": "Cross only at crosswalks, since 10th and L are busy streets. Stay on the paths in Capitol Park. The building has set visiting hours and security, so you can stamp from the outside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "About how tall is the dome of the California State Capitol?",
+    "options": [
+     "About 110 feet",
+     "About 210 feet",
+     "About 310 feet",
+     "About 410 feet"
+    ],
+    "answer": 1,
+    "hint": "It is more than twice as tall as a ten-story building.",
+    "verify": "Wikipedia lists the dome at 210 feet (64 m). Written from sources, not yet checked on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sc_cap_then",
+     "by": "C. C. Pierce (California Historical Society)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Exterior view of the California state capitol building in Sacramento, ca.1900-1920 (CHS-5653).jpg",
+     "note": "resized"
+    },
+    "yr": "c. 1900",
+    "label": "The Capitol, about 1900",
+    "line": "The same dome and columns, seen from the grounds, with young palms and bare lawn. The date is the 'circa 1900' on its Wikimedia Commons listing and is approximate.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=California%20State%20Capitol%20Sacramento&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2019",
+    "head": "Today",
+    "label": "The Capitol now",
+    "line": "The restored dome and columns, framed by yellow roses and a blue sky.",
+    "ph": {
+     "k": "sc_cap_now",
+     "by": "Frank Schulenburg",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "Work on the Capitol began in 1860 and was not finished until 1874. It was designed by a small group of architects, and the version you see is credited to Reuben Clark of a San Francisco firm.",
+    "The building kept changing. A remodel in 1906 to 1908 added seventy rooms and elevators. In 1949 to 1952 the rounded back of the building, called the apse, was torn down to make room for a new Capitol Annex.",
+    "From 1975 to 1982 the Capitol went through a major restoration, including work to make it safer in an earthquake. It was rededicated on January 9, 1982. Today the building also holds the State Capitol Museum, with the historic offices of the governor and the legislature."
+   ],
+   "fact": "Capitol Park around the building covers ten city blocks and holds monuments, including the California Firefighters Memorial.",
+   "disputed": "The \"Then\" date (about 1900) comes from its Wikimedia Commons listing and is approximate. The Capitol has been remodeled since, so some details differ.",
+   "claims": [
+    {
+     "t": "The Capitol was added to the National Register of Historic Places in 1973.",
+     "a": 0,
+     "why": "Wikipedia says it was added to the National Register on April 3, 1973."
+    },
+    {
+     "t": "The rounded back of the Capitol was torn down in 1906 to add elevators.",
+     "a": 2,
+     "why": "The 1906 to 1908 remodel added rooms and elevators. The apse came down in 1949 to 1952 for the Capitol Annex."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: California State Capitol",
+     "u": "https://en.wikipedia.org/wiki/California_State_Capitol"
+    },
+    {
+     "t": "American Landmarks: California State Capitol Building",
+     "u": "https://www.americanlandmarks.org/post/2017/10/16/california-state-capitol-building"
+    }
+   ],
+   "card": {
+    "a": "1874",
+    "b": "1982",
+    "la": "Construction completed",
+    "lb": "Restoration rededicated"
+   }
+  },
+  {
+   "id": "fort",
+   "name": "Sutter's Fort",
+   "short": "Sutter's Fort",
+   "badge": "Sutter's Fort",
+   "tag": "Stop 2 of 4",
+   "teaser": "A trading fort whose owner's sawmill started the Gold Rush that ruined him.",
+   "map": "Sutter's Fort State Historic Park, 2701 L St, Sacramento, CA",
+   "geo": [
+    38.57247,
+    -121.47122,
+    140
+   ],
+   "clue": "Find the walled fort in the middle of the city, between L and K Streets. Look for thick, low white walls with a corner tower that has a tiled roof and little openings for cannons.",
+   "safety": "Cross L Street only at crosswalks, and watch for traffic at 27th Street. The fort is a state park with set hours and an entry fee, so you can stamp from the outside of the walls.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What was the name of the settlement John Sutter founded, which the fort was part of?",
+    "options": [
+     "Port Sutter",
+     "Gold Hill",
+     "New Helvetia",
+     "New Switzerland Fort"
+    ],
+    "answer": 2,
+    "hint": "It means 'New Switzerland' in Latin form.",
+    "verify": "Wikipedia says the fort was part of the colonial project called New Helvetia (New Switzerland). Written from sources, not yet checked on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sc_sf_then",
+     "by": "Historic American Buildings Survey",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:EXTERIOR SOUTHEAST BASTION Photographer unknown, Taken 1925 - Sutter's Fort, L and Twenty-Seventh Streets, Sacramento, Sacramento County, CA HABS CAL,34-SAC,57-8.tif",
+     "note": "resized, from a scan"
+    },
+    "yr": "c. 1925",
+    "label": "The southeast bastion, 1925",
+    "line": "A square bastion with a tiled roof and a cannon poking out of its opening, next to an ivy-covered wall. The date is the one listed on Wikimedia Commons ('taken 1925').",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Sutter%27s%20Fort%20Sacramento&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2021",
+    "head": "Today",
+    "label": "The bastion today",
+    "line": "The same corner tower and white wall, with a paved path and trimmed grass where the lawn was.",
+    "ph": {
+     "k": "sc_sf_now",
+     "by": "DestinationFearFan",
+     "lic": "CC BY-SA 4.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Sutter's Fort - exterior.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "John Sutter set up his settlement in 1839 and called it New Helvetia, or New Switzerland. Construction of the fort itself began in 1841, and it became a busy trading post at the edge of the frontier.",
+    "In January 1848, gold was found at Sutter's Mill in Coloma, and the fort was abandoned as the Gold Rush began. By the 1850s it was largely deserted and fell into disrepair.",
+    "In 1891 the Native Sons of the Golden West bought the fort and began repairing it, and the work was finished in 1893. The state park system took it over in 1947, and it is now Sutter's Fort State Historic Park."
+   ],
+   "fact": "The fort stood at the center of Sacramento before the city grew around it. Today it sits in the middle of the city's busy midtown.",
+   "disputed": "The \"Then\" date (1925) comes from its Wikimedia Commons listing. What you see today is a rebuilt fort, repaired in 1891 to 1893 and later, not Sutter's untouched original.",
+   "claims": [
+    {
+     "t": "California State Parks has run Sutter's Fort since 1947.",
+     "a": 0,
+     "why": "Wikipedia says it was transferred to California State Parks in 1947."
+    },
+    {
+     "t": "The fort is untouched and has never been repaired since Sutter's day.",
+     "a": 2,
+     "why": "It was repaired starting in 1891 and finished in 1893, after the Native Sons of the Golden West bought it."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Sutter's Fort",
+     "u": "https://en.wikipedia.org/wiki/Sutter%27s_Fort"
+    },
+    {
+     "t": "California State Parks: Sutter's Fort State Historic Park",
+     "u": "https://www.parks.ca.gov/?page_id=485"
+    }
+   ],
+   "card": {
+    "a": "1841",
+    "b": "1947",
+    "la": "Fort construction begins",
+    "lb": "State parks takes over"
+   }
+  },
+  {
+   "id": "bridge",
+   "name": "Tower Bridge",
+   "short": "Tower Bridge",
+   "badge": "Tower Bridge",
+   "tag": "Stop 3 of 4",
+   "teaser": "A gold lift bridge that used to be silver, then yellow, then gold again.",
+   "map": "Tower Bridge, Capitol Mall at Front St, Sacramento, CA",
+   "geo": [
+    38.58056,
+    -121.5075,
+    200
+   ],
+   "clue": "Walk to the Sacramento River on Capitol Mall. Look for a bridge with two tall golden towers connected by cables, with a roadway that can lift straight up between them.",
+   "safety": "Stay on the sidewalk and cross only at crosswalks. The bridge carries heavy traffic and the riverbank can be slippery. Keep back from the water's edge and do not lean over the rails.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "What color was the Tower Bridge painted when it first opened?",
+    "options": [
+     "Gold",
+     "Silver aluminum",
+     "Bright red",
+     "Dark green"
+    ],
+    "answer": 1,
+    "hint": "People complained about glare from the sun.",
+    "verify": "Wikipedia says it was originally silver aluminum paint, which drew complaints about glare. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sc_tb_then",
+     "by": "Historic American Engineering Record",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:GENERAL VIEW FROM DOWNSTREAM, LOOKING NORTH-NORTHEAST, July 20, 1935 - Sacramento River Bridge, Spanning Sacramento River at California State Highway 275, Sacramento, Sacramento HAER CAL,34-SAC,58-98.tif",
+     "note": "resized, from a scan"
+    },
+    "yr": "1935",
+    "label": "Under construction, July 20, 1935",
+    "line": "The two towers and the steel of the lift span, seen from the river while the bridge was still being built. The date is from the file's Wikimedia Commons title.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Tower%20Bridge%20Sacramento&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2006",
+    "head": "Today",
+    "label": "The bridge at dusk",
+    "line": "The same pair of towers, now gold, lit up over the river with boats at the marina.",
+    "ph": {
+     "k": "sc_tb_now",
+     "by": "Michael Grindstaff of Sacramento, CA (edited)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Tower Bridge Sacramento edit.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The Tower Bridge was built between 1934 and 1935 over the Sacramento River, linking Sacramento with West Sacramento. It is a vertical lift bridge, so the middle of the roadway rises straight up between the towers to let tall boats pass. It was designed by Alfred Eichler and opened on December 15, 1935.",
+    "Its colors have changed over time. It was first painted silver aluminum, which drew complaints about glare, and its concrete pylons were sky blue. It was repainted yellow-ochre in 1976. After residents voted on a new look in 2001, it was painted all gold in 2002.",
+    "The bridge was added to the National Register of Historic Places in 1982."
+   ],
+   "fact": "The lift span is about 209 feet long, and the whole bridge is about 737 feet.",
+   "disputed": "The \"Then\" photo is dated by its Wikimedia Commons title (July 20, 1935), a few months before the bridge opened. The \"Now\" photo year comes from the file's camera data (2006), and the bridge may have been repainted or changed slightly since.",
+   "claims": [
+    {
+     "t": "The Tower Bridge is a vertical lift bridge.",
+     "a": 0,
+     "why": "Wikipedia describes it as a vertical lift bridge across the Sacramento River."
+    },
+    {
+     "t": "The Tower Bridge has been gold since the day it opened.",
+     "a": 2,
+     "why": "It was first silver aluminum, painted yellow-ochre in 1976, and painted all gold in 2002."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Tower Bridge (Sacramento, California)",
+     "u": "https://en.wikipedia.org/wiki/Tower_Bridge_(Sacramento,_California)"
+    },
+    {
+     "t": "The Clio: Sacramento Tower Bridge",
+     "u": "https://theclio.com/entry/43586"
+    }
+   ],
+   "card": {
+    "a": "1935",
+    "b": "2002",
+    "la": "Bridge opens",
+    "lb": "Repainted all gold"
+   }
+  },
+  {
+   "id": "crocker",
+   "name": "Crocker Art Museum",
+   "short": "Crocker Museum",
+   "badge": "Crocker Museum",
+   "tag": "Stop 4 of 4",
+   "teaser": "A mansion that became the oldest art museum in the West.",
+   "map": "Crocker Art Museum, 216 O St, Sacramento, CA",
+   "geo": [
+    38.577,
+    -121.505,
+    120
+   ],
+   "clue": "Look for a grand Victorian mansion with tall arched windows and a fancy front porch on O Street. Right next to it is a modern white building with curved walls that is part of the same museum.",
+   "safety": "Stay on sidewalks and cross only at crosswalks. The museum has set hours and an admission price, so you can stamp from the outside.",
+   "field": "Field notes pending: nobody has walked this stop for the app yet.",
+   "q": {
+    "prompt": "In 1885, who presented the gallery and its art collection to the city of Sacramento?",
+    "options": [
+     "Leland Stanford",
+     "John Sutter",
+     "Seth Babson",
+     "Margaret Crocker"
+    ],
+    "answer": 3,
+    "hint": "Her husband, a judge, had started collecting the art.",
+    "verify": "Wikipedia says Margaret Crocker presented the gallery and collection to the City of Sacramento in 1885. Written from sources, not yet checked on site."
+   },
+   "then": {
+    "ph": {
+     "k": "sc_cr_then",
+     "by": "Society of California Pioneers (via Historic American Buildings Survey)",
+     "lic": "Public domain",
+     "lu": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Historic American Building Survey Society of Calif. Pioneers Collection Photo of 1886 NORTHEAST CORNER OF CROCKER HOUSE - Crocker Art Gallery, 216 O Street, Sacramento, Sacramento HABS CAL,34-SAC,20-3.tif",
+     "note": "resized, from a scan"
+    },
+    "yr": "1886",
+    "label": "The Crocker house, 1886",
+    "line": "The corner of the grand Italianate house behind an iron fence, with its tall windows and balcony. The date is 'photo of 1886' from its Wikimedia Commons listing.",
+    "link": {
+     "t": "Look for historic photos at the Library of Congress",
+     "u": "https://www.loc.gov/pictures/search/?q=Crocker%20Art%20Gallery%20Sacramento&co=hh"
+    }
+   },
+   "now": {
+    "yr": "2014",
+    "head": "Today",
+    "label": "Old and new together",
+    "line": "The old mansion on the left, with the modern museum wing that opened in 2010 beside it.",
+    "ph": {
+     "k": "sc_cr_now",
+     "by": "Cullen328",
+     "lic": "CC BY-SA 3.0",
+     "lu": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "page": "https://commons.wikimedia.org/wiki/File:Crocker Art Museum old and new.jpg",
+     "note": "resized"
+    }
+   },
+   "story": [
+    "The original house was built by B. F. Hastings in 1853. Judge Edwin B. Crocker bought it in 1868. The gallery next to it was designed by Seth Babson, planned in 1871 and completed in 1874, to show the art the Crockers collected.",
+    "In 1885, Margaret Crocker gave the gallery and the collection to the City of Sacramento and the California Museum Association. The museum is described as the oldest art museum in the western United States.",
+    "A big expansion designed by Gwathmey Siegel & Associates opened on October 10, 2010, adding the modern wing you see beside the old mansion."
+   ],
+   "fact": "The museum sits at 216 O Street, a short walk from the Capitol and the river.",
+   "disputed": "The \"Then\" date (1886) comes from its Wikimedia Commons listing. The \"Now\" photo year comes from the file's camera data (2014), and the grounds may have changed slightly since.",
+   "claims": [
+    {
+     "t": "The Crocker's modern expansion opened on October 10, 2010.",
+     "a": 0,
+     "why": "Wikipedia gives the expansion opening as October 10, 2010."
+    },
+    {
+     "t": "Seth Babson designed the original 1853 house.",
+     "a": 2,
+     "why": "B. F. Hastings built the house in 1853. Babson designed the gallery building of the 1870s."
+    }
+   ],
+   "sources": [
+    {
+     "t": "Wikipedia: Crocker Art Museum",
+     "u": "https://en.wikipedia.org/wiki/Crocker_Art_Museum"
+    },
+    {
+     "t": "Crocker Art Museum: History",
+     "u": "https://www.crockerart.org/about/history"
+    }
+   ],
+   "card": {
+    "a": "1885",
+    "b": "2010",
+    "la": "Given to the city",
+    "lb": "Modern wing opens"
+   }
+  }
+ ],
+ "heroKey": "sc_hero"
+}
