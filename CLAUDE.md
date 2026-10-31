@@ -228,3 +228,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 ## Stamp buzz test (Oct 31 2026)
 - Jo-Anne felt no haptic on the iPhone build (she may not have earned a stamp). `haptic()` now finds the StampStore plugin via `Capacitor.Plugins` or `registerPlugin`, and reports ok/missing/error.
 - New native-only menu item "Test the stamp buzz" (`hapticTest`) fires the buzz and toasts the result. Use it to tell a plugin failure from the iPhone's System Haptics setting.
+
+## Anonymous error counter (Oct 31 2026)
+- `window` error and unhandledrejection listeners call `errPing(line)`: GoatCounter event `error` with title `error L<line>`, max 3 per visit, website only (same gate as the visit counter). No message text, no player data. Read it in GoatCounter under events.

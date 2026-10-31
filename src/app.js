@@ -642,6 +642,11 @@
   function dstr(d){ function z(n){ return (n<10?'0':'')+n; } return d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate()); }
   /* anonymous event counts (GoatCounter, web only; a no-op in the native app and offline). No ids, no places, no location. */
   function ping(n){ try{ if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:'event/'+n,title:n,event:true}); }catch(e){} }
+  /* anonymous error counter: counts that something broke and the script line, never any message text or player data. Website only, at most 3 per visit. */
+  var errSent=0;
+  function errPing(line){ try{ if(errSent>=3) return; errSent++; if(window.goatcounter&&window.goatcounter.count) window.goatcounter.count({path:'event/error',title:'error L'+(line||0),event:true}); }catch(e){} }
+  window.addEventListener('error',function(ev){ errPing(ev&&ev.lineno); });
+  window.addEventListener('unhandledrejection',function(){ errPing(0); });
   function pingOnce(key,evt){ try{ var o=JSON.parse(localStorage.getItem('stp-pinged')||'{}'); if(o[key]) return; o[key]=1; localStorage.setItem('stp-pinged',JSON.stringify(o)); ping(evt); }catch(e){} }
   function logStamp(){ var a=logGet(); a.push(dstr(new Date())); if(a.length>500) a=a.slice(-500); try{ localStorage.setItem('stp-log',JSON.stringify(a)); }catch(e){} }
   function wkOf(ds){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(ds); if(!m) return null; return Math.floor((Date.UTC(+m[1],+m[2]-1,+m[3])/86400000-4)/7); }
