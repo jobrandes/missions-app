@@ -239,6 +239,10 @@ with sync_playwright() as p:
     # phone UX audit u10: trail rows carry a small photo
     pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.click('#bnav [data-t=trails]'); pg.wait_for_timeout(300)
     need(pg.locator('.trl .trow .tthumb').count()>=3,'trail stop rows show thumbnails')
+    # phone audit #2 v01: Story of the day follows the Next stop's town and never repeats the Next stop
+    pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]},'sparks':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(300)
+    nx=pg.inner_text('[data-a=nextstop] .bs').lower(); ft=pg.inner_text('.feat h3').lower(); fm=pg.inner_text('.feat .mono').lower()
+    need('sparks' in nx and 'sparks' in fm and ft not in nx,'Story of the day is from the Next-stop town and is a different stop, got next=%s story=%s'%(nx,ft+' / '+fm))
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')

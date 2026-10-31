@@ -237,10 +237,17 @@
     // outside the stop's circle the nearest-stops list below takes over
     return '';
   }
+  /* the one stop Home calls "Next stop": the in-progress town (current town first), else the home town; first stop not yet stamped */
+  function nextRef(){
+    var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
+    var tk=res||homeTown(), tc=CITIES[tk], ni=0; if(!tc) return null;
+    for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
+    return {k:tk,i:ni};
+  }
   function nearListHtml(){
     if(atHome===false||geoDenied||!navigator.geolocation) return '';
     if(!geoPos){ return geoGranted()?'':'<section class="card nearlist"><p class="mono">Stops near me</p><button class="btn ghost" data-a="nearme">Show the closest stops</button><p class="hint">Optional. Your location stays on this phone and is never sent anywhere.</p></section>'; }
-    var arr=[]; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(!st.geo||ALL[k].done[i]) return; var d=distM(geoPos.lat,geoPos.lon,st.geo[0],st.geo[1]); if(d<=150000) arr.push({c:k,i:i,d:d}); }); });
+    var arr=[], nx=nextRef(); ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(!st.geo||ALL[k].done[i]||(nx&&nx.k===k&&nx.i===i)) return; var d=distM(geoPos.lat,geoPos.lon,st.geo[0],st.geo[1]); if(d<=150000) arr.push({c:k,i:i,d:d}); }); });
     arr.sort(function(x,y){ return x.d-y.d; }); arr=arr.slice(0,5);
     if(!arr.length) return '<section class="card nearlist"><p class="mono">Stops near me</p><p>No unstamped stop within 90 miles of you. Pick a town from Towns to plan a trip.</p></section>';
     return '<section class="nearlist" aria-label="Stops near you"><p class="mono">Closest to you</p>'+arr.map(function(x){ var st=CITIES[x.c].stops[x.i]; return '<button class="rcard" data-a="neargo" data-c="'+x.c+'" data-i="'+x.i+'" data-far="1"><span><strong>'+st.name+'</strong><span class="rsub">'+CITIES[x.c].name+' · '+nice(x.d)+'</span></span><span class="go">Open ›</span></button>'; }).join('')+'</section>';
@@ -724,13 +731,13 @@
   /* one notable discovery for a finished town's share card: one stop's sourced "fact" (same one every time for a town), trimmed to fit two lines */
   /* phone UX audit u08: one real photo and sourced fact from the current town, changing daily, for returning players */
   function featuredHtml(){
-    try{ var c=CITIES[cityId]; if(!c||!c.stops||!c.stops.length) return '';
-      var open=[]; c.stops.forEach(function(st,i){ if(!ALL[cityId].done[i]) open.push(i); });
-      var pool=open.length?open:c.stops.map(function(x,i){ return i; });
+    try{ var nx=nextRef(), fk=nx?nx.k:cityId, c=CITIES[fk]; if(!c||!c.stops||!c.stops.length) return '';
+      var open=[]; c.stops.forEach(function(st,i){ if(!ALL[fk].done[i]&&!(nx&&nx.i===i)) open.push(i); });
+      var pool=open.length?open:c.stops.map(function(x,i){ return i; }).filter(function(i){ return !(nx&&nx.k===fk&&nx.i===i); }); if(!pool.length) return '';
       var day=Math.floor((Date.now()-new Date().getTimezoneOffset()*6e4)/864e5), i=pool[day%pool.length], st=c.stops[i];
       var ph=st.now&&st.now.ph, src=ph&&PHOTOS[ph.k]; if(!src) return '';
       var f=(st.fact&&st.fact.length>20&&st.fact.length<=170)?st.fact:(st.teaser||'');
-      return '<section class="feat" aria-label="Story of the day"><img loading="lazy" decoding="async" src="'+src+'" alt="'+(st.now.label||st.name).replace(/"/g,'&quot;')+'"><div class="fin"><p class="mono">Story of the day · '+c.name+'</p><h3>'+st.name+'</h3><p>'+f+'</p><p class="fcred">Photo: '+(ph.by||'')+(ph.lic?' · '+ph.lic:'')+'</p><button class="btn small" data-a="neargo" data-c="'+cityId+'" data-i="'+i+'" data-far="1">Read this stop</button></div></section>'; }catch(e){ return ''; }
+      return '<section class="feat" aria-label="Story of the day"><img loading="lazy" decoding="async" src="'+src+'" alt="'+(st.now.label||st.name).replace(/"/g,'&quot;')+'"><div class="fin"><p class="mono">Story of the day · '+c.name+'</p><h3>'+st.name+'</h3><p>'+f+'</p><p class="fcred">Photo: '+(ph.by||'')+(ph.lic?' · '+ph.lic:'')+'</p><button class="btn small" data-a="neargo" data-c="'+fk+'" data-i="'+i+'" data-far="1">Read this stop</button></div></section>'; }catch(e){ return ''; }
   }
   function townDiscovery(k){
     try{ var c=CITIES[k]; if(!c||sum(ALL[k].done)<c.stops.length) return '';
