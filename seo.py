@@ -73,7 +73,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font:40
 @media (max-width:640px){.caps,.stops{grid-template-columns:1fr}ul.towns{grid-template-columns:1fr 1fr}}
 @media (max-width:380px){ul.towns{grid-template-columns:1fr}}
 '''
-FONTS='<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">'
+FONTS='<link rel="stylesheet" href="/fonts/fonts.css">'
 COUNTER='<script>try{if(/^(www\\.)?stampthepast\\.com$|\\.netlify\\.app$/.test(location.hostname)){var g=document.createElement("script");g.async=true;g.src="//gc.zgo.at/count.js";g.setAttribute("data-goatcounter","https://stampthepast.goatcounter.com/count");document.head.appendChild(g);}}catch(e){}</script>'
 
 def page(path,title,desc,body,og=None,ld=None,canon=None,noindex=False):
