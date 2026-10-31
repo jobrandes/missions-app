@@ -877,7 +877,7 @@
     {id:'w12',n:'Habit Formed',d:'Stamp something in 12 weeks in a row.',t:'l',g:'12w',f:function(s){ return [s.wk,12]; }},
     {id:'d3',n:'Hat Trick',d:'Get 3 stamps in one day.',t:'c',g:'3',f:function(s){ return [s.day,3]; }},
     {id:'d5',n:'Stamp Rush',d:'Get 5 stamps in one day.',t:'r',g:'5',f:function(s){ return [s.day,5]; }},
-    {id:'d8',n:'Overachiever',d:'Get 8 stamps in one day. Did you sleep?',t:'l',g:'8',f:function(s){ return [s.day,8]; }},
+    {id:'d8',n:'Overachiever',d:'Get 8 stamps in one day. Snack break earned.',t:'l',g:'8',f:function(s){ return [s.day,8]; }},
     {id:'arm',n:'Armchair Explorer',d:'Explore 10 stops from home. The couch counts, but the real stamp is better.',t:'c',g:'≈',f:function(s){ return [s.virt,10]; }},
     {id:'tr1',n:'All Aboard',d:'Stamp 5 train stations or depots.',t:'r',g:'☰',f:function(){ return [trailN(/station|depot|terminal/i),5]; }},
     {id:'tr2',n:'Capitol Gains',d:'Stamp 5 capitols or courthouses.',t:'r',g:'⌂',f:function(){ return [trailN(/capitol|statehouse|state house|courthouse|city hall/i),5]; }},
