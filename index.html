@@ -952,6 +952,14 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 
 /* phone UX audit u05 */
 .passhead .pnote{margin:12px 0 8px;font-size:.875rem;color:inherit;opacity:.9}
+
+/* phone UX audit u08: Story of the day card on Home */
+.feat{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;margin:0 0 14px}
+.feat img{display:block;width:100%;height:150px;object-fit:cover}
+.feat .fin{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.feat .fin p{margin:0}
+.feat h3{font-size:1.5rem}
+.feat .fcred{font-size:.75rem;color:var(--muted)}
 </style>
 
 <div class="app">
@@ -1434,7 +1442,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Travel to the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var how=got>0?'':'<section class="howto" aria-label="How it works"><h2>How it works</h2><ol><li><b>Go there.</b> Pick a mission and walk or drive to a real landmark.</li><li><b>Prove it.</b> Tap "I am here", read the story, answer the question in front of you.</li><li><b>Stamp it.</b> Each stamp earns XP, points that raise your level and unlock badges.</li></ol><p class="hint">Not near a mission? Open any stop and tap "Explore from home" to read it and fade the photos. Stamps are saved for real visits.</p></section>';
     var nearH='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>'+(got===0?startTownHtml():'');
-    h=(got>0?statusHtml(got,total,res0,hk)+bkNudgeHtml()+nearH+ringsHtml()+dailyCardHtml()+h:nearH+h+how+ringsHtml()+dailyCardHtml());
+    h=(got>0?statusHtml(got,total,res0,hk)+bkNudgeHtml()+nearH+featuredHtml()+ringsHtml()+dailyCardHtml()+h:nearH+h+how+ringsHtml()+dailyCardHtml());
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
         var passTop=got>0?'<section class="passport" id="passport"><button class="rcard" data-a="mypass"><span><strong>Your passport</strong><span class="rsub">'+got+' of '+total+' stamps earned'+(totalPts()?' · '+totalPts()+' challenge points':'')+'</span></span><span class="go">Open ›</span></button></section>':'';
@@ -1710,6 +1718,16 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
   }
   // share card
   /* one notable discovery for a finished town's share card: one stop's sourced "fact" (same one every time for a town), trimmed to fit two lines */
+  /* phone UX audit u08: one real photo and sourced fact from the current town, changing daily, for returning players */
+  function featuredHtml(){
+    try{ var c=CITIES[cityId]; if(!c||!c.stops||!c.stops.length) return '';
+      var open=[]; c.stops.forEach(function(st,i){ if(!ALL[cityId].done[i]) open.push(i); });
+      var pool=open.length?open:c.stops.map(function(x,i){ return i; });
+      var day=Math.floor((Date.now()-new Date().getTimezoneOffset()*6e4)/864e5), i=pool[day%pool.length], st=c.stops[i];
+      var ph=st.now&&st.now.ph, src=ph&&PHOTOS[ph.k]; if(!src) return '';
+      var f=(st.fact&&st.fact.length>20&&st.fact.length<=170)?st.fact:(st.teaser||'');
+      return '<section class="feat" aria-label="Story of the day"><img loading="lazy" decoding="async" src="'+src+'" alt="'+(st.now.label||st.name).replace(/"/g,'&quot;')+'"><div class="fin"><p class="mono">Story of the day · '+c.name+'</p><h3>'+st.name+'</h3><p>'+f+'</p><p class="fcred">Photo: '+(ph.by||'')+(ph.lic?' · '+ph.lic:'')+'</p><button class="btn small" data-a="neargo" data-c="'+cityId+'" data-i="'+i+'" data-far="1">Read this stop</button></div></section>'; }catch(e){ return ''; }
+  }
   function townDiscovery(k){
     try{ var c=CITIES[k]; if(!c||sum(ALL[k].done)<c.stops.length) return '';
       var L=c.stops.map(function(st){ return st.fact||''; }).filter(function(x){ return x.length>20&&x.length<=150; }), h=0; for(var i=0;i<k.length;i++) h+=k.charCodeAt(i); var f=L.length?L[h%L.length]:'';

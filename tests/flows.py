@@ -231,6 +231,10 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.click('#bnav [data-t=pass]'); pg.wait_for_timeout(300)
     need(pg.locator('.passhead .pnote').count()==1 and 'final challenge' in pg.inner_text('.passhead .pnote').lower(),'zero challenge seals explains how to earn them')
     need('next stop' in pg.inner_text('.passhead .pnote + button').lower(),'zero challenge seals offers a next-stop button')
+    # phone UX audit u08: returning players get a Story of the day card that opens its stop
+    pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(300)
+    need(pg.locator('.feat').count()==1 and 'photo:' in pg.inner_text('.feat').lower(),'Home shows a credited Story of the day for returning players')
+    pg.click('.feat button'); pg.wait_for_timeout(300); need(pg.locator('#stopTitle').count()==1,'Story of the day opens its stop')
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')

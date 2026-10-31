@@ -946,3 +946,11 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 
 /* phone UX audit u05 */
 .passhead .pnote{margin:12px 0 8px;font-size:.875rem;color:inherit;opacity:.9}
+
+/* phone UX audit u08: Story of the day card on Home */
+.feat{border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;margin:0 0 14px}
+.feat img{display:block;width:100%;height:150px;object-fit:cover}
+.feat .fin{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.feat .fin p{margin:0}
+.feat h3{font-size:1.5rem}
+.feat .fcred{font-size:.75rem;color:var(--muted)}
