@@ -12,7 +12,11 @@
    "tag": "Stop 1 of 4",
    "teaser": "The pier where a lumber baron's railroad met the lake.",
    "map": "Commons Beach Park, 400 North Lake Blvd, Tahoe City, CA",
-   "geo": [39.17036, -120.14119, 300],
+   "geo": [
+    39.17036,
+    -120.14119,
+    300
+   ],
    "clue": "Walk to the lakefront park in Tahoe City. Look for the historical markers near the bike path and the old pier area.",
    "safety": "Tahoe City sidewalks and North Lake Boulevard are busy. Cross only at marked crossings. Keep off the water's edge when waves or ice are present, and watch for bikes on the path.",
    "field": "Field notes pending: nobody has walked this stop for the app yet.",
@@ -93,6 +97,17 @@
     "b": "1964",
     "la": "Railway to the pier",
     "lb": "Tahoe Tavern torn down"
+   },
+   "spot": {
+    "q": "The 1910 photo shows the Tahoe City landing. What happened to the railroad tracks during World War II?",
+    "options": [
+     "They were sold to Nevada",
+     "They were taken up and the rails recycled",
+     "They were buried under the pier",
+     "They were made into a bike trail"
+    ],
+    "answer": 1,
+    "why": "The tracks were taken up and the rails recycled. The line had run 15 miles of narrow gauge from Truckee by 1902."
    }
   },
   {
@@ -103,7 +118,11 @@
    "tag": "Stop 2 of 4",
    "teaser": "A small dam that controls a giant lake.",
    "map": "Lake Tahoe Dam, Tahoe City, CA",
-   "geo": [39.16721, -120.14393, 300],
+   "geo": [
+    39.16721,
+    -120.14393,
+    300
+   ],
    "clue": "Follow the water to where it leaves the lake. A low concrete dam with a row of gates holds back Lake Tahoe, and a walkway runs along the top.",
    "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
    "field": "Field notes pending: the viewing areas have not been checked on foot yet.",
@@ -184,6 +203,17 @@
     "b": "1913",
     "la": "First outlet dam",
     "lb": "Present dam"
+   },
+   "spot": {
+    "q": "The 1875 photo shows the wharf near the lake's outlet. What is the present concrete dam for?",
+    "options": [
+     "Making electricity for Reno",
+     "Stopping floods in Truckee",
+     "Storing irrigation water for the Newlands Project",
+     "Making the lake deeper for boats"
+    ],
+    "answer": 2,
+    "why": "It was built from 1909 to 1913 to store irrigation water for the Newlands Project, which waters about 55,000 acres of Nevada farmland."
    }
   },
   {
@@ -194,7 +224,11 @@
    "tag": "Stop 3 of 4",
    "teaser": "A log cabin for the person who kept the lake's gates.",
    "map": "Gatekeeper's Museum, Tahoe City, CA",
-   "geo": [39.16683, -120.14339, 150],
+   "geo": [
+    39.16683,
+    -120.14339,
+    150
+   ],
    "clue": "Beside the dam, in a small park, look for a log cabin built for the person who opened and closed the gates. Today it is a museum.",
    "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet. The museum is open seasonally. You do not need to go inside.",
    "field": "Field notes pending: the park paths have not been checked on foot yet.",
@@ -274,6 +308,17 @@
     "b": "1981",
     "la": "Original cabin",
     "lb": "Rebuilt cabin"
+   },
+   "spot": {
+    "q": "The 1870 photo shows the shore near Tahoe City. What was the gatekeeper's job?",
+    "options": [
+     "Collecting tolls",
+     "Guarding the Tahoe Tavern",
+     "Opening and closing the dam gates to keep the lake and river at the right levels",
+     "Counting fish"
+    ],
+    "answer": 2,
+    "why": "A cabin went up in 1910 so the gatekeeper could live beside the gates. The present cabin, finished in 1981, is a museum."
    }
   },
   {
@@ -284,7 +329,11 @@
    "tag": "Stop 4 of 4",
    "teaser": "A log cabin built as a wedding present.",
    "map": "Watson Cabin, 560 N Lake Blvd, Tahoe City, CA",
-   "geo": [39.17139, -120.13889, 150],
+   "geo": [
+    39.17139,
+    -120.13889,
+    150
+   ],
    "clue": "Walk along the Tahoe City sidewalk and look for a small dark log cabin tucked under tall pines, with a flag out front. It was a wedding gift.",
    "safety": "Tahoe City sidewalks are busy with cars, bikes and visitors. Cross only at marked crossings. Stay behind railings near the water. The river runs fast and cold, so never climb on rocks or walls, and keep your hands and feet out of the outlet.",
    "field": "Field notes pending: the sidewalk to the cabin has not been checked on foot yet.",
@@ -365,6 +414,17 @@
     "b": "1979",
     "la": "Built",
     "lb": "National Register"
+   },
+   "spot": {
+    "q": "The 1875 photo shows Tahoe City from the lake. Robert Montgomery Watson arrived that year. What was his first job in town?",
+    "options": [
+     "Constable",
+     "Boat captain",
+     "Lumber baron",
+     "Postmaster"
+    ],
+    "answer": 0,
+    "why": "He became Tahoe City's first constable. In 1908 he built the log cabin for his son and daughter-in-law."
    }
   }
  ],

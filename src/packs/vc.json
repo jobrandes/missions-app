@@ -12,7 +12,11 @@
    "tag": "Stop 1 of 4",
    "teaser": "The main street of a silver boom town.",
    "map": "C Street, Virginia City, NV",
-   "geo": [39.30968, -119.65016, 300],
+   "geo": [
+    39.30968,
+    -119.65016,
+    300
+   ],
    "clue": "Find the main street of Virginia City. Its name is just one letter. Two- and three-story brick buildings line it, and most of them went up after a huge fire in 1875.",
    "safety": "Sidewalks are narrow and steep in places, and cars share the road. Cross only at corners. The town sits at about 6,100 feet, so bring water. Saloons and casinos are for adults, so stay out of them. None of the stops need you to go inside.",
    "field": "Field notes pending: sidewalk surfaces and slopes have not been checked on foot yet.",
@@ -93,6 +97,17 @@
     "b": "1961",
     "la": "The boom years",
     "lb": "National Historic Landmark"
+   },
+   "spot": {
+    "q": "The old photo shows Virginia City before the Great Fire. What happened on October 26, 1875?",
+    "options": [
+     "Silver was first found",
+     "The fire burned much of the town and left about 2,000 people homeless",
+     "The railroad arrived",
+     "The town was incorporated"
+    ],
+    "answer": 1,
+    "why": "The Great Fire did about $12 million in damage. The town was rebuilt, and most buildings along C Street are brick."
    }
   },
   {
@@ -103,7 +118,11 @@
    "tag": "Stop 2 of 4",
    "teaser": "Where a young writer became Mark Twain.",
    "map": "Mark Twain Museum, C Street, Virginia City, NV",
-   "geo": [39.30968, -119.65016, 150],
+   "geo": [
+    39.30968,
+    -119.65016,
+    150
+   ],
    "clue": "Walk along C Street and look for the old newspaper building, now a museum with a famous writer's name on it.",
    "safety": "Stay on the sidewalk. The museum is optional and has its own hours and rules. Look from the street.",
    "field": "Field notes pending: the exact viewing spot has not been checked on foot yet.",
@@ -188,6 +207,17 @@
     "b": "Today",
     "la": "A new pen name",
     "lb": "Mark Twain Museum"
+   },
+   "spot": {
+    "q": "The 1937 photo shows the Territorial Enterprise building. What did Sam Clemens first sign there on February 3, 1863?",
+    "options": [
+     "His wedding certificate",
+     "A silver claim",
+     "\"Mark Twain\"",
+     "A job contract in Carson City"
+    ],
+    "answer": 2,
+    "why": "He signed a funny letter about a party \"Mark Twain\" for the first time. He worked at the paper until he left for San Francisco in 1864."
    }
   },
   {
@@ -198,7 +228,11 @@
    "tag": "Stop 3 of 4",
    "teaser": "A theater that burned down twice.",
    "map": "Piper's Opera House, Virginia City, NV",
-   "geo": [39.31083, -119.65167, 150],
+   "geo": [
+    39.31083,
+    -119.65167,
+    150
+   ],
    "clue": "Find the big theater at the corner of B Street and a cross street. Two earlier opera houses on the spot burned down. This is the third.",
    "safety": "Stay on the sidewalk and cross at the corner. Hills here are steep, so watch your footing. Look at the building from outside.",
    "field": "Field notes pending: curb cuts and the viewing spot have not been checked on foot yet.",
@@ -279,6 +313,17 @@
     "b": "1997",
     "la": "The third Piper's",
     "lb": "A working theater"
+   },
+   "spot": {
+    "q": "The 1937 photo shows the third Piper's Opera House. How many earlier opera houses burned before it opened in 1885?",
+    "options": [
+     "None",
+     "Two",
+     "Three",
+     "Four"
+    ],
+    "answer": 1,
+    "why": "The first burned in the Great Fire of 1875 and the second on March 13, 1883. The third opened with a grand ball on March 6, 1885."
    }
   },
   {
@@ -289,7 +334,11 @@
    "tag": "Stop 4 of 4",
    "teaser": "A four-story school with a steep roof.",
    "map": "537 S C St, Virginia City, NV",
-   "geo": [39.30418, -119.65223, 150],
+   "geo": [
+    39.30418,
+    -119.65223,
+    150
+   ],
    "clue": "Look for a big four-story school building on the south end of C Street. It has a steep roof and a lot of windows. It was built in 1876 for more than 1,000 students.",
    "safety": "Stay on public sidewalks. The museum inside is optional and has its own hours. Do not climb fences or go into any old mine sites around town.",
    "field": "Field notes pending: sidewalk slope and the viewing spot have not been checked on foot yet.",
@@ -370,6 +419,17 @@
     "b": "1986",
     "la": "A brand-new school",
     "lb": "A school museum"
+   },
+   "spot": {
+    "q": "The 1937 photo shows the Fourth Ward School, built in 1876. After the last class graduated in 1936, what became of the building?",
+    "options": [
+     "It was torn down at once",
+     "It sat closed for years, then reopened as a museum in 1986",
+     "It became a hotel",
+     "It burned in 1937"
+    ],
+    "answer": 1,
+    "why": "It sat closed and falling apart for years, then reopened in 1986 as the Historic Fourth Ward School Museum."
    }
   }
  ],
