@@ -972,6 +972,7 @@ body.inboss .hero > .mono,body.inboss .hero .xp,body.inboss .hero .bulbs,body.in
 body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
 
 .stickgo{position:sticky;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.bsnack{pointer-events:none}.bsnack button,.bsnack a{pointer-events:auto}
 </style>
 
 <div class="app">
@@ -1229,7 +1230,7 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
   }
   function lateVerify(st,d){
     if(!(d&&st.geo&&!cur.demo)||geoVerified(cityId,cur.i)||geoDenied) return '';
-    return '<section class="card"><p class="mono">Verified visit</p><p>Standing at '+st.name+' now? Add the gold stamp.</p><button class="btn gold" data-a="geo">Verify this visit</button><p class="hint">Optional. Checked on this phone only, never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p></section>';
+    return '<section class="card"><p class="mono">Verified visit</p><p>You already have this stamp. Standing at '+st.name+' right now? Verify this visit to upgrade it to a gold stamp and earn +50 XP.</p><button class="btn gold" data-a="geo">Verify this visit</button><p class="hint">Optional. Checked on this phone only, never sent anywhere.</p><p id="geoMsg" class="geomsg" role="status"></p></section>';
   }
   // Live location while the app is open (never in the background, never sent anywhere)
   var geoPos=null, geoWatchId=null, nearHit=null;
@@ -1254,13 +1255,14 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
     for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
     return {k:tk,i:ni};
   }
+  var nearAll=false;
   function nearListHtml(){
     if(atHome===false||geoDenied||!navigator.geolocation) return '';
     if(!geoPos){ return geoGranted()?'':'<section class="card nearlist"><p class="mono">Stops near me</p><button class="btn ghost" data-a="nearme">Show the closest stops</button><p class="hint">Optional. Your location stays on this phone and is never sent anywhere.</p></section>'; }
     var arr=[], nx=nextRef(); ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st,i){ if(!st.geo||ALL[k].done[i]||(nx&&nx.k===k&&nx.i===i)) return; var d=distM(geoPos.lat,geoPos.lon,st.geo[0],st.geo[1]); if(d<=150000) arr.push({c:k,i:i,d:d}); }); });
-    arr.sort(function(x,y){ return x.d-y.d; }); arr=arr.slice(0,5);
+    arr.sort(function(x,y){ return x.d-y.d; }); var more=arr.length>3&&!nearAll; arr=arr.slice(0,nearAll?8:3);
     if(!arr.length) return '<section class="card nearlist"><p class="mono">Stops near me</p><p>No unstamped stop within 90 miles of you. Pick a town from Towns to plan a trip.</p></section>';
-    return '<section class="nearlist" aria-label="Stops near you"><p class="mono">Closest to you</p>'+arr.map(function(x){ var st=CITIES[x.c].stops[x.i]; return '<button class="rcard" data-a="neargo" data-c="'+x.c+'" data-i="'+x.i+'" data-far="1"><span><strong>'+st.name+'</strong><span class="rsub">'+CITIES[x.c].name+' · '+nice(x.d)+'</span></span><span class="go">Open ›</span></button>'; }).join('')+'</section>';
+    return '<section class="nearlist" aria-label="Stops near you"><p class="mono">Closest to you</p>'+arr.map(function(x){ var st=CITIES[x.c].stops[x.i]; return '<button class="rcard" data-a="neargo" data-c="'+x.c+'" data-i="'+x.i+'" data-far="1"><span><strong>'+st.name+'</strong><span class="rsub">'+CITIES[x.c].name+' · '+nice(x.d)+'</span></span><span class="go">Open ›</span></button>'; }).join('')+(more?'<button class="btn ghost" data-a="nearall">See more nearby stops</button>':'')+'</section>';
   }
   /* starting-town suggestion for players far from Nevada: guessed from the phone's time zone on the phone itself, nothing is sent anywhere */
   function startTownHtml(){
@@ -1348,7 +1350,7 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
   function updateHeader(){
     var x=xp(), r=rank(x);
     document.getElementById('rankName').textContent=r.name;
-    document.getElementById('xpText').textContent=x+' XP'+(r.next?' · next at '+r.to:' · max rank');
+    document.getElementById('xpText').textContent=x+' town XP'+(r.next?' · next rank at '+r.to:' · top rank');
     var frac=r.next?(x-r.from)/(r.to-r.from):1;
     document.getElementById('xpFill').style.width=Math.round(frac*100)+'%';
     var bar=document.getElementById('xpBar');
@@ -1421,7 +1423,7 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
     for(var q=0;q<tc.stops.length;q++){ if(!ALL[tk].done[q]){ ni=q; break; } }
     var allDone=tc.stops.every(function(x,i){ return ALL[tk].done[i]; });
     var btn=allDone?'<button class="bigbtn" data-a="gomissions"><span class="bl">Town complete</span><span class="bs">Pick your next town</span></button>':'<button class="bigbtn" data-a="nextstop" data-c="'+tk+'" data-i="'+ni+'"><span class="bl">'+(got>0?'Next stop':'Start your first stop')+'</span><span class="bs">'+tc.stops[ni].name+' · '+tc.name+'</span></button>';
-    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">Level '+lv.n+' · '+lv.title+' <span class="snext">· '+nfmt(lv.to-gs.xp)+' XP to level '+(lv.n+1)+'</span></p></div>':'';
+    var st=got>0?'<div class="stl"><div class="snum"><b>'+got+'</b><span>of '+total+' stamps</span></div><p class="sverd">Explorer level '+lv.n+' · '+lv.title+' <span class="snext">· '+nfmt(lv.to-gs.xp)+' XP to level '+(lv.n+1)+'</span></p></div>':'';
     return '<section class="stat" aria-label="Your progress">'+st+btn+'</section>';
   }
   function ringsHtml(){
@@ -1976,7 +1978,7 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
   function closeBpop(){ clearTimeout(bsnT); var e=document.getElementById('bpop'); if(e){ e.remove(); setTimeout(flushBadges,300); } }
   function levelHtml(s){
     var lv=lvOf(s.xp);
-    return '<section class="xlv" aria-label="Explorer level"><div class="lvl-top"><div class="lvl-n"><span>Level</span><b>'+lv.n+'</b></div><div class="lvl-t"><strong>'+lv.title+'</strong><span>'+nfmt(s.xp)+' XP · '+nfmt(lv.to-s.xp)+' to level '+(lv.n+1)+'</span></div></div><div class="lbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+lv.pc+'" aria-label="Progress to level '+(lv.n+1)+'"><i style="width:'+lv.pc+'%"></i></div>'
+    return '<section class="xlv" aria-label="Explorer level"><div class="lvl-top"><div class="lvl-n"><span>Level</span><b>'+lv.n+'</b></div><div class="lvl-t"><strong>'+lv.title+'</strong><span>Explorer · '+nfmt(s.xp)+' XP · '+nfmt(lv.to-s.xp)+' to level '+(lv.n+1)+'</span></div></div><div class="lbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+lv.pc+'" aria-label="Progress to level '+(lv.n+1)+'"><i style="width:'+lv.pc+'%"></i></div>'
       +'<details class="lvl-how"><summary>How XP works</summary><ul><li><b>+100</b> for every stamp</li><li><b>+25</b> for each claim you sort correctly</li><li><b>+50</b> for a stamp verified by being there</li><li><b>+50</b> for your first stamp in a new state</li><li><b>+100</b> for finishing a town</li><li><b>Up to +300</b> from a town’s final challenge</li></ul></details></section>';
   }
   function tileHtml(x){
@@ -2290,6 +2292,7 @@ body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
     if(a==='goback'){ goBack(); return; }
     if(a==='demo'){ if(!S.done[cur.i]){ demoSnap={done:S.done.slice(),claims:S.claims.slice()}; demoC=S; cur.demo=1; cur.step=1; render(true); window.scrollTo(0,0);} return; }
     if(a==='geo'){ geoCheck(false); return; }
+    if(a==='nearall'){ nearAll=true; nearPaint(); return; }
     if(a==='nearme'){
       if(!navigator.geolocation){ toast('This device cannot share its location.'); return; }
       navigator.geolocation.getCurrentPosition(function(pos){ try{ localStorage.setItem('stp-geo-ok','1'); }catch(e){} geoStartWatch(); onFix(pos); nearPaint(); },function(err){ if(err&&err.code===1){ geoDenied=true; toast('Location is off for this app, which is fine. Pick a town from Towns.'); } else toast('Could not get your location. Try again outside.'); nearPaint(); },{enableHighAccuracy:false,timeout:15000,maximumAge:60000});

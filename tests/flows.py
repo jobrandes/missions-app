@@ -162,6 +162,9 @@ with sync_playwright() as p:
     ctx,gp=live_ctx(0.0,-30.0); gp.wait_for_timeout(1200)
     need('within 90 miles' in gp.inner_text('#nearBox').lower() and gp.locator('#nearBox .rcard').count()==0,'live location: nothing pushy when no stop is near')
     ctx,gp=live_ctx(39.5325,-119.81366); gp.wait_for_timeout(1200); need('closest to you' in gp.inner_text('#nearBox').lower() and gp.locator('#nearBox .rcard').count()>0,'live location: shows the nearest stop distance')
+    need(gp.locator('#nearBox .rcard[data-a=neargo]').count()<=3,'Home shows at most 3 nearby stops first')
+    if gp.locator('#nearBox [data-a=nearall]').count():
+        gp.click('#nearBox [data-a=nearall]'); need(gp.locator('#nearBox .rcard[data-a=neargo]').count()>3,'See more nearby stops shows the rest')
     gp.click('#nearBox [data-a=neargo]'); gp.wait_for_timeout(400); need(gp.locator('.opt').count()==0,'opening a far stop stays on Find it')
     ctx.set_geolocation({'latitude':39.5287,'longitude':-119.8116,'accuracy':20}); gp.wait_for_timeout(2500)
     need(gp.locator('.opt').count()>0,'walking up to the stop you are looking at moves on by itself')
@@ -188,11 +191,11 @@ with sync_playwright() as p:
     pg.click('.city >> text=Reno'); pg.click('#tab-rewards'); need(pg.input_value('#codeOut')==code,'code is the same from either town')
     # v1 save migrates
     pg=new({'then-now-reno-v1':{'done':[1,1,0,0],'claims':[1,0,0,0,0,0,0,0]}})
-    need(pg.inner_text('#cityName').lower()=='reno' and '225 XP' in pg.inner_text('#xpText'),'v1 save migrates (225 XP)')
+    need(pg.inner_text('#cityName').lower()=='reno' and '225 TOWN XP' in pg.inner_text('#xpText'),'v1 save migrates (225 XP)')
     # restore each code format
     for good,exp in (('TN1-110010000000','225 XP'),('TN2-110010000000-000000000000','225 XP'),('TN3-110010000000-100000000000','225 XP')):
         pg=new(); pg.click('.town >> nth=0'); pg.click('#tab-rewards'); pg.fill('#codeIn',good); pg.click('text=Restore')
-        need(exp in pg.inner_text('#xpText'),f'restore {good[:3]} gives {exp}, got {pg.inner_text("#xpText")}')
+        need(exp.replace(' XP',' TOWN XP') in pg.inner_text('#xpText'),f'restore {good[:3]} gives {exp}, got {pg.inner_text("#xpText")}')
     pg=new(); pg.click('.town >> nth=0'); pg.click('#tab-rewards'); pg.fill('#codeIn','TN3-1100'); pg.click('text=Restore')
     need('does not look right' in pg.inner_text('#codeMsg').lower(),'bad code is rejected')
     pg.fill('#codeIn','TN3-'+'-'.join(['000000000000']*(NT+1))); pg.click('text=Restore'); need('more towns' in pg.inner_text('#codeMsg').lower(),'code with too many towns is rejected with a clear message')
@@ -205,7 +208,7 @@ with sync_playwright() as p:
         pg.click('.opt >> nth=%d'%k)
     need('virtual stamp earned' in pg.inner_text('#main').lower(),'demo answer earns a virtual stamp')
     pg.click('[data-a=exit]'); pg.click('#tab-rewards')
-    need('0 XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'virtual stamp does not add town XP, got {pg.inner_text("#xpText")}')
+    need('0 TOWN XP' in pg.inner_text('#xpText') or pg.inner_text('#xpText').strip().startswith('0'),f'virtual stamp does not add town XP, got {pg.inner_text("#xpText")}')
     need(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-virt')||'{}')).length")==1,'virtual stamp is saved once')
     need(pg.evaluate("JSON.parse(localStorage.getItem('then-now-v3')||'{}').p?JSON.stringify(JSON.parse(localStorage.getItem('then-now-v3')).p).indexOf('1')<0:true"),'virtual stamp never touches real stamps or the save code')
     # level and badges: first stamp unlocks First Stamp (non-blocking snackbar), Trophy Case opens from it

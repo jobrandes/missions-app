@@ -17,6 +17,8 @@ with sync_playwright() as p:
         pg.click('.city >> text='+city)
         out[city+':trail']=h(pg.inner_html('#main')+pg.inner_html('#hero'))
         for i in range(4):
+            pg.evaluate("(()=>{var e=document.getElementById('bpop');if(e)e.remove()})()")
+            pg.locator(f'.stop >> nth={i}').evaluate("e=>e.scrollIntoView({block:'center'})")
             pg.click(f'.stop >> nth={i}'); out[f'{city}:{i}:find']=h(pg.inner_html('#main'))
             pg.click('text=I am here')
             for k in range(4):

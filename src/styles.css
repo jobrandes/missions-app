@@ -966,3 +966,4 @@ body.inboss .hero > .mono,body.inboss .hero .xp,body.inboss .hero .bulbs,body.in
 body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
 
 .stickgo{position:sticky;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.bsnack{pointer-events:none}.bsnack button,.bsnack a{pointer-events:auto}

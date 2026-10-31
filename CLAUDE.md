@@ -252,3 +252,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Bottom bar (v04): goHome() sets bnavSel='home' so any Home link highlights Home.
 - Bottom bar room (v03): page bottom padding 96px (+safe area) so the last card scrolls fully clear of the floating bar on Home, Towns, Trails, Passport; test added.
 - Check-in reach (v05): the 'I am here. Show me the question' button is sticky to the bottom of the screen on a stop's first step (.stickgo), so it never needs scrolling to find; test added.
+- XP labels (v06): town header reads 'N town XP · next rank at M' (per-town rank); Home and Passport say 'Explorer level' for the global track.
+- Verified-visit card (v07): on an already-stamped stop it now says you already have the stamp and that verifying upgrades it to a gold stamp for +50 XP.
+- Nearby list (v08): Home shows 3 closest stops, then a 'See more nearby stops' button reveals up to 8.
+- Badge popup (test fix): .bsnack lets taps pass through (only its See and close buttons catch taps) so it never blocks Next buttons beneath it for its 13 s.
