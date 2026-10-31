@@ -962,6 +962,8 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .feat .fcred{font-size:.75rem;color:var(--muted)}
 .tthumb{flex:none;width:44px;height:44px;border-radius:10px;object-fit:cover;background:var(--surface-2)}
 .bsn-p{font-size:0.75rem;color:var(--ink);line-height:1.3;margin-top:4px}
+.mhelp>*:not(summary){margin:0 0 8px;padding-left:0;font-size:inherit;line-height:inherit}.mhelp{padding-bottom:4px}.mhelp>.mitem,.mhelp>.mdet,.mhelp>.mlink{margin:0 12px 8px}
+.mhelp>.mitem{width:calc(100% - 24px)}
 </style>
 
 <div class="app">
@@ -1531,19 +1533,21 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
      +item('backup','Back up your passport','Save a code so a lost phone does not lose your stamps')
      +(got>0?item('share','Share my passport','Make a picture of your stamps',' data-k=""'):'')
      +(/^https?:$/.test(location.protocol)?'<p class="mgroup">Play anywhere</p>'+item('daily','Daily Fact or Fiction','One claim a day, with sources. No travel needed'):'')
-     +'<p class="mgroup">Help</p>'
-     +item('replaytour','Replay the guide','The quick tour of how a stop works')
-     +(isNativeApp()?item('hapticTest','Test the stamp buzz','Feel the little tap you get when a stamp is earned'):'')
-     +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question about what is right in front of you.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
-     +item('report','Report a problem or send feedback','Tell us what is wrong or confusing')
-     +(/^https?:$/.test(location.protocol)&&/stampthepast\.com$/.test(location.hostname)?'<a class="mlink" href="/">About Stamp the Past (our website)</a>':'')
-     +'<p class="mgroup">Privacy</p>'
-     +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>Location is optional and stays on your phone</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></details>'
-     +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
      +'<p class="mgroup">Settings</p>'
      +'<div class="mrow"><span id="thl">Appearance</span><div class="segs" role="group" aria-labelledby="thl">'+seg+'</div></div>'
      +(geoGranted()?'<div class="mrow"><span id="lvl">Live location while the app is open</span><div class="segs"><button class="seg on" data-a="livetoggle" aria-labelledby="lvl" aria-pressed="'+liveOn()+'">'+(liveOn()?'On':'Off')+'</button></div></div>':'')
      +(NG?'<div class="mrow"><span id="bgl">Alert me near stops, even when the app is closed</span><div class="segs"><button class="seg on" data-a="bgtoggle" aria-labelledby="bgl" aria-pressed="'+bgOn()+'">'+(bgOn()?'On':'Off')+'</button></div></div><p class="msub">iPhone asks for "Always" location. It only watches the 20 nearest stops, and nothing leaves your phone.</p>':'')
+     +'<p class="mgroup">Help</p>'
+     +item('report','Report a problem or send feedback','Tell us what is wrong or confusing')
+     +'<details class="mdet mhelp"><summary>Guide and about</summary>'
+     +item('replaytour','Replay the guide','The quick tour of how a stop works')
+     +(isNativeApp()?item('hapticTest','Test the stamp buzz','Feel the little tap you get when a stamp is earned'):'')
+     +'<details class="mdet"><summary>How Stamp the Past works</summary><ol><li><strong>Find the spot.</strong> A clue sends you to a real landmark.</li><li><strong>Prove it.</strong> Answer a question about what is right in front of you.</li><li><strong>Fact or fiction.</strong> Sort the famous story into solid, disputed or not true.</li><li><strong>Get stamped.</strong> Every stop adds a stamp and a then and now photo.</li></ol></details>'
+     +(/^https?:$/.test(location.protocol)&&/stampthepast\.com$/.test(location.hostname)?'<a class="mlink" href="/">About Stamp the Past (our website)</a>':'')
+     +'</details>'
+     +'<p class="mgroup">Privacy</p>'
+     +'<details class="mdet"><summary>For parents and grown-ups</summary><ul><li>No accounts and no sign-up</li><li>Location is optional and stays on your phone</li><li>No photo uploads</li><li>No ads</li><li>Every story shows its sources</li><li>Every photo shows its credit</li></ul></details>'
+     +'<details class="mdet"><summary>Photo credits for '+city().name+'</summary>'+creditsList()+'</details>'
      +'<p class="mgroup">Account</p>'
      +'<div class="macct"><strong>No account needed.</strong><span class="msub">Your stamps live on this phone. Use a backup code to move them to a new one. Optional sign-in may come later, so your stamps can follow you between devices.</span></div>'
      +'<p class="mfoot">Made by a mom and her teenage son.</p></div>';

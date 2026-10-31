@@ -245,3 +245,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Home 'Story of the day' card (u08): featuredHtml() in src/app.js picks one not-yet-stamped stop of the current town per local day, shows its now-photo with credit, a sourced fact (or teaser) and a Read this stop button. Returning players only, placed below Closest to you so Next stop stays first.
 - Trails stop rows (u10) show a 44px lazy-loaded thumbnail of the stop's now-photo (.tthumb), decorative alt.
 - Badge snackbar (u06): a single new badge earned inside a stop also says 'Earned at <stop>, <town>.' plus the first sentence of that stop's fact (.bsn-p); stays 13 s. No share button on the snackbar (too tight on small phones).
+- Menu (u09): Settings moved up under Play anywhere; Report stays visible under Help; Replay guide, buzz test, How it works and the website link now sit in a 'Guide and about' details (.mhelp). Privacy and backup wording unchanged.
