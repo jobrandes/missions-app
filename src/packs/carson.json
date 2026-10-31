@@ -97,6 +97,17 @@
     "b": "Today",
     "la": "Capitol, early years",
     "lb": "The Capitol from above"
+   },
+   "spot": {
+    "q": "The 1875 photo shows the Capitol with young trees. To save money, where did the builders get the sandstone?",
+    "options": [
+     "A quarry in Utah",
+     "The Comstock mines",
+     "The Nevada State Prison quarry",
+     "The Truckee riverbed"
+    ],
+    "answer": 2,
+    "why": "They used sandstone from the Nevada State Prison quarry, hauled in by prison labor. It still cost far more than the first $100,000."
    }
   },
   {
@@ -192,6 +203,17 @@
     "b": "Today",
     "la": "The Mint, 1889",
     "lb": "Nevada State Museum"
+   },
+   "spot": {
+    "q": "The 1889 album page shows the Mint just before it reopened. What does the Mint building house today?",
+    "options": [
+     "The Nevada State Museum",
+     "The governor's office",
+     "A bank",
+     "A railroad depot"
+    ],
+    "answer": 0,
+    "why": "The state bought the building in 1939, and since 1941 it has been the Nevada State Museum."
    }
   },
   {
@@ -287,6 +309,17 @@
     "b": "Today",
     "la": "Students, 1905",
     "lb": "The campus today"
+   },
+   "spot": {
+    "q": "The 1905 photo shows students at the Stewart Indian School. For how long did the school run, from its opening on December 17, 1890?",
+    "options": [
+     "Until 1931",
+     "Until 1950",
+     "Until 1965",
+     "Until 1980"
+    ],
+    "answer": 3,
+    "why": "It opened in 1890 and closed in 1980. It was the only off-reservation Indian boarding school in Nevada."
    }
   },
   {
@@ -382,6 +415,17 @@
     "b": "Today",
     "la": "V&T No. 20, Tahoe",
     "lb": "The railroad museum"
+   },
+   "spot": {
+    "q": "The photo shows V&T engine No. 20 in Carson City. What did the Virginia & Truckee Railroad mainly haul?",
+    "options": [
+     "Cattle to California",
+     "Ore, lumber and supplies for the Comstock mines",
+     "Tourists to Lake Tahoe",
+     "Mail for the Pony Express"
+    ],
+    "answer": 1,
+    "why": "It was built to haul ore, lumber and supplies for the Comstock Lode silver mines. The last run came in 1950."
    }
   }
  ],

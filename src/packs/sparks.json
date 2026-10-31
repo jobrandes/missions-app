@@ -101,6 +101,17 @@
     "b": "Today",
     "la": "Town founded",
     "lb": "Victorian Square"
+   },
+   "spot": {
+    "q": "Sparks began in 1904 as a railroad town. Which railroad moved its terminal here from Wadsworth?",
+    "options": [
+     "Union Pacific",
+     "Southern Pacific",
+     "Virginia & Truckee",
+     "Santa Fe"
+    ],
+    "answer": 1,
+    "why": "The Southern Pacific moved its terminal here in 1904, and the new town was named for Nevada governor John Sparks."
    }
   },
   {
@@ -200,6 +211,17 @@
     "b": "2009",
     "la": "Terminal moved",
     "lb": "Last passenger train"
+   },
+   "spot": {
+    "q": "The 1906 postcard shows the railroad shops. What marks the spot today, now that the shops are mostly gone?",
+    "options": [
+     "A shopping mall",
+     "A baseball field",
+     "A statue of the governor",
+     "A historical marker"
+    ],
+    "answer": 3,
+    "why": "The shops are mostly gone and a historical marker now tells the story. Passenger trains stopped here until 2009."
    }
   },
   {
@@ -295,6 +317,17 @@
     "b": "Today",
     "la": "Postcard",
     "lb": "Tahoe-Pyramid Trail"
+   },
+   "spot": {
+    "q": "The 1906 postcard shows the river at Sparks. Where does the Truckee River begin?",
+    "options": [
+     "Pyramid Lake",
+     "The Carson Range",
+     "Lake Tahoe",
+     "The Humboldt Sink"
+    ],
+    "answer": 2,
+    "why": "The Truckee begins at Lake Tahoe and runs about 120 miles down to Pyramid Lake."
    }
   },
   {
@@ -398,6 +431,17 @@
     "b": "1997",
     "la": "Oil leak into the pit",
     "lb": "Flood fills the lake"
+   },
+   "spot": {
+    "q": "Sparks Marina is a lake today. What was it before, until the 1997 flood filled it?",
+    "options": [
+     "A gravel pit",
+     "A rodeo ground",
+     "A rail yard",
+     "A cattle pond"
+    ],
+    "answer": 0,
+    "why": "It was the Helms gravel pit. After an oil leak and a cleanup, the New Year's flood of 1997 filled it with water in about two days."
    }
   }
  ],
