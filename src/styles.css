@@ -964,3 +964,5 @@ body.inboss .hero{min-height:0;padding:12px 16px;gap:4px;justify-content:center}
 body.inboss .hero h1,body.inboss .hero h1.long,body.inboss .hero h1.xl{font-size:1.75rem;line-height:1.05}
 body.inboss .hero > .mono,body.inboss .hero .xp,body.inboss .hero .bulbs,body.inboss .hero .hero-credit,body.inboss .hero .rank-row{display:none}
 body.inboss .tabs,body.inboss #cities,body.inboss .bnav{display:none}
+
+.stickgo{position:sticky;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:6;box-shadow:0 8px 22px rgba(0,0,0,.28)}

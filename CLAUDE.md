@@ -251,3 +251,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Final challenge (v02): body.inboss (set in render) shrinks the hero to a slim town name and hides tabs, chips and the bottom nav so the question and answers are visible without scrolling.
 - Bottom bar (v04): goHome() sets bnavSel='home' so any Home link highlights Home.
 - Bottom bar room (v03): page bottom padding 96px (+safe area) so the last card scrolls fully clear of the floating bar on Home, Towns, Trails, Passport; test added.
+- Check-in reach (v05): the 'I am here. Show me the question' button is sticky to the bottom of the screen on a stop's first step (.stickgo), so it never needs scrolling to find; test added.

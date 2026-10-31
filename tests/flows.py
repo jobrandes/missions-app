@@ -253,6 +253,11 @@ with sync_playwright() as p:
         pg.click('#bnav [data-t=%s]'%t); pg.wait_for_timeout(150)
         gap=pg.evaluate("(()=>{const n=document.querySelector('#bnav').getBoundingClientRect();return parseFloat(getComputedStyle(document.body).paddingBottom)-(innerHeight-n.top)})()")
         need(gap>=16,'bottom bar leaves room under the last card on '+t)
+    # check-in button stays reachable on the first screen of a stop (pinned to the bottom while the clue is read)
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[0,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    pg.click('.stop >> nth=0'); pg.wait_for_timeout(300)
+    bt=pg.evaluate("(()=>{const r=[...document.querySelectorAll('button')].find(b=>/I am here/i.test(b.textContent)).getBoundingClientRect();return [r.top,r.bottom,innerHeight]})()")
+    need(bt[0]>0 and bt[1]<=bt[2],'I am here button is on screen without scrolling')
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')
