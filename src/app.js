@@ -1164,6 +1164,7 @@
     updateHeader();
     document.body.classList.toggle('ishome',atHome); document.body.classList.toggle('ispass',atHome&&onPass); document.body.classList.remove('navhide'); updateBnav();
     document.body.classList.toggle('instop',!!cur&&!boss);
+    document.body.classList.toggle('inboss',!!boss);
     var m=document.getElementById('main');
     m.setAttribute('aria-labelledby','tab-'+tab);
     if(boss&&(atHome||boss.pid!==cityId)) boss=null;
