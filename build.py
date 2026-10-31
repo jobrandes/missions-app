@@ -52,7 +52,16 @@ open(R+'site/_headers','w').write(hd)
 print('offline files written, build',h)
 
 # --- landing page at the site root (the app itself lives at /play) ---
-land=rd('src/landing.html').replace('{{TOWNS}}',str(len(order)))
+NEAR_ZONES={'America/New_York':'ny','America/Toronto':'buffalo','America/Detroit':'detroit','America/Chicago':'chicago','America/Indiana/Indianapolis':'indianapolis','America/Indianapolis':'indianapolis','America/Kentucky/Louisville':'louisville','America/Denver':'denver','America/Boise':'saltlake','America/Phoenix':'phoenix','America/Anchorage':'sitka','Pacific/Honolulu':'honolulu'}
+near={}
+for t in sorted(set(NEAR_ZONES.values())|{'ny'}):
+    c=packs[t]; L=[]
+    for st in c['stops']:
+        ph=(st.get('now') or {}).get('ph')
+        if ph and len(L)<4: L.append({'src':'photos/'+ph['k']+'.jpg','alt':(st['now'].get('label') or st['name'])+', '+c['name'],'by':ph.get('by',''),'lic':ph.get('lic','')})
+    assert len(L)==4,t
+    near[t]={'name':c['name'],'stamps':L}
+land=rd('src/landing.html').replace('{{TOWNS}}',str(len(order))).replace('{{NEAR}}',json.dumps({'zones':NEAR_ZONES,'towns':near},ensure_ascii=False,separators=(',',':')))
 assert '{{' not in land
 open(R+'site/index.html','w').write(land)
 open(R+'site/google7a48ffa7f434a573.html','w').write('google-site-verification: google7a48ffa7f434a573.html')

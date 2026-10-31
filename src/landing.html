@@ -50,6 +50,7 @@ a{color:var(--accent)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font:700 19px var(--font-display);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
 .btn:hover{filter:brightness(1.08)}
 .cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:24px}
+#near{margin:12px 0 0}
 .stamps{position:relative;aspect-ratio:1/1;max-width:420px;width:100%;margin-inline:auto}
 .stamp{position:absolute;width:52%;aspect-ratio:1/1;border-radius:50%;padding:7px;background:var(--surface);box-shadow:0 8px 22px rgba(0,0,0,.22)}
 .stamp::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2.5px dashed var(--accent);opacity:.8}
@@ -106,9 +107,10 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
       <div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div>
       <h1>Go there.<br>Prove it.<br>Stamp it.</h1>
       <p class="sub">A mission game for real places. Find the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p>
+      <p class="mono" id="near" hidden></p>
       <div class="cta"><a class="btn" href="play">Play free in your browser</a><span class="mono">Free. No sign-up. Works on any phone.</span> <a class="mono" href="daily/">Or try today's Fact or Fiction</a></div>
     </div>
-    <div class="stamps" aria-label="Four passport stamps, each a real photo of a landmark">
+    <div class="stamps" id="stamps" aria-label="Four passport stamps, each a real photo of a landmark">
       <div class="stamp"><img alt="The Reno Arch, lit at dusk" src="photos/arch_now.jpg"></div>
       <div class="stamp"><img alt="Piper's Opera House, Virginia City" src="photos/vc_pip_now.jpg"></div>
       <div class="stamp"><img alt="C Street, Virginia City" src="photos/vc_cs_now.jpg"></div>
@@ -174,7 +176,7 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
   <footer>
     <p><strong>Made by a mom and her teenage son.</strong> {{TOWNS}} towns across the US so far, with more on the way.</p>
     <p class="mono"><a href="daily/">Daily Fact or Fiction</a> · <a href="places/">All places</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:stampthepast@gmail.com">stampthepast@gmail.com</a></p>
-    <p class="credits">Stamp photos: Reno Arch by Missvain (CC BY 4.0). C Street by Famartin (CC BY-SA 4.0). Piper's Opera House by Vivaverdi (CC BY 3.0). Fourth Ward School by Carol M. Highsmith, Library of Congress (public domain). All via Wikimedia Commons, resized.</p>
+    <p class="credits" id="stampcred">Stamp photos: Reno Arch by Missvain (CC BY 4.0). C Street by Famartin (CC BY-SA 4.0). Piper's Opera House by Vivaverdi (CC BY 3.0). Fourth Ward School by Carol M. Highsmith, Library of Congress (public domain). All via Wikimedia Commons, resized.</p>
   </footer>
 </div>
 
@@ -201,5 +203,17 @@ footer .credits{font:400 12px/1.6 var(--font-mono);color:var(--muted)}
     show();
   }catch(e){}
 })();
+</script>
+<script>
+/* photos near you: picks the four landing photos from your phone's time zone, on this device only. No location permission, nothing is sent anywhere. Western US zones keep the Nevada photos. */
+(function(){try{
+  var N={{NEAR}}, tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||''), k=N.zones[tz];
+  if(!k&&tz&&!/^(America|Pacific)\//.test(tz)) k='ny';
+  var t=k&&N.towns[k]; if(!t) return;
+  var imgs=document.querySelectorAll('#stamps .stamp img'); if(imgs.length!==4) return;
+  t.stamps.forEach(function(s,i){ imgs[i].src=s.src; imgs[i].alt=s.alt; });
+  var n=document.getElementById('near'); if(n){ n.textContent='Photos from '+t.name+', picked from your time zone. Play anywhere.'; n.hidden=false; }
+  var c=document.getElementById('stampcred'); if(c){ c.textContent='Stamp photos: '+t.stamps.map(function(s){ return s.alt.split(',')[0]+' by '+s.by+(s.lic?' ('+s.lic+')':''); }).join('. ')+'. Photos resized. Full source links are on each stop in the game.'; }
+}catch(e){}})();
 </script>
 </body></html>
