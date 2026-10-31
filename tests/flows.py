@@ -217,6 +217,7 @@ with sync_playwright() as p:
         if pg.query_selector('.opt.right'): break
     pg.wait_for_selector('#bpop',timeout=6000)
     need('first stamp' in pg.inner_text('#bpop').lower(),'first stamp unlocks the First Stamp badge')
+    need('earned at the reno arch' in pg.inner_text('#bpop').lower(),'badge popup names the stop that earned it')
     pp=pg.evaluate('window._pings'); need('stamp' in pp and 'first-stamp' in pp,'stamping sends anonymous stamp and first-stamp counts, got %s'%pp)
     need(pg.evaluate("JSON.parse(localStorage.getItem('stp-badges')||'{}').first")!=None,'earned badge is saved')
     need(pg.locator('#celeb').count()==0 and pg.locator('#bpop [data-a=trophy]').count()==1,'badge popup does not block the screen')

@@ -946,10 +946,12 @@
   var bsnT=null;
   function flushBadges(){
     if(!badgeQ.length||document.getElementById('celeb')||document.getElementById('bpop')) return;
-    var q=badgeQ.splice(0,badgeQ.length), s=gStats(), lv=lvOf(s.xp), b0=q[0];
+    var q=badgeQ.splice(0,badgeQ.length), s=gStats(), lv=lvOf(s.xp), b0=q[0], place='';
+    try{ var ps=(q.length===1&&document.body.classList.contains('instop')&&cur&&STOPS[cur.i])||null;
+      if(ps){ var f1=(ps.fact||'').split(/(?<=\.)\s/)[0], pf=(f1.length>20&&f1.length<=120)?' '+f1:''; place='<span class="bsn-p">Earned at '+ps.name+', '+CITIES[cityId].name+'.'+pf+'</span>'; } }catch(e){ place=''; }
     var d=document.createElement('div'); d.id='bpop'; d.className='bsnack'; d.setAttribute('role','status'); d.setAttribute('aria-live','polite');
-    d.innerHTML='<span class="bsn-m">'+medal(b0,true,56)+'</span><span class="bsn-t"><span class="mono">'+(q.length===1?'Badge unlocked':q.length+' badges unlocked')+'</span><strong>'+(q.length===1?b0.n:q.slice(0,3).map(function(b){ return b.n; }).join(', ')+(q.length>3?' and more':''))+'</strong><span class="bsn-d">'+(q.length===1?b0.d:'Level '+lv.n+' · '+lv.title)+'</span></span><span class="bsn-b"><button class="btn small" data-a="trophy">See</button><button class="bsn-x" data-a="bpopclose" aria-label="Dismiss">\u00d7</button></span>';
-    document.body.appendChild(d); clearTimeout(bsnT); bsnT=setTimeout(closeBpop,9000);
+    d.innerHTML='<span class="bsn-m">'+medal(b0,true,56)+'</span><span class="bsn-t"><span class="mono">'+(q.length===1?'Badge unlocked':q.length+' badges unlocked')+'</span><strong>'+(q.length===1?b0.n:q.slice(0,3).map(function(b){ return b.n; }).join(', ')+(q.length>3?' and more':''))+'</strong><span class="bsn-d">'+(q.length===1?b0.d:'Level '+lv.n+' · '+lv.title)+'</span>'+place+'</span><span class="bsn-b"><button class="btn small" data-a="trophy">See</button><button class="bsn-x" data-a="bpopclose" aria-label="Dismiss">\u00d7</button></span>';
+    document.body.appendChild(d); clearTimeout(bsnT); bsnT=setTimeout(closeBpop,place?13000:9000);
     try{ haptic('success'); }catch(e){}
   }
   function closeBpop(){ clearTimeout(bsnT); var e=document.getElementById('bpop'); if(e){ e.remove(); setTimeout(flushBadges,300); } }
