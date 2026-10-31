@@ -224,3 +224,7 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Photos: all from Commons (PD or CC BY-SA/PD), credited in CREDITS.md and each stop's `ph`. Then photos: c.1900 Capitol (C. C. Pierce, CHS), 1925 fort bastion (HABS), July 1935 Tower Bridge construction (HAER), 1886 Crocker house (HABS/Society of California Pioneers). The Tower Bridge "now" photo is a 2006 public-domain edit.
 - GPS circles are estimates from Wikipedia coordinates (Tower Bridge center moved east to the Sacramento approach). Nobody has walked these yet, so check circles on site.
 - Photo route lesson: in this session the built-in browser could read Commons pages but not run downloads. Chrome via Control_Chrome worked after a full Chrome restart (frozen tab made every execute_javascript time out). Sync XHR in execute_javascript returns the result string directly.
+
+## Stamp buzz test (Oct 31 2026)
+- Jo-Anne felt no haptic on the iPhone build (she may not have earned a stamp). `haptic()` now finds the StampStore plugin via `Capacitor.Plugins` or `registerPlugin`, and reports ok/missing/error.
+- New native-only menu item "Test the stamp buzz" (`hapticTest`) fires the buzz and toasts the result. Use it to tell a plugin failure from the iPhone's System Haptics setting.
