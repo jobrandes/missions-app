@@ -231,3 +231,6 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Anonymous error counter (Oct 31 2026)
 - `window` error and unhandledrejection listeners call `errPing(line)`: GoatCounter event `error` with title `error L<line>`, max 3 per visit, website only (same gate as the visit counter). No message text, no player data. Read it in GoatCounter under events.
+
+## Starting-town suggestion (Oct 31 2026)
+- First-time Home (zero stamps) shows a "New here? Start in <town>" card (`startTownHtml`, class `starttown`) picked from the phone's time zone via `Intl`; nothing is sent anywhere. Map: New York->ny, Toronto->buffalo, Detroit, Chicago, Indianapolis, Louisville, Denver, Boise->saltlake, Phoenix, Anchorage->sitka, Honolulu; any non-American zone -> ny. Los Angeles zone shows nothing (Reno stays the default). Checked with Playwright timezone_id for 4 zones; no flows test yet.

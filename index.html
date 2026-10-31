@@ -937,6 +937,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .hstamps-cap{opacity:1;color:var(--muted)}
 .credit{opacity:1}
 .dailycard{margin:12px 0}
+.starttown{margin:12px 0}
 </style>
 
 <div class="app">
@@ -1220,6 +1221,16 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     if(!arr.length) return '<section class="card nearlist"><p class="mono">Stops near me</p><p>No unstamped stop within 90 miles of you. Pick a town from Towns to plan a trip.</p></section>';
     return '<section class="nearlist" aria-label="Stops near you"><p class="mono">Closest to you</p>'+arr.map(function(x){ var st=CITIES[x.c].stops[x.i]; return '<button class="rcard" data-a="neargo" data-c="'+x.c+'" data-i="'+x.i+'" data-far="1"><span><strong>'+st.name+'</strong><span class="rsub">'+CITIES[x.c].name+' · '+nice(x.d)+'</span></span><span class="go">Open ›</span></button>'; }).join('')+'</section>';
   }
+  /* starting-town suggestion for players far from Nevada: guessed from the phone's time zone on the phone itself, nothing is sent anywhere */
+  function startTownHtml(){
+    try{
+      var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||''), M={'America/New_York':'ny','America/Toronto':'buffalo','America/Detroit':'detroit','America/Chicago':'chicago','America/Indiana/Indianapolis':'indianapolis','America/Indianapolis':'indianapolis','America/Kentucky/Louisville':'louisville','America/Denver':'denver','America/Boise':'saltlake','America/Phoenix':'phoenix','America/Anchorage':'sitka','Pacific/Honolulu':'honolulu'};
+      var k=M[tz]; if(!k&&tz&&!/^(America|Pacific)\//.test(tz)) k='ny';
+      if(!k||!CITIES[k]||sum(ALL[k].done)>0) return '';
+      var c=CITIES[k];
+      return '<button class="rcard starttown" data-a="city" data-c="'+k+'"><span><strong>New here? Start in '+c.name+'</strong><span class="rsub">A good first town if you are far from Nevada. '+c.stops.length+' stops, picked from your time zone on this phone.</span></span><span class="go">Go ›</span></button>';
+    }catch(e){ return ''; }
+  }
   function nearHtml(){ return nearCardHtml()+nearListHtml(); }
   function nearPaint(){ var e=document.getElementById('nearBox'); if(e) e.innerHTML=nearHtml(); }
   // Optional alerts when the app is closed (iPhone app only; the phone does the watching, nothing is sent anywhere)
@@ -1408,7 +1419,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var res0=null; [cityId].concat(ORDER).forEach(function(k){ if(!res0&&CITIES[k]){ var d0=sum(ALL[k].done); if(d0>0&&d0<CITIES[k].stops.length) res0=k; } });
     var h='<section class="home-hero'+(got>0?' ret':'')+'"><div><div class="wordmark" role="img" aria-label="Stamp the Past">Stamp the Past</div><h1>Go there.<br>Prove it.<br>Stamp it.</h1><p class="sub">A mission game for real places. Travel to the spot, answer what is in front of you, sort fact from tall tale, and watch the past fade into the present.</p><button class="btn heroGo" data-a="gomissions">'+(got>0?'Choose a mission':'Pick a mission')+'</button></div><div class="hstamps" aria-label="Four passport stamps, each a real photo of a landmark">'+stamps+'</div></section>';
     var how=got>0?'':'<section class="howto" aria-label="How it works"><h2>How it works</h2><ol><li><b>Go there.</b> Pick a mission and walk or drive to a real landmark.</li><li><b>Prove it.</b> Tap "I am here", read the story, answer the question in front of you.</li><li><b>Stamp it.</b> Each stamp earns XP, points that raise your level and unlock badges.</li></ol><p class="hint">Not near a mission? Open any stop and tap "Explore from home" to read it and fade the photos. Stamps are saved for real visits.</p></section>';
-    var nearH='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>';
+    var nearH='<div id="nearBox" class="nearbox">'+nearHtml()+'</div>'+(got===0?startTownHtml():'');
     h=(got>0?statusHtml(got,total,res0,hk)+bkNudgeHtml()+nearH+ringsHtml()+dailyCardHtml()+h:nearH+h+how+ringsHtml()+dailyCardHtml());
     var vcount=0; ORDER.forEach(function(k){ CITIES[k].stops.forEach(function(st){ if(st.verified&&st.verified.on) vcount++; }); });
     var res=null; [cityId].concat(ORDER).forEach(function(k){ if(!res&&CITIES[k]){ var d=sum(ALL[k].done); if(d>0&&d<CITIES[k].stops.length) res=k; } });
