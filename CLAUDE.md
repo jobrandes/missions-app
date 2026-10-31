@@ -249,3 +249,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Landing photos near you (n03): build.py bakes four now-photos (with credits) for each time-zone town into src/landing.html ({{NEAR}}); an inline script swaps the four hero stamps, a small caption and the credits line from Intl time zone, on the device only. Pacific zones keep Nevada; zones outside the Americas get New York. Static HTML (what crawlers see) stays Reno.
 - Home coherence (v01): nextRef() in src/app.js is the single source for Next stop; Closest to you skips it and Story of the day uses the Next-stop town and a different stop.
 - Final challenge (v02): body.inboss (set in render) shrinks the hero to a slim town name and hides tabs, chips and the bottom nav so the question and answers are visible without scrolling.
+- Bottom bar (v04): goHome() sets bnavSel='home' so any Home link highlights Home.

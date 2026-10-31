@@ -334,7 +334,7 @@
     tab='trail'; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0);
   }
   function openPass(){ leave(); atHome=true; onPass=true; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
-  function goHome(){ if(typeof bnavSel!=='undefined'&&0){} leave(); atHome=true; onPass=false; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
+  function goHome(){ bnavSel='home'; leave(); atHome=true; onPass=false; confirmReset=false; save(); applyCity(); render(); window.scrollTo(0,0); }
   function updateHeader(){
     var x=xp(), r=rank(x);
     document.getElementById('rankName').textContent=r.name;
