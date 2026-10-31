@@ -797,7 +797,7 @@ body.ispass .menubtn{margin-top:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root:not([data-theme=light]) .geomsg.bad{color:#f2a0a0}}
 :root[data-theme=dark] .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root[data-theme=dark] .geomsg.bad{color:#f2a0a0}
 .geomsg:empty{display:none}
-.nearbox:not(:empty){padding-top:56px}.nearcard.here{border-color:var(--gold,#b8860b)}
+.nearbox:not(:empty){padding-top:6px}.nearcard.here{border-color:var(--gold,#b8860b)}
 
 .herebanner{position:fixed;left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));width:calc(100% - 32px);max-width:520px;background:var(--bg);color:var(--ink);border:2px solid #c9a227;border-radius:16px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.28);z-index:40}
 .herebanner p{margin:0 0 10px;font-size:1rem}
@@ -933,3 +933,16 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .credit{opacity:1}
 .dailycard{margin:12px 0}
 .starttown{margin:12px 0}
+
+/* phone UX audit u01: stop title smaller so the photo and first instruction sit higher */
+#stopTitle{font-size:clamp(2rem,9.5vw,3rem);line-height:1.02}
+
+/* phone UX audit u03: shorter town hero on phones so the mission card starts higher */
+@media (max-width:430px){.hero{min-height:240px}}
+
+/* phone UX audit u04: edge fade on every sideways-scrolling row, plus end padding so the last card clears the fade */
+.tcards,.schips,.rrow{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent 100%)}
+.tcards::after,.schips::after,.rrow::after{content:"";flex:0 0 22px}
+
+/* phone UX audit u05 */
+.passhead .pnote{margin:12px 0 8px;font-size:.875rem;color:inherit;opacity:.9}

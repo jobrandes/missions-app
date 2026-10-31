@@ -803,7 +803,7 @@ body.ispass .menubtn{margin-top:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root:not([data-theme=light]) .geomsg.bad{color:#f2a0a0}}
 :root[data-theme=dark] .vchip.gold{background:#4a3a10;color:#f6e3a8;border-color:#8a6d1f}:root[data-theme=dark] .geomsg.bad{color:#f2a0a0}
 .geomsg:empty{display:none}
-.nearbox:not(:empty){padding-top:56px}.nearcard.here{border-color:var(--gold,#b8860b)}
+.nearbox:not(:empty){padding-top:6px}.nearcard.here{border-color:var(--gold,#b8860b)}
 
 .herebanner{position:fixed;left:50%;transform:translateX(-50%);top:calc(10px + env(safe-area-inset-top,0px));width:calc(100% - 32px);max-width:520px;background:var(--bg);color:var(--ink);border:2px solid #c9a227;border-radius:16px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.28);z-index:40}
 .herebanner p{margin:0 0 10px;font-size:1rem}
@@ -939,6 +939,19 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .credit{opacity:1}
 .dailycard{margin:12px 0}
 .starttown{margin:12px 0}
+
+/* phone UX audit u01: stop title smaller so the photo and first instruction sit higher */
+#stopTitle{font-size:clamp(2rem,9.5vw,3rem);line-height:1.02}
+
+/* phone UX audit u03: shorter town hero on phones so the mission card starts higher */
+@media (max-width:430px){.hero{min-height:240px}}
+
+/* phone UX audit u04: edge fade on every sideways-scrolling row, plus end padding so the last card clears the fade */
+.tcards,.schips,.rrow{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 32px),transparent 100%)}
+.tcards::after,.schips::after,.rrow::after{content:"";flex:0 0 22px}
+
+/* phone UX audit u05 */
+.passhead .pnote{margin:12px 0 8px;font-size:.875rem;color:inherit;opacity:.9}
 </style></head><body>
 
 <div class="app">
@@ -1457,7 +1470,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var got=0,total=0,full=0,seals=0,b=bossBest();
     ORDER.forEach(function(k){ total+=CITIES[k].stops.length; var d=sum(ALL[k].done); got+=d; if(d===CITIES[k].stops.length) full++; if(sealTier(b[k])) seals++; });
     var regs=[]; ORDER.forEach(function(k){ var r=CITIES[k].region||'More places'; if(regs.indexOf(r)<0) regs.push(r); });
-    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
+    var h='<section class="passhead"><p class="mono">Stamp the Past</p><h1 class="hh2">Your passport</h1><div class="pstats"><div><b>'+got+'</b><span>of '+total+' stamps</span></div><div><b>'+full+'</b><span>of '+ORDER.length+' towns done</span></div><div><b>'+seals+'</b><span>challenge seals</span></div><div><b>'+totalPts()+'</b><span>challenge points</span></div></div>'+(seals===0?'<p class="pnote">Challenge seals and points come from a town\'s final challenge. Stamp every stop in a town to unlock it.</p><button class="btn small" data-a="'+(got>0?'nextstop':'gomissions')+'">'+(got>0?'Go to my next stop':'Pick a town')+'</button>':'')+(got>0?'<button class="btn small" data-a="share" data-k="" style="margin-top:12px">Share my passport</button>':'')+'</section>';
     var bd=bdAll(); h+=levelHtml(bd.s)+trophyHtml(bd);
     h+='<section class="passport" id="passport">'+regs.map(function(r){ var rk=ORDER.filter(function(k){ return (CITIES[k].region||'More places')===r; }); if(!rk.length) return ''; var g=0,t=0; rk.forEach(function(k){ g+=sum(ALL[k].done); t+=CITIES[k].stops.length; }); return '<details class="reg ppreg"'+(g>0?' open':'')+'><summary class="region"><span>'+r+'</span><span class="rcount">'+g+' of '+t+' stamps</span></summary>'+rk.filter(function(k){ return sum(ALL[k].done)>0; }).map(function(k){
       var c=CITIES[k], d=sum(ALL[k].done);

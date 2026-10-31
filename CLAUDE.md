@@ -240,3 +240,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 - Landing + ~297 town pages now use bundled /fonts/fonts.css instead of Google Fonts (n02). Plex Mono 600 is not bundled; browsers synthesize it from 500.
 
 - Larger text (q07): every font-size in src/styles.css is now rem (px/16), and `@supports (font:-apple-system-body){html{font:-apple-system-body}}` makes iOS Safari and the app follow the Dynamic Type setting (default Large = 17px, so about 6% bigger than before on iPhone). Checked in Playwright with html font-size 16/24/32px at 390 wide: no sideways scroll on Home/Towns. Landing page and SEO pages still use px. Not yet checked on a real phone with the setting turned up.
+
+- Phone UX audit (Oct 31), tasks u01-u05 done: stop title #stopTitle clamp(2rem,9.5vw,3rem); Home .nearbox gap 56px -> 6px; town .hero min-height 240px on phones (content-limited, about 312px); edge fade + end spacer on .tcards/.schips/.rrow; Passport shows a .pnote and a next-step button while challenge seals is 0. Still to look at on a real phone.
