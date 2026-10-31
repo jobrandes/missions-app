@@ -247,6 +247,12 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.click('#bnav [data-t=towns]'); pg.wait_for_timeout(300)
     pg.click('#bnav [data-t=trails]'); pg.wait_for_timeout(200); pg.click('[data-a=home]'); pg.wait_for_timeout(300)
     need(pg.evaluate("document.querySelector('#bnav [data-t=home]').classList.contains('on')"),'Home link highlights Home in the bottom bar')
+    # nothing hides behind the floating bottom bar: page bottom padding is bigger than the bar's height
+    pg=new({'then-now-v3':{'city':'reno','home':0,'p':{'reno':{'done':[1,0,0,0],'claims':[0,0,0,0,0,0,0,0]}}}})
+    for t in ('home','towns','trails','pass'):
+        pg.click('#bnav [data-t=%s]'%t); pg.wait_for_timeout(150)
+        gap=pg.evaluate("(()=>{const n=document.querySelector('#bnav').getBoundingClientRect();return parseFloat(getComputedStyle(document.body).paddingBottom)-(innerHeight-n.top)})()")
+        need(gap>=16,'bottom bar leaves room under the last card on '+t)
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')
