@@ -234,3 +234,5 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 ## Starting-town suggestion (Oct 31 2026)
 - First-time Home (zero stamps) shows a "New here? Start in <town>" card (`startTownHtml`, class `starttown`) picked from the phone's time zone via `Intl`; nothing is sent anywhere. Map: New York->ny, Toronto->buffalo, Detroit, Chicago, Indianapolis, Louisville, Denver, Boise->saltlake, Phoenix, Anchorage->sitka, Honolulu; any non-American zone -> ny. Los Angeles zone shows nothing (Reno stays the default). Checked with Playwright timezone_id for 4 zones; no flows test yet.
+
+- Town share card (r06): finished towns show a "Did you know?" line, one stop fact (<=150 chars, same one every time per town) via townDiscovery(k) in src/app.js.

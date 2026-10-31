@@ -1695,18 +1695,26 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     return '<h2 class="hh">Pick a trail</h2><p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card
+  /* one notable discovery for a finished town's share card: one stop's sourced "fact" (same one every time for a town), trimmed to fit two lines */
+  function townDiscovery(k){
+    try{ var c=CITIES[k]; if(!c||sum(ALL[k].done)<c.stops.length) return '';
+      var L=c.stops.map(function(st){ return st.fact||''; }).filter(function(x){ return x.length>20&&x.length<=150; }), h=0; for(var i=0;i<k.length;i++) h+=k.charCodeAt(i); var f=L.length?L[h%L.length]:'';
+      if(f.length>125){ f=f.slice(0,122).replace(/\s+\S*$/,'')+'...'; } return f; }catch(e){ return ''; }
+  }
   function shareDraw(kind,k,cb,noimg){
     var W=1080,H=1350,c=document.createElement('canvas'); c.width=W; c.height=H; var g=c.getContext('2d');
     var keys=[], title, big, line;
     if(kind==='town'){ keys=townKeys(k).slice(0,4); title=CITIES[k].name; big=sum(ALL[k].done)+' of '+CITIES[k].stops.length+' stamps'; line=CITIES[k].explorer; }
     else { var tk=ORDER.filter(function(x){ return sum(ALL[x].done)>0; }).sort(function(a,b){ return sum(ALL[b].done)-sum(ALL[a].done); }); tk.slice(0,4).forEach(function(x){ var kk=townKeys(x)[0]; if(kk) keys.push(kk); }); var full=ORDER.filter(function(x){ return sum(ALL[x].done)===CITIES[x].stops.length; }).length; title='My passport'; big=totalStamps()+' stamps'; line=tk.length+(tk.length===1?' town':' towns')+(full?' · '+full+' complete':''); }
+    var disc=(kind==='town'?townDiscovery(k):'');
     g.fillStyle='#13202C'; g.fillRect(0,0,W,H); g.fillStyle='#F2B01E'; g.fillRect(0,0,W,14);
     g.fillStyle='#9AAAB8'; g.font='600 34px system-ui,sans-serif'; g.textAlign='center'; g.fillText('STAMP THE PAST',W/2,110);
     g.fillStyle='#FFFFFF'; g.font='800 96px system-ui,sans-serif'; var t=title; while(g.measureText(t).width>W-120&&g.font.indexOf('px')>0){ var sz=parseInt(g.font.split(' ')[1],10)-6; g.font='800 '+sz+'px system-ui,sans-serif'; } g.fillText(t,W/2,235);
     g.fillStyle='#F2B01E'; g.font='700 64px system-ui,sans-serif'; g.fillText(big,W/2,325); g.fillStyle='#C9D1D9'; g.font='500 38px system-ui,sans-serif'; g.fillText(line,W/2,385);
-    var n=keys.length, loaded=0, imgs=[], cell=(n===1?560:380), gap=36, startX=(W-(2*cell+gap))/2, rows=Math.max(1,Math.ceil(n/2)), startY=430+Math.max(0,(800-(rows*cell+(rows-1)*gap))/2);
+    var n=keys.length, loaded=0, imgs=[], cell=(disc?(n===1?440:312):(n===1?560:380)), gap=(disc?28:36), startX=(W-(2*cell+gap))/2, rows=Math.max(1,Math.ceil(n/2)), startY=430+Math.max(0,((disc?690:800)-(rows*cell+(rows-1)*gap))/2);
     function finish(){
       imgs.forEach(function(im,i){ if(!im) return; var x=startX+(i%2)*(cell+gap), y=startY+Math.floor(i/2)*(cell+gap); if(i===imgs.length-1&&i%2===0) x=(W-cell)/2; g.save(); g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.clip(); var r=Math.max(cell/im.width,cell/im.height), w=im.width*r, h=im.height*r; g.drawImage(im,x+(cell-w)/2,y+(cell-h)/2,w,h); g.restore(); g.lineWidth=10; g.strokeStyle='#F2B01E'; g.beginPath(); g.arc(x+cell/2,y+cell/2,cell/2,0,Math.PI*2); g.stroke(); });
+      if(disc){ g.fillStyle='#F2B01E'; g.font='700 28px system-ui,sans-serif'; g.fillText('DID YOU KNOW?',W/2,1140); g.fillStyle='#FFFFFF'; g.font='500 31px system-ui,sans-serif'; var ws=disc.split(' '), ln='', yy=1182; ws.forEach(function(w){ var tt=ln?ln+' '+w:w; if(g.measureText(tt).width>W-140&&ln){ g.fillText(ln,W/2,yy); yy+=40; ln=w; } else ln=tt; }); if(ln) g.fillText(ln,W/2,yy); }
       g.fillStyle='#9AAAB8'; g.font='500 34px system-ui,sans-serif'; g.fillText('Go there. Prove it. Stamp the past.',W/2,1270); g.fillStyle='#FFFFFF'; g.font='700 36px system-ui,sans-serif'; g.fillText(SHARE_URL,W/2,1318);
       try{ c.toBlob(function(b){ cb(b); },'image/png'); }catch(e){ if(!noimg) shareDraw(kind,k,cb,true); else cb(null); }
     }
@@ -1767,7 +1775,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     shareDraw(kind,k,function(b){
       if(!b){ toast('Could not make the card on this device.'); return; }
       var name='stamp-the-past-'+(kind==='town'?k:'passport')+'.png', f=null; try{ f=new File([b],name,{type:'image/png'}); }catch(e){}
-      var txt=(kind==='town'?'I finished '+CITIES[k].name+' on Stamp the Past.':'My Stamp the Past passport.')+' Go there. Prove it. Stamp the past. https://'+SHARE_URL;
+      var txt=(kind==='town'?'I finished '+CITIES[k].name+' on Stamp the Past.'+(townDiscovery(k)?' Did you know? '+townDiscovery(k):''):'My Stamp the Past passport.')+' Go there. Prove it. Stamp the past. https://'+SHARE_URL;
       if(f&&navigator.canShare&&navigator.canShare({files:[f]})&&navigator.share){ navigator.share({files:[f],text:txt}).catch(function(){}); return; }
       shareClose(); var u=URL.createObjectURL(b), d=document.createElement('div'); d.id='sharem'; d._u=u; d.className='celeb'; d.setAttribute('role','dialog'); d.setAttribute('aria-modal','true'); d.setAttribute('aria-label','Your share card');
       d.innerHTML='<div class="celeb-card sharecard"><img src="'+u+'" alt="Your stamp card"><p class="why">Press and hold the picture to save or share it.</p><div class="celeb-btns"><a class="btn" href="'+u+'" download="'+name+'">Save the picture</a><button class="btn ghost" data-a="shareclose">Close</button></div></div>';
