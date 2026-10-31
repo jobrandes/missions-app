@@ -26,8 +26,8 @@
   ]
  ],
  "heroAlt": "The dome of the California State Capitol in Sacramento, with yellow roses in front",
- "heroLi": "<li>Header: Frank Schulenburg · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a> · resized, cropped</li>",
- "heroCredit": "Photo: Frank Schulenburg · CC BY-SA 4.0 · <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a>",
+ "heroLi": "<li>Header: Frank Schulenburg \u00b7 CC BY-SA 4.0 \u00b7 <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a> \u00b7 resized, cropped</li>",
+ "heroCredit": "Photo: Frank Schulenburg \u00b7 CC BY-SA 4.0 \u00b7 <a target=\"_blank\" rel=\"noopener\" href=\"https://commons.wikimedia.org/wiki/File:California State Capitol, June 2019.jpg\">Source</a>",
  "mission": "Find four places in Sacramento where California's capital history happened. At each one, check in to earn its badge, unlock its story, and collect a Time Card. Do them in any order. Everything stays on this phone.",
  "afterDone": "All four badges earned. The rest of Sacramento is waiting.",
  "safetyNote": "<li>These stops are on busy downtown streets, and the Capitol, fort and museum have set visiting hours. Use crosswalks, stay back from the river's edge, and check each place's visiting rules before you go.</li>",
@@ -145,6 +145,17 @@
     "b": "1982",
     "la": "Construction completed",
     "lb": "Restoration rededicated"
+   },
+   "spot": {
+    "q": "The c. 1900 photo shows the Capitol with young palms. What happened to the rounded back of the building, called the apse, in 1949 to 1952?",
+    "options": [
+     "It was painted gold",
+     "It was torn down to make room for a new Capitol Annex",
+     "It was turned into a museum shop",
+     "It was moved across the river"
+    ],
+    "answer": 1,
+    "why": "The apse was torn down to make room for the Capitol Annex. The big restoration came later, from 1975 to 1982."
    }
   },
   {
@@ -240,6 +251,17 @@
     "b": "1947",
     "la": "Fort construction begins",
     "lb": "State parks takes over"
+   },
+   "spot": {
+    "q": "The 1925 photo shows the fort's bastion after repairs. Who bought the run-down fort in 1891 and began fixing it?",
+    "options": [
+     "The U.S. Army",
+     "John Sutter's grandson",
+     "The Native Sons of the Golden West",
+     "The Crocker family"
+    ],
+    "answer": 2,
+    "why": "The Native Sons of the Golden West bought it in 1891 and finished the repairs in 1893. The state park system took it over in 1947."
    }
   },
   {
@@ -335,6 +357,17 @@
     "b": "2002",
     "la": "Bridge opens",
     "lb": "Repainted all gold"
+   },
+   "spot": {
+    "q": "The 1935 photo shows the bridge under construction. Its first paint drew complaints. What was the problem?",
+    "options": [
+     "It was bright pink",
+     "It wore off in a year",
+     "It was silver aluminum, which caused glare",
+     "It was painted to look like wood"
+    ],
+    "answer": 2,
+    "why": "It was first painted silver aluminum, and people complained about glare. It was repainted yellow-ochre in 1976 and gold in 2002."
    }
   },
   {
@@ -430,6 +463,17 @@
     "b": "2010",
     "la": "Given to the city",
     "lb": "Modern wing opens"
+   },
+   "spot": {
+    "q": "The 1886 photo shows the old Crocker house. What big addition now stands beside it?",
+    "options": [
+     "A modern museum wing that opened in 2010",
+     "A second mansion",
+     "A glass train station",
+     "A clock tower"
+    ],
+    "answer": 0,
+    "why": "A Gwathmey Siegel & Associates expansion opened on October 10, 2010, next to the old mansion."
    }
   }
  ],

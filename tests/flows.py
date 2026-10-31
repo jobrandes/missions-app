@@ -227,7 +227,7 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':True,'p':{'reno':{'done':[1,1,1,1],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(2600)
     need(pg.locator('#bpop').count()==0,'first run with existing progress shows no badge popup')
     need(len(pg.evaluate("Object.keys(JSON.parse(localStorage.getItem('stp-badges')||'{}'))"))>=2,'existing progress is filed as earned badges')
-    # spot the change (Reno only so far): wrong answer is struck out, right answer explains itself
+    # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')
     for k in range(4):
