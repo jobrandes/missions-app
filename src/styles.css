@@ -954,3 +954,4 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .feat .fin p{margin:0}
 .feat h3{font-size:1.5rem}
 .feat .fcred{font-size:.75rem;color:var(--muted)}
+.tthumb{flex:none;width:44px;height:44px;border-radius:10px;object-fit:cover;background:var(--surface-2)}

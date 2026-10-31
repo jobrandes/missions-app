@@ -235,6 +235,9 @@ with sync_playwright() as p:
     pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.wait_for_timeout(300)
     need(pg.locator('.feat').count()==1 and 'photo:' in pg.inner_text('.feat').lower(),'Home shows a credited Story of the day for returning players')
     pg.click('.feat button'); pg.wait_for_timeout(300); need(pg.locator('#stopTitle').count()==1,'Story of the day opens its stop')
+    # phone UX audit u10: trail rows carry a small photo
+    pg=new({'then-now-v3':{'city':'reno','home':1,'p':{'reno':{'done':[1,0,0,0],'claims':[1,1,1,1,1,1,1,1]}}}}); pg.click('#bnav [data-t=trails]'); pg.wait_for_timeout(300)
+    need(pg.locator('.trl .trow .tthumb').count()>=3,'trail stop rows show thumbnails')
     # spot the change (Reno, Phoenix, Sacramento): wrong answer is struck out, right answer explains itself
     pg=new({'then-now-v3':{'city':'reno','home':0,'p':{}}})
     pg.click('.stop >> nth=0'); pg.click('text=I am here')

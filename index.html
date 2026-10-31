@@ -960,6 +960,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
 .feat .fin p{margin:0}
 .feat h3{font-size:1.5rem}
 .feat .fcred{font-size:.75rem;color:var(--muted)}
+.tthumb{flex:none;width:44px;height:44px;border-radius:10px;object-fit:cover;background:var(--surface-2)}
 </style>
 
 <div class="app">
@@ -1713,7 +1714,7 @@ body.ishome:not(.homefirst) .navwrap{position:static;top:auto;right:auto;width:a
     var cards='', lists='';
     TRAILS.forEach(function(tr){ var L=trailStops(tr.re); if(L.length<3) return; var d=L.filter(function(x){ return x.done; }).length, pc=Math.round(d/L.length*100), on=(btrail===tr.id);
       cards+='<button class="tcard'+(on?' on':'')+'" data-a="trail" data-t="'+tr.id+'" style="--tc:'+TRCOL[tr.id]+';--p:'+pc+'" aria-pressed="'+on+'"><span class="tic"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+TRICON[tr.id]+'</svg></span><strong>'+tr.name+'</strong><span class="tcount">'+d+' of '+L.length+' stamped</span><span class="pbar" aria-hidden="true"><i style="width:'+pc+'%"></i></span></button>';
-      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span><span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+placeLabel(x.k)+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
+      lists+='<div class="trl" data-trail="'+tr.id+'"'+(on?'':' hidden')+' style="--tc:'+TRCOL[tr.id]+'"><p class="why">'+tr.note+'</p><ul class="tlist">'+L.map(function(x){ return '<li class="trow'+(x.done?' done':'')+'"><button class="trowb" data-a="city" data-c="'+x.k+'"><span class="tcheck" aria-hidden="true">'+(x.done?'&#10003;':'')+'</span>'+((x.st.now&&x.st.now.ph&&PHOTOS[x.st.now.ph.k])?'<img class="tthumb" loading="lazy" decoding="async" src="'+PHOTOS[x.st.now.ph.k]+'" alt="">':'')+'<span class="tn"><strong>'+x.st.name+'</strong><span class="sub">'+placeLabel(x.k)+'</span></span><span class="go">Open ›</span></button></li>'; }).join('')+'</ul></div>'; });
     return '<h2 class="hh">Pick a trail</h2><p class="why">Collect a theme, not just a town. Pick a trail to see every stop on it.</p><div class="tcards" role="group" aria-label="Trails">'+cards+'</div>'+lists;
   }
   // share card

@@ -243,3 +243,4 @@ Other docs: `docs/roadmap.md`, `docs/name-and-launch.md`, `docs/verification-che
 
 - Phone UX audit (Oct 31), tasks u01-u05 done: stop title #stopTitle clamp(2rem,9.5vw,3rem); Home .nearbox gap 56px -> 6px; town .hero min-height 240px on phones (content-limited, about 312px); edge fade + end spacer on .tcards/.schips/.rrow; Passport shows a .pnote and a next-step button while challenge seals is 0. Still to look at on a real phone.
 - Home 'Story of the day' card (u08): featuredHtml() in src/app.js picks one not-yet-stamped stop of the current town per local day, shows its now-photo with credit, a sourced fact (or teaser) and a Read this stop button. Returning players only, placed below Closest to you so Next stop stays first.
+- Trails stop rows (u10) show a 44px lazy-loaded thumbnail of the stop's now-photo (.tthumb), decorative alt.
